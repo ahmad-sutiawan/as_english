@@ -8,7 +8,7 @@
     "Fullstack"
   ],
   "status": "ready",
-  "itemCount": 12,
+  "itemCount": 15,
   "items": [
     {
       "id": "stu-01",
@@ -507,6 +507,135 @@
       "tags": [
         "summary",
         "decision"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "stu-13",
+      "moduleId": "standup-sync",
+      "difficulty": "junior",
+      "scenario": "Standup: you are waiting on a design review that has not happened yet.",
+      "scenarioId": "Standup: Anda menunggu design review yang belum terjadi.",
+      "prompt": "Clear update?",
+      "promptId": "Update yang jelas?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Still waiting.",
+          "textId": "Masih menunggu."
+        },
+        {
+          "key": "B",
+          "text": "Yesterday: finished API stubs. Today: implement caching once design review lands. Blocker: design review with Mira — I booked 11:30 today; if it slips I will proceed with the documented default and confirm async.",
+          "textId": "Kemarin: selesai API stubs. Hari ini: implementasi caching setelah design review. Blocker: design review dengan Mira — saya booking 11:30 hari ini; jika molor saya lanjut dengan default yang sudah didokumentasikan dan konfirmasi async."
+        },
+        {
+          "key": "C",
+          "text": "No update, nothing to say.",
+          "textId": "Tidak ada update, tidak ada yang dibahas."
+        },
+        {
+          "key": "D",
+          "text": "Complain about Mira for five minutes.",
+          "textId": "Mengeluh tentang Mira selama lima menit."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Update kuat punya Y/T/B plus rencana jika blocker tetap ada. Frasa: \"blocker: … I booked…\" dan \"if it slips I will…\" menunjukkan ownership. A terlalu tipis; C/D tidak produktif.",
+      "tags": [
+        "standup",
+        "blockers",
+        "contingency"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "stu-14",
+      "moduleId": "standup-sync",
+      "difficulty": "mid",
+      "scenario": "In sync, QA says they cannot test your build because staging auth is broken — not caused by your PR.",
+      "scenarioId": "Di sync, QA bilang mereka tidak bisa tes build Anda karena staging auth rusak — bukan karena PR Anda.",
+      "prompt": "Best response in standup?",
+      "promptId": "Respons terbaik di standup?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Not my problem.",
+          "textId": "Bukan masalah saya."
+        },
+        {
+          "key": "B",
+          "text": "Thanks — that blocks my QA sign-off. I will join Platform on the staging auth fix after this call, and I will post a workaround checklist in #qa if we need a temporary path for today's tickets.",
+          "textId": "Terima kasih — itu memblokir QA sign-off saya. Saya akan join Platform untuk perbaikan staging auth setelah call ini, dan saya post checklist workaround di #qa jika butuh jalur sementara untuk tiket hari ini."
+        },
+        {
+          "key": "C",
+          "text": "Cancel all testing permanently.",
+          "textId": "Batalkan semua testing secara permanen."
+        },
+        {
+          "key": "D",
+          "text": "Blame QA for the outage.",
+          "textId": "Salahkan QA atas outage."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Akui blocker bersama, ambil langkah konkret, dan tawarkan workaround. Frasa: \"that blocks…\" → \"I will join…\" → \"workaround checklist\". A egois; C/D merusak kolaborasi.",
+      "tags": [
+        "QA",
+        "staging",
+        "collaboration"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "stu-15",
+      "moduleId": "standup-sync",
+      "difficulty": "senior",
+      "scenario": "As lead, a mid-level engineer reports they finished the migration early and wants to start a large speculative refactor during standup.",
+      "scenarioId": "Sebagai lead, engineer mid-level melaporkan migrasi selesai lebih cepat dan ingin mulai refactor spekulatif besar saat standup.",
+      "prompt": "How do you redirect?",
+      "promptId": "Bagaimana Anda mengarahkan ulang?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Sure, refactor anything you feel like.",
+          "textId": "Silakan, refactor apa saja yang Anda suka."
+        },
+        {
+          "key": "B",
+          "text": "Great that migration landed early. Let's park the speculative refactor — pull the next sprint-priority ticket on observability, and open a short RFC if the refactor still looks valuable after release hardening.",
+          "textId": "Bagus migrasi selesai lebih cepat. Mari park refactor spekulatif — ambil tiket prioritas sprint berikutnya soal observability, dan buka RFC singkat jika refactor tetap terlihat bernilai setelah hardening rilis."
+        },
+        {
+          "key": "C",
+          "text": "Shame them for finishing early.",
+          "textId": "Malukan mereka karena selesai lebih cepat."
+        },
+        {
+          "key": "D",
+          "text": "Ignore and move on with no guidance.",
+          "textId": "Abaikan dan lanjut tanpa arahan."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Apresiasi progress, lindungi fokus sprint, dan saluran ide besar ke RFC. Frasa: \"park the speculative refactor\" = tahan dulu; \"next sprint-priority ticket\" = arahkan ke prioritas; \"open a short RFC\" = proses ide. A scope creep; C/D buruk sebagai lead.",
+      "tags": [
+        "lead",
+        "prioritization",
+        "refactor"
       ],
       "tts": {
         "scenario": true,

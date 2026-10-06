@@ -8,7 +8,7 @@
     "IT Manager"
   ],
   "status": "ready",
-  "itemCount": 15,
+  "itemCount": 18,
   "items": [
     {
       "id": "inc-01",
@@ -641,6 +641,135 @@
       "tags": [
         "stability",
         "change-freeze"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "inc-16",
+      "moduleId": "incident-oncall",
+      "difficulty": "mid",
+      "scenario": "Error rates spike only in one region. Global dashboards still look green.",
+      "scenarioId": "Error rate melonjak hanya di satu region. Dashboard global masih terlihat hijau.",
+      "prompt": "Best first update on the bridge?",
+      "promptId": "Update pertama terbaik di bridge?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Everything is fine because the global graph is green.",
+          "textId": "Semuanya baik karena grafik global hijau."
+        },
+        {
+          "key": "B",
+          "text": "Impact is regional: APAC checkout 5xx ~12% for 8 minutes; other regions normal. I am isolating region traffic and checking the last deploy and dependency health in APAC. Next update in 5 minutes.",
+          "textId": "Dampak regional: checkout APAC 5xx ~12% selama 8 menit; region lain normal. Saya isolasi traffic region dan cek deploy terakhir serta kesehatan dependency di APAC. Update berikutnya dalam 5 menit."
+        },
+        {
+          "key": "C",
+          "text": "Declare a global SEV-1 with no evidence.",
+          "textId": "Nyatakan SEV-1 global tanpa bukti."
+        },
+        {
+          "key": "D",
+          "text": "Wait silently until users complain more.",
+          "textId": "Diam saja sampai pengguna lebih banyak mengeluh."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Laporkan scope yang benar (regional vs global), angka dampak, aksi, dan ETA update. Frasa: \"impact is regional\" = dampak terbatas region; \"isolating region traffic\" = mengisolasi traffic region; \"next update in X minutes\" = janji update berikutnya. A menyesatkan; C over-eskalasi; D pasif.",
+      "tags": [
+        "regional",
+        "comms",
+        "triage"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "inc-17",
+      "moduleId": "incident-oncall",
+      "difficulty": "junior",
+      "scenario": "You are secondary on-call. Primary asks you to own the timeline doc while they mitigate.",
+      "scenarioId": "Anda secondary on-call. Primary minta Anda pegang dokumen timeline sementara mereka mitigasi.",
+      "prompt": "What do you confirm?",
+      "promptId": "Apa yang Anda konfirmasi?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I will invent times if I miss something.",
+          "textId": "Saya akan mengarang waktu jika ada yang terlewat."
+        },
+        {
+          "key": "B",
+          "text": "Got it — I will capture timeline events with UTC timestamps, owners, and decisions in the incident doc, and ping you if anything looks inconsistent. You keep mitigating.",
+          "textId": "Siap — saya catat event timeline dengan timestamp UTC, owner, dan keputusan di dokumen insiden, dan ping Anda jika ada yang tidak konsisten. Anda lanjut mitigasi."
+        },
+        {
+          "key": "C",
+          "text": "Refuse because docs are not important.",
+          "textId": "Tolak karena dokumen tidak penting."
+        },
+        {
+          "key": "D",
+          "text": "Start debugging the same path as primary without coordinating.",
+          "textId": "Mulai debug jalur yang sama dengan primary tanpa koordinasi."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Secondary mendukung dengan peran jelas: timeline akurat, bukan mengganggu mitigasi. Frasa: \"Got it — I will capture…\" = konfirmasi peran; \"UTC timestamps\" = waktu standar; \"you keep mitigating\" = batasi scope. A tidak jujur; C/D merusak peran on-call.",
+      "tags": [
+        "roles",
+        "timeline",
+        "secondary"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "inc-18",
+      "moduleId": "incident-oncall",
+      "difficulty": "senior",
+      "scenario": "Mitigation worked, but you cannot yet prove root cause. Leadership wants a root-cause statement for an all-hands in 30 minutes.",
+      "scenarioId": "Mitigasi berhasil, tapi root cause belum terbukti. Leadership ingin pernyataan root cause untuk all-hands dalam 30 menit.",
+      "prompt": "What do you say?",
+      "promptId": "Apa yang Anda katakan?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Pick a confident root cause so the slide looks finished.",
+          "textId": "Pilih root cause yang terdengar yakin agar slide terlihat selesai."
+        },
+        {
+          "key": "B",
+          "text": "We mitigated customer impact. Leading hypothesis is a bad cache config in the last deploy, but root cause is not confirmed. For all-hands I can share impact, mitigation, and open questions — not a final RCA. Full RCA after the postmortem.",
+          "textId": "Kami sudah mitigasi dampak pelanggan. Hipotesis utama adalah cache config buruk di deploy terakhir, tapi root cause belum dikonfirmasi. Untuk all-hands saya bisa bagikan dampak, mitigasi, dan pertanyaan terbuka — bukan RCA final. RCA lengkap setelah postmortem."
+        },
+        {
+          "key": "C",
+          "text": "Say nothing forever until every log is perfect.",
+          "textId": "Tidak bilang apa-apa selamanya sampai semua log sempurna."
+        },
+        {
+          "key": "D",
+          "text": "Blame a vendor without checking evidence.",
+          "textId": "Salahkan vendor tanpa memeriksa bukti."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Pisahkan fakta mitigasi dari hipotesis yang belum terbukti. Frasa: \"leading hypothesis\" = hipotesis utama; \"root cause is not confirmed\" = RCA belum final; \"open questions\" = pertanyaan terbuka. A/D berbahaya; C menutup komunikasi yang dibutuhkan leadership.",
+      "tags": [
+        "RCA",
+        "leadership",
+        "hypothesis"
       ],
       "tts": {
         "scenario": true,

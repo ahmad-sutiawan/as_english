@@ -73,10 +73,11 @@ npm run content:validate
 
 1. Pick a module from the dashboard
 2. Read the scenario / prompt (optional Play audio)
-3. Read options A–D (not clickable as submit)
+3. Read options A–D (Play EN on each option; not clickable as submit)
 4. Type the correct answer in full
 5. Exact match (normalized) = mastery; near-miss typos ask you to retry
 6. Progress and attempts sync per user in Postgres
+7. Use **Review pintar** for wrong answers + spaced repetition queue
 
 ## Content layout
 

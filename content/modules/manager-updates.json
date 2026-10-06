@@ -9,7 +9,7 @@
     "Fullstack"
   ],
   "status": "ready",
-  "itemCount": 15,
+  "itemCount": 18,
   "items": [
     {
       "id": "mgr-01",
@@ -640,6 +640,135 @@
       "explanation": "Metrik vs target, insiden, risiko utama, ask keputusan — semua dalam satu napas. Pola QBR: metric vs target → incidents → top risk → decision needed. A tidak bermakna; C terlalu panjang; D menutup risiko.",
       "tags": [
         "QBR",
+        "executive"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "mgr-16",
+      "moduleId": "manager-updates",
+      "difficulty": "mid",
+      "scenario": "Your manager asks why on-call load jumped this sprint while feature delivery stayed flat.",
+      "scenarioId": "Manajer Anda bertanya mengapa beban on-call melonjak sprint ini sementara delivery fitur tetap datar.",
+      "prompt": "Best concise explanation?",
+      "promptId": "Penjelasan ringkas terbaik?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "People are lazy and ignore pages.",
+          "textId": "Orang malas dan mengabaikan page."
+        },
+        {
+          "key": "B",
+          "text": "Interrupt load rose ~40% from noisy checkout alerts after the partner cutover. Feature velocity held because we protected two makers, but sustainability is poor. Proposal: tune alerts this week and move one reliability spike into next sprint.",
+          "textId": "Beban interrupt naik ~40% dari alert checkout yang noisy setelah cutover partner. Velocity fitur bertahan karena kami melindungi dua maker, tapi tidak sustainable. Usulan: tune alert minggu ini dan masukkan satu reliability spike ke sprint berikutnya."
+        },
+        {
+          "key": "C",
+          "text": "Say metrics do not matter.",
+          "textId": "Katakan metrik tidak penting."
+        },
+        {
+          "key": "D",
+          "text": "Promise infinite features and zero pages with no plan.",
+          "textId": "Janji fitur tak terbatas dan nol page tanpa rencana."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Hubungkan penyebab, trade-off, dan usulan konkret. Frasa: \"interrupt load rose…\" = beban gangguan naik; \"protected two makers\" = jaga fokus pembuat fitur; \"proposal:…\" = ajukan langkah. A menyalahkan orang; C/D tidak actionable.",
+      "tags": [
+        "on-call",
+        "capacity",
+        "metrics"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "mgr-17",
+      "moduleId": "manager-updates",
+      "difficulty": "junior",
+      "scenario": "In a 1:1, your manager asks what support you need this week to ship the dashboard API on Friday.",
+      "scenarioId": "Di 1:1, manajer Anda bertanya dukungan apa yang Anda butuhkan minggu ini agar dashboard API ship hari Jumat.",
+      "prompt": "Clearest ask?",
+      "promptId": "Permintaan paling jelas?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Just more time somehow.",
+          "textId": "Sekadar lebih banyak waktu entah bagaimana."
+        },
+        {
+          "key": "B",
+          "text": "I need two things: a 30-minute contract review with Platform by Wednesday, and temporary cover for Tuesday on-call so I can finish auth tests. With that, Friday ship stays realistic.",
+          "textId": "Saya butuh dua hal: review kontrak 30 menit dengan Platform sebelum Rabu, dan cover sementara untuk on-call Selasa agar saya selesai tes auth. Dengan itu, ship Jumat tetap realistis."
+        },
+        {
+          "key": "C",
+          "text": "Nothing, then fail silently.",
+          "textId": "Tidak apa-apa, lalu gagal diam-diam."
+        },
+        {
+          "key": "D",
+          "text": "Ask them to write the code for you.",
+          "textId": "Minta mereka menulis kode untuk Anda."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Ask yang baik spesifik, berbatas waktu, dan terkait outcome. Pola: \"I need X by DATE\" + \"and Y so I can Z\" + dampak ke deadline. A terlalu kabur; C/D tidak profesional.",
+      "tags": [
+        "1:1",
+        "asks",
+        "unblocking"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "mgr-18",
+      "moduleId": "manager-updates",
+      "difficulty": "senior",
+      "scenario": "VP asks whether to delay a partner launch by one week to finish chaos testing after two near-misses.",
+      "scenarioId": "VP bertanya apakah menunda launch partner satu minggu untuk menyelesaikan chaos testing setelah dua near-miss.",
+      "prompt": "Best recommendation?",
+      "promptId": "Rekomendasi terbaik?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Ship anyway; near-misses do not count.",
+          "textId": "Ship saja; near-miss tidak dihitung."
+        },
+        {
+          "key": "B",
+          "text": "Recommend a one-week slip: risk of a customer-facing outage outweighs partner optics. We finish failure-injection for payment retries, validate runbooks, and keep a soft launch path if legal needs a milestone. I will own the partner comms draft.",
+          "textId": "Rekomendasikan slip satu minggu: risiko outage ke pelanggan lebih besar daripada optics partner. Kami selesaikan failure-injection untuk payment retries, validasi runbook, dan siapkan soft launch jika legal butuh milestone. Saya pegang draft komunikasi partner."
+        },
+        {
+          "key": "C",
+          "text": "Cancel the partnership entirely.",
+          "textId": "Batalkan kemitraan sepenuhnya."
+        },
+        {
+          "key": "D",
+          "text": "Ask the VP to decide with zero recommendation.",
+          "textId": "Minta VP memutuskan tanpa rekomendasi sama sekali."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Senior update: rekomendasi jelas, alasan risiko, mitigasi, alternatif ringan, dan ownership komunikasi. Frasa: \"recommend a one-week slip\" = usulkan tunda; \"risk outweighs…\" = risiko lebih besar; \"I will own…\" = tanggung jawab. A abai risiko; C overreact; D mendorong keputusan tanpa input.",
+      "tags": [
+        "risk",
+        "launch",
         "executive"
       ],
       "tts": {

@@ -19,6 +19,9 @@ export async function SiteHeader() {
               <Link href="/dashboard" className="hover:text-[var(--ink)]">
                 Dashboard
               </Link>
+              <Link href="/review" className="hover:text-[var(--ink)]">
+                Review
+              </Link>
               <span className="hidden sm:inline">{session.user.email}</span>
               <form
                 action={async () => {

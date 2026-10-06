@@ -9,7 +9,7 @@
     "Fullstack"
   ],
   "status": "ready",
-  "itemCount": 15,
+  "itemCount": 18,
   "items": [
     {
       "id": "beh-01",
@@ -638,6 +638,134 @@
       "tags": [
         "motivation",
         "transition"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "beh-16",
+      "moduleId": "interview-behavioral",
+      "difficulty": "mid",
+      "scenario": "Tell me about a time you reduced toil for your team.",
+      "scenarioId": "Ceritakan saat Anda mengurangi toil untuk tim.",
+      "prompt": "Strongest STAR-style answer?",
+      "promptId": "Jawaban gaya STAR terkuat?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I told people to work harder on manual tasks.",
+          "textId": "Saya bilang orang bekerja lebih keras pada tugas manual."
+        },
+        {
+          "key": "B",
+          "text": "On-call spent ~6 hours/week on repetitive cache flushes. I automated the runbook into a guarded workflow with approval and metrics. Toil dropped to under 1 hour/week, and we reused the pattern for two other ops tasks.",
+          "textId": "On-call menghabiskan ~6 jam/minggu untuk cache flush berulang. Saya otomatisasi runbook menjadi workflow terjaga dengan approval dan metrik. Toil turun di bawah 1 jam/minggu, dan pola itu kami pakai ulang untuk dua tugas ops lain."
+        },
+        {
+          "key": "C",
+          "text": "I ignored toil because features matter more forever.",
+          "textId": "Saya abaikan toil karena fitur selalu lebih penting."
+        },
+        {
+          "key": "D",
+          "text": "I wrote a long essay with no outcome.",
+          "textId": "Saya menulis esai panjang tanpa outcome."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "STAR yang kuat: Situation (toil hours) → Action (automate with guardrails) → Result (metric + reuse). Frasa: \"toil dropped to…\" dan \"reused the pattern\" menunjukkan dampak. A menambah beban; C/D tidak menunjukkan ownership.",
+      "tags": [
+        "toil",
+        "automation",
+        "STAR"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "beh-17",
+      "moduleId": "interview-behavioral",
+      "difficulty": "junior",
+      "scenario": "Describe a time you asked for help instead of staying stuck.",
+      "scenarioId": "Ceritakan saat Anda meminta bantuan alih-alih tetap stuck.",
+      "prompt": "Best answer?",
+      "promptId": "Jawaban terbaik?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I never ask for help; it looks weak.",
+          "textId": "Saya tidak pernah minta bantuan; terlihat lemah."
+        },
+        {
+          "key": "B",
+          "text": "I was blocked for two hours on a flaky auth test. I documented what I tried, asked a teammate for a 15-minute pairing, and we found a race in setup. I then added a note to the wiki so the next person would not repeat it.",
+          "textId": "Saya stuck dua jam pada tes auth yang flaky. Saya dokumentasikan apa yang sudah dicoba, minta pairing 15 menit ke rekan, dan kami temukan race di setup. Lalu saya tambahkan catatan di wiki agar orang berikutnya tidak mengulanginya."
+        },
+        {
+          "key": "C",
+          "text": "I pinged ten people at once with no context.",
+          "textId": "Saya ping sepuluh orang sekaligus tanpa konteks."
+        },
+        {
+          "key": "D",
+          "text": "I deleted the tests to unblock myself.",
+          "textId": "Saya hapus tes agar tidak stuck."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Minta bantuan dengan persiapan: apa yang sudah dicoba, minta waktu terbatas, bagikan hasil, dan cegah pengulangan. Pola: blocked → documented attempts → short pairing → knowledge share. A ego; C noise; D berbahaya.",
+      "tags": [
+        "help-seeking",
+        "learning"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "beh-18",
+      "moduleId": "interview-behavioral",
+      "difficulty": "senior",
+      "scenario": "Tell me about balancing product pressure with reliability standards as an IT/engineering manager.",
+      "scenarioId": "Ceritakan menyeimbangkan tekanan product dengan standar reliability sebagai IT/engineering manager.",
+      "prompt": "Most credible answer?",
+      "promptId": "Jawaban paling kredibel?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I always say no to product.",
+          "textId": "Saya selalu bilang tidak ke product."
+        },
+        {
+          "key": "B",
+          "text": "For a Black Friday feature, product wanted to skip canaries. I framed the risk in customer impact dollars, offered a same-week canary with feature flags, and we shipped on time without a SEV. The standard stayed; the schedule adapted.",
+          "textId": "Untuk fitur Black Friday, product ingin skip canary. Saya kerangka risiko dalam dampak pelanggan (dolar), tawarkan canary di minggu yang sama dengan feature flags, dan kami ship tepat waktu tanpa SEV. Standar tetap; jadwal yang menyesuaikan."
+        },
+        {
+          "key": "C",
+          "text": "I always skip safety to please stakeholders.",
+          "textId": "Saya selalu skip keamanan untuk menyenangkan stakeholder."
+        },
+        {
+          "key": "D",
+          "text": "I avoid the conversation entirely.",
+          "textId": "Saya menghindari percakapan sama sekali."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban managerial yang kuat: lindungi standar, tawarkan jalur yang tetap memenuhi jadwal, ukur risiko dalam bahasa bisnis. Pola: pressure → risk framing → alternative path → outcome. A terlalu kaku; C/D gagal sebagai pemimpin.",
+      "tags": [
+        "reliability",
+        "stakeholders",
+        "management"
       ],
       "tts": {
         "scenario": true,

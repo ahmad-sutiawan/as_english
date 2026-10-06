@@ -8,7 +8,7 @@
     "SRE"
   ],
   "status": "ready",
-  "itemCount": 12,
+  "itemCount": 15,
   "items": [
     {
       "id": "prc-01",
@@ -508,6 +508,135 @@
       "tags": [
         "approval",
         "clarity"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "prc-13",
+      "moduleId": "pr-code-review",
+      "difficulty": "junior",
+      "scenario": "A PR renames a public API field without a deprecation period.",
+      "scenarioId": "Sebuah PR merename field API publik tanpa periode deprecation.",
+      "prompt": "Best review comment?",
+      "promptId": "Komentar review terbaik?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "LGTM, breaking clients is fine.",
+          "textId": "LGTM, merusak client tidak apa-apa."
+        },
+        {
+          "key": "B",
+          "text": "Requesting changes: this renames a public field and will break existing clients. Please add a deprecation window (keep old field, add new, document migration) or bump a major version with a clear changelog note.",
+          "textId": "Requesting changes: ini merename field publik dan akan merusak client yang ada. Mohon tambahkan jendela deprecation (pertahankan field lama, tambah yang baru, dokumentasikan migrasi) atau bump major version dengan catatan changelog yang jelas."
+        },
+        {
+          "key": "C",
+          "text": "Only leave a sarcastic meme.",
+          "textId": "Hanya tinggalkan meme sarkastik."
+        },
+        {
+          "key": "D",
+          "text": "Approve and hope nobody notices.",
+          "textId": "Approve dan berharap tidak ada yang menyadari."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Breaking change publik butuh deprecation atau major bump eksplisit. Frasa review: \"Requesting changes\" + alasan dampak + opsi perbaikan konkret. A/D berbahaya; C tidak profesional.",
+      "tags": [
+        "API",
+        "breaking-change",
+        "review"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "prc-14",
+      "moduleId": "pr-code-review",
+      "difficulty": "mid",
+      "scenario": "CI is red on a flaky test unrelated to the PR diff, but the author asks for approval anyway.",
+      "scenarioId": "CI merah karena tes flaky yang tidak terkait diff PR, tapi author minta approval tetap.",
+      "prompt": "What do you write?",
+      "promptId": "Apa yang Anda tulis?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Approved — ignore CI forever.",
+          "textId": "Approved — abaikan CI selamanya."
+        },
+        {
+          "key": "B",
+          "text": "Code looks good for the retry logic. I am holding approval until CI is green or the flake is quarantined with a linked ticket — please rerun or open a flake issue and @me. Happy to approve once the signal is trustworthy.",
+          "textId": "Kode retry logic terlihat baik. Saya tahan approval sampai CI hijau atau flake di-quarantine dengan tiket tertaut — mohon rerun atau buka issue flake dan @me. Siap approve begitu sinyal CI bisa dipercaya."
+        },
+        {
+          "key": "C",
+          "text": "Reject the entire engineer.",
+          "textId": "Tolak engineer-nya secara keseluruhan."
+        },
+        {
+          "key": "D",
+          "text": "Disable all tests in the repo.",
+          "textId": "Nonaktifkan semua tes di repo."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Pisahkan kualitas kode dari sinyal CI: apresiasi diff, tahan merge sampai flake ditangani. Frasa: \"holding approval until…\" + \"quarantined with a linked ticket\". A/D merusak kualitas; C menyerang orang.",
+      "tags": [
+        "CI",
+        "flaky-tests",
+        "approval"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "prc-15",
+      "moduleId": "pr-code-review",
+      "difficulty": "senior",
+      "scenario": "A senior author's PR adds a feature flag defaulted to on in production for a payment path.",
+      "scenarioId": "PR dari senior author menambahkan feature flag yang default-nya on di production untuk jalur pembayaran.",
+      "prompt": "Senior-level review stance?",
+      "promptId": "Sikap review level senior?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Approve because the author is senior.",
+          "textId": "Approve karena author-nya senior."
+        },
+        {
+          "key": "B",
+          "text": "Requesting changes on rollout defaults: payment flags should ship dark (default off), with a staged enablement plan, kill switch owner, and success metrics. Happy to pair on the rollout checklist before merge.",
+          "textId": "Requesting changes pada default rollout: flag pembayaran harus ship dark (default off), dengan rencana enablement bertahap, owner kill switch, dan metrik sukses. Siap pair untuk checklist rollout sebelum merge."
+        },
+        {
+          "key": "C",
+          "text": "Delete the feature flag concept entirely in anger.",
+          "textId": "Hapus konsep feature flag sepenuhnya karena marah."
+        },
+        {
+          "key": "D",
+          "text": "Leave no comment to avoid conflict.",
+          "textId": "Tidak berkomentar agar menghindari konflik."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Seniority author tidak menggantikan safety. Untuk payment: default off, staged rollout, kill switch, metrik. Tawarkan pair agar tidak terasa seperti blokade personal. A/D abdicate review; C berlebihan.",
+      "tags": [
+        "feature-flags",
+        "rollout",
+        "payments"
       ],
       "tts": {
         "scenario": true,

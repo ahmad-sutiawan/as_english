@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "modules": [
     {
       "id": "interview-behavioral",
@@ -11,7 +11,7 @@
         "Fullstack"
       ],
       "status": "ready",
-      "itemCount": 15,
+      "itemCount": 18,
       "titleId": "Wawancara — Behavioral"
     },
     {
@@ -48,7 +48,7 @@
         "Fullstack"
       ],
       "status": "ready",
-      "itemCount": 12,
+      "itemCount": 15,
       "titleId": "Standup & Sync"
     },
     {
@@ -60,7 +60,7 @@
         "IT Manager"
       ],
       "status": "ready",
-      "itemCount": 15,
+      "itemCount": 18,
       "titleId": "Insiden & On-Call"
     },
     {
@@ -73,7 +73,7 @@
         "Fullstack"
       ],
       "status": "ready",
-      "itemCount": 15,
+      "itemCount": 18,
       "titleId": "Update ke Manager"
     },
     {
@@ -86,7 +86,7 @@
         "Fullstack"
       ],
       "status": "ready",
-      "itemCount": 12,
+      "itemCount": 15,
       "titleId": "Slack & Email"
     },
     {
@@ -110,7 +110,7 @@
         "SRE"
       ],
       "status": "ready",
-      "itemCount": 12,
+      "itemCount": 15,
       "titleId": "PR & Code Review"
     },
     {
