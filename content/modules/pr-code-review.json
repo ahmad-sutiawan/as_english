@@ -1,9 +1,446 @@
 {
   "id": "pr-code-review",
   "title": "PR & Code Review",
-  "description": "Coming soon — exercises for this workplace theme.",
-  "persona": ["IT Manager", "SRE", "Fullstack"],
-  "status": "stub",
-  "itemCount": 0,
-  "items": []
+  "description": "Soft/hard feedback and constructive suggestions.",
+  "persona": [
+    "Fullstack",
+    "SRE"
+  ],
+  "status": "ready",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "prc-01",
+      "moduleId": "pr-code-review",
+      "difficulty": "mid",
+      "scenario": "A teammate's PR lacks tests for a payment edge case.",
+      "prompt": "Best review comment?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "This is careless work."
+        },
+        {
+          "key": "B",
+          "text": "Thanks for the change. Could we add a test for the duplicate webhook case? Without it we risk double-charging on retries. Happy to sketch a fixture if useful."
+        },
+        {
+          "key": "C",
+          "text": "LGTM with no comments."
+        },
+        {
+          "key": "D",
+          "text": "Rewrite the entire PR in my style."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Specific risk + concrete ask + offer to help.",
+      "tags": [
+        "review",
+        "tests",
+        "tone"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "prc-02",
+      "moduleId": "pr-code-review",
+      "difficulty": "junior",
+      "scenario": "You disagree with a naming choice that is not blocking.",
+      "prompt": "How do you phrase it?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Rename everything or I will block."
+        },
+        {
+          "key": "B",
+          "text": "Non-blocking nit: `processStuff` is vague. `processRefundWebhook` would help future readers. Approving either way."
+        },
+        {
+          "key": "C",
+          "text": "Ignore readability forever."
+        },
+        {
+          "key": "D",
+          "text": "Demand a 40-comment style fight."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Label nits as non-blocking and still approve when appropriate.",
+      "tags": [
+        "nit",
+        "naming"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "prc-03",
+      "moduleId": "pr-code-review",
+      "difficulty": "senior",
+      "scenario": "PR introduces a risky migration without a rollback plan.",
+      "prompt": "Strong blocking comment?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "No."
+        },
+        {
+          "key": "B",
+          "text": "Blocking: this migration needs a documented rollback and a expand/contract sequence. Can we split expand first, deploy readers, then contract? I want us safe if we must revert mid-rollout."
+        },
+        {
+          "key": "C",
+          "text": "Ship it Friday night."
+        },
+        {
+          "key": "D",
+          "text": "Approve to be nice."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Block on safety with a clearer safer sequence.",
+      "tags": [
+        "migration",
+        "blocking"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "prc-04",
+      "moduleId": "pr-code-review",
+      "difficulty": "mid",
+      "scenario": "Author asks why you requested changes on performance.",
+      "prompt": "Clear explanation?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Because I said so."
+        },
+        {
+          "key": "B",
+          "text": "The N+1 query in the loop will amplify under peak checkout. A single batched fetch should keep p95 stable. Happy to pair for 15 minutes if the refactor is unclear."
+        },
+        {
+          "key": "C",
+          "text": "Performance never matters."
+        },
+        {
+          "key": "D",
+          "text": "Use microservices to hide it."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Explain impact quantitatively and offer pairing.",
+      "tags": [
+        "performance",
+        "explanation"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "prc-05",
+      "moduleId": "pr-code-review",
+      "difficulty": "junior",
+      "scenario": "You made a mistake in a review comment.",
+      "prompt": "Best follow-up?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Leave the wrong comment forever."
+        },
+        {
+          "key": "B",
+          "text": "Correction: I misread the caching layer — your approach is fine. Sorry for the noise. Remaining ask is only the retry test."
+        },
+        {
+          "key": "C",
+          "text": "Double down to save face."
+        },
+        {
+          "key": "D",
+          "text": "Delete the PR."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Own the misread quickly; keep remaining asks crisp.",
+      "tags": [
+        "humility",
+        "review"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "prc-06",
+      "moduleId": "pr-code-review",
+      "difficulty": "mid",
+      "scenario": "Security finds a secret logged in debug output inside the PR.",
+      "prompt": "How do you communicate urgency?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "lol secrets."
+        },
+        {
+          "key": "B",
+          "text": "Blocking security issue: a token is logged in debug output. Please remove it, rotate the credential, and add a lint/check so we do not regress. I can help verify in staging after."
+        },
+        {
+          "key": "C",
+          "text": "Mention it casually next sprint."
+        },
+        {
+          "key": "D",
+          "text": "Merge first, fix later quietly."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Security blocks need clear action: remove, rotate, prevent.",
+      "tags": [
+        "security",
+        "secrets"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "prc-07",
+      "moduleId": "pr-code-review",
+      "difficulty": "senior",
+      "scenario": "Two reviewers give conflicting guidance on architecture.",
+      "prompt": "As lead, what do you post?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Fight it out in comments for days."
+        },
+        {
+          "key": "B",
+          "text": "Thanks both. Decision: we will keep the module boundary as in option A for this PR, and open a follow-up RFC for the broader extract. Unblocking author now with that direction."
+        },
+        {
+          "key": "C",
+          "text": "Tell the author to guess."
+        },
+        {
+          "key": "D",
+          "text": "Close the PR out of frustration."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Make a decision, unblock, and park larger debate properly.",
+      "tags": [
+        "decision",
+        "leadership"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "prc-08",
+      "moduleId": "pr-code-review",
+      "difficulty": "mid",
+      "scenario": "You want to praise a particularly good abstraction in a PR.",
+      "prompt": "Effective praise?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "cool"
+        },
+        {
+          "key": "B",
+          "text": "Nice work on the retry helper — the jitter and idempotency key handling will prevent a class of production incidents. Thanks for documenting the failure modes in the PR body."
+        },
+        {
+          "key": "C",
+          "text": "Finally someone competent."
+        },
+        {
+          "key": "D",
+          "text": "Praise only in private so others do not learn."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Specific praise reinforces the behaviors you want repeated.",
+      "tags": [
+        "praise",
+        "culture"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "prc-09",
+      "moduleId": "pr-code-review",
+      "difficulty": "junior",
+      "scenario": "PR description is empty.",
+      "prompt": "Helpful request?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Write a novel."
+        },
+        {
+          "key": "B",
+          "text": "Could you add a short PR description: problem, approach, risk, and how you tested? It will speed up review and help on-call later."
+        },
+        {
+          "key": "C",
+          "text": "Approve without reading."
+        },
+        {
+          "key": "D",
+          "text": "Reject for style alone."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Ask for the minimum useful context, not bureaucracy.",
+      "tags": [
+        "PR-description",
+        "process"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "prc-10",
+      "moduleId": "pr-code-review",
+      "difficulty": "mid",
+      "scenario": "A large PR mixes refactor and feature.",
+      "prompt": "Best guidance?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I love giant PRs."
+        },
+        {
+          "key": "B",
+          "text": "This will be easier and safer as two PRs: pure refactor first, then the feature on top. Reviewers can validate behavior changes without noise. Can we split before deeper review?"
+        },
+        {
+          "key": "C",
+          "text": "Demand a full rewrite in one shot."
+        },
+        {
+          "key": "D",
+          "text": "Rubber-stamp to clear the queue."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Split for reviewability and safer rollback.",
+      "tags": [
+        "pr-size",
+        "process"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "prc-11",
+      "moduleId": "pr-code-review",
+      "difficulty": "senior",
+      "scenario": "Junior author seems discouraged after many comments.",
+      "prompt": "Supportive message?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Maybe this job is not for you."
+        },
+        {
+          "key": "B",
+          "text": "Lots of comments here because the area is high risk, not because the work lacks value. The core approach is solid. Let's pair for 25 minutes to close the remaining two items together."
+        },
+        {
+          "key": "C",
+          "text": "Remove all comments to be nice."
+        },
+        {
+          "key": "D",
+          "text": "Silence them publicly."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Separate rigor from identity; offer concrete support.",
+      "tags": [
+        "mentoring",
+        "tone"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "prc-12",
+      "moduleId": "pr-code-review",
+      "difficulty": "mid",
+      "scenario": "You approve after requested changes.",
+      "prompt": "Clear approval note?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "ok"
+        },
+        {
+          "key": "B",
+          "text": "Looks good now — retry tests cover the duplicate webhook path and rollback notes are clear. Approved. Please squash-merge after CI is green."
+        },
+        {
+          "key": "C",
+          "text": "Approved but I still hate it."
+        },
+        {
+          "key": "D",
+          "text": "Approve then immediately request changes again."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Confirm what improved and the merge condition.",
+      "tags": [
+        "approval",
+        "clarity"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    }
+  ]
 }

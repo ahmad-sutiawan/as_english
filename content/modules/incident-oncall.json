@@ -2,9 +2,12 @@
   "id": "incident-oncall",
   "title": "Incident & On-Call",
   "description": "Severity, mitigation, bridge updates, and calm urgency.",
-  "persona": ["SRE", "IT Manager"],
+  "persona": [
+    "SRE",
+    "IT Manager"
+  ],
   "status": "ready",
-  "itemCount": 10,
+  "itemCount": 15,
   "items": [
     {
       "id": "inc-01",
@@ -32,8 +35,16 @@
       ],
       "correctKey": "B",
       "explanation": "Good bridge updates state impact, metric, ownership, and next checkpoint. Vague language or speculation without a plan slows response.",
-      "tags": ["incident", "bridge", "status"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "incident",
+        "bridge",
+        "status"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "inc-02",
@@ -61,8 +72,16 @@
       ],
       "correctKey": "A",
       "explanation": "State the action, ETA, and how you will verify success. That keeps the bridge aligned and calm.",
-      "tags": ["mitigation", "rollback", "communication"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "mitigation",
+        "rollback",
+        "communication"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "inc-03",
@@ -90,8 +109,16 @@
       ],
       "correctKey": "A",
       "explanation": "External updates should be factual, non-blaming, and include a next update window without leaking internal finger-pointing.",
-      "tags": ["status-page", "customer", "severity"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "status-page",
+        "customer",
+        "severity"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "inc-04",
@@ -119,8 +146,15 @@
       ],
       "correctKey": "B",
       "explanation": "A strong handoff includes current state, mitigation already applied, remaining risks/tasks, and pointers to context.",
-      "tags": ["handoff", "oncall"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "handoff",
+        "oncall"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "inc-05",
@@ -148,8 +182,15 @@
       ],
       "correctKey": "B",
       "explanation": "Incident command reduces chaos by assigning owners, channels, and a sync cadence.",
-      "tags": ["incident-commander", "coordination"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "incident-commander",
+        "coordination"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "inc-06",
@@ -177,8 +218,16 @@
       ],
       "correctKey": "B",
       "explanation": "Severity framing needs impact scope, cause hypothesis, and what you already did — not blame or understatement.",
-      "tags": ["severity", "vendor", "leadership"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "severity",
+        "vendor",
+        "leadership"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "inc-07",
@@ -206,8 +255,16 @@
       ],
       "correctKey": "B",
       "explanation": "Coordinate a clear, time-bound customer message with operational reality and a confirmation step.",
-      "tags": ["failover", "product", "communication"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "failover",
+        "product",
+        "communication"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "inc-08",
@@ -235,8 +292,16 @@
       ],
       "correctKey": "B",
       "explanation": "Push back with a safer sequence and rationale, not with personal criticism.",
-      "tags": ["pushback", "runbook", "safety"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "pushback",
+        "runbook",
+        "safety"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "inc-09",
@@ -264,8 +329,16 @@
       ],
       "correctKey": "B",
       "explanation": "Redirect from blame to restoration status and a structured learning process.",
-      "tags": ["post-incident", "leadership", "blameless"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "post-incident",
+        "leadership",
+        "blameless"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "inc-10",
@@ -293,8 +366,196 @@
       ],
       "correctKey": "B",
       "explanation": "Stakeholder updates work best as Impact → Status → Current → Next.",
-      "tags": ["stakeholder", "slack", "status"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "stakeholder",
+        "slack",
+        "status"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "inc-11",
+      "moduleId": "incident-oncall",
+      "difficulty": "senior",
+      "scenario": "During a SEV-1, marketing wants to publish a cheerful 'all good' social post.",
+      "prompt": "What do you tell them?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Sure, post anything positive."
+        },
+        {
+          "key": "B",
+          "text": "Please hold public posts until we confirm stable recovery for 30 minutes. Draft customer-safe language with me: acknowledge disruption, state we are restoring service, avoid root-cause speculation."
+        },
+        {
+          "key": "C",
+          "text": "Let them post blame on engineering."
+        },
+        {
+          "key": "D",
+          "text": "Ignore marketing entirely."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Coordinate messaging and avoid premature 'all clear'.",
+      "tags": [
+        "comms",
+        "sev1"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "inc-12",
+      "moduleId": "incident-oncall",
+      "difficulty": "mid",
+      "scenario": "You suspect a dependency outage but lack proof yet.",
+      "prompt": "Careful bridge phrasing?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It is definitely their fault."
+        },
+        {
+          "key": "B",
+          "text": "Hypothesis: upstream auth latency may be contributing. I am validating with dependency dashboards now and will confirm or retire this theory in three minutes."
+        },
+        {
+          "key": "C",
+          "text": "Guess loudly without checking."
+        },
+        {
+          "key": "D",
+          "text": "Stay silent about possible causes."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Label hypotheses and give a validation checkpoint.",
+      "tags": [
+        "hypothesis",
+        "bridge"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "inc-13",
+      "moduleId": "incident-oncall",
+      "difficulty": "junior",
+      "scenario": "A noisy alert keeps paging but user impact is zero.",
+      "prompt": "What do you say in the on-call channel?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Alerts are always sacred; never touch them."
+        },
+        {
+          "key": "B",
+          "text": "This alert has no user impact. I am acknowledging and opening a ticket to tune the threshold after the shift. Continuing to watch true customer symptoms."
+        },
+        {
+          "key": "C",
+          "text": "Disable all alerting permanently."
+        },
+        {
+          "key": "D",
+          "text": "Wake the whole company for every noise page."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Reduce noise with ownership while protecting signal.",
+      "tags": [
+        "alert-noise",
+        "oncall"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "inc-14",
+      "moduleId": "incident-oncall",
+      "difficulty": "mid",
+      "scenario": "Customer success asks for per-customer impact during mitigation.",
+      "prompt": "Best response while still fixing?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I cannot talk to you during incidents ever."
+        },
+        {
+          "key": "B",
+          "text": "I can share aggregate impact now: about 9% checkout failures globally. Per-customer lists will take longer; Mira owns that extract and will post in 20 minutes while I keep mitigating."
+        },
+        {
+          "key": "C",
+          "text": "Invent precise per-customer numbers."
+        },
+        {
+          "key": "D",
+          "text": "Tell CS to stop asking."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Give what you can now; assign the deeper ask without dropping mitigation.",
+      "tags": [
+        "stakeholders",
+        "delegation"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "inc-15",
+      "moduleId": "incident-oncall",
+      "difficulty": "senior",
+      "scenario": "After mitigation, someone wants to 'improve things live' with a risky hot fix.",
+      "prompt": "What do you say?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Yes, keep changing production casually."
+        },
+        {
+          "key": "B",
+          "text": "Service is stable. Let's freeze non-essential changes for 60 minutes, watch golden signals, and take risky improvements through a reviewed change with canary. Stability first."
+        },
+        {
+          "key": "C",
+          "text": "Let anyone deploy anything as a reward."
+        },
+        {
+          "key": "D",
+          "text": "Immediately start a rewrite."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Post-mitigation change freeze protects recovery.",
+      "tags": [
+        "stability",
+        "change-freeze"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     }
   ]
 }

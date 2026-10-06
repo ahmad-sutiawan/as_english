@@ -1,9 +1,447 @@
 {
   "id": "cross-team",
   "title": "Cross-Team & Vendor",
-  "description": "Coming soon — exercises for this workplace theme.",
-  "persona": ["IT Manager", "SRE", "Fullstack"],
-  "status": "stub",
-  "itemCount": 0,
-  "items": []
+  "description": "Alignment, deadlines, and polite pushback.",
+  "persona": [
+    "IT Manager",
+    "SRE"
+  ],
+  "status": "ready",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "xte-01",
+      "moduleId": "cross-team",
+      "difficulty": "mid",
+      "scenario": "Another team missed an agreed API delivery date that your release depends on.",
+      "prompt": "Best first message?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You broke our release again."
+        },
+        {
+          "key": "B",
+          "text": "Checking in on the Payments API date we aligned last Thursday. Our checkout release is gated on it. Can you share a revised ETA and whether a temporary stub is viable so we protect customer launch?"
+        },
+        {
+          "key": "C",
+          "text": "Escalate to executives immediately with no context."
+        },
+        {
+          "key": "D",
+          "text": "Silently slip your date and surprise everyone later."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Reference the agreement, state impact, ask ETA and mitigation options.",
+      "tags": [
+        "dependency",
+        "alignment"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "xte-02",
+      "moduleId": "cross-team",
+      "difficulty": "senior",
+      "scenario": "Vendor support is slow during a production degradation.",
+      "prompt": "Professional escalation email?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Your product is garbage."
+        },
+        {
+          "key": "B",
+          "text": "We are seeing elevated timeouts on gateway X since 13:40 UTC impacting checkout. Severity: high. Please confirm ticket priority and provide an ETA for an update within 30 minutes. Bridge link included."
+        },
+        {
+          "key": "C",
+          "text": "Wait silently for 24 hours."
+        },
+        {
+          "key": "D",
+          "text": "Tweet at their CEO first."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Impact, severity, ask, time expectation, and contact path.",
+      "tags": [
+        "vendor",
+        "escalation"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "xte-03",
+      "moduleId": "cross-team",
+      "difficulty": "mid",
+      "scenario": "Security team rejected your change without clear next steps.",
+      "prompt": "How do you respond?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Security always blocks innovation."
+        },
+        {
+          "key": "B",
+          "text": "Thanks for the review. Could you list the specific controls we must satisfy to get to approve? I can propose compensating controls today if the original path is blocked for this release train."
+        },
+        {
+          "key": "C",
+          "text": "Bypass security in production."
+        },
+        {
+          "key": "D",
+          "text": "Abandon the project immediately."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Ask for concrete acceptance criteria and offer alternatives.",
+      "tags": [
+        "security",
+        "unblock"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "xte-04",
+      "moduleId": "cross-team",
+      "difficulty": "junior",
+      "scenario": "You need design input from UX but they are overloaded.",
+      "prompt": "Polite ask?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Drop everything for me."
+        },
+        {
+          "key": "B",
+          "text": "I know bandwidth is tight. Could I get a 20-minute UX sanity check on the empty-state copy by Wednesday? If that is impossible, I will ship with the interim copy and schedule a polish pass next sprint."
+        },
+        {
+          "key": "C",
+          "text": "Ship ugly UI without notice forever."
+        },
+        {
+          "key": "D",
+          "text": "Complaint to their manager first."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Timebox, deadline, and fallback plan respect constraints.",
+      "tags": [
+        "ask",
+        "ux",
+        "priority"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "xte-05",
+      "moduleId": "cross-team",
+      "difficulty": "senior",
+      "scenario": "Two directors disagree on roadmap sequencing in a shared forum.",
+      "prompt": "How do you facilitate?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Pick a side loudly."
+        },
+        {
+          "key": "B",
+          "text": "I hear two priorities: reliability hardening vs partner launch. To decide, can we compare customer impact and opportunity cost for the next six weeks? I can bring a one-page tradeoff matrix by tomorrow morning."
+        },
+        {
+          "key": "C",
+          "text": "Let the argument run for an hour."
+        },
+        {
+          "key": "D",
+          "text": "Cancel both initiatives."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Reframe conflict into a decision artifact with criteria.",
+      "tags": [
+        "facilitation",
+        "tradeoffs"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "xte-06",
+      "moduleId": "cross-team",
+      "difficulty": "mid",
+      "scenario": "Partner asks for an unrealistic same-day integration.",
+      "prompt": "Polite pushback?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Impossible. No."
+        },
+        {
+          "key": "B",
+          "text": "I want to support the launch. Same-day full integration is high risk given testing needs. We can deliver a read-only pilot today and the write path on Thursday after verification — does that meet the customer moment?"
+        },
+        {
+          "key": "C",
+          "text": "Agree then fail silently."
+        },
+        {
+          "key": "D",
+          "text": "Ignore the partner email."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Offer a safer alternative that still helps the business moment.",
+      "tags": [
+        "pushback",
+        "partner"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "xte-07",
+      "moduleId": "cross-team",
+      "difficulty": "mid",
+      "scenario": "Finance disputes a tooling purchase you need for on-call.",
+      "prompt": "Business-framed reply?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Engineers deserve nice toys."
+        },
+        {
+          "key": "B",
+          "text": "Understood on cost control. The tool reduces MTTR and pages; estimated savings exceed subscription within two incidents avoided. I attached a 30-day pilot plan with success metrics — can we approve the pilot?"
+        },
+        {
+          "key": "C",
+          "text": "Buy it on a personal card secretly."
+        },
+        {
+          "key": "D",
+          "text": "Threaten resignation over the tool."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "ROI + pilot + metrics speaks Finance's language.",
+      "tags": [
+        "finance",
+        "business-case"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "xte-08",
+      "moduleId": "cross-team",
+      "difficulty": "junior",
+      "scenario": "You joined a cross-team kickoff and roles are unclear.",
+      "prompt": "Useful clarifying question?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Who is in charge of everything forever?"
+        },
+        {
+          "key": "B",
+          "text": "To avoid gaps: who is the decision owner for API contract changes, and who is consulted vs informed? I can draft an RACI after this call if helpful."
+        },
+        {
+          "key": "C",
+          "text": "Stay confused silently."
+        },
+        {
+          "key": "D",
+          "text": "Assume you own all decisions."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Clarify decision rights early; offer to document RACI.",
+      "tags": [
+        "RACI",
+        "kickoff"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "xte-09",
+      "moduleId": "cross-team",
+      "difficulty": "senior",
+      "scenario": "A peer manager's team keeps breaking shared SLOs.",
+      "prompt": "Constructive 1:1 opener with that manager?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Your team is the problem."
+        },
+        {
+          "key": "B",
+          "text": "I want us to succeed on the shared checkout SLO. Over the last month, error-budget burn from service B is the main driver. Can we align on ownership for two reliability fixes this sprint?"
+        },
+        {
+          "key": "C",
+          "text": "Complain only to executives first."
+        },
+        {
+          "key": "D",
+          "text": "Add sarcasm in the shared channel."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Shared goal + data + concrete ask for joint ownership.",
+      "tags": [
+        "SLO",
+        "peer-manager"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "xte-10",
+      "moduleId": "cross-team",
+      "difficulty": "mid",
+      "scenario": "Legal needs more time; sales wants to announce a feature.",
+      "prompt": "Alignment message?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Ship the announcement anyway."
+        },
+        {
+          "key": "B",
+          "text": "Sales wants to announce Friday; Legal needs through Monday for review. Proposal: soft-announce to design partners under NDA Friday, public announce Tuesday after Legal sign-off. Any objections by noon?"
+        },
+        {
+          "key": "C",
+          "text": "Let teams fight in email forever."
+        },
+        {
+          "key": "D",
+          "text": "Cancel the feature."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Propose a sequenced compromise with a clear objection window.",
+      "tags": [
+        "legal",
+        "sales",
+        "compromise"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "xte-11",
+      "moduleId": "cross-team",
+      "difficulty": "mid",
+      "scenario": "Offshore vendor delivered incomplete work near deadline.",
+      "prompt": "Firm but professional note?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You failed us."
+        },
+        {
+          "key": "B",
+          "text": "The deliverable is missing load-test results and rollback steps listed in SOW section 4. Please confirm completion ETA by tomorrow 10:00 and whether you need clarification. Our go-live depends on those artifacts."
+        },
+        {
+          "key": "C",
+          "text": "Accept incomplete work silently."
+        },
+        {
+          "key": "D",
+          "text": "Publicly shame the vendor on LinkedIn."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Cite contract expectations, ask ETA, keep tone factual.",
+      "tags": [
+        "vendor",
+        "SOW"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "xte-12",
+      "moduleId": "cross-team",
+      "difficulty": "senior",
+      "scenario": "Close a difficult cross-team negotiation that reached agreement.",
+      "prompt": "Best closing summary?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Great talk."
+        },
+        {
+          "key": "B",
+          "text": "Agreement: Platform ships rate-limit API by April 10; we integrate by April 17; shared success metric is p95 under 300ms. I will post the decision record and calendar the checkpoint on April 8."
+        },
+        {
+          "key": "C",
+          "text": "Hope everyone remembers."
+        },
+        {
+          "key": "D",
+          "text": "Change the deal after the meeting quietly."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Restate commitments, metrics, artifacts, and checkpoint date.",
+      "tags": [
+        "closing",
+        "alignment"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    }
+  ]
 }

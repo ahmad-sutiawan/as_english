@@ -1,9 +1,445 @@
 {
   "id": "presentation-demo",
   "title": "Presentation & Demo",
-  "description": "Coming soon — exercises for this workplace theme.",
-  "persona": ["IT Manager", "SRE", "Fullstack"],
-  "status": "stub",
-  "itemCount": 0,
-  "items": []
+  "description": "Openings, transitions, and handling Q&A under pressure.",
+  "persona": [
+    "IT Manager",
+    "Fullstack"
+  ],
+  "status": "ready",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "pre-01",
+      "moduleId": "presentation-demo",
+      "difficulty": "mid",
+      "scenario": "You open a demo of the new incident dashboard for leadership.",
+      "prompt": "Best opening line?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Um, so yeah, this is a thing we built."
+        },
+        {
+          "key": "B",
+          "text": "In the next ten minutes I will show how this dashboard cuts mean time to detect from minutes to seconds, then walk through one live incident scenario and take questions."
+        },
+        {
+          "key": "C",
+          "text": "Let me start with my life story."
+        },
+        {
+          "key": "D",
+          "text": "Please read the slides; I will stay quiet."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Agenda + outcome + timebox builds executive attention.",
+      "tags": [
+        "opening",
+        "demo"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pre-02",
+      "moduleId": "presentation-demo",
+      "difficulty": "junior",
+      "scenario": "The demo environment is slow. Stakeholders are waiting.",
+      "prompt": "What do you say?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "This always happens; not my fault."
+        },
+        {
+          "key": "B",
+          "text": "The staging environment is slower than production right now. I will narrate the flow with screenshots while it loads, then switch to the live view for the final step."
+        },
+        {
+          "key": "C",
+          "text": "Cancel the meeting immediately."
+        },
+        {
+          "key": "D",
+          "text": "Sit in silence until it works."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Acknowledge, keep value flowing, recover to live when possible.",
+      "tags": [
+        "recovery",
+        "demo"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pre-03",
+      "moduleId": "presentation-demo",
+      "difficulty": "senior",
+      "scenario": "A VP interrupts: 'Why should we fund this?'",
+      "prompt": "Strong bridge answer?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Because engineers like shiny tools."
+        },
+        {
+          "key": "B",
+          "text": "Great question — the business case is fewer prolonged outages. Last quarter we lost an estimated $X in failed checkouts during slow detection. This investment targets that loss with a measurable MTTD reduction."
+        },
+        {
+          "key": "C",
+          "text": "I will answer later maybe."
+        },
+        {
+          "key": "D",
+          "text": "Please wait until the end of all thirty slides."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Translate tech into business impact with evidence.",
+      "tags": [
+        "executive",
+        "business-case"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pre-04",
+      "moduleId": "presentation-demo",
+      "difficulty": "mid",
+      "scenario": "Transition from architecture slide to live demo.",
+      "prompt": "Best transition phrase?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Moving on randomly."
+        },
+        {
+          "key": "B",
+          "text": "That was the design. Now I will show the same flow live: detect anomaly, open runbook, and page the right owner in under a minute."
+        },
+        {
+          "key": "C",
+          "text": "Forget the architecture; it was wrong."
+        },
+        {
+          "key": "D",
+          "text": "Any questions on everything at once forever?"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Explicit bridge that previews what viewers will see.",
+      "tags": [
+        "transition",
+        "demo"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pre-05",
+      "moduleId": "presentation-demo",
+      "difficulty": "mid",
+      "scenario": "Someone asks a question outside the demo scope.",
+      "prompt": "How do you handle it?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "That is irrelevant."
+        },
+        {
+          "key": "B",
+          "text": "Good question — it is adjacent but outside today's scope. I will park it on the parking-lot slide and follow up with a short note after this session so we stay on the detection flow."
+        },
+        {
+          "key": "C",
+          "text": "Answer for twenty minutes and lose the agenda."
+        },
+        {
+          "key": "D",
+          "text": "Pretend you did not hear it."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Validate, park, protect the agenda, promise follow-up.",
+      "tags": [
+        "Q&A",
+        "facilitation"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pre-06",
+      "moduleId": "presentation-demo",
+      "difficulty": "junior",
+      "scenario": "You do not know the answer to a technical question in Q&A.",
+      "prompt": "Best response?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Invent a confident wrong answer."
+        },
+        {
+          "key": "B",
+          "text": "I do not want to guess on that detail. I will confirm with the owning engineer and send the accurate answer to this group within one business day."
+        },
+        {
+          "key": "C",
+          "text": "Say nothing and look at your laptop."
+        },
+        {
+          "key": "D",
+          "text": "Change the topic abruptly."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Honesty + ownership of follow-up beats bluffing.",
+      "tags": [
+        "Q&A",
+        "integrity"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pre-07",
+      "moduleId": "presentation-demo",
+      "difficulty": "senior",
+      "scenario": "Close a roadmap presentation to directors.",
+      "prompt": "Strong closing?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "That is all. Bye."
+        },
+        {
+          "key": "B",
+          "text": "To summarize: three investments, one dependency on platform capacity, and a decision needed on the June canary. I recommend we approve option B today. I will send the one-pager and decision log within an hour."
+        },
+        {
+          "key": "C",
+          "text": "Any random thoughts?"
+        },
+        {
+          "key": "D",
+          "text": "We will somehow figure it out later."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Summary + decision ask + concrete follow-up artifact.",
+      "tags": [
+        "closing",
+        "decision"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pre-08",
+      "moduleId": "presentation-demo",
+      "difficulty": "mid",
+      "scenario": "A skeptical engineer challenges your latency numbers mid-demo.",
+      "prompt": "Professional handling?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You are wrong and loud."
+        },
+        {
+          "key": "B",
+          "text": "Appreciate the challenge. These numbers are p95 from last week's production sample — source linked on slide 4. If you have a conflicting dataset, send it after and we will reconcile."
+        },
+        {
+          "key": "C",
+          "text": "Delete the slide live in panic."
+        },
+        {
+          "key": "D",
+          "text": "Agree the numbers are fake."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Welcome scrutiny, cite source, offer post-meeting reconciliation.",
+      "tags": [
+        "challenge",
+        "data"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pre-09",
+      "moduleId": "presentation-demo",
+      "difficulty": "junior",
+      "scenario": "You are co-presenting and your partner freezes.",
+      "prompt": "What do you say?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Wow, awkward."
+        },
+        {
+          "key": "B",
+          "text": "I can take this section — we are at the rollout plan. After the demo we will cover owners and dates, then open Q&A."
+        },
+        {
+          "key": "C",
+          "text": "Stare at them until they recover."
+        },
+        {
+          "key": "D",
+          "text": "End the meeting without notice."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Smoothly take the baton and restate where you are.",
+      "tags": [
+        "co-present",
+        "recovery"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pre-10",
+      "moduleId": "presentation-demo",
+      "difficulty": "mid",
+      "scenario": "Hybrid meeting: remote attendees cannot see your shared screen clearly.",
+      "prompt": "What should you do?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Ignore remotes; room matters more."
+        },
+        {
+          "key": "B",
+          "text": "Remote folks — confirming you can see the dashboard shared window. I will zoom the critical panel and narrate clicks so audio-only participants can follow."
+        },
+        {
+          "key": "C",
+          "text": "Tell remotes to figure it out."
+        },
+        {
+          "key": "D",
+          "text": "Stop sharing and only talk."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Check inclusion, adjust visuals, narrate for audio-only.",
+      "tags": [
+        "hybrid",
+        "inclusion"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pre-11",
+      "moduleId": "presentation-demo",
+      "difficulty": "senior",
+      "scenario": "Product asks you to 'make it exciting' for a customer webinar.",
+      "prompt": "Professional framing?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Use hype words and hide limitations."
+        },
+        {
+          "key": "B",
+          "text": "We can keep it customer-exciting and accurate: lead with the outcome they care about, show one crisp workflow, and be explicit about current limits and roadmap timing."
+        },
+        {
+          "key": "C",
+          "text": "Refuse to present to customers."
+        },
+        {
+          "key": "D",
+          "text": "Read the internal RFC verbatim."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Excitement without overselling; clarity on limits builds trust.",
+      "tags": [
+        "customer",
+        "webinar"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pre-12",
+      "moduleId": "presentation-demo",
+      "difficulty": "mid",
+      "scenario": "You have two minutes left and three slides remaining.",
+      "prompt": "Best move?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Speed-read every bullet incomprehensibly."
+        },
+        {
+          "key": "B",
+          "text": "I will skip the deep-dive slides and land on the decision ask and next steps. Deep-dive appendix is in the leave-behind."
+        },
+        {
+          "key": "C",
+          "text": "Run overtime without asking."
+        },
+        {
+          "key": "D",
+          "text": "Abruptly stop mid-sentence."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Protect the decision moment; park detail in appendix.",
+      "tags": [
+        "timeboxing",
+        "closing"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    }
+  ]
 }

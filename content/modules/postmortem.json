@@ -1,9 +1,443 @@
 {
   "id": "postmortem",
   "title": "Postmortem",
-  "description": "Coming soon — exercises for this workplace theme.",
-  "persona": ["IT Manager", "SRE", "Fullstack"],
-  "status": "stub",
-  "itemCount": 0,
-  "items": []
+  "description": "Blameless language and clear action items.",
+  "persona": [
+    "SRE",
+    "IT Manager"
+  ],
+  "status": "ready",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "pom-01",
+      "moduleId": "postmortem",
+      "difficulty": "mid",
+      "scenario": "You are drafting the incident summary for a SEV-1 checkout outage.",
+      "prompt": "Best blameless opening?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "An engineer messed up the config again."
+        },
+        {
+          "key": "B",
+          "text": "On March 12, checkout errors rose to 18% for 47 minutes after a feature flag default changed. Customer impact was failed payments. We mitigated by disabling the flag and restored baseline."
+        },
+        {
+          "key": "C",
+          "text": "We do not know and will never know."
+        },
+        {
+          "key": "D",
+          "text": "This was inevitable so no analysis is needed."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Facts, impact, mitigation — no personal blame.",
+      "tags": [
+        "blameless",
+        "summary"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pom-02",
+      "moduleId": "postmortem",
+      "difficulty": "senior",
+      "scenario": "Leadership asks 'who caused it?' in the postmortem meeting.",
+      "prompt": "How do you redirect?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Name the person publicly."
+        },
+        {
+          "key": "B",
+          "text": "Our focus is the conditions that allowed this to reach production — detection gaps, review checks, and rollout controls — so we prevent recurrence. Individuals followed the process we had at the time."
+        },
+        {
+          "key": "C",
+          "text": "Refuse to write any document."
+        },
+        {
+          "key": "D",
+          "text": "Say it was random chance only."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Redirect from person to system conditions and prevention.",
+      "tags": [
+        "facilitation",
+        "blameless"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pom-03",
+      "moduleId": "postmortem",
+      "difficulty": "mid",
+      "scenario": "Write a clear contributing-factor statement.",
+      "prompt": "Which is strongest?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Bad luck."
+        },
+        {
+          "key": "B",
+          "text": "Contributing factors: flag defaults were not reviewed in change checklist; canary did not cover checkout path; alert threshold was too slow for revenue impact."
+        },
+        {
+          "key": "C",
+          "text": "People were careless."
+        },
+        {
+          "key": "D",
+          "text": "Cloud provider hate us."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Multiple systemic factors beat single-person narratives.",
+      "tags": [
+        "contributing-factors"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pom-04",
+      "moduleId": "postmortem",
+      "difficulty": "junior",
+      "scenario": "Propose an action item after a missed alert.",
+      "prompt": "Best action item phrasing?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Be more careful."
+        },
+        {
+          "key": "B",
+          "text": "Action: add burn-rate alert on checkout success SLO, owner: Avery, due: March 20, success metric: alert fires within 5 minutes in staging game-day."
+        },
+        {
+          "key": "C",
+          "text": "Monitor harder somehow."
+        },
+        {
+          "key": "D",
+          "text": "Buy more tools immediately without owners."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Action items need owner, due date, and success criteria.",
+      "tags": [
+        "action-items",
+        "SMART"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pom-05",
+      "moduleId": "postmortem",
+      "difficulty": "mid",
+      "scenario": "Timeline section is messy with conflicting times.",
+      "prompt": "How do you fix communication?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Pick random times."
+        },
+        {
+          "key": "B",
+          "text": "I reconciled timeline stamps to UTC from pager, deploy, and chat logs. Please review the linked sheet; call out any missing events before we publish."
+        },
+        {
+          "key": "C",
+          "text": "Delete the timeline."
+        },
+        {
+          "key": "D",
+          "text": "Use local timezones mixed without labels."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "One timezone, sourced logs, invite corrections before publish.",
+      "tags": [
+        "timeline",
+        "accuracy"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pom-06",
+      "moduleId": "postmortem",
+      "difficulty": "senior",
+      "scenario": "A customer asks for a public statement derived from the postmortem.",
+      "prompt": "Appropriate external language?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Our junior broke payments."
+        },
+        {
+          "key": "B",
+          "text": "We experienced a checkout disruption on March 12. We restored service the same day and are implementing additional safeguards around configuration changes and faster detection. We apologize for the impact."
+        },
+        {
+          "key": "C",
+          "text": "Share the full internal blame list."
+        },
+        {
+          "key": "D",
+          "text": "Deny any disruption occurred."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "External notes: impact, restore, safeguards, apology — no internal blame.",
+      "tags": [
+        "customer",
+        "external"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pom-07",
+      "moduleId": "postmortem",
+      "difficulty": "mid",
+      "scenario": "Someone wants 30 action items from one incident.",
+      "prompt": "How do you prioritize in the room?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Accept all ideas equally."
+        },
+        {
+          "key": "B",
+          "text": "Let's prioritize the top three actions that most reduce recurrence probability: detection, safer defaults, and canary coverage. Other ideas go to the backlog with owners if capacity appears."
+        },
+        {
+          "key": "C",
+          "text": "Do nothing because lists are hard."
+        },
+        {
+          "key": "D",
+          "text": "Assign everything to the intern."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Focus on high-leverage actions; park the rest.",
+      "tags": [
+        "prioritization",
+        "facilitation"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pom-08",
+      "moduleId": "postmortem",
+      "difficulty": "junior",
+      "scenario": "You need to state what went well without sounding defensive.",
+      "prompt": "Good phrasing?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Actually we were perfect."
+        },
+        {
+          "key": "B",
+          "text": "What went well: on-call joined within two minutes, rollback was executed cleanly, and customer status updates went out every 15 minutes."
+        },
+        {
+          "key": "C",
+          "text": "Nothing went well; only pain."
+        },
+        {
+          "key": "D",
+          "text": "Praise only leadership."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Balanced postmortems include effective responses as learning too.",
+      "tags": [
+        "what-went-well"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pom-09",
+      "moduleId": "postmortem",
+      "difficulty": "senior",
+      "scenario": "Legal asks you to soften speculative language.",
+      "prompt": "Professional edit?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Keep dramatic claims for effect."
+        },
+        {
+          "key": "B",
+          "text": "I replaced speculative phrases with verified facts and labeled hypotheses clearly as hypotheses pending confirmation. The prevention actions remain unchanged."
+        },
+        {
+          "key": "C",
+          "text": "Delete the whole postmortem."
+        },
+        {
+          "key": "D",
+          "text": "Ignore legal entirely."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Separate facts from hypotheses; keep prevention intact.",
+      "tags": [
+        "legal",
+        "precision"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pom-10",
+      "moduleId": "postmortem",
+      "difficulty": "mid",
+      "scenario": "Follow-up meeting: two action items are overdue.",
+      "prompt": "Best status prompt?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Why are you failing?"
+        },
+        {
+          "key": "B",
+          "text": "Two actions are past due: canary coverage and flag checklist. Owners — can you share blockers and a new date today? If capacity is the issue, we will renegotiate scope with leadership."
+        },
+        {
+          "key": "C",
+          "text": "Quietly mark them done."
+        },
+        {
+          "key": "D",
+          "text": "Shame owners in a company-wide email."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Surface overdue work with blocker ask and escalation path.",
+      "tags": [
+        "follow-up",
+        "accountability"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pom-11",
+      "moduleId": "postmortem",
+      "difficulty": "mid",
+      "scenario": "Root cause is still uncertain after investigation.",
+      "prompt": "Honest wording?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Declare a scapegoat cause."
+        },
+        {
+          "key": "B",
+          "text": "Primary trigger is confirmed as the flag default. Deeper why around review process gaps is supported by evidence; a secondary hypothesis on cache stampede remains under investigation and will be updated by Friday."
+        },
+        {
+          "key": "C",
+          "text": "Pretend certainty."
+        },
+        {
+          "key": "D",
+          "text": "Say root cause is impossible."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Separate confirmed vs hypothesized causes with update timing.",
+      "tags": [
+        "uncertainty",
+        "integrity"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "pom-12",
+      "moduleId": "postmortem",
+      "difficulty": "senior",
+      "scenario": "Close the postmortem review meeting.",
+      "prompt": "Strong closing?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Meeting over."
+        },
+        {
+          "key": "B",
+          "text": "We aligned on three actions with owners and dates. I will publish the final doc today, open tracking tickets, and schedule a 30-day effectiveness check. Thanks everyone for the blameless discussion."
+        },
+        {
+          "key": "C",
+          "text": "Add twenty more actions first."
+        },
+        {
+          "key": "D",
+          "text": "Leave without notes."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Confirm actions, publishing, tracking, and a check-back.",
+      "tags": [
+        "closing",
+        "process"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    }
+  ]
 }

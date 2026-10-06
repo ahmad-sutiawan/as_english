@@ -2,9 +2,13 @@
   "id": "interview-behavioral",
   "title": "Interview — Behavioral",
   "description": "STAR answers, ownership, conflict, and leadership stories for tech interviews.",
-  "persona": ["IT Manager", "SRE", "Fullstack"],
+  "persona": [
+    "IT Manager",
+    "SRE",
+    "Fullstack"
+  ],
   "status": "ready",
-  "itemCount": 10,
+  "itemCount": 15,
   "items": [
     {
       "id": "beh-01",
@@ -32,8 +36,16 @@
       ],
       "correctKey": "B",
       "explanation": "STAR needs Situation, Task, Action, Result with concrete ownership and outcome.",
-      "tags": ["STAR", "incident", "interview"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "STAR",
+        "incident",
+        "interview"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "beh-02",
@@ -61,8 +73,15 @@
       ],
       "correctKey": "B",
       "explanation": "Interviewers look for goal alignment, constructive alternatives, and preserved relationships.",
-      "tags": ["conflict", "collaboration"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "conflict",
+        "collaboration"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "beh-03",
@@ -90,8 +109,16 @@
       ],
       "correctKey": "B",
       "explanation": "Influence stories should show data, inclusive process, and measurable outcome.",
-      "tags": ["influence", "cross-team", "leadership"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "influence",
+        "cross-team",
+        "leadership"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "beh-04",
@@ -119,8 +146,16 @@
       ],
       "correctKey": "B",
       "explanation": "Own the miss, quantify impact, and show a lasting preventive change.",
-      "tags": ["ownership", "mistake", "learning"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "ownership",
+        "mistake",
+        "learning"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "beh-05",
@@ -148,8 +183,15 @@
       ],
       "correctKey": "B",
       "explanation": "Show a framework, stakeholder alignment, and an example of intentional tradeoffs.",
-      "tags": ["prioritization", "stakeholders"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "prioritization",
+        "stakeholders"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "beh-06",
@@ -177,8 +219,15 @@
       ],
       "correctKey": "B",
       "explanation": "Hard feedback should be private, specific, impact-based, and paired with a plan.",
-      "tags": ["feedback", "management"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "feedback",
+        "management"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "beh-07",
@@ -206,8 +255,15 @@
       ],
       "correctKey": "B",
       "explanation": "Mentoring answers should show scaffolding, practice, and measurable growth.",
-      "tags": ["mentoring", "oncall"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "mentoring",
+        "oncall"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "beh-08",
@@ -235,8 +291,15 @@
       ],
       "correctKey": "B",
       "explanation": "Motivation answers should connect your strengths to the company's concrete needs.",
-      "tags": ["motivation", "role-fit"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "motivation",
+        "role-fit"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "beh-09",
@@ -264,8 +327,16 @@
       ],
       "correctKey": "B",
       "explanation": "Leaders value early signal, options, and a recommendation — not surprise.",
-      "tags": ["leadership", "communication", "risk"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "leadership",
+        "communication",
+        "risk"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "beh-10",
@@ -293,8 +364,195 @@
       ],
       "correctKey": "B",
       "explanation": "Strong closing questions show role understanding and business curiosity.",
-      "tags": ["closing", "questions"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "closing",
+        "questions"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "beh-11",
+      "moduleId": "interview-behavioral",
+      "difficulty": "mid",
+      "scenario": "Tell me about a time you improved a process, not just a system.",
+      "prompt": "Strong STAR-style answer?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I like processes."
+        },
+        {
+          "key": "B",
+          "text": "Situation: incident updates were inconsistent. Task: I owned a clearer bridge protocol. Action: I introduced a 3-line update template and ran two drills. Result: stakeholder confusion dropped and average first meaningful update fell from 12 minutes to 4."
+        },
+        {
+          "key": "C",
+          "text": "I attended a process workshop once."
+        },
+        {
+          "key": "D",
+          "text": "Processes do not matter for engineers."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Process stories still need Situation, Task, Action, Result with metrics.",
+      "tags": [
+        "STAR",
+        "process"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "beh-12",
+      "moduleId": "interview-behavioral",
+      "difficulty": "senior",
+      "scenario": "Describe a time you had to say no to a senior stakeholder.",
+      "prompt": "Best answer?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I never say no to seniors."
+        },
+        {
+          "key": "B",
+          "text": "A VP wanted to skip canaries for a launch. I explained blast-radius risk, offered a 5% canary with auto-rollback that still hit the date, and got agreement. We caught a latent bug in canary and avoided customer impact."
+        },
+        {
+          "key": "C",
+          "text": "I said no and walked out."
+        },
+        {
+          "key": "D",
+          "text": "I complained on social media."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Show courage with alternatives and a positive outcome.",
+      "tags": [
+        "pushback",
+        "stakeholder"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "beh-13",
+      "moduleId": "interview-behavioral",
+      "difficulty": "junior",
+      "scenario": "How do you handle ambiguous requirements?",
+      "prompt": "Best response?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I wait forever for perfect specs."
+        },
+        {
+          "key": "B",
+          "text": "I write down assumptions, propose a thin slice, confirm with the stakeholder quickly, and iterate. Recently that turned a vague 'make it faster' request into a p95 latency target we could measure."
+        },
+        {
+          "key": "C",
+          "text": "I invent a huge project silently."
+        },
+        {
+          "key": "D",
+          "text": "I ignore ambiguity and hope."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Ambiguity handling = assumptions, thin slice, confirmation, metrics.",
+      "tags": [
+        "ambiguity",
+        "product"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "beh-14",
+      "moduleId": "interview-behavioral",
+      "difficulty": "mid",
+      "scenario": "Tell me about mentoring someone through failure.",
+      "prompt": "Strong answer?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I told them not to fail."
+        },
+        {
+          "key": "B",
+          "text": "A junior froze on their first bridge update. I debriefed privately, gave a template, rehearsed, and shadowed the next shift. Within two weeks they delivered clear updates independently."
+        },
+        {
+          "key": "C",
+          "text": "I took over permanently so they would not learn."
+        },
+        {
+          "key": "D",
+          "text": "I documented their failure in public Slack."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Mentoring through failure needs safety, structure, and measured growth.",
+      "tags": [
+        "mentoring",
+        "failure"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "beh-15",
+      "moduleId": "interview-behavioral",
+      "difficulty": "senior",
+      "scenario": "Why are you leaving your current role?",
+      "prompt": "Most professional answer?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "My manager is terrible and the company is dying."
+        },
+        {
+          "key": "B",
+          "text": "I am proud of the reliability gains we delivered. I am looking for a larger multi-region scope and closer partnership between platform and product, which this role offers."
+        },
+        {
+          "key": "C",
+          "text": "I just want more money only."
+        },
+        {
+          "key": "D",
+          "text": "I got bored of working."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Forward-looking, respectful, tied to the new role's scope.",
+      "tags": [
+        "motivation",
+        "transition"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     }
   ]
 }

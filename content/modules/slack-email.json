@@ -1,9 +1,455 @@
 {
   "id": "slack-email",
   "title": "Slack & Email",
-  "description": "Coming soon — exercises for this workplace theme.",
-  "persona": ["IT Manager", "SRE", "Fullstack"],
-  "status": "stub",
-  "itemCount": 0,
-  "items": []
+  "description": "Clear asks, tone control, and async thread etiquette.",
+  "persona": [
+    "IT Manager",
+    "SRE",
+    "Fullstack"
+  ],
+  "status": "ready",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "slk-01",
+      "moduleId": "slack-email",
+      "difficulty": "junior",
+      "scenario": "You need a review on a PR that blocks release today.",
+      "prompt": "Best Slack message?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Can someone review???"
+        },
+        {
+          "key": "B",
+          "text": "Hi team — need a review on PR #482 (auth rate limit) by 3pm to keep today's release. ~15 min review. Prefer: Jordan or Mira. Link and test notes in the PR."
+        },
+        {
+          "key": "C",
+          "text": "Review this when you can someday."
+        },
+        {
+          "key": "D",
+          "text": "@channel PLEASE HELP NOW!!!!!!!!"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Clear ask, deadline, effort estimate, preferred reviewers, link.",
+      "tags": [
+        "slack",
+        "ask",
+        "PR"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "slk-02",
+      "moduleId": "slack-email",
+      "difficulty": "mid",
+      "scenario": "A stakeholder emailed a vague request: 'Can you improve the dashboard?'",
+      "prompt": "Best clarifying reply?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Sure, I will redesign everything."
+        },
+        {
+          "key": "B",
+          "text": "Happy to help. To scope this well: which metrics matter most, who is the primary audience, and is this for this quarter or exploratory? A 15-minute call tomorrow would help me propose options."
+        },
+        {
+          "key": "C",
+          "text": "That request is too vague; rejected."
+        },
+        {
+          "key": "D",
+          "text": "I already started building without asking."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Clarify outcome, audience, and timeline before building.",
+      "tags": [
+        "email",
+        "clarification",
+        "scope"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "slk-03",
+      "moduleId": "slack-email",
+      "difficulty": "mid",
+      "scenario": "You must decline a meeting invite that conflicts with an incident review.",
+      "prompt": "Professional decline?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Busy. No."
+        },
+        {
+          "key": "B",
+          "text": "I cannot make this time due to a scheduled incident review. Please share notes or a recording, and I can async-comment by EOD. Happy to join a follow-up if decisions remain."
+        },
+        {
+          "key": "C",
+          "text": "Ignore the invite."
+        },
+        {
+          "key": "D",
+          "text": "Accept then do not show up."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Decline with reason, offer async path, stay available for decisions.",
+      "tags": [
+        "calendar",
+        "decline"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "slk-04",
+      "moduleId": "slack-email",
+      "difficulty": "senior",
+      "scenario": "You need to escalate a delayed dependency without blaming the other team in Slack.",
+      "prompt": "Best thread message?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Payments team is blocking us again as usual."
+        },
+        {
+          "key": "B",
+          "text": "Status: checkout release is blocked on Payments API contract (ticket PAY-221). Impact: we miss Thursday if unresolved. Ask: can we confirm owner and ETA by noon? Happy to pair for 30 minutes today."
+        },
+        {
+          "key": "C",
+          "text": "CC the CEO immediately."
+        },
+        {
+          "key": "D",
+          "text": "We will ship without the dependency and hope."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Impact + ask + offer to help beats public blame.",
+      "tags": [
+        "escalation",
+        "cross-team",
+        "tone"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "slk-05",
+      "moduleId": "slack-email",
+      "difficulty": "junior",
+      "scenario": "You accidentally sent a half-finished message to a large channel.",
+      "prompt": "Best recovery?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Delete and pretend nothing happened."
+        },
+        {
+          "key": "B",
+          "text": "Sorry — sent too early. Please ignore the incomplete note. Full update with owners and ETA coming in five minutes."
+        },
+        {
+          "key": "C",
+          "text": "Leave it and never clarify."
+        },
+        {
+          "key": "D",
+          "text": "Blame Slack for auto-send."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Quick acknowledgment + corrected follow-up restores trust.",
+      "tags": [
+        "recovery",
+        "slack"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "slk-06",
+      "moduleId": "slack-email",
+      "difficulty": "mid",
+      "scenario": "Write a concise status email to your manager after a partial outage.",
+      "prompt": "Which version is best?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Things broke then got better."
+        },
+        {
+          "key": "B",
+          "text": "Subject: Checkout degradation — restored. Impact: 22 minutes, ~8% failed checkouts. Cause: bad feature flag default. Mitigation: flag disabled at 14:12. Follow-ups: canary checks + flag review due Friday. Full timeline in the incident doc."
+        },
+        {
+          "key": "C",
+          "text": "Please see Slack for 200 messages."
+        },
+        {
+          "key": "D",
+          "text": "Not our fault; vendor issue; no details."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Subject + impact + cause + mitigation + dated follow-ups.",
+      "tags": [
+        "email",
+        "status",
+        "incident"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "slk-07",
+      "moduleId": "slack-email",
+      "difficulty": "senior",
+      "scenario": "A heated Slack thread is going off-topic and personal.",
+      "prompt": "How do you reset it?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Keep arguing in public."
+        },
+        {
+          "key": "B",
+          "text": "Let's pause the thread. The decision we need is X by tomorrow. I'll schedule a 20-minute call for stakeholders and summarize the options in a doc. Please keep feedback focused on the proposal."
+        },
+        {
+          "key": "C",
+          "text": "Lock the channel forever."
+        },
+        {
+          "key": "D",
+          "text": "Mock the loudest person."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "De-escalate, restate the decision, move to a better forum.",
+      "tags": [
+        "facilitation",
+        "conflict",
+        "slack"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "slk-08",
+      "moduleId": "slack-email",
+      "difficulty": "mid",
+      "scenario": "You want feedback on an RFC before Friday.",
+      "prompt": "Best async ask?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Thoughts?"
+        },
+        {
+          "key": "B",
+          "text": "RFC: read-replica cutover (doc linked). Ask: please comment on risk section and rollback plan by Thursday 4pm. Silent assent after that means we proceed with the proposed option B."
+        },
+        {
+          "key": "C",
+          "text": "Approve immediately without reading."
+        },
+        {
+          "key": "D",
+          "text": "Ping everyone every hour until they reply."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Doc link, specific ask, deadline, and default if silent.",
+      "tags": [
+        "RFC",
+        "async",
+        "deadline"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "slk-09",
+      "moduleId": "slack-email",
+      "difficulty": "junior",
+      "scenario": "Customer success asks in Slack if a bug is 'fixed for sure'.",
+      "prompt": "Accurate reply?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Yes 100% forever."
+        },
+        {
+          "key": "B",
+          "text": "Fix is deployed to production and error rate is back to baseline for 45 minutes. We will keep watching through peak traffic today and confirm final status at 6pm."
+        },
+        {
+          "key": "C",
+          "text": "Probably fine, do not worry."
+        },
+        {
+          "key": "D",
+          "text": "Tell customers it never happened."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "State evidence and monitoring window; avoid absolute guarantees.",
+      "tags": [
+        "customer",
+        "confidence"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "slk-10",
+      "moduleId": "slack-email",
+      "difficulty": "mid",
+      "scenario": "You need to nudge a stalled email thread with an external vendor.",
+      "prompt": "Best follow-up?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Hello??? Still waiting!!!!"
+        },
+        {
+          "key": "B",
+          "text": "Following up on my note from Tuesday about the sandbox credentials. Could you confirm ETA by Friday? Our integration test window is next Monday and we need access two days prior."
+        },
+        {
+          "key": "C",
+          "text": "CC their CEO on the first follow-up."
+        },
+        {
+          "key": "D",
+          "text": "Threaten to cancel without context."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Reference prior ask, give a deadline, explain business reason.",
+      "tags": [
+        "vendor",
+        "follow-up",
+        "email"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "slk-11",
+      "moduleId": "slack-email",
+      "difficulty": "senior",
+      "scenario": "Announce a breaking API change to partner engineers.",
+      "prompt": "Clearest message structure?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "API changing soon. Good luck."
+        },
+        {
+          "key": "B",
+          "text": "Breaking change on /v2/orders on June 15: field `status` becomes enum. Why: consistency across services. Action: update clients before June 10. Migration guide and examples linked. Questions: reply in this thread or office hours Thursday 3pm."
+        },
+        {
+          "key": "C",
+          "text": "Read the entire changelog dump with no summary."
+        },
+        {
+          "key": "D",
+          "text": "Ship breakages without notice to move faster."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "What/when/why/action/support channel — partner-friendly.",
+      "tags": [
+        "API",
+        "announcement",
+        "partners"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "slk-12",
+      "moduleId": "slack-email",
+      "difficulty": "mid",
+      "scenario": "You disagree with a peer's proposal in a public channel.",
+      "prompt": "How do you disagree well?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "This idea is terrible."
+        },
+        {
+          "key": "B",
+          "text": "Thanks for drafting this. I see risk in approach A around retry storms. Have we considered approach B with idempotency keys? Happy to sketch a quick comparison table if useful."
+        },
+        {
+          "key": "C",
+          "text": "Agree publicly then block privately."
+        },
+        {
+          "key": "D",
+          "text": "React with eyes emoji only."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Appreciate, name the risk, offer an alternative, invite collaboration.",
+      "tags": [
+        "disagreement",
+        "tone",
+        "collaboration"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    }
+  ]
 }

@@ -1,9 +1,444 @@
 {
   "id": "one-on-one",
   "title": "1:1 & Mentoring",
-  "description": "Coming soon — exercises for this workplace theme.",
-  "persona": ["IT Manager", "SRE", "Fullstack"],
-  "status": "stub",
-  "itemCount": 0,
-  "items": []
+  "description": "Feedback, career talk, and coaching phrases.",
+  "persona": [
+    "IT Manager"
+  ],
+  "status": "ready",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "ono-01",
+      "moduleId": "one-on-one",
+      "difficulty": "mid",
+      "scenario": "In a 1:1, your report seems quiet and overloaded.",
+      "prompt": "Best opening question?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Why is your output low?"
+        },
+        {
+          "key": "B",
+          "text": "I want to check in on workload and energy. What feels heaviest right now, and what would make the next two weeks more sustainable?"
+        },
+        {
+          "key": "C",
+          "text": "Fill the whole 1:1 with your status monologue."
+        },
+        {
+          "key": "D",
+          "text": "Skip 1:1s when people look fine."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Open with care and a concrete sustainability ask.",
+      "tags": [
+        "1:1",
+        "workload"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "ono-02",
+      "moduleId": "one-on-one",
+      "difficulty": "senior",
+      "scenario": "You need to give hard feedback about missed stakeholder updates.",
+      "prompt": "Best framing?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You are bad at communication."
+        },
+        {
+          "key": "B",
+          "text": "In the last two incidents, stakeholders learned status late. The impact was avoidable escalations. Going forward I need a status note within 15 minutes of SEV start. Let's practice a template together today."
+        },
+        {
+          "key": "C",
+          "text": "Put it only in the annual review surprise."
+        },
+        {
+          "key": "D",
+          "text": "Hint vaguely and hope they notice."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Behavior + impact + clear future standard + support.",
+      "tags": [
+        "feedback",
+        "communication"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "ono-03",
+      "moduleId": "one-on-one",
+      "difficulty": "mid",
+      "scenario": "Report asks how to grow toward staff/SRE leadership.",
+      "prompt": "Strong coaching reply?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Just work harder."
+        },
+        {
+          "key": "B",
+          "text": "For the next quarter, let's target two outcomes: leading one cross-team reliability initiative and mentoring an on-call buddy. We will review evidence monthly against those outcomes."
+        },
+        {
+          "key": "C",
+          "text": "Titles are meaningless; never plan."
+        },
+        {
+          "key": "D",
+          "text": "Promise a promotion date with no criteria."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Growth plans need outcomes, evidence, and review cadence.",
+      "tags": [
+        "career",
+        "coaching"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "ono-04",
+      "moduleId": "one-on-one",
+      "difficulty": "junior",
+      "scenario": "As a report, you want more challenging work.",
+      "prompt": "How do you ask your manager?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I am bored; this job is easy."
+        },
+        {
+          "key": "B",
+          "text": "I am ready for more ownership. Could I lead the next canary rollout with your sponsorship? I will draft a plan this week and identify risks I still need help with."
+        },
+        {
+          "key": "C",
+          "text": "Threaten to leave immediately."
+        },
+        {
+          "key": "D",
+          "text": "Wait silently for someone to notice."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Ask for ownership with a plan and explicit sponsorship needs.",
+      "tags": [
+        "career",
+        "ask"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "ono-05",
+      "moduleId": "one-on-one",
+      "difficulty": "senior",
+      "scenario": "Performance is slipping due to unclear priorities across teams.",
+      "prompt": "Manager message in 1:1?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Try harder to please everyone."
+        },
+        {
+          "key": "B",
+          "text": "Your priorities are split across three stakeholders. Together we will define a ranked top three for this sprint, and I will reinforce that order with the other managers."
+        },
+        {
+          "key": "C",
+          "text": "Blame the employee only."
+        },
+        {
+          "key": "D",
+          "text": "Add more meetings."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Managers remove ambiguity and shield priority order.",
+      "tags": [
+        "priorities",
+        "management"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "ono-06",
+      "moduleId": "one-on-one",
+      "difficulty": "mid",
+      "scenario": "Report made a production mistake and feels ashamed.",
+      "prompt": "Supportive response?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You should feel bad."
+        },
+        {
+          "key": "B",
+          "text": "Thank you for owning it quickly. Mistakes happen in complex systems. Let's focus on the learning and the preventive change. I still trust you on-call — we will pair on the first shift back if you want."
+        },
+        {
+          "key": "C",
+          "text": "Remove them from on-call forever immediately."
+        },
+        {
+          "key": "D",
+          "text": "Joke about it in public Slack."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Psychological safety + learning + continued trust.",
+      "tags": [
+        "mistake",
+        "safety"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "ono-07",
+      "moduleId": "one-on-one",
+      "difficulty": "mid",
+      "scenario": "You disagree with your manager's technical direction.",
+      "prompt": "Respectful challenge?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "That plan is dumb."
+        },
+        {
+          "key": "B",
+          "text": "I see the goal. My concern is blast radius without canaries. Can we walk through a safer sequence that still hits the date, or explicitly accept the risk if we skip it?"
+        },
+        {
+          "key": "C",
+          "text": "Complain to the team after the 1:1."
+        },
+        {
+          "key": "D",
+          "text": "Sabotage the plan quietly."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Challenge with risk, alternative, and decision clarity.",
+      "tags": [
+        "disagreement",
+        "upward"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "ono-08",
+      "moduleId": "one-on-one",
+      "difficulty": "senior",
+      "scenario": "Mentoring session: junior freezes during incident bridge updates.",
+      "prompt": "Coaching line?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Maybe you cannot do on-call."
+        },
+        {
+          "key": "B",
+          "text": "Bridge updates are a skill. Let's script a 3-line template — impact, action, next update time — and rehearse twice this week. I will shadow your next SEV-3."
+        },
+        {
+          "key": "C",
+          "text": "Throw them into SEV-1 alone."
+        },
+        {
+          "key": "D",
+          "text": "Take over forever without teaching."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Teach with template, rehearsal, and shadowed practice.",
+      "tags": [
+        "mentoring",
+        "incident"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "ono-09",
+      "moduleId": "one-on-one",
+      "difficulty": "junior",
+      "scenario": "You need to cancel a 1:1 due to an active incident.",
+      "prompt": "Best note to your manager?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Skipping."
+        },
+        {
+          "key": "B",
+          "text": "I need to move our 1:1 — I am on an active SEV-2 bridge. Can we do 20 minutes tomorrow at 10:30, or async bullets today if that is better for you?"
+        },
+        {
+          "key": "C",
+          "text": "No-show without message."
+        },
+        {
+          "key": "D",
+          "text": "Expect the manager to guess why."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Reschedule with reason and options.",
+      "tags": [
+        "calendar",
+        "respect"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "ono-10",
+      "moduleId": "one-on-one",
+      "difficulty": "mid",
+      "scenario": "Promotion conversation: report wants a title now; evidence is partial.",
+      "prompt": "Honest manager reply?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Sure, whatever."
+        },
+        {
+          "key": "B",
+          "text": "I support your trajectory. For this cycle, we still need consistent cross-team influence evidence. Here are two gaps and a 90-day plan. If we hit them, I will champion you in the next review."
+        },
+        {
+          "key": "C",
+          "text": "Never discuss promotions."
+        },
+        {
+          "key": "D",
+          "text": "Promise a title with no path."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Supportive honesty with gaps and a timeboxed plan.",
+      "tags": [
+        "promotion",
+        "honesty"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "ono-11",
+      "moduleId": "one-on-one",
+      "difficulty": "senior",
+      "scenario": "Skip-level 1:1: engineer says process is slowing delivery.",
+      "prompt": "Productive response?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Process is sacred; deal with it."
+        },
+        {
+          "key": "B",
+          "text": "Thanks for the signal. Which step creates the most delay without reducing risk? I will review it with the leads and we will either streamline it or explain the risk it prevents."
+        },
+        {
+          "key": "C",
+          "text": "Trash the process publicly same day."
+        },
+        {
+          "key": "D",
+          "text": "Ignore skip-level feedback."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Seek the costly step, commit to review, keep risk framing.",
+      "tags": [
+        "skip-level",
+        "process"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "ono-12",
+      "moduleId": "one-on-one",
+      "difficulty": "mid",
+      "scenario": "End a career 1:1 with clear next steps.",
+      "prompt": "Best closing?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Talk again someday."
+        },
+        {
+          "key": "B",
+          "text": "Next steps: you draft the initiative one-pager by Friday; I introduce you to the platform lead next week; we review progress in our 1:1 in two weeks. I will send this summary after the call."
+        },
+        {
+          "key": "C",
+          "text": "Keep goals only in your head."
+        },
+        {
+          "key": "D",
+          "text": "Add ten vague aspirations with no owners."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Concrete owners, dates, and a written summary.",
+      "tags": [
+        "closing",
+        "career"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    }
+  ]
 }

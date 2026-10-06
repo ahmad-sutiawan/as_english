@@ -2,9 +2,13 @@
   "id": "manager-updates",
   "title": "Manager Updates",
   "description": "Concise status, risk callouts, and decision requests.",
-  "persona": ["IT Manager", "SRE", "Fullstack"],
+  "persona": [
+    "IT Manager",
+    "SRE",
+    "Fullstack"
+  ],
   "status": "ready",
-  "itemCount": 10,
+  "itemCount": 15,
   "items": [
     {
       "id": "mgr-01",
@@ -32,8 +36,16 @@
       ],
       "correctKey": "B",
       "explanation": "Managers need progress, blockers, and a clear ask with a deadline impact.",
-      "tags": ["status", "blocker", "ask"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "status",
+        "blocker",
+        "ask"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "mgr-02",
@@ -61,8 +73,16 @@
       ],
       "correctKey": "B",
       "explanation": "Risk updates should include timeline, impact, options, recommendation, and a decision date.",
-      "tags": ["risk", "escalation", "decision"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "risk",
+        "escalation",
+        "decision"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "mgr-03",
@@ -90,8 +110,16 @@
       ],
       "correctKey": "B",
       "explanation": "Bad news early, with cause, new ETA, and mitigation — no blame theater.",
-      "tags": ["deadline", "dependency", "transparency"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "deadline",
+        "dependency",
+        "transparency"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "mgr-04",
@@ -119,8 +147,15 @@
       ],
       "correctKey": "B",
       "explanation": "Good capacity answers offer tradeoffs and ask for a priority decision.",
-      "tags": ["capacity", "prioritization"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "capacity",
+        "prioritization"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "mgr-05",
@@ -148,8 +183,16 @@
       ],
       "correctKey": "B",
       "explanation": "Budget asks need cost, expected outcome, measurement, and a decision timeline.",
-      "tags": ["budget", "ask", "tooling"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "budget",
+        "ask",
+        "tooling"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "mgr-06",
@@ -177,8 +220,15 @@
       ],
       "correctKey": "B",
       "explanation": "Exec summaries: duration, impact, cause at right altitude, mitigation, and dated follow-ups.",
-      "tags": ["executive", "incident-summary"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "executive",
+        "incident-summary"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "mgr-07",
@@ -206,8 +256,16 @@
       ],
       "correctKey": "B",
       "explanation": "Use data, impact on commitments, and a concrete process ask.",
-      "tags": ["1:1", "workload", "process"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "1:1",
+        "workload",
+        "process"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "mgr-08",
@@ -235,8 +293,16 @@
       ],
       "correctKey": "B",
       "explanation": "Surface hidden risk with a recommended tradeoff even when not asked.",
-      "tags": ["quality", "risk", "release"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "quality",
+        "risk",
+        "release"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "mgr-09",
@@ -264,8 +330,16 @@
       ],
       "correctKey": "B",
       "explanation": "Disagree by acknowledging goal, stating risk, offering a safer alternative, and clarifying decision ownership.",
-      "tags": ["disagreement", "safety", "leadership"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "disagreement",
+        "safety",
+        "leadership"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     },
     {
       "id": "mgr-10",
@@ -293,8 +367,195 @@
       ],
       "correctKey": "B",
       "explanation": "Async updates need what changed, expected effect, what to watch, and rollback cues.",
-      "tags": ["async", "change-management"],
-      "tts": { "scenario": true, "prompt": true, "answer": true }
+      "tags": [
+        "async",
+        "change-management"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "mgr-11",
+      "moduleId": "manager-updates",
+      "difficulty": "mid",
+      "scenario": "Your manager asks for a 'quick gut feel' on a risky launch.",
+      "prompt": "Best reply?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I guess it is fine."
+        },
+        {
+          "key": "B",
+          "text": "Gut feel is cautious. Confidence is medium: canary looks good, but we lack load-test coverage for peak. Recommendation: delay 48 hours for a targeted test, or launch with a rapid rollback owner on bridge."
+        },
+        {
+          "key": "C",
+          "text": "Refuse to give any opinion."
+        },
+        {
+          "key": "D",
+          "text": "Guarantee zero risk forever."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Translate gut feel into confidence, gap, and options.",
+      "tags": [
+        "risk",
+        "recommendation"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "mgr-12",
+      "moduleId": "manager-updates",
+      "difficulty": "senior",
+      "scenario": "Headcount was cut mid-quarter. Your manager asks what to de-scope.",
+      "prompt": "Strong answer?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We will still do everything with heroes."
+        },
+        {
+          "key": "B",
+          "text": "With one fewer engineer, I recommend pausing the nice-to-have reporting UI and protecting checkout reliability and the partner API. I will send a revised roadmap with customer impact notes today."
+        },
+        {
+          "key": "C",
+          "text": "Cut on-call coverage first."
+        },
+        {
+          "key": "D",
+          "text": "Hide the constraint from stakeholders."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Make explicit tradeoffs tied to customer impact.",
+      "tags": [
+        "headcount",
+        "descope"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "mgr-13",
+      "moduleId": "manager-updates",
+      "difficulty": "junior",
+      "scenario": "You need your manager to unblock access to a production dashboard.",
+      "prompt": "Clear ask?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Access please."
+        },
+        {
+          "key": "B",
+          "text": "I need read access to the checkout Grafana folder to finish the weekly reliability report by Thursday. Could you approve the access request ticket LINK today?"
+        },
+        {
+          "key": "C",
+          "text": "Try random credentials."
+        },
+        {
+          "key": "D",
+          "text": "Ask every week forever without a ticket."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Ask includes why, deadline, and the action artifact.",
+      "tags": [
+        "ask",
+        "access"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "mgr-14",
+      "moduleId": "manager-updates",
+      "difficulty": "mid",
+      "scenario": "A peer team is taking credit for your reliability win in a leadership channel.",
+      "prompt": "Professional correction?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Call them liars publicly."
+        },
+        {
+          "key": "B",
+          "text": "Glad the outcome helped customers. For accuracy: detection work and rollback were led by our team with Platform support on dashboards. Happy to co-write a short shared summary if useful."
+        },
+        {
+          "key": "C",
+          "text": "Stay silent forever."
+        },
+        {
+          "key": "D",
+          "text": "Start a flame war."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Correct the record calmly and invite shared narrative.",
+      "tags": [
+        "credit",
+        "tone"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "mgr-15",
+      "moduleId": "manager-updates",
+      "difficulty": "senior",
+      "scenario": "Quarterly business review: you have 90 seconds for reliability.",
+      "prompt": "Best spoken summary?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We clicked many buttons and looked at graphs."
+        },
+        {
+          "key": "B",
+          "text": "Reliability: checkout availability 99.95% vs 99.9% target; two SEV-2s, both mitigated under 30 minutes; top risk is DB CPU growth — decision needed on scale-up budget this month."
+        },
+        {
+          "key": "C",
+          "text": "Read a 20-page appendix aloud."
+        },
+        {
+          "key": "D",
+          "text": "Say no risks exist."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Metric vs target, incidents, top risk, decision ask — all in one breath.",
+      "tags": [
+        "QBR",
+        "executive"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
     }
   ]
 }

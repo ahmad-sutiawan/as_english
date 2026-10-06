@@ -1,9 +1,445 @@
 {
   "id": "interview-technical",
   "title": "Interview — Technical",
-  "description": "Coming soon — exercises for this workplace theme.",
-  "persona": ["IT Manager", "SRE", "Fullstack"],
-  "status": "stub",
-  "itemCount": 0,
-  "items": []
+  "description": "Tradeoffs, system design phrasing, and clear technical explanations.",
+  "persona": [
+    "SRE",
+    "Fullstack"
+  ],
+  "status": "ready",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "tec-01",
+      "moduleId": "interview-technical",
+      "difficulty": "mid",
+      "scenario": "An interviewer asks you to design a URL shortener that must survive sudden traffic spikes.",
+      "prompt": "Which answer best shows structured system-design thinking?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I would use a database and some servers."
+        },
+        {
+          "key": "B",
+          "text": "I would start with requirements: write/read ratio, latency target, and uniqueness. Then propose an API, a base62 ID generator, a primary store with caching, and a scale-out plan using partitioning and CDN for redirects."
+        },
+        {
+          "key": "C",
+          "text": "I once built something similar at home for fun."
+        },
+        {
+          "key": "D",
+          "text": "Kubernetes will solve the scaling automatically."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Strong answers frame requirements first, then components, then scaling — not vague tools.",
+      "tags": [
+        "system-design",
+        "scalability"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "tec-02",
+      "moduleId": "interview-technical",
+      "difficulty": "senior",
+      "scenario": "They ask: SQL vs NoSQL for an order history service with complex joins and strong consistency needs.",
+      "prompt": "What is the clearest tradeoff statement?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "NoSQL is always faster so we should use it."
+        },
+        {
+          "key": "B",
+          "text": "Given multi-table joins and strong consistency, a relational store is a better default. NoSQL could help for high write throughput or flexible schemas, but we would pay in query complexity and consistency tradeoffs."
+        },
+        {
+          "key": "C",
+          "text": "I only use Postgres for everything."
+        },
+        {
+          "key": "D",
+          "text": "It does not matter as long as we use an ORM."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Interviewers want criteria-based tradeoffs tied to consistency and access patterns.",
+      "tags": [
+        "tradeoffs",
+        "database"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "tec-03",
+      "moduleId": "interview-technical",
+      "difficulty": "mid",
+      "scenario": "Explain CAP theorem in practical terms for a payments ledger.",
+      "prompt": "Which explanation is most interview-ready?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "CAP means choose any two letters and move on."
+        },
+        {
+          "key": "B",
+          "text": "In a partition, a payments ledger should favor consistency over availability: better to reject or queue writes than accept conflicting balances. Availability can be recovered with retries and clear user messaging."
+        },
+        {
+          "key": "C",
+          "text": "We can ignore partitions in the cloud."
+        },
+        {
+          "key": "D",
+          "text": "Microservices remove CAP concerns."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tie CAP to the domain: money systems usually prioritize consistency during partitions.",
+      "tags": [
+        "CAP",
+        "payments"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "tec-04",
+      "moduleId": "interview-technical",
+      "difficulty": "junior",
+      "scenario": "Walk through debugging a slow API endpoint.",
+      "prompt": "Which response shows a professional debug process?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I would restart the server first every time."
+        },
+        {
+          "key": "B",
+          "text": "I would reproduce with timing, check metrics and traces, identify whether the bottleneck is CPU, DB, or network, then validate a fix with before/after latency."
+        },
+        {
+          "key": "C",
+          "text": "I would rewrite the endpoint in another language."
+        },
+        {
+          "key": "D",
+          "text": "I would ask users to stop using that feature."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "A clear debug narrative: reproduce → observe → localize → fix → verify.",
+      "tags": [
+        "debugging",
+        "performance"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "tec-05",
+      "moduleId": "interview-technical",
+      "difficulty": "senior",
+      "scenario": "How would you introduce rate limiting for a public API without breaking legitimate clients?",
+      "prompt": "Which answer is strongest?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Block everyone who exceeds one request per second."
+        },
+        {
+          "key": "B",
+          "text": "I would define per-client quotas, return standard 429 with Retry-After, start in shadow mode to measure impact, then enforce gradually with burst tokens for good actors and clear docs for clients."
+        },
+        {
+          "key": "C",
+          "text": "Just put Cloudflare in front and hope."
+        },
+        {
+          "key": "D",
+          "text": "Rate limiting is only for DDoS, not product APIs."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Show gradual rollout, client-friendly errors, and measurement before hard enforcement.",
+      "tags": [
+        "rate-limiting",
+        "API"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "tec-06",
+      "moduleId": "interview-technical",
+      "difficulty": "mid",
+      "scenario": "How do you decide between synchronous and asynchronous processing for invoice generation?",
+      "prompt": "What should you say?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Always async because it is modern."
+        },
+        {
+          "key": "B",
+          "text": "If the user needs the invoice immediately to continue, keep a synchronous path with a tight SLA. If generation can take longer, accept the request, enqueue work, and notify when ready — with idempotency keys to avoid duplicates."
+        },
+        {
+          "key": "C",
+          "text": "Use cron every night only."
+        },
+        {
+          "key": "D",
+          "text": "Let the frontend generate PDFs."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Map sync/async to user latency needs and reliability concerns like idempotency.",
+      "tags": [
+        "async",
+        "reliability"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "tec-07",
+      "moduleId": "interview-technical",
+      "difficulty": "senior",
+      "scenario": "Explain observability for a microservice fleet.",
+      "prompt": "Which answer is most complete?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We log everything to text files on each box."
+        },
+        {
+          "key": "B",
+          "text": "I want structured logs, metrics for SLIs, and distributed traces tied by request IDs — plus alerting on symptoms users feel, not only host CPU. Dashboards should answer what broke, where, and how bad."
+        },
+        {
+          "key": "C",
+          "text": "APM tools replace the need for design."
+        },
+        {
+          "key": "D",
+          "text": "If on-call is awake, observability is enough."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Logs + metrics + traces, user-centric SLIs, and actionable alerts.",
+      "tags": [
+        "observability",
+        "SLI"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "tec-08",
+      "moduleId": "interview-technical",
+      "difficulty": "mid",
+      "scenario": "Explain caching for a product catalog that updates a few times per hour.",
+      "prompt": "Which statement is best?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Cache forever to maximize hit rate."
+        },
+        {
+          "key": "B",
+          "text": "I would cache reads with a short TTL aligned to update frequency, use cache-aside, and invalidate on publish events. I would also define stale-while-revalidate behavior so brief staleness does not become wrong pricing."
+        },
+        {
+          "key": "C",
+          "text": "Never cache; databases are fast enough."
+        },
+        {
+          "key": "D",
+          "text": "Put the entire database in Redis."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Good caching answers include TTL, invalidation, and correctness boundaries.",
+      "tags": [
+        "caching",
+        "correctness"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "tec-09",
+      "moduleId": "interview-technical",
+      "difficulty": "junior",
+      "scenario": "What is idempotency and why does it matter in APIs?",
+      "prompt": "Which definition is clearest?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It means the API is very fast."
+        },
+        {
+          "key": "B",
+          "text": "Idempotency means repeating the same request does not create duplicate side effects. It matters for payments and retries so network failures do not double-charge or double-create resources."
+        },
+        {
+          "key": "C",
+          "text": "It means we use HTTPS."
+        },
+        {
+          "key": "D",
+          "text": "It is another word for authentication."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Simple definition plus why retries make it essential.",
+      "tags": [
+        "idempotency",
+        "API"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "tec-10",
+      "moduleId": "interview-technical",
+      "difficulty": "senior",
+      "scenario": "How would you migrate a monolith to services without a big-bang rewrite?",
+      "prompt": "Which approach sounds most senior?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Freeze all features and rewrite for six months."
+        },
+        {
+          "key": "B",
+          "text": "I would extract high-churn bounded contexts first behind stable APIs, use the strangler pattern, keep a shared data ownership plan, and measure latency and error budgets during each cutover."
+        },
+        {
+          "key": "C",
+          "text": "Copy the codebase into many repos on day one."
+        },
+        {
+          "key": "D",
+          "text": "Microservices first, product later."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Strangler pattern, bounded contexts, and risk-managed cutovers beat big-bang rewrites.",
+      "tags": [
+        "migration",
+        "architecture"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "tec-11",
+      "moduleId": "interview-technical",
+      "difficulty": "mid",
+      "scenario": "Walk me through securing secrets in a CI/CD pipeline.",
+      "prompt": "Best answer?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Commit .env files but do not push them."
+        },
+        {
+          "key": "B",
+          "text": "Store secrets in a vault or CI secret store, inject at runtime, rotate regularly, scope least privilege per pipeline, and never print secrets in logs. Pull requests should not expose production credentials."
+        },
+        {
+          "key": "C",
+          "text": "Email secrets to the team when needed."
+        },
+        {
+          "key": "D",
+          "text": "Hardcode secrets in the Dockerfile for convenience."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Vault/CI secrets, least privilege, rotation, and no secret leakage.",
+      "tags": [
+        "security",
+        "CI/CD"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "tec-12",
+      "moduleId": "interview-technical",
+      "difficulty": "senior",
+      "scenario": "How do you reason about SLOs for a checkout API?",
+      "prompt": "Which answer is strongest?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Aim for 100% uptime always."
+        },
+        {
+          "key": "B",
+          "text": "I would define an availability SLO on successful checkout completion, set an error budget, and use burn-rate alerts. Product and eng would agree what latency percentile matters for conversion, then prioritize reliability work when budget burns fast."
+        },
+        {
+          "key": "C",
+          "text": "SLOs are only for executives and not engineers."
+        },
+        {
+          "key": "D",
+          "text": "If monitoring is green, the SLO is fine."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "SLOs need user outcomes, error budgets, and shared prioritization language.",
+      "tags": [
+        "SLO",
+        "error-budget"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    }
+  ]
 }

@@ -1,9 +1,445 @@
 {
   "id": "standup-sync",
   "title": "Standup & Sync",
-  "description": "Coming soon — exercises for this workplace theme.",
-  "persona": ["IT Manager", "SRE", "Fullstack"],
-  "status": "stub",
-  "itemCount": 0,
-  "items": []
+  "description": "Blockers, ETA, and asking for help without drama.",
+  "persona": [
+    "SRE",
+    "Fullstack"
+  ],
+  "status": "ready",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "stu-01",
+      "moduleId": "standup-sync",
+      "difficulty": "junior",
+      "scenario": "Daily standup. Yesterday you finished auth middleware; today rate-limit tests; blocked on staging credentials.",
+      "prompt": "Best standup update?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Same as usual."
+        },
+        {
+          "key": "B",
+          "text": "Yesterday: finished auth middleware. Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands."
+        },
+        {
+          "key": "C",
+          "text": "I did a lot of stuff and will do more stuff."
+        },
+        {
+          "key": "D",
+          "text": "No updates."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Yesterday / Today / Blocker is the classic clear format.",
+      "tags": [
+        "standup",
+        "blocker"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "stu-02",
+      "moduleId": "standup-sync",
+      "difficulty": "mid",
+      "scenario": "You will miss today's estimate because a flaky integration test ate your morning.",
+      "prompt": "How do you say it in standup?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Tests are stupid."
+        },
+        {
+          "key": "B",
+          "text": "I am slipping half a day because flaky payment tests blocked local verification. I am quarantining the flake and will still open the PR by end of day tomorrow unless the flake returns."
+        },
+        {
+          "key": "C",
+          "text": "Everything is fine."
+        },
+        {
+          "key": "D",
+          "text": "I might be done sometime."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Name impact, mitigation, and a revised ETA.",
+      "tags": [
+        "ETA",
+        "transparency"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "stu-03",
+      "moduleId": "standup-sync",
+      "difficulty": "mid",
+      "scenario": "You need help from a teammate who is mid-focus.",
+      "prompt": "Best ask in standup?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Someone help me now."
+        },
+        {
+          "key": "B",
+          "text": "I need 20 minutes with Alex after standup to pair on the Redis lock bug. Without that, my ETA moves from today to tomorrow."
+        },
+        {
+          "key": "C",
+          "text": "I will figure it out alone forever."
+        },
+        {
+          "key": "D",
+          "text": "Alex always ignores me."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Specific person, timebox, and consequence if help is delayed.",
+      "tags": [
+        "ask-for-help",
+        "pairing"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "stu-04",
+      "moduleId": "standup-sync",
+      "difficulty": "senior",
+      "scenario": "As tech lead, two people are blocked on the same API contract.",
+      "prompt": "What do you say to unblock the team?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Discuss it later somehow."
+        },
+        {
+          "key": "B",
+          "text": "Let's take the API contract offline for ten minutes after standup — Mira and Jordan with me. Goal: decide request shape so both streams can continue today."
+        },
+        {
+          "key": "C",
+          "text": "Everyone wait until next sprint."
+        },
+        {
+          "key": "D",
+          "text": "Build whatever you want independently."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Leaders convert shared blockers into a timeboxed decision forum.",
+      "tags": [
+        "facilitation",
+        "leadership"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "stu-05",
+      "moduleId": "standup-sync",
+      "difficulty": "junior",
+      "scenario": "You have no blocker but expect one later when QA starts.",
+      "prompt": "Good proactive update?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "No blockers, nothing to say."
+        },
+        {
+          "key": "B",
+          "text": "No blocker now. Heads-up: I will need QA support this afternoon for the checkout edge cases. I will book a slot in the QA channel after standup."
+        },
+        {
+          "key": "C",
+          "text": "QA will magically appear."
+        },
+        {
+          "key": "D",
+          "text": "Blockers are only for emergencies."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Flag upcoming dependencies early so others can plan.",
+      "tags": [
+        "proactive",
+        "dependency"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "stu-06",
+      "moduleId": "standup-sync",
+      "difficulty": "mid",
+      "scenario": "Standup is drifting into a long design debate.",
+      "prompt": "What should you say?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Let us debate for the full hour."
+        },
+        {
+          "key": "B",
+          "text": "This is useful but bigger than standup. Parking it for a 15-minute design huddle at 11:00 — I will post notes. Back to blockers for everyone else."
+        },
+        {
+          "key": "C",
+          "text": "Stop talking, all of you."
+        },
+        {
+          "key": "D",
+          "text": "Cancel standup forever."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Protect standup time; park deep topics with an owner and time.",
+      "tags": [
+        "facilitation",
+        "parking-lot"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "stu-07",
+      "moduleId": "standup-sync",
+      "difficulty": "mid",
+      "scenario": "You finished early and can take overflow work.",
+      "prompt": "How do you offer help?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I am bored."
+        },
+        {
+          "key": "B",
+          "text": "I have capacity after lunch. If anyone is at risk on the release checklist, I can take a verification task — drop it in the thread."
+        },
+        {
+          "key": "C",
+          "text": "Do not give me more work."
+        },
+        {
+          "key": "D",
+          "text": "I will silently refactor unrelated code."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Offer capacity with a clear channel and useful target.",
+      "tags": [
+        "capacity",
+        "teamwork"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "stu-08",
+      "moduleId": "standup-sync",
+      "difficulty": "senior",
+      "scenario": "A junior says 'still working on it' with no detail for three days.",
+      "prompt": "As lead, what do you ask?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Why are you so slow?"
+        },
+        {
+          "key": "B",
+          "text": "Can you break that into what is done, what is left, and where you are stuck? Even a rough percentage helps us unblock you today."
+        },
+        {
+          "key": "C",
+          "text": "Fine, keep going silently."
+        },
+        {
+          "key": "D",
+          "text": "I will reassign without asking."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Coach for visibility without public shaming.",
+      "tags": [
+        "coaching",
+        "visibility"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "stu-09",
+      "moduleId": "standup-sync",
+      "difficulty": "junior",
+      "scenario": "Remote sync: your audio failed and you missed half the updates.",
+      "prompt": "Best recovery message in chat?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Whatever."
+        },
+        {
+          "key": "B",
+          "text": "Sorry, I dropped audio. Could someone paste the action items and owners in the thread? I will confirm my items in two minutes."
+        },
+        {
+          "key": "C",
+          "text": "Pretend you heard everything."
+        },
+        {
+          "key": "D",
+          "text": "Demand a full restart of the meeting."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Own the drop, ask for written actions, confirm quickly.",
+      "tags": [
+        "remote",
+        "recovery"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "stu-10",
+      "moduleId": "standup-sync",
+      "difficulty": "mid",
+      "scenario": "You discovered a production risk while preparing standup notes.",
+      "prompt": "How do you raise it without derailing?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Scream incident in standup."
+        },
+        {
+          "key": "B",
+          "text": "Quick risk flag: error rate on login is trending up 2x since last night. I will open a war-room thread after standup; not a full SEV yet. Continuing with other updates now."
+        },
+        {
+          "key": "C",
+          "text": "Keep it secret until it burns."
+        },
+        {
+          "key": "D",
+          "text": "Blame yesterday's on-call in public."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Signal risk, next channel, and keep standup moving.",
+      "tags": [
+        "risk",
+        "production"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "stu-11",
+      "moduleId": "standup-sync",
+      "difficulty": "mid",
+      "scenario": "Cross-timezone teammate cannot attend live standup.",
+      "prompt": "Best async substitute?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "They will catch up somehow."
+        },
+        {
+          "key": "B",
+          "text": "I posted an async standup in the channel with yesterday/today/blockers and tagged owners. Please reply in-thread before 10:00 your time so we do not wait on the live call."
+        },
+        {
+          "key": "C",
+          "text": "Skip them permanently."
+        },
+        {
+          "key": "D",
+          "text": "Only voice notes, no text."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Async standup needs structure, tags, and a reply deadline.",
+      "tags": [
+        "async",
+        "timezone"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "stu-12",
+      "moduleId": "standup-sync",
+      "difficulty": "senior",
+      "scenario": "Sprint goal is at risk. Standup reveals three parallel blockers.",
+      "prompt": "Lead summary to close standup?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Good luck everyone."
+        },
+        {
+          "key": "B",
+          "text": "Summary: sprint goal at risk from API, flaky tests, and QA bandwidth. Owners: me on API decision at 11:00, Sam on flake quarantine, Priya on QA slotting. We reconvene at 4pm with go/no-go for Thursday release."
+        },
+        {
+          "key": "C",
+          "text": "We will see what happens."
+        },
+        {
+          "key": "D",
+          "text": "Cancel the release quietly."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Close with owners, times, and a decision checkpoint.",
+      "tags": [
+        "summary",
+        "decision"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    }
+  ]
 }

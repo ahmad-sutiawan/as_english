@@ -1,9 +1,446 @@
 {
   "id": "offer-negotiation",
   "title": "Offer & Negotiation",
-  "description": "Coming soon — exercises for this workplace theme.",
-  "persona": ["IT Manager", "SRE", "Fullstack"],
-  "status": "stub",
-  "itemCount": 0,
-  "items": []
+  "description": "Salary, start date, benefits, and polite counter-offers.",
+  "persona": [
+    "IT Manager",
+    "SRE",
+    "Fullstack"
+  ],
+  "status": "ready",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "off-01",
+      "moduleId": "offer-negotiation",
+      "difficulty": "mid",
+      "scenario": "You received a written offer. Base salary is 10% below your target. You still want the role.",
+      "prompt": "Which counter is most professional?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "This offer is insulting. Fix it."
+        },
+        {
+          "key": "B",
+          "text": "Thank you for the offer. I am excited about the role. Based on market data and my scope in reliability ownership, I am targeting X base. Is there flexibility to move closer to that number?"
+        },
+        {
+          "key": "C",
+          "text": "I will only accept if you match my dream number today."
+        },
+        {
+          "key": "D",
+          "text": "Ignore the offer email for a week to create pressure."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Gratitude + enthusiasm + data-backed ask + collaborative question.",
+      "tags": [
+        "salary",
+        "counter"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "off-02",
+      "moduleId": "offer-negotiation",
+      "difficulty": "junior",
+      "scenario": "Recruiter asks for your current salary before sharing a range.",
+      "prompt": "What is a strong reply?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I make very little, so anything is fine."
+        },
+        {
+          "key": "B",
+          "text": "I prefer to focus on the range for this role and the market. What budget range has been approved for this position?"
+        },
+        {
+          "key": "C",
+          "text": "I refuse to talk numbers ever."
+        },
+        {
+          "key": "D",
+          "text": "Tell me the max and I will take it."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Redirect to role budget without oversharing or sounding hostile.",
+      "tags": [
+        "compensation",
+        "range"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "off-03",
+      "moduleId": "offer-negotiation",
+      "difficulty": "mid",
+      "scenario": "The company cannot raise base much but offers a signing bonus and earlier equity refresh.",
+      "prompt": "How do you respond thoughtfully?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Base is all that matters; reject everything else."
+        },
+        {
+          "key": "B",
+          "text": "I appreciate the creative package. Could we confirm the signing bonus amount, vesting timing, and whether a six-month salary review is possible? I want the total package to reflect the scope."
+        },
+        {
+          "key": "C",
+          "text": "Fine, whatever."
+        },
+        {
+          "key": "D",
+          "text": "I need unlimited equity forever."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Evaluate total comp components and ask clarifying structure questions.",
+      "tags": [
+        "total-comp",
+        "equity"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "off-04",
+      "moduleId": "offer-negotiation",
+      "difficulty": "senior",
+      "scenario": "You are negotiating an IT Manager offer and want clarity on team size and budget authority.",
+      "prompt": "Which ask belongs in negotiation?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Can I fire anyone in week one?"
+        },
+        {
+          "key": "B",
+          "text": "Before I accept, I would like written clarity on team size, hiring plan for the next two quarters, and decision rights for tooling budget. That helps me commit to the outcomes we discussed."
+        },
+        {
+          "key": "C",
+          "text": "Titles do not matter; skip the details."
+        },
+        {
+          "key": "D",
+          "text": "I will figure out authority after I join."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Senior negotiation includes scope and authority, not only money.",
+      "tags": [
+        "scope",
+        "management"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "off-05",
+      "moduleId": "offer-negotiation",
+      "difficulty": "junior",
+      "scenario": "They ask if you can start in one week. You need three weeks to hand over your current job.",
+      "prompt": "Best reply?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Sure, I will ghost my current employer."
+        },
+        {
+          "key": "B",
+          "text": "I can start on [date in three weeks]. I want to complete a clean handover at my current company. If helpful, I can do limited onboarding reading before day one."
+        },
+        {
+          "key": "C",
+          "text": "I might start someday."
+        },
+        {
+          "key": "D",
+          "text": "Take it or leave it: two months from now only."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Protect professionalism with a firm date and optional light prep.",
+      "tags": [
+        "start-date",
+        "handover"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "off-06",
+      "moduleId": "offer-negotiation",
+      "difficulty": "mid",
+      "scenario": "Two offers are open. Company A is your preference but slower on paperwork.",
+      "prompt": "How do you buy time politely with Company B?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Lie and say you are sick."
+        },
+        {
+          "key": "B",
+          "text": "I am very interested and want to give this decision proper attention. Could I confirm by Friday? I will keep you updated if anything changes sooner."
+        },
+        {
+          "key": "C",
+          "text": "Tell them you already signed elsewhere."
+        },
+        {
+          "key": "D",
+          "text": "Stop answering emails."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Ask for a concrete extension without burning goodwill.",
+      "tags": [
+        "timeline",
+        "multiple-offers"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "off-07",
+      "moduleId": "offer-negotiation",
+      "difficulty": "senior",
+      "scenario": "Remote policy is unclear in the offer letter.",
+      "prompt": "What should you clarify in writing?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I assume remote forever with no questions."
+        },
+        {
+          "key": "B",
+          "text": "Could we add the remote/hybrid expectation to the offer: work location, core collaboration hours, and travel frequency for onsite planning? I want alignment before signing."
+        },
+        {
+          "key": "C",
+          "text": "Policies always change, so skip it."
+        },
+        {
+          "key": "D",
+          "text": "Only ask after your first performance review."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Put location and travel expectations in writing before you accept.",
+      "tags": [
+        "remote",
+        "expectations"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "off-08",
+      "moduleId": "offer-negotiation",
+      "difficulty": "mid",
+      "scenario": "HR says benefits are standard and not negotiable. You care about learning budget.",
+      "prompt": "How do you ask?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Standard is unacceptable."
+        },
+        {
+          "key": "B",
+          "text": "Understood on core benefits. Is there flexibility for an annual learning budget or conference stipend? Professional development is important for the SRE craft I will bring to the team."
+        },
+        {
+          "key": "C",
+          "text": "Forget benefits; only cash."
+        },
+        {
+          "key": "D",
+          "text": "Demand a company car."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Accept constraints, then ask for adjacent levers tied to role value.",
+      "tags": [
+        "benefits",
+        "learning"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "off-09",
+      "moduleId": "offer-negotiation",
+      "difficulty": "junior",
+      "scenario": "You want to accept verbally but wait for the written offer.",
+      "prompt": "Best phrasing?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I accept; no need for paperwork."
+        },
+        {
+          "key": "B",
+          "text": "I am prepared to accept contingent on receiving the written offer that reflects what we discussed on base, start date, and title. Please send it over and I will sign promptly."
+        },
+        {
+          "key": "C",
+          "text": "Maybe I accept."
+        },
+        {
+          "key": "D",
+          "text": "Send me something eventually."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Show intent while anchoring on written terms.",
+      "tags": [
+        "accept",
+        "written-offer"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "off-10",
+      "moduleId": "offer-negotiation",
+      "difficulty": "senior",
+      "scenario": "The offer includes a non-compete that seems broad for your region.",
+      "prompt": "Professional next step?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Sign quietly and ignore it."
+        },
+        {
+          "key": "B",
+          "text": "I am excited to move forward. Before signing, I would like to review the non-compete scope and duration with counsel and discuss a narrower version that still protects the company’s interests."
+        },
+        {
+          "key": "C",
+          "text": "Refuse all legal documents."
+        },
+        {
+          "key": "D",
+          "text": "Post the contract on social media for advice."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Stay collaborative while protecting yourself through review and scoped edits.",
+      "tags": [
+        "legal",
+        "non-compete"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "off-11",
+      "moduleId": "offer-negotiation",
+      "difficulty": "mid",
+      "scenario": "Recruiter asks why you are countering.",
+      "prompt": "Strong rationale?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Because I can."
+        },
+        {
+          "key": "B",
+          "text": "Because the scope includes on-call leadership and cross-team delivery ownership. The counter aligns compensation with that responsibility and current market ranges for similar roles."
+        },
+        {
+          "key": "C",
+          "text": "Your first number was a test."
+        },
+        {
+          "key": "D",
+          "text": "My friend got more at another company, end of story."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tie the counter to scope and market, not ego.",
+      "tags": [
+        "rationale",
+        "market"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "off-12",
+      "moduleId": "offer-negotiation",
+      "difficulty": "mid",
+      "scenario": "You decide to decline an offer after negotiating.",
+      "prompt": "Which decline preserves the relationship?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Your offer was a joke."
+        },
+        {
+          "key": "B",
+          "text": "Thank you for the offer and the thoughtful process. After careful consideration I will not be moving forward. I have a lot of respect for the team and hope our paths cross again."
+        },
+        {
+          "key": "C",
+          "text": "No reply needed."
+        },
+        {
+          "key": "D",
+          "text": "Accept then resign in week one."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Decline with gratitude and leave the door open.",
+      "tags": [
+        "decline",
+        "relationship"
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    }
+  ]
 }
