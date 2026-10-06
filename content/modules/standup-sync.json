@@ -1,7 +1,8 @@
 {
   "id": "standup-sync",
   "title": "Standup & Sync",
-  "description": "Blockers, ETA, and asking for help without drama.",
+  "titleId": "Standup & Sync",
+  "description": "Latihan update standup yang jelas: blocker, ETA, minta bantuan tanpa drama, fasilitasi, dan ringkasan keputusan untuk sync harian.",
   "persona": [
     "SRE",
     "Fullstack"
@@ -14,27 +15,33 @@
       "moduleId": "standup-sync",
       "difficulty": "junior",
       "scenario": "Daily standup. Yesterday you finished auth middleware; today rate-limit tests; blocked on staging credentials.",
+      "scenarioId": "Standup harian. Kemarin Anda selesai auth middleware; hari ini tes rate-limit; terblokir di kredensial staging.",
       "prompt": "Best standup update?",
+      "promptId": "Update standup terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Same as usual."
+          "text": "Same as usual.",
+          "textId": "Sama seperti biasa."
         },
         {
           "key": "B",
-          "text": "Yesterday: finished auth middleware. Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands."
+          "text": "Yesterday: finished auth middleware. Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands.",
+          "textId": "Kemarin: selesai auth middleware. Hari ini: tes rate-limit. Blocker: butuh kredensial staging dari platform — ETA terblokir sampai itu datang."
         },
         {
           "key": "C",
-          "text": "I did a lot of stuff and will do more stuff."
+          "text": "I did a lot of stuff and will do more stuff.",
+          "textId": "Saya mengerjakan banyak hal dan akan mengerjakan lebih banyak lagi."
         },
         {
           "key": "D",
-          "text": "No updates."
+          "text": "No updates.",
+          "textId": "Tidak ada update."
         }
       ],
       "correctKey": "B",
-      "explanation": "Yesterday / Today / Blocker is the classic clear format.",
+      "explanation": "Format klasik yang jelas: Yesterday / Today / Blocker. Hafalkan tiga label itu dan isi dengan deliverable konkret plus siapa yang dibutuhkan. Tip: 'ETA blocked until that lands' memberi sinyal dampak tanpa drama.",
       "tags": [
         "standup",
         "blocker"
@@ -50,27 +57,33 @@
       "moduleId": "standup-sync",
       "difficulty": "mid",
       "scenario": "You will miss today's estimate because a flaky integration test ate your morning.",
+      "scenarioId": "Anda akan melewatkan estimasi hari ini karena tes integrasi flaky menghabiskan pagi Anda.",
       "prompt": "How do you say it in standup?",
+      "promptId": "Bagaimana Anda mengatakannya di standup?",
       "choices": [
         {
           "key": "A",
-          "text": "Tests are stupid."
+          "text": "Tests are stupid.",
+          "textId": "Tes-tes itu bodoh."
         },
         {
           "key": "B",
-          "text": "I am slipping half a day because flaky payment tests blocked local verification. I am quarantining the flake and will still open the PR by end of day tomorrow unless the flake returns."
+          "text": "I am slipping half a day because flaky payment tests blocked local verification. I am quarantining the flake and will still open the PR by end of day tomorrow unless the flake returns.",
+          "textId": "Saya mundur setengah hari karena tes payment yang flaky memblokir verifikasi lokal. Saya sedang quarantine flake itu dan tetap akan buka PR paling lambat besok sore kecuali flake itu kembali."
         },
         {
           "key": "C",
-          "text": "Everything is fine."
+          "text": "Everything is fine.",
+          "textId": "Semuanya baik-baik saja."
         },
         {
           "key": "D",
-          "text": "I might be done sometime."
+          "text": "I might be done sometime.",
+          "textId": "Mungkin saya selesai kapan-kapan."
         }
       ],
       "correctKey": "B",
-      "explanation": "Name impact, mitigation, and a revised ETA.",
+      "explanation": "Sebut dampak, mitigasi, dan ETA revisi. Pola: 'I am slipping… because…' → tindakan sekarang → 'will still … by [waktu] unless…'. Jangan mengeluh (A) atau menutupi (C). Tip frasa: 'quarantining the flake' terdengar actionable.",
       "tags": [
         "ETA",
         "transparency"
@@ -86,27 +99,33 @@
       "moduleId": "standup-sync",
       "difficulty": "mid",
       "scenario": "You need help from a teammate who is mid-focus.",
+      "scenarioId": "Anda butuh bantuan rekan yang sedang fokus.",
       "prompt": "Best ask in standup?",
+      "promptId": "Permintaan bantuan terbaik di standup?",
       "choices": [
         {
           "key": "A",
-          "text": "Someone help me now."
+          "text": "Someone help me now.",
+          "textId": "Tolong ada yang bantu saya sekarang."
         },
         {
           "key": "B",
-          "text": "I need 20 minutes with Alex after standup to pair on the Redis lock bug. Without that, my ETA moves from today to tomorrow."
+          "text": "I need 20 minutes with Alex after standup to pair on the Redis lock bug. Without that, my ETA moves from today to tomorrow.",
+          "textId": "Saya butuh 20 menit dengan Alex setelah standup untuk pair soal bug Redis lock. Tanpa itu, ETA saya mundur dari hari ini ke besok."
         },
         {
           "key": "C",
-          "text": "I will figure it out alone forever."
+          "text": "I will figure it out alone forever.",
+          "textId": "Saya akan selesaikan sendiri selamanya."
         },
         {
           "key": "D",
-          "text": "Alex always ignores me."
+          "text": "Alex always ignores me.",
+          "textId": "Alex selalu mengabaikan saya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Specific person, timebox, and consequence if help is delayed.",
+      "explanation": "Minta bantuan dengan orang spesifik, timebox, dan konsekuensi jika ditunda. Hafalkan: who + how long + topic + ETA impact. Tip: 'Without that, my ETA moves…' membuat urgensi jelas tanpa menyalahkan.",
       "tags": [
         "ask-for-help",
         "pairing"
@@ -122,27 +141,33 @@
       "moduleId": "standup-sync",
       "difficulty": "senior",
       "scenario": "As tech lead, two people are blocked on the same API contract.",
+      "scenarioId": "Sebagai tech lead, dua orang terblokir di kontrak API yang sama.",
       "prompt": "What do you say to unblock the team?",
+      "promptId": "Apa yang Anda katakan untuk membuka blokir tim?",
       "choices": [
         {
           "key": "A",
-          "text": "Discuss it later somehow."
+          "text": "Discuss it later somehow.",
+          "textId": "Diskusikan nanti entah bagaimana."
         },
         {
           "key": "B",
-          "text": "Let's take the API contract offline for ten minutes after standup — Mira and Jordan with me. Goal: decide request shape so both streams can continue today."
+          "text": "Let's take the API contract offline for ten minutes after standup — Mira and Jordan with me. Goal: decide request shape so both streams can continue today.",
+          "textId": "Mari bawa kontrak API offline sepuluh menit setelah standup — Mira dan Jordan bersama saya. Tujuan: putuskan bentuk request agar kedua stream bisa lanjut hari ini."
         },
         {
           "key": "C",
-          "text": "Everyone wait until next sprint."
+          "text": "Everyone wait until next sprint.",
+          "textId": "Semua menunggu sampai sprint berikutnya."
         },
         {
           "key": "D",
-          "text": "Build whatever you want independently."
+          "text": "Build whatever you want independently.",
+          "textId": "Bangun apa saja secara mandiri."
         }
       ],
       "correctKey": "B",
-      "explanation": "Leaders convert shared blockers into a timeboxed decision forum.",
+      "explanation": "Leader mengubah blocker bersama menjadi forum keputusan ber-timebox. Sebut peserta, durasi, tujuan, dan dampak hari ini. Tip frasa: 'take … offline for ten minutes' dan 'Goal: decide…'.",
       "tags": [
         "facilitation",
         "leadership"
@@ -158,27 +183,33 @@
       "moduleId": "standup-sync",
       "difficulty": "junior",
       "scenario": "You have no blocker but expect one later when QA starts.",
+      "scenarioId": "Anda tidak punya blocker sekarang tapi memperkirakan akan ada nanti saat QA mulai.",
       "prompt": "Good proactive update?",
+      "promptId": "Update proaktif yang baik?",
       "choices": [
         {
           "key": "A",
-          "text": "No blockers, nothing to say."
+          "text": "No blockers, nothing to say.",
+          "textId": "Tidak ada blocker, tidak ada yang dikatakan."
         },
         {
           "key": "B",
-          "text": "No blocker now. Heads-up: I will need QA support this afternoon for the checkout edge cases. I will book a slot in the QA channel after standup."
+          "text": "No blocker now. Heads-up: I will need QA support this afternoon for the checkout edge cases. I will book a slot in the QA channel after standup.",
+          "textId": "Tidak ada blocker sekarang. Heads-up: saya akan butuh dukungan QA sore ini untuk edge case checkout. Saya akan booking slot di channel QA setelah standup."
         },
         {
           "key": "C",
-          "text": "QA will magically appear."
+          "text": "QA will magically appear.",
+          "textId": "QA akan muncul secara ajaib."
         },
         {
           "key": "D",
-          "text": "Blockers are only for emergencies."
+          "text": "Blockers are only for emergencies.",
+          "textId": "Blocker hanya untuk keadaan darurat."
         }
       ],
       "correctKey": "B",
-      "explanation": "Flag upcoming dependencies early so others can plan.",
+      "explanation": "Tandai dependency mendatang lebih awal agar orang lain bisa merencanakan. Pola: 'No blocker now. Heads-up:…' + tindakan Anda berikutnya. Tip: 'I will book a slot…' menunjukkan ownership, bukan sekadar mengeluh kebutuhan.",
       "tags": [
         "proactive",
         "dependency"
@@ -194,27 +225,33 @@
       "moduleId": "standup-sync",
       "difficulty": "mid",
       "scenario": "Standup is drifting into a long design debate.",
+      "scenarioId": "Standup mulai menyimpang menjadi debat desain yang panjang.",
       "prompt": "What should you say?",
+      "promptId": "Apa yang sebaiknya Anda katakan?",
       "choices": [
         {
           "key": "A",
-          "text": "Let us debate for the full hour."
+          "text": "Let us debate for the full hour.",
+          "textId": "Mari berdebat selama satu jam penuh."
         },
         {
           "key": "B",
-          "text": "This is useful but bigger than standup. Parking it for a 15-minute design huddle at 11:00 — I will post notes. Back to blockers for everyone else."
+          "text": "This is useful but bigger than standup. Parking it for a 15-minute design huddle at 11:00 — I will post notes. Back to blockers for everyone else.",
+          "textId": "Ini berguna tapi lebih besar dari standup. Parkir untuk huddle desain 15 menit pukul 11:00 — saya akan posting catatan. Kembali ke blocker untuk yang lain."
         },
         {
           "key": "C",
-          "text": "Stop talking, all of you."
+          "text": "Stop talking, all of you.",
+          "textId": "Berhenti bicara, semuanya."
         },
         {
           "key": "D",
-          "text": "Cancel standup forever."
+          "text": "Cancel standup forever.",
+          "textId": "Batalkan standup selamanya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Protect standup time; park deep topics with an owner and time.",
+      "explanation": "Lindungi waktu standup; parkir topik dalam dengan owner dan jadwal. Frasa kunci: 'Parking it for…' + waktu + 'I will post notes' + kembali ke blocker. Tip: mengakui 'This is useful' menjaga nada sopan.",
       "tags": [
         "facilitation",
         "parking-lot"
@@ -230,27 +267,33 @@
       "moduleId": "standup-sync",
       "difficulty": "mid",
       "scenario": "You finished early and can take overflow work.",
+      "scenarioId": "Anda selesai lebih awal dan bisa mengambil pekerjaan overflow.",
       "prompt": "How do you offer help?",
+      "promptId": "Bagaimana Anda menawarkan bantuan?",
       "choices": [
         {
           "key": "A",
-          "text": "I am bored."
+          "text": "I am bored.",
+          "textId": "Saya bosan."
         },
         {
           "key": "B",
-          "text": "I have capacity after lunch. If anyone is at risk on the release checklist, I can take a verification task — drop it in the thread."
+          "text": "I have capacity after lunch. If anyone is at risk on the release checklist, I can take a verification task — drop it in the thread.",
+          "textId": "Saya punya kapasitas setelah makan siang. Jika ada yang berisiko di checklist rilis, saya bisa ambil tugas verifikasi — taruh di thread."
         },
         {
           "key": "C",
-          "text": "Do not give me more work."
+          "text": "Do not give me more work.",
+          "textId": "Jangan beri saya kerja tambahan."
         },
         {
           "key": "D",
-          "text": "I will silently refactor unrelated code."
+          "text": "I will silently refactor unrelated code.",
+          "textId": "Saya akan diam-diam merefaktor kode yang tidak terkait."
         }
       ],
       "correctKey": "B",
-      "explanation": "Offer capacity with a clear channel and useful target.",
+      "explanation": "Tawarkan kapasitas dengan channel jelas dan target yang berguna. Pola: kapan free + jenis bantuan + cara assign. Tip: 'drop it in the thread' membuat follow-up mudah dan terlacak.",
       "tags": [
         "capacity",
         "teamwork"
@@ -266,27 +309,33 @@
       "moduleId": "standup-sync",
       "difficulty": "senior",
       "scenario": "A junior says 'still working on it' with no detail for three days.",
+      "scenarioId": "Seorang junior bilang 'masih dikerjakan' tanpa detail selama tiga hari.",
       "prompt": "As lead, what do you ask?",
+      "promptId": "Sebagai lead, apa yang Anda tanyakan?",
       "choices": [
         {
           "key": "A",
-          "text": "Why are you so slow?"
+          "text": "Why are you so slow?",
+          "textId": "Mengapa Anda begitu lambat?"
         },
         {
           "key": "B",
-          "text": "Can you break that into what is done, what is left, and where you are stuck? Even a rough percentage helps us unblock you today."
+          "text": "Can you break that into what is done, what is left, and where you are stuck? Even a rough percentage helps us unblock you today.",
+          "textId": "Bisakah Anda pecah menjadi apa yang sudah selesai, apa yang tersisa, dan di mana Anda stuck? Bahkan persentase kasar membantu kami membuka blokir Anda hari ini."
         },
         {
           "key": "C",
-          "text": "Fine, keep going silently."
+          "text": "Fine, keep going silently.",
+          "textId": "Baiklah, lanjut diam-diam saja."
         },
         {
           "key": "D",
-          "text": "I will reassign without asking."
+          "text": "I will reassign without asking.",
+          "textId": "Saya akan reassign tanpa bertanya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Coach for visibility without public shaming.",
+      "explanation": "Latih visibility tanpa mempermalukan di depan umum. Minta pecahan: done / left / stuck. Tip: 'Even a rough percentage helps us unblock you today' menggeser fokus dari kritik ke bantuan.",
       "tags": [
         "coaching",
         "visibility"
@@ -302,27 +351,33 @@
       "moduleId": "standup-sync",
       "difficulty": "junior",
       "scenario": "Remote sync: your audio failed and you missed half the updates.",
+      "scenarioId": "Sync remote: audio Anda gagal dan Anda melewatkan setengah update.",
       "prompt": "Best recovery message in chat?",
+      "promptId": "Pesan recovery terbaik di chat?",
       "choices": [
         {
           "key": "A",
-          "text": "Whatever."
+          "text": "Whatever.",
+          "textId": "Terserah."
         },
         {
           "key": "B",
-          "text": "Sorry, I dropped audio. Could someone paste the action items and owners in the thread? I will confirm my items in two minutes."
+          "text": "Sorry, I dropped audio. Could someone paste the action items and owners in the thread? I will confirm my items in two minutes.",
+          "textId": "Maaf, audio saya putus. Bisakah seseorang paste action item dan owner-nya di thread? Saya akan konfirmasi item saya dalam dua menit."
         },
         {
           "key": "C",
-          "text": "Pretend you heard everything."
+          "text": "Pretend you heard everything.",
+          "textId": "Berpura-pura mendengar semuanya."
         },
         {
           "key": "D",
-          "text": "Demand a full restart of the meeting."
+          "text": "Demand a full restart of the meeting.",
+          "textId": "Tuntut meeting diulang dari awal."
         }
       ],
       "correctKey": "B",
-      "explanation": "Own the drop, ask for written actions, confirm quickly.",
+      "explanation": "Akui gangguan, minta action tertulis, konfirmasi cepat. Pola: Sorry + apa yang terjadi + permintaan spesifik + komitmen waktu. Tip: 'action items and owners' lebih berguna daripada minta ulangi seluruh meeting.",
       "tags": [
         "remote",
         "recovery"
@@ -338,27 +393,33 @@
       "moduleId": "standup-sync",
       "difficulty": "mid",
       "scenario": "You discovered a production risk while preparing standup notes.",
+      "scenarioId": "Anda menemukan risiko produksi saat menyiapkan catatan standup.",
       "prompt": "How do you raise it without derailing?",
+      "promptId": "Bagaimana Anda mengangkatnya tanpa menggagalkan alur standup?",
       "choices": [
         {
           "key": "A",
-          "text": "Scream incident in standup."
+          "text": "Scream incident in standup.",
+          "textId": "Berteriak 'incident' di standup."
         },
         {
           "key": "B",
-          "text": "Quick risk flag: error rate on login is trending up 2x since last night. I will open a war-room thread after standup; not a full SEV yet. Continuing with other updates now."
+          "text": "Quick risk flag: error rate on login is trending up 2x since last night. I will open a war-room thread after standup; not a full SEV yet. Continuing with other updates now.",
+          "textId": "Flag risiko cepat: error rate login naik tren 2x sejak semalam. Saya akan buka thread war-room setelah standup; belum SEV penuh. Lanjut update yang lain sekarang."
         },
         {
           "key": "C",
-          "text": "Keep it secret until it burns."
+          "text": "Keep it secret until it burns.",
+          "textId": "Simpan rahasia sampai meledak."
         },
         {
           "key": "D",
-          "text": "Blame yesterday's on-call in public."
+          "text": "Blame yesterday's on-call in public.",
+          "textId": "Salahkan on-call kemarin di depan umum."
         }
       ],
       "correctKey": "B",
-      "explanation": "Signal risk, next channel, and keep standup moving.",
+      "explanation": "Sinyalkan risiko, sebut channel berikutnya, dan biarkan standup tetap berjalan. Pola: Quick risk flag + metrik + next step + 'not a full SEV yet' + lanjut. Tip: angka 'trending up 2x' membuat flag konkret.",
       "tags": [
         "risk",
         "production"
@@ -374,27 +435,33 @@
       "moduleId": "standup-sync",
       "difficulty": "mid",
       "scenario": "Cross-timezone teammate cannot attend live standup.",
+      "scenarioId": "Rekan lintas zona waktu tidak bisa hadir di standup live.",
       "prompt": "Best async substitute?",
+      "promptId": "Pengganti async terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "They will catch up somehow."
+          "text": "They will catch up somehow.",
+          "textId": "Mereka akan menyusul entah bagaimana."
         },
         {
           "key": "B",
-          "text": "I posted an async standup in the channel with yesterday/today/blockers and tagged owners. Please reply in-thread before 10:00 your time so we do not wait on the live call."
+          "text": "I posted an async standup in the channel with yesterday/today/blockers and tagged owners. Please reply in-thread before 10:00 your time so we do not wait on the live call.",
+          "textId": "Saya posting async standup di channel dengan yesterday/today/blockers dan men-tag owners. Tolong balas di thread sebelum pukul 10:00 waktu kalian agar kita tidak menunggu panggilan live."
         },
         {
           "key": "C",
-          "text": "Skip them permanently."
+          "text": "Skip them permanently.",
+          "textId": "Lewati mereka secara permanen."
         },
         {
           "key": "D",
-          "text": "Only voice notes, no text."
+          "text": "Only voice notes, no text.",
+          "textId": "Hanya voice note, tanpa teks."
         }
       ],
       "correctKey": "B",
-      "explanation": "Async standup needs structure, tags, and a reply deadline.",
+      "explanation": "Async standup butuh struktur, tag owner, dan tenggat balasan. Hafalkan: format Y/T/B + tagged owners + 'reply before…'. Tip: 'so we do not wait on the live call' menjelaskan mengapa deadline penting.",
       "tags": [
         "async",
         "timezone"
@@ -410,27 +477,33 @@
       "moduleId": "standup-sync",
       "difficulty": "senior",
       "scenario": "Sprint goal is at risk. Standup reveals three parallel blockers.",
+      "scenarioId": "Tujuan sprint berisiko. Standup mengungkap tiga blocker paralel.",
       "prompt": "Lead summary to close standup?",
+      "promptId": "Ringkasan lead untuk menutup standup?",
       "choices": [
         {
           "key": "A",
-          "text": "Good luck everyone."
+          "text": "Good luck everyone.",
+          "textId": "Semoga beruntung semuanya."
         },
         {
           "key": "B",
-          "text": "Summary: sprint goal at risk from API, flaky tests, and QA bandwidth. Owners: me on API decision at 11:00, Sam on flake quarantine, Priya on QA slotting. We reconvene at 4pm with go/no-go for Thursday release."
+          "text": "Summary: sprint goal at risk from API, flaky tests, and QA bandwidth. Owners: me on API decision at 11:00, Sam on flake quarantine, Priya on QA slotting. We reconvene at 4pm with go/no-go for Thursday release.",
+          "textId": "Ringkasan: tujuan sprint berisiko karena API, tes flaky, dan bandwidth QA. Owner: saya untuk keputusan API pukul 11:00, Sam untuk quarantine flake, Priya untuk slotting QA. Kita kumpul lagi pukul 16:00 dengan go/no-go untuk rilis Kamis."
         },
         {
           "key": "C",
-          "text": "We will see what happens."
+          "text": "We will see what happens.",
+          "textId": "Kita lihat saja apa yang terjadi."
         },
         {
           "key": "D",
-          "text": "Cancel the release quietly."
+          "text": "Cancel the release quietly.",
+          "textId": "Batalkan rilis diam-diam."
         }
       ],
       "correctKey": "B",
-      "explanation": "Close with owners, times, and a decision checkpoint.",
+      "explanation": "Tutup dengan owners, waktu, dan checkpoint keputusan. Pola Summary: risiko → Owners + time → reconvene + go/no-go. Tip: sebut nama + tanggung jawab + jam agar tindak lanjut jelas.",
       "tags": [
         "summary",
         "decision"

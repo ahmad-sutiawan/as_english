@@ -27,7 +27,7 @@ export function RegisterForm() {
     const data = await res.json();
     if (!res.ok) {
       setLoading(false);
-      setError(data.error ?? "Registration failed");
+      setError(data.error ?? "Pendaftaran gagal.");
       return;
     }
 
@@ -40,7 +40,7 @@ export function RegisterForm() {
     setLoading(false);
 
     if (login?.error) {
-      setError("Registered, but auto-login failed. Please log in.");
+      setError("Akun dibuat, tapi login otomatis gagal. Silakan masuk manual.");
       router.push("/login");
       return;
     }
@@ -53,14 +53,14 @@ export function RegisterForm() {
     <form onSubmit={onSubmit} className="mx-auto w-full max-w-sm space-y-4">
       <div>
         <h1 className="text-2xl font-semibold tracking-tight text-[var(--ink)]">
-          Create account
+          Buat akun
         </h1>
         <p className="mt-1 text-sm text-[var(--muted)]">
-          Track workplace English progress across devices.
+          Simpan progres latihan English kerja di semua perangkat.
         </p>
       </div>
       <label className="block text-sm text-[var(--ink)]">
-        Name
+        Nama
         <input
           type="text"
           required
@@ -96,12 +96,12 @@ export function RegisterForm() {
         disabled={loading}
         className="w-full rounded-md bg-[var(--accent)] px-4 py-2 text-sm font-medium text-white hover:bg-[var(--accent-hover)] disabled:opacity-50"
       >
-        {loading ? "Creating…" : "Register"}
+        {loading ? "Membuat…" : "Daftar"}
       </button>
       <p className="text-center text-sm text-[var(--muted)]">
-        Already registered?{" "}
+        Sudah punya akun?{" "}
         <Link href="/login" className="text-[var(--accent)] underline">
-          Log in
+          Masuk
         </Link>
       </p>
     </form>

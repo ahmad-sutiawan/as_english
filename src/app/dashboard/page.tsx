@@ -19,11 +19,11 @@ export default async function DashboardPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-10">
       <h1 className="font-display text-3xl tracking-tight text-[var(--ink)]">
-        Dashboard
+        Dashboard latihan
       </h1>
       <p className="mt-2 text-sm text-[var(--muted)]">
-        Welcome back, {session.user.name ?? session.user.email}. Pick a module
-        and type your way to workplace fluency.
+        Halo, {session.user.name ?? session.user.email}. Pilih modul — baca
+        English, pahami arti Indonesia, lalu ketik ulang jawaban English-nya.
       </p>
 
       <ul className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -41,17 +41,18 @@ export default async function DashboardPage() {
               <div className="flex items-start justify-between gap-3">
                 <div>
                   <p className="text-xs uppercase tracking-wide text-[var(--muted)]">
-                    {mod.status === "ready" ? "Ready" : "Coming soon"}
+                    {mod.status === "ready" ? "Siap dilatih" : "Segera hadir"}
                   </p>
                   <h2 className="mt-1 text-lg font-semibold text-[var(--ink)]">
-                    {mod.title}
+                    {mod.titleId}
                   </h2>
+                  <p className="text-xs text-[var(--muted)]">{mod.title}</p>
                   <p className="mt-1 text-sm leading-relaxed text-[var(--muted)]">
                     {mod.description}
                   </p>
                   {mod.status === "ready" && (
                     <p className="mt-2 text-xs text-[var(--muted)]">
-                      Progress: {done}/{total} ({pct}%)
+                      Progres: {done}/{total} ({pct}%)
                     </p>
                   )}
                 </div>
@@ -60,11 +61,11 @@ export default async function DashboardPage() {
                     href={`/learn/${mod.id}`}
                     className="shrink-0 rounded-md bg-[var(--accent)] px-3 py-1.5 text-sm font-medium text-white hover:bg-[var(--accent-hover)]"
                   >
-                    {done > 0 ? "Continue" : "Start"}
+                    {done > 0 ? "Lanjut" : "Mulai"}
                   </Link>
                 ) : (
                   <span className="shrink-0 text-xs text-[var(--muted)]">
-                    Stub
+                    Draft
                   </span>
                 )}
               </div>

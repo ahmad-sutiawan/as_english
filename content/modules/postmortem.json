@@ -1,7 +1,8 @@
 {
   "id": "postmortem",
   "title": "Postmortem",
-  "description": "Blameless language and clear action items.",
+  "titleId": "Postmortem",
+  "description": "Bahasa blameless dan action item yang jelas setelah insiden.",
   "persona": [
     "SRE",
     "IT Manager"
@@ -14,27 +15,33 @@
       "moduleId": "postmortem",
       "difficulty": "mid",
       "scenario": "You are drafting the incident summary for a SEV-1 checkout outage.",
+      "scenarioId": "Anda sedang menyusun ringkasan insiden untuk outage checkout SEV-1.",
       "prompt": "Best blameless opening?",
+      "promptId": "Pembuka blameless terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "An engineer messed up the config again."
+          "text": "An engineer messed up the config again.",
+          "textId": "Seorang engineer lagi-lagi merusak config."
         },
         {
           "key": "B",
-          "text": "On March 12, checkout errors rose to 18% for 47 minutes after a feature flag default changed. Customer impact was failed payments. We mitigated by disabling the flag and restored baseline."
+          "text": "On March 12, checkout errors rose to 18% for 47 minutes after a feature flag default changed. Customer impact was failed payments. We mitigated by disabling the flag and restored baseline.",
+          "textId": "Pada 12 Maret, error checkout naik ke 18% selama 47 menit setelah default feature flag berubah. Dampak pelanggan: pembayaran gagal. Kami mitigasi dengan menonaktifkan flag dan mengembalikan baseline."
         },
         {
           "key": "C",
-          "text": "We do not know and will never know."
+          "text": "We do not know and will never know.",
+          "textId": "Kami tidak tahu dan tidak akan pernah tahu."
         },
         {
           "key": "D",
-          "text": "This was inevitable so no analysis is needed."
+          "text": "This was inevitable so no analysis is needed.",
+          "textId": "Ini tak terhindarkan jadi tidak perlu analisis."
         }
       ],
       "correctKey": "B",
-      "explanation": "Facts, impact, mitigation — no personal blame.",
+      "explanation": "Pembuka blameless menyajikan fakta, dampak, dan mitigasi — tanpa menyalahkan orang. Cerna pola: waktu → metrik → pemicu sistem → customer impact → aksi recovery. Hindari narasi \"engineer messed up\" yang menutup pembelajaran sistem.",
       "tags": [
         "blameless",
         "summary"
@@ -50,27 +57,33 @@
       "moduleId": "postmortem",
       "difficulty": "senior",
       "scenario": "Leadership asks 'who caused it?' in the postmortem meeting.",
+      "scenarioId": "Leadership bertanya 'siapa yang menyebabkan ini?' di rapat postmortem.",
       "prompt": "How do you redirect?",
+      "promptId": "Bagaimana Anda mengalihkan fokus?",
       "choices": [
         {
           "key": "A",
-          "text": "Name the person publicly."
+          "text": "Name the person publicly.",
+          "textId": "Sebut nama orangnya di depan umum."
         },
         {
           "key": "B",
-          "text": "Our focus is the conditions that allowed this to reach production — detection gaps, review checks, and rollout controls — so we prevent recurrence. Individuals followed the process we had at the time."
+          "text": "Our focus is the conditions that allowed this to reach production — detection gaps, review checks, and rollout controls — so we prevent recurrence. Individuals followed the process we had at the time.",
+          "textId": "Fokus kami adalah kondisi yang memungkinkan ini sampai ke production — celah deteksi, cek review, dan kontrol rollout — agar tidak terulang. Individu mengikuti proses yang ada saat itu."
         },
         {
           "key": "C",
-          "text": "Refuse to write any document."
+          "text": "Refuse to write any document.",
+          "textId": "Menolak menulis dokumen apa pun."
         },
         {
           "key": "D",
-          "text": "Say it was random chance only."
+          "text": "Say it was random chance only.",
+          "textId": "Bilang itu hanya kebetulan acak."
         }
       ],
       "correctKey": "B",
-      "explanation": "Redirect from person to system conditions and prevention.",
+      "explanation": "Alihkan dari \"siapa\" ke kondisi sistem dan pencegahan. Frasa kunci: \"conditions that allowed this\" + contoh gap (detection, review, rollout). Kalimat \"Individuals followed the process we had\" melindungi psychological safety tanpa menolak akuntabilitas sistem.",
       "tags": [
         "facilitation",
         "blameless"
@@ -86,27 +99,33 @@
       "moduleId": "postmortem",
       "difficulty": "mid",
       "scenario": "Write a clear contributing-factor statement.",
+      "scenarioId": "Tulis pernyataan contributing factor yang jelas.",
       "prompt": "Which is strongest?",
+      "promptId": "Mana yang paling kuat?",
       "choices": [
         {
           "key": "A",
-          "text": "Bad luck."
+          "text": "Bad luck.",
+          "textId": "Nasib buruk."
         },
         {
           "key": "B",
-          "text": "Contributing factors: flag defaults were not reviewed in change checklist; canary did not cover checkout path; alert threshold was too slow for revenue impact."
+          "text": "Contributing factors: flag defaults were not reviewed in change checklist; canary did not cover checkout path; alert threshold was too slow for revenue impact.",
+          "textId": "Contributing factors: default flag tidak direview di checklist perubahan; canary tidak mencakup path checkout; threshold alert terlalu lambat untuk dampak revenue."
         },
         {
           "key": "C",
-          "text": "People were careless."
+          "text": "People were careless.",
+          "textId": "Orang-orang ceroboh."
         },
         {
           "key": "D",
-          "text": "Cloud provider hate us."
+          "text": "Cloud provider hate us.",
+          "textId": "Cloud provider membenci kami."
         }
       ],
       "correctKey": "B",
-      "explanation": "Multiple systemic factors beat single-person narratives.",
+      "explanation": "Beberapa faktor sistemik lebih kuat daripada narasi satu orang atau \"nasib\". Gunakan daftar konkret yang bisa ditindaklanjuti (checklist, canary coverage, alert threshold). Itu yang menghasilkan action item bermakna.",
       "tags": [
         "contributing-factors"
       ],
@@ -121,27 +140,33 @@
       "moduleId": "postmortem",
       "difficulty": "junior",
       "scenario": "Propose an action item after a missed alert.",
+      "scenarioId": "Usulkan action item setelah alert terlewat.",
       "prompt": "Best action item phrasing?",
+      "promptId": "Formulasi action item terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Be more careful."
+          "text": "Be more careful.",
+          "textId": "Lebih hati-hati."
         },
         {
           "key": "B",
-          "text": "Action: add burn-rate alert on checkout success SLO, owner: Avery, due: March 20, success metric: alert fires within 5 minutes in staging game-day."
+          "text": "Action: add burn-rate alert on checkout success SLO, owner: Avery, due: March 20, success metric: alert fires within 5 minutes in staging game-day.",
+          "textId": "Action: tambah burn-rate alert pada SLO sukses checkout, owner: Avery, due: 20 Maret, success metric: alert menyala dalam 5 menit di game-day staging."
         },
         {
           "key": "C",
-          "text": "Monitor harder somehow."
+          "text": "Monitor harder somehow.",
+          "textId": "Monitor lebih keras entah bagaimana."
         },
         {
           "key": "D",
-          "text": "Buy more tools immediately without owners."
+          "text": "Buy more tools immediately without owners.",
+          "textId": "Beli tool lebih banyak segera tanpa owner."
         }
       ],
       "correctKey": "B",
-      "explanation": "Action items need owner, due date, and success criteria.",
+      "explanation": "Action item yang baik punya aksi spesifik, owner, due date, dan success metric (pola SMART). \"Be more careful\" tidak bisa diukur atau di-assign. Hafalkan kerangka: Action / owner / due / success metric.",
       "tags": [
         "action-items",
         "SMART"
@@ -157,27 +182,33 @@
       "moduleId": "postmortem",
       "difficulty": "mid",
       "scenario": "Timeline section is messy with conflicting times.",
+      "scenarioId": "Bagian timeline berantakan dengan waktu yang saling bertentangan.",
       "prompt": "How do you fix communication?",
+      "promptId": "Bagaimana memperbaiki komunikasinya?",
       "choices": [
         {
           "key": "A",
-          "text": "Pick random times."
+          "text": "Pick random times.",
+          "textId": "Pilih waktu acak."
         },
         {
           "key": "B",
-          "text": "I reconciled timeline stamps to UTC from pager, deploy, and chat logs. Please review the linked sheet; call out any missing events before we publish."
+          "text": "I reconciled timeline stamps to UTC from pager, deploy, and chat logs. Please review the linked sheet; call out any missing events before we publish.",
+          "textId": "Saya sudah merekonsiliasi stempel waktu ke UTC dari pager, deploy, dan chat log. Mohon review sheet terlampir; sebutkan event yang hilang sebelum kita publish."
         },
         {
           "key": "C",
-          "text": "Delete the timeline."
+          "text": "Delete the timeline.",
+          "textId": "Hapus timeline-nya."
         },
         {
           "key": "D",
-          "text": "Use local timezones mixed without labels."
+          "text": "Use local timezones mixed without labels.",
+          "textId": "Campur timezone lokal tanpa label."
         }
       ],
       "correctKey": "B",
-      "explanation": "One timezone, sourced logs, invite corrections before publish.",
+      "explanation": "Satu timezone (UTC), sumber log yang jelas, dan undang koreksi sebelum publish. Frasa \"Please review… call out any missing events\" mengajak ownership bersama atas akurasi timeline.",
       "tags": [
         "timeline",
         "accuracy"
@@ -193,27 +224,33 @@
       "moduleId": "postmortem",
       "difficulty": "senior",
       "scenario": "A customer asks for a public statement derived from the postmortem.",
+      "scenarioId": "Pelanggan meminta pernyataan publik yang diturunkan dari postmortem.",
       "prompt": "Appropriate external language?",
+      "promptId": "Bahasa eksternal yang tepat?",
       "choices": [
         {
           "key": "A",
-          "text": "Our junior broke payments."
+          "text": "Our junior broke payments.",
+          "textId": "Junior kami merusak pembayaran."
         },
         {
           "key": "B",
-          "text": "We experienced a checkout disruption on March 12. We restored service the same day and are implementing additional safeguards around configuration changes and faster detection. We apologize for the impact."
+          "text": "We experienced a checkout disruption on March 12. We restored service the same day and are implementing additional safeguards around configuration changes and faster detection. We apologize for the impact.",
+          "textId": "Kami mengalami gangguan checkout pada 12 Maret. Layanan dipulihkan di hari yang sama dan kami menerapkan safeguard tambahan seputar perubahan konfigurasi serta deteksi yang lebih cepat. Kami meminta maaf atas dampaknya."
         },
         {
           "key": "C",
-          "text": "Share the full internal blame list."
+          "text": "Share the full internal blame list.",
+          "textId": "Bagikan daftar blame internal lengkap."
         },
         {
           "key": "D",
-          "text": "Deny any disruption occurred."
+          "text": "Deny any disruption occurred.",
+          "textId": "Sangkal bahwa ada gangguan."
         }
       ],
       "correctKey": "B",
-      "explanation": "External notes: impact, restore, safeguards, apology — no internal blame.",
+      "explanation": "Catatan eksternal: dampak → restore → safeguard → permintaan maaf. Tidak ada blame internal. Pola ini aman untuk pelanggan dan tetap jujur tanpa membocorkan detail personal.",
       "tags": [
         "customer",
         "external"
@@ -229,27 +266,33 @@
       "moduleId": "postmortem",
       "difficulty": "mid",
       "scenario": "Someone wants 30 action items from one incident.",
+      "scenarioId": "Seseorang ingin 30 action item dari satu insiden.",
       "prompt": "How do you prioritize in the room?",
+      "promptId": "Bagaimana memprioritaskan di dalam ruangan?",
       "choices": [
         {
           "key": "A",
-          "text": "Accept all ideas equally."
+          "text": "Accept all ideas equally.",
+          "textId": "Terima semua ide sama rata."
         },
         {
           "key": "B",
-          "text": "Let's prioritize the top three actions that most reduce recurrence probability: detection, safer defaults, and canary coverage. Other ideas go to the backlog with owners if capacity appears."
+          "text": "Let's prioritize the top three actions that most reduce recurrence probability: detection, safer defaults, and canary coverage. Other ideas go to the backlog with owners if capacity appears.",
+          "textId": "Mari prioritaskan tiga aksi teratas yang paling menurunkan probabilitas terulang: detection, default yang lebih aman, dan coverage canary. Ide lain masuk backlog dengan owner jika kapasitas muncul."
         },
         {
           "key": "C",
-          "text": "Do nothing because lists are hard."
+          "text": "Do nothing because lists are hard.",
+          "textId": "Tidak lakukan apa-apa karena daftar itu sulit."
         },
         {
           "key": "D",
-          "text": "Assign everything to the intern."
+          "text": "Assign everything to the intern.",
+          "textId": "Serahkan semuanya ke intern."
         }
       ],
       "correctKey": "B",
-      "explanation": "Focus on high-leverage actions; park the rest.",
+      "explanation": "Fokus pada aksi berdaya ungkit tinggi; parkir sisanya di backlog. Frasa \"most reduce recurrence probability\" memberi kriteria prioritas yang objektif. Facilitation yang baik mencegah daftar action yang tidak pernah selesai.",
       "tags": [
         "prioritization",
         "facilitation"
@@ -265,27 +308,33 @@
       "moduleId": "postmortem",
       "difficulty": "junior",
       "scenario": "You need to state what went well without sounding defensive.",
+      "scenarioId": "Anda perlu menyatakan what went well tanpa terdengar defensif.",
       "prompt": "Good phrasing?",
+      "promptId": "Formulasi yang bagus?",
       "choices": [
         {
           "key": "A",
-          "text": "Actually we were perfect."
+          "text": "Actually we were perfect.",
+          "textId": "Sebenarnya kami sempurna."
         },
         {
           "key": "B",
-          "text": "What went well: on-call joined within two minutes, rollback was executed cleanly, and customer status updates went out every 15 minutes."
+          "text": "What went well: on-call joined within two minutes, rollback was executed cleanly, and customer status updates went out every 15 minutes.",
+          "textId": "What went well: on-call bergabung dalam dua menit, rollback dieksekusi bersih, dan update status pelanggan keluar setiap 15 menit."
         },
         {
           "key": "C",
-          "text": "Nothing went well; only pain."
+          "text": "Nothing went well; only pain.",
+          "textId": "Tidak ada yang berjalan baik; hanya rasa sakit."
         },
         {
           "key": "D",
-          "text": "Praise only leadership."
+          "text": "Praise only leadership.",
+          "textId": "Puji hanya leadership."
         }
       ],
       "correctKey": "B",
-      "explanation": "Balanced postmortems include effective responses as learning too.",
+      "explanation": "Postmortem seimbang juga mencatat respons yang efektif sebagai pembelajaran. Sebut fakta operasional konkret (waktu join, kualitas rollback, ritme update) — bukan klaim \"kami sempurna\" yang terdengar defensif.",
       "tags": [
         "what-went-well"
       ],
@@ -300,27 +349,33 @@
       "moduleId": "postmortem",
       "difficulty": "senior",
       "scenario": "Legal asks you to soften speculative language.",
+      "scenarioId": "Legal meminta Anda melunakkan bahasa spekulatif.",
       "prompt": "Professional edit?",
+      "promptId": "Edit yang profesional?",
       "choices": [
         {
           "key": "A",
-          "text": "Keep dramatic claims for effect."
+          "text": "Keep dramatic claims for effect.",
+          "textId": "Pertahankan klaim dramatis demi efek."
         },
         {
           "key": "B",
-          "text": "I replaced speculative phrases with verified facts and labeled hypotheses clearly as hypotheses pending confirmation. The prevention actions remain unchanged."
+          "text": "I replaced speculative phrases with verified facts and labeled hypotheses clearly as hypotheses pending confirmation. The prevention actions remain unchanged.",
+          "textId": "Saya mengganti frasa spekulatif dengan fakta terverifikasi dan melabel hipotesis dengan jelas sebagai hipotesis menunggu konfirmasi. Aksi pencegahan tetap tidak berubah."
         },
         {
           "key": "C",
-          "text": "Delete the whole postmortem."
+          "text": "Delete the whole postmortem.",
+          "textId": "Hapus seluruh postmortem."
         },
         {
           "key": "D",
-          "text": "Ignore legal entirely."
+          "text": "Ignore legal entirely.",
+          "textId": "Abaikan legal sepenuhnya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Separate facts from hypotheses; keep prevention intact.",
+      "explanation": "Pisahkan fakta dari hipotesis; jaga aksi pencegahan tetap utuh. Frasa \"labeled hypotheses clearly as hypotheses pending confirmation\" adalah pola bahasa yang aman secara legal dan tetap jujur secara teknis.",
       "tags": [
         "legal",
         "precision"
@@ -336,27 +391,33 @@
       "moduleId": "postmortem",
       "difficulty": "mid",
       "scenario": "Follow-up meeting: two action items are overdue.",
+      "scenarioId": "Rapat follow-up: dua action item sudah terlambat.",
       "prompt": "Best status prompt?",
+      "promptId": "Prompt status terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Why are you failing?"
+          "text": "Why are you failing?",
+          "textId": "Kenapa kalian gagal?"
         },
         {
           "key": "B",
-          "text": "Two actions are past due: canary coverage and flag checklist. Owners — can you share blockers and a new date today? If capacity is the issue, we will renegotiate scope with leadership."
+          "text": "Two actions are past due: canary coverage and flag checklist. Owners — can you share blockers and a new date today? If capacity is the issue, we will renegotiate scope with leadership.",
+          "textId": "Dua aksi sudah lewat jatuh tempo: canary coverage dan checklist flag. Owners — bisakah bagikan blocker dan tanggal baru hari ini? Jika masalahnya kapasitas, kita akan renegosiasi scope dengan leadership."
         },
         {
           "key": "C",
-          "text": "Quietly mark them done."
+          "text": "Quietly mark them done.",
+          "textId": "Diam-diam tandai selesai."
         },
         {
           "key": "D",
-          "text": "Shame owners in a company-wide email."
+          "text": "Shame owners in a company-wide email.",
+          "textId": "Permalukan owner di email seluruh perusahaan."
         }
       ],
       "correctKey": "B",
-      "explanation": "Surface overdue work with blocker ask and escalation path.",
+      "explanation": "Munculkan pekerjaan overdue dengan pertanyaan blocker dan jalur eskalasi. Pola: sebut item → minta blocker + tanggal baru → tawarkan renegosiasi scope. Akuntabilitas tanpa malu-maluin.",
       "tags": [
         "follow-up",
         "accountability"
@@ -372,27 +433,33 @@
       "moduleId": "postmortem",
       "difficulty": "mid",
       "scenario": "Root cause is still uncertain after investigation.",
+      "scenarioId": "Root cause masih belum pasti setelah investigasi.",
       "prompt": "Honest wording?",
+      "promptId": "Formulasi yang jujur?",
       "choices": [
         {
           "key": "A",
-          "text": "Declare a scapegoat cause."
+          "text": "Declare a scapegoat cause.",
+          "textId": "Tetapkan penyebab kambing hitam."
         },
         {
           "key": "B",
-          "text": "Primary trigger is confirmed as the flag default. Deeper why around review process gaps is supported by evidence; a secondary hypothesis on cache stampede remains under investigation and will be updated by Friday."
+          "text": "Primary trigger is confirmed as the flag default. Deeper why around review process gaps is supported by evidence; a secondary hypothesis on cache stampede remains under investigation and will be updated by Friday.",
+          "textId": "Pemicu utama terkonfirmasi sebagai default flag. Why yang lebih dalam seputar celah proses review didukung bukti; hipotesis sekunder tentang cache stampede masih dalam investigasi dan akan di-update Jumat."
         },
         {
           "key": "C",
-          "text": "Pretend certainty."
+          "text": "Pretend certainty.",
+          "textId": "Berpura-pura pasti."
         },
         {
           "key": "D",
-          "text": "Say root cause is impossible."
+          "text": "Say root cause is impossible.",
+          "textId": "Bilang root cause mustahil."
         }
       ],
       "correctKey": "B",
-      "explanation": "Separate confirmed vs hypothesized causes with update timing.",
+      "explanation": "Pisahkan yang confirmed vs hypothesized, plus waktu update. Frasa \"remains under investigation and will be updated by…\" menjaga integritas tanpa memalsukan kepastian.",
       "tags": [
         "uncertainty",
         "integrity"
@@ -408,27 +475,33 @@
       "moduleId": "postmortem",
       "difficulty": "senior",
       "scenario": "Close the postmortem review meeting.",
+      "scenarioId": "Tutup rapat review postmortem.",
       "prompt": "Strong closing?",
+      "promptId": "Penutup yang kuat?",
       "choices": [
         {
           "key": "A",
-          "text": "Meeting over."
+          "text": "Meeting over.",
+          "textId": "Rapat selesai."
         },
         {
           "key": "B",
-          "text": "We aligned on three actions with owners and dates. I will publish the final doc today, open tracking tickets, and schedule a 30-day effectiveness check. Thanks everyone for the blameless discussion."
+          "text": "We aligned on three actions with owners and dates. I will publish the final doc today, open tracking tickets, and schedule a 30-day effectiveness check. Thanks everyone for the blameless discussion.",
+          "textId": "Kita sudah align pada tiga aksi dengan owner dan tanggal. Saya akan publish dokumen final hari ini, buka tiket tracking, dan jadwalkan cek efektivitas 30 hari. Terima kasih semua atas diskusi yang blameless."
         },
         {
           "key": "C",
-          "text": "Add twenty more actions first."
+          "text": "Add twenty more actions first.",
+          "textId": "Tambah dua puluh aksi lagi dulu."
         },
         {
           "key": "D",
-          "text": "Leave without notes."
+          "text": "Leave without notes.",
+          "textId": "Pergi tanpa catatan."
         }
       ],
       "correctKey": "B",
-      "explanation": "Confirm actions, publishing, tracking, and a check-back.",
+      "explanation": "Penutup kuat: konfirmasi aksi, publishing, tracking, dan check-back. Pola closing: aligned actions → publish → tickets → effectiveness check → apresiasi blameless. Ini menutup loop proses postmortem.",
       "tags": [
         "closing",
         "process"

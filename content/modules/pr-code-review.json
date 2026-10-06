@@ -1,7 +1,8 @@
 {
   "id": "pr-code-review",
   "title": "PR & Code Review",
-  "description": "Soft/hard feedback and constructive suggestions.",
+  "titleId": "PR & Code Review",
+  "description": "Memberi feedback soft/hard dan saran konstruktif saat mereview pull request.",
   "persona": [
     "Fullstack",
     "SRE"
@@ -14,27 +15,33 @@
       "moduleId": "pr-code-review",
       "difficulty": "mid",
       "scenario": "A teammate's PR lacks tests for a payment edge case.",
+      "scenarioId": "PR rekan kerja belum punya tes untuk edge case pembayaran.",
       "prompt": "Best review comment?",
+      "promptId": "Komentar review yang terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "This is careless work."
+          "text": "This is careless work.",
+          "textId": "Ini kerjaan yang ceroboh."
         },
         {
           "key": "B",
-          "text": "Thanks for the change. Could we add a test for the duplicate webhook case? Without it we risk double-charging on retries. Happy to sketch a fixture if useful."
+          "text": "Thanks for the change. Could we add a test for the duplicate webhook case? Without it we risk double-charging on retries. Happy to sketch a fixture if useful.",
+          "textId": "Terima kasih atas perubahannya. Bisakah kita menambah tes untuk kasus webhook duplikat? Tanpa itu kita berisiko double-charge saat retry. Saya siap bantu sketch fixture jika berguna."
         },
         {
           "key": "C",
-          "text": "LGTM with no comments."
+          "text": "LGTM with no comments.",
+          "textId": "LGTM tanpa komentar apa pun."
         },
         {
           "key": "D",
-          "text": "Rewrite the entire PR in my style."
+          "text": "Rewrite the entire PR in my style.",
+          "textId": "Tulis ulang seluruh PR dengan gaya saya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Specific risk + concrete ask + offer to help.",
+      "explanation": "Jawaban B tepat karena menyebut risiko spesifik (double-charging), meminta aksi konkret (tambah tes), dan menawarkan bantuan. Cerna frasa: \"Could we add…\" = permintaan kolaboratif; \"Without it we risk…\" = menjelaskan dampak; \"Happy to sketch…\" = tawarkan bantuan tanpa merendahkan author. Hindari A (menyerang orang), C (mengabaikan risiko), D (ego gaya coding).",
       "tags": [
         "review",
         "tests",
@@ -51,27 +58,33 @@
       "moduleId": "pr-code-review",
       "difficulty": "junior",
       "scenario": "You disagree with a naming choice that is not blocking.",
+      "scenarioId": "Anda tidak setuju dengan pilihan penamaan yang sebenarnya tidak blocking.",
       "prompt": "How do you phrase it?",
+      "promptId": "Bagaimana cara mengungkapkannya?",
       "choices": [
         {
           "key": "A",
-          "text": "Rename everything or I will block."
+          "text": "Rename everything or I will block.",
+          "textId": "Ganti semua nama atau saya akan block."
         },
         {
           "key": "B",
-          "text": "Non-blocking nit: `processStuff` is vague. `processRefundWebhook` would help future readers. Approving either way."
+          "text": "Non-blocking nit: `processStuff` is vague. `processRefundWebhook` would help future readers. Approving either way.",
+          "textId": "Nit non-blocking: `processStuff` terlalu kabur. `processRefundWebhook` lebih membantu pembaca nanti. Saya approve apa pun pilihannya."
         },
         {
           "key": "C",
-          "text": "Ignore readability forever."
+          "text": "Ignore readability forever.",
+          "textId": "Abaikan keterbacaan selamanya."
         },
         {
           "key": "D",
-          "text": "Demand a 40-comment style fight."
+          "text": "Demand a 40-comment style fight.",
+          "textId": "Paksa perang gaya sampai 40 komentar."
         }
       ],
       "correctKey": "B",
-      "explanation": "Label nits as non-blocking and still approve when appropriate.",
+      "explanation": "Label \"Non-blocking nit\" memberi sinyal bahwa ini saran kecil, bukan gate. Berikan alternatif nama yang lebih jelas, lalu tetap approve. Frasa kunci: \"would help future readers\" = fokus manfaat, bukan selera pribadi; \"Approving either way\" = tidak menahan merge karena preferensi.",
       "tags": [
         "nit",
         "naming"
@@ -87,27 +100,33 @@
       "moduleId": "pr-code-review",
       "difficulty": "senior",
       "scenario": "PR introduces a risky migration without a rollback plan.",
+      "scenarioId": "PR memperkenalkan migrasi berisiko tanpa rencana rollback.",
       "prompt": "Strong blocking comment?",
+      "promptId": "Komentar blocking yang kuat?",
       "choices": [
         {
           "key": "A",
-          "text": "No."
+          "text": "No.",
+          "textId": "Tidak."
         },
         {
           "key": "B",
-          "text": "Blocking: this migration needs a documented rollback and a expand/contract sequence. Can we split expand first, deploy readers, then contract? I want us safe if we must revert mid-rollout."
+          "text": "Blocking: this migration needs a documented rollback and a expand/contract sequence. Can we split expand first, deploy readers, then contract? I want us safe if we must revert mid-rollout.",
+          "textId": "Blocking: migrasi ini butuh rollback terdokumentasi dan urutan expand/contract. Bisakah kita pecah: expand dulu, deploy reader, lalu contract? Saya ingin kita aman jika harus revert di tengah rollout."
         },
         {
           "key": "C",
-          "text": "Ship it Friday night."
+          "text": "Ship it Friday night.",
+          "textId": "Ship saja malam Jumat."
         },
         {
           "key": "D",
-          "text": "Approve to be nice."
+          "text": "Approve to be nice.",
+          "textId": "Approve supaya terlihat baik."
         }
       ],
       "correctKey": "B",
-      "explanation": "Block on safety with a clearer safer sequence.",
+      "explanation": "Mulai dengan \"Blocking:\" agar prioritas jelas. Jelaskan apa yang kurang (rollback + expand/contract) dan usulkan urutan yang lebih aman. Frasa \"I want us safe if we must revert mid-rollout\" menekankan tujuan bersama, bukan ego reviewer. Block untuk keselamatan sistem, bukan untuk gaya.",
       "tags": [
         "migration",
         "blocking"
@@ -123,27 +142,33 @@
       "moduleId": "pr-code-review",
       "difficulty": "mid",
       "scenario": "Author asks why you requested changes on performance.",
+      "scenarioId": "Author bertanya mengapa Anda meminta perubahan terkait performa.",
       "prompt": "Clear explanation?",
+      "promptId": "Penjelasan yang jelas?",
       "choices": [
         {
           "key": "A",
-          "text": "Because I said so."
+          "text": "Because I said so.",
+          "textId": "Karena saya bilang begitu."
         },
         {
           "key": "B",
-          "text": "The N+1 query in the loop will amplify under peak checkout. A single batched fetch should keep p95 stable. Happy to pair for 15 minutes if the refactor is unclear."
+          "text": "The N+1 query in the loop will amplify under peak checkout. A single batched fetch should keep p95 stable. Happy to pair for 15 minutes if the refactor is unclear.",
+          "textId": "Query N+1 di dalam loop akan membesar saat peak checkout. Satu batched fetch seharusnya menjaga p95 tetap stabil. Siap pair 15 menit jika refactor-nya kurang jelas."
         },
         {
           "key": "C",
-          "text": "Performance never matters."
+          "text": "Performance never matters.",
+          "textId": "Performa tidak pernah penting."
         },
         {
           "key": "D",
-          "text": "Use microservices to hide it."
+          "text": "Use microservices to hide it.",
+          "textId": "Pakai microservices untuk menyembunyikannya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Explain impact quantitatively and offer pairing.",
+      "explanation": "Jelaskan dampak (N+1 amplify di peak), usulan teknis (batched fetch + p95), lalu tawarkan pairing. Pola: masalah → dampak terukur → solusi → dukungan. Hindari otoritas kosong (\"because I said so\") atau solusi yang menggeser masalah.",
       "tags": [
         "performance",
         "explanation"
@@ -159,27 +184,33 @@
       "moduleId": "pr-code-review",
       "difficulty": "junior",
       "scenario": "You made a mistake in a review comment.",
+      "scenarioId": "Anda membuat kesalahan di komentar review.",
       "prompt": "Best follow-up?",
+      "promptId": "Tindak lanjut terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Leave the wrong comment forever."
+          "text": "Leave the wrong comment forever.",
+          "textId": "Biarkan komentar yang salah selamanya."
         },
         {
           "key": "B",
-          "text": "Correction: I misread the caching layer — your approach is fine. Sorry for the noise. Remaining ask is only the retry test."
+          "text": "Correction: I misread the caching layer — your approach is fine. Sorry for the noise. Remaining ask is only the retry test.",
+          "textId": "Koreksi: saya salah baca layer caching — pendekatan Anda sudah tepat. Maaf atas noise-nya. Yang masih diminta hanya tes retry."
         },
         {
           "key": "C",
-          "text": "Double down to save face."
+          "text": "Double down to save face.",
+          "textId": "Ngeyel agar tidak kehilangan muka."
         },
         {
           "key": "D",
-          "text": "Delete the PR."
+          "text": "Delete the PR.",
+          "textId": "Hapus PR-nya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Own the misread quickly; keep remaining asks crisp.",
+      "explanation": "Mulai dengan \"Correction:\" lalu akui misread, klarifikasi bahwa pendekatan author OK, minta maaf singkat, dan sisakan hanya ask yang masih valid. Frasa \"Sorry for the noise\" menunjukkan kerendahan hati profesional tanpa drama panjang.",
       "tags": [
         "humility",
         "review"
@@ -195,27 +226,33 @@
       "moduleId": "pr-code-review",
       "difficulty": "mid",
       "scenario": "Security finds a secret logged in debug output inside the PR.",
+      "scenarioId": "Security menemukan secret yang ter-log di output debug di dalam PR.",
       "prompt": "How do you communicate urgency?",
+      "promptId": "Bagaimana menyampaikan urgensi?",
       "choices": [
         {
           "key": "A",
-          "text": "lol secrets."
+          "text": "lol secrets.",
+          "textId": "lol secrets."
         },
         {
           "key": "B",
-          "text": "Blocking security issue: a token is logged in debug output. Please remove it, rotate the credential, and add a lint/check so we do not regress. I can help verify in staging after."
+          "text": "Blocking security issue: a token is logged in debug output. Please remove it, rotate the credential, and add a lint/check so we do not regress. I can help verify in staging after.",
+          "textId": "Isu keamanan blocking: token ter-log di output debug. Mohon hapus, rotate credential, dan tambahkan lint/check agar tidak regresi. Saya bisa bantu verifikasi di staging setelahnya."
         },
         {
           "key": "C",
-          "text": "Mention it casually next sprint."
+          "text": "Mention it casually next sprint.",
+          "textId": "Sebutkan santai di sprint berikutnya."
         },
         {
           "key": "D",
-          "text": "Merge first, fix later quietly."
+          "text": "Merge first, fix later quietly.",
+          "textId": "Merge dulu, perbaiki diam-diam nanti."
         }
       ],
       "correctKey": "B",
-      "explanation": "Security blocks need clear action: remove, rotate, prevent.",
+      "explanation": "Isu keamanan butuh tiga aksi jelas: remove (hapus), rotate (putar ulang kredensial), prevent (cegah regresi). Label \"Blocking security issue\" menandai urgensi. Tawarkan bantuan verifikasi agar tone tetap kolaboratif, bukan hanya memerintah.",
       "tags": [
         "security",
         "secrets"
@@ -231,27 +268,33 @@
       "moduleId": "pr-code-review",
       "difficulty": "senior",
       "scenario": "Two reviewers give conflicting guidance on architecture.",
+      "scenarioId": "Dua reviewer memberi panduan arsitektur yang saling bertentangan.",
       "prompt": "As lead, what do you post?",
+      "promptId": "Sebagai lead, apa yang Anda posting?",
       "choices": [
         {
           "key": "A",
-          "text": "Fight it out in comments for days."
+          "text": "Fight it out in comments for days.",
+          "textId": "Biarkan perang komentar selama berhari-hari."
         },
         {
           "key": "B",
-          "text": "Thanks both. Decision: we will keep the module boundary as in option A for this PR, and open a follow-up RFC for the broader extract. Unblocking author now with that direction."
+          "text": "Thanks both. Decision: we will keep the module boundary as in option A for this PR, and open a follow-up RFC for the broader extract. Unblocking author now with that direction.",
+          "textId": "Terima kasih keduanya. Keputusan: kita pertahankan batas modul seperti opsi A untuk PR ini, dan buka RFC lanjutan untuk ekstraksi yang lebih luas. Author sekarang di-unblock dengan arah itu."
         },
         {
           "key": "C",
-          "text": "Tell the author to guess."
+          "text": "Tell the author to guess.",
+          "textId": "Suruh author menebak sendiri."
         },
         {
           "key": "D",
-          "text": "Close the PR out of frustration."
+          "text": "Close the PR out of frustration.",
+          "textId": "Tutup PR karena frustrasi."
         }
       ],
       "correctKey": "B",
-      "explanation": "Make a decision, unblock, and park larger debate properly.",
+      "explanation": "Lead harus mengambil keputusan, membuka blokir author, dan memarkir debat besar ke RFC. Pola: apresiasi → Decision → ruang follow-up → Unblocking. Frasa \"Unblocking author now\" menunjukkan prioritas delivery tanpa mematikan diskusi jangka panjang.",
       "tags": [
         "decision",
         "leadership"
@@ -267,27 +310,33 @@
       "moduleId": "pr-code-review",
       "difficulty": "mid",
       "scenario": "You want to praise a particularly good abstraction in a PR.",
+      "scenarioId": "Anda ingin memuji abstraksi yang sangat bagus di sebuah PR.",
       "prompt": "Effective praise?",
+      "promptId": "Pujian yang efektif?",
       "choices": [
         {
           "key": "A",
-          "text": "cool"
+          "text": "cool",
+          "textId": "keren"
         },
         {
           "key": "B",
-          "text": "Nice work on the retry helper — the jitter and idempotency key handling will prevent a class of production incidents. Thanks for documenting the failure modes in the PR body."
+          "text": "Nice work on the retry helper — the jitter and idempotency key handling will prevent a class of production incidents. Thanks for documenting the failure modes in the PR body.",
+          "textId": "Kerja bagus pada retry helper — penanganan jitter dan idempotency key akan mencegah kelas insiden produksi. Terima kasih sudah mendokumentasikan failure modes di body PR."
         },
         {
           "key": "C",
-          "text": "Finally someone competent."
+          "text": "Finally someone competent.",
+          "textId": "Akhirnya ada yang kompeten."
         },
         {
           "key": "D",
-          "text": "Praise only in private so others do not learn."
+          "text": "Praise only in private so others do not learn.",
+          "textId": "Puji hanya secara pribadi agar orang lain tidak belajar."
         }
       ],
       "correctKey": "B",
-      "explanation": "Specific praise reinforces the behaviors you want repeated.",
+      "explanation": "Pujian spesifik memperkuat perilaku yang ingin diulang: sebut komponen, mengapa bernilai (cegah insiden), dan apresiasi dokumentasi. \"cool\" terlalu tipis; pujian yang merendahkan orang lain merusak budaya.",
       "tags": [
         "praise",
         "culture"
@@ -303,27 +352,33 @@
       "moduleId": "pr-code-review",
       "difficulty": "junior",
       "scenario": "PR description is empty.",
+      "scenarioId": "Deskripsi PR kosong.",
       "prompt": "Helpful request?",
+      "promptId": "Permintaan yang membantu?",
       "choices": [
         {
           "key": "A",
-          "text": "Write a novel."
+          "text": "Write a novel.",
+          "textId": "Tulis novel."
         },
         {
           "key": "B",
-          "text": "Could you add a short PR description: problem, approach, risk, and how you tested? It will speed up review and help on-call later."
+          "text": "Could you add a short PR description: problem, approach, risk, and how you tested? It will speed up review and help on-call later.",
+          "textId": "Bisakah menambah deskripsi PR singkat: masalah, pendekatan, risiko, dan cara Anda mengetes? Ini mempercepat review dan membantu on-call nanti."
         },
         {
           "key": "C",
-          "text": "Approve without reading."
+          "text": "Approve without reading.",
+          "textId": "Approve tanpa membaca."
         },
         {
           "key": "D",
-          "text": "Reject for style alone."
+          "text": "Reject for style alone.",
+          "textId": "Tolak hanya karena gaya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Ask for the minimum useful context, not bureaucracy.",
+      "explanation": "Minta kerangka minimal yang berguna: problem / approach / risk / tested — bukan novel. Jelaskan manfaatnya (review lebih cepat + on-call). \"Could you add…\" menjaga nada sopan dan actionable.",
       "tags": [
         "PR-description",
         "process"
@@ -339,27 +394,33 @@
       "moduleId": "pr-code-review",
       "difficulty": "mid",
       "scenario": "A large PR mixes refactor and feature.",
+      "scenarioId": "PR besar mencampur refactor dan fitur.",
       "prompt": "Best guidance?",
+      "promptId": "Panduan terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "I love giant PRs."
+          "text": "I love giant PRs.",
+          "textId": "Saya suka PR raksasa."
         },
         {
           "key": "B",
-          "text": "This will be easier and safer as two PRs: pure refactor first, then the feature on top. Reviewers can validate behavior changes without noise. Can we split before deeper review?"
+          "text": "This will be easier and safer as two PRs: pure refactor first, then the feature on top. Reviewers can validate behavior changes without noise. Can we split before deeper review?",
+          "textId": "Ini akan lebih mudah dan aman sebagai dua PR: refactor murni dulu, lalu fitur di atasnya. Reviewer bisa memvalidasi perubahan perilaku tanpa noise. Bisakah kita pecah sebelum review lebih dalam?"
         },
         {
           "key": "C",
-          "text": "Demand a full rewrite in one shot."
+          "text": "Demand a full rewrite in one shot.",
+          "textId": "Tuntut rewrite penuh sekaligus."
         },
         {
           "key": "D",
-          "text": "Rubber-stamp to clear the queue."
+          "text": "Rubber-stamp to clear the queue.",
+          "textId": "Rubber-stamp agar antrean kosong."
         }
       ],
       "correctKey": "B",
-      "explanation": "Split for reviewability and safer rollback.",
+      "explanation": "Sarankan split: refactor murni dulu, fitur kemudian — demi reviewability dan rollback yang lebih aman. Jelaskan alasan (kurangi noise), lalu tanya izin split sebelum review dalam. Nada kolaboratif, bukan perintah absolut.",
       "tags": [
         "pr-size",
         "process"
@@ -375,27 +436,33 @@
       "moduleId": "pr-code-review",
       "difficulty": "senior",
       "scenario": "Junior author seems discouraged after many comments.",
+      "scenarioId": "Author junior tampak down setelah banyak komentar.",
       "prompt": "Supportive message?",
+      "promptId": "Pesan yang mendukung?",
       "choices": [
         {
           "key": "A",
-          "text": "Maybe this job is not for you."
+          "text": "Maybe this job is not for you.",
+          "textId": "Mungkin pekerjaan ini bukan untuk Anda."
         },
         {
           "key": "B",
-          "text": "Lots of comments here because the area is high risk, not because the work lacks value. The core approach is solid. Let's pair for 25 minutes to close the remaining two items together."
+          "text": "Lots of comments here because the area is high risk, not because the work lacks value. The core approach is solid. Let's pair for 25 minutes to close the remaining two items together.",
+          "textId": "Banyak komentar di sini karena areanya berisiko tinggi, bukan karena karyanya kurang bernilai. Pendekatan intinya sudah solid. Mari pair 25 menit untuk menutup dua poin tersisa bersama."
         },
         {
           "key": "C",
-          "text": "Remove all comments to be nice."
+          "text": "Remove all comments to be nice.",
+          "textId": "Hapus semua komentar supaya terlihat baik."
         },
         {
           "key": "D",
-          "text": "Silence them publicly."
+          "text": "Silence them publicly.",
+          "textId": "Bungkam mereka di depan umum."
         }
       ],
       "correctKey": "B",
-      "explanation": "Separate rigor from identity; offer concrete support.",
+      "explanation": "Pisahkan ketatnya review dari nilai diri author: banyak komentar karena risiko area, bukan karena kerja buruk. Afirmasi pendekatan inti, lalu tawarkan pair konkret. Pola mentoring: konteks → apresiasi → dukungan actionable.",
       "tags": [
         "mentoring",
         "tone"
@@ -411,27 +478,33 @@
       "moduleId": "pr-code-review",
       "difficulty": "mid",
       "scenario": "You approve after requested changes.",
+      "scenarioId": "Anda approve setelah perubahan yang diminta selesai.",
       "prompt": "Clear approval note?",
+      "promptId": "Catatan approval yang jelas?",
       "choices": [
         {
           "key": "A",
-          "text": "ok"
+          "text": "ok",
+          "textId": "ok"
         },
         {
           "key": "B",
-          "text": "Looks good now — retry tests cover the duplicate webhook path and rollback notes are clear. Approved. Please squash-merge after CI is green."
+          "text": "Looks good now — retry tests cover the duplicate webhook path and rollback notes are clear. Approved. Please squash-merge after CI is green.",
+          "textId": "Sudah bagus sekarang — tes retry menutup path webhook duplikat dan catatan rollback sudah jelas. Approved. Mohon squash-merge setelah CI hijau."
         },
         {
           "key": "C",
-          "text": "Approved but I still hate it."
+          "text": "Approved but I still hate it.",
+          "textId": "Approved tapi saya tetap tidak suka."
         },
         {
           "key": "D",
-          "text": "Approve then immediately request changes again."
+          "text": "Approve then immediately request changes again.",
+          "textId": "Approve lalu segera request changes lagi."
         }
       ],
       "correctKey": "B",
-      "explanation": "Confirm what improved and the merge condition.",
+      "explanation": "Konfirmasi apa yang sudah membaik, nyatakan Approved, dan sebut syarat merge (CI hijau + squash-merge). Approval yang jelas menutup loop review dan mengurangi kebingungan author.",
       "tags": [
         "approval",
         "clarity"

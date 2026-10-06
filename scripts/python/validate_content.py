@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate AS English content modules against the expected schema."""
+"""Validate AS English bilingual content modules."""
 
 from __future__ import annotations
 
@@ -27,7 +27,9 @@ ITEM_SCHEMA = {
         "moduleId",
         "difficulty",
         "scenario",
+        "scenarioId",
         "prompt",
+        "promptId",
         "choices",
         "correctKey",
         "explanation",
@@ -39,27 +41,27 @@ ITEM_SCHEMA = {
         "moduleId": {"type": "string", "minLength": 1},
         "difficulty": {"type": "string", "enum": ["junior", "mid", "senior"]},
         "scenario": {"type": "string", "minLength": 1},
+        "scenarioId": {"type": "string", "minLength": 1},
         "prompt": {"type": "string", "minLength": 1},
+        "promptId": {"type": "string", "minLength": 1},
         "choices": {
             "type": "array",
             "minItems": 4,
             "maxItems": 4,
             "items": {
                 "type": "object",
-                "required": ["key", "text"],
+                "required": ["key", "text", "textId"],
                 "additionalProperties": False,
                 "properties": {
                     "key": CHOICE_KEY,
                     "text": {"type": "string", "minLength": 1},
+                    "textId": {"type": "string", "minLength": 1},
                 },
             },
         },
         "correctKey": CHOICE_KEY,
         "explanation": {"type": "string", "minLength": 1},
-        "tags": {
-            "type": "array",
-            "items": {"type": "string"},
-        },
+        "tags": {"type": "array", "items": {"type": "string"}},
         "tts": {
             "type": "object",
             "additionalProperties": False,
@@ -77,6 +79,7 @@ MODULE_SCHEMA = {
     "required": [
         "id",
         "title",
+        "titleId",
         "description",
         "persona",
         "status",
@@ -87,6 +90,7 @@ MODULE_SCHEMA = {
     "properties": {
         "id": {"type": "string"},
         "title": {"type": "string"},
+        "titleId": {"type": "string"},
         "description": {"type": "string"},
         "persona": {"type": "array", "items": {"type": "string"}},
         "status": {"type": "string", "enum": ["ready", "stub"]},
@@ -108,6 +112,7 @@ MANIFEST_SCHEMA = {
                 "required": [
                     "id",
                     "title",
+                    "titleId",
                     "description",
                     "persona",
                     "status",
@@ -117,6 +122,7 @@ MANIFEST_SCHEMA = {
                 "properties": {
                     "id": {"type": "string"},
                     "title": {"type": "string"},
+                    "titleId": {"type": "string"},
                     "description": {"type": "string"},
                     "persona": {"type": "array", "items": {"type": "string"}},
                     "status": {"type": "string", "enum": ["ready", "stub"]},
@@ -188,7 +194,6 @@ def main() -> int:
                     f"{module_path.name}/{item['id']}: correctKey not in choices"
                 )
 
-    # orphan module files
     for path in sorted(MODULES_DIR.glob("*.json")):
         if path.stem not in module_ids:
             errors.append(f"Orphan module file not in manifest: {path.name}")
@@ -201,7 +206,7 @@ def main() -> int:
 
     ready = sum(1 for m in manifest["modules"] if m["status"] == "ready")
     print(
-        f"OK — {len(manifest['modules'])} modules ({ready} ready), schema valid."
+        f"OK — {len(manifest['modules'])} modules ({ready} ready), bilingual schema valid."
     )
     return 0
 

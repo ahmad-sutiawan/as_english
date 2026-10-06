@@ -1,7 +1,8 @@
 {
   "id": "cross-team",
   "title": "Cross-Team & Vendor",
-  "description": "Alignment, deadlines, and polite pushback.",
+  "titleId": "Lintas Tim & Vendor",
+  "description": "Alignment, deadline, dan pushback yang sopan antar tim serta vendor.",
   "persona": [
     "IT Manager",
     "SRE"
@@ -14,27 +15,33 @@
       "moduleId": "cross-team",
       "difficulty": "mid",
       "scenario": "Another team missed an agreed API delivery date that your release depends on.",
+      "scenarioId": "Tim lain melewatkan tanggal pengiriman API yang sudah disepakati dan menjadi dependensi rilis Anda.",
       "prompt": "Best first message?",
+      "promptId": "Pesan pertama terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "You broke our release again."
+          "text": "You broke our release again.",
+          "textId": "Kalian merusak rilis kami lagi."
         },
         {
           "key": "B",
-          "text": "Checking in on the Payments API date we aligned last Thursday. Our checkout release is gated on it. Can you share a revised ETA and whether a temporary stub is viable so we protect customer launch?"
+          "text": "Checking in on the Payments API date we aligned last Thursday. Our checkout release is gated on it. Can you share a revised ETA and whether a temporary stub is viable so we protect customer launch?",
+          "textId": "Checking in soal tanggal Payments API yang kita align Kamis lalu. Rilis checkout kami bergantung padanya. Bisakah bagikan ETA revisi dan apakah stub sementara feasible agar kita jaga customer launch?"
         },
         {
           "key": "C",
-          "text": "Escalate to executives immediately with no context."
+          "text": "Escalate to executives immediately with no context.",
+          "textId": "Eskalasi ke eksekutif segera tanpa konteks."
         },
         {
           "key": "D",
-          "text": "Silently slip your date and surprise everyone later."
+          "text": "Silently slip your date and surprise everyone later.",
+          "textId": "Geser tanggal diam-diam dan kejutan semua orang nanti."
         }
       ],
       "correctKey": "B",
-      "explanation": "Reference the agreement, state impact, ask ETA and mitigation options.",
+      "explanation": "Rujuk kesepakatan, nyatakan dampak, minta ETA dan opsi mitigasi. Frasa \"Checking in on… we aligned\" menjaga nada kolaboratif; \"gated on it\" menjelaskan dependensi; tawarkan stub sebagai jalur keluar bersama.",
       "tags": [
         "dependency",
         "alignment"
@@ -50,27 +57,33 @@
       "moduleId": "cross-team",
       "difficulty": "senior",
       "scenario": "Vendor support is slow during a production degradation.",
+      "scenarioId": "Dukungan vendor lambat saat terjadi degradasi production.",
       "prompt": "Professional escalation email?",
+      "promptId": "Email eskalasi yang profesional?",
       "choices": [
         {
           "key": "A",
-          "text": "Your product is garbage."
+          "text": "Your product is garbage.",
+          "textId": "Produk kalian sampah."
         },
         {
           "key": "B",
-          "text": "We are seeing elevated timeouts on gateway X since 13:40 UTC impacting checkout. Severity: high. Please confirm ticket priority and provide an ETA for an update within 30 minutes. Bridge link included."
+          "text": "We are seeing elevated timeouts on gateway X since 13:40 UTC impacting checkout. Severity: high. Please confirm ticket priority and provide an ETA for an update within 30 minutes. Bridge link included.",
+          "textId": "Kami melihat timeout meningkat di gateway X sejak 13:40 UTC yang berdampak pada checkout. Severity: high. Mohon konfirmasi prioritas tiket dan berikan ETA update dalam 30 menit. Link bridge terlampir."
         },
         {
           "key": "C",
-          "text": "Wait silently for 24 hours."
+          "text": "Wait silently for 24 hours.",
+          "textId": "Tunggu diam-diam selama 24 jam."
         },
         {
           "key": "D",
-          "text": "Tweet at their CEO first."
+          "text": "Tweet at their CEO first.",
+          "textId": "Tweet ke CEO mereka dulu."
         }
       ],
       "correctKey": "B",
-      "explanation": "Impact, severity, ask, time expectation, and contact path.",
+      "explanation": "Eskalasi vendor: dampak + severity + permintaan jelas + ekspektasi waktu + jalur kontak (bridge). Hindari umpatan atau drama publik. Pola ini mempercepat respons tanpa merusak relasi.",
       "tags": [
         "vendor",
         "escalation"
@@ -86,27 +99,33 @@
       "moduleId": "cross-team",
       "difficulty": "mid",
       "scenario": "Security team rejected your change without clear next steps.",
+      "scenarioId": "Tim security menolak perubahan Anda tanpa langkah lanjut yang jelas.",
       "prompt": "How do you respond?",
+      "promptId": "Bagaimana Anda merespons?",
       "choices": [
         {
           "key": "A",
-          "text": "Security always blocks innovation."
+          "text": "Security always blocks innovation.",
+          "textId": "Security selalu memblokir inovasi."
         },
         {
           "key": "B",
-          "text": "Thanks for the review. Could you list the specific controls we must satisfy to get to approve? I can propose compensating controls today if the original path is blocked for this release train."
+          "text": "Thanks for the review. Could you list the specific controls we must satisfy to get to approve? I can propose compensating controls today if the original path is blocked for this release train.",
+          "textId": "Terima kasih atas review-nya. Bisakah daftar kontrol spesifik yang harus kami penuhi untuk mendapat approve? Saya bisa usulkan compensating controls hari ini jika jalur asli terblokir untuk release train ini."
         },
         {
           "key": "C",
-          "text": "Bypass security in production."
+          "text": "Bypass security in production.",
+          "textId": "Bypass security di production."
         },
         {
           "key": "D",
-          "text": "Abandon the project immediately."
+          "text": "Abandon the project immediately.",
+          "textId": "Tinggalkan proyek segera."
         }
       ],
       "correctKey": "B",
-      "explanation": "Ask for concrete acceptance criteria and offer alternatives.",
+      "explanation": "Minta kriteria penerimaan konkret dan tawarkan alternatif. Frasa \"specific controls we must satisfy\" mengubah penolakan kabur menjadi checklist; \"compensating controls\" menunjukkan fleksibilitas tanpa melewati security.",
       "tags": [
         "security",
         "unblock"
@@ -122,27 +141,33 @@
       "moduleId": "cross-team",
       "difficulty": "junior",
       "scenario": "You need design input from UX but they are overloaded.",
+      "scenarioId": "Anda butuh input desain dari UX tetapi mereka overloaded.",
       "prompt": "Polite ask?",
+      "promptId": "Permintaan yang sopan?",
       "choices": [
         {
           "key": "A",
-          "text": "Drop everything for me."
+          "text": "Drop everything for me.",
+          "textId": "Tinggalkan semua pekerjaan demi saya."
         },
         {
           "key": "B",
-          "text": "I know bandwidth is tight. Could I get a 20-minute UX sanity check on the empty-state copy by Wednesday? If that is impossible, I will ship with the interim copy and schedule a polish pass next sprint."
+          "text": "I know bandwidth is tight. Could I get a 20-minute UX sanity check on the empty-state copy by Wednesday? If that is impossible, I will ship with the interim copy and schedule a polish pass next sprint.",
+          "textId": "Saya tahu bandwidth ketat. Bisakah saya dapat sanity check UX 20 menit untuk copy empty-state sebelum Rabu? Jika tidak mungkin, saya ship dengan copy sementara dan jadwalkan polish di sprint berikutnya."
         },
         {
           "key": "C",
-          "text": "Ship ugly UI without notice forever."
+          "text": "Ship ugly UI without notice forever.",
+          "textId": "Ship UI jelek tanpa pemberitahuan selamanya."
         },
         {
           "key": "D",
-          "text": "Complaint to their manager first."
+          "text": "Complaint to their manager first.",
+          "textId": "Komplain ke manajer mereka dulu."
         }
       ],
       "correctKey": "B",
-      "explanation": "Timebox, deadline, and fallback plan respect constraints.",
+      "explanation": "Timebox, deadline, dan rencana fallback menghargai keterbatasan. Pola: akui beban → minta kecil & berbatas waktu → sebut fallback. Itu permintaan yang mudah dijawab ya/tidak.",
       "tags": [
         "ask",
         "ux",
@@ -159,27 +184,33 @@
       "moduleId": "cross-team",
       "difficulty": "senior",
       "scenario": "Two directors disagree on roadmap sequencing in a shared forum.",
+      "scenarioId": "Dua director tidak setuju soal urutan roadmap di forum bersama.",
       "prompt": "How do you facilitate?",
+      "promptId": "Bagaimana Anda memfasilitasi?",
       "choices": [
         {
           "key": "A",
-          "text": "Pick a side loudly."
+          "text": "Pick a side loudly.",
+          "textId": "Pilih pihak dengan keras."
         },
         {
           "key": "B",
-          "text": "I hear two priorities: reliability hardening vs partner launch. To decide, can we compare customer impact and opportunity cost for the next six weeks? I can bring a one-page tradeoff matrix by tomorrow morning."
+          "text": "I hear two priorities: reliability hardening vs partner launch. To decide, can we compare customer impact and opportunity cost for the next six weeks? I can bring a one-page tradeoff matrix by tomorrow morning.",
+          "textId": "Saya mendengar dua prioritas: reliability hardening vs partner launch. Untuk memutuskan, bisakah kita bandingkan dampak pelanggan dan opportunity cost enam minggu ke depan? Saya bisa bawa matriks tradeoff satu halaman besok pagi."
         },
         {
           "key": "C",
-          "text": "Let the argument run for an hour."
+          "text": "Let the argument run for an hour.",
+          "textId": "Biarkan argumen berlangsung sejam."
         },
         {
           "key": "D",
-          "text": "Cancel both initiatives."
+          "text": "Cancel both initiatives.",
+          "textId": "Batalkan kedua inisiatif."
         }
       ],
       "correctKey": "B",
-      "explanation": "Reframe conflict into a decision artifact with criteria.",
+      "explanation": "Ubah konflik menjadi artefak keputusan dengan kriteria. Reframe prioritas, usulkan kriteria (impact + opportunity cost), dan tawarkan deliverable (tradeoff matrix). Facilitation = struktur, bukan memilih kamp.",
       "tags": [
         "facilitation",
         "tradeoffs"
@@ -195,27 +226,33 @@
       "moduleId": "cross-team",
       "difficulty": "mid",
       "scenario": "Partner asks for an unrealistic same-day integration.",
+      "scenarioId": "Partner meminta integrasi same-day yang tidak realistis.",
       "prompt": "Polite pushback?",
+      "promptId": "Pushback yang sopan?",
       "choices": [
         {
           "key": "A",
-          "text": "Impossible. No."
+          "text": "Impossible. No.",
+          "textId": "Mustahil. Tidak."
         },
         {
           "key": "B",
-          "text": "I want to support the launch. Same-day full integration is high risk given testing needs. We can deliver a read-only pilot today and the write path on Thursday after verification — does that meet the customer moment?"
+          "text": "I want to support the launch. Same-day full integration is high risk given testing needs. We can deliver a read-only pilot today and the write path on Thursday after verification — does that meet the customer moment?",
+          "textId": "Saya ingin mendukung peluncuran. Integrasi penuh same-day berisiko tinggi mengingat kebutuhan testing. Kita bisa kirim pilot read-only hari ini dan write path Kamis setelah verifikasi — apakah itu memenuhi momen pelanggan?"
         },
         {
           "key": "C",
-          "text": "Agree then fail silently."
+          "text": "Agree then fail silently.",
+          "textId": "Setuju lalu gagal diam-diam."
         },
         {
           "key": "D",
-          "text": "Ignore the partner email."
+          "text": "Ignore the partner email.",
+          "textId": "Abaikan email partner."
         }
       ],
       "correctKey": "B",
-      "explanation": "Offer a safer alternative that still helps the business moment.",
+      "explanation": "Tawarkan alternatif yang lebih aman tapi tetap membantu bisnis. Pola pushback: afirmasi niat → jelaskan risiko → usulkan jalur bertahap → tanya apakah cukup. \"Impossible. No.\" menutup pintu tanpa solusi.",
       "tags": [
         "pushback",
         "partner"
@@ -231,27 +268,33 @@
       "moduleId": "cross-team",
       "difficulty": "mid",
       "scenario": "Finance disputes a tooling purchase you need for on-call.",
+      "scenarioId": "Finance memperdebatkan pembelian tool yang Anda butuhkan untuk on-call.",
       "prompt": "Business-framed reply?",
+      "promptId": "Balasan berbingkai bisnis?",
       "choices": [
         {
           "key": "A",
-          "text": "Engineers deserve nice toys."
+          "text": "Engineers deserve nice toys.",
+          "textId": "Engineer berhak dapat mainan bagus."
         },
         {
           "key": "B",
-          "text": "Understood on cost control. The tool reduces MTTR and pages; estimated savings exceed subscription within two incidents avoided. I attached a 30-day pilot plan with success metrics — can we approve the pilot?"
+          "text": "Understood on cost control. The tool reduces MTTR and pages; estimated savings exceed subscription within two incidents avoided. I attached a 30-day pilot plan with success metrics — can we approve the pilot?",
+          "textId": "Mengerti soal pengendalian biaya. Tool ini menurunkan MTTR dan page; estimasi penghematan melebihi biaya langganan dalam dua insiden yang dihindari. Saya lampirkan rencana pilot 30 hari dengan success metrics — bisakah kita approve pilot-nya?"
         },
         {
           "key": "C",
-          "text": "Buy it on a personal card secretly."
+          "text": "Buy it on a personal card secretly.",
+          "textId": "Beli diam-diam pakai kartu pribadi."
         },
         {
           "key": "D",
-          "text": "Threaten resignation over the tool."
+          "text": "Threaten resignation over the tool.",
+          "textId": "Ancam resign karena tool."
         }
       ],
       "correctKey": "B",
-      "explanation": "ROI + pilot + metrics speaks Finance's language.",
+      "explanation": "ROI + pilot + metrics adalah bahasa Finance. Akui cost control, hubungkan ke MTTR/pages, minta approve pilot terbatas. Hindari framing \"toys\" yang tidak bisnis.",
       "tags": [
         "finance",
         "business-case"
@@ -267,27 +310,33 @@
       "moduleId": "cross-team",
       "difficulty": "junior",
       "scenario": "You joined a cross-team kickoff and roles are unclear.",
+      "scenarioId": "Anda ikut kickoff lintas tim dan peran belum jelas.",
       "prompt": "Useful clarifying question?",
+      "promptId": "Pertanyaan klarifikasi yang berguna?",
       "choices": [
         {
           "key": "A",
-          "text": "Who is in charge of everything forever?"
+          "text": "Who is in charge of everything forever?",
+          "textId": "Siapa yang berkuasa atas segalanya selamanya?"
         },
         {
           "key": "B",
-          "text": "To avoid gaps: who is the decision owner for API contract changes, and who is consulted vs informed? I can draft an RACI after this call if helpful."
+          "text": "To avoid gaps: who is the decision owner for API contract changes, and who is consulted vs informed? I can draft an RACI after this call if helpful.",
+          "textId": "Agar tidak ada celah: siapa decision owner untuk perubahan kontrak API, dan siapa yang consulted vs informed? Saya bisa draft RACI setelah call ini jika membantu."
         },
         {
           "key": "C",
-          "text": "Stay confused silently."
+          "text": "Stay confused silently.",
+          "textId": "Tetap bingung diam-diam."
         },
         {
           "key": "D",
-          "text": "Assume you own all decisions."
+          "text": "Assume you own all decisions.",
+          "textId": "Asumsikan Anda punya semua keputusan."
         }
       ],
       "correctKey": "B",
-      "explanation": "Clarify decision rights early; offer to document RACI.",
+      "explanation": "Klarifikasi decision rights sejak awal; tawarkan dokumentasi RACI. Fokus pada keputusan spesifik (API contract) dan peran RACI (owner / consulted / informed), bukan pertanyaan terlalu luas.",
       "tags": [
         "RACI",
         "kickoff"
@@ -303,27 +352,33 @@
       "moduleId": "cross-team",
       "difficulty": "senior",
       "scenario": "A peer manager's team keeps breaking shared SLOs.",
+      "scenarioId": "Tim peer manager terus merusak SLO bersama.",
       "prompt": "Constructive 1:1 opener with that manager?",
+      "promptId": "Pembuka 1:1 yang konstruktif dengan manajer itu?",
       "choices": [
         {
           "key": "A",
-          "text": "Your team is the problem."
+          "text": "Your team is the problem.",
+          "textId": "Tim Anda adalah masalahnya."
         },
         {
           "key": "B",
-          "text": "I want us to succeed on the shared checkout SLO. Over the last month, error-budget burn from service B is the main driver. Can we align on ownership for two reliability fixes this sprint?"
+          "text": "I want us to succeed on the shared checkout SLO. Over the last month, error-budget burn from service B is the main driver. Can we align on ownership for two reliability fixes this sprint?",
+          "textId": "Saya ingin kita sukses pada SLO checkout bersama. Sebulan terakhir, error-budget burn dari service B adalah driver utama. Bisakah kita align ownership untuk dua perbaikan reliability sprint ini?"
         },
         {
           "key": "C",
-          "text": "Complain only to executives first."
+          "text": "Complain only to executives first.",
+          "textId": "Komplain ke eksekutif dulu saja."
         },
         {
           "key": "D",
-          "text": "Add sarcasm in the shared channel."
+          "text": "Add sarcasm in the shared channel.",
+          "textId": "Tambah sarkasme di channel bersama."
         }
       ],
       "correctKey": "B",
-      "explanation": "Shared goal + data + concrete ask for joint ownership.",
+      "explanation": "Tujuan bersama + data + permintaan ownership konkret. Mulai dari \"I want us to succeed\", tunjukkan metrik (error-budget burn), lalu minta align pada perbaikan spesifik. Hindari label \"your team is the problem\".",
       "tags": [
         "SLO",
         "peer-manager"
@@ -339,27 +394,33 @@
       "moduleId": "cross-team",
       "difficulty": "mid",
       "scenario": "Legal needs more time; sales wants to announce a feature.",
+      "scenarioId": "Legal butuh waktu lebih; sales ingin mengumumkan fitur.",
       "prompt": "Alignment message?",
+      "promptId": "Pesan alignment?",
       "choices": [
         {
           "key": "A",
-          "text": "Ship the announcement anyway."
+          "text": "Ship the announcement anyway.",
+          "textId": "Kirim pengumuman saja."
         },
         {
           "key": "B",
-          "text": "Sales wants to announce Friday; Legal needs through Monday for review. Proposal: soft-announce to design partners under NDA Friday, public announce Tuesday after Legal sign-off. Any objections by noon?"
+          "text": "Sales wants to announce Friday; Legal needs through Monday for review. Proposal: soft-announce to design partners under NDA Friday, public announce Tuesday after Legal sign-off. Any objections by noon?",
+          "textId": "Sales ingin announce Jumat; Legal butuh sampai Senin untuk review. Usulan: soft-announce ke design partners di bawah NDA Jumat, announce publik Selasa setelah sign-off Legal. Ada keberatan sebelum siang?"
         },
         {
           "key": "C",
-          "text": "Let teams fight in email forever."
+          "text": "Let teams fight in email forever.",
+          "textId": "Biarkan tim berkelahi di email selamanya."
         },
         {
           "key": "D",
-          "text": "Cancel the feature."
+          "text": "Cancel the feature.",
+          "textId": "Batalkan fiturnya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Propose a sequenced compromise with a clear objection window.",
+      "explanation": "Usulkan kompromi berurutan dengan jendela keberatan yang jelas. Ringkas posisi kedua pihak, beri proposal bertahap, tutup dengan \"Any objections by…\" agar keputusan bergerak.",
       "tags": [
         "legal",
         "sales",
@@ -376,27 +437,33 @@
       "moduleId": "cross-team",
       "difficulty": "mid",
       "scenario": "Offshore vendor delivered incomplete work near deadline.",
+      "scenarioId": "Vendor offshore mengirimkan pekerjaan tidak lengkap mendekati deadline.",
       "prompt": "Firm but professional note?",
+      "promptId": "Catatan tegas tapi profesional?",
       "choices": [
         {
           "key": "A",
-          "text": "You failed us."
+          "text": "You failed us.",
+          "textId": "Kalian mengecewakan kami."
         },
         {
           "key": "B",
-          "text": "The deliverable is missing load-test results and rollback steps listed in SOW section 4. Please confirm completion ETA by tomorrow 10:00 and whether you need clarification. Our go-live depends on those artifacts."
+          "text": "The deliverable is missing load-test results and rollback steps listed in SOW section 4. Please confirm completion ETA by tomorrow 10:00 and whether you need clarification. Our go-live depends on those artifacts.",
+          "textId": "Deliverable kekurangan hasil load-test dan langkah rollback yang tercantum di SOW bagian 4. Mohon konfirmasi ETA penyelesaian sebelum besok 10:00 dan apakah Anda butuh klarifikasi. Go-live kami bergantung pada artefak itu."
         },
         {
           "key": "C",
-          "text": "Accept incomplete work silently."
+          "text": "Accept incomplete work silently.",
+          "textId": "Terima pekerjaan tidak lengkap diam-diam."
         },
         {
           "key": "D",
-          "text": "Publicly shame the vendor on LinkedIn."
+          "text": "Publicly shame the vendor on LinkedIn.",
+          "textId": "Permalukan vendor di LinkedIn secara publik."
         }
       ],
       "correctKey": "B",
-      "explanation": "Cite contract expectations, ask ETA, keep tone factual.",
+      "explanation": "Rujuk ekspektasi kontrak (SOW), minta ETA, jaga nada faktual. Sebut gap konkret, deadline respons, tawarkan klarifikasi, dan tautkan ke go-live. Tegas tanpa menyerang pribadi.",
       "tags": [
         "vendor",
         "SOW"
@@ -412,27 +479,33 @@
       "moduleId": "cross-team",
       "difficulty": "senior",
       "scenario": "Close a difficult cross-team negotiation that reached agreement.",
+      "scenarioId": "Tutup negosiasi lintas tim yang sulit dan sudah mencapai kesepakatan.",
       "prompt": "Best closing summary?",
+      "promptId": "Ringkasan penutup terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Great talk."
+          "text": "Great talk.",
+          "textId": "Obrolan bagus."
         },
         {
           "key": "B",
-          "text": "Agreement: Platform ships rate-limit API by April 10; we integrate by April 17; shared success metric is p95 under 300ms. I will post the decision record and calendar the checkpoint on April 8."
+          "text": "Agreement: Platform ships rate-limit API by April 10; we integrate by April 17; shared success metric is p95 under 300ms. I will post the decision record and calendar the checkpoint on April 8.",
+          "textId": "Kesepakatan: Platform ship rate-limit API sebelum 10 April; kita integrasi sebelum 17 April; success metric bersama adalah p95 di bawah 300ms. Saya akan post decision record dan jadwalkan checkpoint 8 April."
         },
         {
           "key": "C",
-          "text": "Hope everyone remembers."
+          "text": "Hope everyone remembers.",
+          "textId": "Semoga semua orang ingat."
         },
         {
           "key": "D",
-          "text": "Change the deal after the meeting quietly."
+          "text": "Change the deal after the meeting quietly.",
+          "textId": "Ubah kesepakatan diam-diam setelah rapat."
         }
       ],
       "correctKey": "B",
-      "explanation": "Restate commitments, metrics, artifacts, and checkpoint date.",
+      "explanation": "Ulangi komitmen, metrik, artefak, dan tanggal checkpoint. Closing yang kuat mencegah \"saya kira…\" di kemudian hari. Pola: Agreement → who/when → metric → decision record → checkpoint.",
       "tags": [
         "closing",
         "alignment"

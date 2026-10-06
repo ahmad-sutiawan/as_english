@@ -1,7 +1,8 @@
 {
   "id": "incident-oncall",
   "title": "Incident & On-Call",
-  "description": "Severity, mitigation, bridge updates, and calm urgency.",
+  "titleId": "Insiden & On-Call",
+  "description": "Panduan berbicara saat severity, mitigasi, update bridge, dan menyampaikan urgensi dengan tenang.",
   "persona": [
     "SRE",
     "IT Manager"
@@ -14,27 +15,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "mid",
       "scenario": "You are primary on-call. PagerDuty fires for elevated 5xx on the checkout API. Error rate is 18% and rising. You have joined the incident bridge.",
+      "scenarioId": "Anda adalah primary on-call. PagerDuty berbunyi karena elevated 5xx pada checkout API. Error rate 18% dan naik. Anda sudah join incident bridge.",
       "prompt": "What is the clearest first update to the bridge?",
+      "promptId": "Apa update pertama yang paling jelas untuk bridge?",
       "choices": [
         {
           "key": "A",
-          "text": "Something is broken in checkout. Looking into it."
+          "text": "Something is broken in checkout. Looking into it.",
+          "textId": "Ada yang rusak di checkout. Sedang dicek."
         },
         {
           "key": "B",
-          "text": "We are seeing elevated 5xx on checkout API, currently about 18% and rising. I am investigating root cause and will share a mitigation plan in five minutes."
+          "text": "We are seeing elevated 5xx on checkout API, currently about 18% and rising. I am investigating root cause and will share a mitigation plan in five minutes.",
+          "textId": "Kami melihat elevated 5xx di checkout API, saat ini sekitar 18% dan naik. Saya sedang investigasi root cause dan akan bagikan rencana mitigasi dalam lima menit."
         },
         {
           "key": "C",
-          "text": "This might be related to yesterday's deploy, but I am not sure yet."
+          "text": "This might be related to yesterday's deploy, but I am not sure yet.",
+          "textId": "Ini mungkin terkait deploy kemarin, tapi saya belum yakin."
         },
         {
           "key": "D",
-          "text": "Can someone else take a look? I just got paged."
+          "text": "Can someone else take a look? I just got paged.",
+          "textId": "Bisakah orang lain melihat? Saya baru saja di-page."
         }
       ],
       "correctKey": "B",
-      "explanation": "Good bridge updates state impact, metric, ownership, and next checkpoint. Vague language or speculation without a plan slows response.",
+      "explanation": "Jawaban B tepat karena update bridge yang baik menyatakan dampak (elevated 5xx), metrik (18% and rising), ownership (I am investigating), dan checkpoint berikutnya (mitigation plan in five minutes). Pelajari frasa: \"elevated 5xx\" = error server naik; \"root cause\" = akar masalah; \"mitigation plan\" = rencana menekan dampak. Jawaban A terlalu samar; C spekulasi tanpa rencana; D melepas ownership.",
       "tags": [
         "incident",
         "bridge",
@@ -51,27 +58,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "mid",
       "scenario": "You confirmed a bad config rollout caused the outage. Rollback is ready and will take about three minutes.",
+      "scenarioId": "Anda sudah memastikan bad config rollout menyebabkan outage. Rollback siap dan akan memakan waktu sekitar tiga menit.",
       "prompt": "How do you announce the mitigation on the bridge?",
+      "promptId": "Bagaimana Anda mengumumkan mitigasi di bridge?",
       "choices": [
         {
           "key": "A",
-          "text": "Rolling back the bad config now. ETA three minutes. I will confirm once error rate returns to baseline."
+          "text": "Rolling back the bad config now. ETA three minutes. I will confirm once error rate returns to baseline.",
+          "textId": "Sedang rollback config yang bermasalah sekarang. ETA tiga menit. Saya akan konfirmasi setelah error rate kembali ke baseline."
         },
         {
           "key": "B",
-          "text": "I found the issue. Trust me, this should fix it."
+          "text": "I found the issue. Trust me, this should fix it.",
+          "textId": "Saya sudah menemukan masalahnya. Percaya saja, ini seharusnya memperbaikinya."
         },
         {
           "key": "C",
-          "text": "We need approval from leadership before rolling back."
+          "text": "We need approval from leadership before rolling back.",
+          "textId": "Kita perlu persetujuan leadership sebelum rollback."
         },
         {
           "key": "D",
-          "text": "Everyone stand by while I try a few things."
+          "text": "Everyone stand by while I try a few things.",
+          "textId": "Semua standby sementara saya coba beberapa hal."
         }
       ],
       "correctKey": "A",
-      "explanation": "State the action, ETA, and how you will verify success. That keeps the bridge aligned and calm.",
+      "explanation": "Jawaban A menyatakan aksi (rolling back), ETA, dan cara verifikasi (error rate returns to baseline). Frasa penting: \"ETA\" = estimasi waktu selesai; \"baseline\" = tingkat normal; \"confirm once…\" = konfirmasi setelah kriteria terpenuhi. B meminta kepercayaan tanpa bukti; C menunda tanpa alasan; D tidak spesifik.",
       "tags": [
         "mitigation",
         "rollback",
@@ -88,27 +101,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "senior",
       "scenario": "Customer success asks for a public status update while you are still mitigating. Leadership wants customer-safe language.",
+      "scenarioId": "Customer success minta public status update saat Anda masih mitigasi. Leadership ingin bahasa yang aman untuk pelanggan.",
       "prompt": "Which customer-facing update is most appropriate right now?",
+      "promptId": "Update untuk pelanggan mana yang paling tepat saat ini?",
       "choices": [
         {
           "key": "A",
-          "text": "Our checkout service is currently degraded. We have identified the cause and are applying a fix. We will update again within 15 minutes."
+          "text": "Our checkout service is currently degraded. We have identified the cause and are applying a fix. We will update again within 15 minutes.",
+          "textId": "Layanan checkout kami saat ini mengalami degradasi. Kami sudah mengidentifikasi penyebab dan sedang menerapkan perbaikan. Kami akan update lagi dalam 15 menit."
         },
         {
           "key": "B",
-          "text": "A junior engineer pushed a broken config and broke payments."
+          "text": "A junior engineer pushed a broken config and broke payments.",
+          "textId": "Engineer junior mendorong config rusak dan merusak pembayaran."
         },
         {
           "key": "C",
-          "text": "Everything is fine; please ignore any errors you see."
+          "text": "Everything is fine; please ignore any errors you see.",
+          "textId": "Semuanya baik-baik saja; abaikan saja error yang Anda lihat."
         },
         {
           "key": "D",
-          "text": "We do not know what is happening and cannot estimate recovery."
+          "text": "We do not know what is happening and cannot estimate recovery.",
+          "textId": "Kami tidak tahu apa yang terjadi dan tidak bisa memperkirakan pemulihan."
         }
       ],
       "correctKey": "A",
-      "explanation": "External updates should be factual, non-blaming, and include a next update window without leaking internal finger-pointing.",
+      "explanation": "Update eksternal harus faktual, tidak menyalahkan orang, dan menyertakan jendela update berikutnya. Pelajari: \"currently degraded\" = layanan menurun tapi tidak total down; \"applying a fix\" = sedang menerapkan perbaikan; \"within 15 minutes\" = komitmen update ulang. B menyalahkan individu; C menipu; D panik tanpa nilai.",
       "tags": [
         "status-page",
         "customer",
@@ -125,27 +144,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "junior",
       "scenario": "Your shift ends in 20 minutes. An SEV-2 is still open but stable after mitigation. Secondary is online.",
+      "scenarioId": "Shift Anda berakhir dalam 20 menit. SEV-2 masih terbuka tapi stabil setelah mitigasi. Secondary sudah online.",
       "prompt": "What is the best handoff message?",
+      "promptId": "Apa pesan handoff terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "I am signing off. Good luck."
+          "text": "I am signing off. Good luck.",
+          "textId": "Saya off sekarang. Semoga beruntung."
         },
         {
           "key": "B",
-          "text": "SEV-2 checkout 5xx is mitigated via config rollback. Error rate is back to baseline. Remaining work: confirm dashboards for 30 minutes and draft the incident timeline. Docs and Slack thread linked in the ticket."
+          "text": "SEV-2 checkout 5xx is mitigated via config rollback. Error rate is back to baseline. Remaining work: confirm dashboards for 30 minutes and draft the incident timeline. Docs and Slack thread linked in the ticket.",
+          "textId": "SEV-2 checkout 5xx sudah dimitigasi via config rollback. Error rate kembali ke baseline. Sisa pekerjaan: pantau dashboard 30 menit dan buat draft timeline insiden. Docs dan thread Slack ada di tiket."
         },
         {
           "key": "C",
-          "text": "It is mostly fine now, just watch it."
+          "text": "It is mostly fine now, just watch it.",
+          "textId": "Sekarang hampir baik, tinggal pantau saja."
         },
         {
           "key": "D",
-          "text": "I fixed everything, so you can close the incident."
+          "text": "I fixed everything, so you can close the incident.",
+          "textId": "Saya sudah memperbaiki semuanya, jadi Anda bisa menutup insiden."
         }
       ],
       "correctKey": "B",
-      "explanation": "A strong handoff includes current state, mitigation already applied, remaining risks/tasks, and pointers to context.",
+      "explanation": "Handoff kuat mencakup state saat ini, mitigasi yang sudah dilakukan, sisa tugas/risiko, dan pointer ke konteks. Frasa: \"mitigated via…\" = sudah dikurangi dampaknya dengan…; \"remaining work\" = pekerjaan tersisa; \"linked in the ticket\" = tautan ada di tiket. A tidak membantu; C samar; D menutup terlalu dini.",
       "tags": [
         "handoff",
         "oncall"
@@ -161,27 +186,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "mid",
       "scenario": "Two engineers start debugging different hypotheses at once and talk over each other on the bridge.",
+      "scenarioId": "Dua engineer mulai debug hipotesis berbeda sekaligus dan saling menimpali di bridge.",
       "prompt": "As incident commander, what should you say?",
+      "promptId": "Sebagai incident commander, apa yang harus Anda katakan?",
       "choices": [
         {
           "key": "A",
-          "text": "Everyone stop talking. I will decide alone."
+          "text": "Everyone stop talking. I will decide alone.",
+          "textId": "Semua berhenti bicara. Saya putuskan sendiri."
         },
         {
           "key": "B",
-          "text": "Let's parallelize clearly: Alex owns DB connection pool checks, Mira owns recent deploy diffs. Please post findings in the thread; I will synthesize next steps in three minutes."
+          "text": "Let's parallelize clearly: Alex owns DB connection pool checks, Mira owns recent deploy diffs. Please post findings in the thread; I will synthesize next steps in three minutes.",
+          "textId": "Mari parallelize dengan jelas: Alex pegang cek DB connection pool, Mira pegang deploy diffs terbaru. Temuan dipost di thread; saya akan merangkum next steps dalam tiga menit."
         },
         {
           "key": "C",
-          "text": "Just keep trying whatever you think is right."
+          "text": "Just keep trying whatever you think is right.",
+          "textId": "Teruskan saja apa pun yang kalian rasa benar."
         },
         {
           "key": "D",
-          "text": "We should wait until tomorrow to debug properly."
+          "text": "We should wait until tomorrow to debug properly.",
+          "textId": "Sebaiknya tunggu besok agar debug lebih rapi."
         }
       ],
       "correctKey": "B",
-      "explanation": "Incident command reduces chaos by assigning owners, channels, and a sync cadence.",
+      "explanation": "Incident commander mengurangi chaos dengan menugaskan owner, channel, dan ritme sync. Pelajari: \"X owns Y\" = X bertanggung jawab atas Y; \"post findings\" = tulis temuan; \"synthesize next steps\" = rangkum langkah berikutnya. A otoriter tanpa kolaborasi; C menambah chaos; D menunda respons.",
       "tags": [
         "incident-commander",
         "coordination"
@@ -197,27 +228,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "senior",
       "scenario": "A vendor API is timing out. Your service depends on it. A full outage is unlikely, but checkout latency is high for 12% of users.",
+      "scenarioId": "Vendor API sedang timeout. Layanan Anda bergantung padanya. Full outage tidak mungkin, tapi latency checkout tinggi untuk 12% pengguna.",
       "prompt": "How do you frame severity to leadership?",
+      "promptId": "Bagaimana Anda menjelaskan severity ke leadership?",
       "choices": [
         {
           "key": "A",
-          "text": "This is a total outage; we should wake everyone."
+          "text": "This is a total outage; we should wake everyone.",
+          "textId": "Ini outage total; kita harus bangunkan semua orang."
         },
         {
           "key": "B",
-          "text": "Treating this as SEV-2: partial degradation affecting about 12% of checkout users due to vendor timeouts. We enabled stricter timeouts and a fallback path; monitoring recovery."
+          "text": "Treating this as SEV-2: partial degradation affecting about 12% of checkout users due to vendor timeouts. We enabled stricter timeouts and a fallback path; monitoring recovery.",
+          "textId": "Memperlakukan ini sebagai SEV-2: degradasi parsial memengaruhi sekitar 12% pengguna checkout karena vendor timeout. Kami sudah aktifkan timeout lebih ketat dan fallback path; sedang memantau recovery."
         },
         {
           "key": "C",
-          "text": "Not our problem — the vendor is broken."
+          "text": "Not our problem — the vendor is broken.",
+          "textId": "Bukan masalah kami — vendor yang rusak."
         },
         {
           "key": "D",
-          "text": "Users always complain; no need to escalate."
+          "text": "Users always complain; no need to escalate.",
+          "textId": "Pengguna selalu mengeluh; tidak perlu eskalasi."
         }
       ],
       "correctKey": "B",
-      "explanation": "Severity framing needs impact scope, cause hypothesis, and what you already did — not blame or understatement.",
+      "explanation": "Framing severity butuh ruang dampak, hipotesis penyebab, dan aksi yang sudah dilakukan — bukan menyalahkan atau meremehkan. Frasa: \"treating this as SEV-2\" = kami klasifikasikan sebagai SEV-2; \"partial degradation\" = penurunan sebagian; \"fallback path\" = jalur cadangan. A over-escalate; C menyalahkan tanpa ownership; D understate.",
       "tags": [
         "severity",
         "vendor",
@@ -234,27 +271,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "mid",
       "scenario": "You need a database failover. It may cause a brief write interruption. Product asks if they can announce a maintenance window now.",
+      "scenarioId": "Anda perlu database failover. Bisa menyebabkan gangguan write singkat. Product bertanya apakah mereka boleh umumkan maintenance window sekarang.",
       "prompt": "What do you reply?",
+      "promptId": "Apa yang Anda jawab?",
       "choices": [
         {
           "key": "A",
-          "text": "Do not announce anything; just fail over silently."
+          "text": "Do not announce anything; just fail over silently.",
+          "textId": "Jangan umumkan apa pun; failover diam-diam saja."
         },
         {
           "key": "B",
-          "text": "Yes — please announce a short maintenance for write operations. Planned failover starts in 10 minutes and should complete within five minutes. I will confirm when writes are healthy."
+          "text": "Yes — please announce a short maintenance for write operations. Planned failover starts in 10 minutes and should complete within five minutes. I will confirm when writes are healthy.",
+          "textId": "Ya — tolong umumkan maintenance singkat untuk operasi write. Failover terencana mulai dalam 10 menit dan seharusnya selesai dalam lima menit. Saya akan konfirmasi saat write sudah sehat."
         },
         {
           "key": "C",
-          "text": "Tell customers the database is unstable and may corrupt data."
+          "text": "Tell customers the database is unstable and may corrupt data.",
+          "textId": "Katakan ke pelanggan database tidak stabil dan bisa merusak data."
         },
         {
           "key": "D",
-          "text": "Ask customers to stop using the product indefinitely."
+          "text": "Ask customers to stop using the product indefinitely.",
+          "textId": "Minta pelanggan berhenti memakai produk tanpa batas waktu."
         }
       ],
       "correctKey": "B",
-      "explanation": "Coordinate a clear, time-bound customer message with operational reality and a confirmation step.",
+      "explanation": "Koordinasikan pesan pelanggan yang jelas dan berbatas waktu dengan realitas operasi serta langkah konfirmasi. Frasa: \"planned failover\" = failover terencana; \"should complete within…\" = estimasi selesai; \"confirm when… are healthy\" = konfirmasi saat metrik sehat. A menyembunyikan risiko; C menimbulkan panik; D berlebihan.",
       "tags": [
         "failover",
         "product",
@@ -271,27 +314,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "junior",
       "scenario": "A teammate suggests restarting all pods immediately without checking recent changes.",
+      "scenarioId": "Rekan menyarankan restart semua pod segera tanpa memeriksa perubahan terbaru.",
       "prompt": "What is a professional pushback?",
+      "promptId": "Bagaimana pushback yang profesional?",
       "choices": [
         {
           "key": "A",
-          "text": "That idea is useless."
+          "text": "That idea is useless.",
+          "textId": "Ide itu tidak berguna."
         },
         {
           "key": "B",
-          "text": "Before a full restart, let's check the last deploy and error signatures for two minutes. If it still looks like a bad process state, we can restart a canary first."
+          "text": "Before a full restart, let's check the last deploy and error signatures for two minutes. If it still looks like a bad process state, we can restart a canary first.",
+          "textId": "Sebelum full restart, mari cek deploy terakhir dan error signatures selama dua menit. Jika masih terlihat bad process state, kita bisa restart canary dulu."
         },
         {
           "key": "C",
-          "text": "Sure, restart everything right now."
+          "text": "Sure, restart everything right now.",
+          "textId": "Baik, restart semuanya sekarang juga."
         },
         {
           "key": "D",
-          "text": "I refuse to do anything you suggest."
+          "text": "I refuse to do anything you suggest.",
+          "textId": "Saya menolak apa pun yang Anda usulkan."
         }
       ],
       "correctKey": "B",
-      "explanation": "Push back with a safer sequence and rationale, not with personal criticism.",
+      "explanation": "Pushback dengan urutan yang lebih aman dan alasan, bukan kritik pribadi. Pelajari: \"before X, let's…\" = sebelum X, mari…; \"error signatures\" = pola error; \"canary first\" = uji ke sebagian dulu. A kasar; C setuju tanpa cek; D menolak keras tanpa opsi.",
       "tags": [
         "pushback",
         "runbook",
@@ -308,27 +357,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "senior",
       "scenario": "The incident is resolved. Leadership asks in Slack whether engineering 'messed up again.'",
+      "scenarioId": "Insiden sudah selesai. Leadership bertanya di Slack apakah engineering 'berantakan lagi.'",
       "prompt": "What is the best immediate reply?",
+      "promptId": "Apa balasan langsung yang terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Yes, the team failed again."
+          "text": "Yes, the team failed again.",
+          "textId": "Ya, tim gagal lagi."
         },
         {
           "key": "B",
-          "text": "Service is restored. We will share a blameless timeline and concrete follow-ups in the postmortem within 24 hours, including detection and prevention gaps."
+          "text": "Service is restored. We will share a blameless timeline and concrete follow-ups in the postmortem within 24 hours, including detection and prevention gaps.",
+          "textId": "Layanan sudah pulih. Kami akan bagikan timeline blameless dan follow-up konkret di postmortem dalam 24 jam, termasuk celah deteksi dan pencegahan."
         },
         {
           "key": "C",
-          "text": "Please do not ask that in public Slack."
+          "text": "Please do not ask that in public Slack.",
+          "textId": "Tolong jangan tanya itu di Slack publik."
         },
         {
           "key": "D",
-          "text": "It was entirely the vendor's fault, so no postmortem is needed."
+          "text": "It was entirely the vendor's fault, so no postmortem is needed.",
+          "textId": "Ini sepenuhnya salah vendor, jadi postmortem tidak perlu."
         }
       ],
       "correctKey": "B",
-      "explanation": "Redirect from blame to restoration status and a structured learning process.",
+      "explanation": "Alihkan dari menyalahkan ke status pemulihan dan proses belajar yang terstruktur. Frasa: \"service is restored\" = layanan pulih; \"blameless timeline\" = kronologi tanpa menyalahkan orang; \"concrete follow-ups\" = tindak lanjut konkret. A mengiyakan blame; C defensif; D menghindari pembelajaran.",
       "tags": [
         "post-incident",
         "leadership",
@@ -345,27 +400,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "mid",
       "scenario": "You are writing a short Slack update for stakeholders who are not on the bridge.",
+      "scenarioId": "Anda menulis update Slack singkat untuk stakeholder yang tidak ada di bridge.",
       "prompt": "Which update is clearest?",
+      "promptId": "Update mana yang paling jelas?",
       "choices": [
         {
           "key": "A",
-          "text": "Still looking."
+          "text": "Still looking.",
+          "textId": "Masih mencari."
         },
         {
           "key": "B",
-          "text": "Impact: checkout errors elevated. Status: mitigated via config rollback at 14:12 UTC. Current: error rate normal. Next: monitor for 30 minutes and open postmortem doc."
+          "text": "Impact: checkout errors elevated. Status: mitigated via config rollback at 14:12 UTC. Current: error rate normal. Next: monitor for 30 minutes and open postmortem doc.",
+          "textId": "Dampak: error checkout naik. Status: dimitigasi via config rollback pukul 14:12 UTC. Saat ini: error rate normal. Berikutnya: pantau 30 menit dan buka dokumen postmortem."
         },
         {
           "key": "C",
-          "text": "Lots of moving parts; hard to explain."
+          "text": "Lots of moving parts; hard to explain.",
+          "textId": "Banyak bagian yang bergerak; sulit dijelaskan."
         },
         {
           "key": "D",
-          "text": "Please join the bridge if you care."
+          "text": "Please join the bridge if you care.",
+          "textId": "Silakan join bridge jika peduli."
         }
       ],
       "correctKey": "B",
-      "explanation": "Stakeholder updates work best as Impact → Status → Current → Next.",
+      "explanation": "Update stakeholder paling efektif berpola Impact → Status → Current → Next. Hafalkan kerangka ini. A terlalu pendek; C menghindari kejelasan; D tidak memberikan informasi.",
       "tags": [
         "stakeholder",
         "slack",
@@ -382,27 +443,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "senior",
       "scenario": "During a SEV-1, marketing wants to publish a cheerful 'all good' social post.",
+      "scenarioId": "Saat SEV-1, marketing ingin memposting konten sosial yang ceria 'semua baik-baik saja.'",
       "prompt": "What do you tell them?",
+      "promptId": "Apa yang Anda katakan kepada mereka?",
       "choices": [
         {
           "key": "A",
-          "text": "Sure, post anything positive."
+          "text": "Sure, post anything positive.",
+          "textId": "Silakan, posting apa saja yang positif."
         },
         {
           "key": "B",
-          "text": "Please hold public posts until we confirm stable recovery for 30 minutes. Draft customer-safe language with me: acknowledge disruption, state we are restoring service, avoid root-cause speculation."
+          "text": "Please hold public posts until we confirm stable recovery for 30 minutes. Draft customer-safe language with me: acknowledge disruption, state we are restoring service, avoid root-cause speculation.",
+          "textId": "Tolong tahan postingan publik sampai kami konfirmasi recovery stabil selama 30 menit. Draft bahasa aman pelanggan bersama saya: akui gangguan, nyatakan kami sedang memulihkan layanan, hindari spekulasi root cause."
         },
         {
           "key": "C",
-          "text": "Let them post blame on engineering."
+          "text": "Let them post blame on engineering.",
+          "textId": "Biarkan mereka memposting yang menyalahkan engineering."
         },
         {
           "key": "D",
-          "text": "Ignore marketing entirely."
+          "text": "Ignore marketing entirely.",
+          "textId": "Abaikan marketing sepenuhnya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Coordinate messaging and avoid premature 'all clear'.",
+      "explanation": "Koordinasikan pesan dan hindari 'all clear' terlalu dini. Frasa: \"hold public posts\" = tahan dulu posting publik; \"stable recovery\" = pemulihan stabil; \"avoid root-cause speculation\" = jangan spekulasi penyebab. A prematur; C merusak trust; D tidak kolaboratif.",
       "tags": [
         "comms",
         "sev1"
@@ -418,27 +485,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "mid",
       "scenario": "You suspect a dependency outage but lack proof yet.",
+      "scenarioId": "Anda menduga ada dependency outage tapi belum punya bukti.",
       "prompt": "Careful bridge phrasing?",
+      "promptId": "Frasa bridge yang hati-hati?",
       "choices": [
         {
           "key": "A",
-          "text": "It is definitely their fault."
+          "text": "It is definitely their fault.",
+          "textId": "Pasti salah mereka."
         },
         {
           "key": "B",
-          "text": "Hypothesis: upstream auth latency may be contributing. I am validating with dependency dashboards now and will confirm or retire this theory in three minutes."
+          "text": "Hypothesis: upstream auth latency may be contributing. I am validating with dependency dashboards now and will confirm or retire this theory in three minutes.",
+          "textId": "Hipotesis: latency auth upstream mungkin berkontribusi. Saya sedang validasi dengan dashboard dependency sekarang dan akan konfirmasi atau cabut teori ini dalam tiga menit."
         },
         {
           "key": "C",
-          "text": "Guess loudly without checking."
+          "text": "Guess loudly without checking.",
+          "textId": "Menebak keras tanpa memeriksa."
         },
         {
           "key": "D",
-          "text": "Stay silent about possible causes."
+          "text": "Stay silent about possible causes.",
+          "textId": "Diam saja soal kemungkinan penyebab."
         }
       ],
       "correctKey": "B",
-      "explanation": "Label hypotheses and give a validation checkpoint.",
+      "explanation": "Label hipotesis dan beri checkpoint validasi. Frasa kunci: \"Hypothesis:\" = ini masih dugaan; \"may be contributing\" = mungkin berperan; \"confirm or retire this theory\" = konfirmasi atau buang teori. A menyatakan kepastian tanpa bukti; C dan D tidak membantu investigasi.",
       "tags": [
         "hypothesis",
         "bridge"
@@ -454,27 +527,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "junior",
       "scenario": "A noisy alert keeps paging but user impact is zero.",
+      "scenarioId": "Alert berisik terus mem-page tapi dampak ke pengguna nol.",
       "prompt": "What do you say in the on-call channel?",
+      "promptId": "Apa yang Anda katakan di channel on-call?",
       "choices": [
         {
           "key": "A",
-          "text": "Alerts are always sacred; never touch them."
+          "text": "Alerts are always sacred; never touch them.",
+          "textId": "Alert selalu sakral; jangan pernah disentuh."
         },
         {
           "key": "B",
-          "text": "This alert has no user impact. I am acknowledging and opening a ticket to tune the threshold after the shift. Continuing to watch true customer symptoms."
+          "text": "This alert has no user impact. I am acknowledging and opening a ticket to tune the threshold after the shift. Continuing to watch true customer symptoms.",
+          "textId": "Alert ini tidak punya dampak pengguna. Saya acknowledge dan buka tiket untuk tune threshold setelah shift. Tetap memantau gejala pelanggan yang nyata."
         },
         {
           "key": "C",
-          "text": "Disable all alerting permanently."
+          "text": "Disable all alerting permanently.",
+          "textId": "Matikan semua alerting secara permanen."
         },
         {
           "key": "D",
-          "text": "Wake the whole company for every noise page."
+          "text": "Wake the whole company for every noise page.",
+          "textId": "Bangunkan seluruh perusahaan untuk setiap page berisik."
         }
       ],
       "correctKey": "B",
-      "explanation": "Reduce noise with ownership while protecting signal.",
+      "explanation": "Kurangi noise dengan ownership sambil melindungi sinyal. Frasa: \"no user impact\" = tidak berdampak ke pengguna; \"tune the threshold\" = sesuaikan ambang alert; \"true customer symptoms\" = gejala pelanggan yang nyata. A menolak perbaikan; C berbahaya; D memperburuk fatigue.",
       "tags": [
         "alert-noise",
         "oncall"
@@ -490,27 +569,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "mid",
       "scenario": "Customer success asks for per-customer impact during mitigation.",
+      "scenarioId": "Customer success meminta dampak per pelanggan saat mitigasi masih berjalan.",
       "prompt": "Best response while still fixing?",
+      "promptId": "Respons terbaik saat masih memperbaiki?",
       "choices": [
         {
           "key": "A",
-          "text": "I cannot talk to you during incidents ever."
+          "text": "I cannot talk to you during incidents ever.",
+          "textId": "Saya tidak bisa bicara dengan Anda selama insiden, kapan pun."
         },
         {
           "key": "B",
-          "text": "I can share aggregate impact now: about 9% checkout failures globally. Per-customer lists will take longer; Mira owns that extract and will post in 20 minutes while I keep mitigating."
+          "text": "I can share aggregate impact now: about 9% checkout failures globally. Per-customer lists will take longer; Mira owns that extract and will post in 20 minutes while I keep mitigating.",
+          "textId": "Saya bisa bagikan dampak agregat sekarang: sekitar 9% kegagalan checkout secara global. Daftar per pelanggan butuh waktu lebih lama; Mira pegang ekstraknya dan akan post dalam 20 menit sementara saya lanjut mitigasi."
         },
         {
           "key": "C",
-          "text": "Invent precise per-customer numbers."
+          "text": "Invent precise per-customer numbers.",
+          "textId": "Buat angka per pelanggan yang seolah akurat."
         },
         {
           "key": "D",
-          "text": "Tell CS to stop asking."
+          "text": "Tell CS to stop asking.",
+          "textId": "Suruh CS berhenti bertanya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Give what you can now; assign the deeper ask without dropping mitigation.",
+      "explanation": "Berikan yang bisa sekarang; tugaskan permintaan yang lebih dalam tanpa menghentikan mitigasi. Frasa: \"aggregate impact\" = dampak keseluruhan; \"X owns that\" = X yang pegang; \"while I keep mitigating\" = sementara saya lanjut mitigasi. A menutup komunikasi; C tidak jujur; D kasar.",
       "tags": [
         "stakeholders",
         "delegation"
@@ -526,27 +611,33 @@
       "moduleId": "incident-oncall",
       "difficulty": "senior",
       "scenario": "After mitigation, someone wants to 'improve things live' with a risky hot fix.",
+      "scenarioId": "Setelah mitigasi, seseorang ingin 'memperbaiki langsung di live' dengan hot fix berisiko.",
       "prompt": "What do you say?",
+      "promptId": "Apa yang Anda katakan?",
       "choices": [
         {
           "key": "A",
-          "text": "Yes, keep changing production casually."
+          "text": "Yes, keep changing production casually.",
+          "textId": "Ya, terus ubah production dengan santai."
         },
         {
           "key": "B",
-          "text": "Service is stable. Let's freeze non-essential changes for 60 minutes, watch golden signals, and take risky improvements through a reviewed change with canary. Stability first."
+          "text": "Service is stable. Let's freeze non-essential changes for 60 minutes, watch golden signals, and take risky improvements through a reviewed change with canary. Stability first.",
+          "textId": "Layanan stabil. Mari freeze perubahan non-esensial selama 60 menit, pantau golden signals, dan bawa perbaikan berisiko lewat change yang di-review dengan canary. Stabilitas dulu."
         },
         {
           "key": "C",
-          "text": "Let anyone deploy anything as a reward."
+          "text": "Let anyone deploy anything as a reward.",
+          "textId": "Biarkan siapa saja deploy apa saja sebagai hadiah."
         },
         {
           "key": "D",
-          "text": "Immediately start a rewrite."
+          "text": "Immediately start a rewrite.",
+          "textId": "Langsung mulai rewrite."
         }
       ],
       "correctKey": "B",
-      "explanation": "Post-mitigation change freeze protects recovery.",
+      "explanation": "Change freeze setelah mitigasi melindungi recovery. Frasa: \"freeze non-essential changes\" = tahan perubahan tidak penting; \"golden signals\" = metrik inti kesehatan; \"stability first\" = stabilitas didahulukan. A/C/D menambah risiko setelah baru pulih.",
       "tags": [
         "stability",
         "change-freeze"

@@ -25,12 +25,13 @@ export default async function ExercisePage({ params }: Props) {
         href={`/learn/${moduleId}`}
         className="text-sm text-[var(--muted)] hover:text-[var(--ink)]"
       >
-        ← {mod.title}
+        ← {mod.titleId}
       </Link>
       <div className="mt-6">
         <ExercisePanel
           item={item}
           moduleTitle={mod.title}
+          moduleTitleId={mod.titleId}
           nextItemId={nextItemId}
         />
       </div>

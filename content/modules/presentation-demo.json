@@ -1,7 +1,8 @@
 {
   "id": "presentation-demo",
   "title": "Presentation & Demo",
-  "description": "Openings, transitions, and handling Q&A under pressure.",
+  "titleId": "Presentasi & Demo",
+  "description": "Panduan opening, transisi, dan menangani Q&A di bawah tekanan saat presentasi serta demo.",
   "persona": [
     "IT Manager",
     "Fullstack"
@@ -14,27 +15,33 @@
       "moduleId": "presentation-demo",
       "difficulty": "mid",
       "scenario": "You open a demo of the new incident dashboard for leadership.",
+      "scenarioId": "Anda membuka demo dashboard insiden baru untuk leadership.",
       "prompt": "Best opening line?",
+      "promptId": "Kalimat pembuka terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Um, so yeah, this is a thing we built."
+          "text": "Um, so yeah, this is a thing we built.",
+          "textId": "Eh, jadi ya, ini sesuatu yang kami buat."
         },
         {
           "key": "B",
-          "text": "In the next ten minutes I will show how this dashboard cuts mean time to detect from minutes to seconds, then walk through one live incident scenario and take questions."
+          "text": "In the next ten minutes I will show how this dashboard cuts mean time to detect from minutes to seconds, then walk through one live incident scenario and take questions.",
+          "textId": "Dalam sepuluh menit ke depan saya akan tunjukkan bagaimana dashboard ini memotong mean time to detect dari menit ke detik, lalu walkthrough satu skenario insiden live dan menerima pertanyaan."
         },
         {
           "key": "C",
-          "text": "Let me start with my life story."
+          "text": "Let me start with my life story.",
+          "textId": "Biarkan saya mulai dengan cerita hidup saya."
         },
         {
           "key": "D",
-          "text": "Please read the slides; I will stay quiet."
+          "text": "Please read the slides; I will stay quiet.",
+          "textId": "Tolong baca slide-nya; saya akan diam."
         }
       ],
       "correctKey": "B",
-      "explanation": "Agenda + outcome + timebox builds executive attention.",
+      "explanation": "Agenda + outcome + timebox menarik perhatian eksekutif. Frasa: \"in the next X minutes I will show…\" = agenda berbatas waktu; \"cuts Y from A to B\" = outcome terukur; \"then… and take questions\" = alur sesi. A ragu; C off-topic; D menyerahkan kontrol.",
       "tags": [
         "opening",
         "demo"
@@ -50,27 +57,33 @@
       "moduleId": "presentation-demo",
       "difficulty": "junior",
       "scenario": "The demo environment is slow. Stakeholders are waiting.",
+      "scenarioId": "Environment demo lambat. Stakeholder sedang menunggu.",
       "prompt": "What do you say?",
+      "promptId": "Apa yang Anda katakan?",
       "choices": [
         {
           "key": "A",
-          "text": "This always happens; not my fault."
+          "text": "This always happens; not my fault.",
+          "textId": "Ini selalu terjadi; bukan salah saya."
         },
         {
           "key": "B",
-          "text": "The staging environment is slower than production right now. I will narrate the flow with screenshots while it loads, then switch to the live view for the final step."
+          "text": "The staging environment is slower than production right now. I will narrate the flow with screenshots while it loads, then switch to the live view for the final step.",
+          "textId": "Environment staging saat ini lebih lambat dari production. Saya akan narasikan alurnya dengan screenshot sambil loading, lalu pindah ke live view untuk langkah akhir."
         },
         {
           "key": "C",
-          "text": "Cancel the meeting immediately."
+          "text": "Cancel the meeting immediately.",
+          "textId": "Batalkan meeting segera."
         },
         {
           "key": "D",
-          "text": "Sit in silence until it works."
+          "text": "Sit in silence until it works.",
+          "textId": "Duduk diam sampai berhasil."
         }
       ],
       "correctKey": "B",
-      "explanation": "Acknowledge, keep value flowing, recover to live when possible.",
+      "explanation": "Akui masalah, terus berikan nilai, pulih ke live bila memungkinkan. Frasa: \"slower than production right now\" = konteks singkat; \"I will narrate… while it loads\" = rencana sementara; \"then switch to the live view\" = recovery. A menyalahkan; C/D menghentikan nilai.",
       "tags": [
         "recovery",
         "demo"
@@ -86,27 +99,33 @@
       "moduleId": "presentation-demo",
       "difficulty": "senior",
       "scenario": "A VP interrupts: 'Why should we fund this?'",
+      "scenarioId": "VP menyela: 'Why should we fund this?'",
       "prompt": "Strong bridge answer?",
+      "promptId": "Jawaban jembatan yang kuat?",
       "choices": [
         {
           "key": "A",
-          "text": "Because engineers like shiny tools."
+          "text": "Because engineers like shiny tools.",
+          "textId": "Karena engineer suka tool yang keren."
         },
         {
           "key": "B",
-          "text": "Great question — the business case is fewer prolonged outages. Last quarter we lost an estimated $X in failed checkouts during slow detection. This investment targets that loss with a measurable MTTD reduction."
+          "text": "Great question — the business case is fewer prolonged outages. Last quarter we lost an estimated $X in failed checkouts during slow detection. This investment targets that loss with a measurable MTTD reduction.",
+          "textId": "Pertanyaan bagus — business case-nya lebih sedikit outage berkepanjangan. Kuartal lalu kami kehilangan estimasi $X dari checkout gagal saat deteksi lambat. Investasi ini menargetkan kerugian itu dengan penurunan MTTD yang terukur."
         },
         {
           "key": "C",
-          "text": "I will answer later maybe."
+          "text": "I will answer later maybe.",
+          "textId": "Saya akan jawab nanti mungkin."
         },
         {
           "key": "D",
-          "text": "Please wait until the end of all thirty slides."
+          "text": "Please wait until the end of all thirty slides.",
+          "textId": "Tolong tunggu sampai akhir ketiga puluh slide."
         }
       ],
       "correctKey": "B",
-      "explanation": "Translate tech into business impact with evidence.",
+      "explanation": "Terjemahkan tech ke dampak bisnis dengan bukti. Frasa: \"great question —\" = terima interupsi; \"the business case is…\" = alasan bisnis; \"this investment targets… with measurable…\" = tautkan investasi ke metrik. A tidak bisnis; C/D menghindari jawaban.",
       "tags": [
         "executive",
         "business-case"
@@ -122,27 +141,33 @@
       "moduleId": "presentation-demo",
       "difficulty": "mid",
       "scenario": "Transition from architecture slide to live demo.",
+      "scenarioId": "Transisi dari slide arsitektur ke demo live.",
       "prompt": "Best transition phrase?",
+      "promptId": "Frasa transisi terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Moving on randomly."
+          "text": "Moving on randomly.",
+          "textId": "Lanjut secara acak."
         },
         {
           "key": "B",
-          "text": "That was the design. Now I will show the same flow live: detect anomaly, open runbook, and page the right owner in under a minute."
+          "text": "That was the design. Now I will show the same flow live: detect anomaly, open runbook, and page the right owner in under a minute.",
+          "textId": "Itu desainnya. Sekarang saya akan tunjukkan alur yang sama secara live: deteksi anomali, buka runbook, dan page owner yang tepat dalam kurang dari satu menit."
         },
         {
           "key": "C",
-          "text": "Forget the architecture; it was wrong."
+          "text": "Forget the architecture; it was wrong.",
+          "textId": "Lupakan arsitekturnya; itu salah."
         },
         {
           "key": "D",
-          "text": "Any questions on everything at once forever?"
+          "text": "Any questions on everything at once forever?",
+          "textId": "Ada pertanyaan tentang semuanya sekaligus selamanya?"
         }
       ],
       "correctKey": "B",
-      "explanation": "Explicit bridge that previews what viewers will see.",
+      "explanation": "Jembatan eksplisit yang mempreview apa yang akan dilihat penonton. Frasa: \"that was X. Now I will show…\" = penutup + pembuka; daftar langkah singkat membantu fokus. A acak; C meruntuhkan kredibilitas; D membuka chaos.",
       "tags": [
         "transition",
         "demo"
@@ -158,27 +183,33 @@
       "moduleId": "presentation-demo",
       "difficulty": "mid",
       "scenario": "Someone asks a question outside the demo scope.",
+      "scenarioId": "Seseorang bertanya di luar scope demo.",
       "prompt": "How do you handle it?",
+      "promptId": "Bagaimana Anda menanganinya?",
       "choices": [
         {
           "key": "A",
-          "text": "That is irrelevant."
+          "text": "That is irrelevant.",
+          "textId": "Itu tidak relevan."
         },
         {
           "key": "B",
-          "text": "Good question — it is adjacent but outside today's scope. I will park it on the parking-lot slide and follow up with a short note after this session so we stay on the detection flow."
+          "text": "Good question — it is adjacent but outside today's scope. I will park it on the parking-lot slide and follow up with a short note after this session so we stay on the detection flow.",
+          "textId": "Pertanyaan bagus — berdekatan tapi di luar scope hari ini. Saya akan park di slide parking-lot dan follow up dengan catatan singkat setelah sesi ini agar kita tetap di alur deteksi."
         },
         {
           "key": "C",
-          "text": "Answer for twenty minutes and lose the agenda."
+          "text": "Answer for twenty minutes and lose the agenda.",
+          "textId": "Jawab selama dua puluh menit dan kehilangan agenda."
         },
         {
           "key": "D",
-          "text": "Pretend you did not hear it."
+          "text": "Pretend you did not hear it.",
+          "textId": "Pura-pura tidak mendengar."
         }
       ],
       "correctKey": "B",
-      "explanation": "Validate, park, protect the agenda, promise follow-up.",
+      "explanation": "Validasi, park, jaga agenda, janjikan follow-up. Frasa: \"good question —\" → \"outside today's scope\" → \"park it\" → \"follow up… so we stay on…\". A menolak kasar; C kehilangan fokus; D tidak sopan.",
       "tags": [
         "Q&A",
         "facilitation"
@@ -194,27 +225,33 @@
       "moduleId": "presentation-demo",
       "difficulty": "junior",
       "scenario": "You do not know the answer to a technical question in Q&A.",
+      "scenarioId": "Anda tidak tahu jawaban pertanyaan teknis di Q&A.",
       "prompt": "Best response?",
+      "promptId": "Respons terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Invent a confident wrong answer."
+          "text": "Invent a confident wrong answer.",
+          "textId": "Mengarang jawaban salah dengan percaya diri."
         },
         {
           "key": "B",
-          "text": "I do not want to guess on that detail. I will confirm with the owning engineer and send the accurate answer to this group within one business day."
+          "text": "I do not want to guess on that detail. I will confirm with the owning engineer and send the accurate answer to this group within one business day.",
+          "textId": "Saya tidak ingin menebak detail itu. Saya akan konfirmasi dengan engineer pemiliknya dan kirim jawaban akurat ke grup ini dalam satu hari kerja."
         },
         {
           "key": "C",
-          "text": "Say nothing and look at your laptop."
+          "text": "Say nothing and look at your laptop.",
+          "textId": "Tidak bilang apa-apa dan menatap laptop."
         },
         {
           "key": "D",
-          "text": "Change the topic abruptly."
+          "text": "Change the topic abruptly.",
+          "textId": "Ganti topik secara mendadak."
         }
       ],
       "correctKey": "B",
-      "explanation": "Honesty + ownership of follow-up beats bluffing.",
+      "explanation": "Kejujuran + ownership follow-up lebih baik daripada bluffing. Frasa: \"I do not want to guess on that detail\" = jujur; \"I will confirm with… and send… within…\" = komitmen jelas. A berbahaya; C/D menghindari tanggung jawab.",
       "tags": [
         "Q&A",
         "integrity"
@@ -230,27 +267,33 @@
       "moduleId": "presentation-demo",
       "difficulty": "senior",
       "scenario": "Close a roadmap presentation to directors.",
+      "scenarioId": "Menutup presentasi roadmap kepada directors.",
       "prompt": "Strong closing?",
+      "promptId": "Closing yang kuat?",
       "choices": [
         {
           "key": "A",
-          "text": "That is all. Bye."
+          "text": "That is all. Bye.",
+          "textId": "Sekian. Bye."
         },
         {
           "key": "B",
-          "text": "To summarize: three investments, one dependency on platform capacity, and a decision needed on the June canary. I recommend we approve option B today. I will send the one-pager and decision log within an hour."
+          "text": "To summarize: three investments, one dependency on platform capacity, and a decision needed on the June canary. I recommend we approve option B today. I will send the one-pager and decision log within an hour.",
+          "textId": "Untuk merangkum: tiga investasi, satu dependency pada kapasitas platform, dan keputusan dibutuhkan soal canary Juni. Saya rekomendasikan kita approve opsi B hari ini. Saya akan kirim one-pager dan decision log dalam satu jam."
         },
         {
           "key": "C",
-          "text": "Any random thoughts?"
+          "text": "Any random thoughts?",
+          "textId": "Ada pikiran acak?"
         },
         {
           "key": "D",
-          "text": "We will somehow figure it out later."
+          "text": "We will somehow figure it out later.",
+          "textId": "Entah bagaimana kita akan selesaikan nanti."
         }
       ],
       "correctKey": "B",
-      "explanation": "Summary + decision ask + concrete follow-up artifact.",
+      "explanation": "Ringkasan + ask keputusan + artefak follow-up konkret. Frasa: \"to summarize…\" → \"I recommend we… today\" → \"I will send… within…\". A lemah; C membuka chaos; D tidak actionable.",
       "tags": [
         "closing",
         "decision"
@@ -266,27 +309,33 @@
       "moduleId": "presentation-demo",
       "difficulty": "mid",
       "scenario": "A skeptical engineer challenges your latency numbers mid-demo.",
+      "scenarioId": "Engineer skeptis menantang angka latency Anda di tengah demo.",
       "prompt": "Professional handling?",
+      "promptId": "Penanganan profesional?",
       "choices": [
         {
           "key": "A",
-          "text": "You are wrong and loud."
+          "text": "You are wrong and loud.",
+          "textId": "Anda salah dan keras."
         },
         {
           "key": "B",
-          "text": "Appreciate the challenge. These numbers are p95 from last week's production sample — source linked on slide 4. If you have a conflicting dataset, send it after and we will reconcile."
+          "text": "Appreciate the challenge. These numbers are p95 from last week's production sample — source linked on slide 4. If you have a conflicting dataset, send it after and we will reconcile.",
+          "textId": "Apresiasi tantangannya. Angka ini p95 dari sampel production minggu lalu — sumber terlampir di slide 4. Jika Anda punya dataset yang bertentangan, kirim setelah ini dan kita rekonsiliasi."
         },
         {
           "key": "C",
-          "text": "Delete the slide live in panic."
+          "text": "Delete the slide live in panic.",
+          "textId": "Hapus slide live karena panik."
         },
         {
           "key": "D",
-          "text": "Agree the numbers are fake."
+          "text": "Agree the numbers are fake.",
+          "textId": "Setuju bahwa angkanya palsu."
         }
       ],
       "correctKey": "B",
-      "explanation": "Welcome scrutiny, cite source, offer post-meeting reconciliation.",
+      "explanation": "Sambut scrutiny, sebut sumber, tawarkan rekonsiliasi setelah meeting. Frasa: \"appreciate the challenge\" → cite source → \"if you have a conflicting dataset… we will reconcile\". A menyerang; C panik; D menyerah tanpa dasar.",
       "tags": [
         "challenge",
         "data"
@@ -302,27 +351,33 @@
       "moduleId": "presentation-demo",
       "difficulty": "junior",
       "scenario": "You are co-presenting and your partner freezes.",
+      "scenarioId": "Anda co-present dan partner Anda freeze.",
       "prompt": "What do you say?",
+      "promptId": "Apa yang Anda katakan?",
       "choices": [
         {
           "key": "A",
-          "text": "Wow, awkward."
+          "text": "Wow, awkward.",
+          "textId": "Wow, canggung."
         },
         {
           "key": "B",
-          "text": "I can take this section — we are at the rollout plan. After the demo we will cover owners and dates, then open Q&A."
+          "text": "I can take this section — we are at the rollout plan. After the demo we will cover owners and dates, then open Q&A.",
+          "textId": "Saya bisa ambil bagian ini — kita sedang di rencana rollout. Setelah demo kita bahas owner dan tanggal, lalu buka Q&A."
         },
         {
           "key": "C",
-          "text": "Stare at them until they recover."
+          "text": "Stare at them until they recover.",
+          "textId": "Menatap mereka sampai pulih."
         },
         {
           "key": "D",
-          "text": "End the meeting without notice."
+          "text": "End the meeting without notice.",
+          "textId": "Akhiri meeting tanpa pemberitahuan."
         }
       ],
       "correctKey": "B",
-      "explanation": "Smoothly take the baton and restate where you are.",
+      "explanation": "Ambil estafet dengan mulus dan nyatakan ulang di mana Anda berada. Frasa: \"I can take this section — we are at…\" → preview next steps. A mempermalukan; C menambah tekanan; D merusak sesi.",
       "tags": [
         "co-present",
         "recovery"
@@ -338,27 +393,33 @@
       "moduleId": "presentation-demo",
       "difficulty": "mid",
       "scenario": "Hybrid meeting: remote attendees cannot see your shared screen clearly.",
+      "scenarioId": "Meeting hybrid: peserta remote tidak bisa melihat shared screen dengan jelas.",
       "prompt": "What should you do?",
+      "promptId": "Apa yang harus Anda lakukan?",
       "choices": [
         {
           "key": "A",
-          "text": "Ignore remotes; room matters more."
+          "text": "Ignore remotes; room matters more.",
+          "textId": "Abaikan remote; ruangan lebih penting."
         },
         {
           "key": "B",
-          "text": "Remote folks — confirming you can see the dashboard shared window. I will zoom the critical panel and narrate clicks so audio-only participants can follow."
+          "text": "Remote folks — confirming you can see the dashboard shared window. I will zoom the critical panel and narrate clicks so audio-only participants can follow.",
+          "textId": "Teman remote — mengonfirmasi Anda bisa melihat window dashboard yang di-share. Saya akan zoom panel kritis dan narasikan klik agar peserta audio-only bisa mengikuti."
         },
         {
           "key": "C",
-          "text": "Tell remotes to figure it out."
+          "text": "Tell remotes to figure it out.",
+          "textId": "Suruh remote menyelesaikan sendiri."
         },
         {
           "key": "D",
-          "text": "Stop sharing and only talk."
+          "text": "Stop sharing and only talk.",
+          "textId": "Berhenti share dan hanya bicara."
         }
       ],
       "correctKey": "B",
-      "explanation": "Check inclusion, adjust visuals, narrate for audio-only.",
+      "explanation": "Cek inklusi, sesuaikan visual, narasikan untuk audio-only. Frasa: \"confirming you can see…\" → \"I will zoom… and narrate clicks\". A/C mengecualikan remote; D membuang visual tanpa perlu.",
       "tags": [
         "hybrid",
         "inclusion"
@@ -374,27 +435,33 @@
       "moduleId": "presentation-demo",
       "difficulty": "senior",
       "scenario": "Product asks you to 'make it exciting' for a customer webinar.",
+      "scenarioId": "Product meminta Anda 'buat menarik' untuk webinar pelanggan.",
       "prompt": "Professional framing?",
+      "promptId": "Framing profesional?",
       "choices": [
         {
           "key": "A",
-          "text": "Use hype words and hide limitations."
+          "text": "Use hype words and hide limitations.",
+          "textId": "Pakai kata hype dan sembunyikan keterbatasan."
         },
         {
           "key": "B",
-          "text": "We can keep it customer-exciting and accurate: lead with the outcome they care about, show one crisp workflow, and be explicit about current limits and roadmap timing."
+          "text": "We can keep it customer-exciting and accurate: lead with the outcome they care about, show one crisp workflow, and be explicit about current limits and roadmap timing.",
+          "textId": "Kita bisa tetap menarik bagi pelanggan dan akurat: mulai dari outcome yang mereka pedulikan, tunjukkan satu workflow yang tajam, dan eksplisit soal batasan saat ini serta timing roadmap."
         },
         {
           "key": "C",
-          "text": "Refuse to present to customers."
+          "text": "Refuse to present to customers.",
+          "textId": "Menolak presentasi ke pelanggan."
         },
         {
           "key": "D",
-          "text": "Read the internal RFC verbatim."
+          "text": "Read the internal RFC verbatim.",
+          "textId": "Bacakan RFC internal kata demi kata."
         }
       ],
       "correctKey": "B",
-      "explanation": "Excitement without overselling; clarity on limits builds trust.",
+      "explanation": "Excitement tanpa overselling; kejelasan batas membangun trust. Frasa: \"customer-exciting and accurate\" → \"lead with the outcome\" → \"be explicit about current limits\". A menipu; C menolak; D terlalu internal.",
       "tags": [
         "customer",
         "webinar"
@@ -410,27 +477,33 @@
       "moduleId": "presentation-demo",
       "difficulty": "mid",
       "scenario": "You have two minutes left and three slides remaining.",
+      "scenarioId": "Anda punya dua menit tersisa dan tiga slide tersisa.",
       "prompt": "Best move?",
+      "promptId": "Langkah terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Speed-read every bullet incomprehensibly."
+          "text": "Speed-read every bullet incomprehensibly.",
+          "textId": "Baca cepat setiap bullet sampai tidak dipahami."
         },
         {
           "key": "B",
-          "text": "I will skip the deep-dive slides and land on the decision ask and next steps. Deep-dive appendix is in the leave-behind."
+          "text": "I will skip the deep-dive slides and land on the decision ask and next steps. Deep-dive appendix is in the leave-behind.",
+          "textId": "Saya akan skip slide deep-dive dan mendarat di ask keputusan serta next steps. Appendix deep-dive ada di leave-behind."
         },
         {
           "key": "C",
-          "text": "Run overtime without asking."
+          "text": "Run overtime without asking.",
+          "textId": "Overtime tanpa meminta izin."
         },
         {
           "key": "D",
-          "text": "Abruptly stop mid-sentence."
+          "text": "Abruptly stop mid-sentence.",
+          "textId": "Berhenti mendadak di tengah kalimat."
         }
       ],
       "correctKey": "B",
-      "explanation": "Protect the decision moment; park detail in appendix.",
+      "explanation": "Lindungi momen keputusan; park detail di appendix. Frasa: \"I will skip… and land on the decision ask\" → \"appendix is in the leave-behind\". A tidak jelas; C tidak sopan; D menutup tanpa ask.",
       "tags": [
         "timeboxing",
         "closing"

@@ -1,7 +1,8 @@
 {
   "id": "slack-email",
   "title": "Slack & Email",
-  "description": "Clear asks, tone control, and async thread etiquette.",
+  "titleId": "Slack & Email",
+  "description": "Panduan ask yang jelas, kontrol nada, dan etiket thread async di Slack serta email.",
   "persona": [
     "IT Manager",
     "SRE",
@@ -15,27 +16,33 @@
       "moduleId": "slack-email",
       "difficulty": "junior",
       "scenario": "You need a review on a PR that blocks release today.",
+      "scenarioId": "Anda butuh review PR yang memblokir release hari ini.",
       "prompt": "Best Slack message?",
+      "promptId": "Pesan Slack terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Can someone review???"
+          "text": "Can someone review???",
+          "textId": "Bisakah seseorang review???"
         },
         {
           "key": "B",
-          "text": "Hi team — need a review on PR #482 (auth rate limit) by 3pm to keep today's release. ~15 min review. Prefer: Jordan or Mira. Link and test notes in the PR."
+          "text": "Hi team — need a review on PR #482 (auth rate limit) by 3pm to keep today's release. ~15 min review. Prefer: Jordan or Mira. Link and test notes in the PR.",
+          "textId": "Hai tim — butuh review PR #482 (auth rate limit) sebelum jam 3 sore agar release hari ini jalan. Review ~15 menit. Prefer: Jordan atau Mira. Link dan catatan tes ada di PR."
         },
         {
           "key": "C",
-          "text": "Review this when you can someday."
+          "text": "Review this when you can someday.",
+          "textId": "Review ini kapan saja nanti."
         },
         {
           "key": "D",
-          "text": "@channel PLEASE HELP NOW!!!!!!!!"
+          "text": "@channel PLEASE HELP NOW!!!!!!!!",
+          "textId": "@channel TOLONG BANTU SEKARANG!!!!!!!!"
         }
       ],
       "correctKey": "B",
-      "explanation": "Clear ask, deadline, effort estimate, preferred reviewers, link.",
+      "explanation": "Ask yang jelas: deadline, estimasi usaha, reviewer yang diinginkan, dan link. Frasa: \"need a review on X by T to keep Y\" = butuh review X sebelum T agar Y tetap jalan; \"~15 min review\" = estimasi effort; \"prefer: A or B\" = preferensi reviewer. A/C samar; D terlalu keras.",
       "tags": [
         "slack",
         "ask",
@@ -52,27 +59,33 @@
       "moduleId": "slack-email",
       "difficulty": "mid",
       "scenario": "A stakeholder emailed a vague request: 'Can you improve the dashboard?'",
+      "scenarioId": "Stakeholder mengirim email request samar: 'Can you improve the dashboard?'",
       "prompt": "Best clarifying reply?",
+      "promptId": "Balasan klarifikasi terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Sure, I will redesign everything."
+          "text": "Sure, I will redesign everything.",
+          "textId": "Baik, saya akan redesign semuanya."
         },
         {
           "key": "B",
-          "text": "Happy to help. To scope this well: which metrics matter most, who is the primary audience, and is this for this quarter or exploratory? A 15-minute call tomorrow would help me propose options."
+          "text": "Happy to help. To scope this well: which metrics matter most, who is the primary audience, and is this for this quarter or exploratory? A 15-minute call tomorrow would help me propose options.",
+          "textId": "Senang membantu. Agar scopenya tepat: metrik mana yang paling penting, siapa audience utama, dan ini untuk kuartal ini atau eksplorasi? Call 15 menit besok akan membantu saya usulkan opsi."
         },
         {
           "key": "C",
-          "text": "That request is too vague; rejected."
+          "text": "That request is too vague; rejected.",
+          "textId": "Request itu terlalu samar; ditolak."
         },
         {
           "key": "D",
-          "text": "I already started building without asking."
+          "text": "I already started building without asking.",
+          "textId": "Saya sudah mulai membangun tanpa bertanya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Clarify outcome, audience, and timeline before building.",
+      "explanation": "Klarifikasi outcome, audience, dan timeline sebelum membangun. Frasa: \"happy to help\" = nada terbuka; \"to scope this well\" = agar lingkup tepat; \"would help me propose options\" = tawarkan langkah berikutnya. A overcommit; C menolak kasar; D membangun buta.",
       "tags": [
         "email",
         "clarification",
@@ -89,27 +102,33 @@
       "moduleId": "slack-email",
       "difficulty": "mid",
       "scenario": "You must decline a meeting invite that conflicts with an incident review.",
+      "scenarioId": "Anda harus menolak undangan meeting yang bentrok dengan incident review.",
       "prompt": "Professional decline?",
+      "promptId": "Penolakan profesional?",
       "choices": [
         {
           "key": "A",
-          "text": "Busy. No."
+          "text": "Busy. No.",
+          "textId": "Sibuk. Tidak."
         },
         {
           "key": "B",
-          "text": "I cannot make this time due to a scheduled incident review. Please share notes or a recording, and I can async-comment by EOD. Happy to join a follow-up if decisions remain."
+          "text": "I cannot make this time due to a scheduled incident review. Please share notes or a recording, and I can async-comment by EOD. Happy to join a follow-up if decisions remain.",
+          "textId": "Saya tidak bisa hadir di waktu ini karena incident review yang sudah dijadwalkan. Tolong bagikan catatan atau rekaman, dan saya bisa komentar async sebelum EOD. Siap join follow-up jika masih ada keputusan."
         },
         {
           "key": "C",
-          "text": "Ignore the invite."
+          "text": "Ignore the invite.",
+          "textId": "Abaikan undangannya."
         },
         {
           "key": "D",
-          "text": "Accept then do not show up."
+          "text": "Accept then do not show up.",
+          "textId": "Accept lalu tidak datang."
         }
       ],
       "correctKey": "B",
-      "explanation": "Decline with reason, offer async path, stay available for decisions.",
+      "explanation": "Tolak dengan alasan, tawarkan jalur async, tetap tersedia untuk keputusan. Frasa: \"I cannot make this time due to…\" = tidak bisa karena…; \"async-comment by EOD\" = komentar async sebelum akhir hari; \"happy to join a follow-up if…\" = tetap terbuka. A kasar; C/D tidak profesional.",
       "tags": [
         "calendar",
         "decline"
@@ -125,27 +144,33 @@
       "moduleId": "slack-email",
       "difficulty": "senior",
       "scenario": "You need to escalate a delayed dependency without blaming the other team in Slack.",
+      "scenarioId": "Anda perlu mengeskalasi dependency yang tertunda tanpa menyalahkan tim lain di Slack.",
       "prompt": "Best thread message?",
+      "promptId": "Pesan thread terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Payments team is blocking us again as usual."
+          "text": "Payments team is blocking us again as usual.",
+          "textId": "Tim Payments memblokir kami lagi seperti biasa."
         },
         {
           "key": "B",
-          "text": "Status: checkout release is blocked on Payments API contract (ticket PAY-221). Impact: we miss Thursday if unresolved. Ask: can we confirm owner and ETA by noon? Happy to pair for 30 minutes today."
+          "text": "Status: checkout release is blocked on Payments API contract (ticket PAY-221). Impact: we miss Thursday if unresolved. Ask: can we confirm owner and ETA by noon? Happy to pair for 30 minutes today.",
+          "textId": "Status: release checkout terblokir di kontrak Payments API (tiket PAY-221). Dampak: kita miss Kamis jika belum selesai. Ask: bisakah konfirmasi owner dan ETA sebelum siang? Siap pair 30 menit hari ini."
         },
         {
           "key": "C",
-          "text": "CC the CEO immediately."
+          "text": "CC the CEO immediately.",
+          "textId": "CC CEO segera."
         },
         {
           "key": "D",
-          "text": "We will ship without the dependency and hope."
+          "text": "We will ship without the dependency and hope.",
+          "textId": "Kami akan ship tanpa dependency dan berharap."
         }
       ],
       "correctKey": "B",
-      "explanation": "Impact + ask + offer to help beats public blame.",
+      "explanation": "Impact + ask + tawaran bantuan lebih baik daripada menyalahkan publik. Pola: Status → Impact → Ask → Happy to help. Frasa: \"blocked on…\" = terhambat oleh…; \"can we confirm owner and ETA\" = minta kejelasan; \"happy to pair\" = tawarkan bantuan. A menyalahkan; C over-escalate; D berisiko.",
       "tags": [
         "escalation",
         "cross-team",
@@ -162,27 +187,33 @@
       "moduleId": "slack-email",
       "difficulty": "junior",
       "scenario": "You accidentally sent a half-finished message to a large channel.",
+      "scenarioId": "Anda tidak sengaja mengirim pesan setengah jadi ke channel besar.",
       "prompt": "Best recovery?",
+      "promptId": "Pemulihan terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Delete and pretend nothing happened."
+          "text": "Delete and pretend nothing happened.",
+          "textId": "Hapus dan pura-pura tidak terjadi apa-apa."
         },
         {
           "key": "B",
-          "text": "Sorry — sent too early. Please ignore the incomplete note. Full update with owners and ETA coming in five minutes."
+          "text": "Sorry — sent too early. Please ignore the incomplete note. Full update with owners and ETA coming in five minutes.",
+          "textId": "Maaf — terkirim terlalu cepat. Tolong abaikan catatan yang belum lengkap. Update lengkap dengan owner dan ETA datang dalam lima menit."
         },
         {
           "key": "C",
-          "text": "Leave it and never clarify."
+          "text": "Leave it and never clarify.",
+          "textId": "Biarkan saja dan jangan pernah klarifikasi."
         },
         {
           "key": "D",
-          "text": "Blame Slack for auto-send."
+          "text": "Blame Slack for auto-send.",
+          "textId": "Salahkan Slack karena auto-send."
         }
       ],
       "correctKey": "B",
-      "explanation": "Quick acknowledgment + corrected follow-up restores trust.",
+      "explanation": "Acknowledgment cepat + follow-up yang dikoreksi memulihkan kepercayaan. Frasa: \"sent too early\" = terkirim terlalu dini; \"please ignore…\" = minta abaikan; \"full update… coming in…\" = komitmen perbaikan segera. A/C membingungkan; D menghindari tanggung jawab.",
       "tags": [
         "recovery",
         "slack"
@@ -198,27 +229,33 @@
       "moduleId": "slack-email",
       "difficulty": "mid",
       "scenario": "Write a concise status email to your manager after a partial outage.",
+      "scenarioId": "Tulis email status ringkas ke manager setelah partial outage.",
       "prompt": "Which version is best?",
+      "promptId": "Versi mana yang terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Things broke then got better."
+          "text": "Things broke then got better.",
+          "textId": "Ada yang rusak lalu membaik."
         },
         {
           "key": "B",
-          "text": "Subject: Checkout degradation — restored. Impact: 22 minutes, ~8% failed checkouts. Cause: bad feature flag default. Mitigation: flag disabled at 14:12. Follow-ups: canary checks + flag review due Friday. Full timeline in the incident doc."
+          "text": "Subject: Checkout degradation — restored. Impact: 22 minutes, ~8% failed checkouts. Cause: bad feature flag default. Mitigation: flag disabled at 14:12. Follow-ups: canary checks + flag review due Friday. Full timeline in the incident doc.",
+          "textId": "Subjek: Degradasi checkout — sudah pulih. Dampak: 22 menit, ~8% checkout gagal. Penyebab: default feature flag buruk. Mitigasi: flag dinonaktifkan pukul 14:12. Follow-up: canary checks + review flag jatuh tempo Jumat. Timeline lengkap di dokumen insiden."
         },
         {
           "key": "C",
-          "text": "Please see Slack for 200 messages."
+          "text": "Please see Slack for 200 messages.",
+          "textId": "Tolong lihat Slack untuk 200 pesan."
         },
         {
           "key": "D",
-          "text": "Not our fault; vendor issue; no details."
+          "text": "Not our fault; vendor issue; no details.",
+          "textId": "Bukan salah kami; masalah vendor; tanpa detail."
         }
       ],
       "correctKey": "B",
-      "explanation": "Subject + impact + cause + mitigation + dated follow-ups.",
+      "explanation": "Subject + impact + cause + mitigation + follow-up bertanggal. Hafalkan kerangka email status ini. A terlalu samar; C melempar pekerjaan baca; D menghindari detail.",
       "tags": [
         "email",
         "status",
@@ -235,27 +272,33 @@
       "moduleId": "slack-email",
       "difficulty": "senior",
       "scenario": "A heated Slack thread is going off-topic and personal.",
+      "scenarioId": "Thread Slack panas sedang keluar topik dan menjadi personal.",
       "prompt": "How do you reset it?",
+      "promptId": "Bagaimana Anda meresetnya?",
       "choices": [
         {
           "key": "A",
-          "text": "Keep arguing in public."
+          "text": "Keep arguing in public.",
+          "textId": "Terus berdebat di publik."
         },
         {
           "key": "B",
-          "text": "Let's pause the thread. The decision we need is X by tomorrow. I'll schedule a 20-minute call for stakeholders and summarize the options in a doc. Please keep feedback focused on the proposal."
+          "text": "Let's pause the thread. The decision we need is X by tomorrow. I'll schedule a 20-minute call for stakeholders and summarize the options in a doc. Please keep feedback focused on the proposal.",
+          "textId": "Mari pause thread. Keputusan yang kita butuhkan adalah X sebelum besok. Saya akan jadwalkan call 20 menit untuk stakeholder dan rangkum opsi di dokumen. Tolong jaga feedback fokus pada proposal."
         },
         {
           "key": "C",
-          "text": "Lock the channel forever."
+          "text": "Lock the channel forever.",
+          "textId": "Kunci channel selamanya."
         },
         {
           "key": "D",
-          "text": "Mock the loudest person."
+          "text": "Mock the loudest person.",
+          "textId": "Ejek orang yang paling keras."
         }
       ],
       "correctKey": "B",
-      "explanation": "De-escalate, restate the decision, move to a better forum.",
+      "explanation": "De-escalate, nyatakan ulang keputusan, pindah ke forum yang lebih baik. Frasa: \"let's pause the thread\" = hentikan sementara; \"the decision we need is X by…\" = fokus keputusan; \"keep feedback focused on…\" = arahkan diskusi. A memperburuk; C/D tidak konstruktif.",
       "tags": [
         "facilitation",
         "conflict",
@@ -272,27 +315,33 @@
       "moduleId": "slack-email",
       "difficulty": "mid",
       "scenario": "You want feedback on an RFC before Friday.",
+      "scenarioId": "Anda ingin feedback pada RFC sebelum Jumat.",
       "prompt": "Best async ask?",
+      "promptId": "Ask async terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Thoughts?"
+          "text": "Thoughts?",
+          "textId": "Ada pikiran?"
         },
         {
           "key": "B",
-          "text": "RFC: read-replica cutover (doc linked). Ask: please comment on risk section and rollback plan by Thursday 4pm. Silent assent after that means we proceed with the proposed option B."
+          "text": "RFC: read-replica cutover (doc linked). Ask: please comment on risk section and rollback plan by Thursday 4pm. Silent assent after that means we proceed with the proposed option B.",
+          "textId": "RFC: cutover read-replica (dokumen terlampir). Ask: tolong komentari bagian risiko dan rencana rollback sebelum Kamis jam 4 sore. Diam setelah itu berarti kita lanjut dengan opsi B yang diusulkan."
         },
         {
           "key": "C",
-          "text": "Approve immediately without reading."
+          "text": "Approve immediately without reading.",
+          "textId": "Approve segera tanpa membaca."
         },
         {
           "key": "D",
-          "text": "Ping everyone every hour until they reply."
+          "text": "Ping everyone every hour until they reply.",
+          "textId": "Ping semua orang setiap jam sampai mereka balas."
         }
       ],
       "correctKey": "B",
-      "explanation": "Doc link, specific ask, deadline, and default if silent.",
+      "explanation": "Link dokumen, ask spesifik, deadline, dan default jika diam. Frasa: \"please comment on X by T\" = minta komentar spesifik; \"silent assent… means we proceed\" = diam = setuju lanjut. A terlalu terbuka; C buruk; D spam.",
       "tags": [
         "RFC",
         "async",
@@ -309,27 +358,33 @@
       "moduleId": "slack-email",
       "difficulty": "junior",
       "scenario": "Customer success asks in Slack if a bug is 'fixed for sure'.",
+      "scenarioId": "Customer success bertanya di Slack apakah bug 'sudah pasti fixed'.",
       "prompt": "Accurate reply?",
+      "promptId": "Balasan yang akurat?",
       "choices": [
         {
           "key": "A",
-          "text": "Yes 100% forever."
+          "text": "Yes 100% forever.",
+          "textId": "Ya 100% selamanya."
         },
         {
           "key": "B",
-          "text": "Fix is deployed to production and error rate is back to baseline for 45 minutes. We will keep watching through peak traffic today and confirm final status at 6pm."
+          "text": "Fix is deployed to production and error rate is back to baseline for 45 minutes. We will keep watching through peak traffic today and confirm final status at 6pm.",
+          "textId": "Fix sudah di-deploy ke production dan error rate kembali ke baseline selama 45 menit. Kami akan terus pantau melalui peak traffic hari ini dan konfirmasi status final jam 6 sore."
         },
         {
           "key": "C",
-          "text": "Probably fine, do not worry."
+          "text": "Probably fine, do not worry.",
+          "textId": "Mungkin baik, jangan khawatir."
         },
         {
           "key": "D",
-          "text": "Tell customers it never happened."
+          "text": "Tell customers it never happened.",
+          "textId": "Katakan ke pelanggan itu tidak pernah terjadi."
         }
       ],
       "correctKey": "B",
-      "explanation": "State evidence and monitoring window; avoid absolute guarantees.",
+      "explanation": "Nyatakan bukti dan jendela monitoring; hindari jaminan mutlak. Frasa: \"back to baseline for…\" = bukti pemulihan; \"keep watching through…\" = masih dipantau; \"confirm final status at…\" = komitmen update akhir. A overpromise; C samar; D tidak jujur.",
       "tags": [
         "customer",
         "confidence"
@@ -345,27 +400,33 @@
       "moduleId": "slack-email",
       "difficulty": "mid",
       "scenario": "You need to nudge a stalled email thread with an external vendor.",
+      "scenarioId": "Anda perlu mendorong thread email yang macet dengan vendor eksternal.",
       "prompt": "Best follow-up?",
+      "promptId": "Follow-up terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Hello??? Still waiting!!!!"
+          "text": "Hello??? Still waiting!!!!",
+          "textId": "Halo??? Masih menunggu!!!!"
         },
         {
           "key": "B",
-          "text": "Following up on my note from Tuesday about the sandbox credentials. Could you confirm ETA by Friday? Our integration test window is next Monday and we need access two days prior."
+          "text": "Following up on my note from Tuesday about the sandbox credentials. Could you confirm ETA by Friday? Our integration test window is next Monday and we need access two days prior.",
+          "textId": "Menindaklanjuti catatan saya dari Selasa tentang kredensial sandbox. Bisakah konfirmasi ETA sebelum Jumat? Jendela integration test kami Senin depan dan kami butuh akses dua hari sebelumnya."
         },
         {
           "key": "C",
-          "text": "CC their CEO on the first follow-up."
+          "text": "CC their CEO on the first follow-up.",
+          "textId": "CC CEO mereka di follow-up pertama."
         },
         {
           "key": "D",
-          "text": "Threaten to cancel without context."
+          "text": "Threaten to cancel without context.",
+          "textId": "Ancam batalkan tanpa konteks."
         }
       ],
       "correctKey": "B",
-      "explanation": "Reference prior ask, give a deadline, explain business reason.",
+      "explanation": "Rujuk ask sebelumnya, beri deadline, jelaskan alasan bisnis. Frasa: \"following up on my note from…\" = menindaklanjuti; \"could you confirm ETA by…\" = minta ETA; \"we need… prior\" = konteks urgensi. A kasar; C prematur; D ancaman kosong.",
       "tags": [
         "vendor",
         "follow-up",
@@ -382,27 +443,33 @@
       "moduleId": "slack-email",
       "difficulty": "senior",
       "scenario": "Announce a breaking API change to partner engineers.",
+      "scenarioId": "Umumkan breaking API change kepada engineer partner.",
       "prompt": "Clearest message structure?",
+      "promptId": "Struktur pesan paling jelas?",
       "choices": [
         {
           "key": "A",
-          "text": "API changing soon. Good luck."
+          "text": "API changing soon. Good luck.",
+          "textId": "API akan berubah segera. Semoga beruntung."
         },
         {
           "key": "B",
-          "text": "Breaking change on /v2/orders on June 15: field `status` becomes enum. Why: consistency across services. Action: update clients before June 10. Migration guide and examples linked. Questions: reply in this thread or office hours Thursday 3pm."
+          "text": "Breaking change on /v2/orders on June 15: field `status` becomes enum. Why: consistency across services. Action: update clients before June 10. Migration guide and examples linked. Questions: reply in this thread or office hours Thursday 3pm.",
+          "textId": "Breaking change di /v2/orders pada 15 Juni: field `status` menjadi enum. Mengapa: konsistensi antar layanan. Aksi: update client sebelum 10 Juni. Panduan migrasi dan contoh terlampir. Pertanyaan: balas di thread ini atau office hours Kamis jam 3 sore."
         },
         {
           "key": "C",
-          "text": "Read the entire changelog dump with no summary."
+          "text": "Read the entire changelog dump with no summary.",
+          "textId": "Baca seluruh dump changelog tanpa ringkasan."
         },
         {
           "key": "D",
-          "text": "Ship breakages without notice to move faster."
+          "text": "Ship breakages without notice to move faster.",
+          "textId": "Ship breakage tanpa pemberitahuan agar lebih cepat."
         }
       ],
       "correctKey": "B",
-      "explanation": "What/when/why/action/support channel — partner-friendly.",
+      "explanation": "What/when/why/action/support channel — ramah partner. Hafalkan: breaking change on X on DATE → Why → Action by DATE → guide linked → questions channel. A kurang detail; C overload; D merusak trust.",
       "tags": [
         "API",
         "announcement",
@@ -419,27 +486,33 @@
       "moduleId": "slack-email",
       "difficulty": "mid",
       "scenario": "You disagree with a peer's proposal in a public channel.",
+      "scenarioId": "Anda tidak setuju dengan proposal rekan di channel publik.",
       "prompt": "How do you disagree well?",
+      "promptId": "Bagaimana disagree dengan baik?",
       "choices": [
         {
           "key": "A",
-          "text": "This idea is terrible."
+          "text": "This idea is terrible.",
+          "textId": "Ide ini mengerikan."
         },
         {
           "key": "B",
-          "text": "Thanks for drafting this. I see risk in approach A around retry storms. Have we considered approach B with idempotency keys? Happy to sketch a quick comparison table if useful."
+          "text": "Thanks for drafting this. I see risk in approach A around retry storms. Have we considered approach B with idempotency keys? Happy to sketch a quick comparison table if useful.",
+          "textId": "Terima kasih sudah menyusun ini. Saya melihat risiko di pendekatan A soal retry storms. Sudahkah kita pertimbangkan pendekatan B dengan idempotency keys? Siap buat tabel perbandingan cepat jika berguna."
         },
         {
           "key": "C",
-          "text": "Agree publicly then block privately."
+          "text": "Agree publicly then block privately.",
+          "textId": "Setuju di publik lalu blokir secara privat."
         },
         {
           "key": "D",
-          "text": "React with eyes emoji only."
+          "text": "React with eyes emoji only.",
+          "textId": "Hanya bereaksi dengan emoji mata."
         }
       ],
       "correctKey": "B",
-      "explanation": "Appreciate, name the risk, offer an alternative, invite collaboration.",
+      "explanation": "Hargai, sebut risiko, tawarkan alternatif, undang kolaborasi. Frasa: \"thanks for drafting\" → \"I see risk in…\" → \"have we considered…?\" → \"happy to sketch…\". A menyerang; C tidak jujur; D pasif-agresif.",
       "tags": [
         "disagreement",
         "tone",

@@ -1,140 +1,152 @@
 {
-  "version": "1.1.0",
+  "version": "2.0.0",
   "modules": [
     {
       "id": "interview-behavioral",
       "title": "Interview — Behavioral",
-      "description": "STAR answers, ownership, conflict, and leadership stories for tech interviews.",
+      "description": "Latihan menjawab pertanyaan behavioral dengan struktur STAR, ownership, konflik, mentoring, dan cerita kepemimpinan untuk wawancara tech.",
       "persona": [
         "IT Manager",
         "SRE",
         "Fullstack"
       ],
       "status": "ready",
-      "itemCount": 15
+      "itemCount": 15,
+      "titleId": "Wawancara — Behavioral"
     },
     {
       "id": "interview-technical",
       "title": "Interview — Technical",
-      "description": "Tradeoffs, system design phrasing, and clear technical explanations.",
+      "description": "Latihan menjelaskan tradeoff, system design, debugging, caching, dan konsep teknis dengan bahasa yang jelas dan terstruktur untuk wawancara engineering.",
       "persona": [
         "SRE",
         "Fullstack"
       ],
       "status": "ready",
-      "itemCount": 12
+      "itemCount": 12,
+      "titleId": "Wawancara — Teknis"
     },
     {
       "id": "offer-negotiation",
       "title": "Offer & Negotiation",
-      "description": "Salary, start date, benefits, and polite counter-offers.",
+      "description": "Latihan bahasa profesional untuk negosiasi gaji, tanggal mulai, benefit, counter-offer, dan menolak offer dengan tetap menjaga hubungan.",
       "persona": [
         "IT Manager",
         "SRE",
         "Fullstack"
       ],
       "status": "ready",
-      "itemCount": 12
+      "itemCount": 12,
+      "titleId": "Offer & Negosiasi"
     },
     {
       "id": "standup-sync",
       "title": "Standup & Sync",
-      "description": "Blockers, ETA, and asking for help without drama.",
+      "description": "Latihan update standup yang jelas: blocker, ETA, minta bantuan tanpa drama, fasilitasi, dan ringkasan keputusan untuk sync harian.",
       "persona": [
         "SRE",
         "Fullstack"
       ],
       "status": "ready",
-      "itemCount": 12
+      "itemCount": 12,
+      "titleId": "Standup & Sync"
     },
     {
       "id": "incident-oncall",
       "title": "Incident & On-Call",
-      "description": "Severity, mitigation, bridge updates, and calm urgency.",
+      "description": "Panduan berbicara saat severity, mitigasi, update bridge, dan menyampaikan urgensi dengan tenang.",
       "persona": [
         "SRE",
         "IT Manager"
       ],
       "status": "ready",
-      "itemCount": 15
+      "itemCount": 15,
+      "titleId": "Insiden & On-Call"
     },
     {
       "id": "manager-updates",
       "title": "Manager Updates",
-      "description": "Concise status, risk callouts, and decision requests.",
+      "description": "Panduan status ringkas, callout risiko, dan permintaan keputusan ke manager.",
       "persona": [
         "IT Manager",
         "SRE",
         "Fullstack"
       ],
       "status": "ready",
-      "itemCount": 15
+      "itemCount": 15,
+      "titleId": "Update ke Manager"
     },
     {
       "id": "slack-email",
       "title": "Slack & Email",
-      "description": "Clear asks, tone control, and async thread etiquette.",
+      "description": "Panduan ask yang jelas, kontrol nada, dan etiket thread async di Slack serta email.",
       "persona": [
         "IT Manager",
         "SRE",
         "Fullstack"
       ],
       "status": "ready",
-      "itemCount": 12
+      "itemCount": 12,
+      "titleId": "Slack & Email"
     },
     {
       "id": "presentation-demo",
       "title": "Presentation & Demo",
-      "description": "Openings, transitions, and handling Q&A under pressure.",
+      "description": "Panduan opening, transisi, dan menangani Q&A di bawah tekanan saat presentasi serta demo.",
       "persona": [
         "IT Manager",
         "Fullstack"
       ],
       "status": "ready",
-      "itemCount": 12
+      "itemCount": 12,
+      "titleId": "Presentasi & Demo"
     },
     {
       "id": "pr-code-review",
       "title": "PR & Code Review",
-      "description": "Soft/hard feedback and constructive suggestions.",
+      "description": "Memberi feedback soft/hard dan saran konstruktif saat mereview pull request.",
       "persona": [
         "Fullstack",
         "SRE"
       ],
       "status": "ready",
-      "itemCount": 12
+      "itemCount": 12,
+      "titleId": "PR & Code Review"
     },
     {
       "id": "postmortem",
       "title": "Postmortem",
-      "description": "Blameless language and clear action items.",
+      "description": "Bahasa blameless dan action item yang jelas setelah insiden.",
       "persona": [
         "SRE",
         "IT Manager"
       ],
       "status": "ready",
-      "itemCount": 12
+      "itemCount": 12,
+      "titleId": "Postmortem"
     },
     {
       "id": "cross-team",
       "title": "Cross-Team & Vendor",
-      "description": "Alignment, deadlines, and polite pushback.",
+      "description": "Alignment, deadline, dan pushback yang sopan antar tim serta vendor.",
       "persona": [
         "IT Manager",
         "SRE"
       ],
       "status": "ready",
-      "itemCount": 12
+      "itemCount": 12,
+      "titleId": "Lintas Tim & Vendor"
     },
     {
       "id": "one-on-one",
       "title": "1:1 & Mentoring",
-      "description": "Feedback, career talk, and coaching phrases.",
+      "description": "Frasa feedback, pembicaraan karier, dan coaching di sesi 1:1.",
       "persona": [
         "IT Manager"
       ],
       "status": "ready",
-      "itemCount": 12
+      "itemCount": 12,
+      "titleId": "1:1 & Mentoring"
     }
   ]
 }

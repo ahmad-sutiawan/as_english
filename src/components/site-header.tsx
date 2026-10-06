@@ -27,20 +27,20 @@ export async function SiteHeader() {
                   type="submit"
                   className="rounded-md border border-[var(--border)] px-3 py-1.5 text-[var(--ink)] hover:bg-[var(--surface-2)]"
                 >
-                  Sign out
+                  Keluar
                 </button>
               </form>
             </>
           ) : (
             <>
               <Link href="/login" className="hover:text-[var(--ink)]">
-                Log in
+                Masuk
               </Link>
               <Link
                 href="/register"
                 className="rounded-md bg-[var(--accent)] px-3 py-1.5 text-white hover:bg-[var(--accent-hover)]"
               >
-                Register
+                Daftar
               </Link>
             </>
           )}

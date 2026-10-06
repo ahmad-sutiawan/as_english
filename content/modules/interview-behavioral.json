@@ -1,7 +1,8 @@
 {
   "id": "interview-behavioral",
   "title": "Interview — Behavioral",
-  "description": "STAR answers, ownership, conflict, and leadership stories for tech interviews.",
+  "titleId": "Wawancara — Behavioral",
+  "description": "Latihan menjawab pertanyaan behavioral dengan struktur STAR, ownership, konflik, mentoring, dan cerita kepemimpinan untuk wawancara tech.",
   "persona": [
     "IT Manager",
     "SRE",
@@ -15,27 +16,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "mid",
       "scenario": "An interviewer asks: Tell me about a time you handled a production incident under pressure.",
+      "scenarioId": "Pewawancara bertanya: Ceritakan saat Anda menangani insiden produksi di bawah tekanan.",
       "prompt": "Which answer opening best follows STAR structure?",
+      "promptId": "Pembukaan jawaban mana yang paling mengikuti struktur STAR?",
       "choices": [
         {
           "key": "A",
-          "text": "I am generally calm in incidents and people like working with me."
+          "text": "I am generally calm in incidents and people like working with me.",
+          "textId": "Saya biasanya tenang saat insiden dan orang senang bekerja dengan saya."
         },
         {
           "key": "B",
-          "text": "Situation: checkout errors spiked to 20% after a config change. Task: I was incident commander. Action: I froze deploys, assigned investigation owners, and rolled back within 12 minutes. Result: recovered service and cut similar risk with a config review checklist."
+          "text": "Situation: checkout errors spiked to 20% after a config change. Task: I was incident commander. Action: I froze deploys, assigned investigation owners, and rolled back within 12 minutes. Result: recovered service and cut similar risk with a config review checklist.",
+          "textId": "Situation: error checkout melonjak ke 20% setelah perubahan config. Task: saya jadi incident commander. Action: saya bekukan deploy, tunjuk owner investigasi, dan rollback dalam 12 menit. Result: layanan pulih dan risiko serupa dikurangi dengan checklist review config."
         },
         {
           "key": "C",
-          "text": "We had many incidents last year, so I have lots of experience."
+          "text": "We had many incidents last year, so I have lots of experience.",
+          "textId": "Kami punya banyak insiden tahun lalu, jadi saya sangat berpengalaman."
         },
         {
           "key": "D",
-          "text": "My team fixed it while I monitored Slack."
+          "text": "My team fixed it while I monitored Slack.",
+          "textId": "Tim saya yang memperbaiki sementara saya memantau Slack."
         }
       ],
       "correctKey": "B",
-      "explanation": "STAR needs Situation, Task, Action, Result with concrete ownership and outcome.",
+      "explanation": "Jawaban benar memakai kerangka STAR secara lengkap: Situation (apa yang terjadi), Task (peran Anda), Action (langkah konkret yang Anda ambil), Result (hasil terukur). Hafalkan pola: angka + peran + tindakan + dampak. Jawaban A dan C terlalu umum; D tidak menunjukkan ownership. Tip frasa: 'I was incident commander', 'froze deploys', 'rolled back within X minutes'.",
       "tags": [
         "STAR",
         "incident",
@@ -52,27 +59,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "mid",
       "scenario": "You are asked about a conflict with a peer who wanted to ship without tests.",
+      "scenarioId": "Anda ditanya tentang konflik dengan rekan yang ingin merilis tanpa tes.",
       "prompt": "Which response shows mature conflict handling?",
+      "promptId": "Respons mana yang menunjukkan penanganan konflik yang dewasa?",
       "choices": [
         {
           "key": "A",
-          "text": "I told them their standards were low and escalated immediately."
+          "text": "I told them their standards were low and escalated immediately.",
+          "textId": "Saya bilang standar mereka rendah dan langsung eskalasi."
         },
         {
           "key": "B",
-          "text": "I aligned on shared goals first, proposed a minimum test set for the risky path, and we shipped one day later with fewer regressions. Relationship stayed strong because we focused on risk, not ego."
+          "text": "I aligned on shared goals first, proposed a minimum test set for the risky path, and we shipped one day later with fewer regressions. Relationship stayed strong because we focused on risk, not ego.",
+          "textId": "Saya samakan dulu tujuan bersama, usulkan set tes minimum untuk jalur berisiko, lalu kami rilis sehari kemudian dengan lebih sedikit regresi. Relasi tetap baik karena fokus ke risiko, bukan ego."
         },
         {
           "key": "C",
-          "text": "I avoided the conflict and let them ship."
+          "text": "I avoided the conflict and let them ship.",
+          "textId": "Saya hindari konflik dan biarkan mereka rilis."
         },
         {
           "key": "D",
-          "text": "I complained to other teammates privately."
+          "text": "I complained to other teammates privately.",
+          "textId": "Saya mengeluh ke rekan lain secara pribadi."
         }
       ],
       "correctKey": "B",
-      "explanation": "Interviewers look for goal alignment, constructive alternatives, and preserved relationships.",
+      "explanation": "Pewawancara mencari kedewasaan: samakan tujuan dulu, tawarkan alternatif konstruktif, jaga hubungan. Internalisasi: 'align on shared goals' → 'propose a minimum X' → 'shipped with fewer regressions'. Hindari menyerang orang (A), menghindar (C), atau gosip (D). Tip: bilang 'focused on risk, not ego' untuk menunjukkan maturity.",
       "tags": [
         "conflict",
         "collaboration"
@@ -88,27 +101,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "senior",
       "scenario": "The interviewer asks how you influence without authority across teams.",
+      "scenarioId": "Pewawancara bertanya bagaimana Anda memengaruhi tanpa otoritas formal lintas tim.",
       "prompt": "Which answer is strongest?",
+      "promptId": "Jawaban mana yang paling kuat?",
       "choices": [
         {
           "key": "A",
-          "text": "I escalate until people do what I want."
+          "text": "I escalate until people do what I want.",
+          "textId": "Saya eskalasi terus sampai orang melakukan yang saya mau."
         },
         {
           "key": "B",
-          "text": "I build a shared problem statement with data, propose a lightweight RFC, invite affected teams early, and negotiate a sequenced rollout. In one case this cut cross-team delay from three weeks to six days."
+          "text": "I build a shared problem statement with data, propose a lightweight RFC, invite affected teams early, and negotiate a sequenced rollout. In one case this cut cross-team delay from three weeks to six days.",
+          "textId": "Saya bangun pernyataan masalah bersama berbasis data, usulkan RFC ringan, undang tim terdampak sejak awal, dan negosiasikan rollout bertahap. Dalam satu kasus ini memangkas delay lintas tim dari tiga minggu menjadi enam hari."
         },
         {
           "key": "C",
-          "text": "I usually just implement it myself."
+          "text": "I usually just implement it myself.",
+          "textId": "Biasanya saya kerjakan sendiri saja."
         },
         {
           "key": "D",
-          "text": "Influence is not part of engineering work."
+          "text": "Influence is not part of engineering work.",
+          "textId": "Influence bukan bagian dari kerja engineering."
         }
       ],
       "correctKey": "B",
-      "explanation": "Influence stories should show data, inclusive process, and measurable outcome.",
+      "explanation": "Cerita influence yang kuat: data → proses inklusif → hasil terukur. Hafalkan alur: 'shared problem statement with data', 'lightweight RFC', 'invite early', 'sequenced rollout', lalu sebut angka (three weeks → six days). Eskalasi paksa (A) dan solo hero (C) lemah. Tip: selalu tutup dengan metrik dampak.",
       "tags": [
         "influence",
         "cross-team",
@@ -125,27 +144,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "junior",
       "scenario": "They ask about a mistake you made.",
+      "scenarioId": "Mereka bertanya tentang kesalahan yang pernah Anda buat.",
       "prompt": "Which answer demonstrates ownership?",
+      "promptId": "Jawaban mana yang menunjukkan ownership?",
       "choices": [
         {
           "key": "A",
-          "text": "I do not really make mistakes."
+          "text": "I do not really make mistakes.",
+          "textId": "Saya sebenarnya jarang/tidak pernah membuat kesalahan."
         },
         {
           "key": "B",
-          "text": "I once shipped a migration without a rollback plan. It caused a 15-minute read-only window. I owned the incident, restored from backup procedure, and added a mandatory rollback checklist to our release template."
+          "text": "I once shipped a migration without a rollback plan. It caused a 15-minute read-only window. I owned the incident, restored from backup procedure, and added a mandatory rollback checklist to our release template.",
+          "textId": "Suatu kali saya rilis migrasi tanpa rencana rollback. Itu menyebabkan jendela read-only 15 menit. Saya bertanggung jawab atas insiden, pulihkan lewat prosedur backup, dan menambahkan checklist rollback wajib ke template rilis kami."
         },
         {
           "key": "C",
-          "text": "The process was unclear, so it was not really on me."
+          "text": "The process was unclear, so it was not really on me.",
+          "textId": "Prosesnya tidak jelas, jadi sebenarnya bukan tanggung jawab saya."
         },
         {
           "key": "D",
-          "text": "My manager should have caught it."
+          "text": "My manager should have caught it.",
+          "textId": "Manajer saya yang seharusnya menangkapnya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Own the miss, quantify impact, and show a lasting preventive change.",
+      "explanation": "Pola ownership: akui kesalahan → ukur dampak → perbaiki → cegah berulang. Frasa kunci: 'I owned the incident', 'added a mandatory … checklist'. Jangan bilang tidak pernah salah (A) atau lempar tanggung jawab (C/D). Tip grammar: 'It caused a 15-minute …' untuk dampak singkat dan konkret.",
       "tags": [
         "ownership",
         "mistake",
@@ -162,27 +187,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "mid",
       "scenario": "Question: How do you prioritize when everything is urgent?",
+      "scenarioId": "Pertanyaan: Bagaimana Anda memprioritaskan ketika semuanya terasa urgent?",
       "prompt": "Which prioritization answer is most credible?",
+      "promptId": "Jawaban prioritisasi mana yang paling kredibel?",
       "choices": [
         {
           "key": "A",
-          "text": "I just work longer hours until it is done."
+          "text": "I just work longer hours until it is done.",
+          "textId": "Saya tinggal kerja lebih lama sampai selesai."
         },
         {
           "key": "B",
-          "text": "I rank by user impact and reversibility, confirm priorities with the stakeholder, and communicate what will slip. Last quarter this protected a payment deadline while deferring a low-risk UI polish."
+          "text": "I rank by user impact and reversibility, confirm priorities with the stakeholder, and communicate what will slip. Last quarter this protected a payment deadline while deferring a low-risk UI polish.",
+          "textId": "Saya urutkan berdasarkan dampak ke pengguna dan reversibility, konfirmasi prioritas dengan stakeholder, dan komunikasikan apa yang akan mundur. Kuartal lalu ini melindungi deadline payment sambil menunda polesan UI berisiko rendah."
         },
         {
           "key": "C",
-          "text": "I do whichever task arrives first."
+          "text": "I do whichever task arrives first.",
+          "textId": "Saya kerjakan tugas mana pun yang datang lebih dulu."
         },
         {
           "key": "D",
-          "text": "I wait for someone else to decide everything."
+          "text": "I wait for someone else to decide everything.",
+          "textId": "Saya menunggu orang lain memutuskan semuanya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Show a framework, stakeholder alignment, and an example of intentional tradeoffs.",
+      "explanation": "Jawaban kredibel punya kerangka (impact + reversibility), alignment stakeholder, dan contoh tradeoff. Internalisasi: 'rank by…', 'confirm priorities', 'communicate what will slip'. Kerja lembur saja (A) bukan strategi. Tip: selalu sebut apa yang sengaja ditunda agar terdengar decisiveness, bukan sibuk tanpa arah.",
       "tags": [
         "prioritization",
         "stakeholders"
@@ -198,27 +229,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "senior",
       "scenario": "You are interviewing for an IT Manager role. They ask how you give hard feedback.",
+      "scenarioId": "Anda wawancara untuk peran IT Manager. Mereka bertanya bagaimana Anda memberi feedback sulit.",
       "prompt": "Which response is best?",
+      "promptId": "Respons mana yang terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "I send a blunt message in public Slack so the lesson is clear."
+          "text": "I send a blunt message in public Slack so the lesson is clear.",
+          "textId": "Saya kirim pesan kasar di Slack publik agar pelajarannya jelas."
         },
         {
           "key": "B",
-          "text": "I give specific examples privately, describe business impact, agree on a concrete improvement plan, and follow up with support. Feedback is about performance, not personality."
+          "text": "I give specific examples privately, describe business impact, agree on a concrete improvement plan, and follow up with support. Feedback is about performance, not personality.",
+          "textId": "Saya beri contoh spesifik secara privat, jelaskan dampak bisnis, sepakati rencana perbaikan konkret, lalu follow-up dengan dukungan. Feedback tentang performa, bukan kepribadian."
         },
         {
           "key": "C",
-          "text": "I avoid hard feedback to keep morale high."
+          "text": "I avoid hard feedback to keep morale high.",
+          "textId": "Saya hindari feedback sulit agar moral tetap tinggi."
         },
         {
           "key": "D",
-          "text": "I wait until performance review season only."
+          "text": "I wait until performance review season only.",
+          "textId": "Saya tunggu musim performance review saja."
         }
       ],
       "correctKey": "B",
-      "explanation": "Hard feedback should be private, specific, impact-based, and paired with a plan.",
+      "explanation": "Hard feedback yang profesional: privat, spesifik, berbasis dampak, plus rencana. Hafalkan kalimat penutup: 'Feedback is about performance, not personality.' Hindari malu-maluin publik (A) atau menunda tanpa alasan (C/D). Tip frasa: 'agree on a concrete improvement plan' dan 'follow up with support'.",
       "tags": [
         "feedback",
         "management"
@@ -234,27 +271,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "mid",
       "scenario": "They ask about mentoring a junior engineer who was struggling with on-call.",
+      "scenarioId": "Mereka bertanya tentang mentoring engineer junior yang kesulitan dengan on-call.",
       "prompt": "Which mentoring story is strongest?",
+      "promptId": "Cerita mentoring mana yang paling kuat?",
       "choices": [
         {
           "key": "A",
-          "text": "I took all pages myself so they would not fail."
+          "text": "I took all pages myself so they would not fail.",
+          "textId": "Saya ambil semua page sendiri agar mereka tidak gagal."
         },
         {
           "key": "B",
-          "text": "I shadowed two shifts, built a simplified runbook, set practice drills, and reviewed decisions after each page. Within a month they handled SEV-3s independently with clearer updates."
+          "text": "I shadowed two shifts, built a simplified runbook, set practice drills, and reviewed decisions after each page. Within a month they handled SEV-3s independently with clearer updates.",
+          "textId": "Saya shadow dua shift, buat runbook yang disederhanakan, atur latihan drill, dan review keputusan setelah setiap page. Dalam sebulan mereka menangani SEV-3 secara mandiri dengan update yang lebih jelas."
         },
         {
           "key": "C",
-          "text": "I told them to study more documentation."
+          "text": "I told them to study more documentation.",
+          "textId": "Saya suruh mereka belajar dokumentasi lebih banyak."
         },
         {
           "key": "D",
-          "text": "I suggested they transfer teams."
+          "text": "I suggested they transfer teams.",
+          "textId": "Saya sarankan mereka pindah tim."
         }
       ],
       "correctKey": "B",
-      "explanation": "Mentoring answers should show scaffolding, practice, and measurable growth.",
+      "explanation": "Mentoring kuat = scaffolding + latihan + hasil terukur. Alur yang bagus diingat: shadow → runbook → drills → review → growth. Mengambil semua kerja (A) bukan mentoring. Tip: 'Within a month they handled … independently' menunjukkan dampak waktu dan kemandirian.",
       "tags": [
         "mentoring",
         "oncall"
@@ -270,27 +313,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "junior",
       "scenario": "Asked why you want this role.",
+      "scenarioId": "Ditanya mengapa Anda menginginkan peran ini.",
       "prompt": "Which answer is most professional and specific?",
+      "promptId": "Jawaban mana yang paling profesional dan spesifik?",
       "choices": [
         {
           "key": "A",
-          "text": "I need a higher salary and a new visa sponsor."
+          "text": "I need a higher salary and a new visa sponsor.",
+          "textId": "Saya butuh gaji lebih tinggi dan sponsor visa baru."
         },
         {
           "key": "B",
-          "text": "I want to deepen reliability ownership at scale. Your platform's multi-region roadmap matches my experience reducing MTTR and building actionable SLOs, and I am excited to contribute there."
+          "text": "I want to deepen reliability ownership at scale. Your platform's multi-region roadmap matches my experience reducing MTTR and building actionable SLOs, and I am excited to contribute there.",
+          "textId": "Saya ingin memperdalam ownership reliability dalam skala besar. Roadmap multi-region platform Anda cocok dengan pengalaman saya menurunkan MTTR dan membangun SLO yang actionable, dan saya antusias berkontribusi di situ."
         },
         {
           "key": "C",
-          "text": "I am applying everywhere right now."
+          "text": "I am applying everywhere right now.",
+          "textId": "Saya sedang melamar ke mana-mana sekarang."
         },
         {
           "key": "D",
-          "text": "The office is close to my house."
+          "text": "The office is close to my house.",
+          "textId": "Kantornya dekat rumah saya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Motivation answers should connect your strengths to the company's concrete needs.",
+      "explanation": "Motivasi profesional menghubungkan kekuatan Anda dengan kebutuhan konkret perusahaan. Pola: tujuan karier + bukti pengalaman + kecocokan dengan roadmap mereka. Hindari alasan murni pribadi (A/D) atau 'melamar ke mana saja' (C). Tip frasa: 'matches my experience…' dan 'I am excited to contribute there'.",
       "tags": [
         "motivation",
         "role-fit"
@@ -306,27 +355,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "senior",
       "scenario": "They ask about delivering bad news to leadership.",
+      "scenarioId": "Mereka bertanya tentang menyampaikan kabar buruk ke leadership.",
       "prompt": "Which approach is best?",
+      "promptId": "Pendekatan mana yang terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "I delay until I have perfect certainty."
+          "text": "I delay until I have perfect certainty.",
+          "textId": "Saya tunda sampai punya kepastian sempurna."
         },
         {
           "key": "B",
-          "text": "I share early with impact, confidence level, options, and a recommended decision. Example: I flagged a launch risk two weeks out, proposed a scoped delay, and we avoided a customer-facing failure."
+          "text": "I share early with impact, confidence level, options, and a recommended decision. Example: I flagged a launch risk two weeks out, proposed a scoped delay, and we avoided a customer-facing failure.",
+          "textId": "Saya sampaikan lebih awal beserta dampak, tingkat keyakinan, opsi, dan rekomendasi keputusan. Contoh: saya tandai risiko peluncuran dua minggu sebelumnya, usulkan penundaan terbatas, dan kami hindari kegagalan yang terlihat pelanggan."
         },
         {
           "key": "C",
-          "text": "I soften the message until the risk is unclear."
+          "text": "I soften the message until the risk is unclear.",
+          "textId": "Saya pelembut pesan sampai risikonya jadi tidak jelas."
         },
         {
           "key": "D",
-          "text": "I only tell peers and hope it reaches leadership."
+          "text": "I only tell peers and hope it reaches leadership.",
+          "textId": "Saya hanya bilang ke rekan dan berharap sampai ke leadership."
         }
       ],
       "correctKey": "B",
-      "explanation": "Leaders value early signal, options, and a recommendation — not surprise.",
+      "explanation": "Leadership menghargai sinyal dini + opsi + rekomendasi, bukan kejutan. Hafalkan empat elemen: impact, confidence level, options, recommended decision. Menunda (A) atau mengaburkan (C) justru berisiko. Tip: 'I flagged a … risk' + 'proposed a scoped …' terdengar decisive dan actionable.",
       "tags": [
         "leadership",
         "communication",
@@ -343,27 +398,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "mid",
       "scenario": "Closing question: Do you have questions for us?",
+      "scenarioId": "Pertanyaan penutup: Apakah Anda punya pertanyaan untuk kami?",
       "prompt": "Which candidate question is strongest?",
+      "promptId": "Pertanyaan kandidat mana yang paling kuat?",
       "choices": [
         {
           "key": "A",
-          "text": "How many vacation days do I get on day one?"
+          "text": "How many vacation days do I get on day one?",
+          "textId": "Berapa hari cuti yang saya dapat di hari pertama?"
         },
         {
           "key": "B",
-          "text": "What does success look like for this role in the first six months, and what reliability or delivery risks is the team most focused on right now?"
+          "text": "What does success look like for this role in the first six months, and what reliability or delivery risks is the team most focused on right now?",
+          "textId": "Seperti apa kesuksesan peran ini dalam enam bulan pertama, dan risiko reliability atau delivery apa yang paling difokuskan tim saat ini?"
         },
         {
           "key": "C",
-          "text": "No questions; I already know everything."
+          "text": "No questions; I already know everything.",
+          "textId": "Tidak ada pertanyaan; saya sudah tahu semuanya."
         },
         {
           "key": "D",
-          "text": "Can I work fully remote forever no matter what?"
+          "text": "Can I work fully remote forever no matter what?",
+          "textId": "Bisakah saya remote penuh selamanya apa pun yang terjadi?"
         }
       ],
       "correctKey": "B",
-      "explanation": "Strong closing questions show role understanding and business curiosity.",
+      "explanation": "Pertanyaan penutup yang kuat menunjukkan pemahaman peran dan rasa ingin tahu bisnis. Pola baik: 'What does success look like…' + risiko yang sedang dihadapi tim. Hindari fokus benefit terlalu dini (A/D) atau 'tidak ada pertanyaan' (C). Tip: dua bagian pertanyaan terdengar thoughtful tanpa menggurui.",
       "tags": [
         "closing",
         "questions"
@@ -379,27 +440,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "mid",
       "scenario": "Tell me about a time you improved a process, not just a system.",
+      "scenarioId": "Ceritakan saat Anda memperbaiki proses, bukan hanya sistem.",
       "prompt": "Strong STAR-style answer?",
+      "promptId": "Jawaban bergaya STAR yang kuat?",
       "choices": [
         {
           "key": "A",
-          "text": "I like processes."
+          "text": "I like processes.",
+          "textId": "Saya suka proses."
         },
         {
           "key": "B",
-          "text": "Situation: incident updates were inconsistent. Task: I owned a clearer bridge protocol. Action: I introduced a 3-line update template and ran two drills. Result: stakeholder confusion dropped and average first meaningful update fell from 12 minutes to 4."
+          "text": "Situation: incident updates were inconsistent. Task: I owned a clearer bridge protocol. Action: I introduced a 3-line update template and ran two drills. Result: stakeholder confusion dropped and average first meaningful update fell from 12 minutes to 4.",
+          "textId": "Situation: update insiden tidak konsisten. Task: saya miliki protokol bridge yang lebih jelas. Action: saya perkenalkan template update 3 baris dan jalankan dua drill. Result: kebingungan stakeholder turun dan rata-rata update bermakna pertama turun dari 12 menit ke 4."
         },
         {
           "key": "C",
-          "text": "I attended a process workshop once."
+          "text": "I attended a process workshop once.",
+          "textId": "Saya pernah ikut workshop proses sekali."
         },
         {
           "key": "D",
-          "text": "Processes do not matter for engineers."
+          "text": "Processes do not matter for engineers.",
+          "textId": "Proses tidak penting bagi engineer."
         }
       ],
       "correctKey": "B",
-      "explanation": "Process stories still need Situation, Task, Action, Result with metrics.",
+      "explanation": "Cerita proses tetap butuh STAR + metrik. Perhatikan angka 'from 12 minutes to 4' — itu yang membuat Result meyakinkan. Label eksplisit Situation/Task/Action/Result membantu pewawancara mengikuti. Tip: 'I introduced a … template' dan 'ran drills' adalah frasa action yang mudah diingat.",
       "tags": [
         "STAR",
         "process"
@@ -415,27 +482,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "senior",
       "scenario": "Describe a time you had to say no to a senior stakeholder.",
+      "scenarioId": "Ceritakan saat Anda harus menolak permintaan stakeholder senior.",
       "prompt": "Best answer?",
+      "promptId": "Jawaban terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "I never say no to seniors."
+          "text": "I never say no to seniors.",
+          "textId": "Saya tidak pernah bilang tidak ke atasan/senior."
         },
         {
           "key": "B",
-          "text": "A VP wanted to skip canaries for a launch. I explained blast-radius risk, offered a 5% canary with auto-rollback that still hit the date, and got agreement. We caught a latent bug in canary and avoided customer impact."
+          "text": "A VP wanted to skip canaries for a launch. I explained blast-radius risk, offered a 5% canary with auto-rollback that still hit the date, and got agreement. We caught a latent bug in canary and avoided customer impact.",
+          "textId": "Seorang VP ingin melewatkan canary untuk peluncuran. Saya jelaskan risiko blast radius, tawarkan canary 5% dengan auto-rollback yang tetap tepat waktu, dan dapat kesepakatan. Kami menangkap bug laten di canary dan menghindari dampak ke pelanggan."
         },
         {
           "key": "C",
-          "text": "I said no and walked out."
+          "text": "I said no and walked out.",
+          "textId": "Saya bilang tidak lalu keluar."
         },
         {
           "key": "D",
-          "text": "I complained on social media."
+          "text": "I complained on social media.",
+          "textId": "Saya mengeluh di media sosial."
         }
       ],
       "correctKey": "B",
-      "explanation": "Show courage with alternatives and a positive outcome.",
+      "explanation": "Menolak senior dengan cara baik: jelaskan risiko + tawarkan alternatif yang tetap memenuhi tujuan. Pola: 'explained … risk' → 'offered a … that still hit the date' → hasil positif. Jangan jadi yes-man (A) atau konfrontatif (C). Tip: frasa 'blast-radius risk' dan 'auto-rollback' terdengar senior dan teknis.",
       "tags": [
         "pushback",
         "stakeholder"
@@ -451,27 +524,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "junior",
       "scenario": "How do you handle ambiguous requirements?",
+      "scenarioId": "Bagaimana Anda menangani requirement yang ambigu?",
       "prompt": "Best response?",
+      "promptId": "Respons terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "I wait forever for perfect specs."
+          "text": "I wait forever for perfect specs.",
+          "textId": "Saya menunggu selamanya sampai spek sempurna."
         },
         {
           "key": "B",
-          "text": "I write down assumptions, propose a thin slice, confirm with the stakeholder quickly, and iterate. Recently that turned a vague 'make it faster' request into a p95 latency target we could measure."
+          "text": "I write down assumptions, propose a thin slice, confirm with the stakeholder quickly, and iterate. Recently that turned a vague 'make it faster' request into a p95 latency target we could measure.",
+          "textId": "Saya tulis asumsi, usulkan thin slice, cepat konfirmasi dengan stakeholder, lalu iterasi. Baru-baru ini itu mengubah permintaan samar 'make it faster' menjadi target latency p95 yang bisa diukur."
         },
         {
           "key": "C",
-          "text": "I invent a huge project silently."
+          "text": "I invent a huge project silently.",
+          "textId": "Saya ciptakan proyek besar diam-diam."
         },
         {
           "key": "D",
-          "text": "I ignore ambiguity and hope."
+          "text": "I ignore ambiguity and hope.",
+          "textId": "Saya abaikan ambiguitas dan berharap."
         }
       ],
       "correctKey": "B",
-      "explanation": "Ambiguity handling = assumptions, thin slice, confirmation, metrics.",
+      "explanation": "Tangani ambiguitas dengan: asumsi tertulis → thin slice → konfirmasi cepat → metrik. Contoh 'make it faster' → 'p95 latency target' menunjukkan Anda mengubah samar jadi terukur. Tip frasa kerja: 'write down assumptions', 'propose a thin slice', 'confirm quickly'.",
       "tags": [
         "ambiguity",
         "product"
@@ -487,27 +566,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "mid",
       "scenario": "Tell me about mentoring someone through failure.",
+      "scenarioId": "Ceritakan tentang mentoring seseorang melewati kegagalan.",
       "prompt": "Strong answer?",
+      "promptId": "Jawaban yang kuat?",
       "choices": [
         {
           "key": "A",
-          "text": "I told them not to fail."
+          "text": "I told them not to fail.",
+          "textId": "Saya bilang mereka jangan gagal."
         },
         {
           "key": "B",
-          "text": "A junior froze on their first bridge update. I debriefed privately, gave a template, rehearsed, and shadowed the next shift. Within two weeks they delivered clear updates independently."
+          "text": "A junior froze on their first bridge update. I debriefed privately, gave a template, rehearsed, and shadowed the next shift. Within two weeks they delivered clear updates independently.",
+          "textId": "Seorang junior membeku di update bridge pertamanya. Saya debrief secara privat, beri template, latih ulang, dan shadow shift berikutnya. Dalam dua minggu mereka menyampaikan update yang jelas secara mandiri."
         },
         {
           "key": "C",
-          "text": "I took over permanently so they would not learn."
+          "text": "I took over permanently so they would not learn.",
+          "textId": "Saya ambil alih permanen agar mereka tidak belajar."
         },
         {
           "key": "D",
-          "text": "I documented their failure in public Slack."
+          "text": "I documented their failure in public Slack.",
+          "textId": "Saya dokumentasikan kegagalan mereka di Slack publik."
         }
       ],
       "correctKey": "B",
-      "explanation": "Mentoring through failure needs safety, structure, and measured growth.",
+      "explanation": "Mentoring lewat kegagalan butuh rasa aman, struktur, dan pertumbuhan terukur. Alur: debrief privat → template → rehearse → shadow → kemandirian. Jangan malu-maluin (D) atau ambil alih permanen (C). Tip: 'debriefed privately' dan 'within two weeks they … independently' adalah pola jawaban yang kuat.",
       "tags": [
         "mentoring",
         "failure"
@@ -523,27 +608,33 @@
       "moduleId": "interview-behavioral",
       "difficulty": "senior",
       "scenario": "Why are you leaving your current role?",
+      "scenarioId": "Mengapa Anda meninggalkan peran saat ini?",
       "prompt": "Most professional answer?",
+      "promptId": "Jawaban yang paling profesional?",
       "choices": [
         {
           "key": "A",
-          "text": "My manager is terrible and the company is dying."
+          "text": "My manager is terrible and the company is dying.",
+          "textId": "Manajer saya buruk dan perusahaannya sekarat."
         },
         {
           "key": "B",
-          "text": "I am proud of the reliability gains we delivered. I am looking for a larger multi-region scope and closer partnership between platform and product, which this role offers."
+          "text": "I am proud of the reliability gains we delivered. I am looking for a larger multi-region scope and closer partnership between platform and product, which this role offers.",
+          "textId": "Saya bangga dengan peningkatan reliability yang kami capai. Saya mencari cakupan multi-region yang lebih besar dan kemitraan lebih erat antara platform dan product, yang ditawarkan peran ini."
         },
         {
           "key": "C",
-          "text": "I just want more money only."
+          "text": "I just want more money only.",
+          "textId": "Saya hanya ingin uang lebih saja."
         },
         {
           "key": "D",
-          "text": "I got bored of working."
+          "text": "I got bored of working.",
+          "textId": "Saya bosan bekerja."
         }
       ],
       "correctKey": "B",
-      "explanation": "Forward-looking, respectful, tied to the new role's scope.",
+      "explanation": "Jawaban transisi yang profesional: hormati masa lalu, fokus ke depan, kaitkan dengan scope peran baru. Pola: 'proud of …' → 'looking for …' → 'which this role offers'. Hindari membicarakan buruk majikan lama (A) atau alasan dangkal (C/D). Tip: tetap forward-looking dan respectful.",
       "tags": [
         "motivation",
         "transition"

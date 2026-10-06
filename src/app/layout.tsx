@@ -16,8 +16,7 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   title: "AS English — Workplace English Trainer",
-  description:
-    "Practice workplace English for IT managers, SREs, and fullstack engineers. Type-to-answer drills with TTS.",
+    "description": "Stimulator English kerja: panduan Indonesia, soal English + terjemahan tetap, latihan ketik ulang.",
 };
 
 export default function RootLayout({

@@ -1,7 +1,8 @@
 {
   "id": "interview-technical",
   "title": "Interview — Technical",
-  "description": "Tradeoffs, system design phrasing, and clear technical explanations.",
+  "titleId": "Wawancara — Teknis",
+  "description": "Latihan menjelaskan tradeoff, system design, debugging, caching, dan konsep teknis dengan bahasa yang jelas dan terstruktur untuk wawancara engineering.",
   "persona": [
     "SRE",
     "Fullstack"
@@ -14,27 +15,33 @@
       "moduleId": "interview-technical",
       "difficulty": "mid",
       "scenario": "An interviewer asks you to design a URL shortener that must survive sudden traffic spikes.",
+      "scenarioId": "Pewawancara meminta Anda merancang URL shortener yang harus tahan lonjakan traffic mendadak.",
       "prompt": "Which answer best shows structured system-design thinking?",
+      "promptId": "Jawaban mana yang paling menunjukkan pemikiran system design yang terstruktur?",
       "choices": [
         {
           "key": "A",
-          "text": "I would use a database and some servers."
+          "text": "I would use a database and some servers.",
+          "textId": "Saya akan memakai database dan beberapa server."
         },
         {
           "key": "B",
-          "text": "I would start with requirements: write/read ratio, latency target, and uniqueness. Then propose an API, a base62 ID generator, a primary store with caching, and a scale-out plan using partitioning and CDN for redirects."
+          "text": "I would start with requirements: write/read ratio, latency target, and uniqueness. Then propose an API, a base62 ID generator, a primary store with caching, and a scale-out plan using partitioning and CDN for redirects.",
+          "textId": "Saya mulai dari requirement: rasio write/read, target latency, dan uniqueness. Lalu usulkan API, generator ID base62, primary store dengan caching, dan rencana scale-out memakai partitioning serta CDN untuk redirect."
         },
         {
           "key": "C",
-          "text": "I once built something similar at home for fun."
+          "text": "I once built something similar at home for fun.",
+          "textId": "Saya pernah membuat sesuatu yang mirip di rumah untuk hiburan."
         },
         {
           "key": "D",
-          "text": "Kubernetes will solve the scaling automatically."
+          "text": "Kubernetes will solve the scaling automatically.",
+          "textId": "Kubernetes akan menyelesaikan scaling secara otomatis."
         }
       ],
       "correctKey": "B",
-      "explanation": "Strong answers frame requirements first, then components, then scaling — not vague tools.",
+      "explanation": "Jawaban system design yang kuat mengikuti urutan: requirements dulu, lalu komponen, baru scaling — bukan sebut nama tool secara samar. Hafalkan pembuka: 'I would start with requirements…'. A terlalu umum; D terlalu bergantung pada tool. Tip frasa: 'write/read ratio', 'latency target', 'scale-out plan'.",
       "tags": [
         "system-design",
         "scalability"
@@ -50,27 +57,33 @@
       "moduleId": "interview-technical",
       "difficulty": "senior",
       "scenario": "They ask: SQL vs NoSQL for an order history service with complex joins and strong consistency needs.",
+      "scenarioId": "Mereka bertanya: SQL vs NoSQL untuk layanan riwayat pesanan yang butuh join kompleks dan konsistensi kuat.",
       "prompt": "What is the clearest tradeoff statement?",
+      "promptId": "Pernyataan tradeoff mana yang paling jelas?",
       "choices": [
         {
           "key": "A",
-          "text": "NoSQL is always faster so we should use it."
+          "text": "NoSQL is always faster so we should use it.",
+          "textId": "NoSQL selalu lebih cepat jadi kita harus memakainya."
         },
         {
           "key": "B",
-          "text": "Given multi-table joins and strong consistency, a relational store is a better default. NoSQL could help for high write throughput or flexible schemas, but we would pay in query complexity and consistency tradeoffs."
+          "text": "Given multi-table joins and strong consistency, a relational store is a better default. NoSQL could help for high write throughput or flexible schemas, but we would pay in query complexity and consistency tradeoffs.",
+          "textId": "Mengingat join multi-tabel dan strong consistency, store relasional adalah default yang lebih baik. NoSQL bisa membantu untuk throughput write tinggi atau skema fleksibel, tapi kita bayar dengan kompleksitas query dan tradeoff konsistensi."
         },
         {
           "key": "C",
-          "text": "I only use Postgres for everything."
+          "text": "I only use Postgres for everything.",
+          "textId": "Saya hanya memakai Postgres untuk segalanya."
         },
         {
           "key": "D",
-          "text": "It does not matter as long as we use an ORM."
+          "text": "It does not matter as long as we use an ORM.",
+          "textId": "Tidak masalah selama kita memakai ORM."
         }
       ],
       "correctKey": "B",
-      "explanation": "Interviewers want criteria-based tradeoffs tied to consistency and access patterns.",
+      "explanation": "Pewawancara ingin tradeoff berbasis kriteria: consistency dan pola akses, bukan dogma tool. Pola kalimat: 'Given X, Y is a better default. Z could help for…, but we would pay in…'. Hindari absolutisme (A/C). Tip: frasa 'we would pay in … tradeoffs' terdengar mature.",
       "tags": [
         "tradeoffs",
         "database"
@@ -86,27 +99,33 @@
       "moduleId": "interview-technical",
       "difficulty": "mid",
       "scenario": "Explain CAP theorem in practical terms for a payments ledger.",
+      "scenarioId": "Jelaskan teorema CAP secara praktis untuk ledger pembayaran.",
       "prompt": "Which explanation is most interview-ready?",
+      "promptId": "Penjelasan mana yang paling siap untuk wawancara?",
       "choices": [
         {
           "key": "A",
-          "text": "CAP means choose any two letters and move on."
+          "text": "CAP means choose any two letters and move on.",
+          "textId": "CAP artinya pilih dua huruf saja lalu lanjut."
         },
         {
           "key": "B",
-          "text": "In a partition, a payments ledger should favor consistency over availability: better to reject or queue writes than accept conflicting balances. Availability can be recovered with retries and clear user messaging."
+          "text": "In a partition, a payments ledger should favor consistency over availability: better to reject or queue writes than accept conflicting balances. Availability can be recovered with retries and clear user messaging.",
+          "textId": "Saat partition, ledger pembayaran sebaiknya mengutamakan consistency daripada availability: lebih baik tolak atau antre write daripada terima saldo yang bentrok. Availability bisa dipulihkan dengan retry dan pesan yang jelas ke pengguna."
         },
         {
           "key": "C",
-          "text": "We can ignore partitions in the cloud."
+          "text": "We can ignore partitions in the cloud.",
+          "textId": "Kita bisa mengabaikan partition di cloud."
         },
         {
           "key": "D",
-          "text": "Microservices remove CAP concerns."
+          "text": "Microservices remove CAP concerns.",
+          "textId": "Microservices menghilangkan kekhawatiran CAP."
         }
       ],
       "correctKey": "B",
-      "explanation": "Tie CAP to the domain: money systems usually prioritize consistency during partitions.",
+      "explanation": "Jelaskan CAP dengan mengikat ke domain: uang biasanya prioritas consistency saat partition. Internalisasi: 'favor consistency over availability' + alasan ('conflicting balances') + mitigasi UX (retries, messaging). A terlalu hafalan kosong. Tip: hubungkan teori ke dampak bisnis agar terdengar praktis.",
       "tags": [
         "CAP",
         "payments"
@@ -122,27 +141,33 @@
       "moduleId": "interview-technical",
       "difficulty": "junior",
       "scenario": "Walk through debugging a slow API endpoint.",
+      "scenarioId": "Jelaskan langkah debugging endpoint API yang lambat.",
       "prompt": "Which response shows a professional debug process?",
+      "promptId": "Respons mana yang menunjukkan proses debug profesional?",
       "choices": [
         {
           "key": "A",
-          "text": "I would restart the server first every time."
+          "text": "I would restart the server first every time.",
+          "textId": "Saya akan restart server dulu setiap kali."
         },
         {
           "key": "B",
-          "text": "I would reproduce with timing, check metrics and traces, identify whether the bottleneck is CPU, DB, or network, then validate a fix with before/after latency."
+          "text": "I would reproduce with timing, check metrics and traces, identify whether the bottleneck is CPU, DB, or network, then validate a fix with before/after latency.",
+          "textId": "Saya reproduce dengan timing, cek metrics dan traces, identifikasi apakah bottleneck-nya CPU, DB, atau network, lalu validasi perbaikan dengan latency before/after."
         },
         {
           "key": "C",
-          "text": "I would rewrite the endpoint in another language."
+          "text": "I would rewrite the endpoint in another language.",
+          "textId": "Saya akan menulis ulang endpoint dalam bahasa lain."
         },
         {
           "key": "D",
-          "text": "I would ask users to stop using that feature."
+          "text": "I would ask users to stop using that feature.",
+          "textId": "Saya akan minta pengguna berhenti memakai fitur itu."
         }
       ],
       "correctKey": "B",
-      "explanation": "A clear debug narrative: reproduce → observe → localize → fix → verify.",
+      "explanation": "Narasi debug yang rapi: reproduce → observe → localize → fix → verify. Hafalkan urutan kata kerja ini. Restart membabi buta (A) atau rewrite prematur (C) tidak profesional. Tip frasa: 'identify whether the bottleneck is…' dan 'before/after latency'.",
       "tags": [
         "debugging",
         "performance"
@@ -158,27 +183,33 @@
       "moduleId": "interview-technical",
       "difficulty": "senior",
       "scenario": "How would you introduce rate limiting for a public API without breaking legitimate clients?",
+      "scenarioId": "Bagaimana Anda memperkenalkan rate limiting untuk API publik tanpa merusak klien yang sah?",
       "prompt": "Which answer is strongest?",
+      "promptId": "Jawaban mana yang paling kuat?",
       "choices": [
         {
           "key": "A",
-          "text": "Block everyone who exceeds one request per second."
+          "text": "Block everyone who exceeds one request per second.",
+          "textId": "Blokir semua yang melebihi satu request per detik."
         },
         {
           "key": "B",
-          "text": "I would define per-client quotas, return standard 429 with Retry-After, start in shadow mode to measure impact, then enforce gradually with burst tokens for good actors and clear docs for clients."
+          "text": "I would define per-client quotas, return standard 429 with Retry-After, start in shadow mode to measure impact, then enforce gradually with burst tokens for good actors and clear docs for clients.",
+          "textId": "Saya definisikan kuota per klien, kembalikan 429 standar dengan Retry-After, mulai di shadow mode untuk mengukur dampak, lalu enforce secara bertahap dengan burst token untuk aktor baik serta dokumentasi jelas untuk klien."
         },
         {
           "key": "C",
-          "text": "Just put Cloudflare in front and hope."
+          "text": "Just put Cloudflare in front and hope.",
+          "textId": "Cukup pasang Cloudflare di depan dan berharap."
         },
         {
           "key": "D",
-          "text": "Rate limiting is only for DDoS, not product APIs."
+          "text": "Rate limiting is only for DDoS, not product APIs.",
+          "textId": "Rate limiting hanya untuk DDoS, bukan API produk."
         }
       ],
       "correctKey": "B",
-      "explanation": "Show gradual rollout, client-friendly errors, and measurement before hard enforcement.",
+      "explanation": "Jawaban senior menekankan rollout bertahap, error yang ramah klien, dan pengukuran sebelum hard enforce. Elemen kunci: quotas, 429 + Retry-After, shadow mode, burst tokens, docs. Tip: 'start in shadow mode… then enforce gradually' adalah pola yang sering diapresiasi interviewer.",
       "tags": [
         "rate-limiting",
         "API"
@@ -194,27 +225,33 @@
       "moduleId": "interview-technical",
       "difficulty": "mid",
       "scenario": "How do you decide between synchronous and asynchronous processing for invoice generation?",
+      "scenarioId": "Bagaimana Anda memutuskan antara pemrosesan sinkron dan asinkron untuk pembuatan invoice?",
       "prompt": "What should you say?",
+      "promptId": "Apa yang sebaiknya Anda katakan?",
       "choices": [
         {
           "key": "A",
-          "text": "Always async because it is modern."
+          "text": "Always async because it is modern.",
+          "textId": "Selalu async karena itu modern."
         },
         {
           "key": "B",
-          "text": "If the user needs the invoice immediately to continue, keep a synchronous path with a tight SLA. If generation can take longer, accept the request, enqueue work, and notify when ready — with idempotency keys to avoid duplicates."
+          "text": "If the user needs the invoice immediately to continue, keep a synchronous path with a tight SLA. If generation can take longer, accept the request, enqueue work, and notify when ready — with idempotency keys to avoid duplicates.",
+          "textId": "Jika pengguna butuh invoice segera untuk lanjut, tetap pakai jalur sinkron dengan SLA ketat. Jika generasi bisa lebih lama, terima request, antre pekerjaan, dan beri tahu saat siap — dengan idempotency key agar tidak dobel."
         },
         {
           "key": "C",
-          "text": "Use cron every night only."
+          "text": "Use cron every night only.",
+          "textId": "Pakai cron setiap malam saja."
         },
         {
           "key": "D",
-          "text": "Let the frontend generate PDFs."
+          "text": "Let the frontend generate PDFs.",
+          "textId": "Biarkan frontend menghasilkan PDF."
         }
       ],
       "correctKey": "B",
-      "explanation": "Map sync/async to user latency needs and reliability concerns like idempotency.",
+      "explanation": "Petakan sync/async ke kebutuhan latency pengguna + kekhawatiran reliability (idempotency). Pola If/If sangat jelas untuk wawancara. Jangan pilih async hanya karena 'modern' (A). Tip frasa: 'accept the request, enqueue work, and notify when ready' plus 'idempotency keys'.",
       "tags": [
         "async",
         "reliability"
@@ -230,27 +267,33 @@
       "moduleId": "interview-technical",
       "difficulty": "senior",
       "scenario": "Explain observability for a microservice fleet.",
+      "scenarioId": "Jelaskan observability untuk armada microservice.",
       "prompt": "Which answer is most complete?",
+      "promptId": "Jawaban mana yang paling lengkap?",
       "choices": [
         {
           "key": "A",
-          "text": "We log everything to text files on each box."
+          "text": "We log everything to text files on each box.",
+          "textId": "Kami log semuanya ke file teks di setiap mesin."
         },
         {
           "key": "B",
-          "text": "I want structured logs, metrics for SLIs, and distributed traces tied by request IDs — plus alerting on symptoms users feel, not only host CPU. Dashboards should answer what broke, where, and how bad."
+          "text": "I want structured logs, metrics for SLIs, and distributed traces tied by request IDs — plus alerting on symptoms users feel, not only host CPU. Dashboards should answer what broke, where, and how bad.",
+          "textId": "Saya ingin structured logs, metrics untuk SLI, dan distributed traces yang diikat request ID — plus alerting pada gejala yang dirasakan pengguna, bukan hanya CPU host. Dashboard harus menjawab apa yang rusak, di mana, dan seberapa parah."
         },
         {
           "key": "C",
-          "text": "APM tools replace the need for design."
+          "text": "APM tools replace the need for design.",
+          "textId": "Tool APM menggantikan kebutuhan desain."
         },
         {
           "key": "D",
-          "text": "If on-call is awake, observability is enough."
+          "text": "If on-call is awake, observability is enough.",
+          "textId": "Kalau on-call terjaga, observability sudah cukup."
         }
       ],
       "correctKey": "B",
-      "explanation": "Logs + metrics + traces, user-centric SLIs, and actionable alerts.",
+      "explanation": "Observability lengkap = logs + metrics + traces, SLI berorientasi pengguna, dan alert yang actionable. Hafalkan tiga pilar plus pertanyaan dashboard: what / where / how bad. Tip: 'alerting on symptoms users feel, not only host CPU' menunjukkan pemikiran mature.",
       "tags": [
         "observability",
         "SLI"
@@ -266,27 +309,33 @@
       "moduleId": "interview-technical",
       "difficulty": "mid",
       "scenario": "Explain caching for a product catalog that updates a few times per hour.",
+      "scenarioId": "Jelaskan caching untuk katalog produk yang berubah beberapa kali per jam.",
       "prompt": "Which statement is best?",
+      "promptId": "Pernyataan mana yang terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Cache forever to maximize hit rate."
+          "text": "Cache forever to maximize hit rate.",
+          "textId": "Cache selamanya untuk memaksimalkan hit rate."
         },
         {
           "key": "B",
-          "text": "I would cache reads with a short TTL aligned to update frequency, use cache-aside, and invalidate on publish events. I would also define stale-while-revalidate behavior so brief staleness does not become wrong pricing."
+          "text": "I would cache reads with a short TTL aligned to update frequency, use cache-aside, and invalidate on publish events. I would also define stale-while-revalidate behavior so brief staleness does not become wrong pricing.",
+          "textId": "Saya cache read dengan TTL pendek yang selaras frekuensi update, pakai cache-aside, dan invalidate saat event publish. Saya juga definisikan perilaku stale-while-revalidate agar staleness singkat tidak jadi harga yang salah."
         },
         {
           "key": "C",
-          "text": "Never cache; databases are fast enough."
+          "text": "Never cache; databases are fast enough.",
+          "textId": "Jangan pernah cache; database sudah cukup cepat."
         },
         {
           "key": "D",
-          "text": "Put the entire database in Redis."
+          "text": "Put the entire database in Redis.",
+          "textId": "Masukkan seluruh database ke Redis."
         }
       ],
       "correctKey": "B",
-      "explanation": "Good caching answers include TTL, invalidation, and correctness boundaries.",
+      "explanation": "Jawaban caching yang baik mencakup TTL, invalidation, dan batas correctness. Kaitkan TTL ke frekuensi update. Sebut 'cache-aside' dan 'stale-while-revalidate' untuk terdengar spesifik. Tip: selalu sebut risiko bisnis (wrong pricing) agar tradeoff terasa nyata.",
       "tags": [
         "caching",
         "correctness"
@@ -302,27 +351,33 @@
       "moduleId": "interview-technical",
       "difficulty": "junior",
       "scenario": "What is idempotency and why does it matter in APIs?",
+      "scenarioId": "Apa itu idempotency dan mengapa penting di API?",
       "prompt": "Which definition is clearest?",
+      "promptId": "Definisi mana yang paling jelas?",
       "choices": [
         {
           "key": "A",
-          "text": "It means the API is very fast."
+          "text": "It means the API is very fast.",
+          "textId": "Artinya API sangat cepat."
         },
         {
           "key": "B",
-          "text": "Idempotency means repeating the same request does not create duplicate side effects. It matters for payments and retries so network failures do not double-charge or double-create resources."
+          "text": "Idempotency means repeating the same request does not create duplicate side effects. It matters for payments and retries so network failures do not double-charge or double-create resources.",
+          "textId": "Idempotency berarti mengulang request yang sama tidak menciptakan efek samping duplikat. Ini penting untuk pembayaran dan retry agar kegagalan jaringan tidak menagih dua kali atau membuat resource dobel."
         },
         {
           "key": "C",
-          "text": "It means we use HTTPS."
+          "text": "It means we use HTTPS.",
+          "textId": "Artinya kita memakai HTTPS."
         },
         {
           "key": "D",
-          "text": "It is another word for authentication."
+          "text": "It is another word for authentication.",
+          "textId": "Ini sinonim authentication."
         }
       ],
       "correctKey": "B",
-      "explanation": "Simple definition plus why retries make it essential.",
+      "explanation": "Definisi sederhana + alasan pentingnya (retries). Hafalkan: 'repeating the same request does not create duplicate side effects' lalu contoh payments. Tip: sebut 'double-charge' / 'double-create' agar dampaknya konkret dan mudah diingat.",
       "tags": [
         "idempotency",
         "API"
@@ -338,27 +393,33 @@
       "moduleId": "interview-technical",
       "difficulty": "senior",
       "scenario": "How would you migrate a monolith to services without a big-bang rewrite?",
+      "scenarioId": "Bagaimana Anda migrasi monolith ke services tanpa rewrite big-bang?",
       "prompt": "Which approach sounds most senior?",
+      "promptId": "Pendekatan mana yang terdengar paling senior?",
       "choices": [
         {
           "key": "A",
-          "text": "Freeze all features and rewrite for six months."
+          "text": "Freeze all features and rewrite for six months.",
+          "textId": "Bekukan semua fitur dan rewrite selama enam bulan."
         },
         {
           "key": "B",
-          "text": "I would extract high-churn bounded contexts first behind stable APIs, use the strangler pattern, keep a shared data ownership plan, and measure latency and error budgets during each cutover."
+          "text": "I would extract high-churn bounded contexts first behind stable APIs, use the strangler pattern, keep a shared data ownership plan, and measure latency and error budgets during each cutover.",
+          "textId": "Saya ekstrak bounded context yang high-churn lebih dulu di balik API stabil, pakai strangler pattern, jaga rencana kepemilikan data bersama, dan ukur latency serta error budget di setiap cutover."
         },
         {
           "key": "C",
-          "text": "Copy the codebase into many repos on day one."
+          "text": "Copy the codebase into many repos on day one.",
+          "textId": "Salin codebase ke banyak repo di hari pertama."
         },
         {
           "key": "D",
-          "text": "Microservices first, product later."
+          "text": "Microservices first, product later.",
+          "textId": "Microservices dulu, produk belakangan."
         }
       ],
       "correctKey": "B",
-      "explanation": "Strangler pattern, bounded contexts, and risk-managed cutovers beat big-bang rewrites.",
+      "explanation": "Pendekatan senior: strangler pattern, bounded contexts, cutover yang dikelola risikonya — bukan rewrite besar. Hafalkan urutan: extract → stable APIs → measure during cutover. Tip istilah: 'high-churn bounded contexts', 'error budgets', 'strangler pattern'.",
       "tags": [
         "migration",
         "architecture"
@@ -374,27 +435,33 @@
       "moduleId": "interview-technical",
       "difficulty": "mid",
       "scenario": "Walk me through securing secrets in a CI/CD pipeline.",
+      "scenarioId": "Jelaskan cara mengamankan secrets di pipeline CI/CD.",
       "prompt": "Best answer?",
+      "promptId": "Jawaban terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Commit .env files but do not push them."
+          "text": "Commit .env files but do not push them.",
+          "textId": "Commit file .env tapi jangan push."
         },
         {
           "key": "B",
-          "text": "Store secrets in a vault or CI secret store, inject at runtime, rotate regularly, scope least privilege per pipeline, and never print secrets in logs. Pull requests should not expose production credentials."
+          "text": "Store secrets in a vault or CI secret store, inject at runtime, rotate regularly, scope least privilege per pipeline, and never print secrets in logs. Pull requests should not expose production credentials.",
+          "textId": "Simpan secrets di vault atau CI secret store, inject saat runtime, rotasi berkala, scope least privilege per pipeline, dan jangan pernah mencetak secrets di log. Pull request tidak boleh mengekspos kredensial produksi."
         },
         {
           "key": "C",
-          "text": "Email secrets to the team when needed."
+          "text": "Email secrets to the team when needed.",
+          "textId": "Email secrets ke tim saat dibutuhkan."
         },
         {
           "key": "D",
-          "text": "Hardcode secrets in the Dockerfile for convenience."
+          "text": "Hardcode secrets in the Dockerfile for convenience.",
+          "textId": "Hardcode secrets di Dockerfile demi kenyamanan."
         }
       ],
       "correctKey": "B",
-      "explanation": "Vault/CI secrets, least privilege, rotation, and no secret leakage.",
+      "explanation": "Checklist keamanan secrets: vault/CI store, inject runtime, rotation, least privilege, no leakage di log/PR. Hafalkan daftar kata kerja itu sebagai kerangka jawaban. A/C/D adalah anti-pattern yang jelas. Tip: sebut 'least privilege per pipeline' untuk terdengar spesifik.",
       "tags": [
         "security",
         "CI/CD"
@@ -410,27 +477,33 @@
       "moduleId": "interview-technical",
       "difficulty": "senior",
       "scenario": "How do you reason about SLOs for a checkout API?",
+      "scenarioId": "Bagaimana Anda menalar SLO untuk API checkout?",
       "prompt": "Which answer is strongest?",
+      "promptId": "Jawaban mana yang paling kuat?",
       "choices": [
         {
           "key": "A",
-          "text": "Aim for 100% uptime always."
+          "text": "Aim for 100% uptime always.",
+          "textId": "Targetkan uptime 100% selalu."
         },
         {
           "key": "B",
-          "text": "I would define an availability SLO on successful checkout completion, set an error budget, and use burn-rate alerts. Product and eng would agree what latency percentile matters for conversion, then prioritize reliability work when budget burns fast."
+          "text": "I would define an availability SLO on successful checkout completion, set an error budget, and use burn-rate alerts. Product and eng would agree what latency percentile matters for conversion, then prioritize reliability work when budget burns fast.",
+          "textId": "Saya definisikan SLO availability pada keberhasilan checkout, tetapkan error budget, dan pakai burn-rate alerts. Product dan eng sepakati percentile latency yang penting untuk konversi, lalu prioritaskan kerja reliability saat budget terbakar cepat."
         },
         {
           "key": "C",
-          "text": "SLOs are only for executives and not engineers."
+          "text": "SLOs are only for executives and not engineers.",
+          "textId": "SLO hanya untuk eksekutif, bukan engineer."
         },
         {
           "key": "D",
-          "text": "If monitoring is green, the SLO is fine."
+          "text": "If monitoring is green, the SLO is fine.",
+          "textId": "Kalau monitoring hijau, SLO sudah baik."
         }
       ],
       "correctKey": "B",
-      "explanation": "SLOs need user outcomes, error budgets, and shared prioritization language.",
+      "explanation": "SLO yang baik terikat outcome pengguna, punya error budget, dan jadi bahasa prioritas bersama. Hindari '100% always' (A). Hafalkan: SLO on user outcome → error budget → burn-rate alerts → shared prioritization. Tip: 'successful checkout completion' lebih kuat daripada uptime server semata.",
       "tags": [
         "SLO",
         "error-budget"

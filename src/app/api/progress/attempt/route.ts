@@ -30,6 +30,8 @@ export async function POST(request: Request) {
   }
 
   const expected = getCorrectAnswerText(item);
+  const expectedId =
+    item.choices.find((c) => c.key === item.correctKey)?.textId ?? "";
   const result = scoreAnswer(typedAnswer, expected);
 
   await prisma.attempt.create({
@@ -109,6 +111,7 @@ export async function POST(request: Request) {
     exact: result.exact,
     nearMiss: result.nearMiss,
     expected,
+    expectedId,
     explanation: item.explanation,
     correctKey: item.correctKey,
   });

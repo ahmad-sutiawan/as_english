@@ -1,7 +1,8 @@
 {
   "id": "offer-negotiation",
   "title": "Offer & Negotiation",
-  "description": "Salary, start date, benefits, and polite counter-offers.",
+  "titleId": "Offer & Negosiasi",
+  "description": "Latihan bahasa profesional untuk negosiasi gaji, tanggal mulai, benefit, counter-offer, dan menolak offer dengan tetap menjaga hubungan.",
   "persona": [
     "IT Manager",
     "SRE",
@@ -15,27 +16,33 @@
       "moduleId": "offer-negotiation",
       "difficulty": "mid",
       "scenario": "You received a written offer. Base salary is 10% below your target. You still want the role.",
+      "scenarioId": "Anda menerima offer tertulis. Gaji pokok 10% di bawah target Anda. Anda tetap menginginkan peran ini.",
       "prompt": "Which counter is most professional?",
+      "promptId": "Counter mana yang paling profesional?",
       "choices": [
         {
           "key": "A",
-          "text": "This offer is insulting. Fix it."
+          "text": "This offer is insulting. Fix it.",
+          "textId": "Offer ini menghina. Perbaiki."
         },
         {
           "key": "B",
-          "text": "Thank you for the offer. I am excited about the role. Based on market data and my scope in reliability ownership, I am targeting X base. Is there flexibility to move closer to that number?"
+          "text": "Thank you for the offer. I am excited about the role. Based on market data and my scope in reliability ownership, I am targeting X base. Is there flexibility to move closer to that number?",
+          "textId": "Terima kasih atas offer-nya. Saya antusias dengan peran ini. Berdasarkan data pasar dan cakupan ownership reliability saya, target saya base X. Apakah ada fleksibilitas untuk mendekati angka itu?"
         },
         {
           "key": "C",
-          "text": "I will only accept if you match my dream number today."
+          "text": "I will only accept if you match my dream number today.",
+          "textId": "Saya hanya menerima jika Anda cocokkan angka impian saya hari ini."
         },
         {
           "key": "D",
-          "text": "Ignore the offer email for a week to create pressure."
+          "text": "Ignore the offer email for a week to create pressure.",
+          "textId": "Abaikan email offer seminggu untuk menciptakan tekanan."
         }
       ],
       "correctKey": "B",
-      "explanation": "Gratitude + enthusiasm + data-backed ask + collaborative question.",
+      "explanation": "Counter profesional: rasa terima kasih + antusiasme + permintaan berbasis data + pertanyaan kolaboratif. Hafalkan pola empat bagian itu. Hindari nada marah (A) atau ultimatum (C). Tip frasa: 'Is there flexibility to move closer to that number?' terdengar tegas tapi sopan.",
       "tags": [
         "salary",
         "counter"
@@ -51,27 +58,33 @@
       "moduleId": "offer-negotiation",
       "difficulty": "junior",
       "scenario": "Recruiter asks for your current salary before sharing a range.",
+      "scenarioId": "Recruiter meminta gaji Anda saat ini sebelum membagikan range.",
       "prompt": "What is a strong reply?",
+      "promptId": "Apa balasan yang kuat?",
       "choices": [
         {
           "key": "A",
-          "text": "I make very little, so anything is fine."
+          "text": "I make very little, so anything is fine.",
+          "textId": "Gaji saya sangat kecil, jadi apa saja boleh."
         },
         {
           "key": "B",
-          "text": "I prefer to focus on the range for this role and the market. What budget range has been approved for this position?"
+          "text": "I prefer to focus on the range for this role and the market. What budget range has been approved for this position?",
+          "textId": "Saya lebih suka fokus pada range untuk peran ini dan pasar. Range budget apa yang sudah disetujui untuk posisi ini?"
         },
         {
           "key": "C",
-          "text": "I refuse to talk numbers ever."
+          "text": "I refuse to talk numbers ever.",
+          "textId": "Saya menolak membicarakan angka selamanya."
         },
         {
           "key": "D",
-          "text": "Tell me the max and I will take it."
+          "text": "Tell me the max and I will take it.",
+          "textId": "Kasih tahu maksimalnya, nanti saya ambil."
         }
       ],
       "correctKey": "B",
-      "explanation": "Redirect to role budget without oversharing or sounding hostile.",
+      "explanation": "Alihkan ke budget peran tanpa oversharing atau terdengar kasar. Frasa kunci: 'I prefer to focus on the range for this role…' lalu tanya balik. Jangan merendahkan nilai Anda (A) atau menolak total (C). Tip: pertanyaan 'What budget range has been approved…' terdengar profesional.",
       "tags": [
         "compensation",
         "range"
@@ -87,27 +100,33 @@
       "moduleId": "offer-negotiation",
       "difficulty": "mid",
       "scenario": "The company cannot raise base much but offers a signing bonus and earlier equity refresh.",
+      "scenarioId": "Perusahaan tidak bisa menaikkan base banyak, tapi menawarkan signing bonus dan equity refresh lebih awal.",
       "prompt": "How do you respond thoughtfully?",
+      "promptId": "Bagaimana Anda merespons dengan bijak?",
       "choices": [
         {
           "key": "A",
-          "text": "Base is all that matters; reject everything else."
+          "text": "Base is all that matters; reject everything else.",
+          "textId": "Yang penting hanya base; tolak yang lain."
         },
         {
           "key": "B",
-          "text": "I appreciate the creative package. Could we confirm the signing bonus amount, vesting timing, and whether a six-month salary review is possible? I want the total package to reflect the scope."
+          "text": "I appreciate the creative package. Could we confirm the signing bonus amount, vesting timing, and whether a six-month salary review is possible? I want the total package to reflect the scope.",
+          "textId": "Saya menghargai paket yang kreatif. Bisakah kita konfirmasi jumlah signing bonus, waktu vesting, dan apakah review gaji enam bulan memungkinkan? Saya ingin total package mencerminkan cakupan peran."
         },
         {
           "key": "C",
-          "text": "Fine, whatever."
+          "text": "Fine, whatever.",
+          "textId": "Baiklah, terserah."
         },
         {
           "key": "D",
-          "text": "I need unlimited equity forever."
+          "text": "I need unlimited equity forever.",
+          "textId": "Saya butuh equity tanpa batas selamanya."
         }
       ],
       "correctKey": "B",
-      "explanation": "Evaluate total comp components and ask clarifying structure questions.",
+      "explanation": "Evaluasi total compensation dan tanya struktur dengan jelas. Apresiasi dulu ('creative package'), lalu klarifikasi komponen. Tip: sebut amount, vesting timing, dan salary review sebagai checklist pertanyaan. Hindari menolak semua non-base begitu saja (A).",
       "tags": [
         "total-comp",
         "equity"
@@ -123,27 +142,33 @@
       "moduleId": "offer-negotiation",
       "difficulty": "senior",
       "scenario": "You are negotiating an IT Manager offer and want clarity on team size and budget authority.",
+      "scenarioId": "Anda menego offer IT Manager dan ingin kejelasan ukuran tim serta otoritas budget.",
       "prompt": "Which ask belongs in negotiation?",
+      "promptId": "Permintaan mana yang pantas dalam negosiasi?",
       "choices": [
         {
           "key": "A",
-          "text": "Can I fire anyone in week one?"
+          "text": "Can I fire anyone in week one?",
+          "textId": "Bolehkah saya memecat siapa saja di minggu pertama?"
         },
         {
           "key": "B",
-          "text": "Before I accept, I would like written clarity on team size, hiring plan for the next two quarters, and decision rights for tooling budget. That helps me commit to the outcomes we discussed."
+          "text": "Before I accept, I would like written clarity on team size, hiring plan for the next two quarters, and decision rights for tooling budget. That helps me commit to the outcomes we discussed.",
+          "textId": "Sebelum menerima, saya ingin kejelasan tertulis tentang ukuran tim, rencana hiring dua kuartal ke depan, dan hak keputusan untuk budget tooling. Itu membantu saya berkomitmen pada outcome yang kita diskusikan."
         },
         {
           "key": "C",
-          "text": "Titles do not matter; skip the details."
+          "text": "Titles do not matter; skip the details.",
+          "textId": "Title tidak penting; lewati detailnya."
         },
         {
           "key": "D",
-          "text": "I will figure out authority after I join."
+          "text": "I will figure out authority after I join.",
+          "textId": "Saya akan cari tahu otoritas setelah bergabung."
         }
       ],
       "correctKey": "B",
-      "explanation": "Senior negotiation includes scope and authority, not only money.",
+      "explanation": "Negosiasi senior mencakup scope dan authority, bukan hanya uang. Minta kejelasan tertulis: team size, hiring plan, decision rights. Tutup dengan alasan outcome-oriented. Tip frasa: 'Before I accept, I would like written clarity on…'.",
       "tags": [
         "scope",
         "management"
@@ -159,27 +184,33 @@
       "moduleId": "offer-negotiation",
       "difficulty": "junior",
       "scenario": "They ask if you can start in one week. You need three weeks to hand over your current job.",
+      "scenarioId": "Mereka bertanya apakah Anda bisa mulai dalam satu minggu. Anda butuh tiga minggu untuk handover pekerjaan saat ini.",
       "prompt": "Best reply?",
+      "promptId": "Balasan terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "Sure, I will ghost my current employer."
+          "text": "Sure, I will ghost my current employer.",
+          "textId": "Baik, saya akan ghost majikan saya sekarang."
         },
         {
           "key": "B",
-          "text": "I can start on [date in three weeks]. I want to complete a clean handover at my current company. If helpful, I can do limited onboarding reading before day one."
+          "text": "I can start on [date in three weeks]. I want to complete a clean handover at my current company. If helpful, I can do limited onboarding reading before day one.",
+          "textId": "Saya bisa mulai pada [tanggal dalam tiga minggu]. Saya ingin menyelesaikan handover yang rapi di perusahaan saat ini. Jika membantu, saya bisa baca materi onboarding terbatas sebelum hari pertama."
         },
         {
           "key": "C",
-          "text": "I might start someday."
+          "text": "I might start someday.",
+          "textId": "Mungkin saya mulai suatu hari nanti."
         },
         {
           "key": "D",
-          "text": "Take it or leave it: two months from now only."
+          "text": "Take it or leave it: two months from now only.",
+          "textId": "Ambil atau tinggalkan: hanya dua bulan dari sekarang."
         }
       ],
       "correctKey": "B",
-      "explanation": "Protect professionalism with a firm date and optional light prep.",
+      "explanation": "Jaga profesionalisme: sebut tanggal pasti + alasan handover + tawaran prep ringan. Pola ini tegas tanpa kasar. Tip: 'clean handover' dan 'limited onboarding reading before day one' menunjukkan goodwill.",
       "tags": [
         "start-date",
         "handover"
@@ -195,27 +226,33 @@
       "moduleId": "offer-negotiation",
       "difficulty": "mid",
       "scenario": "Two offers are open. Company A is your preference but slower on paperwork.",
+      "scenarioId": "Ada dua offer. Perusahaan A preferensi Anda tapi lebih lambat di paperwork.",
       "prompt": "How do you buy time politely with Company B?",
+      "promptId": "Bagaimana Anda meminta waktu dengan sopan ke Perusahaan B?",
       "choices": [
         {
           "key": "A",
-          "text": "Lie and say you are sick."
+          "text": "Lie and say you are sick.",
+          "textId": "Bohong bilang sakit."
         },
         {
           "key": "B",
-          "text": "I am very interested and want to give this decision proper attention. Could I confirm by Friday? I will keep you updated if anything changes sooner."
+          "text": "I am very interested and want to give this decision proper attention. Could I confirm by Friday? I will keep you updated if anything changes sooner.",
+          "textId": "Saya sangat tertarik dan ingin memberi keputusan ini perhatian yang layak. Bisakah saya konfirmasi pada hari Jumat? Saya akan update jika ada perubahan lebih cepat."
         },
         {
           "key": "C",
-          "text": "Tell them you already signed elsewhere."
+          "text": "Tell them you already signed elsewhere.",
+          "textId": "Bilang sudah menandatangani di tempat lain."
         },
         {
           "key": "D",
-          "text": "Stop answering emails."
+          "text": "Stop answering emails.",
+          "textId": "Berhenti membalas email."
         }
       ],
       "correctKey": "B",
-      "explanation": "Ask for a concrete extension without burning goodwill.",
+      "explanation": "Minta perpanjangan dengan tenggat konkret tanpa merusak goodwill. Pola: interest + alasan + tanggal pasti + janji update. Jangan berbohong (A/C) atau ghosting (D). Tip: 'Could I confirm by Friday?' singkat dan actionable.",
       "tags": [
         "timeline",
         "multiple-offers"
@@ -231,27 +268,33 @@
       "moduleId": "offer-negotiation",
       "difficulty": "senior",
       "scenario": "Remote policy is unclear in the offer letter.",
+      "scenarioId": "Kebijakan remote tidak jelas di surat offer.",
       "prompt": "What should you clarify in writing?",
+      "promptId": "Apa yang perlu Anda klarifikasi secara tertulis?",
       "choices": [
         {
           "key": "A",
-          "text": "I assume remote forever with no questions."
+          "text": "I assume remote forever with no questions.",
+          "textId": "Saya asumsikan remote selamanya tanpa pertanyaan."
         },
         {
           "key": "B",
-          "text": "Could we add the remote/hybrid expectation to the offer: work location, core collaboration hours, and travel frequency for onsite planning? I want alignment before signing."
+          "text": "Could we add the remote/hybrid expectation to the offer: work location, core collaboration hours, and travel frequency for onsite planning? I want alignment before signing.",
+          "textId": "Bisakah kita menambahkan ekspektasi remote/hybrid ke offer: lokasi kerja, jam kolaborasi inti, dan frekuensi travel untuk perencanaan onsite? Saya ingin alignment sebelum menandatangani."
         },
         {
           "key": "C",
-          "text": "Policies always change, so skip it."
+          "text": "Policies always change, so skip it.",
+          "textId": "Kebijakan selalu berubah, jadi lewati saja."
         },
         {
           "key": "D",
-          "text": "Only ask after your first performance review."
+          "text": "Only ask after your first performance review.",
+          "textId": "Tanya saja setelah performance review pertama."
         }
       ],
       "correctKey": "B",
-      "explanation": "Put location and travel expectations in writing before you accept.",
+      "explanation": "Cantumkan ekspektasi lokasi dan travel secara tertulis sebelum menerima. Checklist: location, core hours, travel frequency. Tip penutup: 'I want alignment before signing' menegaskan urgensi tanpa agresif.",
       "tags": [
         "remote",
         "expectations"
@@ -267,27 +310,33 @@
       "moduleId": "offer-negotiation",
       "difficulty": "mid",
       "scenario": "HR says benefits are standard and not negotiable. You care about learning budget.",
+      "scenarioId": "HR bilang benefit standar dan tidak bisa dinegosiasi. Anda peduli pada learning budget.",
       "prompt": "How do you ask?",
+      "promptId": "Bagaimana Anda meminta?",
       "choices": [
         {
           "key": "A",
-          "text": "Standard is unacceptable."
+          "text": "Standard is unacceptable.",
+          "textId": "Yang standar tidak bisa diterima."
         },
         {
           "key": "B",
-          "text": "Understood on core benefits. Is there flexibility for an annual learning budget or conference stipend? Professional development is important for the SRE craft I will bring to the team."
+          "text": "Understood on core benefits. Is there flexibility for an annual learning budget or conference stipend? Professional development is important for the SRE craft I will bring to the team.",
+          "textId": "Mengerti soal core benefits. Apakah ada fleksibilitas untuk learning budget tahunan atau stipend konferensi? Pengembangan profesional penting untuk craft SRE yang akan saya bawa ke tim."
         },
         {
           "key": "C",
-          "text": "Forget benefits; only cash."
+          "text": "Forget benefits; only cash.",
+          "textId": "Lupakan benefit; hanya uang tunai."
         },
         {
           "key": "D",
-          "text": "Demand a company car."
+          "text": "Demand a company car.",
+          "textId": "Tuntut mobil perusahaan."
         }
       ],
       "correctKey": "B",
-      "explanation": "Accept constraints, then ask for adjacent levers tied to role value.",
+      "explanation": "Terima batasan, lalu tanya tuas di samping yang terkait nilai peran. Pola: 'Understood on…' → 'Is there flexibility for…' → kaitkan ke nilai yang Anda bawa. Tip: 'learning budget or conference stipend' spesifik dan masuk akal.",
       "tags": [
         "benefits",
         "learning"
@@ -303,27 +352,33 @@
       "moduleId": "offer-negotiation",
       "difficulty": "junior",
       "scenario": "You want to accept verbally but wait for the written offer.",
+      "scenarioId": "Anda ingin menerima secara verbal tapi menunggu offer tertulis.",
       "prompt": "Best phrasing?",
+      "promptId": "Phrasing terbaik?",
       "choices": [
         {
           "key": "A",
-          "text": "I accept; no need for paperwork."
+          "text": "I accept; no need for paperwork.",
+          "textId": "Saya terima; tidak perlu paperwork."
         },
         {
           "key": "B",
-          "text": "I am prepared to accept contingent on receiving the written offer that reflects what we discussed on base, start date, and title. Please send it over and I will sign promptly."
+          "text": "I am prepared to accept contingent on receiving the written offer that reflects what we discussed on base, start date, and title. Please send it over and I will sign promptly.",
+          "textId": "Saya siap menerima dengan syarat menerima offer tertulis yang mencerminkan yang kita diskusikan soal base, tanggal mulai, dan title. Tolong kirimkan, dan saya akan segera menandatangani."
         },
         {
           "key": "C",
-          "text": "Maybe I accept."
+          "text": "Maybe I accept.",
+          "textId": "Mungkin saya terima."
         },
         {
           "key": "D",
-          "text": "Send me something eventually."
+          "text": "Send me something eventually.",
+          "textId": "Kirimkan sesuatu kapan-kapan."
         }
       ],
       "correctKey": "B",
-      "explanation": "Show intent while anchoring on written terms.",
+      "explanation": "Tunjukkan niat menerima sambil mengunci syarat tertulis. Frasa penting: 'contingent on receiving the written offer' + sebut item yang harus cocok (base, start date, title). Tip: 'I will sign promptly' menjaga momentum positif.",
       "tags": [
         "accept",
         "written-offer"
@@ -339,27 +394,33 @@
       "moduleId": "offer-negotiation",
       "difficulty": "senior",
       "scenario": "The offer includes a non-compete that seems broad for your region.",
+      "scenarioId": "Offer mencakup non-compete yang terasa terlalu luas untuk wilayah Anda.",
       "prompt": "Professional next step?",
+      "promptId": "Langkah berikutnya yang profesional?",
       "choices": [
         {
           "key": "A",
-          "text": "Sign quietly and ignore it."
+          "text": "Sign quietly and ignore it.",
+          "textId": "Tandatangani diam-diam dan abaikan."
         },
         {
           "key": "B",
-          "text": "I am excited to move forward. Before signing, I would like to review the non-compete scope and duration with counsel and discuss a narrower version that still protects the company’s interests."
+          "text": "I am excited to move forward. Before signing, I would like to review the non-compete scope and duration with counsel and discuss a narrower version that still protects the company’s interests.",
+          "textId": "Saya antusias untuk lanjut. Sebelum menandatangani, saya ingin meninjau cakupan dan durasi non-compete dengan penasihat hukum dan mendiskusikan versi yang lebih sempit yang tetap melindungi kepentingan perusahaan."
         },
         {
           "key": "C",
-          "text": "Refuse all legal documents."
+          "text": "Refuse all legal documents.",
+          "textId": "Tolak semua dokumen hukum."
         },
         {
           "key": "D",
-          "text": "Post the contract on social media for advice."
+          "text": "Post the contract on social media for advice.",
+          "textId": "Posting kontrak di media sosial untuk minta saran."
         }
       ],
       "correctKey": "B",
-      "explanation": "Stay collaborative while protecting yourself through review and scoped edits.",
+      "explanation": "Tetap kolaboratif sambil melindungi diri lewat review hukum dan usulan yang lebih sempit. Pola: excited → before signing → review with counsel → narrower version that still protects company. Tip: sebut 'scope and duration' agar permintaan konkret.",
       "tags": [
         "legal",
         "non-compete"
@@ -375,27 +436,33 @@
       "moduleId": "offer-negotiation",
       "difficulty": "mid",
       "scenario": "Recruiter asks why you are countering.",
+      "scenarioId": "Recruiter bertanya mengapa Anda melakukan counter.",
       "prompt": "Strong rationale?",
+      "promptId": "Rasional yang kuat?",
       "choices": [
         {
           "key": "A",
-          "text": "Because I can."
+          "text": "Because I can.",
+          "textId": "Karena saya bisa."
         },
         {
           "key": "B",
-          "text": "Because the scope includes on-call leadership and cross-team delivery ownership. The counter aligns compensation with that responsibility and current market ranges for similar roles."
+          "text": "Because the scope includes on-call leadership and cross-team delivery ownership. The counter aligns compensation with that responsibility and current market ranges for similar roles.",
+          "textId": "Karena cakupannya mencakup kepemimpinan on-call dan ownership delivery lintas tim. Counter ini menyelaraskan kompensasi dengan tanggung jawab tersebut dan range pasar untuk peran serupa."
         },
         {
           "key": "C",
-          "text": "Your first number was a test."
+          "text": "Your first number was a test.",
+          "textId": "Angka pertama Anda hanya tes."
         },
         {
           "key": "D",
-          "text": "My friend got more at another company, end of story."
+          "text": "My friend got more at another company, end of story.",
+          "textId": "Teman saya dapat lebih di perusahaan lain, selesai."
         }
       ],
       "correctKey": "B",
-      "explanation": "Tie the counter to scope and market, not ego.",
+      "explanation": "Kaitkan counter ke scope dan pasar, bukan ego. Struktur: tanggung jawab peran → alignment kompensasi → market ranges. Tip frasa: 'aligns compensation with that responsibility'. Hindari alasan kosong (A) atau perbandingan teman saja (D).",
       "tags": [
         "rationale",
         "market"
@@ -411,27 +478,33 @@
       "moduleId": "offer-negotiation",
       "difficulty": "mid",
       "scenario": "You decide to decline an offer after negotiating.",
+      "scenarioId": "Anda memutuskan menolak offer setelah bernegosiasi.",
       "prompt": "Which decline preserves the relationship?",
+      "promptId": "Penolakan mana yang menjaga hubungan?",
       "choices": [
         {
           "key": "A",
-          "text": "Your offer was a joke."
+          "text": "Your offer was a joke.",
+          "textId": "Offer Anda lelucon."
         },
         {
           "key": "B",
-          "text": "Thank you for the offer and the thoughtful process. After careful consideration I will not be moving forward. I have a lot of respect for the team and hope our paths cross again."
+          "text": "Thank you for the offer and the thoughtful process. After careful consideration I will not be moving forward. I have a lot of respect for the team and hope our paths cross again.",
+          "textId": "Terima kasih atas offer dan proses yang thoughtful. Setelah pertimbangan matang, saya tidak akan lanjut. Saya sangat menghormati tim dan berharap jalan kami bertemu lagi."
         },
         {
           "key": "C",
-          "text": "No reply needed."
+          "text": "No reply needed.",
+          "textId": "Tidak perlu balasan."
         },
         {
           "key": "D",
-          "text": "Accept then resign in week one."
+          "text": "Accept then resign in week one.",
+          "textId": "Terima lalu resign di minggu pertama."
         }
       ],
       "correctKey": "B",
-      "explanation": "Decline with gratitude and leave the door open.",
+      "explanation": "Tolak dengan rasa terima kasih dan biarkan pintu terbuka. Pola: thank you → careful consideration → not moving forward → respect + hope paths cross again. Jangan kasar (A) atau ghost (C). Tip: 'hope our paths cross again' menjaga jaringan jangka panjang.",
       "tags": [
         "decline",
         "relationship"
