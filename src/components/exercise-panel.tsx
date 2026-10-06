@@ -12,6 +12,8 @@ type Props = {
   moduleTitle: string;
   moduleTitleId: string;
   nextItemId: string | null;
+  /** Optional full next URL (preserves ?level= / ?from=) */
+  nextHref?: string | null;
 };
 
 type Feedback = {
@@ -34,6 +36,7 @@ export function ExercisePanel({
   moduleTitle,
   moduleTitleId,
   nextItemId,
+  nextHref,
 }: Props) {
   const router = useRouter();
   const [typed, setTyped] = useState("");
@@ -284,7 +287,9 @@ export function ExercisePanel({
               <button
                 type="button"
                 onClick={() =>
-                  router.push(`/learn/${item.moduleId}/${nextItemId}`)
+                  router.push(
+                    nextHref ?? `/learn/${item.moduleId}/${nextItemId}`,
+                  )
                 }
                 className="rounded-md bg-[var(--accent)] px-3 py-1.5 text-sm font-medium text-[#06221e] hover:bg-[var(--accent-hover)]"
               >

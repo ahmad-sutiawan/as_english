@@ -33,6 +33,8 @@ export type ExerciseItem = {
   };
 };
 
+export type DifficultyMix = Record<Difficulty, number>;
+
 export type ModuleMeta = {
   id: string;
   /** Short English module label */
@@ -44,6 +46,10 @@ export type ModuleMeta = {
   persona: string[];
   status: "ready" | "stub";
   itemCount: number;
+  /** Dominant difficulty derived from items (optional in JSON; computed at runtime) */
+  level?: Difficulty;
+  /** Count of items per difficulty (computed at runtime) */
+  levelMix?: DifficultyMix;
 };
 
 export type ModuleContent = ModuleMeta & {
@@ -53,4 +59,16 @@ export type ModuleContent = ModuleMeta & {
 export type ContentManifest = {
   version: string;
   modules: ModuleMeta[];
+};
+
+export const DIFFICULTY_ORDER: Record<Difficulty, number> = {
+  junior: 1,
+  mid: 2,
+  senior: 3,
+};
+
+export const DIFFICULTY_LABEL_ID: Record<Difficulty, string> = {
+  junior: "Pemula",
+  mid: "Menengah",
+  senior: "Senior",
 };
