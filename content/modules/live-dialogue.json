@@ -1,0 +1,757 @@
+{
+  "id": "live-dialogue",
+  "title": "Live Dialogue",
+  "titleId": "Percakapan Berantai",
+  "description": "Latihan percakapan kerja 2–4 giliran: dengarkan lawan bicara, pilih & ketik respons English-mu, lalu speak-back. Lebih dekat ke fluent meeting.",
+  "persona": [
+    "IT Manager",
+    "SRE",
+    "Fullstack"
+  ],
+  "status": "ready",
+  "itemCount": 6,
+  "items": [
+    {
+      "id": "dlg-01",
+      "moduleId": "live-dialogue",
+      "kind": "dialogue",
+      "difficulty": "mid",
+      "scenario": "Incident bridge. Checkout 5xx is rising. You are primary on-call; your manager joins late and asks for a crisp update.",
+      "scenarioId": "Bridge insiden. Checkout 5xx naik. Kamu primary on-call; manajer masuk belakangan dan minta update yang ringkas.",
+      "prompt": "Complete the bridge conversation — your turns.",
+      "promptId": "Lengkapi percakapan di bridge — giliranmu.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Something is broken. Looking into it.",
+          "textId": "Ada yang rusak. Sedang dicek."
+        },
+        {
+          "key": "B",
+          "text": "Checkout 5xx is about 18% and rising. I'm investigating and will share a mitigation plan in five minutes.",
+          "textId": "Checkout 5xx sekitar 18% dan naik. Saya sedang investigasi dan akan bagikan rencana mitigasi dalam lima menit."
+        },
+        {
+          "key": "C",
+          "text": "Probably yesterday's deploy, but I'm not sure.",
+          "textId": "Mungkin deploy kemarin, tapi saya tidak yakin."
+        },
+        {
+          "key": "D",
+          "text": "Can someone else take this? I just got paged.",
+          "textId": "Bisa orang lain yang handle? Saya baru di-page."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Di percakapan bridge, tiap giliranmu harus: dampak + metrik + aksi + ETA update. Hindari spekulasi tanpa owner. Latih speak-back agar lidah terbiasa.",
+      "tags": [
+        "incident",
+        "bridge",
+        "dialogue"
+      ],
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "them",
+          "roleLabel": "Manager",
+          "roleLabelId": "Manajer",
+          "text": "I just joined. What's the customer impact right now?",
+          "textId": "Saya baru gabung. Dampak ke customer sekarang apa?"
+        },
+        {
+          "id": "t2",
+          "speaker": "you",
+          "roleLabel": "You (on-call)",
+          "roleLabelId": "Kamu (on-call)",
+          "text": "Checkout 5xx is about 18% and rising. I'm investigating and will share a mitigation plan in five minutes.",
+          "textId": "Checkout 5xx sekitar 18% dan naik. Saya sedang investigasi dan akan bagikan rencana mitigasi dalam lima menit.",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "Something is broken. Looking into it.",
+              "textId": "Ada yang rusak. Sedang dicek."
+            },
+            {
+              "key": "B",
+              "text": "Checkout 5xx is about 18% and rising. I'm investigating and will share a mitigation plan in five minutes.",
+              "textId": "Checkout 5xx sekitar 18% dan naik. Saya sedang investigasi dan akan bagikan rencana mitigasi dalam lima menit."
+            },
+            {
+              "key": "C",
+              "text": "Probably yesterday's deploy, but I'm not sure.",
+              "textId": "Mungkin deploy kemarin, tapi saya tidak yakin."
+            },
+            {
+              "key": "D",
+              "text": "Can someone else take this? I just got paged.",
+              "textId": "Bisa orang lain yang handle? Saya baru di-page."
+            }
+          ]
+        },
+        {
+          "id": "t3",
+          "speaker": "them",
+          "roleLabel": "Manager",
+          "roleLabelId": "Manajer",
+          "text": "Do we need a customer status update yet?",
+          "textId": "Apakah kita sudah perlu update status ke customer?"
+        },
+        {
+          "id": "t4",
+          "speaker": "you",
+          "roleLabel": "You (on-call)",
+          "roleLabelId": "Kamu (on-call)",
+          "text": "Not a full public post yet. I'll draft customer-safe language once we start mitigating, with a 15-minute update window.",
+          "textId": "Belum perlu post publik penuh. Saya akan susun bahasa yang aman untuk customer begitu mitigasi mulai, dengan jendela update 15 menit.",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "Tell customers a junior broke payments.",
+              "textId": "Katakan ke customer bahwa junior merusak pembayaran."
+            },
+            {
+              "key": "B",
+              "text": "Not a full public post yet. I'll draft customer-safe language once we start mitigating, with a 15-minute update window.",
+              "textId": "Belum perlu post publik penuh. Saya akan susun bahasa yang aman untuk customer begitu mitigasi mulai, dengan jendela update 15 menit."
+            },
+            {
+              "key": "C",
+              "text": "Everything is fine; ignore any errors.",
+              "textId": "Semuanya baik-baik saja; abaikan error apa pun."
+            },
+            {
+              "key": "D",
+              "text": "We have no idea and cannot estimate recovery.",
+              "textId": "Kami tidak tahu dan tidak bisa estimasi recovery."
+            }
+          ]
+        }
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "dlg-02",
+      "moduleId": "live-dialogue",
+      "kind": "dialogue",
+      "difficulty": "mid",
+      "scenario": "Weekly 1:1 with your manager. You need to flag a deadline slip caused by a dependency team.",
+      "scenarioId": "1:1 mingguan dengan manajer. Kamu perlu flag slip deadline karena dependency tim lain.",
+      "prompt": "Handle the 1:1 update conversation.",
+      "promptId": "Tangani percakapan update di 1:1.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It is not my fault.",
+          "textId": "Ini bukan salah saya."
+        },
+        {
+          "key": "B",
+          "text": "We will miss Thursday because Payments API slipped to Monday. New ETA is next Wednesday. I have a workaround spike in progress and will confirm feasibility by tomorrow noon.",
+          "textId": "Kita akan miss Kamis karena Payments API mundur ke Senin. ETA baru Rabu depan. Saya sedang kerjakan spike workaround dan konfirmasi kelayakan besok siang."
+        },
+        {
+          "key": "C",
+          "text": "Maybe we can still make it somehow.",
+          "textId": "Mungkin kita masih bisa mengejar entah bagaimana."
+        },
+        {
+          "key": "D",
+          "text": "I did not want to bother you with this.",
+          "textId": "Saya tidak ingin mengganggu Anda dengan ini."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Bad news early: sebab + ETA baru + mitigasi. Jangan blame theater. Di giliran kedua, minta keputusan prioritas dengan tradeoff jelas.",
+      "tags": [
+        "1:1",
+        "deadline",
+        "dialogue"
+      ],
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "them",
+          "roleLabel": "Manager",
+          "roleLabelId": "Manajer",
+          "text": "Are we still on track for Thursday?",
+          "textId": "Apakah kita masih on track untuk Kamis?"
+        },
+        {
+          "id": "t2",
+          "speaker": "you",
+          "roleLabel": "You",
+          "roleLabelId": "Kamu",
+          "text": "We will miss Thursday because Payments API slipped to Monday. New ETA is next Wednesday. I have a workaround spike in progress and will confirm feasibility by tomorrow noon.",
+          "textId": "Kita akan miss Kamis karena Payments API mundur ke Senin. ETA baru Rabu depan. Saya sedang kerjakan spike workaround dan konfirmasi kelayakan besok siang.",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "It is not my fault.",
+              "textId": "Ini bukan salah saya."
+            },
+            {
+              "key": "B",
+              "text": "We will miss Thursday because Payments API slipped to Monday. New ETA is next Wednesday. I have a workaround spike in progress and will confirm feasibility by tomorrow noon.",
+              "textId": "Kita akan miss Kamis karena Payments API mundur ke Senin. ETA baru Rabu depan. Saya sedang kerjakan spike workaround dan konfirmasi kelayakan besok siang."
+            },
+            {
+              "key": "C",
+              "text": "Maybe we can still make it somehow.",
+              "textId": "Mungkin kita masih bisa mengejar entah bagaimana."
+            },
+            {
+              "key": "D",
+              "text": "I did not want to bother you with this.",
+              "textId": "Saya tidak ingin mengganggu Anda dengan ini."
+            }
+          ]
+        },
+        {
+          "id": "t3",
+          "speaker": "them",
+          "roleLabel": "Manager",
+          "roleLabelId": "Manajer",
+          "text": "What do you need from me?",
+          "textId": "Apa yang kamu butuhkan dari saya?"
+        },
+        {
+          "id": "t4",
+          "speaker": "you",
+          "roleLabel": "You",
+          "roleLabelId": "Kamu",
+          "text": "Please help unblock Payments on the contract decision by Friday, or confirm we should pause the reporting UI to protect the checkout date.",
+          "textId": "Tolong bantu unblock Payments untuk keputusan kontrak sebelum Jumat, atau konfirmasi kita pause UI reporting agar melindungi tanggal checkout.",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "Just make them work faster.",
+              "textId": "Suruh saja mereka kerja lebih cepat."
+            },
+            {
+              "key": "B",
+              "text": "Please help unblock Payments on the contract decision by Friday, or confirm we should pause the reporting UI to protect the checkout date.",
+              "textId": "Tolong bantu unblock Payments untuk keputusan kontrak sebelum Jumat, atau konfirmasi kita pause UI reporting agar melindungi tanggal checkout."
+            },
+            {
+              "key": "C",
+              "text": "Nothing, I'll figure it out alone.",
+              "textId": "Tidak perlu apa-apa, saya handle sendiri."
+            },
+            {
+              "key": "D",
+              "text": "We should do everything without tradeoffs.",
+              "textId": "Kita harus kerjakan semuanya tanpa tradeoff."
+            }
+          ]
+        }
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "dlg-03",
+      "moduleId": "live-dialogue",
+      "kind": "dialogue",
+      "difficulty": "senior",
+      "scenario": "A VP pushes to skip canaries for a hot fix before a partner demo.",
+      "scenarioId": "VP mendorong skip canary untuk hot fix sebelum demo partner.",
+      "prompt": "Disagree professionally in the conversation.",
+      "promptId": "Sampaikan ketidaksetujuan secara profesional dalam percakapan.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "That is reckless and I will not do it.",
+          "textId": "Itu sembrono dan saya tidak akan melakukannya."
+        },
+        {
+          "key": "B",
+          "text": "I understand the urgency. Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk.",
+          "textId": "Saya paham urgensinya. Skip canary memperbesar blast radius. Saya rekomendasikan canary 5 menit di 5% traffic dengan auto-rollback. Jika harus lebih cepat, tolong konfirmasi kita menerima risiko yang lebih tinggi."
+        },
+        {
+          "key": "C",
+          "text": "Whatever you say.",
+          "textId": "Terserah Anda saja."
+        },
+        {
+          "key": "D",
+          "text": "I will complain in a side channel after the meeting.",
+          "textId": "Saya akan mengeluh di channel samping setelah meeting."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Acknowledge urgency → state risk → offer safer alternative → clarify who owns the risk decision.",
+      "tags": [
+        "disagreement",
+        "safety",
+        "dialogue"
+      ],
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "them",
+          "roleLabel": "VP",
+          "roleLabelId": "VP",
+          "text": "Just ship the hot fix now. Skip canaries — we cannot miss the demo.",
+          "textId": "Langsung ship hot fix sekarang. Skip canary — kita tidak boleh miss demo."
+        },
+        {
+          "id": "t2",
+          "speaker": "you",
+          "roleLabel": "You",
+          "roleLabelId": "Kamu",
+          "text": "I understand the urgency. Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk.",
+          "textId": "Saya paham urgensinya. Skip canary memperbesar blast radius. Saya rekomendasikan canary 5 menit di 5% traffic dengan auto-rollback. Jika harus lebih cepat, tolong konfirmasi kita menerima risiko yang lebih tinggi.",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "That is reckless and I will not do it.",
+              "textId": "Itu sembrono dan saya tidak akan melakukannya."
+            },
+            {
+              "key": "B",
+              "text": "I understand the urgency. Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk.",
+              "textId": "Saya paham urgensinya. Skip canary memperbesar blast radius. Saya rekomendasikan canary 5 menit di 5% traffic dengan auto-rollback. Jika harus lebih cepat, tolong konfirmasi kita menerima risiko yang lebih tinggi."
+            },
+            {
+              "key": "C",
+              "text": "Whatever you say.",
+              "textId": "Terserah Anda saja."
+            },
+            {
+              "key": "D",
+              "text": "I will complain in a side channel after the meeting.",
+              "textId": "Saya akan mengeluh di channel samping setelah meeting."
+            }
+          ]
+        },
+        {
+          "id": "t3",
+          "speaker": "them",
+          "roleLabel": "VP",
+          "roleLabelId": "VP",
+          "text": "Fine — do the short canary. How will we know it's safe?",
+          "textId": "Baik — lakukan canary singkat. Bagaimana kita tahu itu aman?"
+        },
+        {
+          "id": "t4",
+          "speaker": "you",
+          "roleLabel": "You",
+          "roleLabelId": "Kamu",
+          "text": "We'll watch checkout success and p95 latency for five minutes. If either breaches the burn threshold, we auto-rollback and I update this thread immediately.",
+          "textId": "Kita pantau checkout success dan latency p95 selama lima menit. Jika salah satu melewati ambang burn, auto-rollback dan saya update thread ini segera.",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "Trust me, it will be fine.",
+              "textId": "Percaya saja, pasti aman."
+            },
+            {
+              "key": "B",
+              "text": "We'll watch checkout success and p95 latency for five minutes. If either breaches the burn threshold, we auto-rollback and I update this thread immediately.",
+              "textId": "Kita pantau checkout success dan latency p95 selama lima menit. Jika salah satu melewati ambang burn, auto-rollback dan saya update thread ini segera."
+            },
+            {
+              "key": "C",
+              "text": "We will know tomorrow.",
+              "textId": "Kita akan tahu besok."
+            },
+            {
+              "key": "D",
+              "text": "No monitoring needed for a hot fix.",
+              "textId": "Hot fix tidak perlu monitoring."
+            }
+          ]
+        }
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "dlg-04",
+      "moduleId": "live-dialogue",
+      "kind": "dialogue",
+      "difficulty": "junior",
+      "scenario": "Standup. You are blocked on staging credentials and need help without drama.",
+      "scenarioId": "Standup. Kamu blocked karena kredensial staging dan perlu bantuan tanpa drama.",
+      "prompt": "Give a clear standup exchange.",
+      "promptId": "Berikan interaksi standup yang jelas.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Same as usual.",
+          "textId": "Sama seperti biasa."
+        },
+        {
+          "key": "B",
+          "text": "Yesterday: finished auth middleware. Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands.",
+          "textId": "Kemarin: selesai auth middleware. Hari ini: tes rate-limit. Blocker: butuh kredensial staging dari platform — ETA terhambat sampai itu tersedia."
+        },
+        {
+          "key": "C",
+          "text": "I did a lot of stuff and will do more stuff.",
+          "textId": "Saya sudah banyak kerja dan akan kerja lagi."
+        },
+        {
+          "key": "D",
+          "text": "No updates.",
+          "textId": "Tidak ada update."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Yesterday/Today/Blocker + minta orang + timebox + dampak ETA.",
+      "tags": [
+        "standup",
+        "blocker",
+        "dialogue"
+      ],
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "them",
+          "roleLabel": "Tech lead",
+          "roleLabelId": "Tech lead",
+          "text": "Quick updates — any blockers?",
+          "textId": "Update cepat — ada blocker?"
+        },
+        {
+          "id": "t2",
+          "speaker": "you",
+          "roleLabel": "You",
+          "roleLabelId": "Kamu",
+          "text": "Yesterday: finished auth middleware. Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands.",
+          "textId": "Kemarin: selesai auth middleware. Hari ini: tes rate-limit. Blocker: butuh kredensial staging dari platform — ETA terhambat sampai itu tersedia.",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "Same as usual.",
+              "textId": "Sama seperti biasa."
+            },
+            {
+              "key": "B",
+              "text": "Yesterday: finished auth middleware. Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands.",
+              "textId": "Kemarin: selesai auth middleware. Hari ini: tes rate-limit. Blocker: butuh kredensial staging dari platform — ETA terhambat sampai itu tersedia."
+            },
+            {
+              "key": "C",
+              "text": "I did a lot of stuff and will do more stuff.",
+              "textId": "Saya sudah banyak kerja dan akan kerja lagi."
+            },
+            {
+              "key": "D",
+              "text": "No updates.",
+              "textId": "Tidak ada update."
+            }
+          ]
+        },
+        {
+          "id": "t3",
+          "speaker": "them",
+          "roleLabel": "Tech lead",
+          "roleLabelId": "Tech lead",
+          "text": "Who do you need, and for how long?",
+          "textId": "Kamu butuh siapa, dan berapa lama?"
+        },
+        {
+          "id": "t4",
+          "speaker": "you",
+          "roleLabel": "You",
+          "roleLabelId": "Kamu",
+          "text": "I need 20 minutes with Alex after standup for staging access. Without that, my ETA moves from today to tomorrow.",
+          "textId": "Saya butuh 20 menit dengan Alex setelah standup untuk akses staging. Tanpa itu, ETA saya geser dari hari ini ke besok.",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "Someone help me now.",
+              "textId": "Tolong ada yang bantu sekarang."
+            },
+            {
+              "key": "B",
+              "text": "I need 20 minutes with Alex after standup for staging access. Without that, my ETA moves from today to tomorrow.",
+              "textId": "Saya butuh 20 menit dengan Alex setelah standup untuk akses staging. Tanpa itu, ETA saya geser dari hari ini ke besok."
+            },
+            {
+              "key": "C",
+              "text": "I will figure it out alone forever.",
+              "textId": "Saya akan selesaikan sendiri selamanya."
+            },
+            {
+              "key": "D",
+              "text": "Alex always ignores me.",
+              "textId": "Alex selalu mengabaikan saya."
+            }
+          ]
+        }
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "dlg-05",
+      "moduleId": "live-dialogue",
+      "kind": "dialogue",
+      "difficulty": "mid",
+      "scenario": "Code review chat. A teammate's PR lacks tests for a payment webhook edge case.",
+      "scenarioId": "Chat code review. PR rekan kurang tes untuk edge case webhook pembayaran.",
+      "prompt": "Give constructive review dialogue.",
+      "promptId": "Berikan dialog review yang konstruktif.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "This is careless work.",
+          "textId": "Kerjaan ini ceroboh."
+        },
+        {
+          "key": "B",
+          "text": "Thanks for the change. Could we add a test for the duplicate webhook case? Without it we risk double-charging on retries. Happy to sketch a fixture if useful.",
+          "textId": "Thanks untuk perubahannya. Bisakah kita tambah tes untuk kasus webhook duplikat? Tanpa itu ada risiko double-charge saat retry. Saya siap bantu sketch fixture jika berguna."
+        },
+        {
+          "key": "C",
+          "text": "LGTM with no comments.",
+          "textId": "LGTM tanpa komentar."
+        },
+        {
+          "key": "D",
+          "text": "Rewrite the entire PR in my style.",
+          "textId": "Tulis ulang seluruh PR dengan gaya saya."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Specific risk + ask + offer help. Soften tone, keep the bar.",
+      "tags": [
+        "pr-review",
+        "dialogue"
+      ],
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "them",
+          "roleLabel": "Author",
+          "roleLabelId": "Author",
+          "text": "Mind reviewing PR #482 today? It unblocks release.",
+          "textId": "Bisa review PR #482 hari ini? Ini unblock release."
+        },
+        {
+          "id": "t2",
+          "speaker": "you",
+          "roleLabel": "You (reviewer)",
+          "roleLabelId": "Kamu (reviewer)",
+          "text": "Thanks for the change. Could we add a test for the duplicate webhook case? Without it we risk double-charging on retries. Happy to sketch a fixture if useful.",
+          "textId": "Thanks untuk perubahannya. Bisakah kita tambah tes untuk kasus webhook duplikat? Tanpa itu ada risiko double-charge saat retry. Saya siap bantu sketch fixture jika berguna.",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "This is careless work.",
+              "textId": "Kerjaan ini ceroboh."
+            },
+            {
+              "key": "B",
+              "text": "Thanks for the change. Could we add a test for the duplicate webhook case? Without it we risk double-charging on retries. Happy to sketch a fixture if useful.",
+              "textId": "Thanks untuk perubahannya. Bisakah kita tambah tes untuk kasus webhook duplikat? Tanpa itu ada risiko double-charge saat retry. Saya siap bantu sketch fixture jika berguna."
+            },
+            {
+              "key": "C",
+              "text": "LGTM with no comments.",
+              "textId": "LGTM tanpa komentar."
+            },
+            {
+              "key": "D",
+              "text": "Rewrite the entire PR in my style.",
+              "textId": "Tulis ulang seluruh PR dengan gaya saya."
+            }
+          ]
+        },
+        {
+          "id": "t3",
+          "speaker": "them",
+          "roleLabel": "Author",
+          "roleLabelId": "Author",
+          "text": "Good catch — I'll add it. Anything else blocking?",
+          "textId": "Catch bagus — saya tambahkan. Ada yang masih blocking?"
+        },
+        {
+          "id": "t4",
+          "speaker": "you",
+          "roleLabel": "You (reviewer)",
+          "roleLabelId": "Kamu (reviewer)",
+          "text": "That's the only blocker. Non-blocking nit aside, once the retry test is in and CI is green, I'm happy to approve.",
+          "textId": "Itu satu-satunya blocker. Selain nit non-blocking, begitu tes retry masuk dan CI hijau, saya siap approve.",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "I still hate the whole approach.",
+              "textId": "Saya tetap benci seluruh pendekatannya."
+            },
+            {
+              "key": "B",
+              "text": "That's the only blocker. Non-blocking nit aside, once the retry test is in and CI is green, I'm happy to approve.",
+              "textId": "Itu satu-satunya blocker. Selain nit non-blocking, begitu tes retry masuk dan CI hijau, saya siap approve."
+            },
+            {
+              "key": "C",
+              "text": "Approve now and fix later maybe.",
+              "textId": "Approve sekarang, perbaiki nanti mungkin."
+            },
+            {
+              "key": "D",
+              "text": "Find more issues just to be strict.",
+              "textId": "Cari lebih banyak issue supaya terlihat ketat."
+            }
+          ]
+        }
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    },
+    {
+      "id": "dlg-06",
+      "moduleId": "live-dialogue",
+      "kind": "dialogue",
+      "difficulty": "senior",
+      "scenario": "Offer negotiation call. Base is 10% below your target; you still want the role.",
+      "scenarioId": "Call nego offer. Base 10% di bawah targetmu; kamu tetap ingin role ini.",
+      "prompt": "Negotiate politely through the call.",
+      "promptId": "Nego dengan sopan sepanjang call.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "This offer is insulting. Fix it.",
+          "textId": "Offer ini menghina. Perbaiki."
+        },
+        {
+          "key": "B",
+          "text": "Thank you for the offer. I am excited about the role. Based on market data and my scope in reliability ownership, I am targeting X base. Is there flexibility to move closer to that number?",
+          "textId": "Terima kasih atas offer-nya. Saya antusias dengan role ini. Berdasarkan data pasar dan scope ownership reliability saya, target base saya X. Apakah ada fleksibilitas mendekati angka itu?"
+        },
+        {
+          "key": "C",
+          "text": "I will only accept if you match my dream number today.",
+          "textId": "Saya hanya menerima jika angka impian saya dipenuhi hari ini."
+        },
+        {
+          "key": "D",
+          "text": "Ignore the offer email for a week to create pressure.",
+          "textId": "Abaikan email offer seminggu untuk membuat tekanan."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Gratitude + excitement + data-backed ask. Lalu klarifikasi total package jika base terbatas.",
+      "tags": [
+        "negotiation",
+        "dialogue"
+      ],
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "them",
+          "roleLabel": "Recruiter",
+          "roleLabelId": "Recruiter",
+          "text": "We're excited to extend the offer. How does the package look to you?",
+          "textId": "Kami senang menyampaikan offer. Bagaimana paketnya menurut Anda?"
+        },
+        {
+          "id": "t2",
+          "speaker": "you",
+          "roleLabel": "You",
+          "roleLabelId": "Kamu",
+          "text": "Thank you for the offer. I am excited about the role. Based on market data and my scope in reliability ownership, I am targeting X base. Is there flexibility to move closer to that number?",
+          "textId": "Terima kasih atas offer-nya. Saya antusias dengan role ini. Berdasarkan data pasar dan scope ownership reliability saya, target base saya X. Apakah ada fleksibilitas mendekati angka itu?",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "This offer is insulting. Fix it.",
+              "textId": "Offer ini menghina. Perbaiki."
+            },
+            {
+              "key": "B",
+              "text": "Thank you for the offer. I am excited about the role. Based on market data and my scope in reliability ownership, I am targeting X base. Is there flexibility to move closer to that number?",
+              "textId": "Terima kasih atas offer-nya. Saya antusias dengan role ini. Berdasarkan data pasar dan scope ownership reliability saya, target base saya X. Apakah ada fleksibilitas mendekati angka itu?"
+            },
+            {
+              "key": "C",
+              "text": "I will only accept if you match my dream number today.",
+              "textId": "Saya hanya menerima jika angka impian saya dipenuhi hari ini."
+            },
+            {
+              "key": "D",
+              "text": "Ignore the offer email for a week to create pressure.",
+              "textId": "Abaikan email offer seminggu untuk membuat tekanan."
+            }
+          ]
+        },
+        {
+          "id": "t3",
+          "speaker": "them",
+          "roleLabel": "Recruiter",
+          "roleLabelId": "Recruiter",
+          "text": "Base is tight, but we can improve signing bonus and equity refresh timing.",
+          "textId": "Base ketat, tapi kami bisa naikkan signing bonus dan timing equity refresh."
+        },
+        {
+          "id": "t4",
+          "speaker": "you",
+          "roleLabel": "You",
+          "roleLabelId": "Kamu",
+          "text": "I appreciate the creative package. Could we confirm the signing bonus amount, vesting timing, and whether a six-month salary review is possible? I want the total package to reflect the scope.",
+          "textId": "Saya apresiasi paket kreatifnya. Bisakah kita pastikan jumlah signing bonus, timing vesting, dan apakah review gaji 6 bulan memungkinkan? Saya ingin total package mencerminkan scope.",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "Base is all that matters; reject everything else.",
+              "textId": "Yang penting hanya base; tolak yang lain."
+            },
+            {
+              "key": "B",
+              "text": "I appreciate the creative package. Could we confirm the signing bonus amount, vesting timing, and whether a six-month salary review is possible? I want the total package to reflect the scope.",
+              "textId": "Saya apresiasi paket kreatifnya. Bisakah kita pastikan jumlah signing bonus, timing vesting, dan apakah review gaji 6 bulan memungkinkan? Saya ingin total package mencerminkan scope."
+            },
+            {
+              "key": "C",
+              "text": "Fine, whatever.",
+              "textId": "Baiklah, terserah."
+            },
+            {
+              "key": "D",
+              "text": "I need unlimited equity forever.",
+              "textId": "Saya butuh equity tanpa batas selamanya."
+            }
+          ]
+        }
+      ],
+      "tts": {
+        "scenario": true,
+        "prompt": true,
+        "answer": true
+      }
+    }
+  ]
+}

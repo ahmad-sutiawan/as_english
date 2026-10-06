@@ -88,6 +88,11 @@ export function getItem(
 }
 
 export function getCorrectAnswerText(item: ExerciseItem): string {
+  if (item.kind === "dialogue" && item.turns?.length) {
+    const youTurns = item.turns.filter((t) => t.speaker === "you");
+    const last = youTurns.at(-1);
+    if (last?.text) return last.text;
+  }
   const choice = item.choices.find((c) => c.key === item.correctKey);
   return choice?.text ?? "";
 }

@@ -3,6 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { getItem, getModule, getNextItemIdFiltered } from "@/lib/content";
 import { ExercisePanel } from "@/components/exercise-panel";
+import { DialoguePanel } from "@/components/dialogue-panel";
 import type { Difficulty } from "@/types/content";
 
 type Props = {
@@ -27,9 +28,22 @@ export default async function ExercisePage({ params, searchParams }: Props) {
   if (!mod || !item) notFound();
 
   const nextItemId = getNextItemIdFiltered(moduleId, itemId, level);
-  const qs = [from === "review" ? "from=review" : "", level !== "all" ? `level=${level}` : ""]
+  const qs = [
+    from === "review" ? "from=review" : "",
+    level !== "all" ? `level=${level}` : "",
+  ]
     .filter(Boolean)
     .join("&");
+
+  const panelProps = {
+    item,
+    moduleTitle: mod.title,
+    moduleTitleId: mod.titleId,
+    nextItemId,
+    nextHref: nextItemId
+      ? `/learn/${moduleId}/${nextItemId}${qs ? `?${qs}` : ""}`
+      : null,
+  };
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
@@ -48,6 +62,11 @@ export default async function ExercisePage({ params, searchParams }: Props) {
             Mode review
           </Link>
         ) : null}
+        {item.kind === "dialogue" ? (
+          <span className="rounded-md border border-[var(--border)] px-2 py-1 text-xs text-[var(--accent)]">
+            Dialog
+          </span>
+        ) : null}
         {level !== "all" ? (
           <span className="rounded-md border border-[var(--border)] px-2 py-1 text-xs text-[var(--muted)]">
             Filter: {level}
@@ -55,17 +74,11 @@ export default async function ExercisePage({ params, searchParams }: Props) {
         ) : null}
       </div>
       <div className="mt-6">
-        <ExercisePanel
-          item={item}
-          moduleTitle={mod.title}
-          moduleTitleId={mod.titleId}
-          nextItemId={nextItemId}
-          nextHref={
-            nextItemId
-              ? `/learn/${moduleId}/${nextItemId}${qs ? `?${qs}` : ""}`
-              : null
-          }
-        />
+        {item.kind === "dialogue" ? (
+          <DialoguePanel {...panelProps} />
+        ) : (
+          <ExercisePanel {...panelProps} />
+        )}
       </div>
     </div>
   );

@@ -62,6 +62,46 @@ ITEM_SCHEMA = {
         "correctKey": CHOICE_KEY,
         "explanation": {"type": "string", "minLength": 1},
         "tags": {"type": "array", "items": {"type": "string"}},
+        "kind": {"type": "string", "enum": ["mcq", "dialogue"]},
+        "turns": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "speaker",
+                    "roleLabel",
+                    "roleLabelId",
+                    "text",
+                    "textId",
+                ],
+                "additionalProperties": False,
+                "properties": {
+                    "id": {"type": "string"},
+                    "speaker": {"type": "string", "enum": ["them", "you"]},
+                    "roleLabel": {"type": "string"},
+                    "roleLabelId": {"type": "string"},
+                    "text": {"type": "string"},
+                    "textId": {"type": "string"},
+                    "correctKey": CHOICE_KEY,
+                    "choices": {
+                        "type": "array",
+                        "minItems": 4,
+                        "maxItems": 4,
+                        "items": {
+                            "type": "object",
+                            "required": ["key", "text", "textId"],
+                            "additionalProperties": False,
+                            "properties": {
+                                "key": CHOICE_KEY,
+                                "text": {"type": "string"},
+                                "textId": {"type": "string"},
+                            },
+                        },
+                    },
+                },
+            },
+        },
         "tts": {
             "type": "object",
             "additionalProperties": False,

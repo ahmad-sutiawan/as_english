@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "2.2.0",
   "modules": [
     {
       "id": "interview-behavioral",
@@ -147,6 +147,19 @@
       "status": "ready",
       "itemCount": 12,
       "titleId": "1:1 & Mentoring"
+    },
+    {
+      "id": "live-dialogue",
+      "title": "Live Dialogue",
+      "titleId": "Percakapan Berantai",
+      "description": "Latihan percakapan kerja 2–4 giliran: dengarkan lawan bicara, pilih & ketik respons English-mu, lalu speak-back. Lebih dekat ke fluent meeting.",
+      "persona": [
+        "IT Manager",
+        "SRE",
+        "Fullstack"
+      ],
+      "status": "ready",
+      "itemCount": 6
     }
   ]
 }

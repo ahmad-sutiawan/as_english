@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import type { ExerciseItem } from "@/types/content";
 import { SpeakButton } from "@/components/speak-button";
 import { BilingualText } from "@/components/bilingual-text";
+import { SpeakBackPanel } from "@/components/speak-back-panel";
 import { speak } from "@/lib/tts";
 
 type Props = {
@@ -202,6 +203,14 @@ export function ExercisePanel({
               placeholder="Salin/ketik ulang opsi English yang benar secara penuh…"
             />
           </label>
+          <SpeakBackPanel
+            mode="dictate"
+            onUseTranscript={(text) => setTyped(text)}
+          />
+          <p className="text-xs text-[var(--muted)]">
+            Tips: putar opsi A–D di atas, pilih yang benar di kepala, ucapkan,
+            lalu periksa dengan ketik (atau pakai hasil mic).
+          </p>
           {error && (
             <p className="text-sm" style={{ color: "var(--danger)" }}>
               {error}
@@ -271,6 +280,13 @@ export function ExercisePanel({
               {feedback.explanation}
             </p>
           </div>
+          <SpeakBackPanel
+            mode="compare"
+            expected={feedback.expected}
+            expectedId={
+              feedback.expectedId ?? correctChoice?.textId
+            }
+          />
           <div className="flex flex-wrap gap-2 pt-2">
             <button
               type="button"

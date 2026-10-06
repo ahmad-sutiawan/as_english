@@ -9,10 +9,28 @@ export type Choice = {
   textId: string;
 };
 
+export type DialogueSpeaker = "them" | "you";
+
+export type DialogueTurn = {
+  id: string;
+  speaker: DialogueSpeaker;
+  /** English display name: Manager, On-call, You */
+  roleLabel: string;
+  roleLabelId: string;
+  /** For them: their line. For you: correct spoken line (same as correct choice). */
+  text: string;
+  textId: string;
+  /** Present on your turns */
+  choices?: Choice[];
+  correctKey?: ChoiceKey;
+};
+
 export type ExerciseItem = {
   id: string;
   moduleId: string;
   difficulty: Difficulty;
+  /** mcq (default) or multi-turn dialogue */
+  kind?: "mcq" | "dialogue";
   /** English workplace scenario */
   scenario: string;
   /** Fixed Indonesian translation of scenario */
@@ -26,6 +44,8 @@ export type ExerciseItem = {
   /** Learning guide in Indonesian: why the answer is correct */
   explanation: string;
   tags: string[];
+  /** Dialogue turns when kind === "dialogue" */
+  turns?: DialogueTurn[];
   tts?: {
     scenario?: boolean;
     prompt?: boolean;

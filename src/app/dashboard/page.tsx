@@ -30,7 +30,9 @@ export default async function DashboardPage() {
       </h1>
       <p className="mt-2 text-sm text-[var(--muted)]">
         Halo, {session.user.name ?? session.user.email}. Pilih modul — baca
-        English, pahami arti Indonesia, lalu ketik ulang jawaban English-nya.
+        English, pahami arti Indonesia, lalu ketik ulang. Coba juga modul{" "}
+        <span className="text-[var(--accent)]">Percakapan Berantai</span> +
+        speak-back untuk mendekati fluent meeting.
       </p>
 
       <section className="mt-8 grid gap-3 sm:grid-cols-4">
