@@ -41,9 +41,19 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({ user }, { status: 201 });
-  } catch {
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    const dbDown =
+      /denied access|can't reach|P1001|P1017|does not exist|ECONNREFUSED/i.test(
+        message,
+      );
+
     return NextResponse.json(
-      { error: "Registration failed." },
+      {
+        error: dbDown
+          ? "Database unavailable. Start Postgres and run: npx prisma migrate deploy && npm run db:seed"
+          : "Registration failed.",
+      },
       { status: 500 },
     );
   }

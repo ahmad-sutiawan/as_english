@@ -19,7 +19,7 @@ Audio uses the browser **Web Speech API** (Google English voices in Chrome).
 ### 1. Prerequisites
 
 - Node.js 20+
-- Docker (for Postgres)
+- PostgreSQL (Homebrew local **or** Docker)
 - Python 3.10+ (optional, for content validation)
 
 ### 2. Install
@@ -31,7 +31,14 @@ npm install
 
 ### 3. Database
 
-Start **Docker Desktop** (or another Docker daemon), then:
+**Option A — local Homebrew Postgres** (recommended if Docker is off):
+
+```bash
+chmod +x scripts/setup-local-db.sh
+./scripts/setup-local-db.sh
+```
+
+**Option B — Docker Compose:**
 
 ```bash
 npm run db:up
@@ -40,7 +47,6 @@ npm run db:seed
 ```
 
 For local iteration you can also use `npx prisma migrate dev`.
-
 Demo user:
 
 - Email: `demo@asenglish.local`
