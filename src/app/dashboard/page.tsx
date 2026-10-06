@@ -59,7 +59,7 @@ export default async function DashboardPage() {
                 {mod.status === "ready" ? (
                   <Link
                     href={`/learn/${mod.id}`}
-                    className="shrink-0 rounded-md bg-[var(--accent)] px-3 py-1.5 text-sm font-medium text-white hover:bg-[var(--accent-hover)]"
+                    className="shrink-0 rounded-md bg-[var(--accent)] px-3 py-1.5 text-sm font-medium text-[#06221e] hover:bg-[var(--accent-hover)]"
                   >
                     {done > 0 ? "Lanjut" : "Mulai"}
                   </Link>

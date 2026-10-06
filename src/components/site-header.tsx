@@ -5,9 +5,12 @@ export async function SiteHeader() {
   const session = await auth();
 
   return (
-    <header className="border-b border-[var(--border)] bg-[var(--surface)]/90 backdrop-blur">
+    <header className="sticky top-0 z-20 border-b border-[var(--border)] bg-[var(--background)]/95 backdrop-blur">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
-        <Link href="/" className="text-sm font-semibold tracking-tight text-[var(--ink)]">
+        <Link
+          href="/"
+          className="text-sm font-semibold tracking-tight text-[var(--ink)]"
+        >
           AS English
         </Link>
         <nav className="flex items-center gap-4 text-sm text-[var(--muted)]">
@@ -25,7 +28,7 @@ export async function SiteHeader() {
               >
                 <button
                   type="submit"
-                  className="rounded-md border border-[var(--border)] px-3 py-1.5 text-[var(--ink)] hover:bg-[var(--surface-2)]"
+                  className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-3 py-1.5 text-[var(--ink)] hover:bg-[var(--surface-2)]"
                 >
                   Keluar
                 </button>
@@ -38,7 +41,7 @@ export async function SiteHeader() {
               </Link>
               <Link
                 href="/register"
-                className="rounded-md bg-[var(--accent)] px-3 py-1.5 text-white hover:bg-[var(--accent-hover)]"
+                className="rounded-md bg-[var(--accent)] px-3 py-1.5 font-medium text-[#06221e] hover:bg-[var(--accent-hover)]"
               >
                 Daftar
               </Link>

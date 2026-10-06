@@ -1,17 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --background: #eef2f0;
-  --foreground: #14201c;
-  --ink: #14201c;
-  --muted: #5b6b64;
-  --surface: #f7faf8;
-  --surface-2: #e4ebe7;
-  --border: #c9d5cf;
-  --accent: #0f6b5c;
-  --accent-hover: #0c574b;
-  --hero-from: #d7e8e2;
-  --hero-to: #eef2f0;
+  color-scheme: dark;
+
+  --background: #0b0f14;
+  --foreground: #e8eef5;
+  --ink: #f2f6fb;
+  --muted: #9aa8b8;
+  --surface: #141a22;
+  --surface-2: #1c2430;
+  --border: #2a3544;
+  --accent: #3dd6c3;
+  --accent-hover: #2bbfad;
+  --accent-soft: rgba(61, 214, 195, 0.14);
+  --danger: #ff8b8b;
+  --danger-bg: rgba(255, 139, 139, 0.12);
+  --danger-border: rgba(255, 139, 139, 0.35);
+  --warn: #ffd27a;
+  --warn-bg: rgba(255, 210, 122, 0.12);
+  --warn-border: rgba(255, 210, 122, 0.35);
+  --success: #8dffb5;
+  --success-bg: rgba(141, 255, 181, 0.1);
+  --success-border: rgba(141, 255, 181, 0.35);
+  --success-ink: #d9ffe8;
 }
 
 @theme inline {
@@ -21,15 +32,26 @@
   --font-display: var(--font-fraunces);
 }
 
+html,
 body {
-  background:
-    radial-gradient(1200px 600px at 10% -10%, var(--hero-from), transparent 60%),
-    radial-gradient(900px 500px at 100% 0%, #dbe4ef, transparent 55%),
-    var(--background);
+  background: var(--background);
   color: var(--foreground);
+}
+
+body {
   font-family: var(--font-source-sans), "Source Sans 3", sans-serif;
 }
 
 .font-display {
   font-family: var(--font-fraunces), Fraunces, Georgia, serif;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+input,
+textarea {
+  color-scheme: dark;
 }

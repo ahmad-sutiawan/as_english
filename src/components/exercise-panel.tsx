@@ -92,12 +92,17 @@ export function ExercisePanel({
         <ol className="mt-2 list-decimal space-y-1 pl-4">
           <li>Baca skenario &amp; pertanyaan dalam bahasa Inggris.</li>
           <li>Pahami artinya lewat terjemahan tetap di bawah teks EN.</li>
-          <li>Bandingkan opsi A–D (EN + arti). Jangan diklik untuk jawab.</li>
+          <li>
+            Dengarkan tiap opsi A–D (tombol Putar EN), baca arti, lalu pilih yang
+            benar di kepala.
+          </li>
           <li>
             Ketik ulang jawaban Inggris yang benar secara utuh — ini melatih
             menulis &amp; grammar.
           </li>
-          <li>Dengar audio EN, lalu baca penjelasan belajar dalam Bahasa Indonesia.</li>
+          <li>
+            Baca penjelasan belajar dalam Bahasa Indonesia setelah benar.
+          </li>
         </ol>
       </div>
 
@@ -148,22 +153,25 @@ export function ExercisePanel({
         <h2 className="text-sm font-semibold text-[var(--ink)]">
           Pilihan jawaban{" "}
           <span className="font-normal text-[var(--muted)]">
-            — baca EN + arti, lalu ketik yang benar
+            — putar EN, baca arti, lalu ketik yang benar
           </span>
         </h2>
         <ul className="space-y-4">
           {item.choices.map((choice) => (
             <li
               key={choice.key}
-              className="border-l-2 border-[var(--border)] pl-3"
+              className="rounded-md border border-[var(--border)] bg-[var(--surface)] p-3"
             >
-              <p className="text-sm leading-relaxed text-[var(--ink)]">
-                <span className="mr-2 font-semibold text-[var(--muted)]">
-                  {choice.key}.
-                </span>
-                {choice.text}
-              </p>
-              <p className="mt-1 text-sm leading-relaxed text-[var(--muted)]">
+              <div className="flex items-start justify-between gap-3">
+                <p className="min-w-0 flex-1 text-sm leading-relaxed text-[var(--ink)]">
+                  <span className="mr-2 font-semibold text-[var(--accent)]">
+                    {choice.key}.
+                  </span>
+                  {choice.text}
+                </p>
+                <SpeakButton text={choice.text} label="Putar EN" />
+              </div>
+              <p className="mt-2 rounded-md border border-[var(--border)] bg-[var(--surface-2)] px-3 py-2 text-sm leading-relaxed text-[var(--muted)]">
                 <span className="mr-1.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--accent)]">
                   Arti
                 </span>
@@ -187,13 +195,24 @@ export function ExercisePanel({
               onChange={(e) => setTyped(e.target.value)}
               rows={4}
               required
-              className="mt-2 w-full rounded-md border border-[var(--border)] bg-[var(--surface)] px-3 py-2 text-sm leading-relaxed text-[var(--ink)] outline-none ring-[var(--accent)] focus:ring-2"
+              className="mt-2 w-full rounded-md border border-[var(--border)] bg-[var(--surface)] px-3 py-2 text-sm leading-relaxed text-[var(--ink)] outline-none ring-[var(--accent)] placeholder:text-[var(--muted)] focus:ring-2"
               placeholder="Salin/ketik ulang opsi English yang benar secara penuh…"
             />
           </label>
-          {error && <p className="text-sm text-red-700">{error}</p>}
+          {error && (
+            <p className="text-sm" style={{ color: "var(--danger)" }}>
+              {error}
+            </p>
+          )}
           {feedback && !feedback.exact && (
-            <div className="rounded-md border border-amber-300 bg-amber-50 px-3 py-2 text-sm text-amber-950">
+            <div
+              className="rounded-md border px-3 py-2 text-sm"
+              style={{
+                borderColor: "var(--warn-border)",
+                background: "var(--warn-bg)",
+                color: "var(--warn)",
+              }}
+            >
               {feedback.nearMiss
                 ? "Hampir benar — ada typo kecil. Ketik ulang dengan lebih teliti agar mastery."
                 : "Belum tepat. Bandingkan lagi opsi EN + arti, lalu ketik ulang jawaban yang benar."}
@@ -202,15 +221,24 @@ export function ExercisePanel({
           <button
             type="submit"
             disabled={submitting || !typed.trim()}
-            className="rounded-md bg-[var(--accent)] px-4 py-2 text-sm font-medium text-white hover:bg-[var(--accent-hover)] disabled:opacity-50"
+            className="rounded-md bg-[var(--accent)] px-4 py-2 text-sm font-medium text-[#06221e] hover:bg-[var(--accent-hover)] disabled:opacity-50"
           >
             {submitting ? "Memeriksa…" : "Periksa jawaban"}
           </button>
         </form>
       ) : (
-        <section className="space-y-4 rounded-md border border-emerald-300 bg-emerald-50 p-4">
+        <section
+          className="space-y-4 rounded-md border p-4"
+          style={{
+            borderColor: "var(--success-border)",
+            background: "var(--success-bg)",
+          }}
+        >
           <div className="flex items-center justify-between gap-3">
-            <h2 className="text-sm font-semibold text-emerald-950">
+            <h2
+              className="text-sm font-semibold"
+              style={{ color: "var(--success-ink)" }}
+            >
               Benar — jawaban English
             </h2>
             {(item.tts?.answer ?? true) && correctChoice && (
@@ -224,13 +252,19 @@ export function ExercisePanel({
               correctChoice?.textId ??
               "Lihat arti pada opsi di atas."
             }
-            englishClassName="text-sm leading-relaxed text-emerald-950"
+            englishClassName="text-sm leading-relaxed text-[var(--success-ink)]"
           />
           <div className="space-y-2">
-            <h3 className="text-sm font-semibold text-emerald-950">
+            <h3
+              className="text-sm font-semibold"
+              style={{ color: "var(--success-ink)" }}
+            >
               Penjelasan belajar
             </h3>
-            <p className="text-sm leading-relaxed text-emerald-900">
+            <p
+              className="text-sm leading-relaxed"
+              style={{ color: "var(--success)" }}
+            >
               {feedback.explanation}
             </p>
           </div>
@@ -238,7 +272,11 @@ export function ExercisePanel({
             <button
               type="button"
               onClick={retry}
-              className="rounded-md border border-emerald-400 px-3 py-1.5 text-sm text-emerald-950 hover:bg-emerald-100"
+              className="rounded-md border px-3 py-1.5 text-sm"
+              style={{
+                borderColor: "var(--success-border)",
+                color: "var(--success-ink)",
+              }}
             >
               Latih lagi
             </button>
@@ -248,7 +286,7 @@ export function ExercisePanel({
                 onClick={() =>
                   router.push(`/learn/${item.moduleId}/${nextItemId}`)
                 }
-                className="rounded-md bg-[var(--accent)] px-3 py-1.5 text-sm font-medium text-white hover:bg-[var(--accent-hover)]"
+                className="rounded-md bg-[var(--accent)] px-3 py-1.5 text-sm font-medium text-[#06221e] hover:bg-[var(--accent-hover)]"
               >
                 Soal berikutnya
               </button>
@@ -256,7 +294,7 @@ export function ExercisePanel({
               <button
                 type="button"
                 onClick={() => router.push(`/learn/${item.moduleId}`)}
-                className="rounded-md bg-[var(--accent)] px-3 py-1.5 text-sm font-medium text-white hover:bg-[var(--accent-hover)]"
+                className="rounded-md bg-[var(--accent)] px-3 py-1.5 text-sm font-medium text-[#06221e] hover:bg-[var(--accent-hover)]"
               >
                 Kembali ke modul
               </button>

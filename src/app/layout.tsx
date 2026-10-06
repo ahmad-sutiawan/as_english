@@ -25,8 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sourceSans.variable} ${fraunces.variable} h-full`}>
-      <body className="min-h-full flex flex-col antialiased">
+    <html
+      lang="id"
+      className={`${sourceSans.variable} ${fraunces.variable} h-full`}
+    >
+      <body className="flex min-h-full flex-col bg-[var(--background)] text-[var(--foreground)] antialiased">
         <Providers>
           <SiteHeader />
           <main className="flex-1">{children}</main>

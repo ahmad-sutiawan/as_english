@@ -20,7 +20,7 @@ export default async function HomePage() {
       <div className="mt-8 flex flex-wrap gap-3">
         <Link
           href={session ? "/dashboard" : "/register"}
-          className="rounded-md bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-white hover:bg-[var(--accent-hover)]"
+          className="rounded-md bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-[#06221e] hover:bg-[var(--accent-hover)]"
         >
           {session ? "Buka dashboard" : "Mulai latihan"}
         </Link>
