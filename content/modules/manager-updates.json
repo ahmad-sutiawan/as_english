@@ -1,0 +1,300 @@
+{
+  "id": "manager-updates",
+  "title": "Manager Updates",
+  "description": "Concise status, risk callouts, and decision requests.",
+  "persona": ["IT Manager", "SRE", "Fullstack"],
+  "status": "ready",
+  "itemCount": 10,
+  "items": [
+    {
+      "id": "mgr-01",
+      "moduleId": "manager-updates",
+      "difficulty": "mid",
+      "scenario": "Your manager asks for a weekly status on the reliability roadmap. Two initiatives are on track; one is blocked on security review.",
+      "prompt": "What is the strongest opening status line?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Busy week, lots of meetings."
+        },
+        {
+          "key": "B",
+          "text": "Two of three reliability initiatives are on track. The SLO dashboard work is blocked on security review; I need your help unblocking by Friday or we slip the release by one sprint."
+        },
+        {
+          "key": "C",
+          "text": "Everything is fine unless something changes."
+        },
+        {
+          "key": "D",
+          "text": "I will send a long document later."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Managers need progress, blockers, and a clear ask with a deadline impact.",
+      "tags": ["status", "blocker", "ask"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "mgr-02",
+      "moduleId": "manager-updates",
+      "difficulty": "senior",
+      "scenario": "You discovered a capacity risk: current traffic growth will exhaust DB CPU in about six weeks if unchanged.",
+      "prompt": "How do you escalate the risk?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The database might get slow someday."
+        },
+        {
+          "key": "B",
+          "text": "Risk: at current growth, DB CPU hits saturation in ~6 weeks. Impact: elevated latency and possible checkout errors. Options: (1) scale vertically this month, (2) accelerate read-replica work. I recommend option 1 as a bridge; need budget approval by next Tuesday."
+        },
+        {
+          "key": "C",
+          "text": "We should panic and rewrite the database layer."
+        },
+        {
+          "key": "D",
+          "text": "I already ordered hardware without asking."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Risk updates should include timeline, impact, options, recommendation, and a decision date.",
+      "tags": ["risk", "escalation", "decision"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "mgr-03",
+      "moduleId": "manager-updates",
+      "difficulty": "junior",
+      "scenario": "You will miss a committed date because a dependency team delayed their API.",
+      "prompt": "What should you tell your manager?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It is not my fault."
+        },
+        {
+          "key": "B",
+          "text": "We will miss Thursday's date because Payments API delivery slipped to next Monday. New ETA is next Wednesday. I have a workaround spike in progress and will confirm feasibility by tomorrow noon."
+        },
+        {
+          "key": "C",
+          "text": "Maybe we can still make it somehow."
+        },
+        {
+          "key": "D",
+          "text": "I did not want to bother you with this."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Bad news early, with cause, new ETA, and mitigation — no blame theater.",
+      "tags": ["deadline", "dependency", "transparency"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "mgr-04",
+      "moduleId": "manager-updates",
+      "difficulty": "mid",
+      "scenario": "Your manager asks whether the team can take on an urgent partner integration this quarter.",
+      "prompt": "What is a clear capacity response?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Sure, we can do everything."
+        },
+        {
+          "key": "B",
+          "text": "We can take it if we pause the observability upgrade or add one contractor. Without that tradeoff, quality risk is high. Which priority should we protect?"
+        },
+        {
+          "key": "C",
+          "text": "No. Never."
+        },
+        {
+          "key": "D",
+          "text": "Let me think and never follow up."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Good capacity answers offer tradeoffs and ask for a priority decision.",
+      "tags": ["capacity", "prioritization"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "mgr-05",
+      "moduleId": "manager-updates",
+      "difficulty": "mid",
+      "scenario": "You need approval to buy a monitoring tool that costs $18k/year. ROI is reduced MTTR and fewer pages for the on-call team.",
+      "prompt": "Which ask is most effective?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Please approve this tool because other companies use it."
+        },
+        {
+          "key": "B",
+          "text": "Requesting approval for $18k/year monitoring. Expected outcome: cut median MTTR by ~25% and reduce noisy pages. Pilot for 30 days with success metrics attached. Can we decide this week?"
+        },
+        {
+          "key": "C",
+          "text": "I already signed up for the annual plan."
+        },
+        {
+          "key": "D",
+          "text": "If we do not buy this, the team will quit."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Budget asks need cost, expected outcome, measurement, and a decision timeline.",
+      "tags": ["budget", "ask", "tooling"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "mgr-06",
+      "moduleId": "manager-updates",
+      "difficulty": "senior",
+      "scenario": "After a SEV-1, your manager wants a same-day summary for the VP.",
+      "prompt": "Which summary is executive-ready?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We had a bad day with Kubernetes and Redis and DNS and deploys."
+        },
+        {
+          "key": "B",
+          "text": "Summary for VP: 47 minutes of checkout degradation. Root cause: bad feature flag default. Mitigated by disabling flag. Customer impact: ~9% failed checkouts. Follow-ups: flag defaults review and canary checks — owners assigned, due Friday."
+        },
+        {
+          "key": "C",
+          "text": "Please read the raw Slack thread."
+        },
+        {
+          "key": "D",
+          "text": "Someone made a mistake; details TBD."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Exec summaries: duration, impact, cause at right altitude, mitigation, and dated follow-ups.",
+      "tags": ["executive", "incident-summary"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "mgr-07",
+      "moduleId": "manager-updates",
+      "difficulty": "junior",
+      "scenario": "Your 1:1 is starting. You want to discuss feeling overloaded by interrupt-driven work.",
+      "prompt": "How do you raise it productively?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I am drowning and this job is impossible."
+        },
+        {
+          "key": "B",
+          "text": "I want to discuss interrupt load. This week I spent about 60% of time on ad-hoc requests, which delayed the auth migration. Can we define an intake path and protect two focus blocks daily?"
+        },
+        {
+          "key": "C",
+          "text": "I will just work nights to catch up."
+        },
+        {
+          "key": "D",
+          "text": "Everyone else has it easier than I do."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Use data, impact on commitments, and a concrete process ask.",
+      "tags": ["1:1", "workload", "process"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "mgr-08",
+      "moduleId": "manager-updates",
+      "difficulty": "mid",
+      "scenario": "A project is green on delivery but red on quality (flaky tests rising). Your manager only asked about dates.",
+      "prompt": "What should you add?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Dates are fine, nothing else matters."
+        },
+        {
+          "key": "B",
+          "text": "Delivery date is still green, but quality risk is rising: flaky tests up 30% this month. I propose a two-day stabilization window before the release; otherwise we accept higher rollback risk."
+        },
+        {
+          "key": "C",
+          "text": "QA will somehow handle it."
+        },
+        {
+          "key": "D",
+          "text": "I prefer not to mention problems."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Surface hidden risk with a recommended tradeoff even when not asked.",
+      "tags": ["quality", "risk", "release"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "mgr-09",
+      "moduleId": "manager-updates",
+      "difficulty": "senior",
+      "scenario": "You disagree with a leadership directive to skip canaries for a hot fix.",
+      "prompt": "How do you disagree professionally?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "That is reckless and I will not do it."
+        },
+        {
+          "key": "B",
+          "text": "I understand the urgency. Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk."
+        },
+        {
+          "key": "C",
+          "text": "Whatever you say."
+        },
+        {
+          "key": "D",
+          "text": "I will complain in a side channel after the meeting."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Disagree by acknowledging goal, stating risk, offering a safer alternative, and clarifying decision ownership.",
+      "tags": ["disagreement", "safety", "leadership"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "mgr-10",
+      "moduleId": "manager-updates",
+      "difficulty": "mid",
+      "scenario": "End of day. Your manager is offline. You need to leave an async update about a production change.",
+      "prompt": "Which async note is best?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Did a thing in prod."
+        },
+        {
+          "key": "B",
+          "text": "Shipped rate-limit change to production at 17:40 local. Expected: fewer abuse spikes. Watch: 429 rate and checkout success. Rollback command documented in the change ticket. Ping me if 429s exceed 2% for 10 minutes."
+        },
+        {
+          "key": "C",
+          "text": "Please review all dashboards when you are back."
+        },
+        {
+          "key": "D",
+          "text": "No update; talk tomorrow."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Async updates need what changed, expected effect, what to watch, and rollback cues.",
+      "tags": ["async", "change-management"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    }
+  ]
+}

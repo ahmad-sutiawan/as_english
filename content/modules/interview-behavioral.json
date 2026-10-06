@@ -1,0 +1,300 @@
+{
+  "id": "interview-behavioral",
+  "title": "Interview — Behavioral",
+  "description": "STAR answers, ownership, conflict, and leadership stories for tech interviews.",
+  "persona": ["IT Manager", "SRE", "Fullstack"],
+  "status": "ready",
+  "itemCount": 10,
+  "items": [
+    {
+      "id": "beh-01",
+      "moduleId": "interview-behavioral",
+      "difficulty": "mid",
+      "scenario": "An interviewer asks: Tell me about a time you handled a production incident under pressure.",
+      "prompt": "Which answer opening best follows STAR structure?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I am generally calm in incidents and people like working with me."
+        },
+        {
+          "key": "B",
+          "text": "Situation: checkout errors spiked to 20% after a config change. Task: I was incident commander. Action: I froze deploys, assigned investigation owners, and rolled back within 12 minutes. Result: recovered service and cut similar risk with a config review checklist."
+        },
+        {
+          "key": "C",
+          "text": "We had many incidents last year, so I have lots of experience."
+        },
+        {
+          "key": "D",
+          "text": "My team fixed it while I monitored Slack."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "STAR needs Situation, Task, Action, Result with concrete ownership and outcome.",
+      "tags": ["STAR", "incident", "interview"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "beh-02",
+      "moduleId": "interview-behavioral",
+      "difficulty": "mid",
+      "scenario": "You are asked about a conflict with a peer who wanted to ship without tests.",
+      "prompt": "Which response shows mature conflict handling?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I told them their standards were low and escalated immediately."
+        },
+        {
+          "key": "B",
+          "text": "I aligned on shared goals first, proposed a minimum test set for the risky path, and we shipped one day later with fewer regressions. Relationship stayed strong because we focused on risk, not ego."
+        },
+        {
+          "key": "C",
+          "text": "I avoided the conflict and let them ship."
+        },
+        {
+          "key": "D",
+          "text": "I complained to other teammates privately."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Interviewers look for goal alignment, constructive alternatives, and preserved relationships.",
+      "tags": ["conflict", "collaboration"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "beh-03",
+      "moduleId": "interview-behavioral",
+      "difficulty": "senior",
+      "scenario": "The interviewer asks how you influence without authority across teams.",
+      "prompt": "Which answer is strongest?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I escalate until people do what I want."
+        },
+        {
+          "key": "B",
+          "text": "I build a shared problem statement with data, propose a lightweight RFC, invite affected teams early, and negotiate a sequenced rollout. In one case this cut cross-team delay from three weeks to six days."
+        },
+        {
+          "key": "C",
+          "text": "I usually just implement it myself."
+        },
+        {
+          "key": "D",
+          "text": "Influence is not part of engineering work."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Influence stories should show data, inclusive process, and measurable outcome.",
+      "tags": ["influence", "cross-team", "leadership"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "beh-04",
+      "moduleId": "interview-behavioral",
+      "difficulty": "junior",
+      "scenario": "They ask about a mistake you made.",
+      "prompt": "Which answer demonstrates ownership?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I do not really make mistakes."
+        },
+        {
+          "key": "B",
+          "text": "I once shipped a migration without a rollback plan. It caused a 15-minute read-only window. I owned the incident, restored from backup procedure, and added a mandatory rollback checklist to our release template."
+        },
+        {
+          "key": "C",
+          "text": "The process was unclear, so it was not really on me."
+        },
+        {
+          "key": "D",
+          "text": "My manager should have caught it."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Own the miss, quantify impact, and show a lasting preventive change.",
+      "tags": ["ownership", "mistake", "learning"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "beh-05",
+      "moduleId": "interview-behavioral",
+      "difficulty": "mid",
+      "scenario": "Question: How do you prioritize when everything is urgent?",
+      "prompt": "Which prioritization answer is most credible?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I just work longer hours until it is done."
+        },
+        {
+          "key": "B",
+          "text": "I rank by user impact and reversibility, confirm priorities with the stakeholder, and communicate what will slip. Last quarter this protected a payment deadline while deferring a low-risk UI polish."
+        },
+        {
+          "key": "C",
+          "text": "I do whichever task arrives first."
+        },
+        {
+          "key": "D",
+          "text": "I wait for someone else to decide everything."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Show a framework, stakeholder alignment, and an example of intentional tradeoffs.",
+      "tags": ["prioritization", "stakeholders"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "beh-06",
+      "moduleId": "interview-behavioral",
+      "difficulty": "senior",
+      "scenario": "You are interviewing for an IT Manager role. They ask how you give hard feedback.",
+      "prompt": "Which response is best?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I send a blunt message in public Slack so the lesson is clear."
+        },
+        {
+          "key": "B",
+          "text": "I give specific examples privately, describe business impact, agree on a concrete improvement plan, and follow up with support. Feedback is about performance, not personality."
+        },
+        {
+          "key": "C",
+          "text": "I avoid hard feedback to keep morale high."
+        },
+        {
+          "key": "D",
+          "text": "I wait until performance review season only."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Hard feedback should be private, specific, impact-based, and paired with a plan.",
+      "tags": ["feedback", "management"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "beh-07",
+      "moduleId": "interview-behavioral",
+      "difficulty": "mid",
+      "scenario": "They ask about mentoring a junior engineer who was struggling with on-call.",
+      "prompt": "Which mentoring story is strongest?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I took all pages myself so they would not fail."
+        },
+        {
+          "key": "B",
+          "text": "I shadowed two shifts, built a simplified runbook, set practice drills, and reviewed decisions after each page. Within a month they handled SEV-3s independently with clearer updates."
+        },
+        {
+          "key": "C",
+          "text": "I told them to study more documentation."
+        },
+        {
+          "key": "D",
+          "text": "I suggested they transfer teams."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Mentoring answers should show scaffolding, practice, and measurable growth.",
+      "tags": ["mentoring", "oncall"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "beh-08",
+      "moduleId": "interview-behavioral",
+      "difficulty": "junior",
+      "scenario": "Asked why you want this role.",
+      "prompt": "Which answer is most professional and specific?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I need a higher salary and a new visa sponsor."
+        },
+        {
+          "key": "B",
+          "text": "I want to deepen reliability ownership at scale. Your platform's multi-region roadmap matches my experience reducing MTTR and building actionable SLOs, and I am excited to contribute there."
+        },
+        {
+          "key": "C",
+          "text": "I am applying everywhere right now."
+        },
+        {
+          "key": "D",
+          "text": "The office is close to my house."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Motivation answers should connect your strengths to the company's concrete needs.",
+      "tags": ["motivation", "role-fit"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "beh-09",
+      "moduleId": "interview-behavioral",
+      "difficulty": "senior",
+      "scenario": "They ask about delivering bad news to leadership.",
+      "prompt": "Which approach is best?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I delay until I have perfect certainty."
+        },
+        {
+          "key": "B",
+          "text": "I share early with impact, confidence level, options, and a recommended decision. Example: I flagged a launch risk two weeks out, proposed a scoped delay, and we avoided a customer-facing failure."
+        },
+        {
+          "key": "C",
+          "text": "I soften the message until the risk is unclear."
+        },
+        {
+          "key": "D",
+          "text": "I only tell peers and hope it reaches leadership."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Leaders value early signal, options, and a recommendation — not surprise.",
+      "tags": ["leadership", "communication", "risk"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "beh-10",
+      "moduleId": "interview-behavioral",
+      "difficulty": "mid",
+      "scenario": "Closing question: Do you have questions for us?",
+      "prompt": "Which candidate question is strongest?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "How many vacation days do I get on day one?"
+        },
+        {
+          "key": "B",
+          "text": "What does success look like for this role in the first six months, and what reliability or delivery risks is the team most focused on right now?"
+        },
+        {
+          "key": "C",
+          "text": "No questions; I already know everything."
+        },
+        {
+          "key": "D",
+          "text": "Can I work fully remote forever no matter what?"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Strong closing questions show role understanding and business curiosity.",
+      "tags": ["closing", "questions"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    }
+  ]
+}

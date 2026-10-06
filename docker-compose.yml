@@ -17,5 +17,20 @@ services:
       timeout: 5s
       retries: 10
 
+  web:
+    build: .
+    container_name: as_english_web
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://as_english:as_english@db:5432/as_english?schema=public
+      AUTH_SECRET: ${AUTH_SECRET:-dev-secret-change-me-in-production-as-english-32chars}
+      AUTH_URL: http://localhost:3000
+      NEXTAUTH_URL: http://localhost:3000
+    depends_on:
+      db:
+        condition: service_healthy
+
 volumes:
   postgres_data:

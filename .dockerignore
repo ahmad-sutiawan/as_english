@@ -1,0 +1,6 @@
+node_modules
+.next
+.git
+scripts/python/.venv
+*.md
+.env*.local

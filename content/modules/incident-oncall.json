@@ -1,0 +1,300 @@
+{
+  "id": "incident-oncall",
+  "title": "Incident & On-Call",
+  "description": "Severity, mitigation, bridge updates, and calm urgency.",
+  "persona": ["SRE", "IT Manager"],
+  "status": "ready",
+  "itemCount": 10,
+  "items": [
+    {
+      "id": "inc-01",
+      "moduleId": "incident-oncall",
+      "difficulty": "mid",
+      "scenario": "You are primary on-call. PagerDuty fires for elevated 5xx on the checkout API. Error rate is 18% and rising. You have joined the incident bridge.",
+      "prompt": "What is the clearest first update to the bridge?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Something is broken in checkout. Looking into it."
+        },
+        {
+          "key": "B",
+          "text": "We are seeing elevated 5xx on checkout API, currently about 18% and rising. I am investigating root cause and will share a mitigation plan in five minutes."
+        },
+        {
+          "key": "C",
+          "text": "This might be related to yesterday's deploy, but I am not sure yet."
+        },
+        {
+          "key": "D",
+          "text": "Can someone else take a look? I just got paged."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Good bridge updates state impact, metric, ownership, and next checkpoint. Vague language or speculation without a plan slows response.",
+      "tags": ["incident", "bridge", "status"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "inc-02",
+      "moduleId": "incident-oncall",
+      "difficulty": "mid",
+      "scenario": "You confirmed a bad config rollout caused the outage. Rollback is ready and will take about three minutes.",
+      "prompt": "How do you announce the mitigation on the bridge?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Rolling back the bad config now. ETA three minutes. I will confirm once error rate returns to baseline."
+        },
+        {
+          "key": "B",
+          "text": "I found the issue. Trust me, this should fix it."
+        },
+        {
+          "key": "C",
+          "text": "We need approval from leadership before rolling back."
+        },
+        {
+          "key": "D",
+          "text": "Everyone stand by while I try a few things."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "State the action, ETA, and how you will verify success. That keeps the bridge aligned and calm.",
+      "tags": ["mitigation", "rollback", "communication"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "inc-03",
+      "moduleId": "incident-oncall",
+      "difficulty": "senior",
+      "scenario": "Customer success asks for a public status update while you are still mitigating. Leadership wants customer-safe language.",
+      "prompt": "Which customer-facing update is most appropriate right now?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Our checkout service is currently degraded. We have identified the cause and are applying a fix. We will update again within 15 minutes."
+        },
+        {
+          "key": "B",
+          "text": "A junior engineer pushed a broken config and broke payments."
+        },
+        {
+          "key": "C",
+          "text": "Everything is fine; please ignore any errors you see."
+        },
+        {
+          "key": "D",
+          "text": "We do not know what is happening and cannot estimate recovery."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "External updates should be factual, non-blaming, and include a next update window without leaking internal finger-pointing.",
+      "tags": ["status-page", "customer", "severity"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "inc-04",
+      "moduleId": "incident-oncall",
+      "difficulty": "junior",
+      "scenario": "Your shift ends in 20 minutes. An SEV-2 is still open but stable after mitigation. Secondary is online.",
+      "prompt": "What is the best handoff message?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I am signing off. Good luck."
+        },
+        {
+          "key": "B",
+          "text": "SEV-2 checkout 5xx is mitigated via config rollback. Error rate is back to baseline. Remaining work: confirm dashboards for 30 minutes and draft the incident timeline. Docs and Slack thread linked in the ticket."
+        },
+        {
+          "key": "C",
+          "text": "It is mostly fine now, just watch it."
+        },
+        {
+          "key": "D",
+          "text": "I fixed everything, so you can close the incident."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "A strong handoff includes current state, mitigation already applied, remaining risks/tasks, and pointers to context.",
+      "tags": ["handoff", "oncall"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "inc-05",
+      "moduleId": "incident-oncall",
+      "difficulty": "mid",
+      "scenario": "Two engineers start debugging different hypotheses at once and talk over each other on the bridge.",
+      "prompt": "As incident commander, what should you say?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Everyone stop talking. I will decide alone."
+        },
+        {
+          "key": "B",
+          "text": "Let's parallelize clearly: Alex owns DB connection pool checks, Mira owns recent deploy diffs. Please post findings in the thread; I will synthesize next steps in three minutes."
+        },
+        {
+          "key": "C",
+          "text": "Just keep trying whatever you think is right."
+        },
+        {
+          "key": "D",
+          "text": "We should wait until tomorrow to debug properly."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Incident command reduces chaos by assigning owners, channels, and a sync cadence.",
+      "tags": ["incident-commander", "coordination"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "inc-06",
+      "moduleId": "incident-oncall",
+      "difficulty": "senior",
+      "scenario": "A vendor API is timing out. Your service depends on it. A full outage is unlikely, but checkout latency is high for 12% of users.",
+      "prompt": "How do you frame severity to leadership?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "This is a total outage; we should wake everyone."
+        },
+        {
+          "key": "B",
+          "text": "Treating this as SEV-2: partial degradation affecting about 12% of checkout users due to vendor timeouts. We enabled stricter timeouts and a fallback path; monitoring recovery."
+        },
+        {
+          "key": "C",
+          "text": "Not our problem — the vendor is broken."
+        },
+        {
+          "key": "D",
+          "text": "Users always complain; no need to escalate."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Severity framing needs impact scope, cause hypothesis, and what you already did — not blame or understatement.",
+      "tags": ["severity", "vendor", "leadership"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "inc-07",
+      "moduleId": "incident-oncall",
+      "difficulty": "mid",
+      "scenario": "You need a database failover. It may cause a brief write interruption. Product asks if they can announce a maintenance window now.",
+      "prompt": "What do you reply?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Do not announce anything; just fail over silently."
+        },
+        {
+          "key": "B",
+          "text": "Yes — please announce a short maintenance for write operations. Planned failover starts in 10 minutes and should complete within five minutes. I will confirm when writes are healthy."
+        },
+        {
+          "key": "C",
+          "text": "Tell customers the database is unstable and may corrupt data."
+        },
+        {
+          "key": "D",
+          "text": "Ask customers to stop using the product indefinitely."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Coordinate a clear, time-bound customer message with operational reality and a confirmation step.",
+      "tags": ["failover", "product", "communication"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "inc-08",
+      "moduleId": "incident-oncall",
+      "difficulty": "junior",
+      "scenario": "A teammate suggests restarting all pods immediately without checking recent changes.",
+      "prompt": "What is a professional pushback?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "That idea is useless."
+        },
+        {
+          "key": "B",
+          "text": "Before a full restart, let's check the last deploy and error signatures for two minutes. If it still looks like a bad process state, we can restart a canary first."
+        },
+        {
+          "key": "C",
+          "text": "Sure, restart everything right now."
+        },
+        {
+          "key": "D",
+          "text": "I refuse to do anything you suggest."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Push back with a safer sequence and rationale, not with personal criticism.",
+      "tags": ["pushback", "runbook", "safety"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "inc-09",
+      "moduleId": "incident-oncall",
+      "difficulty": "senior",
+      "scenario": "The incident is resolved. Leadership asks in Slack whether engineering 'messed up again.'",
+      "prompt": "What is the best immediate reply?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Yes, the team failed again."
+        },
+        {
+          "key": "B",
+          "text": "Service is restored. We will share a blameless timeline and concrete follow-ups in the postmortem within 24 hours, including detection and prevention gaps."
+        },
+        {
+          "key": "C",
+          "text": "Please do not ask that in public Slack."
+        },
+        {
+          "key": "D",
+          "text": "It was entirely the vendor's fault, so no postmortem is needed."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Redirect from blame to restoration status and a structured learning process.",
+      "tags": ["post-incident", "leadership", "blameless"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    },
+    {
+      "id": "inc-10",
+      "moduleId": "incident-oncall",
+      "difficulty": "mid",
+      "scenario": "You are writing a short Slack update for stakeholders who are not on the bridge.",
+      "prompt": "Which update is clearest?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Still looking."
+        },
+        {
+          "key": "B",
+          "text": "Impact: checkout errors elevated. Status: mitigated via config rollback at 14:12 UTC. Current: error rate normal. Next: monitor for 30 minutes and open postmortem doc."
+        },
+        {
+          "key": "C",
+          "text": "Lots of moving parts; hard to explain."
+        },
+        {
+          "key": "D",
+          "text": "Please join the bridge if you care."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Stakeholder updates work best as Impact → Status → Current → Next.",
+      "tags": ["stakeholder", "slack", "status"],
+      "tts": { "scenario": true, "prompt": true, "answer": true }
+    }
+  ]
+}

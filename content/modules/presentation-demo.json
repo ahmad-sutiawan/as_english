@@ -1,0 +1,9 @@
+{
+  "id": "presentation-demo",
+  "title": "Presentation & Demo",
+  "description": "Coming soon — exercises for this workplace theme.",
+  "persona": ["IT Manager", "SRE", "Fullstack"],
+  "status": "stub",
+  "itemCount": 0,
+  "items": []
+}
