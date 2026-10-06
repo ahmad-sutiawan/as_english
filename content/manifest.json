@@ -1,0 +1,101 @@
+{
+  "version": "1.0.0",
+  "modules": [
+    {
+      "id": "interview-behavioral",
+      "title": "Interview — Behavioral",
+      "description": "STAR answers, ownership, conflict, and leadership stories for tech interviews.",
+      "persona": ["IT Manager", "SRE", "Fullstack"],
+      "status": "ready",
+      "itemCount": 10
+    },
+    {
+      "id": "interview-technical",
+      "title": "Interview — Technical",
+      "description": "Tradeoffs, system design phrasing, and clear technical explanations.",
+      "persona": ["SRE", "Fullstack"],
+      "status": "stub",
+      "itemCount": 0
+    },
+    {
+      "id": "offer-negotiation",
+      "title": "Offer & Negotiation",
+      "description": "Salary, start date, and polite counter-offers.",
+      "persona": ["IT Manager", "SRE", "Fullstack"],
+      "status": "stub",
+      "itemCount": 0
+    },
+    {
+      "id": "standup-sync",
+      "title": "Standup & Sync",
+      "description": "Blockers, ETA, and asking for help without drama.",
+      "persona": ["SRE", "Fullstack"],
+      "status": "stub",
+      "itemCount": 0
+    },
+    {
+      "id": "incident-oncall",
+      "title": "Incident & On-Call",
+      "description": "Severity, mitigation, bridge updates, and calm urgency.",
+      "persona": ["SRE", "IT Manager"],
+      "status": "ready",
+      "itemCount": 10
+    },
+    {
+      "id": "manager-updates",
+      "title": "Manager Updates",
+      "description": "Concise status, risk callouts, and decision requests.",
+      "persona": ["IT Manager", "SRE", "Fullstack"],
+      "status": "ready",
+      "itemCount": 10
+    },
+    {
+      "id": "slack-email",
+      "title": "Slack & Email",
+      "description": "Clear asks, tone control, and async thread etiquette.",
+      "persona": ["IT Manager", "SRE", "Fullstack"],
+      "status": "stub",
+      "itemCount": 0
+    },
+    {
+      "id": "presentation-demo",
+      "title": "Presentation & Demo",
+      "description": "Openings, transitions, and handling Q&A under pressure.",
+      "persona": ["IT Manager", "Fullstack"],
+      "status": "stub",
+      "itemCount": 0
+    },
+    {
+      "id": "pr-code-review",
+      "title": "PR & Code Review",
+      "description": "Soft/hard feedback and constructive suggestions.",
+      "persona": ["Fullstack", "SRE"],
+      "status": "stub",
+      "itemCount": 0
+    },
+    {
+      "id": "postmortem",
+      "title": "Postmortem",
+      "description": "Blameless language and clear action items.",
+      "persona": ["SRE", "IT Manager"],
+      "status": "stub",
+      "itemCount": 0
+    },
+    {
+      "id": "cross-team",
+      "title": "Cross-Team & Vendor",
+      "description": "Alignment, deadlines, and polite pushback.",
+      "persona": ["IT Manager", "SRE"],
+      "status": "stub",
+      "itemCount": 0
+    },
+    {
+      "id": "one-on-one",
+      "title": "1:1 & Mentoring",
+      "description": "Feedback, career talk, and coaching phrases.",
+      "persona": ["IT Manager"],
+      "status": "stub",
+      "itemCount": 0
+    }
+  ]
+}
