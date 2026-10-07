@@ -29,7 +29,10 @@ export default function RootLayout({
       lang="id"
       className={`${sourceSans.variable} ${fraunces.variable} h-full`}
     >
-      <body className="flex min-h-full flex-col bg-[var(--background)] text-[var(--foreground)] antialiased">
+      <body
+        className="flex min-h-full flex-col bg-[var(--background)] text-[var(--foreground)] antialiased"
+        suppressHydrationWarning
+      >
         <Providers>
           <SiteHeader />
           <main className="flex-1">{children}</main>

@@ -9,6 +9,7 @@
     "lint": "eslint",
     "db:up": "docker compose up -d db",
     "db:down": "docker compose down",
+    "deploy": "bash scripts/deploy.sh",
     "db:setup": "bash scripts/setup-local-db.sh",
     "db:migrate": "prisma migrate dev",
     "db:push": "prisma db push",

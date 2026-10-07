@@ -4,15 +4,19 @@ services:
     container_name: as_english_db
     restart: unless-stopped
     environment:
-      POSTGRES_USER: as_english
-      POSTGRES_PASSWORD: as_english
-      POSTGRES_DB: as_english
+      POSTGRES_USER: ${POSTGRES_USER:-as_english}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-as_english}
+      POSTGRES_DB: ${POSTGRES_DB:-as_english}
     ports:
-      - "5432:5432"
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U as_english -d as_english"]
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${POSTGRES_USER:-as_english} -d ${POSTGRES_DB:-as_english}",
+        ]
       interval: 5s
       timeout: 5s
       retries: 10
@@ -22,12 +26,13 @@ services:
     container_name: as_english_web
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "${APP_PORT:-3000}:3000"
     environment:
-      DATABASE_URL: postgresql://as_english:as_english@db:5432/as_english?schema=public
+      DATABASE_URL: postgresql://${POSTGRES_USER:-as_english}:${POSTGRES_PASSWORD:-as_english}@db:5432/${POSTGRES_DB:-as_english}?schema=public
       AUTH_SECRET: ${AUTH_SECRET:-dev-secret-change-me-in-production-as-english-32chars}
-      AUTH_URL: http://localhost:3000
-      NEXTAUTH_URL: http://localhost:3000
+      AUTH_URL: ${APP_URL:-http://localhost:3000}
+      NEXTAUTH_URL: ${APP_URL:-http://localhost:3000}
+      SEED_ON_START: ${SEED_ON_START:-true}
     depends_on:
       db:
         condition: service_healthy

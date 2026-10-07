@@ -109,3 +109,19 @@ AUTH_SECRET=generate-a-long-random-secret
 AUTH_URL=http://localhost:3000
 NEXTAUTH_URL=http://localhost:3000
 ```
+
+## Ubuntu deploy (Docker)
+
+On the server, after the first clone:
+
+```bash
+git pull
+./scripts/deploy.sh
+```
+
+The script installs Docker if needed, creates `.env` once (secrets + `APP_URL`), builds, migrates, seeds the demo user, and starts the stack.
+
+- App: `http://SERVER_IP:3000` (or set `APP_URL` before first deploy)
+- Demo: `demo@asenglish.local` / `demo1234`
+- Logs: `docker compose logs -f`
+- Stop: `docker compose down`

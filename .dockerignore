@@ -3,4 +3,9 @@ node_modules
 .git
 scripts/python/.venv
 *.md
+.env
+.env.*
+!.env.example
 .env*.local
+AgentStores
+agent-transcripts
