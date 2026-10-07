@@ -12,8 +12,14 @@ function createPrismaClient() {
 
 function isClientCurrent(client: PrismaClient): boolean {
   // After schema changes, a cached global client can miss new delegates.
-  const delegate = (client as { quickStats?: { upsert?: unknown } }).quickStats;
-  return typeof delegate?.upsert === "function";
+  const c = client as {
+    quickStats?: { upsert?: unknown };
+    speakStats?: { upsert?: unknown };
+  };
+  return (
+    typeof c.quickStats?.upsert === "function" &&
+    typeof c.speakStats?.upsert === "function"
+  );
 }
 
 function getPrismaClient(): PrismaClient {

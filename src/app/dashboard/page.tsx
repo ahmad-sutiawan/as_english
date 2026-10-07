@@ -4,6 +4,7 @@ import { prisma } from "@/lib/db";
 import { getModules } from "@/lib/content";
 import { getLearningStats } from "@/lib/review";
 import { getOrCreateQuickStats } from "@/lib/quick";
+import { getOrCreateSpeakStats } from "@/lib/speak";
 import { ModuleCatalog } from "@/components/module-catalog";
 import { redirect } from "next/navigation";
 
@@ -12,12 +13,13 @@ export default async function DashboardPage() {
   if (!session?.user?.id) redirect("/login");
 
   const modules = getModules();
-  const [progressRows, stats, quickStats] = await Promise.all([
+  const [progressRows, stats, quickStats, speakStats] = await Promise.all([
     prisma.progress.findMany({
       where: { userId: session.user.id },
     }),
     getLearningStats(session.user.id),
     getOrCreateQuickStats(session.user.id),
+    getOrCreateSpeakStats(session.user.id),
   ]);
 
   const progressByModule: Record<string, { done: number }> = {};
@@ -75,6 +77,28 @@ export default async function DashboardPage() {
       <section className="mt-6 flex flex-wrap items-center gap-3 rounded-md border border-[var(--accent)] bg-[var(--accent-soft)] px-4 py-4">
         <div className="min-w-0 flex-1">
           <h2 className="text-sm font-semibold text-[var(--ink)]">
+            Produksi Bicara
+          </h2>
+          <p className="mt-1 text-sm text-[var(--muted)]">
+            Offline: listen → retrieve → construct → speak. XP{" "}
+            <span className="text-[var(--ink)]">{speakStats.xp}</span> · streak{" "}
+            <span className="text-[var(--accent)]">
+              {speakStats.streak} hari
+            </span>
+            .
+          </p>
+        </div>
+        <Link
+          href="/speak"
+          className="shrink-0 rounded-md bg-[var(--accent)] px-4 py-2 text-sm font-medium text-[#06221e] hover:bg-[var(--accent-hover)]"
+        >
+          Mulai bicara
+        </Link>
+      </section>
+
+      <section className="mt-6 flex flex-wrap items-center gap-3 rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-4">
+        <div className="min-w-0 flex-1">
+          <h2 className="text-sm font-semibold text-[var(--ink)]">
             Latihan Cepat
           </h2>
           <p className="mt-1 text-sm text-[var(--muted)]">
@@ -85,7 +109,7 @@ export default async function DashboardPage() {
         </div>
         <Link
           href="/quick"
-          className="shrink-0 rounded-md bg-[var(--accent)] px-4 py-2 text-sm font-medium text-[#06221e] hover:bg-[var(--accent-hover)]"
+          className="shrink-0 rounded-md border border-[var(--border)] bg-[var(--surface-2)] px-4 py-2 text-sm font-medium text-[var(--ink)] hover:border-[var(--accent)]"
         >
           Mulai cepat
         </Link>

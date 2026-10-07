@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "itemCount": 46,
+  "packs": [
+    {
+      "id": "it-operations",
+      "title": "IT Operations",
+      "titleId": "Operasi IT",
+      "itemCount": 10
+    },
+    {
+      "id": "reporting-supervisor",
+      "title": "Reporting to Supervisor",
+      "titleId": "Laporan ke Supervisor",
+      "itemCount": 10
+    },
+    {
+      "id": "daily-office",
+      "title": "Daily Office Conversation",
+      "titleId": "Percakapan Kantor Harian",
+      "itemCount": 8
+    },
+    {
+      "id": "meetings",
+      "title": "Meetings",
+      "titleId": "Meeting",
+      "itemCount": 8
+    },
+    {
+      "id": "problem-solving",
+      "title": "Problem Solving",
+      "titleId": "Pemecahan Masalah",
+      "itemCount": 10
+    }
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "id": "daily-office",
+  "title": "Daily Office Conversation",
+  "titleId": "Percakapan Kantor Harian",
+  "itemCount": 8,
+  "items": [
+    {
+      "id": "day_001",
+      "category": "Daily Office",
+      "level": "junior",
+      "target": "Can we move our one-on-one to tomorrow afternoon?",
+      "targetId": "Bisakah kita pindahkan one-on-one ke besok sore?",
+      "chunks": [
+        "Can we move",
+        "our one-on-one",
+        "to tomorrow afternoon"
+      ],
+      "scrambled": [
+        "Can",
+        "we",
+        "move",
+        "our",
+        "one-on-one",
+        "to",
+        "tomorrow",
+        "afternoon"
+      ],
+      "keywords": [
+        "move",
+        "one-on-one",
+        "tomorrow"
+      ],
+      "grammarPatterns": [
+        "modal_can"
+      ],
+      "commonErrors": [
+        "Can we move our one on one to tomorrow afternoon"
+      ],
+      "scenario": "You need to reschedule a meeting politely.",
+      "scenarioId": "Anda perlu menjadwal ulang meeting dengan sopan.",
+      "modelAnswers": [
+        "Can we move our one-on-one to tomorrow afternoon?"
+      ],
+      "audio": null
+    },
+    {
+      "id": "day_002",
+      "category": "Daily Office",
+      "level": "junior",
+      "target": "I'll get back to you after I check with the team.",
+      "targetId": "Saya akan kembali mengabari setelah saya cek dengan tim.",
+      "chunks": [
+        "I'll get back to you",
+        "after I check",
+        "with the team"
+      ],
+      "scrambled": [
+        "I'll",
+        "get",
+        "back",
+        "to",
+        "you",
+        "after",
+        "I",
+        "check",
+        "with",
+        "the",
+        "team"
+      ],
+      "keywords": [
+        "get",
+        "back",
+        "team"
+      ],
+      "grammarPatterns": [
+        "future_will"
+      ],
+      "commonErrors": [
+        "I will get back to you after I checking with the team"
+      ],
+      "scenario": "A colleague asks for an immediate answer you don't have yet.",
+      "scenarioId": "Rekan minta jawaban segera yang belum Anda miliki.",
+      "modelAnswers": [
+        "I'll get back to you after I check with the team."
+      ],
+      "audio": null
+    },
+    {
+      "id": "day_003",
+      "category": "Daily Office",
+      "level": "mid",
+      "target": "Thanks for the update — that helps a lot.",
+      "targetId": "Terima kasih atas updatenya — itu sangat membantu.",
+      "chunks": [
+        "Thanks for the update",
+        "that helps",
+        "a lot"
+      ],
+      "scrambled": [
+        "Thanks",
+        "for",
+        "the",
+        "update",
+        "that",
+        "helps",
+        "a",
+        "lot"
+      ],
+      "keywords": [
+        "thanks",
+        "update",
+        "helps"
+      ],
+      "grammarPatterns": [
+        "present_simple"
+      ],
+      "commonErrors": [
+        "Thank for the update that help a lot"
+      ],
+      "scenario": "Someone just shared a clear status in Slack.",
+      "scenarioId": "Seseorang baru saja berbagi status jelas di Slack.",
+      "modelAnswers": [
+        "Thanks for the update — that helps a lot."
+      ],
+      "audio": null
+    },
+    {
+      "id": "day_004",
+      "category": "Daily Office",
+      "level": "junior",
+      "target": "I'm unavailable from two to three for a dentist appointment.",
+      "targetId": "Saya tidak tersedia dari jam dua sampai tiga untuk janji dokter gigi.",
+      "chunks": [
+        "I'm unavailable",
+        "from two to three",
+        "for a dentist appointment"
+      ],
+      "scrambled": [
+        "I'm",
+        "unavailable",
+        "from",
+        "two",
+        "to",
+        "three",
+        "for",
+        "a",
+        "dentist",
+        "appointment"
+      ],
+      "keywords": [
+        "unavailable",
+        "dentist",
+        "appointment"
+      ],
+      "grammarPatterns": [
+        "present_simple"
+      ],
+      "commonErrors": [
+        "I unavailable from two to three for dentist appointment"
+      ],
+      "scenario": "You need to block focus time on the calendar.",
+      "scenarioId": "Anda perlu memblokir waktu di kalender.",
+      "modelAnswers": [
+        "I'm unavailable from two to three for a dentist appointment."
+      ],
+      "audio": null
+    },
+    {
+      "id": "day_005",
+      "category": "Daily Office",
+      "level": "mid",
+      "target": "Could you share the latest draft when you have a moment?",
+      "targetId": "Bisakah Anda bagikan draft terbaru ketika ada waktu?",
+      "chunks": [
+        "Could you share",
+        "the latest draft",
+        "when you have a moment"
+      ],
+      "scrambled": [
+        "Could",
+        "you",
+        "share",
+        "the",
+        "latest",
+        "draft",
+        "when",
+        "you",
+        "have",
+        "a",
+        "moment"
+      ],
+      "keywords": [
+        "share",
+        "draft",
+        "moment"
+      ],
+      "grammarPatterns": [
+        "modal_could"
+      ],
+      "commonErrors": [
+        "Could you share the latest draft when you have moment"
+      ],
+      "scenario": "Ask politely for a document.",
+      "scenarioId": "Minta dokumen dengan sopan.",
+      "modelAnswers": [
+        "Could you share the latest draft when you have a moment?"
+      ],
+      "audio": null
+    },
+    {
+      "id": "day_006",
+      "category": "Daily Office",
+      "level": "junior",
+      "target": "Let me know if you need any help with the ticket.",
+      "targetId": "Kabari saya jika Anda butuh bantuan untuk tiket itu.",
+      "chunks": [
+        "Let me know",
+        "if you need any help",
+        "with the ticket"
+      ],
+      "scrambled": [
+        "Let",
+        "me",
+        "know",
+        "if",
+        "you",
+        "need",
+        "any",
+        "help",
+        "with",
+        "the",
+        "ticket"
+      ],
+      "keywords": [
+        "help",
+        "ticket",
+        "know"
+      ],
+      "grammarPatterns": [
+        "imperative",
+        "conditional_if"
+      ],
+      "commonErrors": [
+        "Let me know if you need help with ticket"
+      ],
+      "scenario": "Offer help after assigning a task.",
+      "scenarioId": "Tawarkan bantuan setelah assign tugas.",
+      "modelAnswers": [
+        "Let me know if you need any help with the ticket."
+      ],
+      "audio": null
+    },
+    {
+      "id": "day_007",
+      "category": "Daily Office",
+      "level": "mid",
+      "target": "I'm looping in the security team for a second look.",
+      "targetId": "Saya mengajak tim security untuk melihat sekali lagi.",
+      "chunks": [
+        "I'm looping in",
+        "the security team",
+        "for a second look"
+      ],
+      "scrambled": [
+        "I'm",
+        "looping",
+        "in",
+        "the",
+        "security",
+        "team",
+        "for",
+        "a",
+        "second",
+        "look"
+      ],
+      "keywords": [
+        "looping",
+        "security",
+        "look"
+      ],
+      "grammarPatterns": [
+        "present_continuous"
+      ],
+      "commonErrors": [
+        "I looping in the security team for second look"
+      ],
+      "scenario": "Explain why you CC'd another team.",
+      "scenarioId": "Jelaskan kenapa Anda CC tim lain.",
+      "modelAnswers": [
+        "I'm looping in the security team for a second look."
+      ],
+      "audio": null
+    },
+    {
+      "id": "day_008",
+      "category": "Daily Office",
+      "level": "junior",
+      "target": "Sorry for the delayed reply — I was in back-to-back meetings.",
+      "targetId": "Maaf balasan terlambat — saya ada meeting beruntun.",
+      "chunks": [
+        "Sorry for the delayed reply",
+        "I was in",
+        "back-to-back meetings"
+      ],
+      "scrambled": [
+        "Sorry",
+        "for",
+        "the",
+        "delayed",
+        "reply",
+        "I",
+        "was",
+        "in",
+        "back-to-back",
+        "meetings"
+      ],
+      "keywords": [
+        "sorry",
+        "delayed",
+        "meetings"
+      ],
+      "grammarPatterns": [
+        "past_simple"
+      ],
+      "commonErrors": [
+        "Sorry for delayed reply I was in back to back meeting"
+      ],
+      "scenario": "Apologize for a late Slack reply.",
+      "scenarioId": "Minta maaf karena balasan Slack terlambat.",
+      "modelAnswers": [
+        "Sorry for the delayed reply — I was in back-to-back meetings."
+      ],
+      "audio": null
+    }
+  ]
+}

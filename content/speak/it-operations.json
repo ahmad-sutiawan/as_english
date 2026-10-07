@@ -1,0 +1,414 @@
+{
+  "id": "it-operations",
+  "title": "IT Operations",
+  "titleId": "Operasi IT",
+  "itemCount": 10,
+  "items": [
+    {
+      "id": "it_ops_001",
+      "category": "IT Operations",
+      "level": "junior",
+      "target": "I've already checked the server, and everything looks normal.",
+      "targetId": "Saya sudah memeriksa server, dan semuanya terlihat normal.",
+      "chunks": [
+        "I've already checked",
+        "the server",
+        "and everything looks normal"
+      ],
+      "scrambled": [
+        "already",
+        "server",
+        "I've",
+        "checked",
+        "the",
+        "and",
+        "everything",
+        "looks",
+        "normal"
+      ],
+      "keywords": [
+        "checked",
+        "server",
+        "normal"
+      ],
+      "grammarPatterns": [
+        "present_perfect"
+      ],
+      "commonErrors": [
+        "I already check the server",
+        "I already checked server"
+      ],
+      "scenario": "Your supervisor asks: What's the status of the server?",
+      "scenarioId": "Supervisor Anda bertanya: Bagaimana status server-nya?",
+      "modelAnswers": [
+        "I've already checked the server, and everything looks normal."
+      ],
+      "audio": null
+    },
+    {
+      "id": "it_ops_002",
+      "category": "IT Operations",
+      "level": "junior",
+      "target": "I'll investigate the issue and update you shortly.",
+      "targetId": "Saya akan menyelidiki masalahnya dan mengabari Anda sebentar lagi.",
+      "chunks": [
+        "I'll investigate",
+        "the issue",
+        "and update you shortly"
+      ],
+      "scrambled": [
+        "investigate",
+        "I'll",
+        "the",
+        "issue",
+        "and",
+        "update",
+        "you",
+        "shortly"
+      ],
+      "keywords": [
+        "investigate",
+        "issue",
+        "update"
+      ],
+      "grammarPatterns": [
+        "future_will"
+      ],
+      "commonErrors": [
+        "I will investigate the issue and update you short"
+      ],
+      "scenario": "Your manager asks: Can you look into this alert?",
+      "scenarioId": "Manager Anda bertanya: Bisa Anda cek alert ini?",
+      "modelAnswers": [
+        "I'll investigate the issue and update you shortly."
+      ],
+      "audio": null
+    },
+    {
+      "id": "it_ops_003",
+      "category": "IT Operations",
+      "level": "mid",
+      "target": "We've rolled back the deployment because error rates spiked.",
+      "targetId": "Kami sudah rollback deployment karena error rate melonjak.",
+      "chunks": [
+        "We've rolled back",
+        "the deployment",
+        "because error rates spiked"
+      ],
+      "scrambled": [
+        "We've",
+        "rolled",
+        "back",
+        "the",
+        "deployment",
+        "because",
+        "error",
+        "rates",
+        "spiked"
+      ],
+      "keywords": [
+        "rolled",
+        "deployment",
+        "error"
+      ],
+      "grammarPatterns": [
+        "present_perfect",
+        "cause_clause"
+      ],
+      "commonErrors": [
+        "We roll back the deployment because error rate spike"
+      ],
+      "scenario": "Incident bridge: Why did you roll back?",
+      "scenarioId": "Incident bridge: Kenapa Anda rollback?",
+      "modelAnswers": [
+        "We've rolled back the deployment because error rates spiked."
+      ],
+      "audio": null
+    },
+    {
+      "id": "it_ops_004",
+      "category": "IT Operations",
+      "level": "mid",
+      "target": "The database failover completed successfully within two minutes.",
+      "targetId": "Failover database selesai sukses dalam dua menit.",
+      "chunks": [
+        "The database failover",
+        "completed successfully",
+        "within two minutes"
+      ],
+      "scrambled": [
+        "The",
+        "database",
+        "failover",
+        "completed",
+        "successfully",
+        "within",
+        "two",
+        "minutes"
+      ],
+      "keywords": [
+        "failover",
+        "completed",
+        "minutes"
+      ],
+      "grammarPatterns": [
+        "past_simple"
+      ],
+      "commonErrors": [
+        "The database failover complete successfully in two minute"
+      ],
+      "scenario": "Ops asks: Did failover finish?",
+      "scenarioId": "Ops bertanya: Apakah failover sudah selesai?",
+      "modelAnswers": [
+        "The database failover completed successfully within two minutes."
+      ],
+      "audio": null
+    },
+    {
+      "id": "it_ops_005",
+      "category": "IT Operations",
+      "level": "junior",
+      "target": "I'm monitoring the latency metrics right now.",
+      "targetId": "Saya sedang memantau metrik latensi saat ini.",
+      "chunks": [
+        "I'm monitoring",
+        "the latency metrics",
+        "right now"
+      ],
+      "scrambled": [
+        "I'm",
+        "monitoring",
+        "the",
+        "latency",
+        "metrics",
+        "right",
+        "now"
+      ],
+      "keywords": [
+        "monitoring",
+        "latency",
+        "metrics"
+      ],
+      "grammarPatterns": [
+        "present_continuous"
+      ],
+      "commonErrors": [
+        "I monitoring the latency metric now"
+      ],
+      "scenario": "Manager: What are you doing now?",
+      "scenarioId": "Manager: Sedang apa Anda sekarang?",
+      "modelAnswers": [
+        "I'm monitoring the latency metrics right now."
+      ],
+      "audio": null
+    },
+    {
+      "id": "it_ops_006",
+      "category": "IT Operations",
+      "level": "senior",
+      "target": "If the queue keeps growing, we'll scale the workers horizontally.",
+      "targetId": "Jika antrian terus tumbuh, kami akan scale worker secara horizontal.",
+      "chunks": [
+        "If the queue keeps growing",
+        "we'll scale",
+        "the workers horizontally"
+      ],
+      "scrambled": [
+        "If",
+        "the",
+        "queue",
+        "keeps",
+        "growing",
+        "we'll",
+        "scale",
+        "the",
+        "workers",
+        "horizontally"
+      ],
+      "keywords": [
+        "queue",
+        "scale",
+        "workers"
+      ],
+      "grammarPatterns": [
+        "conditional_if"
+      ],
+      "commonErrors": [
+        "If the queue keep growing we will scale the worker horizontal"
+      ],
+      "scenario": "On-call asks: What's the next step if backlog rises?",
+      "scenarioId": "On-call bertanya: Langkah berikutnya jika backlog naik?",
+      "modelAnswers": [
+        "If the queue keeps growing, we'll scale the workers horizontally."
+      ],
+      "audio": null
+    },
+    {
+      "id": "it_ops_007",
+      "category": "IT Operations",
+      "level": "mid",
+      "target": "Please restart the service after clearing the cache.",
+      "targetId": "Tolong restart service setelah membersihkan cache.",
+      "chunks": [
+        "Please restart",
+        "the service",
+        "after clearing the cache"
+      ],
+      "scrambled": [
+        "Please",
+        "restart",
+        "the",
+        "service",
+        "after",
+        "clearing",
+        "the",
+        "cache"
+      ],
+      "keywords": [
+        "restart",
+        "service",
+        "cache"
+      ],
+      "grammarPatterns": [
+        "imperative"
+      ],
+      "commonErrors": [
+        "Please restart service after clear the cache"
+      ],
+      "scenario": "Junior asks how to recover a stuck worker.",
+      "scenarioId": "Junior bertanya cara recover worker yang stuck.",
+      "modelAnswers": [
+        "Please restart the service after clearing the cache."
+      ],
+      "audio": null
+    },
+    {
+      "id": "it_ops_008",
+      "category": "IT Operations",
+      "level": "junior",
+      "target": "The alert was a false positive caused by a flaky probe.",
+      "targetId": "Alert itu false positive karena probe yang flaky.",
+      "chunks": [
+        "The alert was",
+        "a false positive",
+        "caused by a flaky probe"
+      ],
+      "scrambled": [
+        "The",
+        "alert",
+        "was",
+        "a",
+        "false",
+        "positive",
+        "caused",
+        "by",
+        "a",
+        "flaky",
+        "probe"
+      ],
+      "keywords": [
+        "alert",
+        "false",
+        "probe"
+      ],
+      "grammarPatterns": [
+        "passive"
+      ],
+      "commonErrors": [
+        "The alert is false positive because flaky probe"
+      ],
+      "scenario": "Manager: Was that a real outage?",
+      "scenarioId": "Manager: Apakah itu outage sungguhan?",
+      "modelAnswers": [
+        "The alert was a false positive caused by a flaky probe."
+      ],
+      "audio": null
+    },
+    {
+      "id": "it_ops_009",
+      "category": "IT Operations",
+      "level": "senior",
+      "target": "We've mitigated the issue, and I'm writing the postmortem notes.",
+      "targetId": "Kami sudah mitigasi masalahnya, dan saya sedang menulis catatan postmortem.",
+      "chunks": [
+        "We've mitigated the issue",
+        "and I'm writing",
+        "the postmortem notes"
+      ],
+      "scrambled": [
+        "We've",
+        "mitigated",
+        "the",
+        "issue",
+        "and",
+        "I'm",
+        "writing",
+        "the",
+        "postmortem",
+        "notes"
+      ],
+      "keywords": [
+        "mitigated",
+        "postmortem",
+        "writing"
+      ],
+      "grammarPatterns": [
+        "present_perfect",
+        "present_continuous"
+      ],
+      "commonErrors": [
+        "We mitigate the issue and I writing the postmortem"
+      ],
+      "scenario": "After an incident: What's the current status?",
+      "scenarioId": "Setelah incident: Bagaimana status saat ini?",
+      "modelAnswers": [
+        "We've mitigated the issue, and I'm writing the postmortem notes."
+      ],
+      "audio": null
+    },
+    {
+      "id": "it_ops_010",
+      "category": "IT Operations",
+      "level": "mid",
+      "target": "I'll page the platform team if the disk fills above ninety percent.",
+      "targetId": "Saya akan page tim platform jika disk terisi di atas sembilan puluh persen.",
+      "chunks": [
+        "I'll page",
+        "the platform team",
+        "if the disk fills above ninety percent"
+      ],
+      "scrambled": [
+        "I'll",
+        "page",
+        "the",
+        "platform",
+        "team",
+        "if",
+        "the",
+        "disk",
+        "fills",
+        "above",
+        "ninety",
+        "percent"
+      ],
+      "keywords": [
+        "page",
+        "disk",
+        "percent"
+      ],
+      "grammarPatterns": [
+        "future_will",
+        "conditional_if"
+      ],
+      "commonErrors": [
+        "I will page platform team if disk fill above ninety percent"
+      ],
+      "scenario": "On-call runbook: When do you escalate?",
+      "scenarioId": "Runbook on-call: Kapan Anda escalate?",
+      "modelAnswers": [
+        "I'll page the platform team if the disk fills above ninety percent."
+      ],
+      "audio": null
+    }
+  ]
+}

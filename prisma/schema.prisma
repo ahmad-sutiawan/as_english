@@ -23,11 +23,13 @@ model User {
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
 
-  accounts   Account[]
-  sessions   Session[]
-  progress   Progress[]
-  attempts   Attempt[]
-  quickStats QuickStats?
+  accounts      Account[]
+  sessions      Session[]
+  progress      Progress[]
+  attempts      Attempt[]
+  quickStats    QuickStats?
+  speakStats    SpeakStats?
+  speakProgress SpeakProgress[]
 }
 
 model QuickStats {
@@ -108,4 +110,36 @@ model Attempt {
 
   @@index([userId, moduleId])
   @@index([itemId])
+}
+
+model SpeakStats {
+  id           String    @id @default(cuid())
+  userId       String    @unique
+  xp           Int       @default(0)
+  streak       Int       @default(0)
+  bestStreak   Int       @default(0)
+  sessionsDone Int       @default(0)
+  lastPlayDate DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model SpeakProgress {
+  id             String    @id @default(cuid())
+  userId         String
+  itemId         String
+  attempt1Score  Int       @default(0)
+  attempt2Score  Int       @default(0)
+  mastered       Boolean   @default(false)
+  nextReviewAt   DateTime?
+  lastTranscript String?   @db.Text
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, itemId])
+  @@index([userId, nextReviewAt])
 }

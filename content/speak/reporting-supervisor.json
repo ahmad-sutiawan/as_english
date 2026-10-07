@@ -1,0 +1,426 @@
+{
+  "id": "reporting-supervisor",
+  "title": "Reporting to Supervisor",
+  "titleId": "Laporan ke Supervisor",
+  "itemCount": 10,
+  "items": [
+    {
+      "id": "rep_001",
+      "category": "Reporting",
+      "level": "junior",
+      "target": "I've finished the migration, and I'm verifying the connections now.",
+      "targetId": "Saya sudah menyelesaikan migrasi, dan sedang memverifikasi koneksi sekarang.",
+      "chunks": [
+        "I've finished the migration",
+        "and I'm verifying",
+        "the connections now"
+      ],
+      "scrambled": [
+        "I've",
+        "finished",
+        "the",
+        "migration",
+        "and",
+        "I'm",
+        "verifying",
+        "the",
+        "connections",
+        "now"
+      ],
+      "keywords": [
+        "finished",
+        "migration",
+        "verifying"
+      ],
+      "grammarPatterns": [
+        "present_perfect",
+        "present_continuous"
+      ],
+      "commonErrors": [
+        "I finish the migration and I verifying the connection"
+      ],
+      "scenario": "Your supervisor asks: What's the status of the server migration?",
+      "scenarioId": "Supervisor: Bagaimana status migrasi server?",
+      "modelAnswers": [
+        "I've finished the migration, and I'm verifying the connections now."
+      ],
+      "audio": null
+    },
+    {
+      "id": "rep_002",
+      "category": "Reporting",
+      "level": "mid",
+      "target": "We're about half a day behind schedule due to flaky tests.",
+      "targetId": "Kami mundur sekitar setengah hari dari jadwal karena tes yang flaky.",
+      "chunks": [
+        "We're about half a day behind",
+        "schedule",
+        "due to flaky tests"
+      ],
+      "scrambled": [
+        "We're",
+        "about",
+        "half",
+        "a",
+        "day",
+        "behind",
+        "schedule",
+        "due",
+        "to",
+        "flaky",
+        "tests"
+      ],
+      "keywords": [
+        "behind",
+        "schedule",
+        "flaky"
+      ],
+      "grammarPatterns": [
+        "present_continuous",
+        "cause_clause"
+      ],
+      "commonErrors": [
+        "We about half day behind schedule because flaky test"
+      ],
+      "scenario": "Standup: Are you on track for today's estimate?",
+      "scenarioId": "Standup: Apakah Anda on track untuk estimasi hari ini?",
+      "modelAnswers": [
+        "We're about half a day behind schedule due to flaky tests."
+      ],
+      "audio": null
+    },
+    {
+      "id": "rep_003",
+      "category": "Reporting",
+      "level": "junior",
+      "target": "I need more time to investigate the root cause.",
+      "targetId": "Saya butuh lebih banyak waktu untuk menyelidiki root cause.",
+      "chunks": [
+        "I need more time",
+        "to investigate",
+        "the root cause"
+      ],
+      "scrambled": [
+        "I",
+        "need",
+        "more",
+        "time",
+        "to",
+        "investigate",
+        "the",
+        "root",
+        "cause"
+      ],
+      "keywords": [
+        "need",
+        "investigate",
+        "root"
+      ],
+      "grammarPatterns": [
+        "infinitive"
+      ],
+      "commonErrors": [
+        "I need more time for investigate root cause"
+      ],
+      "scenario": "Manager: When will you have an update?",
+      "scenarioId": "Manager: Kapan Anda punya update?",
+      "modelAnswers": [
+        "I need more time to investigate the root cause."
+      ],
+      "audio": null
+    },
+    {
+      "id": "rep_004",
+      "category": "Reporting",
+      "level": "senior",
+      "target": "Customer impact is limited to the checkout API in the EU region.",
+      "targetId": "Dampak ke pelanggan terbatas pada checkout API di wilayah EU.",
+      "chunks": [
+        "Customer impact is limited",
+        "to the checkout API",
+        "in the EU region"
+      ],
+      "scrambled": [
+        "Customer",
+        "impact",
+        "is",
+        "limited",
+        "to",
+        "the",
+        "checkout",
+        "API",
+        "in",
+        "the",
+        "EU",
+        "region"
+      ],
+      "keywords": [
+        "impact",
+        "checkout",
+        "EU"
+      ],
+      "grammarPatterns": [
+        "passive"
+      ],
+      "commonErrors": [
+        "Customer impact limited to checkout API in EU region"
+      ],
+      "scenario": "Exec asks: What's the customer impact?",
+      "scenarioId": "Exec bertanya: Apa dampak ke pelanggan?",
+      "modelAnswers": [
+        "Customer impact is limited to the checkout API in the EU region."
+      ],
+      "audio": null
+    },
+    {
+      "id": "rep_005",
+      "category": "Reporting",
+      "level": "mid",
+      "target": "I'll send a written update by the end of the day.",
+      "targetId": "Saya akan kirim update tertulis sebelum akhir hari.",
+      "chunks": [
+        "I'll send",
+        "a written update",
+        "by the end of the day"
+      ],
+      "scrambled": [
+        "I'll",
+        "send",
+        "a",
+        "written",
+        "update",
+        "by",
+        "the",
+        "end",
+        "of",
+        "the",
+        "day"
+      ],
+      "keywords": [
+        "send",
+        "update",
+        "day"
+      ],
+      "grammarPatterns": [
+        "future_will"
+      ],
+      "commonErrors": [
+        "I will send written update at the end of day"
+      ],
+      "scenario": "Your lead asks for a status note.",
+      "scenarioId": "Lead Anda minta catatan status.",
+      "modelAnswers": [
+        "I'll send a written update by the end of the day."
+      ],
+      "audio": null
+    },
+    {
+      "id": "rep_006",
+      "category": "Reporting",
+      "level": "junior",
+      "target": "Yesterday I fixed the auth bug, and today I'm writing tests.",
+      "targetId": "Kemarin saya memperbaiki bug auth, dan hari ini saya menulis tes.",
+      "chunks": [
+        "Yesterday I fixed",
+        "the auth bug",
+        "and today I'm writing tests"
+      ],
+      "scrambled": [
+        "Yesterday",
+        "I",
+        "fixed",
+        "the",
+        "auth",
+        "bug",
+        "and",
+        "today",
+        "I'm",
+        "writing",
+        "tests"
+      ],
+      "keywords": [
+        "fixed",
+        "auth",
+        "tests"
+      ],
+      "grammarPatterns": [
+        "past_simple",
+        "present_continuous"
+      ],
+      "commonErrors": [
+        "Yesterday I fix the auth bug and today I writing test"
+      ],
+      "scenario": "Standup: Give your yesterday / today update.",
+      "scenarioId": "Standup: Berikan update yesterday / today Anda.",
+      "modelAnswers": [
+        "Yesterday I fixed the auth bug, and today I'm writing tests."
+      ],
+      "audio": null
+    },
+    {
+      "id": "rep_007",
+      "category": "Reporting",
+      "level": "mid",
+      "target": "The blocker is missing staging credentials from the platform team.",
+      "targetId": "Blocker-nya adalah kredensial staging yang belum ada dari tim platform.",
+      "chunks": [
+        "The blocker is",
+        "missing staging credentials",
+        "from the platform team"
+      ],
+      "scrambled": [
+        "The",
+        "blocker",
+        "is",
+        "missing",
+        "staging",
+        "credentials",
+        "from",
+        "the",
+        "platform",
+        "team"
+      ],
+      "keywords": [
+        "blocker",
+        "credentials",
+        "platform"
+      ],
+      "grammarPatterns": [
+        "present_simple"
+      ],
+      "commonErrors": [
+        "The blocker is miss staging credential from platform team"
+      ],
+      "scenario": "Standup: Any blockers?",
+      "scenarioId": "Standup: Ada blocker?",
+      "modelAnswers": [
+        "The blocker is missing staging credentials from the platform team."
+      ],
+      "audio": null
+    },
+    {
+      "id": "rep_008",
+      "category": "Reporting",
+      "level": "senior",
+      "target": "I recommend we postpone the release until the flake is quarantined.",
+      "targetId": "Saya merekomendasikan kita tunda rilis sampai flake di-quarantine.",
+      "chunks": [
+        "I recommend we postpone",
+        "the release",
+        "until the flake is quarantined"
+      ],
+      "scrambled": [
+        "I",
+        "recommend",
+        "we",
+        "postpone",
+        "the",
+        "release",
+        "until",
+        "the",
+        "flake",
+        "is",
+        "quarantined"
+      ],
+      "keywords": [
+        "recommend",
+        "postpone",
+        "flake"
+      ],
+      "grammarPatterns": [
+        "subjunctive_recommend",
+        "passive"
+      ],
+      "commonErrors": [
+        "I recommend we postpone the release until the flake quarantine"
+      ],
+      "scenario": "Release review: Should we ship tonight?",
+      "scenarioId": "Release review: Apakah kita ship malam ini?",
+      "modelAnswers": [
+        "I recommend we postpone the release until the flake is quarantined."
+      ],
+      "audio": null
+    },
+    {
+      "id": "rep_009",
+      "category": "Reporting",
+      "level": "junior",
+      "target": "I've attached the logs and screenshots in the ticket.",
+      "targetId": "Saya sudah melampirkan log dan screenshot di tiket.",
+      "chunks": [
+        "I've attached",
+        "the logs and screenshots",
+        "in the ticket"
+      ],
+      "scrambled": [
+        "I've",
+        "attached",
+        "the",
+        "logs",
+        "and",
+        "screenshots",
+        "in",
+        "the",
+        "ticket"
+      ],
+      "keywords": [
+        "attached",
+        "logs",
+        "ticket"
+      ],
+      "grammarPatterns": [
+        "present_perfect"
+      ],
+      "commonErrors": [
+        "I attach the log and screenshot in the ticket"
+      ],
+      "scenario": "Support asks where the evidence is.",
+      "scenarioId": "Support bertanya di mana buktinya.",
+      "modelAnswers": [
+        "I've attached the logs and screenshots in the ticket."
+      ],
+      "audio": null
+    },
+    {
+      "id": "rep_010",
+      "category": "Reporting",
+      "level": "mid",
+      "target": "Risk is medium because only internal tools are affected.",
+      "targetId": "Risikonya menengah karena hanya tools internal yang terdampak.",
+      "chunks": [
+        "Risk is medium",
+        "because only internal tools",
+        "are affected"
+      ],
+      "scrambled": [
+        "Risk",
+        "is",
+        "medium",
+        "because",
+        "only",
+        "internal",
+        "tools",
+        "are",
+        "affected"
+      ],
+      "keywords": [
+        "risk",
+        "medium",
+        "affected"
+      ],
+      "grammarPatterns": [
+        "present_simple",
+        "passive"
+      ],
+      "commonErrors": [
+        "Risk is medium because only internal tool affected"
+      ],
+      "scenario": "Manager: What's the risk level?",
+      "scenarioId": "Manager: Bagaimana level risikonya?",
+      "modelAnswers": [
+        "Risk is medium because only internal tools are affected."
+      ],
+      "audio": null
+    }
+  ]
+}

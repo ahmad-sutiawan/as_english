@@ -15,7 +15,9 @@
     "db:seed": "tsx prisma/seed.ts",
     "db:studio": "prisma studio",
     "postinstall": "prisma generate",
-    "content:validate": "scripts/python/.venv/bin/python scripts/python/validate_content.py"
+    "content:validate": "scripts/python/.venv/bin/python scripts/python/validate_content.py",
+    "speak:validate": "scripts/python/.venv/bin/python scripts/python/validate_speak_content.py",
+    "speak:generate": "scripts/python/.venv/bin/python scripts/python/generate_speak_content.py"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

@@ -22,6 +22,9 @@ export async function SiteHeader() {
               <Link href="/quick" className="hover:text-[var(--ink)]">
                 Cepat
               </Link>
+              <Link href="/speak" className="hover:text-[var(--ink)]">
+                Bicara
+              </Link>
               <Link href="/review" className="hover:text-[var(--ink)]">
                 Review
               </Link>

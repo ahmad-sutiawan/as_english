@@ -1,0 +1,331 @@
+{
+  "id": "meetings",
+  "title": "Meetings",
+  "titleId": "Meeting",
+  "itemCount": 8,
+  "items": [
+    {
+      "id": "mtg_001",
+      "category": "Meetings",
+      "level": "mid",
+      "target": "Let's park this topic and revisit it next week.",
+      "targetId": "Mari kita parkir topik ini dan bahas lagi minggu depan.",
+      "chunks": [
+        "Let's park this topic",
+        "and revisit it",
+        "next week"
+      ],
+      "scrambled": [
+        "Let's",
+        "park",
+        "this",
+        "topic",
+        "and",
+        "revisit",
+        "it",
+        "next",
+        "week"
+      ],
+      "keywords": [
+        "park",
+        "revisit",
+        "week"
+      ],
+      "grammarPatterns": [
+        "suggestive_imperative"
+      ],
+      "commonErrors": [
+        "Let us park this topic and revisit it next week"
+      ],
+      "scenario": "Facilitate when a discussion is going too long.",
+      "scenarioId": "Fasilitasi ketika diskusi terlalu panjang.",
+      "modelAnswers": [
+        "Let's park this topic and revisit it next week."
+      ],
+      "audio": null
+    },
+    {
+      "id": "mtg_002",
+      "category": "Meetings",
+      "level": "junior",
+      "target": "Can everyone mute when they're not speaking?",
+      "targetId": "Bisakah semua mute ketika tidak berbicara?",
+      "chunks": [
+        "Can everyone mute",
+        "when they're not speaking"
+      ],
+      "scrambled": [
+        "Can",
+        "everyone",
+        "mute",
+        "when",
+        "they're",
+        "not",
+        "speaking"
+      ],
+      "keywords": [
+        "mute",
+        "speaking"
+      ],
+      "grammarPatterns": [
+        "modal_can"
+      ],
+      "commonErrors": [
+        "Can everyone mute when they not speaking"
+      ],
+      "scenario": "There's background noise on the call.",
+      "scenarioId": "Ada noise di background pada call.",
+      "modelAnswers": [
+        "Can everyone mute when they're not speaking?"
+      ],
+      "audio": null
+    },
+    {
+      "id": "mtg_003",
+      "category": "Meetings",
+      "level": "mid",
+      "target": "The decision is to ship the hotfix today and monitor closely.",
+      "targetId": "Keputusannya adalah ship hotfix hari ini dan pantau ketat.",
+      "chunks": [
+        "The decision is",
+        "to ship the hotfix today",
+        "and monitor closely"
+      ],
+      "scrambled": [
+        "The",
+        "decision",
+        "is",
+        "to",
+        "ship",
+        "the",
+        "hotfix",
+        "today",
+        "and",
+        "monitor",
+        "closely"
+      ],
+      "keywords": [
+        "decision",
+        "hotfix",
+        "monitor"
+      ],
+      "grammarPatterns": [
+        "infinitive"
+      ],
+      "commonErrors": [
+        "The decision is ship the hotfix today and monitor close"
+      ],
+      "scenario": "Summarize the meeting decision.",
+      "scenarioId": "Ringkas keputusan meeting.",
+      "modelAnswers": [
+        "The decision is to ship the hotfix today and monitor closely."
+      ],
+      "audio": null
+    },
+    {
+      "id": "mtg_004",
+      "category": "Meetings",
+      "level": "senior",
+      "target": "I'd like to challenge that assumption with the latest metrics.",
+      "targetId": "Saya ingin menantang asumsi itu dengan metrik terbaru.",
+      "chunks": [
+        "I'd like to challenge",
+        "that assumption",
+        "with the latest metrics"
+      ],
+      "scrambled": [
+        "I'd",
+        "like",
+        "to",
+        "challenge",
+        "that",
+        "assumption",
+        "with",
+        "the",
+        "latest",
+        "metrics"
+      ],
+      "keywords": [
+        "challenge",
+        "assumption",
+        "metrics"
+      ],
+      "grammarPatterns": [
+        "modal_would"
+      ],
+      "commonErrors": [
+        "I like to challenge that assumption with latest metric"
+      ],
+      "scenario": "Disagree politely with data.",
+      "scenarioId": "Tidak setuju dengan sopan memakai data.",
+      "modelAnswers": [
+        "I'd like to challenge that assumption with the latest metrics."
+      ],
+      "audio": null
+    },
+    {
+      "id": "mtg_005",
+      "category": "Meetings",
+      "level": "junior",
+      "target": "Could you clarify what success looks like for this milestone?",
+      "targetId": "Bisakah Anda klarifikasi seperti apa kesuksesan untuk milestone ini?",
+      "chunks": [
+        "Could you clarify",
+        "what success looks like",
+        "for this milestone"
+      ],
+      "scrambled": [
+        "Could",
+        "you",
+        "clarify",
+        "what",
+        "success",
+        "looks",
+        "like",
+        "for",
+        "this",
+        "milestone"
+      ],
+      "keywords": [
+        "clarify",
+        "success",
+        "milestone"
+      ],
+      "grammarPatterns": [
+        "modal_could",
+        "wh_clause"
+      ],
+      "commonErrors": [
+        "Could you clarify what success look like for this milestone"
+      ],
+      "scenario": "Ask for clearer acceptance criteria.",
+      "scenarioId": "Minta kriteria acceptance yang lebih jelas.",
+      "modelAnswers": [
+        "Could you clarify what success looks like for this milestone?"
+      ],
+      "audio": null
+    },
+    {
+      "id": "mtg_006",
+      "category": "Meetings",
+      "level": "mid",
+      "target": "Action item: I'll draft the proposal by Friday.",
+      "targetId": "Action item: Saya akan draft proposal paling lambat Jumat.",
+      "chunks": [
+        "Action item",
+        "I'll draft the proposal",
+        "by Friday"
+      ],
+      "scrambled": [
+        "Action",
+        "item",
+        "I'll",
+        "draft",
+        "the",
+        "proposal",
+        "by",
+        "Friday"
+      ],
+      "keywords": [
+        "action",
+        "draft",
+        "Friday"
+      ],
+      "grammarPatterns": [
+        "future_will"
+      ],
+      "commonErrors": [
+        "Action item I will draft the proposal by Friday"
+      ],
+      "scenario": "Capture owners at the end of a meeting.",
+      "scenarioId": "Catat owner di akhir meeting.",
+      "modelAnswers": [
+        "Action item: I'll draft the proposal by Friday."
+      ],
+      "audio": null
+    },
+    {
+      "id": "mtg_007",
+      "category": "Meetings",
+      "level": "senior",
+      "target": "We're aligning on scope before we commit to the timeline.",
+      "targetId": "Kami menyelaraskan scope sebelum commit ke timeline.",
+      "chunks": [
+        "We're aligning on scope",
+        "before we commit",
+        "to the timeline"
+      ],
+      "scrambled": [
+        "We're",
+        "aligning",
+        "on",
+        "scope",
+        "before",
+        "we",
+        "commit",
+        "to",
+        "the",
+        "timeline"
+      ],
+      "keywords": [
+        "aligning",
+        "scope",
+        "timeline"
+      ],
+      "grammarPatterns": [
+        "present_continuous"
+      ],
+      "commonErrors": [
+        "We aligning on scope before we commit to the timeline"
+      ],
+      "scenario": "Explain why you won't lock dates yet.",
+      "scenarioId": "Jelaskan kenapa tanggal belum dikunci.",
+      "modelAnswers": [
+        "We're aligning on scope before we commit to the timeline."
+      ],
+      "audio": null
+    },
+    {
+      "id": "mtg_008",
+      "category": "Meetings",
+      "level": "junior",
+      "target": "Sorry, I missed that — could you repeat the last point?",
+      "targetId": "Maaf, saya melewatkan itu — bisakah Anda ulangi poin terakhir?",
+      "chunks": [
+        "Sorry I missed that",
+        "could you repeat",
+        "the last point"
+      ],
+      "scrambled": [
+        "Sorry",
+        "I",
+        "missed",
+        "that",
+        "could",
+        "you",
+        "repeat",
+        "the",
+        "last",
+        "point"
+      ],
+      "keywords": [
+        "missed",
+        "repeat",
+        "point"
+      ],
+      "grammarPatterns": [
+        "past_simple",
+        "modal_could"
+      ],
+      "commonErrors": [
+        "Sorry I miss that could you repeat the last point"
+      ],
+      "scenario": "You lost audio for a few seconds.",
+      "scenarioId": "Audio Anda putus beberapa detik.",
+      "modelAnswers": [
+        "Sorry, I missed that — could you repeat the last point?"
+      ],
+      "audio": null
+    }
+  ]
+}

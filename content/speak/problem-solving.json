@@ -1,0 +1,424 @@
+{
+  "id": "problem-solving",
+  "title": "Problem Solving",
+  "titleId": "Pemecahan Masalah",
+  "itemCount": 10,
+  "items": [
+    {
+      "id": "prob_001",
+      "category": "Problem Solving",
+      "level": "mid",
+      "target": "The root cause was a missing index on the orders table.",
+      "targetId": "Root cause-nya adalah index yang hilang di tabel orders.",
+      "chunks": [
+        "The root cause was",
+        "a missing index",
+        "on the orders table"
+      ],
+      "scrambled": [
+        "The",
+        "root",
+        "cause",
+        "was",
+        "a",
+        "missing",
+        "index",
+        "on",
+        "the",
+        "orders",
+        "table"
+      ],
+      "keywords": [
+        "root",
+        "index",
+        "orders"
+      ],
+      "grammarPatterns": [
+        "past_simple"
+      ],
+      "commonErrors": [
+        "The root cause is missing index on orders table"
+      ],
+      "scenario": "Explain the root cause briefly.",
+      "scenarioId": "Jelaskan root cause secara singkat.",
+      "modelAnswers": [
+        "The root cause was a missing index on the orders table."
+      ],
+      "audio": null
+    },
+    {
+      "id": "prob_002",
+      "category": "Problem Solving",
+      "level": "senior",
+      "target": "We should add a circuit breaker to protect the payment service.",
+      "targetId": "Kita harus menambah circuit breaker untuk melindungi payment service.",
+      "chunks": [
+        "We should add",
+        "a circuit breaker",
+        "to protect the payment service"
+      ],
+      "scrambled": [
+        "We",
+        "should",
+        "add",
+        "a",
+        "circuit",
+        "breaker",
+        "to",
+        "protect",
+        "the",
+        "payment",
+        "service"
+      ],
+      "keywords": [
+        "circuit",
+        "breaker",
+        "payment"
+      ],
+      "grammarPatterns": [
+        "modal_should"
+      ],
+      "commonErrors": [
+        "We should add circuit breaker to protect payment service"
+      ],
+      "scenario": "Propose a preventive fix.",
+      "scenarioId": "Usulkan perbaikan preventif.",
+      "modelAnswers": [
+        "We should add a circuit breaker to protect the payment service."
+      ],
+      "audio": null
+    },
+    {
+      "id": "prob_003",
+      "category": "Problem Solving",
+      "level": "junior",
+      "target": "I reproduced the bug on staging with the same payload.",
+      "targetId": "Saya mereproduksi bug di staging dengan payload yang sama.",
+      "chunks": [
+        "I reproduced the bug",
+        "on staging",
+        "with the same payload"
+      ],
+      "scrambled": [
+        "I",
+        "reproduced",
+        "the",
+        "bug",
+        "on",
+        "staging",
+        "with",
+        "the",
+        "same",
+        "payload"
+      ],
+      "keywords": [
+        "reproduced",
+        "staging",
+        "payload"
+      ],
+      "grammarPatterns": [
+        "past_simple"
+      ],
+      "commonErrors": [
+        "I reproduce the bug on staging with same payload"
+      ],
+      "scenario": "Confirm the bug is real.",
+      "scenarioId": "Konfirmasi bug itu nyata.",
+      "modelAnswers": [
+        "I reproduced the bug on staging with the same payload."
+      ],
+      "audio": null
+    },
+    {
+      "id": "prob_004",
+      "category": "Problem Solving",
+      "level": "mid",
+      "target": "As a workaround, we're routing traffic to the healthy region.",
+      "targetId": "Sebagai workaround, kami mengalihkan traffic ke region yang sehat.",
+      "chunks": [
+        "As a workaround",
+        "we're routing traffic",
+        "to the healthy region"
+      ],
+      "scrambled": [
+        "As",
+        "a",
+        "workaround",
+        "we're",
+        "routing",
+        "traffic",
+        "to",
+        "the",
+        "healthy",
+        "region"
+      ],
+      "keywords": [
+        "workaround",
+        "routing",
+        "region"
+      ],
+      "grammarPatterns": [
+        "present_continuous"
+      ],
+      "commonErrors": [
+        "As workaround we routing traffic to the healthy region"
+      ],
+      "scenario": "Describe the temporary mitigation.",
+      "scenarioId": "Jelaskan mitigasi sementara.",
+      "modelAnswers": [
+        "As a workaround, we're routing traffic to the healthy region."
+      ],
+      "audio": null
+    },
+    {
+      "id": "prob_005",
+      "category": "Problem Solving",
+      "level": "senior",
+      "target": "The long-term fix is to redesign the retry logic with jitter.",
+      "targetId": "Perbaikan jangka panjang adalah mendesain ulang retry logic dengan jitter.",
+      "chunks": [
+        "The long-term fix is",
+        "to redesign the retry logic",
+        "with jitter"
+      ],
+      "scrambled": [
+        "The",
+        "long-term",
+        "fix",
+        "is",
+        "to",
+        "redesign",
+        "the",
+        "retry",
+        "logic",
+        "with",
+        "jitter"
+      ],
+      "keywords": [
+        "long-term",
+        "retry",
+        "jitter"
+      ],
+      "grammarPatterns": [
+        "infinitive"
+      ],
+      "commonErrors": [
+        "The long term fix is redesign the retry logic with jitter"
+      ],
+      "scenario": "Separate short-term vs long-term fix.",
+      "scenarioId": "Pisahkan perbaikan jangka pendek vs panjang.",
+      "modelAnswers": [
+        "The long-term fix is to redesign the retry logic with jitter."
+      ],
+      "audio": null
+    },
+    {
+      "id": "prob_006",
+      "category": "Problem Solving",
+      "level": "junior",
+      "target": "I haven't found any errors in the application logs yet.",
+      "targetId": "Saya belum menemukan error di log aplikasi.",
+      "chunks": [
+        "I haven't found",
+        "any errors",
+        "in the application logs yet"
+      ],
+      "scrambled": [
+        "I",
+        "haven't",
+        "found",
+        "any",
+        "errors",
+        "in",
+        "the",
+        "application",
+        "logs",
+        "yet"
+      ],
+      "keywords": [
+        "haven't",
+        "errors",
+        "logs"
+      ],
+      "grammarPatterns": [
+        "present_perfect_negative"
+      ],
+      "commonErrors": [
+        "I don't found any error in the application log yet"
+      ],
+      "scenario": "Report negative findings honestly.",
+      "scenarioId": "Laporkan temuan negatif dengan jujur.",
+      "modelAnswers": [
+        "I haven't found any errors in the application logs yet."
+      ],
+      "audio": null
+    },
+    {
+      "id": "prob_007",
+      "category": "Problem Solving",
+      "level": "mid",
+      "target": "Latency dropped after we increased the connection pool size.",
+      "targetId": "Latensi turun setelah kami memperbesar ukuran connection pool.",
+      "chunks": [
+        "Latency dropped",
+        "after we increased",
+        "the connection pool size"
+      ],
+      "scrambled": [
+        "Latency",
+        "dropped",
+        "after",
+        "we",
+        "increased",
+        "the",
+        "connection",
+        "pool",
+        "size"
+      ],
+      "keywords": [
+        "latency",
+        "dropped",
+        "pool"
+      ],
+      "grammarPatterns": [
+        "past_simple"
+      ],
+      "commonErrors": [
+        "Latency drop after we increase the connection pool size"
+      ],
+      "scenario": "Explain what improved the metrics.",
+      "scenarioId": "Jelaskan apa yang memperbaiki metrik.",
+      "modelAnswers": [
+        "Latency dropped after we increased the connection pool size."
+      ],
+      "audio": null
+    },
+    {
+      "id": "prob_008",
+      "category": "Problem Solving",
+      "level": "senior",
+      "target": "Before we change production, let's validate the fix on canary.",
+      "targetId": "Sebelum mengubah production, mari validasi fix di canary.",
+      "chunks": [
+        "Before we change production",
+        "let's validate the fix",
+        "on canary"
+      ],
+      "scrambled": [
+        "Before",
+        "we",
+        "change",
+        "production",
+        "let's",
+        "validate",
+        "the",
+        "fix",
+        "on",
+        "canary"
+      ],
+      "keywords": [
+        "validate",
+        "canary",
+        "production"
+      ],
+      "grammarPatterns": [
+        "suggestive_imperative"
+      ],
+      "commonErrors": [
+        "Before we change production let us validate the fix on canary"
+      ],
+      "scenario": "Push back on a risky hot-fix.",
+      "scenarioId": "Tolak hot-fix berisiko dengan sopan.",
+      "modelAnswers": [
+        "Before we change production, let's validate the fix on canary."
+      ],
+      "audio": null
+    },
+    {
+      "id": "prob_009",
+      "category": "Problem Solving",
+      "level": "junior",
+      "target": "The server has already been fixed, and I checked the database.",
+      "targetId": "Server sudah diperbaiki, dan saya sudah memeriksa database.",
+      "chunks": [
+        "The server has already been fixed",
+        "and I checked",
+        "the database"
+      ],
+      "scrambled": [
+        "The",
+        "server",
+        "has",
+        "already",
+        "been",
+        "fixed",
+        "and",
+        "I",
+        "checked",
+        "the",
+        "database"
+      ],
+      "keywords": [
+        "fixed",
+        "checked",
+        "database"
+      ],
+      "grammarPatterns": [
+        "present_perfect_passive",
+        "past_simple"
+      ],
+      "commonErrors": [
+        "The server already fixed and I check the database"
+      ],
+      "scenario": "Your supervisor asks: What's the status of the server?",
+      "scenarioId": "Supervisor: Bagaimana status server?",
+      "modelAnswers": [
+        "The server has already been fixed, and I checked the database."
+      ],
+      "audio": null
+    },
+    {
+      "id": "prob_010",
+      "category": "Problem Solving",
+      "level": "mid",
+      "target": "I'll document the steps so the next on-call can follow them.",
+      "targetId": "Saya akan dokumentasikan langkahnya supaya on-call berikutnya bisa ikut.",
+      "chunks": [
+        "I'll document the steps",
+        "so the next on-call",
+        "can follow them"
+      ],
+      "scrambled": [
+        "I'll",
+        "document",
+        "the",
+        "steps",
+        "so",
+        "the",
+        "next",
+        "on-call",
+        "can",
+        "follow",
+        "them"
+      ],
+      "keywords": [
+        "document",
+        "on-call",
+        "follow"
+      ],
+      "grammarPatterns": [
+        "future_will",
+        "purpose_so"
+      ],
+      "commonErrors": [
+        "I will document the step so next on call can follow them"
+      ],
+      "scenario": "Close the loop after fixing an issue.",
+      "scenarioId": "Tutup loop setelah memperbaiki masalah.",
+      "modelAnswers": [
+        "I'll document the steps so the next on-call can follow them."
+      ],
+      "audio": null
+    }
+  ]
+}
