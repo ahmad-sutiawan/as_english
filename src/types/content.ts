@@ -7,6 +7,10 @@ export type Choice = {
   text: string;
   /** Fixed Indonesian translation of the English option */
   textId: string;
+  /** Sentence-structure formula, e.g. Subject + Verb + Object */
+  structure: string;
+  /** Indonesian gloss of the structure formula */
+  structureId: string;
 };
 
 export type DialogueSpeaker = "them" | "you";
@@ -20,6 +24,10 @@ export type DialogueTurn = {
   /** For them: their line. For you: correct spoken line (same as correct choice). */
   text: string;
   textId: string;
+  /** Sentence-structure formula for this turn's English line */
+  structure: string;
+  /** Indonesian gloss of the structure formula */
+  structureId: string;
   /** Present on your turns */
   choices?: Choice[];
   correctKey?: ChoiceKey;
@@ -35,10 +43,18 @@ export type ExerciseItem = {
   scenario: string;
   /** Fixed Indonesian translation of scenario */
   scenarioId: string;
+  /** Sentence-structure formula for the scenario */
+  scenarioStructure: string;
+  /** Indonesian gloss of scenario structure */
+  scenarioStructureId: string;
   /** English question / prompt */
   prompt: string;
   /** Fixed Indonesian translation of prompt */
   promptId: string;
+  /** Sentence-structure formula for the prompt */
+  promptStructure: string;
+  /** Indonesian gloss of prompt structure */
+  promptStructureId: string;
   choices: Choice[];
   correctKey: ChoiceKey;
   /** Learning guide in Indonesian: why the answer is correct */

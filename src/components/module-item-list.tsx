@@ -13,6 +13,7 @@ type ItemRow = {
   difficulty: Difficulty;
   prompt: string;
   promptId: string;
+  promptStructure: string;
   done: boolean;
 };
 
@@ -180,6 +181,9 @@ export function ModuleItemList({
                   </span>
                   <span className="mt-1 block truncate text-xs text-[var(--muted)]">
                     {item.promptId}
+                  </span>
+                  <span className="mt-0.5 block truncate font-mono text-[10px] text-[var(--accent)]">
+                    {item.promptStructure}
                   </span>
                 </span>
                 <span className="shrink-0 text-right text-xs uppercase tracking-wide text-[var(--muted)]">

@@ -20,6 +20,19 @@ MODULES_DIR = CONTENT / "modules"
 
 CHOICE_KEY = {"type": "string", "enum": ["A", "B", "C", "D"]}
 
+CHOICE_SCHEMA = {
+    "type": "object",
+    "required": ["key", "text", "textId", "structure", "structureId"],
+    "additionalProperties": False,
+    "properties": {
+        "key": CHOICE_KEY,
+        "text": {"type": "string", "minLength": 1},
+        "textId": {"type": "string", "minLength": 1},
+        "structure": {"type": "string", "minLength": 1},
+        "structureId": {"type": "string", "minLength": 1},
+    },
+}
+
 ITEM_SCHEMA = {
     "type": "object",
     "required": [
@@ -28,8 +41,12 @@ ITEM_SCHEMA = {
         "difficulty",
         "scenario",
         "scenarioId",
+        "scenarioStructure",
+        "scenarioStructureId",
         "prompt",
         "promptId",
+        "promptStructure",
+        "promptStructureId",
         "choices",
         "correctKey",
         "explanation",
@@ -42,22 +59,17 @@ ITEM_SCHEMA = {
         "difficulty": {"type": "string", "enum": ["junior", "mid", "senior"]},
         "scenario": {"type": "string", "minLength": 1},
         "scenarioId": {"type": "string", "minLength": 1},
+        "scenarioStructure": {"type": "string", "minLength": 1},
+        "scenarioStructureId": {"type": "string", "minLength": 1},
         "prompt": {"type": "string", "minLength": 1},
         "promptId": {"type": "string", "minLength": 1},
+        "promptStructure": {"type": "string", "minLength": 1},
+        "promptStructureId": {"type": "string", "minLength": 1},
         "choices": {
             "type": "array",
             "minItems": 4,
             "maxItems": 4,
-            "items": {
-                "type": "object",
-                "required": ["key", "text", "textId"],
-                "additionalProperties": False,
-                "properties": {
-                    "key": CHOICE_KEY,
-                    "text": {"type": "string", "minLength": 1},
-                    "textId": {"type": "string", "minLength": 1},
-                },
-            },
+            "items": CHOICE_SCHEMA,
         },
         "correctKey": CHOICE_KEY,
         "explanation": {"type": "string", "minLength": 1},
@@ -74,6 +86,8 @@ ITEM_SCHEMA = {
                     "roleLabelId",
                     "text",
                     "textId",
+                    "structure",
+                    "structureId",
                 ],
                 "additionalProperties": False,
                 "properties": {
@@ -83,21 +97,14 @@ ITEM_SCHEMA = {
                     "roleLabelId": {"type": "string"},
                     "text": {"type": "string"},
                     "textId": {"type": "string"},
+                    "structure": {"type": "string", "minLength": 1},
+                    "structureId": {"type": "string", "minLength": 1},
                     "correctKey": CHOICE_KEY,
                     "choices": {
                         "type": "array",
                         "minItems": 4,
                         "maxItems": 4,
-                        "items": {
-                            "type": "object",
-                            "required": ["key", "text", "textId"],
-                            "additionalProperties": False,
-                            "properties": {
-                                "key": CHOICE_KEY,
-                                "text": {"type": "string"},
-                                "textId": {"type": "string"},
-                            },
-                        },
+                        "items": CHOICE_SCHEMA,
                     },
                 },
             },

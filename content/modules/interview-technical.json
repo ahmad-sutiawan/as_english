@@ -16,28 +16,40 @@
       "difficulty": "mid",
       "scenario": "An interviewer asks you to design a URL shortener that must survive sudden traffic spikes.",
       "scenarioId": "Pewawancara meminta Anda merancang URL shortener yang harus tahan lonjakan traffic mendadak.",
+      "scenarioStructure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+      "scenarioStructureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)",
       "prompt": "Which answer best shows structured system-design thinking?",
       "promptId": "Jawaban mana yang paling menunjukkan pemikiran system design yang terstruktur?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "I would use a database and some servers.",
-          "textId": "Saya akan memakai database dan beberapa server."
+          "textId": "Saya akan memakai database dan beberapa server.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "B",
           "text": "I would start with requirements: write/read ratio, latency target, and uniqueness. Then propose an API, a base62 ID generator, a primary store with caching, and a scale-out plan using partitioning and CDN for redirects.",
-          "textId": "Saya mulai dari requirement: rasio write/read, target latency, dan uniqueness. Lalu usulkan API, generator ID base62, primary store dengan caching, dan rencana scale-out memakai partitioning serta CDN untuk redirect."
+          "textId": "Saya mulai dari requirement: rasio write/read, target latency, dan uniqueness. Lalu usulkan API, generator ID base62, primary store dengan caching, dan rencana scale-out memakai partitioning serta CDN untuk redirect.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "C",
           "text": "I once built something similar at home for fun.",
-          "textId": "Saya pernah membuat sesuatu yang mirip di rumah untuk hiburan."
+          "textId": "Saya pernah membuat sesuatu yang mirip di rumah untuk hiburan.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "Kubernetes will solve the scaling automatically.",
-          "textId": "Kubernetes akan menyelesaikan scaling secara otomatis."
+          "textId": "Kubernetes akan menyelesaikan scaling secara otomatis.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         }
       ],
       "correctKey": "B",
@@ -58,28 +70,40 @@
       "difficulty": "senior",
       "scenario": "They ask: SQL vs NoSQL for an order history service with complex joins and strong consistency needs.",
       "scenarioId": "Mereka bertanya: SQL vs NoSQL untuk layanan riwayat pesanan yang butuh join kompleks dan konsistensi kuat.",
+      "scenarioStructure": "Multi-clause: Subject + Verb + Object + connector + clause",
+      "scenarioStructureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
       "prompt": "What is the clearest tradeoff statement?",
       "promptId": "Pernyataan tradeoff mana yang paling jelas?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "NoSQL is always faster so we should use it.",
-          "textId": "NoSQL selalu lebih cepat jadi kita harus memakainya."
+          "textId": "NoSQL selalu lebih cepat jadi kita harus memakainya.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "B",
           "text": "Given multi-table joins and strong consistency, a relational store is a better default. NoSQL could help for high write throughput or flexible schemas, but we would pay in query complexity and consistency tradeoffs.",
-          "textId": "Mengingat join multi-tabel dan strong consistency, store relasional adalah default yang lebih baik. NoSQL bisa membantu untuk throughput write tinggi atau skema fleksibel, tapi kita bayar dengan kompleksitas query dan tradeoff konsistensi."
+          "textId": "Mengingat join multi-tabel dan strong consistency, store relasional adalah default yang lebih baik. NoSQL bisa membantu untuk throughput write tinggi atau skema fleksibel, tapi kita bayar dengan kompleksitas query dan tradeoff konsistensi.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "I only use Postgres for everything.",
-          "textId": "Saya hanya memakai Postgres untuk segalanya."
+          "textId": "Saya hanya memakai Postgres untuk segalanya.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "It does not matter as long as we use an ORM.",
-          "textId": "Tidak masalah selama kita memakai ORM."
+          "textId": "Tidak masalah selama kita memakai ORM.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -100,28 +124,40 @@
       "difficulty": "mid",
       "scenario": "Explain CAP theorem in practical terms for a payments ledger.",
       "scenarioId": "Jelaskan teorema CAP secara praktis untuk ledger pembayaran.",
+      "scenarioStructure": "Imperative: Verb + Object (+ Adverbial)",
+      "scenarioStructureId": "Imperatif: Kata kerja + Objek (+ Keterangan)",
       "prompt": "Which explanation is most interview-ready?",
       "promptId": "Penjelasan mana yang paling siap untuk wawancara?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "CAP means choose any two letters and move on.",
-          "textId": "CAP artinya pilih dua huruf saja lalu lanjut."
+          "textId": "CAP artinya pilih dua huruf saja lalu lanjut.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "In a partition, a payments ledger should favor consistency over availability: better to reject or queue writes than accept conflicting balances. Availability can be recovered with retries and clear user messaging.",
-          "textId": "Saat partition, ledger pembayaran sebaiknya mengutamakan consistency daripada availability: lebih baik tolak atau antre write daripada terima saldo yang bentrok. Availability bisa dipulihkan dengan retry dan pesan yang jelas ke pengguna."
+          "textId": "Saat partition, ledger pembayaran sebaiknya mengutamakan consistency daripada availability: lebih baik tolak atau antre write daripada terima saldo yang bentrok. Availability bisa dipulihkan dengan retry dan pesan yang jelas ke pengguna.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "C",
           "text": "We can ignore partitions in the cloud.",
-          "textId": "Kita bisa mengabaikan partition di cloud."
+          "textId": "Kita bisa mengabaikan partition di cloud.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "D",
           "text": "Microservices remove CAP concerns.",
-          "textId": "Microservices menghilangkan kekhawatiran CAP."
+          "textId": "Microservices menghilangkan kekhawatiran CAP.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -142,28 +178,40 @@
       "difficulty": "junior",
       "scenario": "Walk through debugging a slow API endpoint.",
       "scenarioId": "Jelaskan langkah debugging endpoint API yang lambat.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Which response shows a professional debug process?",
       "promptId": "Respons mana yang menunjukkan proses debug profesional?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "I would restart the server first every time.",
-          "textId": "Saya akan restart server dulu setiap kali."
+          "textId": "Saya akan restart server dulu setiap kali.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "B",
           "text": "I would reproduce with timing, check metrics and traces, identify whether the bottleneck is CPU, DB, or network, then validate a fix with before/after latency.",
-          "textId": "Saya reproduce dengan timing, cek metrics dan traces, identifikasi apakah bottleneck-nya CPU, DB, atau network, lalu validasi perbaikan dengan latency before/after."
+          "textId": "Saya reproduce dengan timing, cek metrics dan traces, identifikasi apakah bottleneck-nya CPU, DB, atau network, lalu validasi perbaikan dengan latency before/after.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "C",
           "text": "I would rewrite the endpoint in another language.",
-          "textId": "Saya akan menulis ulang endpoint dalam bahasa lain."
+          "textId": "Saya akan menulis ulang endpoint dalam bahasa lain.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "D",
           "text": "I would ask users to stop using that feature.",
-          "textId": "Saya akan minta pengguna berhenti memakai fitur itu."
+          "textId": "Saya akan minta pengguna berhenti memakai fitur itu.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         }
       ],
       "correctKey": "B",
@@ -184,28 +232,40 @@
       "difficulty": "senior",
       "scenario": "How would you introduce rate limiting for a public API without breaking legitimate clients?",
       "scenarioId": "Bagaimana Anda memperkenalkan rate limiting untuk API publik tanpa merusak klien yang sah?",
+      "scenarioStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "scenarioStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "prompt": "Which answer is strongest?",
       "promptId": "Jawaban mana yang paling kuat?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "Block everyone who exceeds one request per second.",
-          "textId": "Blokir semua yang melebihi satu request per detik."
+          "textId": "Blokir semua yang melebihi satu request per detik.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "I would define per-client quotas, return standard 429 with Retry-After, start in shadow mode to measure impact, then enforce gradually with burst tokens for good actors and clear docs for clients.",
-          "textId": "Saya definisikan kuota per klien, kembalikan 429 standar dengan Retry-After, mulai di shadow mode untuk mengukur dampak, lalu enforce secara bertahap dengan burst token untuk aktor baik serta dokumentasi jelas untuk klien."
+          "textId": "Saya definisikan kuota per klien, kembalikan 429 standar dengan Retry-After, mulai di shadow mode untuk mengukur dampak, lalu enforce secara bertahap dengan burst token untuk aktor baik serta dokumentasi jelas untuk klien.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "C",
           "text": "Just put Cloudflare in front and hope.",
-          "textId": "Cukup pasang Cloudflare di depan dan berharap."
+          "textId": "Cukup pasang Cloudflare di depan dan berharap.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "Rate limiting is only for DDoS, not product APIs.",
-          "textId": "Rate limiting hanya untuk DDoS, bukan API produk."
+          "textId": "Rate limiting hanya untuk DDoS, bukan API produk.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -226,28 +286,40 @@
       "difficulty": "mid",
       "scenario": "How do you decide between synchronous and asynchronous processing for invoice generation?",
       "scenarioId": "Bagaimana Anda memutuskan antara pemrosesan sinkron dan asinkron untuk pembuatan invoice?",
+      "scenarioStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "scenarioStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "prompt": "What should you say?",
       "promptId": "Apa yang sebaiknya Anda katakan?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "Always async because it is modern.",
-          "textId": "Selalu async karena itu modern."
+          "textId": "Selalu async karena itu modern.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "If the user needs the invoice immediately to continue, keep a synchronous path with a tight SLA. If generation can take longer, accept the request, enqueue work, and notify when ready — with idempotency keys to avoid duplicates.",
-          "textId": "Jika pengguna butuh invoice segera untuk lanjut, tetap pakai jalur sinkron dengan SLA ketat. Jika generasi bisa lebih lama, terima request, antre pekerjaan, dan beri tahu saat siap — dengan idempotency key agar tidak dobel."
+          "textId": "Jika pengguna butuh invoice segera untuk lanjut, tetap pakai jalur sinkron dengan SLA ketat. Jika generasi bisa lebih lama, terima request, antre pekerjaan, dan beri tahu saat siap — dengan idempotency key agar tidak dobel.",
+          "structure": "Conditional: If-clause + result clause (Modal/will + Verb)",
+          "structureId": "Kondisional: Klausa If + klausa hasil (Modal/will + Kata kerja)"
         },
         {
           "key": "C",
           "text": "Use cron every night only.",
-          "textId": "Pakai cron setiap malam saja."
+          "textId": "Pakai cron setiap malam saja.",
+          "structure": "Imperative: Verb + Object (+ Adverbial)",
+          "structureId": "Imperatif: Kata kerja + Objek (+ Keterangan)"
         },
         {
           "key": "D",
           "text": "Let the frontend generate PDFs.",
-          "textId": "Biarkan frontend menghasilkan PDF."
+          "textId": "Biarkan frontend menghasilkan PDF.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -268,28 +340,40 @@
       "difficulty": "senior",
       "scenario": "Explain observability for a microservice fleet.",
       "scenarioId": "Jelaskan observability untuk armada microservice.",
+      "scenarioStructure": "Imperative: Verb + Object (+ Adverbial)",
+      "scenarioStructureId": "Imperatif: Kata kerja + Objek (+ Keterangan)",
       "prompt": "Which answer is most complete?",
       "promptId": "Jawaban mana yang paling lengkap?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "We log everything to text files on each box.",
-          "textId": "Kami log semuanya ke file teks di setiap mesin."
+          "textId": "Kami log semuanya ke file teks di setiap mesin.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "I want structured logs, metrics for SLIs, and distributed traces tied by request IDs — plus alerting on symptoms users feel, not only host CPU. Dashboards should answer what broke, where, and how bad.",
-          "textId": "Saya ingin structured logs, metrics untuk SLI, dan distributed traces yang diikat request ID — plus alerting pada gejala yang dirasakan pengguna, bukan hanya CPU host. Dashboard harus menjawab apa yang rusak, di mana, dan seberapa parah."
+          "textId": "Saya ingin structured logs, metrics untuk SLI, dan distributed traces yang diikat request ID — plus alerting pada gejala yang dirasakan pengguna, bukan hanya CPU host. Dashboard harus menjawab apa yang rusak, di mana, dan seberapa parah.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "APM tools replace the need for design.",
-          "textId": "Tool APM menggantikan kebutuhan desain."
+          "textId": "Tool APM menggantikan kebutuhan desain.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "If on-call is awake, observability is enough.",
-          "textId": "Kalau on-call terjaga, observability sudah cukup."
+          "textId": "Kalau on-call terjaga, observability sudah cukup.",
+          "structure": "Conditional: If-clause + result clause (Modal/will + Verb)",
+          "structureId": "Kondisional: Klausa If + klausa hasil (Modal/will + Kata kerja)"
         }
       ],
       "correctKey": "B",
@@ -310,28 +394,40 @@
       "difficulty": "mid",
       "scenario": "Explain caching for a product catalog that updates a few times per hour.",
       "scenarioId": "Jelaskan caching untuk katalog produk yang berubah beberapa kali per jam.",
+      "scenarioStructure": "Imperative: Verb + Object (+ Adverbial)",
+      "scenarioStructureId": "Imperatif: Kata kerja + Objek (+ Keterangan)",
       "prompt": "Which statement is best?",
       "promptId": "Pernyataan mana yang terbaik?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "Cache forever to maximize hit rate.",
-          "textId": "Cache selamanya untuk memaksimalkan hit rate."
+          "textId": "Cache selamanya untuk memaksimalkan hit rate.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "I would cache reads with a short TTL aligned to update frequency, use cache-aside, and invalidate on publish events. I would also define stale-while-revalidate behavior so brief staleness does not become wrong pricing.",
-          "textId": "Saya cache read dengan TTL pendek yang selaras frekuensi update, pakai cache-aside, dan invalidate saat event publish. Saya juga definisikan perilaku stale-while-revalidate agar staleness singkat tidak jadi harga yang salah."
+          "textId": "Saya cache read dengan TTL pendek yang selaras frekuensi update, pakai cache-aside, dan invalidate saat event publish. Saya juga definisikan perilaku stale-while-revalidate agar staleness singkat tidak jadi harga yang salah.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "C",
           "text": "Never cache; databases are fast enough.",
-          "textId": "Jangan pernah cache; database sudah cukup cepat."
+          "textId": "Jangan pernah cache; database sudah cukup cepat.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "D",
           "text": "Put the entire database in Redis.",
-          "textId": "Masukkan seluruh database ke Redis."
+          "textId": "Masukkan seluruh database ke Redis.",
+          "structure": "Imperative: Verb + Object (+ Adverbial)",
+          "structureId": "Imperatif: Kata kerja + Objek (+ Keterangan)"
         }
       ],
       "correctKey": "B",
@@ -352,28 +448,40 @@
       "difficulty": "junior",
       "scenario": "What is idempotency and why does it matter in APIs?",
       "scenarioId": "Apa itu idempotency dan mengapa penting di API?",
+      "scenarioStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "scenarioStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "prompt": "Which definition is clearest?",
       "promptId": "Definisi mana yang paling jelas?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "It means the API is very fast.",
-          "textId": "Artinya API sangat cepat."
+          "textId": "Artinya API sangat cepat.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "Idempotency means repeating the same request does not create duplicate side effects. It matters for payments and retries so network failures do not double-charge or double-create resources.",
-          "textId": "Idempotency berarti mengulang request yang sama tidak menciptakan efek samping duplikat. Ini penting untuk pembayaran dan retry agar kegagalan jaringan tidak menagih dua kali atau membuat resource dobel."
+          "textId": "Idempotency berarti mengulang request yang sama tidak menciptakan efek samping duplikat. Ini penting untuk pembayaran dan retry agar kegagalan jaringan tidak menagih dua kali atau membuat resource dobel.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "It means we use HTTPS.",
-          "textId": "Artinya kita memakai HTTPS."
+          "textId": "Artinya kita memakai HTTPS.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "D",
           "text": "It is another word for authentication.",
-          "textId": "Ini sinonim authentication."
+          "textId": "Ini sinonim authentication.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -394,28 +502,40 @@
       "difficulty": "senior",
       "scenario": "How would you migrate a monolith to services without a big-bang rewrite?",
       "scenarioId": "Bagaimana Anda migrasi monolith ke services tanpa rewrite big-bang?",
+      "scenarioStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "scenarioStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "prompt": "Which approach sounds most senior?",
       "promptId": "Pendekatan mana yang terdengar paling senior?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "Freeze all features and rewrite for six months.",
-          "textId": "Bekukan semua fitur dan rewrite selama enam bulan."
+          "textId": "Bekukan semua fitur dan rewrite selama enam bulan.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "I would extract high-churn bounded contexts first behind stable APIs, use the strangler pattern, keep a shared data ownership plan, and measure latency and error budgets during each cutover.",
-          "textId": "Saya ekstrak bounded context yang high-churn lebih dulu di balik API stabil, pakai strangler pattern, jaga rencana kepemilikan data bersama, dan ukur latency serta error budget di setiap cutover."
+          "textId": "Saya ekstrak bounded context yang high-churn lebih dulu di balik API stabil, pakai strangler pattern, jaga rencana kepemilikan data bersama, dan ukur latency serta error budget di setiap cutover.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "C",
           "text": "Copy the codebase into many repos on day one.",
-          "textId": "Salin codebase ke banyak repo di hari pertama."
+          "textId": "Salin codebase ke banyak repo di hari pertama.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "Microservices first, product later.",
-          "textId": "Microservices dulu, produk belakangan."
+          "textId": "Microservices dulu, produk belakangan.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -436,28 +556,40 @@
       "difficulty": "mid",
       "scenario": "Walk me through securing secrets in a CI/CD pipeline.",
       "scenarioId": "Jelaskan cara mengamankan secrets di pipeline CI/CD.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Best answer?",
       "promptId": "Jawaban terbaik?",
+      "promptStructure": "Elliptical question: (Which is the) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which is the) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Commit .env files but do not push them.",
-          "textId": "Commit file .env tapi jangan push."
+          "textId": "Commit file .env tapi jangan push.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "B",
           "text": "Store secrets in a vault or CI secret store, inject at runtime, rotate regularly, scope least privilege per pipeline, and never print secrets in logs. Pull requests should not expose production credentials.",
-          "textId": "Simpan secrets di vault atau CI secret store, inject saat runtime, rotasi berkala, scope least privilege per pipeline, dan jangan pernah mencetak secrets di log. Pull request tidak boleh mengekspos kredensial produksi."
+          "textId": "Simpan secrets di vault atau CI secret store, inject saat runtime, rotasi berkala, scope least privilege per pipeline, dan jangan pernah mencetak secrets di log. Pull request tidak boleh mengekspos kredensial produksi.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Email secrets to the team when needed.",
-          "textId": "Email secrets ke tim saat dibutuhkan."
+          "textId": "Email secrets ke tim saat dibutuhkan.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "Hardcode secrets in the Dockerfile for convenience.",
-          "textId": "Hardcode secrets di Dockerfile demi kenyamanan."
+          "textId": "Hardcode secrets di Dockerfile demi kenyamanan.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -478,28 +610,40 @@
       "difficulty": "senior",
       "scenario": "How do you reason about SLOs for a checkout API?",
       "scenarioId": "Bagaimana Anda menalar SLO untuk API checkout?",
+      "scenarioStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "scenarioStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "prompt": "Which answer is strongest?",
       "promptId": "Jawaban mana yang paling kuat?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "Aim for 100% uptime always.",
-          "textId": "Targetkan uptime 100% selalu."
+          "textId": "Targetkan uptime 100% selalu.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "B",
           "text": "I would define an availability SLO on successful checkout completion, set an error budget, and use burn-rate alerts. Product and eng would agree what latency percentile matters for conversion, then prioritize reliability work when budget burns fast.",
-          "textId": "Saya definisikan SLO availability pada keberhasilan checkout, tetapkan error budget, dan pakai burn-rate alerts. Product dan eng sepakati percentile latency yang penting untuk konversi, lalu prioritaskan kerja reliability saat budget terbakar cepat."
+          "textId": "Saya definisikan SLO availability pada keberhasilan checkout, tetapkan error budget, dan pakai burn-rate alerts. Product dan eng sepakati percentile latency yang penting untuk konversi, lalu prioritaskan kerja reliability saat budget terbakar cepat.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "C",
           "text": "SLOs are only for executives and not engineers.",
-          "textId": "SLO hanya untuk eksekutif, bukan engineer."
+          "textId": "SLO hanya untuk eksekutif, bukan engineer.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "If monitoring is green, the SLO is fine.",
-          "textId": "Kalau monitoring hijau, SLO sudah baik."
+          "textId": "Kalau monitoring hijau, SLO sudah baik.",
+          "structure": "Conditional: If-clause + result clause (Modal/will + Verb)",
+          "structureId": "Kondisional: Klausa If + klausa hasil (Modal/will + Kata kerja)"
         }
       ],
       "correctKey": "B",

@@ -16,28 +16,40 @@
       "difficulty": "mid",
       "scenario": "Another team missed an agreed API delivery date that your release depends on.",
       "scenarioId": "Tim lain melewatkan tanggal pengiriman API yang sudah disepakati dan menjadi dependensi rilis Anda.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Best first message?",
       "promptId": "Pesan pertama terbaik?",
+      "promptStructure": "Elliptical question: (Which is the) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which is the) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "You broke our release again.",
-          "textId": "Kalian merusak rilis kami lagi."
+          "textId": "Kalian merusak rilis kami lagi.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "B",
           "text": "Checking in on the Payments API date we aligned last Thursday. Our checkout release is gated on it. Can you share a revised ETA and whether a temporary stub is viable so we protect customer launch?",
-          "textId": "Checking in soal tanggal Payments API yang kita align Kamis lalu. Rilis checkout kami bergantung padanya. Bisakah bagikan ETA revisi dan apakah stub sementara feasible agar kita jaga customer launch?"
+          "textId": "Checking in soal tanggal Payments API yang kita align Kamis lalu. Rilis checkout kami bergantung padanya. Bisakah bagikan ETA revisi dan apakah stub sementara feasible agar kita jaga customer launch?",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Escalate to executives immediately with no context.",
-          "textId": "Eskalasi ke eksekutif segera tanpa konteks."
+          "textId": "Eskalasi ke eksekutif segera tanpa konteks.",
+          "structure": "Imperative: Verb + Object (+ Adverbial)",
+          "structureId": "Imperatif: Kata kerja + Objek (+ Keterangan)"
         },
         {
           "key": "D",
           "text": "Silently slip your date and surprise everyone later.",
-          "textId": "Geser tanggal diam-diam dan kejutan semua orang nanti."
+          "textId": "Geser tanggal diam-diam dan kejutan semua orang nanti.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -58,28 +70,40 @@
       "difficulty": "senior",
       "scenario": "Vendor support is slow during a production degradation.",
       "scenarioId": "Dukungan vendor lambat saat terjadi degradasi production.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Professional escalation email?",
       "promptId": "Email eskalasi yang profesional?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Your product is garbage.",
-          "textId": "Produk kalian sampah."
+          "textId": "Produk kalian sampah.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "B",
           "text": "We are seeing elevated timeouts on gateway X since 13:40 UTC impacting checkout. Severity: high. Please confirm ticket priority and provide an ETA for an update within 30 minutes. Bridge link included.",
-          "textId": "Kami melihat timeout meningkat di gateway X sejak 13:40 UTC yang berdampak pada checkout. Severity: high. Mohon konfirmasi prioritas tiket dan berikan ETA update dalam 30 menit. Link bridge terlampir."
+          "textId": "Kami melihat timeout meningkat di gateway X sejak 13:40 UTC yang berdampak pada checkout. Severity: high. Mohon konfirmasi prioritas tiket dan berikan ETA update dalam 30 menit. Link bridge terlampir.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Wait silently for 24 hours.",
-          "textId": "Tunggu diam-diam selama 24 jam."
+          "textId": "Tunggu diam-diam selama 24 jam.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "D",
           "text": "Tweet at their CEO first.",
-          "textId": "Tweet ke CEO mereka dulu."
+          "textId": "Tweet ke CEO mereka dulu.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -100,28 +124,40 @@
       "difficulty": "mid",
       "scenario": "Security team rejected your change without clear next steps.",
       "scenarioId": "Tim security menolak perubahan Anda tanpa langkah lanjut yang jelas.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "How do you respond?",
       "promptId": "Bagaimana Anda merespons?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "Security always blocks innovation.",
-          "textId": "Security selalu memblokir inovasi."
+          "textId": "Security selalu memblokir inovasi.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "B",
           "text": "Thanks for the review. Could you list the specific controls we must satisfy to get to approve? I can propose compensating controls today if the original path is blocked for this release train.",
-          "textId": "Terima kasih atas review-nya. Bisakah daftar kontrol spesifik yang harus kami penuhi untuk mendapat approve? Saya bisa usulkan compensating controls hari ini jika jalur asli terblokir untuk release train ini."
+          "textId": "Terima kasih atas review-nya. Bisakah daftar kontrol spesifik yang harus kami penuhi untuk mendapat approve? Saya bisa usulkan compensating controls hari ini jika jalur asli terblokir untuk release train ini.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Bypass security in production.",
-          "textId": "Bypass security di production."
+          "textId": "Bypass security di production.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "D",
           "text": "Abandon the project immediately.",
-          "textId": "Tinggalkan proyek segera."
+          "textId": "Tinggalkan proyek segera.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -142,28 +178,40 @@
       "difficulty": "junior",
       "scenario": "You need design input from UX but they are overloaded.",
       "scenarioId": "Anda butuh input desain dari UX tetapi mereka overloaded.",
+      "scenarioStructure": "Passive: Subject + be + past participle (+ by/Adverbial)",
+      "scenarioStructureId": "Pasif: Subjek + be + past participle (+ by/Keterangan)",
       "prompt": "Polite ask?",
       "promptId": "Permintaan yang sopan?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Drop everything for me.",
-          "textId": "Tinggalkan semua pekerjaan demi saya."
+          "textId": "Tinggalkan semua pekerjaan demi saya.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "B",
           "text": "I know bandwidth is tight. Could I get a 20-minute UX sanity check on the empty-state copy by Wednesday? If that is impossible, I will ship with the interim copy and schedule a polish pass next sprint.",
-          "textId": "Saya tahu bandwidth ketat. Bisakah saya dapat sanity check UX 20 menit untuk copy empty-state sebelum Rabu? Jika tidak mungkin, saya ship dengan copy sementara dan jadwalkan polish di sprint berikutnya."
+          "textId": "Saya tahu bandwidth ketat. Bisakah saya dapat sanity check UX 20 menit untuk copy empty-state sebelum Rabu? Jika tidak mungkin, saya ship dengan copy sementara dan jadwalkan polish di sprint berikutnya.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Ship ugly UI without notice forever.",
-          "textId": "Ship UI jelek tanpa pemberitahuan selamanya."
+          "textId": "Ship UI jelek tanpa pemberitahuan selamanya.",
+          "structure": "Imperative: Verb + Object (+ Adverbial)",
+          "structureId": "Imperatif: Kata kerja + Objek (+ Keterangan)"
         },
         {
           "key": "D",
           "text": "Complaint to their manager first.",
-          "textId": "Komplain ke manajer mereka dulu."
+          "textId": "Komplain ke manajer mereka dulu.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -185,28 +233,40 @@
       "difficulty": "senior",
       "scenario": "Two directors disagree on roadmap sequencing in a shared forum.",
       "scenarioId": "Dua director tidak setuju soal urutan roadmap di forum bersama.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "How do you facilitate?",
       "promptId": "Bagaimana Anda memfasilitasi?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "Pick a side loudly.",
-          "textId": "Pilih pihak dengan keras."
+          "textId": "Pilih pihak dengan keras.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "B",
           "text": "I hear two priorities: reliability hardening vs partner launch. To decide, can we compare customer impact and opportunity cost for the next six weeks? I can bring a one-page tradeoff matrix by tomorrow morning.",
-          "textId": "Saya mendengar dua prioritas: reliability hardening vs partner launch. Untuk memutuskan, bisakah kita bandingkan dampak pelanggan dan opportunity cost enam minggu ke depan? Saya bisa bawa matriks tradeoff satu halaman besok pagi."
+          "textId": "Saya mendengar dua prioritas: reliability hardening vs partner launch. Untuk memutuskan, bisakah kita bandingkan dampak pelanggan dan opportunity cost enam minggu ke depan? Saya bisa bawa matriks tradeoff satu halaman besok pagi.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Let the argument run for an hour.",
-          "textId": "Biarkan argumen berlangsung sejam."
+          "textId": "Biarkan argumen berlangsung sejam.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "Cancel both initiatives.",
-          "textId": "Batalkan kedua inisiatif."
+          "textId": "Batalkan kedua inisiatif.",
+          "structure": "Short phrase (elliptical)",
+          "structureId": "Frasa pendek (eliptis — subjek/kata kerja tersirat)"
         }
       ],
       "correctKey": "B",
@@ -227,28 +287,40 @@
       "difficulty": "mid",
       "scenario": "Partner asks for an unrealistic same-day integration.",
       "scenarioId": "Partner meminta integrasi same-day yang tidak realistis.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Polite pushback?",
       "promptId": "Pushback yang sopan?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Impossible. No.",
-          "textId": "Mustahil. Tidak."
+          "textId": "Mustahil. Tidak.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "B",
           "text": "I want to support the launch. Same-day full integration is high risk given testing needs. We can deliver a read-only pilot today and the write path on Thursday after verification — does that meet the customer moment?",
-          "textId": "Saya ingin mendukung peluncuran. Integrasi penuh same-day berisiko tinggi mengingat kebutuhan testing. Kita bisa kirim pilot read-only hari ini dan write path Kamis setelah verifikasi — apakah itu memenuhi momen pelanggan?"
+          "textId": "Saya ingin mendukung peluncuran. Integrasi penuh same-day berisiko tinggi mengingat kebutuhan testing. Kita bisa kirim pilot read-only hari ini dan write path Kamis setelah verifikasi — apakah itu memenuhi momen pelanggan?",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Agree then fail silently.",
-          "textId": "Setuju lalu gagal diam-diam."
+          "textId": "Setuju lalu gagal diam-diam.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "D",
           "text": "Ignore the partner email.",
-          "textId": "Abaikan email partner."
+          "textId": "Abaikan email partner.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -269,28 +341,40 @@
       "difficulty": "mid",
       "scenario": "Finance disputes a tooling purchase you need for on-call.",
       "scenarioId": "Finance memperdebatkan pembelian tool yang Anda butuhkan untuk on-call.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Business-framed reply?",
       "promptId": "Balasan berbingkai bisnis?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Engineers deserve nice toys.",
-          "textId": "Engineer berhak dapat mainan bagus."
+          "textId": "Engineer berhak dapat mainan bagus.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "B",
           "text": "Understood on cost control. The tool reduces MTTR and pages; estimated savings exceed subscription within two incidents avoided. I attached a 30-day pilot plan with success metrics — can we approve the pilot?",
-          "textId": "Mengerti soal pengendalian biaya. Tool ini menurunkan MTTR dan page; estimasi penghematan melebihi biaya langganan dalam dua insiden yang dihindari. Saya lampirkan rencana pilot 30 hari dengan success metrics — bisakah kita approve pilot-nya?"
+          "textId": "Mengerti soal pengendalian biaya. Tool ini menurunkan MTTR dan page; estimasi penghematan melebihi biaya langganan dalam dua insiden yang dihindari. Saya lampirkan rencana pilot 30 hari dengan success metrics — bisakah kita approve pilot-nya?",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Buy it on a personal card secretly.",
-          "textId": "Beli diam-diam pakai kartu pribadi."
+          "textId": "Beli diam-diam pakai kartu pribadi.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "Threaten resignation over the tool.",
-          "textId": "Ancam resign karena tool."
+          "textId": "Ancam resign karena tool.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -311,28 +395,40 @@
       "difficulty": "junior",
       "scenario": "You joined a cross-team kickoff and roles are unclear.",
       "scenarioId": "Anda ikut kickoff lintas tim dan peran belum jelas.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Useful clarifying question?",
       "promptId": "Pertanyaan klarifikasi yang berguna?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Who is in charge of everything forever?",
-          "textId": "Siapa yang berkuasa atas segalanya selamanya?"
+          "textId": "Siapa yang berkuasa atas segalanya selamanya?",
+          "structure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)"
         },
         {
           "key": "B",
           "text": "To avoid gaps: who is the decision owner for API contract changes, and who is consulted vs informed? I can draft an RACI after this call if helpful.",
-          "textId": "Agar tidak ada celah: siapa decision owner untuk perubahan kontrak API, dan siapa yang consulted vs informed? Saya bisa draft RACI setelah call ini jika membantu."
+          "textId": "Agar tidak ada celah: siapa decision owner untuk perubahan kontrak API, dan siapa yang consulted vs informed? Saya bisa draft RACI setelah call ini jika membantu.",
+          "structure": "Question: Auxiliary/Wh + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan: Auxiliary/Wh + Subjek + Kata kerja (+ Objek)"
         },
         {
           "key": "C",
           "text": "Stay confused silently.",
-          "textId": "Tetap bingung diam-diam."
+          "textId": "Tetap bingung diam-diam.",
+          "structure": "Short phrase (elliptical)",
+          "structureId": "Frasa pendek (eliptis — subjek/kata kerja tersirat)"
         },
         {
           "key": "D",
           "text": "Assume you own all decisions.",
-          "textId": "Asumsikan Anda punya semua keputusan."
+          "textId": "Asumsikan Anda punya semua keputusan.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -353,28 +449,40 @@
       "difficulty": "senior",
       "scenario": "A peer manager's team keeps breaking shared SLOs.",
       "scenarioId": "Tim peer manager terus merusak SLO bersama.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Constructive 1:1 opener with that manager?",
       "promptId": "Pembuka 1:1 yang konstruktif dengan manajer itu?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Your team is the problem.",
-          "textId": "Tim Anda adalah masalahnya."
+          "textId": "Tim Anda adalah masalahnya.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "B",
           "text": "I want us to succeed on the shared checkout SLO. Over the last month, error-budget burn from service B is the main driver. Can we align on ownership for two reliability fixes this sprint?",
-          "textId": "Saya ingin kita sukses pada SLO checkout bersama. Sebulan terakhir, error-budget burn dari service B adalah driver utama. Bisakah kita align ownership untuk dua perbaikan reliability sprint ini?"
+          "textId": "Saya ingin kita sukses pada SLO checkout bersama. Sebulan terakhir, error-budget burn dari service B adalah driver utama. Bisakah kita align ownership untuk dua perbaikan reliability sprint ini?",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Complain only to executives first.",
-          "textId": "Komplain ke eksekutif dulu saja."
+          "textId": "Komplain ke eksekutif dulu saja.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "D",
           "text": "Add sarcasm in the shared channel.",
-          "textId": "Tambah sarkasme di channel bersama."
+          "textId": "Tambah sarkasme di channel bersama.",
+          "structure": "Imperative: Verb + Object (+ Adverbial)",
+          "structureId": "Imperatif: Kata kerja + Objek (+ Keterangan)"
         }
       ],
       "correctKey": "B",
@@ -395,28 +503,40 @@
       "difficulty": "mid",
       "scenario": "Legal needs more time; sales wants to announce a feature.",
       "scenarioId": "Legal butuh waktu lebih; sales ingin mengumumkan fitur.",
+      "scenarioStructure": "Subject + Verb (+ Complement) — short declarative",
+      "scenarioStructureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek",
       "prompt": "Alignment message?",
       "promptId": "Pesan alignment?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Ship the announcement anyway.",
-          "textId": "Kirim pengumuman saja."
+          "textId": "Kirim pengumuman saja.",
+          "structure": "Imperative: Verb + Object (+ Adverbial)",
+          "structureId": "Imperatif: Kata kerja + Objek (+ Keterangan)"
         },
         {
           "key": "B",
           "text": "Sales wants to announce Friday; Legal needs through Monday for review. Proposal: soft-announce to design partners under NDA Friday, public announce Tuesday after Legal sign-off. Any objections by noon?",
-          "textId": "Sales ingin announce Jumat; Legal butuh sampai Senin untuk review. Usulan: soft-announce ke design partners di bawah NDA Jumat, announce publik Selasa setelah sign-off Legal. Ada keberatan sebelum siang?"
+          "textId": "Sales ingin announce Jumat; Legal butuh sampai Senin untuk review. Usulan: soft-announce ke design partners di bawah NDA Jumat, announce publik Selasa setelah sign-off Legal. Ada keberatan sebelum siang?",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Let teams fight in email forever.",
-          "textId": "Biarkan tim berkelahi di email selamanya."
+          "textId": "Biarkan tim berkelahi di email selamanya.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "Cancel the feature.",
-          "textId": "Batalkan fiturnya."
+          "textId": "Batalkan fiturnya.",
+          "structure": "Short phrase (elliptical)",
+          "structureId": "Frasa pendek (eliptis — subjek/kata kerja tersirat)"
         }
       ],
       "correctKey": "B",
@@ -438,28 +558,40 @@
       "difficulty": "mid",
       "scenario": "Offshore vendor delivered incomplete work near deadline.",
       "scenarioId": "Vendor offshore mengirimkan pekerjaan tidak lengkap mendekati deadline.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Firm but professional note?",
       "promptId": "Catatan tegas tapi profesional?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "You failed us.",
-          "textId": "Kalian mengecewakan kami."
+          "textId": "Kalian mengecewakan kami.",
+          "structure": "Short phrase (elliptical)",
+          "structureId": "Frasa pendek (eliptis — subjek/kata kerja tersirat)"
         },
         {
           "key": "B",
           "text": "The deliverable is missing load-test results and rollback steps listed in SOW section 4. Please confirm completion ETA by tomorrow 10:00 and whether you need clarification. Our go-live depends on those artifacts.",
-          "textId": "Deliverable kekurangan hasil load-test dan langkah rollback yang tercantum di SOW bagian 4. Mohon konfirmasi ETA penyelesaian sebelum besok 10:00 dan apakah Anda butuh klarifikasi. Go-live kami bergantung pada artefak itu."
+          "textId": "Deliverable kekurangan hasil load-test dan langkah rollback yang tercantum di SOW bagian 4. Mohon konfirmasi ETA penyelesaian sebelum besok 10:00 dan apakah Anda butuh klarifikasi. Go-live kami bergantung pada artefak itu.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Accept incomplete work silently.",
-          "textId": "Terima pekerjaan tidak lengkap diam-diam."
+          "textId": "Terima pekerjaan tidak lengkap diam-diam.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "D",
           "text": "Publicly shame the vendor on LinkedIn.",
-          "textId": "Permalukan vendor di LinkedIn secara publik."
+          "textId": "Permalukan vendor di LinkedIn secara publik.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -480,28 +612,40 @@
       "difficulty": "senior",
       "scenario": "Close a difficult cross-team negotiation that reached agreement.",
       "scenarioId": "Tutup negosiasi lintas tim yang sulit dan sudah mencapai kesepakatan.",
+      "scenarioStructure": "Imperative: Verb + Object (+ Adverbial)",
+      "scenarioStructureId": "Imperatif: Kata kerja + Objek (+ Keterangan)",
       "prompt": "Best closing summary?",
       "promptId": "Ringkasan penutup terbaik?",
+      "promptStructure": "Elliptical question: (Which is the) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which is the) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Great talk.",
-          "textId": "Obrolan bagus."
+          "textId": "Obrolan bagus.",
+          "structure": "Fixed phrase / elliptical clause",
+          "structureId": "Frasa tetap / klausa eliptis (bukan S+V+O penuh)"
         },
         {
           "key": "B",
           "text": "Agreement: Platform ships rate-limit API by April 10; we integrate by April 17; shared success metric is p95 under 300ms. I will post the decision record and calendar the checkpoint on April 8.",
-          "textId": "Kesepakatan: Platform ship rate-limit API sebelum 10 April; kita integrasi sebelum 17 April; success metric bersama adalah p95 di bawah 300ms. Saya akan post decision record dan jadwalkan checkpoint 8 April."
+          "textId": "Kesepakatan: Platform ship rate-limit API sebelum 10 April; kita integrasi sebelum 17 April; success metric bersama adalah p95 di bawah 300ms. Saya akan post decision record dan jadwalkan checkpoint 8 April.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Hope everyone remembers.",
-          "textId": "Semoga semua orang ingat."
+          "textId": "Semoga semua orang ingat.",
+          "structure": "Short phrase (elliptical)",
+          "structureId": "Frasa pendek (eliptis — subjek/kata kerja tersirat)"
         },
         {
           "key": "D",
           "text": "Change the deal after the meeting quietly.",
-          "textId": "Ubah kesepakatan diam-diam setelah rapat."
+          "textId": "Ubah kesepakatan diam-diam setelah rapat.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",

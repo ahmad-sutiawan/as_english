@@ -42,6 +42,7 @@ export default async function ModulePage({ params, searchParams }: Props) {
     difficulty: item.difficulty,
     prompt: item.prompt,
     promptId: item.promptId,
+    promptStructure: item.promptStructure,
     done: completed.has(item.id),
   }));
 

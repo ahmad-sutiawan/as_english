@@ -16,28 +16,40 @@
       "difficulty": "mid",
       "scenario": "You are drafting the incident summary for a SEV-1 checkout outage.",
       "scenarioId": "Anda sedang menyusun ringkasan insiden untuk outage checkout SEV-1.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Best blameless opening?",
       "promptId": "Pembuka blameless terbaik?",
+      "promptStructure": "Elliptical question: (Which is the) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which is the) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "An engineer messed up the config again.",
-          "textId": "Seorang engineer lagi-lagi merusak config."
+          "textId": "Seorang engineer lagi-lagi merusak config.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "On March 12, checkout errors rose to 18% for 47 minutes after a feature flag default changed. Customer impact was failed payments. We mitigated by disabling the flag and restored baseline.",
-          "textId": "Pada 12 Maret, error checkout naik ke 18% selama 47 menit setelah default feature flag berubah. Dampak pelanggan: pembayaran gagal. Kami mitigasi dengan menonaktifkan flag dan mengembalikan baseline."
+          "textId": "Pada 12 Maret, error checkout naik ke 18% selama 47 menit setelah default feature flag berubah. Dampak pelanggan: pembayaran gagal. Kami mitigasi dengan menonaktifkan flag dan mengembalikan baseline.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "We do not know and will never know.",
-          "textId": "Kami tidak tahu dan tidak akan pernah tahu."
+          "textId": "Kami tidak tahu dan tidak akan pernah tahu.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "D",
           "text": "This was inevitable so no analysis is needed.",
-          "textId": "Ini tak terhindarkan jadi tidak perlu analisis."
+          "textId": "Ini tak terhindarkan jadi tidak perlu analisis.",
+          "structure": "Passive: Subject + be + past participle (+ by/Adverbial)",
+          "structureId": "Pasif: Subjek + be + past participle (+ by/Keterangan)"
         }
       ],
       "correctKey": "B",
@@ -58,28 +70,40 @@
       "difficulty": "senior",
       "scenario": "Leadership asks 'who caused it?' in the postmortem meeting.",
       "scenarioId": "Leadership bertanya 'siapa yang menyebabkan ini?' di rapat postmortem.",
+      "scenarioStructure": "Multi-clause: Subject + Verb + Object + connector + clause",
+      "scenarioStructureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
       "prompt": "How do you redirect?",
       "promptId": "Bagaimana Anda mengalihkan fokus?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "Name the person publicly.",
-          "textId": "Sebut nama orangnya di depan umum."
+          "textId": "Sebut nama orangnya di depan umum.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "B",
           "text": "Our focus is the conditions that allowed this to reach production — detection gaps, review checks, and rollout controls — so we prevent recurrence. Individuals followed the process we had at the time.",
-          "textId": "Fokus kami adalah kondisi yang memungkinkan ini sampai ke production — celah deteksi, cek review, dan kontrol rollout — agar tidak terulang. Individu mengikuti proses yang ada saat itu."
+          "textId": "Fokus kami adalah kondisi yang memungkinkan ini sampai ke production — celah deteksi, cek review, dan kontrol rollout — agar tidak terulang. Individu mengikuti proses yang ada saat itu.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Refuse to write any document.",
-          "textId": "Menolak menulis dokumen apa pun."
+          "textId": "Menolak menulis dokumen apa pun.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "D",
           "text": "Say it was random chance only.",
-          "textId": "Bilang itu hanya kebetulan acak."
+          "textId": "Bilang itu hanya kebetulan acak.",
+          "structure": "Imperative: Verb + Object (+ Adverbial)",
+          "structureId": "Imperatif: Kata kerja + Objek (+ Keterangan)"
         }
       ],
       "correctKey": "B",
@@ -100,28 +124,40 @@
       "difficulty": "mid",
       "scenario": "Write a clear contributing-factor statement.",
       "scenarioId": "Tulis pernyataan contributing factor yang jelas.",
+      "scenarioStructure": "Imperative: Verb + Object (+ Adverbial)",
+      "scenarioStructureId": "Imperatif: Kata kerja + Objek (+ Keterangan)",
       "prompt": "Which is strongest?",
       "promptId": "Mana yang paling kuat?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "Bad luck.",
-          "textId": "Nasib buruk."
+          "textId": "Nasib buruk.",
+          "structure": "Fixed phrase / elliptical clause",
+          "structureId": "Frasa tetap / klausa eliptis (bukan S+V+O penuh)"
         },
         {
           "key": "B",
           "text": "Contributing factors: flag defaults were not reviewed in change checklist; canary did not cover checkout path; alert threshold was too slow for revenue impact.",
-          "textId": "Contributing factors: default flag tidak direview di checklist perubahan; canary tidak mencakup path checkout; threshold alert terlalu lambat untuk dampak revenue."
+          "textId": "Contributing factors: default flag tidak direview di checklist perubahan; canary tidak mencakup path checkout; threshold alert terlalu lambat untuk dampak revenue.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "C",
           "text": "People were careless.",
-          "textId": "Orang-orang ceroboh."
+          "textId": "Orang-orang ceroboh.",
+          "structure": "Short phrase (elliptical)",
+          "structureId": "Frasa pendek (eliptis — subjek/kata kerja tersirat)"
         },
         {
           "key": "D",
           "text": "Cloud provider hate us.",
-          "textId": "Cloud provider membenci kami."
+          "textId": "Cloud provider membenci kami.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -141,28 +177,40 @@
       "difficulty": "junior",
       "scenario": "Propose an action item after a missed alert.",
       "scenarioId": "Usulkan action item setelah alert terlewat.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Best action item phrasing?",
       "promptId": "Formulasi action item terbaik?",
+      "promptStructure": "Elliptical question: (Which is the) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which is the) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Be more careful.",
-          "textId": "Lebih hati-hati."
+          "textId": "Lebih hati-hati.",
+          "structure": "Short phrase (elliptical)",
+          "structureId": "Frasa pendek (eliptis — subjek/kata kerja tersirat)"
         },
         {
           "key": "B",
           "text": "Action: add burn-rate alert on checkout success SLO, owner: Avery, due: March 20, success metric: alert fires within 5 minutes in staging game-day.",
-          "textId": "Action: tambah burn-rate alert pada SLO sukses checkout, owner: Avery, due: 20 Maret, success metric: alert menyala dalam 5 menit di game-day staging."
+          "textId": "Action: tambah burn-rate alert pada SLO sukses checkout, owner: Avery, due: 20 Maret, success metric: alert menyala dalam 5 menit di game-day staging.",
+          "structure": "Labeled updates: Time/Status label + Verb phrase (×N)",
+          "structureId": "Update berlabel: Label waktu/status + frasa kerja (×N)"
         },
         {
           "key": "C",
           "text": "Monitor harder somehow.",
-          "textId": "Monitor lebih keras entah bagaimana."
+          "textId": "Monitor lebih keras entah bagaimana.",
+          "structure": "Short phrase (elliptical)",
+          "structureId": "Frasa pendek (eliptis — subjek/kata kerja tersirat)"
         },
         {
           "key": "D",
           "text": "Buy more tools immediately without owners.",
-          "textId": "Beli tool lebih banyak segera tanpa owner."
+          "textId": "Beli tool lebih banyak segera tanpa owner.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -183,28 +231,40 @@
       "difficulty": "mid",
       "scenario": "Timeline section is messy with conflicting times.",
       "scenarioId": "Bagian timeline berantakan dengan waktu yang saling bertentangan.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "How do you fix communication?",
       "promptId": "Bagaimana memperbaiki komunikasinya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "Pick random times.",
-          "textId": "Pilih waktu acak."
+          "textId": "Pilih waktu acak.",
+          "structure": "Short phrase (elliptical)",
+          "structureId": "Frasa pendek (eliptis — subjek/kata kerja tersirat)"
         },
         {
           "key": "B",
           "text": "I reconciled timeline stamps to UTC from pager, deploy, and chat logs. Please review the linked sheet; call out any missing events before we publish.",
-          "textId": "Saya sudah merekonsiliasi stempel waktu ke UTC dari pager, deploy, dan chat log. Mohon review sheet terlampir; sebutkan event yang hilang sebelum kita publish."
+          "textId": "Saya sudah merekonsiliasi stempel waktu ke UTC dari pager, deploy, dan chat log. Mohon review sheet terlampir; sebutkan event yang hilang sebelum kita publish.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Delete the timeline.",
-          "textId": "Hapus timeline-nya."
+          "textId": "Hapus timeline-nya.",
+          "structure": "Short phrase (elliptical)",
+          "structureId": "Frasa pendek (eliptis — subjek/kata kerja tersirat)"
         },
         {
           "key": "D",
           "text": "Use local timezones mixed without labels.",
-          "textId": "Campur timezone lokal tanpa label."
+          "textId": "Campur timezone lokal tanpa label.",
+          "structure": "Imperative: Verb + Object (+ Adverbial)",
+          "structureId": "Imperatif: Kata kerja + Objek (+ Keterangan)"
         }
       ],
       "correctKey": "B",
@@ -225,28 +285,40 @@
       "difficulty": "senior",
       "scenario": "A customer asks for a public statement derived from the postmortem.",
       "scenarioId": "Pelanggan meminta pernyataan publik yang diturunkan dari postmortem.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Appropriate external language?",
       "promptId": "Bahasa eksternal yang tepat?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Our junior broke payments.",
-          "textId": "Junior kami merusak pembayaran."
+          "textId": "Junior kami merusak pembayaran.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "B",
           "text": "We experienced a checkout disruption on March 12. We restored service the same day and are implementing additional safeguards around configuration changes and faster detection. We apologize for the impact.",
-          "textId": "Kami mengalami gangguan checkout pada 12 Maret. Layanan dipulihkan di hari yang sama dan kami menerapkan safeguard tambahan seputar perubahan konfigurasi serta deteksi yang lebih cepat. Kami meminta maaf atas dampaknya."
+          "textId": "Kami mengalami gangguan checkout pada 12 Maret. Layanan dipulihkan di hari yang sama dan kami menerapkan safeguard tambahan seputar perubahan konfigurasi serta deteksi yang lebih cepat. Kami meminta maaf atas dampaknya.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Share the full internal blame list.",
-          "textId": "Bagikan daftar blame internal lengkap."
+          "textId": "Bagikan daftar blame internal lengkap.",
+          "structure": "Imperative: Verb + Object (+ Adverbial)",
+          "structureId": "Imperatif: Kata kerja + Objek (+ Keterangan)"
         },
         {
           "key": "D",
           "text": "Deny any disruption occurred.",
-          "textId": "Sangkal bahwa ada gangguan."
+          "textId": "Sangkal bahwa ada gangguan.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -267,28 +339,40 @@
       "difficulty": "mid",
       "scenario": "Someone wants 30 action items from one incident.",
       "scenarioId": "Seseorang ingin 30 action item dari satu insiden.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "How do you prioritize in the room?",
       "promptId": "Bagaimana memprioritaskan di dalam ruangan?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "Accept all ideas equally.",
-          "textId": "Terima semua ide sama rata."
+          "textId": "Terima semua ide sama rata.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "B",
           "text": "Let's prioritize the top three actions that most reduce recurrence probability: detection, safer defaults, and canary coverage. Other ideas go to the backlog with owners if capacity appears.",
-          "textId": "Mari prioritaskan tiga aksi teratas yang paling menurunkan probabilitas terulang: detection, default yang lebih aman, dan coverage canary. Ide lain masuk backlog dengan owner jika kapasitas muncul."
+          "textId": "Mari prioritaskan tiga aksi teratas yang paling menurunkan probabilitas terulang: detection, default yang lebih aman, dan coverage canary. Ide lain masuk backlog dengan owner jika kapasitas muncul.",
+          "structure": "Suggestive imperative: Let's + Verb + Object",
+          "structureId": "Imperatif usulan: Let's + Kata kerja + Objek"
         },
         {
           "key": "C",
           "text": "Do nothing because lists are hard.",
-          "textId": "Tidak lakukan apa-apa karena daftar itu sulit."
+          "textId": "Tidak lakukan apa-apa karena daftar itu sulit.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "Assign everything to the intern.",
-          "textId": "Serahkan semuanya ke intern."
+          "textId": "Serahkan semuanya ke intern.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -309,28 +393,40 @@
       "difficulty": "junior",
       "scenario": "You need to state what went well without sounding defensive.",
       "scenarioId": "Anda perlu menyatakan what went well tanpa terdengar defensif.",
+      "scenarioStructure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+      "scenarioStructureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)",
       "prompt": "Good phrasing?",
       "promptId": "Formulasi yang bagus?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Actually we were perfect.",
-          "textId": "Sebenarnya kami sempurna."
+          "textId": "Sebenarnya kami sempurna.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "B",
           "text": "What went well: on-call joined within two minutes, rollback was executed cleanly, and customer status updates went out every 15 minutes.",
-          "textId": "What went well: on-call bergabung dalam dua menit, rollback dieksekusi bersih, dan update status pelanggan keluar setiap 15 menit."
+          "textId": "What went well: on-call bergabung dalam dua menit, rollback dieksekusi bersih, dan update status pelanggan keluar setiap 15 menit.",
+          "structure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)"
         },
         {
           "key": "C",
           "text": "Nothing went well; only pain.",
-          "textId": "Tidak ada yang berjalan baik; hanya rasa sakit."
+          "textId": "Tidak ada yang berjalan baik; hanya rasa sakit.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "D",
           "text": "Praise only leadership.",
-          "textId": "Puji hanya leadership."
+          "textId": "Puji hanya leadership.",
+          "structure": "Short phrase (elliptical)",
+          "structureId": "Frasa pendek (eliptis — subjek/kata kerja tersirat)"
         }
       ],
       "correctKey": "B",
@@ -350,28 +446,40 @@
       "difficulty": "senior",
       "scenario": "Legal asks you to soften speculative language.",
       "scenarioId": "Legal meminta Anda melunakkan bahasa spekulatif.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Professional edit?",
       "promptId": "Edit yang profesional?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Keep dramatic claims for effect.",
-          "textId": "Pertahankan klaim dramatis demi efek."
+          "textId": "Pertahankan klaim dramatis demi efek.",
+          "structure": "Imperative: Verb + Object (+ Adverbial)",
+          "structureId": "Imperatif: Kata kerja + Objek (+ Keterangan)"
         },
         {
           "key": "B",
           "text": "I replaced speculative phrases with verified facts and labeled hypotheses clearly as hypotheses pending confirmation. The prevention actions remain unchanged.",
-          "textId": "Saya mengganti frasa spekulatif dengan fakta terverifikasi dan melabel hipotesis dengan jelas sebagai hipotesis menunggu konfirmasi. Aksi pencegahan tetap tidak berubah."
+          "textId": "Saya mengganti frasa spekulatif dengan fakta terverifikasi dan melabel hipotesis dengan jelas sebagai hipotesis menunggu konfirmasi. Aksi pencegahan tetap tidak berubah.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Delete the whole postmortem.",
-          "textId": "Hapus seluruh postmortem."
+          "textId": "Hapus seluruh postmortem.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "D",
           "text": "Ignore legal entirely.",
-          "textId": "Abaikan legal sepenuhnya."
+          "textId": "Abaikan legal sepenuhnya.",
+          "structure": "Short phrase (elliptical)",
+          "structureId": "Frasa pendek (eliptis — subjek/kata kerja tersirat)"
         }
       ],
       "correctKey": "B",
@@ -392,28 +500,40 @@
       "difficulty": "mid",
       "scenario": "Follow-up meeting: two action items are overdue.",
       "scenarioId": "Rapat follow-up: dua action item sudah terlambat.",
+      "scenarioStructure": "Imperative: Verb + Object (+ Adverbial)",
+      "scenarioStructureId": "Imperatif: Kata kerja + Objek (+ Keterangan)",
       "prompt": "Best status prompt?",
       "promptId": "Prompt status terbaik?",
+      "promptStructure": "Elliptical question: (Which is the) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which is the) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Why are you failing?",
-          "textId": "Kenapa kalian gagal?"
+          "textId": "Kenapa kalian gagal?",
+          "structure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)"
         },
         {
           "key": "B",
           "text": "Two actions are past due: canary coverage and flag checklist. Owners — can you share blockers and a new date today? If capacity is the issue, we will renegotiate scope with leadership.",
-          "textId": "Dua aksi sudah lewat jatuh tempo: canary coverage dan checklist flag. Owners — bisakah bagikan blocker dan tanggal baru hari ini? Jika masalahnya kapasitas, kita akan renegosiasi scope dengan leadership."
+          "textId": "Dua aksi sudah lewat jatuh tempo: canary coverage dan checklist flag. Owners — bisakah bagikan blocker dan tanggal baru hari ini? Jika masalahnya kapasitas, kita akan renegosiasi scope dengan leadership.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Quietly mark them done.",
-          "textId": "Diam-diam tandai selesai."
+          "textId": "Diam-diam tandai selesai.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "D",
           "text": "Shame owners in a company-wide email.",
-          "textId": "Permalukan owner di email seluruh perusahaan."
+          "textId": "Permalukan owner di email seluruh perusahaan.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -434,28 +554,40 @@
       "difficulty": "mid",
       "scenario": "Root cause is still uncertain after investigation.",
       "scenarioId": "Root cause masih belum pasti setelah investigasi.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Honest wording?",
       "promptId": "Formulasi yang jujur?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Declare a scapegoat cause.",
-          "textId": "Tetapkan penyebab kambing hitam."
+          "textId": "Tetapkan penyebab kambing hitam.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "B",
           "text": "Primary trigger is confirmed as the flag default. Deeper why around review process gaps is supported by evidence; a secondary hypothesis on cache stampede remains under investigation and will be updated by Friday.",
-          "textId": "Pemicu utama terkonfirmasi sebagai default flag. Why yang lebih dalam seputar celah proses review didukung bukti; hipotesis sekunder tentang cache stampede masih dalam investigasi dan akan di-update Jumat."
+          "textId": "Pemicu utama terkonfirmasi sebagai default flag. Why yang lebih dalam seputar celah proses review didukung bukti; hipotesis sekunder tentang cache stampede masih dalam investigasi dan akan di-update Jumat.",
+          "structure": "Passive: Subject + be + past participle (+ by/Adverbial)",
+          "structureId": "Pasif: Subjek + be + past participle (+ by/Keterangan)"
         },
         {
           "key": "C",
           "text": "Pretend certainty.",
-          "textId": "Berpura-pura pasti."
+          "textId": "Berpura-pura pasti.",
+          "structure": "Fixed phrase / elliptical clause",
+          "structureId": "Frasa tetap / klausa eliptis (bukan S+V+O penuh)"
         },
         {
           "key": "D",
           "text": "Say root cause is impossible.",
-          "textId": "Bilang root cause mustahil."
+          "textId": "Bilang root cause mustahil.",
+          "structure": "Imperative: Verb + Object (+ Adverbial)",
+          "structureId": "Imperatif: Kata kerja + Objek (+ Keterangan)"
         }
       ],
       "correctKey": "B",
@@ -476,28 +608,40 @@
       "difficulty": "senior",
       "scenario": "Close the postmortem review meeting.",
       "scenarioId": "Tutup rapat review postmortem.",
+      "scenarioStructure": "Imperative: Verb + Object (+ Adverbial)",
+      "scenarioStructureId": "Imperatif: Kata kerja + Objek (+ Keterangan)",
       "prompt": "Strong closing?",
       "promptId": "Penutup yang kuat?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "Meeting over.",
-          "textId": "Rapat selesai."
+          "textId": "Rapat selesai.",
+          "structure": "Fixed phrase / elliptical clause",
+          "structureId": "Frasa tetap / klausa eliptis (bukan S+V+O penuh)"
         },
         {
           "key": "B",
           "text": "We aligned on three actions with owners and dates. I will publish the final doc today, open tracking tickets, and schedule a 30-day effectiveness check. Thanks everyone for the blameless discussion.",
-          "textId": "Kita sudah align pada tiga aksi dengan owner dan tanggal. Saya akan publish dokumen final hari ini, buka tiket tracking, dan jadwalkan cek efektivitas 30 hari. Terima kasih semua atas diskusi yang blameless."
+          "textId": "Kita sudah align pada tiga aksi dengan owner dan tanggal. Saya akan publish dokumen final hari ini, buka tiket tracking, dan jadwalkan cek efektivitas 30 hari. Terima kasih semua atas diskusi yang blameless.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "Add twenty more actions first.",
-          "textId": "Tambah dua puluh aksi lagi dulu."
+          "textId": "Tambah dua puluh aksi lagi dulu.",
+          "structure": "Imperative: Verb + Object (+ Adverbial)",
+          "structureId": "Imperatif: Kata kerja + Objek (+ Keterangan)"
         },
         {
           "key": "D",
           "text": "Leave without notes.",
-          "textId": "Pergi tanpa catatan."
+          "textId": "Pergi tanpa catatan.",
+          "structure": "Short phrase (elliptical)",
+          "structureId": "Frasa pendek (eliptis — subjek/kata kerja tersirat)"
         }
       ],
       "correctKey": "B",

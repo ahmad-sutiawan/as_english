@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { DialogueTurn, ExerciseItem } from "@/types/content";
 import { SpeakButton } from "@/components/speak-button";
-import { BilingualText } from "@/components/bilingual-text";
+import { BilingualText, StructureNote } from "@/components/bilingual-text";
 import { SpeakBackPanel } from "@/components/speak-back-panel";
 import { scoreAnswer } from "@/lib/answer";
 import { speak } from "@/lib/tts";
@@ -135,6 +135,8 @@ export function DialoguePanel({
         <BilingualText
           english={item.scenario}
           indonesian={item.scenarioId}
+          structure={item.scenarioStructure}
+          structureId={item.scenarioStructureId}
           speakSlot={<SpeakButton text={item.scenario} label="Putar EN" />}
         />
       </section>
@@ -170,7 +172,12 @@ export function DialoguePanel({
                   </p>
                   <SpeakButton text={turn.text} label="Putar EN" />
                 </div>
-                <BilingualText english={turn.text} indonesian={turn.textId} />
+                <BilingualText
+                  english={turn.text}
+                  indonesian={turn.textId}
+                  structure={turn.structure}
+                  structureId={turn.structureId}
+                />
               </li>
             );
           })}
@@ -203,12 +210,16 @@ export function DialoguePanel({
                   </p>
                   <SpeakButton text={choice.text} label="Putar EN" />
                 </div>
-                <p className="mt-2 text-sm text-[var(--muted)]">
+                <p className="mt-2 rounded-md border border-[var(--border)] bg-[var(--surface-2)] px-3 py-2 text-sm text-[var(--muted)]">
                   <span className="mr-1.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--accent)]">
                     Arti
                   </span>
                   {choice.textId}
                 </p>
+                <StructureNote
+                  structure={choice.structure}
+                  structureId={choice.structureId}
+                />
               </li>
             ))}
           </ul>

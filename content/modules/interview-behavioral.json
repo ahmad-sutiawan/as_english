@@ -17,28 +17,40 @@
       "difficulty": "mid",
       "scenario": "An interviewer asks: Tell me about a time you handled a production incident under pressure.",
       "scenarioId": "Pewawancara bertanya: Ceritakan saat Anda menangani insiden produksi di bawah tekanan.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Which answer opening best follows STAR structure?",
       "promptId": "Pembukaan jawaban mana yang paling mengikuti struktur STAR?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "I am generally calm in incidents and people like working with me.",
-          "textId": "Saya biasanya tenang saat insiden dan orang senang bekerja dengan saya."
+          "textId": "Saya biasanya tenang saat insiden dan orang senang bekerja dengan saya.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "Situation: checkout errors spiked to 20% after a config change. Task: I was incident commander. Action: I froze deploys, assigned investigation owners, and rolled back within 12 minutes. Result: recovered service and cut similar risk with a config review checklist.",
-          "textId": "Situation: error checkout melonjak ke 20% setelah perubahan config. Task: saya jadi incident commander. Action: saya bekukan deploy, tunjuk owner investigasi, dan rollback dalam 12 menit. Result: layanan pulih dan risiko serupa dikurangi dengan checklist review config."
+          "textId": "Situation: error checkout melonjak ke 20% setelah perubahan config. Task: saya jadi incident commander. Action: saya bekukan deploy, tunjuk owner investigasi, dan rollback dalam 12 menit. Result: layanan pulih dan risiko serupa dikurangi dengan checklist review config.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "We had many incidents last year, so I have lots of experience.",
-          "textId": "Kami punya banyak insiden tahun lalu, jadi saya sangat berpengalaman."
+          "textId": "Kami punya banyak insiden tahun lalu, jadi saya sangat berpengalaman.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "My team fixed it while I monitored Slack.",
-          "textId": "Tim saya yang memperbaiki sementara saya memantau Slack."
+          "textId": "Tim saya yang memperbaiki sementara saya memantau Slack.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -60,28 +72,40 @@
       "difficulty": "mid",
       "scenario": "You are asked about a conflict with a peer who wanted to ship without tests.",
       "scenarioId": "Anda ditanya tentang konflik dengan rekan yang ingin merilis tanpa tes.",
+      "scenarioStructure": "Passive: Subject + be + past participle (+ by/Adverbial)",
+      "scenarioStructureId": "Pasif: Subjek + be + past participle (+ by/Keterangan)",
       "prompt": "Which response shows mature conflict handling?",
       "promptId": "Respons mana yang menunjukkan penanganan konflik yang dewasa?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "I told them their standards were low and escalated immediately.",
-          "textId": "Saya bilang standar mereka rendah dan langsung eskalasi."
+          "textId": "Saya bilang standar mereka rendah dan langsung eskalasi.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "I aligned on shared goals first, proposed a minimum test set for the risky path, and we shipped one day later with fewer regressions. Relationship stayed strong because we focused on risk, not ego.",
-          "textId": "Saya samakan dulu tujuan bersama, usulkan set tes minimum untuk jalur berisiko, lalu kami rilis sehari kemudian dengan lebih sedikit regresi. Relasi tetap baik karena fokus ke risiko, bukan ego."
+          "textId": "Saya samakan dulu tujuan bersama, usulkan set tes minimum untuk jalur berisiko, lalu kami rilis sehari kemudian dengan lebih sedikit regresi. Relasi tetap baik karena fokus ke risiko, bukan ego.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "I avoided the conflict and let them ship.",
-          "textId": "Saya hindari konflik dan biarkan mereka rilis."
+          "textId": "Saya hindari konflik dan biarkan mereka rilis.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "I complained to other teammates privately.",
-          "textId": "Saya mengeluh ke rekan lain secara pribadi."
+          "textId": "Saya mengeluh ke rekan lain secara pribadi.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -102,28 +126,40 @@
       "difficulty": "senior",
       "scenario": "The interviewer asks how you influence without authority across teams.",
       "scenarioId": "Pewawancara bertanya bagaimana Anda memengaruhi tanpa otoritas formal lintas tim.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Which answer is strongest?",
       "promptId": "Jawaban mana yang paling kuat?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "I escalate until people do what I want.",
-          "textId": "Saya eskalasi terus sampai orang melakukan yang saya mau."
+          "textId": "Saya eskalasi terus sampai orang melakukan yang saya mau.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "I build a shared problem statement with data, propose a lightweight RFC, invite affected teams early, and negotiate a sequenced rollout. In one case this cut cross-team delay from three weeks to six days.",
-          "textId": "Saya bangun pernyataan masalah bersama berbasis data, usulkan RFC ringan, undang tim terdampak sejak awal, dan negosiasikan rollout bertahap. Dalam satu kasus ini memangkas delay lintas tim dari tiga minggu menjadi enam hari."
+          "textId": "Saya bangun pernyataan masalah bersama berbasis data, usulkan RFC ringan, undang tim terdampak sejak awal, dan negosiasikan rollout bertahap. Dalam satu kasus ini memangkas delay lintas tim dari tiga minggu menjadi enam hari.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "I usually just implement it myself.",
-          "textId": "Biasanya saya kerjakan sendiri saja."
+          "textId": "Biasanya saya kerjakan sendiri saja.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "Influence is not part of engineering work.",
-          "textId": "Influence bukan bagian dari kerja engineering."
+          "textId": "Influence bukan bagian dari kerja engineering.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -145,28 +181,40 @@
       "difficulty": "junior",
       "scenario": "They ask about a mistake you made.",
       "scenarioId": "Mereka bertanya tentang kesalahan yang pernah Anda buat.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Which answer demonstrates ownership?",
       "promptId": "Jawaban mana yang menunjukkan ownership?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "I do not really make mistakes.",
-          "textId": "Saya sebenarnya jarang/tidak pernah membuat kesalahan."
+          "textId": "Saya sebenarnya jarang/tidak pernah membuat kesalahan.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "I once shipped a migration without a rollback plan. It caused a 15-minute read-only window. I owned the incident, restored from backup procedure, and added a mandatory rollback checklist to our release template.",
-          "textId": "Suatu kali saya rilis migrasi tanpa rencana rollback. Itu menyebabkan jendela read-only 15 menit. Saya bertanggung jawab atas insiden, pulihkan lewat prosedur backup, dan menambahkan checklist rollback wajib ke template rilis kami."
+          "textId": "Suatu kali saya rilis migrasi tanpa rencana rollback. Itu menyebabkan jendela read-only 15 menit. Saya bertanggung jawab atas insiden, pulihkan lewat prosedur backup, dan menambahkan checklist rollback wajib ke template rilis kami.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "The process was unclear, so it was not really on me.",
-          "textId": "Prosesnya tidak jelas, jadi sebenarnya bukan tanggung jawab saya."
+          "textId": "Prosesnya tidak jelas, jadi sebenarnya bukan tanggung jawab saya.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "My manager should have caught it.",
-          "textId": "Manajer saya yang seharusnya menangkapnya."
+          "textId": "Manajer saya yang seharusnya menangkapnya.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         }
       ],
       "correctKey": "B",
@@ -188,28 +236,40 @@
       "difficulty": "mid",
       "scenario": "Question: How do you prioritize when everything is urgent?",
       "scenarioId": "Pertanyaan: Bagaimana Anda memprioritaskan ketika semuanya terasa urgent?",
+      "scenarioStructure": "Question: Auxiliary/Wh + Subject + Verb (+ Object)",
+      "scenarioStructureId": "Pertanyaan: Auxiliary/Wh + Subjek + Kata kerja (+ Objek)",
       "prompt": "Which prioritization answer is most credible?",
       "promptId": "Jawaban prioritisasi mana yang paling kredibel?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "I just work longer hours until it is done.",
-          "textId": "Saya tinggal kerja lebih lama sampai selesai."
+          "textId": "Saya tinggal kerja lebih lama sampai selesai.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "I rank by user impact and reversibility, confirm priorities with the stakeholder, and communicate what will slip. Last quarter this protected a payment deadline while deferring a low-risk UI polish.",
-          "textId": "Saya urutkan berdasarkan dampak ke pengguna dan reversibility, konfirmasi prioritas dengan stakeholder, dan komunikasikan apa yang akan mundur. Kuartal lalu ini melindungi deadline payment sambil menunda polesan UI berisiko rendah."
+          "textId": "Saya urutkan berdasarkan dampak ke pengguna dan reversibility, konfirmasi prioritas dengan stakeholder, dan komunikasikan apa yang akan mundur. Kuartal lalu ini melindungi deadline payment sambil menunda polesan UI berisiko rendah.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "C",
           "text": "I do whichever task arrives first.",
-          "textId": "Saya kerjakan tugas mana pun yang datang lebih dulu."
+          "textId": "Saya kerjakan tugas mana pun yang datang lebih dulu.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "I wait for someone else to decide everything.",
-          "textId": "Saya menunggu orang lain memutuskan semuanya."
+          "textId": "Saya menunggu orang lain memutuskan semuanya.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -230,28 +290,40 @@
       "difficulty": "senior",
       "scenario": "You are interviewing for an IT Manager role. They ask how you give hard feedback.",
       "scenarioId": "Anda wawancara untuk peran IT Manager. Mereka bertanya bagaimana Anda memberi feedback sulit.",
+      "scenarioStructure": "Multi-clause: Subject + Verb + Object + connector + clause",
+      "scenarioStructureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
       "prompt": "Which response is best?",
       "promptId": "Respons mana yang terbaik?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "I send a blunt message in public Slack so the lesson is clear.",
-          "textId": "Saya kirim pesan kasar di Slack publik agar pelajarannya jelas."
+          "textId": "Saya kirim pesan kasar di Slack publik agar pelajarannya jelas.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "I give specific examples privately, describe business impact, agree on a concrete improvement plan, and follow up with support. Feedback is about performance, not personality.",
-          "textId": "Saya beri contoh spesifik secara privat, jelaskan dampak bisnis, sepakati rencana perbaikan konkret, lalu follow-up dengan dukungan. Feedback tentang performa, bukan kepribadian."
+          "textId": "Saya beri contoh spesifik secara privat, jelaskan dampak bisnis, sepakati rencana perbaikan konkret, lalu follow-up dengan dukungan. Feedback tentang performa, bukan kepribadian.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "I avoid hard feedback to keep morale high.",
-          "textId": "Saya hindari feedback sulit agar moral tetap tinggi."
+          "textId": "Saya hindari feedback sulit agar moral tetap tinggi.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "I wait until performance review season only.",
-          "textId": "Saya tunggu musim performance review saja."
+          "textId": "Saya tunggu musim performance review saja.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -272,28 +344,40 @@
       "difficulty": "mid",
       "scenario": "They ask about mentoring a junior engineer who was struggling with on-call.",
       "scenarioId": "Mereka bertanya tentang mentoring engineer junior yang kesulitan dengan on-call.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Which mentoring story is strongest?",
       "promptId": "Cerita mentoring mana yang paling kuat?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "I took all pages myself so they would not fail.",
-          "textId": "Saya ambil semua page sendiri agar mereka tidak gagal."
+          "textId": "Saya ambil semua page sendiri agar mereka tidak gagal.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "B",
           "text": "I shadowed two shifts, built a simplified runbook, set practice drills, and reviewed decisions after each page. Within a month they handled SEV-3s independently with clearer updates.",
-          "textId": "Saya shadow dua shift, buat runbook yang disederhanakan, atur latihan drill, dan review keputusan setelah setiap page. Dalam sebulan mereka menangani SEV-3 secara mandiri dengan update yang lebih jelas."
+          "textId": "Saya shadow dua shift, buat runbook yang disederhanakan, atur latihan drill, dan review keputusan setelah setiap page. Dalam sebulan mereka menangani SEV-3 secara mandiri dengan update yang lebih jelas.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "I told them to study more documentation.",
-          "textId": "Saya suruh mereka belajar dokumentasi lebih banyak."
+          "textId": "Saya suruh mereka belajar dokumentasi lebih banyak.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "I suggested they transfer teams.",
-          "textId": "Saya sarankan mereka pindah tim."
+          "textId": "Saya sarankan mereka pindah tim.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -314,28 +398,40 @@
       "difficulty": "junior",
       "scenario": "Asked why you want this role.",
       "scenarioId": "Ditanya mengapa Anda menginginkan peran ini.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Which answer is most professional and specific?",
       "promptId": "Jawaban mana yang paling profesional dan spesifik?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "I need a higher salary and a new visa sponsor.",
-          "textId": "Saya butuh gaji lebih tinggi dan sponsor visa baru."
+          "textId": "Saya butuh gaji lebih tinggi dan sponsor visa baru.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "I want to deepen reliability ownership at scale. Your platform's multi-region roadmap matches my experience reducing MTTR and building actionable SLOs, and I am excited to contribute there.",
-          "textId": "Saya ingin memperdalam ownership reliability dalam skala besar. Roadmap multi-region platform Anda cocok dengan pengalaman saya menurunkan MTTR dan membangun SLO yang actionable, dan saya antusias berkontribusi di situ."
+          "textId": "Saya ingin memperdalam ownership reliability dalam skala besar. Roadmap multi-region platform Anda cocok dengan pengalaman saya menurunkan MTTR dan membangun SLO yang actionable, dan saya antusias berkontribusi di situ.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "I am applying everywhere right now.",
-          "textId": "Saya sedang melamar ke mana-mana sekarang."
+          "textId": "Saya sedang melamar ke mana-mana sekarang.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "The office is close to my house.",
-          "textId": "Kantornya dekat rumah saya."
+          "textId": "Kantornya dekat rumah saya.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -356,28 +452,40 @@
       "difficulty": "senior",
       "scenario": "They ask about delivering bad news to leadership.",
       "scenarioId": "Mereka bertanya tentang menyampaikan kabar buruk ke leadership.",
+      "scenarioStructure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)",
       "prompt": "Which approach is best?",
       "promptId": "Pendekatan mana yang terbaik?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "I delay until I have perfect certainty.",
-          "textId": "Saya tunda sampai punya kepastian sempurna."
+          "textId": "Saya tunda sampai punya kepastian sempurna.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "I share early with impact, confidence level, options, and a recommended decision. Example: I flagged a launch risk two weeks out, proposed a scoped delay, and we avoided a customer-facing failure.",
-          "textId": "Saya sampaikan lebih awal beserta dampak, tingkat keyakinan, opsi, dan rekomendasi keputusan. Contoh: saya tandai risiko peluncuran dua minggu sebelumnya, usulkan penundaan terbatas, dan kami hindari kegagalan yang terlihat pelanggan."
+          "textId": "Saya sampaikan lebih awal beserta dampak, tingkat keyakinan, opsi, dan rekomendasi keputusan. Contoh: saya tandai risiko peluncuran dua minggu sebelumnya, usulkan penundaan terbatas, dan kami hindari kegagalan yang terlihat pelanggan.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "I soften the message until the risk is unclear.",
-          "textId": "Saya pelembut pesan sampai risikonya jadi tidak jelas."
+          "textId": "Saya pelembut pesan sampai risikonya jadi tidak jelas.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "I only tell peers and hope it reaches leadership.",
-          "textId": "Saya hanya bilang ke rekan dan berharap sampai ke leadership."
+          "textId": "Saya hanya bilang ke rekan dan berharap sampai ke leadership.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -399,28 +507,40 @@
       "difficulty": "mid",
       "scenario": "Closing question: Do you have questions for us?",
       "scenarioId": "Pertanyaan penutup: Apakah Anda punya pertanyaan untuk kami?",
+      "scenarioStructure": "Question: Auxiliary/Wh + Subject + Verb (+ Object)",
+      "scenarioStructureId": "Pertanyaan: Auxiliary/Wh + Subjek + Kata kerja (+ Objek)",
       "prompt": "Which candidate question is strongest?",
       "promptId": "Pertanyaan kandidat mana yang paling kuat?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "choices": [
         {
           "key": "A",
           "text": "How many vacation days do I get on day one?",
-          "textId": "Berapa hari cuti yang saya dapat di hari pertama?"
+          "textId": "Berapa hari cuti yang saya dapat di hari pertama?",
+          "structure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)"
         },
         {
           "key": "B",
           "text": "What does success look like for this role in the first six months, and what reliability or delivery risks is the team most focused on right now?",
-          "textId": "Seperti apa kesuksesan peran ini dalam enam bulan pertama, dan risiko reliability atau delivery apa yang paling difokuskan tim saat ini?"
+          "textId": "Seperti apa kesuksesan peran ini dalam enam bulan pertama, dan risiko reliability atau delivery apa yang paling difokuskan tim saat ini?",
+          "structure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)"
         },
         {
           "key": "C",
           "text": "No questions; I already know everything.",
-          "textId": "Tidak ada pertanyaan; saya sudah tahu semuanya."
+          "textId": "Tidak ada pertanyaan; saya sudah tahu semuanya.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "D",
           "text": "Can I work fully remote forever no matter what?",
-          "textId": "Bisakah saya remote penuh selamanya apa pun yang terjadi?"
+          "textId": "Bisakah saya remote penuh selamanya apa pun yang terjadi?",
+          "structure": "Yes/No question: Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Ya/Tidak: Auxiliary + Subjek + Kata kerja (+ Objek)"
         }
       ],
       "correctKey": "B",
@@ -441,28 +561,40 @@
       "difficulty": "mid",
       "scenario": "Tell me about a time you improved a process, not just a system.",
       "scenarioId": "Ceritakan saat Anda memperbaiki proses, bukan hanya sistem.",
+      "scenarioStructure": "Imperative: Verb + Object (+ Adverbial)",
+      "scenarioStructureId": "Imperatif: Kata kerja + Objek (+ Keterangan)",
       "prompt": "Strong STAR-style answer?",
       "promptId": "Jawaban bergaya STAR yang kuat?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "I like processes.",
-          "textId": "Saya suka proses."
+          "textId": "Saya suka proses.",
+          "structure": "Short phrase (elliptical)",
+          "structureId": "Frasa pendek (eliptis — subjek/kata kerja tersirat)"
         },
         {
           "key": "B",
           "text": "Situation: incident updates were inconsistent. Task: I owned a clearer bridge protocol. Action: I introduced a 3-line update template and ran two drills. Result: stakeholder confusion dropped and average first meaningful update fell from 12 minutes to 4.",
-          "textId": "Situation: update insiden tidak konsisten. Task: saya miliki protokol bridge yang lebih jelas. Action: saya perkenalkan template update 3 baris dan jalankan dua drill. Result: kebingungan stakeholder turun dan rata-rata update bermakna pertama turun dari 12 menit ke 4."
+          "textId": "Situation: update insiden tidak konsisten. Task: saya miliki protokol bridge yang lebih jelas. Action: saya perkenalkan template update 3 baris dan jalankan dua drill. Result: kebingungan stakeholder turun dan rata-rata update bermakna pertama turun dari 12 menit ke 4.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "I attended a process workshop once.",
-          "textId": "Saya pernah ikut workshop proses sekali."
+          "textId": "Saya pernah ikut workshop proses sekali.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "Processes do not matter for engineers.",
-          "textId": "Proses tidak penting bagi engineer."
+          "textId": "Proses tidak penting bagi engineer.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -483,28 +615,40 @@
       "difficulty": "senior",
       "scenario": "Describe a time you had to say no to a senior stakeholder.",
       "scenarioId": "Ceritakan saat Anda harus menolak permintaan stakeholder senior.",
+      "scenarioStructure": "Imperative: Verb + Object (+ Adverbial)",
+      "scenarioStructureId": "Imperatif: Kata kerja + Objek (+ Keterangan)",
       "prompt": "Best answer?",
       "promptId": "Jawaban terbaik?",
+      "promptStructure": "Elliptical question: (Which is the) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which is the) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "I never say no to seniors.",
-          "textId": "Saya tidak pernah bilang tidak ke atasan/senior."
+          "textId": "Saya tidak pernah bilang tidak ke atasan/senior.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "A VP wanted to skip canaries for a launch. I explained blast-radius risk, offered a 5% canary with auto-rollback that still hit the date, and got agreement. We caught a latent bug in canary and avoided customer impact.",
-          "textId": "Seorang VP ingin melewatkan canary untuk peluncuran. Saya jelaskan risiko blast radius, tawarkan canary 5% dengan auto-rollback yang tetap tepat waktu, dan dapat kesepakatan. Kami menangkap bug laten di canary dan menghindari dampak ke pelanggan."
+          "textId": "Seorang VP ingin melewatkan canary untuk peluncuran. Saya jelaskan risiko blast radius, tawarkan canary 5% dengan auto-rollback yang tetap tepat waktu, dan dapat kesepakatan. Kami menangkap bug laten di canary dan menghindari dampak ke pelanggan.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "I said no and walked out.",
-          "textId": "Saya bilang tidak lalu keluar."
+          "textId": "Saya bilang tidak lalu keluar.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "I complained on social media.",
-          "textId": "Saya mengeluh di media sosial."
+          "textId": "Saya mengeluh di media sosial.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -525,28 +669,40 @@
       "difficulty": "junior",
       "scenario": "How do you handle ambiguous requirements?",
       "scenarioId": "Bagaimana Anda menangani requirement yang ambigu?",
+      "scenarioStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "scenarioStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "prompt": "Best response?",
       "promptId": "Respons terbaik?",
+      "promptStructure": "Elliptical question: (Which is the) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which is the) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "I wait forever for perfect specs.",
-          "textId": "Saya menunggu selamanya sampai spek sempurna."
+          "textId": "Saya menunggu selamanya sampai spek sempurna.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "I write down assumptions, propose a thin slice, confirm with the stakeholder quickly, and iterate. Recently that turned a vague 'make it faster' request into a p95 latency target we could measure.",
-          "textId": "Saya tulis asumsi, usulkan thin slice, cepat konfirmasi dengan stakeholder, lalu iterasi. Baru-baru ini itu mengubah permintaan samar 'make it faster' menjadi target latency p95 yang bisa diukur."
+          "textId": "Saya tulis asumsi, usulkan thin slice, cepat konfirmasi dengan stakeholder, lalu iterasi. Baru-baru ini itu mengubah permintaan samar 'make it faster' menjadi target latency p95 yang bisa diukur.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "I invent a huge project silently.",
-          "textId": "Saya ciptakan proyek besar diam-diam."
+          "textId": "Saya ciptakan proyek besar diam-diam.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "I ignore ambiguity and hope.",
-          "textId": "Saya abaikan ambiguitas dan berharap."
+          "textId": "Saya abaikan ambiguitas dan berharap.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -567,28 +723,40 @@
       "difficulty": "mid",
       "scenario": "Tell me about mentoring someone through failure.",
       "scenarioId": "Ceritakan tentang mentoring seseorang melewati kegagalan.",
+      "scenarioStructure": "Imperative: Verb + Object (+ Adverbial)",
+      "scenarioStructureId": "Imperatif: Kata kerja + Objek (+ Keterangan)",
       "prompt": "Strong answer?",
       "promptId": "Jawaban yang kuat?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "I told them not to fail.",
-          "textId": "Saya bilang mereka jangan gagal."
+          "textId": "Saya bilang mereka jangan gagal.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "A junior froze on their first bridge update. I debriefed privately, gave a template, rehearsed, and shadowed the next shift. Within two weeks they delivered clear updates independently.",
-          "textId": "Seorang junior membeku di update bridge pertamanya. Saya debrief secara privat, beri template, latih ulang, dan shadow shift berikutnya. Dalam dua minggu mereka menyampaikan update yang jelas secara mandiri."
+          "textId": "Seorang junior membeku di update bridge pertamanya. Saya debrief secara privat, beri template, latih ulang, dan shadow shift berikutnya. Dalam dua minggu mereka menyampaikan update yang jelas secara mandiri.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "I took over permanently so they would not learn.",
-          "textId": "Saya ambil alih permanen agar mereka tidak belajar."
+          "textId": "Saya ambil alih permanen agar mereka tidak belajar.",
+          "structure": "Subject + Modal + base Verb + Object (S + Modal + V + O)",
+          "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
         },
         {
           "key": "D",
           "text": "I documented their failure in public Slack.",
-          "textId": "Saya dokumentasikan kegagalan mereka di Slack publik."
+          "textId": "Saya dokumentasikan kegagalan mereka di Slack publik.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -609,28 +777,40 @@
       "difficulty": "senior",
       "scenario": "Why are you leaving your current role?",
       "scenarioId": "Mengapa Anda meninggalkan peran saat ini?",
+      "scenarioStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "scenarioStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
       "prompt": "Most professional answer?",
       "promptId": "Jawaban yang paling profesional?",
+      "promptStructure": "Elliptical question: (Which is the) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which is the) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "My manager is terrible and the company is dying.",
-          "textId": "Manajer saya buruk dan perusahaannya sekarat."
+          "textId": "Manajer saya buruk dan perusahaannya sekarat.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "I am proud of the reliability gains we delivered. I am looking for a larger multi-region scope and closer partnership between platform and product, which this role offers.",
-          "textId": "Saya bangga dengan peningkatan reliability yang kami capai. Saya mencari cakupan multi-region yang lebih besar dan kemitraan lebih erat antara platform dan product, yang ditawarkan peran ini."
+          "textId": "Saya bangga dengan peningkatan reliability yang kami capai. Saya mencari cakupan multi-region yang lebih besar dan kemitraan lebih erat antara platform dan product, yang ditawarkan peran ini.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "I just want more money only.",
-          "textId": "Saya hanya ingin uang lebih saja."
+          "textId": "Saya hanya ingin uang lebih saja.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "I got bored of working.",
-          "textId": "Saya bosan bekerja."
+          "textId": "Saya bosan bekerja.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",
@@ -651,28 +831,40 @@
       "difficulty": "mid",
       "scenario": "Tell me about a time you reduced toil for your team.",
       "scenarioId": "Ceritakan saat Anda mengurangi toil untuk tim.",
+      "scenarioStructure": "Imperative: Verb + Object (+ Adverbial)",
+      "scenarioStructureId": "Imperatif: Kata kerja + Objek (+ Keterangan)",
       "prompt": "Strongest STAR-style answer?",
       "promptId": "Jawaban gaya STAR terkuat?",
+      "promptStructure": "Elliptical question: (Which/What is) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which/What is) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "I told people to work harder on manual tasks.",
-          "textId": "Saya bilang orang bekerja lebih keras pada tugas manual."
+          "textId": "Saya bilang orang bekerja lebih keras pada tugas manual.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "On-call spent ~6 hours/week on repetitive cache flushes. I automated the runbook into a guarded workflow with approval and metrics. Toil dropped to under 1 hour/week, and we reused the pattern for two other ops tasks.",
-          "textId": "On-call menghabiskan ~6 jam/minggu untuk cache flush berulang. Saya otomatisasi runbook menjadi workflow terjaga dengan approval dan metrik. Toil turun di bawah 1 jam/minggu, dan pola itu kami pakai ulang untuk dua tugas ops lain."
+          "textId": "On-call menghabiskan ~6 jam/minggu untuk cache flush berulang. Saya otomatisasi runbook menjadi workflow terjaga dengan approval dan metrik. Toil turun di bawah 1 jam/minggu, dan pola itu kami pakai ulang untuk dua tugas ops lain.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "I ignored toil because features matter more forever.",
-          "textId": "Saya abaikan toil karena fitur selalu lebih penting."
+          "textId": "Saya abaikan toil karena fitur selalu lebih penting.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "I wrote a long essay with no outcome.",
-          "textId": "Saya menulis esai panjang tanpa outcome."
+          "textId": "Saya menulis esai panjang tanpa outcome.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -694,28 +886,40 @@
       "difficulty": "junior",
       "scenario": "Describe a time you asked for help instead of staying stuck.",
       "scenarioId": "Ceritakan saat Anda meminta bantuan alih-alih tetap stuck.",
+      "scenarioStructure": "Imperative: Verb + Object (+ Adverbial)",
+      "scenarioStructureId": "Imperatif: Kata kerja + Objek (+ Keterangan)",
       "prompt": "Best answer?",
       "promptId": "Jawaban terbaik?",
+      "promptStructure": "Elliptical question: (Which is the) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which is the) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "I never ask for help; it looks weak.",
-          "textId": "Saya tidak pernah minta bantuan; terlihat lemah."
+          "textId": "Saya tidak pernah minta bantuan; terlihat lemah.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         },
         {
           "key": "B",
           "text": "I was blocked for two hours on a flaky auth test. I documented what I tried, asked a teammate for a 15-minute pairing, and we found a race in setup. I then added a note to the wiki so the next person would not repeat it.",
-          "textId": "Saya stuck dua jam pada tes auth yang flaky. Saya dokumentasikan apa yang sudah dicoba, minta pairing 15 menit ke rekan, dan kami temukan race di setup. Lalu saya tambahkan catatan di wiki agar orang berikutnya tidak mengulanginya."
+          "textId": "Saya stuck dua jam pada tes auth yang flaky. Saya dokumentasikan apa yang sudah dicoba, minta pairing 15 menit ke rekan, dan kami temukan race di setup. Lalu saya tambahkan catatan di wiki agar orang berikutnya tidak mengulanginya.",
+          "structure": "Passive: Subject + be + past participle (+ by/Adverbial)",
+          "structureId": "Pasif: Subjek + be + past participle (+ by/Keterangan)"
         },
         {
           "key": "C",
           "text": "I pinged ten people at once with no context.",
-          "textId": "Saya ping sepuluh orang sekaligus tanpa konteks."
+          "textId": "Saya ping sepuluh orang sekaligus tanpa konteks.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "I deleted the tests to unblock myself.",
-          "textId": "Saya hapus tes agar tidak stuck."
+          "textId": "Saya hapus tes agar tidak stuck.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         }
       ],
       "correctKey": "B",
@@ -736,28 +940,40 @@
       "difficulty": "senior",
       "scenario": "Tell me about balancing product pressure with reliability standards as an IT/engineering manager.",
       "scenarioId": "Ceritakan menyeimbangkan tekanan product dengan standar reliability sebagai IT/engineering manager.",
+      "scenarioStructure": "Imperative: Verb + Object (+ Adverbial)",
+      "scenarioStructureId": "Imperatif: Kata kerja + Objek (+ Keterangan)",
       "prompt": "Most credible answer?",
       "promptId": "Jawaban paling kredibel?",
+      "promptStructure": "Elliptical question: (Which is the) + Noun phrase + ?",
+      "promptStructureId": "Pertanyaan eliptis: (Which is the) + Frasa nomina + ?",
       "choices": [
         {
           "key": "A",
           "text": "I always say no to product.",
-          "textId": "Saya selalu bilang tidak ke product."
+          "textId": "Saya selalu bilang tidak ke product.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "B",
           "text": "For a Black Friday feature, product wanted to skip canaries. I framed the risk in customer impact dollars, offered a same-week canary with feature flags, and we shipped on time without a SEV. The standard stayed; the schedule adapted.",
-          "textId": "Untuk fitur Black Friday, product ingin skip canary. Saya kerangka risiko dalam dampak pelanggan (dolar), tawarkan canary di minggu yang sama dengan feature flags, dan kami ship tepat waktu tanpa SEV. Standar tetap; jadwal yang menyesuaikan."
+          "textId": "Untuk fitur Black Friday, product ingin skip canary. Saya kerangka risiko dalam dampak pelanggan (dolar), tawarkan canary di minggu yang sama dengan feature flags, dan kami ship tepat waktu tanpa SEV. Standar tetap; jadwal yang menyesuaikan.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
         },
         {
           "key": "C",
           "text": "I always skip safety to please stakeholders.",
-          "textId": "Saya selalu skip keamanan untuk menyenangkan stakeholder."
+          "textId": "Saya selalu skip keamanan untuk menyenangkan stakeholder.",
+          "structure": "Subject + Verb + Object (+ Adverbial) (S + V + O)",
+          "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
         },
         {
           "key": "D",
           "text": "I avoid the conversation entirely.",
-          "textId": "Saya menghindari percakapan sama sekali."
+          "textId": "Saya menghindari percakapan sama sekali.",
+          "structure": "Subject + Verb (+ Complement) — short declarative",
+          "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
         }
       ],
       "correctKey": "B",

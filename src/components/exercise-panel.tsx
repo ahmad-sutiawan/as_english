@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { ExerciseItem } from "@/types/content";
 import { SpeakButton } from "@/components/speak-button";
-import { BilingualText } from "@/components/bilingual-text";
+import { BilingualText, StructureNote } from "@/components/bilingual-text";
 import { SpeakBackPanel } from "@/components/speak-back-panel";
 import { speak } from "@/lib/tts";
 
@@ -95,10 +95,13 @@ export function ExercisePanel({
         <p className="font-semibold text-[var(--ink)]">Cara berlatih</p>
         <ol className="mt-2 list-decimal space-y-1 pl-4">
           <li>Baca skenario &amp; pertanyaan dalam bahasa Inggris.</li>
-          <li>Pahami artinya lewat terjemahan tetap di bawah teks EN.</li>
           <li>
-            Dengarkan tiap opsi A–D (tombol Putar EN), baca arti, lalu pilih yang
-            benar di kepala.
+            Pahami artinya lewat terjemahan, lalu baca rumus struktur kalimat di
+            bawahnya.
+          </li>
+          <li>
+            Dengarkan tiap opsi A–D (tombol Putar EN), baca arti + struktur, lalu
+            pilih yang benar di kepala.
           </li>
           <li>
             Ketik ulang jawaban Inggris yang benar secara utuh — ini melatih
@@ -128,6 +131,8 @@ export function ExercisePanel({
         <BilingualText
           english={item.scenario}
           indonesian={item.scenarioId}
+          structure={item.scenarioStructure}
+          structureId={item.scenarioStructureId}
           speakSlot={
             (item.tts?.scenario ?? true) ? (
               <SpeakButton text={item.scenario} label="Putar EN" />
@@ -144,6 +149,8 @@ export function ExercisePanel({
         <BilingualText
           english={item.prompt}
           indonesian={item.promptId}
+          structure={item.promptStructure}
+          structureId={item.promptStructureId}
           englishClassName="text-lg font-medium leading-snug text-[var(--ink)]"
           speakSlot={
             (item.tts?.prompt ?? true) ? (
@@ -181,6 +188,10 @@ export function ExercisePanel({
                 </span>
                 {choice.textId}
               </p>
+              <StructureNote
+                structure={choice.structure}
+                structureId={choice.structureId}
+              />
             </li>
           ))}
         </ul>
@@ -264,6 +275,8 @@ export function ExercisePanel({
               correctChoice?.textId ??
               "Lihat arti pada opsi di atas."
             }
+            structure={correctChoice?.structure}
+            structureId={correctChoice?.structureId}
             englishClassName="text-sm leading-relaxed text-[var(--success-ink)]"
           />
           <div className="space-y-2">
