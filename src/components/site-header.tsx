@@ -19,6 +19,9 @@ export async function SiteHeader() {
               <Link href="/dashboard" className="hover:text-[var(--ink)]">
                 Dashboard
               </Link>
+              <Link href="/quick" className="hover:text-[var(--ink)]">
+                Cepat
+              </Link>
               <Link href="/review" className="hover:text-[var(--ink)]">
                 Review
               </Link>

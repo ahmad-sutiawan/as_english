@@ -23,10 +23,24 @@ model User {
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
 
-  accounts Account[]
-  sessions Session[]
-  progress Progress[]
-  attempts Attempt[]
+  accounts   Account[]
+  sessions   Session[]
+  progress   Progress[]
+  attempts   Attempt[]
+  quickStats QuickStats?
+}
+
+model QuickStats {
+  id           String    @id @default(cuid())
+  userId       String    @unique
+  xp           Int       @default(0)
+  streak       Int       @default(0)
+  bestStreak   Int       @default(0)
+  lastPlayDate DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Account {

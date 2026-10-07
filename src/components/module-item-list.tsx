@@ -169,9 +169,9 @@ export function ModuleItemList({
                 href={`/learn/${moduleId}/${item.id}${
                   filter !== "all" ? `?level=${filter}` : ""
                 }`}
-                className="flex items-center justify-between gap-3 border-b border-[var(--border)] py-3 text-sm hover:bg-[var(--surface)]/60"
+                className="flex items-center justify-between gap-3 border-b border-[var(--border)] px-3 py-3 text-sm hover:bg-[var(--surface)]/60 sm:px-4"
               >
-                <span className="min-w-0">
+                <span className="min-w-0 flex-1 pr-2">
                   <span className="text-[var(--ink)]">
                     <span className="mr-2 text-[var(--muted)]">
                       {String(idx + 1).padStart(2, "0")}
@@ -186,7 +186,7 @@ export function ModuleItemList({
                     {item.promptStructure}
                   </span>
                 </span>
-                <span className="shrink-0 text-right text-xs uppercase tracking-wide text-[var(--muted)]">
+                <span className="w-[5.5rem] shrink-0 text-right text-xs uppercase tracking-wide text-[var(--muted)] sm:w-24">
                   <span className="block text-[var(--accent)]">
                     {DIFFICULTY_LABEL_ID[item.difficulty]}
                   </span>
