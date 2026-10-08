@@ -99,6 +99,56 @@ export const BUILD_THEMES = [
     titleId: "Pemecahan masalah",
     description: "Log, error, hotfix, dan dugaan penyebab.",
   },
+  {
+    id: "onboarding",
+    titleId: "Onboarding",
+    description: "Akses, buddy, minggu pertama, dan shadowing.",
+  },
+  {
+    id: "release",
+    titleId: "Rilis",
+    description: "Jendela deploy, freeze, rollback, dan changelog.",
+  },
+  {
+    id: "estimation",
+    titleId: "Estimasi",
+    description: "Poin, buffer, dan memotong scope.",
+  },
+  {
+    id: "customer",
+    titleId: "Pelanggan",
+    description: "Status, keterlambatan, dan solusi sementara.",
+  },
+  {
+    id: "handover",
+    titleId: "Serah terima",
+    description: "Cuti, pemilik baru, dan runbook.",
+  },
+  {
+    id: "retro",
+    titleId: "Retro",
+    description: "Yang lancar, yang macet, dan tindakan tim.",
+  },
+  {
+    id: "pairing",
+    titleId: "Pairing",
+    description: "Driver, navigator, dan belajar bareng.",
+  },
+  {
+    id: "security",
+    titleId: "Keamanan",
+    description: "Kunci, phishing, MFA, dan review akses.",
+  },
+  {
+    id: "escalation",
+    titleId: "Eskalasi",
+    description: "Kapan naik, siapa pemilik, dan urgensi.",
+  },
+  {
+    id: "documentation",
+    titleId: "Dokumentasi",
+    description: "Runbook, ADR, dan catatan yang ketinggalan.",
+  },
 ] as const;
 
 export type BuildThemeId = (typeof BUILD_THEMES)[number]["id"];
