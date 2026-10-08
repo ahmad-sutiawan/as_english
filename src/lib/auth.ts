@@ -15,6 +15,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma),
   session: { strategy: "jwt" },
   trustHost: true,
+  // AUTH_URL is https, but the same port also serves http. Secure cookies
+  // are dropped by the browser on http, so sign-in fails before the password
+  // is checked.
+  useSecureCookies: false,
   pages: {
     signIn: "/login",
   },

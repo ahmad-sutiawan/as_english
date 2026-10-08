@@ -28,7 +28,11 @@ export function LoginForm() {
     setLoading(false);
 
     if (res?.error) {
-      setError("Email atau password salah.");
+      setError(
+        res.error === "CredentialsSignin"
+          ? "Email atau password salah. Akun ini sudah ada; password-nya adalah yang diketik saat daftar pertama, bukan yang ditolak di halaman daftar."
+          : "Masuk gagal karena sesi tidak tersimpan. Muat ulang halaman, lalu coba lagi.",
+      );
       return;
     }
 

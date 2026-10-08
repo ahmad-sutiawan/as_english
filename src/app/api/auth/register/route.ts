@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     const existing = await prisma.user.findUnique({ where: { email } });
     if (existing) {
       return NextResponse.json(
-        { error: "Email already registered." },
+        { error: "Email ini sudah terdaftar. Masuk dengan password yang dipakai saat daftar pertama." },
         { status: 409 },
       );
     }
