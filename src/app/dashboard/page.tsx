@@ -9,6 +9,28 @@ import { getOrCreateBuildStats } from "@/lib/build";
 import { ModuleCatalog } from "@/components/module-catalog";
 import { redirect } from "next/navigation";
 
+function jakartaHour(date = new Date()) {
+  return Number(
+    new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Asia/Jakarta",
+      hour: "numeric",
+      hourCycle: "h23",
+    }).format(date),
+  );
+}
+
+function greeting(hour: number) {
+  if (hour < 11) return "Selamat pagi";
+  if (hour < 15) return "Selamat siang";
+  if (hour < 18) return "Selamat sore";
+  return "Selamat malam";
+}
+
+function firstName(name: string | null | undefined, email: string | null | undefined) {
+  const raw = name?.trim() || email?.split("@")[0] || "learner";
+  return raw.split(" ")[0];
+}
+
 export default async function DashboardPage() {
   const session = await auth();
   if (!session?.user?.id) redirect("/login");
@@ -29,180 +51,260 @@ export default async function DashboardPage() {
     progressByModule[p.moduleId] = { done: p.completedItemIds.length };
   }
 
+  const totalItems = modules.reduce((sum, module) => sum + module.itemCount, 0);
+  const doneItems = Object.values(progressByModule).reduce((sum, row) => sum + row.done, 0);
+  const coverage = totalItems > 0 ? Math.round((doneItems / totalItems) * 100) : 0;
+  const totalXp = buildStats.xp + speakStats.xp + quickStats.xp;
+  const activeStreak = Math.max(buildStats.streak, speakStats.streak, quickStats.streak);
+  const name = firstName(session.user.name, session.user.email);
+
+  const next =
+    stats.dueCount > 0
+      ? {
+          href: "/review",
+          title: "Review pintar",
+          detail: `${stats.dueCount} soal sudah jatuh tempo. Ulangi sebelum menambah materi baru.`,
+          action: "Buka antrian",
+        }
+      : buildStats.xp === 0
+        ? {
+            href: "/build",
+            title: "Susun kalimat",
+            detail: "Mulai dari urutan kata. Itu jalur paling pendek dari tahu kosakata ke bisa menyusun.",
+            action: "Mulai susun",
+          }
+        : speakStats.xp < buildStats.xp
+          ? {
+              href: "/speak",
+              title: "Produksi bicara",
+              detail: "Susunan sudah jalan. Berikutnya ambil kalimat yang sama dan ucapkan.",
+              action: "Mulai bicara",
+            }
+          : {
+              href: "/quick",
+              title: "Latihan cepat",
+              detail: "Jaga akurasi dengan 8 soal tap. Nyawa habis berarti pola itu belum otomatis.",
+              action: "Mulai cepat",
+            };
+
+  const tracks = [
+    {
+      href: "/build",
+      kicker: "Konstruksi",
+      title: "Susun",
+      detail: "Urutan kata, lalu ubah jadi negatif, pertanyaan, past, atau future.",
+      xp: buildStats.xp,
+      streak: buildStats.streak,
+      action: "Susun",
+    },
+    {
+      href: "/speak",
+      kicker: "Produksi",
+      title: "Bicara",
+      detail: "Dengar, ingat, susun, lalu ucapkan. Tanpa mengetik jawaban.",
+      xp: speakStats.xp,
+      streak: speakStats.streak,
+      action: "Bicara",
+    },
+    {
+      href: "/quick",
+      kicker: "Akurasi",
+      title: "Cepat",
+      detail: "Delapan soal, tiga nyawa. Latihan mengenali kalimat kerja yang benar.",
+      xp: quickStats.xp,
+      streak: quickStats.streak,
+      action: "Cepat",
+    },
+    {
+      href: "/review",
+      kicker: "Ingatan",
+      title: "Review",
+      detail:
+        stats.dueCount > 0
+          ? `${stats.dueCount} soal menunggu pengulangan.`
+          : "Antrian kosong. Kerjakan modul supaya jadwal pengulangan terisi.",
+      xp: stats.mastered,
+      streak: stats.dueCount,
+      action: "Review",
+      xpLabel: "dikuasai",
+      streakLabel: "jatuh tempo",
+    },
+  ];
+
+  const meters = [
+    { label: "Cakupan modul", value: coverage, text: `${doneItems}/${totalItems}` },
+    { label: "Akurasi", value: stats.accuracy, text: `${stats.correctAttempts}/${stats.totalAttempts}` },
+    { label: "Dikuasai", value: totalItems ? Math.min(100, Math.round((stats.mastered / totalItems) * 100)) : 0, text: String(stats.mastered) },
+    { label: "Review jatuh tempo", value: Math.min(100, stats.dueCount * 8), text: String(stats.dueCount) },
+  ];
+
   return (
-    <div className="mx-auto max-w-5xl px-4 py-10">
-      <h1 className="font-display text-3xl tracking-tight text-[var(--ink)]">
-        Dashboard latihan
-      </h1>
-      <p className="mt-2 text-sm text-[var(--muted)]">
-        Halo, {session.user.name ?? session.user.email}. Pilih modul — baca
-        English, pahami arti Indonesia, lalu ketik ulang. Coba juga modul{" "}
-        <span className="text-[var(--accent)]">Percakapan Berantai</span> +
-        speak-back untuk mendekati fluent meeting.
-      </p>
-
-      <section className="mt-8 grid gap-3 sm:grid-cols-4">
-        <div className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
-          <p className="text-xs uppercase tracking-wide text-[var(--muted)]">
-            Dikuasai
-          </p>
-          <p className="mt-1 text-2xl font-semibold text-[var(--ink)]">
-            {stats.mastered}
-          </p>
-        </div>
-        <div className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
-          <p className="text-xs uppercase tracking-wide text-[var(--muted)]">
-            Akurasi
-          </p>
-          <p className="mt-1 text-2xl font-semibold text-[var(--ink)]">
-            {stats.accuracy}%
-          </p>
-        </div>
-        <div className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
-          <p className="text-xs uppercase tracking-wide text-[var(--muted)]">
-            Percobaan
-          </p>
-          <p className="mt-1 text-2xl font-semibold text-[var(--ink)]">
-            {stats.totalAttempts}
-          </p>
-        </div>
-        <div className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
-          <p className="text-xs uppercase tracking-wide text-[var(--muted)]">
-            Due review
-          </p>
-          <p className="mt-1 text-2xl font-semibold text-[var(--accent)]">
-            {stats.dueCount}
-          </p>
-        </div>
-      </section>
-
-      <section className="mt-6 flex flex-wrap items-center gap-3 rounded-md border border-[var(--accent)] bg-[var(--accent-soft)] px-4 py-4">
-        <div className="min-w-0 flex-1">
-          <h2 className="text-sm font-semibold text-[var(--ink)]">
-            Susun Kalimat
-          </h2>
-          <p className="mt-1 text-sm text-[var(--muted)]">
-            Urutan kata lalu ubah bentuk: negatif, pertanyaan, past, future. XP{" "}
-            <span className="text-[var(--ink)]">{buildStats.xp}</span> · streak{" "}
-            <span className="text-[var(--accent)]">{buildStats.streak} hari</span>.
-          </p>
-        </div>
-        <Link
-          href="/build"
-          className="shrink-0 rounded-md bg-[var(--accent)] px-4 py-2 text-sm font-medium text-[#06221e] hover:bg-[var(--accent-hover)]"
-        >
-          Mulai susun
-        </Link>
-      </section>
-
-      <section className="mt-6 flex flex-wrap items-center gap-3 rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-4">
-        <div className="min-w-0 flex-1">
-          <h2 className="text-sm font-semibold text-[var(--ink)]">
-            Produksi Bicara
-          </h2>
-          <p className="mt-1 text-sm text-[var(--muted)]">
-            Offline: listen → retrieve → construct → speak. XP{" "}
-            <span className="text-[var(--ink)]">{speakStats.xp}</span> · streak{" "}
-            <span className="text-[var(--accent)]">
-              {speakStats.streak} hari
-            </span>
-            .
-          </p>
-        </div>
-        <Link
-          href="/speak"
-          className="shrink-0 rounded-md border border-[var(--border)] bg-[var(--surface-2)] px-4 py-2 text-sm font-medium text-[var(--ink)] hover:border-[var(--accent)]"
-        >
-          Mulai bicara
-        </Link>
-      </section>
-
-      <section className="mt-6 flex flex-wrap items-center gap-3 rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-4">
-        <div className="min-w-0 flex-1">
-          <h2 className="text-sm font-semibold text-[var(--ink)]">
-            Latihan Cepat
-          </h2>
-          <p className="mt-1 text-sm text-[var(--muted)]">
-            Alur ala Duolingo: 8 soal, tap jawaban, 3 nyawa. XP{" "}
-            <span className="text-[var(--ink)]">{quickStats.xp}</span> · streak{" "}
-            <span className="text-[var(--accent)]">{quickStats.streak} hari</span>.
-          </p>
-        </div>
-        <Link
-          href="/quick"
-          className="shrink-0 rounded-md border border-[var(--border)] bg-[var(--surface-2)] px-4 py-2 text-sm font-medium text-[var(--ink)] hover:border-[var(--accent)]"
-        >
-          Mulai cepat
-        </Link>
-      </section>
-
-      <section className="mt-6 flex flex-wrap items-center gap-3 rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-4">
-        <div className="min-w-0 flex-1">
-          <h2 className="text-sm font-semibold text-[var(--ink)]">
-            Review pintar
-          </h2>
-          <p className="mt-1 text-sm text-[var(--muted)]">
-            {stats.dueCount > 0
-              ? `${stats.dueCount} soal perlu diulang (salah baru / jadwal spaced repetition).`
-              : "Belum ada antrian review. Kerjakan modul dulu."}
-          </p>
-        </div>
-        <Link
-          href="/review"
-          className="shrink-0 rounded-md border border-[var(--border)] bg-[var(--surface-2)] px-4 py-2 text-sm font-medium text-[var(--ink)] hover:border-[var(--accent)]"
-        >
-          Buka review
-        </Link>
-      </section>
-
-      {stats.weakTags.length > 0 ? (
-        <section className="mt-6">
-          <h2 className="text-sm font-semibold text-[var(--ink)]">
-            Tag lemah minggu ini
-          </h2>
-          <p className="mt-1 text-xs text-[var(--muted)]">
-            Fokus latihan di tema dengan miss-rate tertinggi.
-          </p>
-          <ul className="mt-3 flex flex-wrap gap-2">
-            {stats.weakTags.map((t) => (
-              <li
-                key={t.tag}
-                className="rounded-md border border-[var(--border)] bg-[var(--surface-2)] px-3 py-1.5 text-xs text-[var(--ink)]"
+    <div className="dash-shell">
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:py-12">
+        <section className="dash-rise grid items-end gap-8 lg:grid-cols-[1.4fr_0.8fr]">
+          <div>
+            <p className="text-xs uppercase tracking-[0.22em] text-[var(--accent)]">
+              Papan latihan
+            </p>
+            <h1 className="mt-3 font-display text-4xl tracking-tight text-[var(--ink)] sm:text-5xl">
+              {greeting(jakartaHour())}, {name}
+            </h1>
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--muted)]">
+              {totalXp} XP terkumpul dari Susun, Bicara, dan Cepat. Streak aktif{" "}
+              {activeStreak} hari. Cakupan modul {coverage}%.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href={next.href}
+                className="inline-flex h-11 items-center rounded-full bg-[var(--accent)] px-5 text-sm font-medium text-[#06221e] hover:bg-[var(--accent-hover)]"
               >
-                <span className="font-medium text-[var(--accent)]">{t.tag}</span>
-                <span className="ml-2 text-[var(--muted)]">
-                  miss {Math.round(t.missRate * 100)}% ({t.wrong}/{t.total})
-                </span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
+                {next.action}
+              </Link>
+              <p className="max-w-sm self-center text-sm text-[var(--muted)]">
+                <span className="text-[var(--ink)]">{next.title}. </span>
+                {next.detail}
+              </p>
+            </div>
+          </div>
 
-      {stats.reviewPreview.length > 0 ? (
-        <section className="mt-6">
-          <h2 className="text-sm font-semibold text-[var(--ink)]">
-            Antrian teratas
-          </h2>
-          <ul className="mt-3 space-y-2">
-            {stats.reviewPreview.map((item) => (
-              <li key={`${item.moduleId}-${item.itemId}`}>
+          <div className="flex items-center gap-5 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/80 p-5">
+            <div
+              className="grid h-28 w-28 shrink-0 place-items-center rounded-full"
+              style={{
+                background: `conic-gradient(var(--accent) ${coverage * 3.6}deg, var(--surface-2) 0)`,
+              }}
+              role="img"
+              aria-label={`Cakupan modul ${coverage} persen`}
+            >
+              <div className="grid h-[5.25rem] w-[5.25rem] place-items-center rounded-full bg-[var(--background)]">
+                <span className="text-2xl font-semibold text-[var(--ink)]">{coverage}%</span>
+              </div>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-wide text-[var(--muted)]">Modul selesai</p>
+              <p className="mt-1 text-lg text-[var(--ink)]">
+                {doneItems} dari {totalItems} soal
+              </p>
+              <p className="mt-2 text-sm text-[var(--muted)]">
+                {stats.totalAttempts} percobaan · akurasi {stats.accuracy}%
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="dash-rise dash-rise-2 mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          {meters.map((meter) => (
+            <article
+              key={meter.label}
+              className="rounded-2xl border border-[var(--border)] bg-[var(--surface)]/70 px-4 py-4"
+            >
+              <div className="flex items-baseline justify-between gap-3">
+                <p className="text-xs uppercase tracking-wide text-[var(--muted)]">{meter.label}</p>
+                <p className="text-sm text-[var(--ink)]">{meter.text}</p>
+              </div>
+              <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-[var(--surface-2)]">
+                <div
+                  className="h-full rounded-full bg-[var(--accent)]"
+                  style={{ width: `${meter.value}%` }}
+                />
+              </div>
+            </article>
+          ))}
+        </section>
+
+        <section className="dash-rise dash-rise-3 mt-8 grid gap-3 md:grid-cols-2">
+          {tracks.map((track) => (
+            <article
+              key={track.href}
+              className="group flex flex-col rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 p-5 transition duration-300 hover:-translate-y-0.5 hover:border-[var(--accent)] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+            >
+              <p className="text-xs uppercase tracking-[0.18em] text-[var(--accent)]">{track.kicker}</p>
+              <h2 className="mt-2 font-display text-3xl text-[var(--ink)]">{track.title}</h2>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--muted)]">{track.detail}</p>
+              <div className="mt-5 flex items-end justify-between gap-3">
+                <p className="text-sm text-[var(--muted)]">
+                  <span className="text-lg font-semibold text-[var(--ink)]">{track.xp}</span>{" "}
+                  {track.xpLabel ?? "XP"}
+                  <span className="mx-2 text-[var(--border)]">/</span>
+                  <span className="text-[var(--ink)]">{track.streak}</span>{" "}
+                  {track.streakLabel ?? "hari"}
+                </p>
                 <Link
-                  href={item.href}
-                  className="block rounded-md border border-[var(--border)] px-3 py-2 text-sm hover:border-[var(--accent)]"
+                  href={track.href}
+                  className="inline-flex h-10 items-center rounded-full border border-[var(--border)] px-4 text-sm text-[var(--ink)] group-hover:border-[var(--accent)] group-hover:text-[var(--accent)]"
                 >
-                  <span className="text-[var(--ink)]">{item.prompt}</span>
-                  <span className="mt-1 block text-xs text-[var(--muted)]">
-                    {item.moduleTitleId} · {item.reasonId}
-                  </span>
+                  {track.action}
                 </Link>
-              </li>
-            ))}
-          </ul>
+              </div>
+            </article>
+          ))}
         </section>
-      ) : null}
 
-      <ModuleCatalog modules={modules} progressByModule={progressByModule} />
+        <section className="mt-8 grid gap-3 lg:grid-cols-2">
+          <article className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 p-5">
+            <h2 className="text-sm font-semibold text-[var(--ink)]">Titik lemah</h2>
+            <p className="mt-1 text-sm text-[var(--muted)]">
+              Tema dengan miss-rate tertinggi minggu ini.
+            </p>
+            {stats.weakTags.length > 0 ? (
+              <ul className="mt-4 space-y-3">
+                {stats.weakTags.slice(0, 5).map((tag) => (
+                  <li key={tag.tag}>
+                    <div className="flex items-baseline justify-between text-sm">
+                      <span className="text-[var(--ink)]">{tag.tag}</span>
+                      <span className="text-[var(--muted)]">
+                        {Math.round(tag.missRate * 100)}% · {tag.wrong}/{tag.total}
+                      </span>
+                    </div>
+                    <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-[var(--surface-2)]">
+                      <div
+                        className="h-full rounded-full bg-[var(--warn)]"
+                        style={{ width: `${Math.round(tag.missRate * 100)}%` }}
+                      />
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-4 text-sm text-[var(--muted)]">
+                Belum cukup percobaan. Kerjakan satu modul supaya peta kelemahan muncul.
+              </p>
+            )}
+          </article>
+
+          <article className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 p-5">
+            <h2 className="text-sm font-semibold text-[var(--ink)]">Antrian terdekat</h2>
+            <p className="mt-1 text-sm text-[var(--muted)]">
+              Lima soal yang paling perlu diulang sekarang.
+            </p>
+            {stats.reviewPreview.length > 0 ? (
+              <ul className="mt-4 space-y-2">
+                {stats.reviewPreview.map((item) => (
+                  <li key={`${item.moduleId}-${item.itemId}`}>
+                    <Link
+                      href={item.href}
+                      className="block rounded-2xl border border-[var(--border)] px-3 py-2.5 transition hover:border-[var(--accent)]"
+                    >
+                      <span className="block text-sm text-[var(--ink)]">{item.prompt}</span>
+                      <span className="mt-1 block text-xs text-[var(--muted)]">
+                        {item.moduleTitleId} · {item.reasonId}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-4 text-sm text-[var(--muted)]">
+                Antrian masih kosong. Selesai satu latihan, lalu kembali ke sini.
+              </p>
+            )}
+          </article>
+        </section>
+
+        <div className="mt-10">
+          <ModuleCatalog modules={modules} progressByModule={progressByModule} />
+        </div>
+      </div>
     </div>
   );
 }

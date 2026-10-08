@@ -1,65 +1,65 @@
 import Link from "next/link";
 import { auth, signOut } from "@/lib/auth";
+import { SiteNav } from "@/components/site-nav";
+
+function SignOutButton() {
+  return (
+    <form
+      action={async () => {
+        "use server";
+        await signOut({ redirectTo: "/" });
+      }}
+    >
+      <button
+        type="submit"
+        className="inline-flex h-10 items-center rounded-full border border-[var(--border)] bg-[var(--surface)] px-3.5 text-sm text-[var(--ink)] hover:bg-[var(--surface-2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+      >
+        Keluar
+      </button>
+    </form>
+  );
+}
 
 export async function SiteHeader() {
   const session = await auth();
+  const accountLabel = session?.user?.name || session?.user?.email || "";
 
   return (
-    <header className="sticky top-0 z-20 border-b border-[var(--border)] bg-[var(--background)]/95 backdrop-blur">
-      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
+    <header className="sticky top-0 z-30 border-b border-[var(--border)] bg-[var(--background)]/80 backdrop-blur-md">
+      <div className="relative mx-auto flex h-16 max-w-6xl items-center gap-3 px-4">
         <Link
-          href="/"
-          className="text-sm font-semibold tracking-tight text-[var(--ink)]"
+          href={session?.user ? "/dashboard" : "/"}
+          className="inline-flex items-center gap-2 rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
         >
-          AS English
+          <span
+            aria-hidden
+            className="grid h-8 w-8 place-items-center rounded-full bg-[var(--accent)] text-xs font-semibold text-[#06221e]"
+          >
+            AS
+          </span>
+          <span className="text-sm font-semibold tracking-tight text-[var(--ink)]">
+            AS English
+          </span>
         </Link>
-        <nav className="flex items-center gap-4 text-sm text-[var(--muted)]">
-          {session?.user ? (
-            <>
-              <Link href="/dashboard" className="hover:text-[var(--ink)]">
-                Dashboard
-              </Link>
-              <Link href="/build" className="hover:text-[var(--ink)]">
-                Susun
-              </Link>
-              <Link href="/quick" className="hover:text-[var(--ink)]">
-                Cepat
-              </Link>
-              <Link href="/speak" className="hover:text-[var(--ink)]">
-                Bicara
-              </Link>
-              <Link href="/review" className="hover:text-[var(--ink)]">
-                Review
-              </Link>
-              <span className="hidden sm:inline">{session.user.email}</span>
-              <form
-                action={async () => {
-                  "use server";
-                  await signOut({ redirectTo: "/" });
-                }}
-              >
-                <button
-                  type="submit"
-                  className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-3 py-1.5 text-[var(--ink)] hover:bg-[var(--surface-2)]"
-                >
-                  Keluar
-                </button>
-              </form>
-            </>
-          ) : (
-            <>
-              <Link href="/login" className="hover:text-[var(--ink)]">
-                Masuk
-              </Link>
-              <Link
-                href="/register"
-                className="rounded-md bg-[var(--accent)] px-3 py-1.5 font-medium text-[#06221e] hover:bg-[var(--accent-hover)]"
-              >
-                Daftar
-              </Link>
-            </>
-          )}
-        </nav>
+
+        {session?.user ? (
+          <SiteNav accountLabel={accountLabel} signOut={<SignOutButton />} />
+        ) : (
+          <nav className="ml-auto flex items-center gap-2" aria-label="Akun">
+            <Link
+              href="/login"
+              className="inline-flex h-10 items-center rounded-full px-3.5 text-sm text-[var(--muted)] hover:text-[var(--ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+            >
+              Masuk
+            </Link>
+            <Link
+              href="/register"
+              className="inline-flex h-10 items-center rounded-full bg-[var(--accent)] px-3.5 text-sm font-medium text-[#06221e] hover:bg-[var(--accent-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+            >
+              Daftar
+            </Link>
+          </nav>
+        )}
       </div>
     </header>
   );

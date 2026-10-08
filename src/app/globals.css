@@ -55,3 +55,39 @@ input,
 textarea {
   color-scheme: dark;
 }
+
+.dash-shell {
+  background:
+    radial-gradient(900px 420px at 8% -10%, rgba(61, 214, 195, 0.16), transparent 55%),
+    radial-gradient(700px 380px at 100% 0%, rgba(120, 162, 255, 0.12), transparent 50%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 220px);
+}
+
+.dash-rise {
+  animation: dash-rise 0.6s ease both;
+}
+
+.dash-rise-2 {
+  animation-delay: 0.08s;
+}
+
+.dash-rise-3 {
+  animation-delay: 0.16s;
+}
+
+@keyframes dash-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dash-rise {
+    animation: none;
+  }
+}
