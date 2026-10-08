@@ -43,14 +43,27 @@ services:
     user: root
     depends_on:
       - web
+    expose:
+      - "8443"
+      - "8081"
     ports:
-      - "${APP_PORT:-8010}:8443"
       - "${CA_PORT:-8011}:8080"
     volumes:
       - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
       - ./certs/cert.pem:/certs/cert.pem:ro
       - ./certs/key.pem:/certs/key.pem:ro
       - ./certs/rootCA.pem:/ca/rootCA.pem:ro
+
+  edge:
+    image: haproxy:2.8-alpine
+    container_name: as_english_edge
+    restart: unless-stopped
+    depends_on:
+      - proxy
+    ports:
+      - "${APP_PORT:-8010}:8010"
+    volumes:
+      - ./deploy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
 
 volumes:
   postgres_data:

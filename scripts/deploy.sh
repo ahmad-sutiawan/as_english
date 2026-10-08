@@ -220,11 +220,12 @@ wait_healthy() {
   done
 
   i=0
-  log "Waiting for HTTPS on :${port}..."
-  until curl -fsS --cacert certs/rootCA.pem "https://127.0.0.1:${port}/" >/dev/null 2>&1; do
+  log "Waiting for HTTP and HTTPS on :${port}..."
+  until curl -fsS "http://127.0.0.1:${port}/" >/dev/null 2>&1 \
+    && curl -fsS --cacert certs/rootCA.pem "https://127.0.0.1:${port}/" >/dev/null 2>&1; do
     i=$((i + 1))
     if [[ "$i" -ge 90 ]]; then
-      docker compose logs --tail=80 web proxy || true
+      docker compose logs --tail=80 web proxy edge || true
       die "App did not become ready on port ${port}"
     fi
     sleep 2
@@ -268,7 +269,8 @@ main() {
 
   local ca_port="${CA_PORT:-8011}"
   log "Deploy OK"
-  echo "  URL:   ${APP_URL}"
+  echo "  HTTP:  http://${ip}:${APP_PORT:-8010}/"
+  echo "  HTTPS: ${APP_URL}"
   echo "  CA:    http://${ip}:${ca_port}/rootCA.pem"
   echo "  HP:    unduh CA itu, pasang sebagai sertifikat CA, lalu buka URL di atas."
   echo "         Android: Setelan > Keamanan > Enkripsi dan kredensial > Pasang sertifikat > Sertifikat CA"
