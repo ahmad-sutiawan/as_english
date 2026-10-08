@@ -1,0 +1,21 @@
+{
+	auto_https off
+	admin off
+	persist_config off
+}
+
+:8443 {
+	tls /certs/cert.pem /certs/key.pem
+	reverse_proxy web:3000
+}
+
+:8080 {
+	@ca path /rootCA.pem
+	handle @ca {
+		root * /ca
+		file_server
+	}
+	handle {
+		respond "Not found" 404
+	}
+}

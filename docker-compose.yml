@@ -23,17 +23,34 @@ services:
     build: .
     container_name: as_english_web
     restart: unless-stopped
-    ports:
-      - "${APP_PORT:-8010}:3000"
+    expose:
+      - "3000"
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-as_english}:${POSTGRES_PASSWORD:-as_english}@db:5432/${POSTGRES_DB:-as_english}?schema=public
       AUTH_SECRET: ${AUTH_SECRET:-dev-secret-change-me-in-production-as-english-32chars}
       AUTH_URL: ${APP_URL:-http://localhost:8010}
       NEXTAUTH_URL: ${APP_URL:-http://localhost:8010}
+      CA_PORT: ${CA_PORT:-8011}
       SEED_ON_START: ${SEED_ON_START:-true}
     depends_on:
       db:
         condition: service_healthy
+
+  proxy:
+    image: caddy:2-alpine
+    container_name: as_english_proxy
+    restart: unless-stopped
+    user: root
+    depends_on:
+      - web
+    ports:
+      - "${APP_PORT:-8010}:8443"
+      - "${CA_PORT:-8011}:8080"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./certs/cert.pem:/certs/cert.pem:ro
+      - ./certs/key.pem:/certs/key.pem:ro
+      - ./certs/rootCA.pem:/ca/rootCA.pem:ro
 
 volumes:
   postgres_data:

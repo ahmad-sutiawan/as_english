@@ -2,22 +2,9 @@ import Link from "next/link";
 import { auth, signOut } from "@/lib/auth";
 import { SiteNav } from "@/components/site-nav";
 
-function SignOutButton() {
-  return (
-    <form
-      action={async () => {
-        "use server";
-        await signOut({ redirectTo: "/" });
-      }}
-    >
-      <button
-        type="submit"
-        className="inline-flex h-10 items-center rounded-full border border-[var(--border)] bg-[var(--surface)] px-3.5 text-sm text-[var(--ink)] hover:bg-[var(--surface-2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
-      >
-        Keluar
-      </button>
-    </form>
-  );
+async function signOutAction() {
+  "use server";
+  await signOut({ redirectTo: "/" });
 }
 
 export async function SiteHeader() {
@@ -43,7 +30,7 @@ export async function SiteHeader() {
         </Link>
 
         {session?.user ? (
-          <SiteNav accountLabel={accountLabel} signOut={<SignOutButton />} />
+          <SiteNav accountLabel={accountLabel} signOutAction={signOutAction} />
         ) : (
           <nav className="ml-auto flex items-center gap-2" aria-label="Akun">
             <Link

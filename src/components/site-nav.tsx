@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SignOutConfirm } from "@/components/sign-out-confirm";
 
 const LINKS = [
   { href: "/dashboard", label: "Dashboard" },
@@ -15,14 +16,14 @@ const LINKS = [
 
 type Props = {
   accountLabel: string;
-  signOut: ReactNode;
+  signOutAction: () => Promise<void>;
 };
 
 function isCurrent(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export function SiteNav({ accountLabel, signOut }: Props) {
+export function SiteNav({ accountLabel, signOutAction }: Props) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -56,10 +57,12 @@ export function SiteNav({ accountLabel, signOut }: Props) {
       </nav>
 
       <div className="ml-auto flex items-center gap-2 lg:ml-3">
-        <p className="hidden max-w-40 truncate text-sm text-[var(--muted)] md:block" title={accountLabel}>
+        <p className="hidden max-w-40 truncate text-sm text-[var(--muted)] lg:block" title={accountLabel}>
           {accountLabel}
         </p>
-        {signOut}
+        <div className="hidden lg:block">
+          <SignOutConfirm action={signOutAction} />
+        </div>
         <button
           type="button"
           className="inline-flex h-10 items-center rounded-full border border-[var(--border)] bg-[var(--surface)] px-3.5 text-sm text-[var(--ink)] lg:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
@@ -98,9 +101,14 @@ export function SiteNav({ accountLabel, signOut }: Props) {
               })}
             </ul>
           </nav>
-          <p className="mt-3 truncate border-t border-[var(--border)] pt-3 text-sm text-[var(--muted)] md:hidden">
-            {accountLabel}
-          </p>
+          <div className="mt-3 border-t border-[var(--border)] pt-3">
+            <p className="truncate text-sm text-[var(--muted)]" title={accountLabel}>
+              {accountLabel}
+            </p>
+            <div className="mt-3">
+              <SignOutConfirm action={signOutAction} tone="danger" fullWidth />
+            </div>
+          </div>
         </div>
       ) : null}
     </>

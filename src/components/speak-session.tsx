@@ -8,6 +8,7 @@ import { SpeakMicButton } from "@/components/speak-mic-button";
 
 type Props = {
   level: SpeakLevel | "all";
+  caPort?: string;
 };
 
 type Summary = {
@@ -19,6 +20,45 @@ type Summary = {
   mastered: boolean;
 };
 
+function PronunciationGuide({
+  item,
+  onPlay,
+  playLabel = "Putar audio",
+}: {
+  item: SpeakItem;
+  onPlay: () => void;
+  playLabel?: string;
+}) {
+  return (
+    <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-2)] px-4 py-4">
+      <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent)]">
+        Panduan ucapan
+      </p>
+      <p className="mt-2 text-xl leading-snug text-[var(--ink)]">{item.target}</p>
+      <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">{item.targetId}</p>
+      {item.chunks.length > 0 ? (
+        <ul className="mt-3 flex flex-wrap gap-2" aria-label="Potongan kalimat">
+          {item.chunks.map((chunk, index) => (
+            <li
+              key={`${chunk}-${index}`}
+              className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-2.5 py-1 text-xs text-[var(--ink)]"
+            >
+              {chunk}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      <button
+        type="button"
+        onClick={onPlay}
+        className="mt-4 inline-flex h-10 items-center rounded-full bg-[var(--accent)] px-4 text-sm font-medium text-[#06221e] hover:bg-[var(--accent-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+      >
+        {playLabel}
+      </button>
+    </div>
+  );
+}
+
 function shuffleLocal(arr: string[]): string[] {
   const out = [...arr];
   for (let i = out.length - 1; i > 0; i -= 1) {
@@ -28,7 +68,7 @@ function shuffleLocal(arr: string[]): string[] {
   return out;
 }
 
-export function SpeakSession({ level }: Props) {
+export function SpeakSession({ level, caPort = "8011" }: Props) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [item, setItem] = useState<SpeakItem | null>(null);
@@ -44,6 +84,8 @@ export function SpeakSession({ level }: Props) {
   const [busy, setBusy] = useState(false);
   const [summary, setSummary] = useState<Summary | null>(null);
   const [typedFallback, setTypedFallback] = useState("");
+  const [insecure, setInsecure] = useState(false);
+  const [caHref, setCaHref] = useState("");
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -83,6 +125,11 @@ export function SpeakSession({ level }: Props) {
   useEffect(() => {
     void load();
   }, [load]);
+
+  useEffect(() => {
+    setInsecure(window.isSecureContext === false);
+    setCaHref(`http://${window.location.hostname}:${caPort}/rootCA.pem`);
+  }, [caPort]);
 
   const phaseLabel = useMemo(() => {
     switch (phase) {
@@ -305,6 +352,7 @@ export function SpeakSession({ level }: Props) {
             Streak: <strong>{summary.streak} hari</strong>
           </li>
         </ul>
+        <p className="text-base text-[var(--ink)]">{item.target}</p>
         <p className="text-sm text-[var(--muted)]">{item.targetId}</p>
         <div className="flex flex-wrap gap-2">
           <button
@@ -327,6 +375,31 @@ export function SpeakSession({ level }: Props) {
 
   return (
     <article className="space-y-6">
+      {insecure ? (
+        <div className="rounded-2xl border border-[var(--danger-border)] bg-[var(--danger-bg)] px-4 py-4 text-sm text-[var(--ink)]">
+          <p className="font-medium">Mic tidak hidup di alamat HTTP.</p>
+          <p className="mt-2 leading-relaxed text-[var(--muted)]">
+            HP harus membuka situs lewat HTTPS dan mempercayai CA lokal. Unduh
+            sertifikat sekali, pasang sebagai CA, lalu buka ulang lewat https
+            pada port yang sama.
+          </p>
+          {caHref ? (
+            <a
+              href={caHref}
+              className="mt-3 inline-flex h-10 items-center text-sm font-medium text-[var(--danger)] underline"
+            >
+              Unduh rootCA.pem
+            </a>
+          ) : null}
+          <ol className="mt-3 list-decimal space-y-1 pl-5 text-[var(--muted)]">
+            <li>Android: Setelan, Keamanan, pasang sertifikat CA.</li>
+            <li>
+              iPhone: pasang profil, lalu aktifkan di Setelan, Umum, Tentang,
+              Pengaturan Kepercayaan Sertifikat.
+            </li>
+          </ol>
+        </div>
+      ) : null}
       <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-[var(--muted)]">
         <span className="font-semibold text-[var(--accent)]">{phaseLabel}</span>
         <span>
@@ -336,23 +409,17 @@ export function SpeakSession({ level }: Props) {
 
       {phase === "listen" ? (
         <section className="space-y-4 rounded-md border border-[var(--border)] bg-[var(--surface)] p-5">
-          <h2 className="text-lg font-medium text-[var(--ink)]">🎧 Listen</h2>
+          <h2 className="text-lg font-medium text-[var(--ink)]">Listen</h2>
           <p className="text-sm text-[var(--muted)]">
-            Dengarkan kalimat kerja. Teks target disembunyikan — fokus pada
-            chunks suara.
+            Dengarkan kalimat kerja. Teks English di bawah adalah panduan
+            pengucapan: baca bersamaan dengan audio, lalu ucapkan pelan.
           </p>
-          <button
-            type="button"
-            onClick={playAudio}
-            className="rounded-md bg-[var(--accent)] px-4 py-2 text-sm font-medium text-[#06221e]"
-          >
-            Putar audio
-          </button>
+          <PronunciationGuide item={item} onPlay={playAudio} />
           <button
             type="button"
             disabled={!heard}
             onClick={() => setPhase("retrieve")}
-            className="ml-2 rounded-md border border-[var(--border)] px-4 py-2 text-sm text-[var(--ink)] disabled:opacity-40"
+            className="inline-flex h-10 items-center rounded-full border border-[var(--border)] px-4 text-sm text-[var(--ink)] disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
           >
             Lanjut: What did they say?
           </button>
@@ -365,8 +432,14 @@ export function SpeakSession({ level }: Props) {
             What did they say?
           </h2>
           <p className="text-sm text-[var(--muted)]">
-            Ucapkan kembali tanpa melihat teks.
+            Ucapkan kembali kalimat itu. Panduan English tetap terlihat supaya
+            pengucapan bisa dicek.
           </p>
+          <PronunciationGuide
+            item={item}
+            onPlay={playAudio}
+            playLabel="Dengar lagi"
+          />
           <SpeakMicButton
             disabled={busy}
             onTranscript={(t) => setTranscript(t)}
@@ -448,15 +521,14 @@ export function SpeakSession({ level }: Props) {
       {phase === "speak_target" ? (
         <section className="space-y-4 rounded-md border border-[var(--border)] bg-[var(--surface)] p-5">
           <h2 className="text-lg font-medium text-[var(--ink)]">Speak it</h2>
-          <p className="text-base text-[var(--ink)]">{item.target}</p>
-          <p className="text-sm text-[var(--muted)]">{item.targetId}</p>
-          <button
-            type="button"
-            onClick={() => playTargetAudio(item.target, item.audio)}
-            className="text-sm text-[var(--accent)]"
-          >
-            Putar model sekali lagi
-          </button>
+          <p className="text-sm text-[var(--muted)]">
+            Ucapkan kalimat yang sama. Putar audio sambil mengikuti teks.
+          </p>
+          <PronunciationGuide
+            item={item}
+            onPlay={() => playTargetAudio(item.target, item.audio)}
+            playLabel="Putar model"
+          />
           <SpeakMicButton
             disabled={busy}
             onTranscript={(t) => setTranscript(t)}
@@ -489,8 +561,14 @@ export function SpeakSession({ level }: Props) {
           <p className="text-sm font-medium text-[var(--ink)]">{item.scenario}</p>
           <p className="text-xs text-[var(--muted)]">{item.scenarioId}</p>
           <p className="text-sm text-[var(--muted)]">
-            Jawab bebas — tidak harus exact script. Meaning dulu.
+            Jawab situasi ini. Kalimat model di bawah boleh diucapkan sebagai
+            panduan, atau diubah selama artinya tetap tepat.
           </p>
+          <PronunciationGuide
+            item={item}
+            onPlay={() => playTargetAudio(item.target, item.audio)}
+            playLabel="Dengar model"
+          />
           <SpeakMicButton
             disabled={busy}
             onTranscript={(t) => setTranscript(t)}
@@ -521,9 +599,14 @@ export function SpeakSession({ level }: Props) {
             🔁 Say it again
           </h2>
           <p className="text-sm text-[var(--muted)]">
-            Ulangi versi yang lebih natural:
+            Ulangi versi yang lebih natural. Ikuti teks English saat audio
+            diputar.
           </p>
-          <p className="text-base font-medium text-[var(--ink)]">{item.target}</p>
+          <PronunciationGuide
+            item={item}
+            onPlay={() => playTargetAudio(item.target, item.audio)}
+            playLabel="Dengar lagi"
+          />
           <SpeakMicButton
             disabled={busy}
             onTranscript={(t) => setTranscript(t)}

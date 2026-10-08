@@ -32,10 +32,11 @@ export default async function SpeakPlayPage({ searchParams }: Props) {
         Sesi produksi
       </h1>
       <p className="mt-1 text-sm text-[var(--muted)]">
-        Minim membaca. Dengarkan, susun, lalu bicara. Feedback rule-based lokal.
+        Setiap audio menampilkan kalimat English sebagai panduan pengucapan.
+        Susun, lalu ucapkan. Penilaian tetap lokal.
       </p>
       <div className="mt-8">
-        <SpeakSession level={level} />
+        <SpeakSession level={level} caPort={process.env.CA_PORT || "8011"} />
       </div>
     </div>
   );
