@@ -121,7 +121,7 @@ git pull
 
 The script installs Docker if needed, creates `.env` once (secrets + `APP_URL`), builds, migrates, seeds the demo user, and starts the stack.
 
-- App: `http://SERVER_IP:3000` (or set `APP_URL` before first deploy)
+- App: `http://SERVER_IP:8010` (host port 8010; Postgres is not published to the host)
 - Demo: `demo@asenglish.local` / `demo1234`
 - Logs: `docker compose logs -f`
 - Stop: `docker compose down`
