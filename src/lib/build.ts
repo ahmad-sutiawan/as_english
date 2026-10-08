@@ -49,6 +49,56 @@ export const BUILD_THEMES = [
     titleId: "Wawancara",
     description: "Jawaban singkat behavioral dan teknis.",
   },
+  {
+    id: "slack",
+    titleId: "Slack dan email",
+    description: "Balasan, nada, pemilik tugas, dan menutup thread.",
+  },
+  {
+    id: "presentation",
+    titleId: "Presentasi",
+    description: "Pembuka, demo, slide, dan sesi tanya jawab.",
+  },
+  {
+    id: "postmortem",
+    titleId: "Postmortem",
+    description: "Dampak, timeline, akar masalah, dan tindak lanjut.",
+  },
+  {
+    id: "vendor",
+    titleId: "Lintas tim",
+    description: "Deadline vendor, scope, dan dorongan yang sopan.",
+  },
+  {
+    id: "negotiation",
+    titleId: "Negosiasi",
+    description: "Tawaran, gaji, tanggal mulai, dan counter-offer.",
+  },
+  {
+    id: "meeting",
+    titleId: "Rapat",
+    description: "Agenda, keputusan, notulen, dan tindak lanjut.",
+  },
+  {
+    id: "small-talk",
+    titleId: "Obrolan ringan",
+    description: "Sapaan kantor, makan siang, dan kabar singkat.",
+  },
+  {
+    id: "phone",
+    titleId: "Telepon",
+    description: "Membuka panggilan, koneksi, dan janji menelepon balik.",
+  },
+  {
+    id: "clarification",
+    titleId: "Klarifikasi",
+    description: "Meminta ulang, memastikan arti, dan merangkum keputusan.",
+  },
+  {
+    id: "troubleshooting",
+    titleId: "Pemecahan masalah",
+    description: "Log, error, hotfix, dan dugaan penyebab.",
+  },
 ] as const;
 
 export type BuildThemeId = (typeof BUILD_THEMES)[number]["id"];
