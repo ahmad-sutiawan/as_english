@@ -1,14 +1,18 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
-import { getBuildDrills, getOrCreateBuildStats } from "@/lib/build";
+import {
+  BUILD_THEMES,
+  countDrillsByTheme,
+  getOrCreateBuildStats,
+} from "@/lib/build";
 
 export default async function BuildLobbyPage() {
   const session = await auth();
   if (!session?.user?.id) redirect("/login");
 
   const stats = await getOrCreateBuildStats(session.user.id);
-  const count = getBuildDrills().length;
+  const counts = countDrillsByTheme();
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
@@ -23,9 +27,8 @@ export default async function BuildLobbyPage() {
         Susun Kalimat
       </h1>
       <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
-        Dari arti ke urutan kata, lalu ubah bentuknya: negatif, pertanyaan, past,
-        atau future. Salah satu chip tidak cukup disebut salah — sistem
-        menunjukkan subjek, verb, tempat, dan waktu.
+        Pilih tema percakapan. Setiap kalimat disusun dari chip, lalu diubah
+        menjadi negatif, pertanyaan, past, atau future.
       </p>
 
       <section className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -41,20 +44,39 @@ export default async function BuildLobbyPage() {
         </div>
         <div className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
           <p className="text-xs uppercase tracking-wide text-[var(--muted)]">Pola</p>
-          <p className="mt-1 text-2xl font-semibold text-[var(--ink)]">{count}</p>
+          <p className="mt-1 text-2xl font-semibold text-[var(--ink)]">{counts.all}</p>
         </div>
       </section>
 
-      <Link
-        href="/build/play"
-        className="mt-8 inline-flex rounded-md bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-[#06221e] hover:bg-[var(--accent-hover)]"
-      >
-        Mulai sesi 8 kalimat
-      </Link>
+      <section className="mt-8 space-y-3">
+        <h2 className="text-sm font-semibold text-[var(--ink)]">Tema percakapan</h2>
+        <ul className="space-y-2">
+          {BUILD_THEMES.map((theme) => (
+            <li key={theme.id}>
+              <Link
+                href={`/build/play?theme=${theme.id}`}
+                className="flex items-center justify-between gap-4 rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3 hover:border-[var(--accent)]"
+              >
+                <span className="min-w-0">
+                  <span className="block text-sm font-medium text-[var(--ink)]">
+                    {theme.titleId}
+                  </span>
+                  <span className="mt-1 block text-xs leading-relaxed text-[var(--muted)]">
+                    {theme.description}
+                  </span>
+                </span>
+                <span className="shrink-0 text-sm font-medium text-[var(--accent)]">
+                  {counts[theme.id] ?? 0} →
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <p className="mt-8 text-xs text-[var(--muted)]">
-        +10 XP per kalimat selesai, +20 jika seluruh sesi benar pada percobaan
-        pertama. Streak dihitung per hari (WIB).
+        Sesi memakai sampai 8 kalimat dari tema itu. +10 XP per kalimat selesai,
+        +20 jika seluruh sesi benar pada percobaan pertama.
       </p>
     </div>
   );

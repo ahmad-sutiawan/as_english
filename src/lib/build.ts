@@ -8,6 +8,51 @@ export const BUILD_SESSION_SIZE = 8;
 export const BUILD_XP_DRILL = 10;
 export const BUILD_XP_PERFECT_BONUS = 20;
 
+export const BUILD_THEMES = [
+  {
+    id: "all",
+    titleId: "Semua tema",
+    description: "Acak dari seluruh bank kalimat, dasar sampai percakapan kerja.",
+  },
+  {
+    id: "dasar",
+    titleId: "Dasar",
+    description: "Urutan kata, be, tempat, waktu, lalu negatif atau pertanyaan.",
+  },
+  {
+    id: "standup",
+    titleId: "Standup",
+    description: "Blocker, ETA, dan minta bantuan di sync harian.",
+  },
+  {
+    id: "incident",
+    titleId: "Insiden",
+    description: "Severity, mitigasi, bridge, dan pemulihan layanan.",
+  },
+  {
+    id: "manager",
+    titleId: "Update manager",
+    description: "Status, risiko, anggaran, dan minta keputusan.",
+  },
+  {
+    id: "code-review",
+    titleId: "Code review",
+    description: "Komentar, tes, dan saran di pull request.",
+  },
+  {
+    id: "one-on-one",
+    titleId: "1:1",
+    description: "Kepemilikan, coaching, dan umpan balik.",
+  },
+  {
+    id: "interview",
+    titleId: "Wawancara",
+    description: "Jawaban singkat behavioral dan teknis.",
+  },
+] as const;
+
+export type BuildThemeId = (typeof BUILD_THEMES)[number]["id"];
+
 const drillsPath = path.join(process.cwd(), "content", "build", "drills.json");
 
 function readDrills(): BuildDrill[] {
@@ -48,8 +93,28 @@ function yesterdayJakartaKey(todayKey: string): string {
   return jakartaDateKey(dt);
 }
 
-export function buildSession(size = BUILD_SESSION_SIZE): BuildDrill[] {
-  return shuffle(getBuildDrills()).slice(0, size);
+export function isBuildTheme(theme: string): theme is BuildThemeId {
+  return BUILD_THEMES.some((item) => item.id === theme);
+}
+
+export function countDrillsByTheme(): Record<string, number> {
+  const counts: Record<string, number> = { all: 0 };
+  for (const drill of getBuildDrills()) {
+    counts.all += 1;
+    counts[drill.theme] = (counts[drill.theme] ?? 0) + 1;
+  }
+  return counts;
+}
+
+export function buildSession(
+  theme: BuildThemeId = "all",
+  size = BUILD_SESSION_SIZE,
+): BuildDrill[] {
+  const pool =
+    theme === "all"
+      ? getBuildDrills()
+      : getBuildDrills().filter((drill) => drill.theme === theme);
+  return shuffle(pool).slice(0, size);
 }
 
 export async function getOrCreateBuildStats(userId: string) {

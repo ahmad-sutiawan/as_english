@@ -22,6 +22,7 @@ export type BuildStep = {
 
 export type BuildDrill = {
   id: string;
+  theme: string;
   level: BuildLevel;
   meaningId: string;
   pattern: string;

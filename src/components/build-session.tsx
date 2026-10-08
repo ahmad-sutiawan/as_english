@@ -40,7 +40,11 @@ function chipsFor(step: BuildStep): Chip[] {
   return shuffle(texts.map((text, index) => ({ id: `${index}-${text}`, text })));
 }
 
-export function BuildSession() {
+type Props = {
+  theme?: string;
+};
+
+export function BuildSession({ theme = "all" }: Props) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [items, setItems] = useState<BuildDrill[]>([]);
@@ -71,7 +75,11 @@ export function BuildSession() {
     setPlaced([]);
     setBank([]);
     try {
-      const res = await fetch("/api/build/session", { method: "POST" });
+      const res = await fetch("/api/build/session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ theme }),
+      });
       const data = await res.json();
       if (!res.ok) {
         setError(data.error ?? "Gagal memuat sesi.");
@@ -88,7 +96,7 @@ export function BuildSession() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [theme]);
 
   useEffect(() => {
     void loadSession();
