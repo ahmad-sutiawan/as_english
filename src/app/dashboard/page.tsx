@@ -164,6 +164,12 @@ export default async function DashboardPage() {
                 <span className="text-[var(--ink)]">{next.title}. </span>
                 {next.detail}
               </p>
+              <Link
+                href="/guide"
+                className="inline-flex h-11 items-center text-sm text-[var(--muted)] hover:text-[var(--ink)]"
+              >
+                Baca panduan
+              </Link>
             </div>
           </div>
 

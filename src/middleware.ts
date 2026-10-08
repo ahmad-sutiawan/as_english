@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 
-const protectedPrefixes = ["/dashboard", "/learn", "/review", "/build"];
+const protectedPrefixes = ["/dashboard", "/learn", "/review", "/build", "/guide"];
 
 export default auth((req) => {
   const { pathname } = req.nextUrl;
@@ -25,5 +25,7 @@ export const config = {
     "/review/:path*",
     "/build",
     "/build/:path*",
+    "/guide",
+    "/guide/:path*",
   ],
 };

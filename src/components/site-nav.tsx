@@ -10,6 +10,7 @@ const LINKS = [
   { href: "/quick", label: "Cepat" },
   { href: "/speak", label: "Bicara" },
   { href: "/review", label: "Review" },
+  { href: "/guide", label: "Panduan" },
 ] as const;
 
 type Props = {
