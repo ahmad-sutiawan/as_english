@@ -14,6 +14,7 @@ import {
   QUICK_XP_PERFECT_BONUS,
 } from "@/lib/quick";
 import { SPEAK_XP_COMPLETE, SPEAK_XP_MASTERED } from "@/lib/speak";
+import { LobbyFrame, lobbyCard } from "@/components/lobby-frame";
 
 const surfaces = [
   {
@@ -67,24 +68,13 @@ export default async function GuidePage() {
   const modules = getModules();
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10">
-      <Link
-        href="/dashboard"
-        className="text-sm text-[var(--muted)] hover:text-[var(--ink)]"
-      >
-        ← Dashboard
-      </Link>
-
-      <h1 className="mt-4 font-display text-3xl tracking-tight text-[var(--ink)]">
-        Panduan pembelajaran
-      </h1>
-      <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
-        Cara memakai AS English dari papan latihan sampai kalimat kerja keluar
-        sendiri. Ikuti urutan ini; dashboard sudah memakai aturan yang sama
-        untuk memilih langkah berikutnya.
-      </p>
-
-      <section className="mt-10">
+    <LobbyFrame
+      kicker="Arah latihan"
+      title="Panduan pembelajaran"
+      lede="Cara memakai AS English dari papan latihan sampai kalimat kerja keluar sendiri. Ikuti urutan ini; dashboard sudah memakai aturan yang sama untuk memilih langkah berikutnya."
+    >
+      <div className="grid gap-3 lg:grid-cols-2">
+      <section className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 p-5">
         <h2 className="text-lg font-semibold text-[var(--ink)]">Untuk siapa</h2>
         <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
           Latihan ini untuk IT Manager, SRE, dan Fullstack. Penjelasan, nama
@@ -94,7 +84,7 @@ export default async function GuidePage() {
         </p>
       </section>
 
-      <section className="mt-8">
+      <section className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 p-5">
         <h2 className="text-lg font-semibold text-[var(--ink)]">Prinsip</h2>
         <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
           Tidak ada model bahasa di balik penilaian. Setiap jawaban dicocokkan
@@ -103,9 +93,10 @@ export default async function GuidePage() {
           menyusun, mengucapkan, atau mengetik kalimat yang benar.
         </p>
       </section>
+      </div>
 
       <section className="mt-8">
-        <h2 className="text-lg font-semibold text-[var(--ink)]">
+        <h2 className="font-display text-3xl text-[var(--ink)]">
           Loop harian yang paling efektif
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
@@ -113,26 +104,26 @@ export default async function GuidePage() {
           di dashboard.
         </p>
         <ol className="mt-4 space-y-3 text-sm leading-relaxed text-[var(--muted)]">
-          <li className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
+          <li className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 px-5 py-4">
             <span className="font-medium text-[var(--ink)]">1. Review jika ada yang jatuh tempo. </span>
             Selesaikan antrian itu sebelum menambah materi. Ingatan yang sudah
             jatuh tempo lebih berharga daripada tema baru.
           </li>
-          <li className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
+          <li className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 px-5 py-4">
             <span className="font-medium text-[var(--ink)]">2. Susun jika XP Susun masih 0. </span>
             Mulai di tema Dasar, lalu satu tema percakapan. Ini jalur paling
             pendek dari mengenal kosakata ke bisa menyusun kalimat.
           </li>
-          <li className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
+          <li className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 px-5 py-4">
             <span className="font-medium text-[var(--ink)]">3. Bicara jika XP Bicara tertinggal dari Susun. </span>
             Ucapkan kalimat yang baru saja disusun. Susunan di kepala belum
             menjadi bahasa yang keluar.
           </li>
-          <li className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
+          <li className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 px-5 py-4">
             <span className="font-medium text-[var(--ink)]">4. Cepat jika konstruksi dan ucapan sudah seimbang. </span>
             Delapan soal tap menjaga pengenalan kalimat kerja yang benar.
           </li>
-          <li className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
+          <li className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 px-5 py-4">
             <span className="font-medium text-[var(--ink)]">5. Tutup dengan satu soal modul baru. </span>
             Soal itu mengisi jadwal Review. Review hanya mengingat percobaan
             modul, bukan sesi Susun, Bicara, atau Cepat.
@@ -141,20 +132,20 @@ export default async function GuidePage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="text-lg font-semibold text-[var(--ink)]">Enam permukaan</h2>
-        <ul className="mt-4 space-y-3">
+        <h2 className="font-display text-3xl text-[var(--ink)]">Enam permukaan</h2>
+        <ul className="mt-4 grid gap-3 lg:grid-cols-2">
           {surfaces.map((surface) => (
             <li
               key={surface.title}
-              className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-4"
+              className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 p-5"
             >
               <div className="flex items-baseline justify-between gap-3">
-                <h3 className="text-sm font-semibold text-[var(--ink)]">
+                <h3 className="font-display text-2xl text-[var(--ink)]">
                   {surface.title}
                 </h3>
                 <Link
                   href={surface.href}
-                  className="shrink-0 text-sm font-medium text-[var(--accent)] hover:underline"
+                  className="inline-flex h-10 shrink-0 items-center rounded-full border border-[var(--border)] px-4 text-sm text-[var(--ink)] hover:border-[var(--accent)] hover:text-[var(--accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
                 >
                   Buka
                 </Link>
@@ -176,8 +167,8 @@ export default async function GuidePage() {
         </ul>
       </section>
 
-      <section className="mt-10">
-        <h2 className="text-lg font-semibold text-[var(--ink)]">
+      <section className="mt-10 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 p-5">
+        <h2 className="font-display text-3xl text-[var(--ink)]">
           Urutan seminggu
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
@@ -190,8 +181,8 @@ export default async function GuidePage() {
         </p>
       </section>
 
-      <section className="mt-8">
-        <h2 className="text-lg font-semibold text-[var(--ink)]">
+      <section className="mt-4 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 p-5">
+        <h2 className="font-display text-3xl text-[var(--ink)]">
           Cara membaca progres
         </h2>
         <ul className="mt-3 space-y-2 text-sm leading-relaxed text-[var(--muted)]">
@@ -216,20 +207,20 @@ export default async function GuidePage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="text-lg font-semibold text-[var(--ink)]">Modul yang ada</h2>
+        <h2 className="font-display text-3xl text-[var(--ink)]">Modul yang ada</h2>
         <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
           Kerjakan satu modul yang paling dekat dengan pekerjaan minggu ini.
           Satu soal selesai sudah cukup untuk menutup latihan hari itu.
         </p>
-        <ul className="mt-4 space-y-2">
+        <ul className="mt-4 grid gap-3 md:grid-cols-2">
           {modules.map((mod) => (
             <li key={mod.id}>
               <Link
                 href={`/learn/${mod.id}`}
-                className="block rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3 hover:border-[var(--accent)]"
+                className={`${lobbyCard} h-full`}
               >
                 <span className="flex items-baseline justify-between gap-3">
-                  <span className="text-sm font-medium text-[var(--ink)]">
+                  <span className="font-display text-2xl text-[var(--ink)]">
                     {mod.titleId}
                   </span>
                   <span className="shrink-0 text-xs text-[var(--accent)]">
@@ -244,6 +235,6 @@ export default async function GuidePage() {
           ))}
         </ul>
       </section>
-    </div>
+    </LobbyFrame>
   );
 }

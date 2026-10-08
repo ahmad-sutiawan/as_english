@@ -1,14 +1,37 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
-import { getOrCreateQuickStats } from "@/lib/quick";
+import {
+  QUICK_HEARTS,
+  QUICK_SESSION_SIZE,
+  QUICK_XP_CORRECT,
+  QUICK_XP_PERFECT_BONUS,
+  getOrCreateQuickStats,
+} from "@/lib/quick";
 import { DIFFICULTY_LABEL_ID, type Difficulty } from "@/types/content";
+import { LobbyFrame, StatTile, lobbyCard } from "@/components/lobby-frame";
 
-const LEVELS: { value: "all" | Difficulty; label: string }[] = [
-  { value: "all", label: "Semua level" },
-  { value: "junior", label: DIFFICULTY_LABEL_ID.junior },
-  { value: "mid", label: DIFFICULTY_LABEL_ID.mid },
-  { value: "senior", label: DIFFICULTY_LABEL_ID.senior },
+const LEVELS: { value: "all" | Difficulty; label: string; detail: string }[] = [
+  {
+    value: "all",
+    label: "Semua level",
+    detail: "Campuran dari seluruh bank soal kerja.",
+  },
+  {
+    value: "junior",
+    label: DIFFICULTY_LABEL_ID.junior,
+    detail: "Kalimat pendek untuk mengunci pola dasar.",
+  },
+  {
+    value: "mid",
+    label: DIFFICULTY_LABEL_ID.mid,
+    detail: "Update, risiko, dan permintaan yang lebih panjang.",
+  },
+  {
+    value: "senior",
+    label: DIFFICULTY_LABEL_ID.senior,
+    detail: "Tradeoff dan bahasa keputusan yang lebih padat.",
+  },
 ];
 
 export default async function QuickLobbyPage() {
@@ -18,72 +41,45 @@ export default async function QuickLobbyPage() {
   const stats = await getOrCreateQuickStats(session.user.id);
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10">
-      <Link
-        href="/dashboard"
-        className="text-sm text-[var(--muted)] hover:text-[var(--ink)]"
-      >
-        ← Dashboard
-      </Link>
-
-      <h1 className="mt-4 font-display text-3xl tracking-tight text-[var(--ink)]">
-        Latihan Cepat
-      </h1>
-      <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
-        Mode ala Duolingo: 8 soal, 3 nyawa, tap jawaban. Konten tetap workplace
-        English — beda alur dari mode ketik-ulang di modul.
-      </p>
-
-      <section className="mt-8 grid gap-3 sm:grid-cols-3">
-        <div className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
-          <p className="text-xs uppercase tracking-wide text-[var(--muted)]">
-            XP
-          </p>
-          <p className="mt-1 text-2xl font-semibold text-[var(--ink)]">
-            {stats.xp}
-          </p>
-        </div>
-        <div className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
-          <p className="text-xs uppercase tracking-wide text-[var(--muted)]">
-            Streak
-          </p>
-          <p className="mt-1 text-2xl font-semibold text-[var(--accent)]">
-            {stats.streak} hari
-          </p>
-        </div>
-        <div className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
-          <p className="text-xs uppercase tracking-wide text-[var(--muted)]">
-            Best streak
-          </p>
-          <p className="mt-1 text-2xl font-semibold text-[var(--ink)]">
-            {stats.bestStreak}
-          </p>
-        </div>
+    <LobbyFrame
+      kicker="Akurasi"
+      title="Latihan cepat"
+      lede={`${QUICK_SESSION_SIZE} soal, ${QUICK_HEARTS} nyawa, jawaban dipilih dengan ketukan. Konten tetap workplace English, dengan alur yang berbeda dari modul ketik.`}
+    >
+      <section className="grid gap-3 sm:grid-cols-3">
+        <StatTile label="XP" value={String(stats.xp)} hint="Jalur Cepat" />
+        <StatTile label="Streak" value={String(stats.streak)} hint="Hari ini, WIB" />
+        <StatTile label="Rekor" value={String(stats.bestStreak)} hint="Streak terbaik" />
       </section>
 
-      <section className="mt-8 space-y-3">
-        <h2 className="text-sm font-semibold text-[var(--ink)]">
-          Pilih level lalu mulai
-        </h2>
-        <ul className="space-y-2">
+      <section className="mt-8">
+        <h2 className="text-sm font-semibold text-[var(--ink)]">Pilih level lalu mulai</h2>
+        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
           {LEVELS.map((lv) => (
             <li key={lv.value}>
               <Link
                 href={`/quick/play?level=${lv.value}`}
-                className="flex items-center justify-between rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm hover:border-[var(--accent)]"
+                className={`${lobbyCard} h-full sm:flex-row sm:items-center sm:justify-between`}
               >
-                <span className="text-[var(--ink)]">{lv.label}</span>
-                <span className="font-medium text-[var(--accent)]">Mulai →</span>
+                <span>
+                  <span className="block font-display text-2xl text-[var(--ink)]">{lv.label}</span>
+                  <span className="mt-2 block text-sm leading-relaxed text-[var(--muted)]">
+                    {lv.detail}
+                  </span>
+                </span>
+                <span className="mt-4 inline-flex h-10 shrink-0 items-center rounded-full border border-[var(--border)] px-4 text-sm text-[var(--ink)] group-hover:border-[var(--accent)] group-hover:text-[var(--accent)] sm:mt-0">
+                  Mulai
+                </span>
               </Link>
             </li>
           ))}
         </ul>
       </section>
 
-      <p className="mt-8 text-xs text-[var(--muted)]">
-        Tip: +10 XP per benar, +20 bonus jika clear tanpa kehilangan nyawa.
-        Streak dihitung per hari (WIB).
+      <p className="mt-8 text-sm text-[var(--muted)]">
+        +{QUICK_XP_CORRECT} XP per benar, +{QUICK_XP_PERFECT_BONUS} bonus jika selesai tanpa
+        kehilangan nyawa. Streak dihitung per hari (WIB).
       </p>
-    </div>
+    </LobbyFrame>
   );
 }

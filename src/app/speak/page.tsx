@@ -4,6 +4,16 @@ import { auth } from "@/lib/auth";
 import { getOrCreateSpeakStats } from "@/lib/speak";
 import { getSpeakManifest } from "@/lib/speak-content";
 import { DIFFICULTY_LABEL_ID, type Difficulty } from "@/types/content";
+import { LobbyFrame, StatTile, lobbyCard } from "@/components/lobby-frame";
+
+const PHASES = [
+  "Listen",
+  "Retrieve",
+  "Construct",
+  "Speak",
+  "Correct",
+  "Say again",
+];
 
 const LEVELS: { value: "all" | Difficulty; label: string }[] = [
   { value: "all", label: "Semua level" },
@@ -22,82 +32,66 @@ export default async function SpeakLobbyPage() {
   ]);
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10">
-      <Link
-        href="/dashboard"
-        className="text-sm text-[var(--muted)] hover:text-[var(--ink)]"
-      >
-        ← Dashboard
-      </Link>
-
-      <h1 className="mt-4 font-display text-3xl tracking-tight text-[var(--ink)]">
-        Produksi Bicara
-      </h1>
-      <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
-        Offline full: Listen → Retrieve → Construct → Speak → Correct → Say
-        again. Bukan Duolingo — melatih English keluar otomatis dari passive
-        knowledge Anda. Tanpa API AI eksternal.
-      </p>
-
-      <section className="mt-8 grid gap-3 sm:grid-cols-3">
-        <div className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
-          <p className="text-xs uppercase tracking-wide text-[var(--muted)]">
-            XP Speak
-          </p>
-          <p className="mt-1 text-2xl font-semibold text-[var(--ink)]">
-            {stats.xp}
-          </p>
-        </div>
-        <div className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
-          <p className="text-xs uppercase tracking-wide text-[var(--muted)]">
-            Streak
-          </p>
-          <p className="mt-1 text-2xl font-semibold text-[var(--accent)]">
-            {stats.streak} hari
-          </p>
-        </div>
-        <div className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3">
-          <p className="text-xs uppercase tracking-wide text-[var(--muted)]">
-            Sesi selesai
-          </p>
-          <p className="mt-1 text-2xl font-semibold text-[var(--ink)]">
-            {stats.sessionsDone}
-          </p>
-        </div>
+    <LobbyFrame
+      kicker="Produksi"
+      title="Produksi bicara"
+      lede="Enam tahap offline: dengar, ingat, susun, ucapkan, koreksi, lalu ucapkan lagi. English keluar dari pengetahuan yang sudah ada, tanpa API AI."
+    >
+      <section className="grid gap-3 sm:grid-cols-3">
+        <StatTile label="XP Speak" value={String(stats.xp)} hint="Jalur Bicara" />
+        <StatTile label="Streak" value={String(stats.streak)} hint="Hari beruntun" />
+        <StatTile label="Sesi selesai" value={String(stats.sessionsDone)} hint="Item yang ditutup" />
       </section>
+
+      <ol className="mt-8 grid gap-2 sm:grid-cols-3 lg:grid-cols-6">
+        {PHASES.map((phase, index) => (
+          <li
+            key={phase}
+            className="rounded-2xl border border-[var(--border)] bg-[var(--surface)]/70 px-3 py-3"
+          >
+            <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent)]">
+              {String(index + 1).padStart(2, "0")}
+            </p>
+            <p className="mt-1 text-sm text-[var(--ink)]">{phase}</p>
+          </li>
+        ))}
+      </ol>
 
       <section className="mt-8">
         <h2 className="text-sm font-semibold text-[var(--ink)]">
-          Pack lokal ({manifest.itemCount} kalimat)
+          Pack lokal · {manifest.itemCount} kalimat
         </h2>
-        <ul className="mt-2 flex flex-wrap gap-2 text-xs text-[var(--muted)]">
-          {manifest.packs.map((p) => (
+        <ul className="mt-4 flex flex-wrap gap-2">
+          {manifest.packs.map((pack) => (
             <li
-              key={p.id}
-              className="rounded-md border border-[var(--border)] bg-[var(--surface-2)] px-2 py-1"
+              key={pack.id}
+              className="rounded-full border border-[var(--border)] bg-[var(--surface)]/70 px-3 py-1.5 text-xs text-[var(--muted)]"
             >
-              {p.titleId} ({p.itemCount})
+              <span className="text-[var(--ink)]">{pack.titleId}</span>
+              <span className="ml-2 text-[var(--accent)]">{pack.itemCount}</span>
             </li>
           ))}
         </ul>
       </section>
 
-      <section className="mt-8 space-y-3">
+      <section className="mt-8">
         <h2 className="text-sm font-semibold text-[var(--ink)]">Mulai sesi</h2>
-        <ul className="space-y-2">
+        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
           {LEVELS.map((lv) => (
             <li key={lv.value}>
               <Link
                 href={`/speak/play?level=${lv.value}`}
-                className="flex items-center justify-between rounded-md border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm hover:border-[var(--accent)]"
+                className={`${lobbyCard} h-full flex-row items-center justify-between`}
               >
-                <span className="text-[var(--ink)]">{lv.label}</span>
-                <span className="font-medium text-[var(--accent)]">Mulai →</span>
+                <span className="font-display text-2xl text-[var(--ink)]">{lv.label}</span>
+                <span className="inline-flex h-10 items-center rounded-full border border-[var(--border)] px-4 text-sm text-[var(--ink)] group-hover:border-[var(--accent)] group-hover:text-[var(--accent)]">
+                  Mulai
+                </span>
               </Link>
             </li>
           ))}
         </ul>
       </section>
-    </div>
+    </LobbyFrame>
   );
 }
