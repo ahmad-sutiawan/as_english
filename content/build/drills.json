@@ -1,0 +1,832 @@
+[
+  {
+    "id": "sv-i-work",
+    "level": "junior",
+    "meaningId": "Saya bekerja.",
+    "pattern": "SUBJECT + VERB",
+    "assemble": {
+      "tokens": ["I", "work"],
+      "distractors": ["works", "working"],
+      "sentence": "I work.",
+      "sentenceId": "Saya bekerja.",
+      "why": "Subjek I memakai verb dasar, tanpa -s.",
+      "pattern": "SUBJECT + VERB",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": ["I", "don't", "work"],
+      "distractors": ["doesn't", "not"],
+      "sentence": "I don't work.",
+      "sentenceId": "Saya tidak bekerja.",
+      "why": "I / you / we / they memakai don't + verb dasar.",
+      "pattern": "SUBJECT + don't + VERB",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "don't" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" }
+      ]
+    }
+  },
+  {
+    "id": "sv-you-work",
+    "level": "junior",
+    "meaningId": "Kamu bekerja.",
+    "pattern": "SUBJECT + VERB",
+    "assemble": {
+      "tokens": ["You", "work"],
+      "distractors": ["works", "are"],
+      "sentence": "You work.",
+      "sentenceId": "Kamu bekerja.",
+      "why": "You diikuti verb dasar.",
+      "pattern": "SUBJECT + VERB",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "You" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": ["Do", "you", "work"],
+      "distractors": ["Does", "are"],
+      "sentence": "Do you work?",
+      "sentenceId": "Apakah kamu bekerja?",
+      "why": "Pertanyaan present simple untuk you dimulai dengan Do.",
+      "pattern": "Do + SUBJECT + VERB",
+      "slots": [
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "Do" },
+        { "role": "Subject", "roleId": "Subjek", "text": "you" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" }
+      ]
+    }
+  },
+  {
+    "id": "sv-they-work",
+    "level": "junior",
+    "meaningId": "Mereka bekerja.",
+    "pattern": "SUBJECT + VERB",
+    "assemble": {
+      "tokens": ["They", "work"],
+      "distractors": ["works", "is"],
+      "sentence": "They work.",
+      "sentenceId": "Mereka bekerja.",
+      "why": "They jamak, jadi verb tetap work.",
+      "pattern": "SUBJECT + VERB",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "They" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": ["They", "don't", "work"],
+      "distractors": ["doesn't", "not"],
+      "sentence": "They don't work.",
+      "sentenceId": "Mereka tidak bekerja.",
+      "why": "They memakai don't, bukan doesn't.",
+      "pattern": "SUBJECT + don't + VERB",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "They" },
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "don't" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" }
+      ]
+    }
+  },
+  {
+    "id": "sv-he-works",
+    "level": "junior",
+    "meaningId": "Dia (laki-laki) bekerja.",
+    "pattern": "SUBJECT + VERB",
+    "assemble": {
+      "tokens": ["He", "works"],
+      "distractors": ["work", "working"],
+      "sentence": "He works.",
+      "sentenceId": "Dia bekerja.",
+      "why": "He / she / it pada present simple memakai verb + s.",
+      "pattern": "SUBJECT + VERB-s",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "He" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "works" }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": ["He", "doesn't", "work"],
+      "distractors": ["don't", "works"],
+      "sentence": "He doesn't work.",
+      "sentenceId": "Dia tidak bekerja.",
+      "why": "Setelah doesn't, verb kembali ke bentuk dasar work.",
+      "pattern": "SUBJECT + doesn't + VERB",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "He" },
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "doesn't" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" }
+      ]
+    }
+  },
+  {
+    "id": "sv-she-works",
+    "level": "junior",
+    "meaningId": "Dia (perempuan) bekerja di sini.",
+    "pattern": "SUBJECT + VERB + PLACE",
+    "assemble": {
+      "tokens": ["She", "works", "here"],
+      "distractors": ["work", "in"],
+      "sentence": "She works here.",
+      "sentenceId": "Dia bekerja di sini.",
+      "why": "She + works. Here adalah keterangan tempat, tanpa preposisi.",
+      "pattern": "SUBJECT + VERB + PLACE",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "She" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "works" },
+        { "role": "Place", "roleId": "Tempat", "text": "here" }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": ["Does", "she", "work", "here"],
+      "distractors": ["Do", "works"],
+      "sentence": "Does she work here?",
+      "sentenceId": "Apakah dia bekerja di sini?",
+      "why": "Does untuk she, lalu verb dasar work.",
+      "pattern": "Does + SUBJECT + VERB + PLACE",
+      "slots": [
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "Does" },
+        { "role": "Subject", "roleId": "Subjek", "text": "she" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" },
+        { "role": "Place", "roleId": "Tempat", "text": "here" }
+      ]
+    }
+  },
+  {
+    "id": "svo-use-sap",
+    "level": "junior",
+    "meaningId": "Saya memakai SAP.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": ["I", "use", "SAP"],
+      "distractors": ["uses", "the"],
+      "sentence": "I use SAP.",
+      "sentenceId": "Saya memakai SAP.",
+      "why": "Objek SAP langsung mengikuti verb use.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "use" },
+        { "role": "Object", "roleId": "Objek", "text": "SAP" }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": ["I", "don't", "use", "SAP"],
+      "distractors": ["doesn't", "not"],
+      "sentence": "I don't use SAP.",
+      "sentenceId": "Saya tidak memakai SAP.",
+      "why": "don't berdiri di antara subjek dan verb dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "don't" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "use" },
+        { "role": "Object", "roleId": "Objek", "text": "SAP" }
+      ]
+    }
+  },
+  {
+    "id": "svo-manage-servers",
+    "level": "junior",
+    "meaningId": "Saya mengelola server.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": ["I", "manage", "servers"],
+      "distractors": ["manages", "server"],
+      "sentence": "I manage servers.",
+      "sentenceId": "Saya mengelola server.",
+      "why": "servers jamak karena lebih dari satu mesin.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "manage" },
+        { "role": "Object", "roleId": "Objek", "text": "servers" }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": ["Do", "you", "manage", "servers"],
+      "distractors": ["Does", "manages"],
+      "sentence": "Do you manage servers?",
+      "sentenceId": "Apakah kamu mengelola server?",
+      "why": "Pertanyaan yes/no memakai Do + subjek + verb dasar.",
+      "pattern": "Do + SUBJECT + VERB + OBJECT",
+      "slots": [
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "Do" },
+        { "role": "Subject", "roleId": "Subjek", "text": "you" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "manage" },
+        { "role": "Object", "roleId": "Objek", "text": "servers" }
+      ]
+    }
+  },
+  {
+    "id": "be-i-busy",
+    "level": "junior",
+    "meaningId": "Saya sibuk.",
+    "pattern": "SUBJECT + BE + ADJECTIVE",
+    "assemble": {
+      "tokens": ["I", "am", "busy"],
+      "distractors": ["is", "are"],
+      "sentence": "I am busy.",
+      "sentenceId": "Saya sibuk.",
+      "why": "I selalu memakai am, bukan is atau are.",
+      "pattern": "SUBJECT + BE + ADJECTIVE",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Be", "roleId": "Be", "text": "am" },
+        { "role": "Adjective", "roleId": "Sifat", "text": "busy" }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": ["I", "am", "not", "busy"],
+      "distractors": ["don't", "isn't"],
+      "sentence": "I am not busy.",
+      "sentenceId": "Saya tidak sibuk.",
+      "why": "Negatif be memakai not setelah am, tanpa don't.",
+      "pattern": "SUBJECT + BE + not + ADJECTIVE",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Be", "roleId": "Be", "text": "am" },
+        { "role": "Negative", "roleId": "Negatif", "text": "not" },
+        { "role": "Adjective", "roleId": "Sifat", "text": "busy" }
+      ]
+    }
+  },
+  {
+    "id": "be-she-tired",
+    "level": "junior",
+    "meaningId": "Dia lelah.",
+    "pattern": "SUBJECT + BE + ADJECTIVE",
+    "assemble": {
+      "tokens": ["She", "is", "tired"],
+      "distractors": ["am", "are"],
+      "sentence": "She is tired.",
+      "sentenceId": "Dia lelah.",
+      "why": "She memakai is.",
+      "pattern": "SUBJECT + BE + ADJECTIVE",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "She" },
+        { "role": "Be", "roleId": "Be", "text": "is" },
+        { "role": "Adjective", "roleId": "Sifat", "text": "tired" }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": ["Is", "she", "tired"],
+      "distractors": ["Does", "are"],
+      "sentence": "Is she tired?",
+      "sentenceId": "Apakah dia lelah?",
+      "why": "Pertanyaan be: pindahkan is ke depan subjek.",
+      "pattern": "BE + SUBJECT + ADJECTIVE",
+      "slots": [
+        { "role": "Be", "roleId": "Be", "text": "Is" },
+        { "role": "Subject", "roleId": "Subjek", "text": "she" },
+        { "role": "Adjective", "roleId": "Sifat", "text": "tired" }
+      ]
+    }
+  },
+  {
+    "id": "be-they-ready",
+    "level": "junior",
+    "meaningId": "Mereka siap.",
+    "pattern": "SUBJECT + BE + ADJECTIVE",
+    "assemble": {
+      "tokens": ["They", "are", "ready"],
+      "distractors": ["is", "am"],
+      "sentence": "They are ready.",
+      "sentenceId": "Mereka siap.",
+      "why": "They memakai are.",
+      "pattern": "SUBJECT + BE + ADJECTIVE",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "They" },
+        { "role": "Be", "roleId": "Be", "text": "are" },
+        { "role": "Adjective", "roleId": "Sifat", "text": "ready" }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": ["They", "aren't", "ready"],
+      "distractors": ["don't", "isn't"],
+      "sentence": "They aren't ready.",
+      "sentenceId": "Mereka belum siap.",
+      "why": "aren't adalah are not. Jangan memakai don't untuk be.",
+      "pattern": "SUBJECT + aren't + ADJECTIVE",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "They" },
+        { "role": "Be", "roleId": "Be", "text": "aren't" },
+        { "role": "Adjective", "roleId": "Sifat", "text": "ready" }
+      ]
+    }
+  },
+  {
+    "id": "place-office",
+    "level": "junior",
+    "meaningId": "Saya bekerja di kantor.",
+    "pattern": "SUBJECT + VERB + PLACE",
+    "assemble": {
+      "tokens": ["I", "work", "at", "the", "office"],
+      "distractors": ["in", "works"],
+      "sentence": "I work at the office.",
+      "sentenceId": "Saya bekerja di kantor.",
+      "why": "Tempat kerja memakai at the office. at wajib sebelum the office.",
+      "pattern": "work + at + place",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" },
+        { "role": "Place", "roleId": "Tempat", "text": "at the office" }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": ["I", "don't", "work", "at", "the", "office"],
+      "distractors": ["doesn't", "in"],
+      "sentence": "I don't work at the office.",
+      "sentenceId": "Saya tidak bekerja di kantor.",
+      "why": "don't masuk sebelum work. Tempat tetap at the office.",
+      "pattern": "SUBJECT + don't + VERB + PLACE",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "don't" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" },
+        { "role": "Place", "roleId": "Tempat", "text": "at the office" }
+      ]
+    }
+  },
+  {
+    "id": "place-bogor",
+    "level": "junior",
+    "meaningId": "Dia tinggal di Bogor.",
+    "pattern": "SUBJECT + VERB + PLACE",
+    "assemble": {
+      "tokens": ["She", "lives", "in", "Bogor"],
+      "distractors": ["live", "at"],
+      "sentence": "She lives in Bogor.",
+      "sentenceId": "Dia tinggal di Bogor.",
+      "why": "Kota memakai in. She memakai lives.",
+      "pattern": "live + in + city",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "She" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "lives" },
+        { "role": "Place", "roleId": "Tempat", "text": "in Bogor" }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": ["Does", "she", "live", "in", "Bogor"],
+      "distractors": ["Do", "lives"],
+      "sentence": "Does she live in Bogor?",
+      "sentenceId": "Apakah dia tinggal di Bogor?",
+      "why": "Does + she + live. -s pindah ke does.",
+      "pattern": "Does + SUBJECT + VERB + PLACE",
+      "slots": [
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "Does" },
+        { "role": "Subject", "roleId": "Subjek", "text": "she" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "live" },
+        { "role": "Place", "roleId": "Tempat", "text": "in Bogor" }
+      ]
+    }
+  },
+  {
+    "id": "time-every-day",
+    "level": "junior",
+    "meaningId": "Saya bekerja setiap hari.",
+    "pattern": "SUBJECT + VERB + TIME",
+    "assemble": {
+      "tokens": ["I", "work", "every", "day"],
+      "distractors": ["yesterday", "works"],
+      "sentence": "I work every day.",
+      "sentenceId": "Saya bekerja setiap hari.",
+      "why": "Keterangan waktu every day di akhir kalimat.",
+      "pattern": "SUBJECT + VERB + TIME",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" },
+        { "role": "Time", "roleId": "Waktu", "text": "every day" }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": ["I", "don't", "work", "every", "day"],
+      "distractors": ["doesn't", "not"],
+      "sentence": "I don't work every day.",
+      "sentenceId": "Saya tidak bekerja setiap hari.",
+      "why": "Waktu tetap di akhir. don't hanya mengubah polaritas verb.",
+      "pattern": "SUBJECT + don't + VERB + TIME",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "don't" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" },
+        { "role": "Time", "roleId": "Waktu", "text": "every day" }
+      ]
+    }
+  },
+  {
+    "id": "place-time-office",
+    "level": "mid",
+    "meaningId": "Saya bekerja di kantor setiap hari.",
+    "pattern": "SUBJECT + VERB + PLACE + TIME",
+    "assemble": {
+      "tokens": ["I", "work", "at", "the", "office", "every", "day"],
+      "distractors": ["in", "yesterday"],
+      "sentence": "I work at the office every day.",
+      "sentenceId": "Saya bekerja di kantor setiap hari.",
+      "why": "Urutan: subjek, verb, tempat, lalu waktu.",
+      "pattern": "SUBJECT + VERB + PLACE + TIME",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" },
+        { "role": "Place", "roleId": "Tempat", "text": "at the office" },
+        { "role": "Time", "roleId": "Waktu", "text": "every day" }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": ["Do", "you", "work", "at", "the", "office", "every", "day"],
+      "distractors": ["Does", "in"],
+      "sentence": "Do you work at the office every day?",
+      "sentenceId": "Apakah kamu bekerja di kantor setiap hari?",
+      "why": "Do di depan. Tempat dan waktu tidak pindah.",
+      "pattern": "Do + SUBJECT + VERB + PLACE + TIME",
+      "slots": [
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "Do" },
+        { "role": "Subject", "roleId": "Subjek", "text": "you" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" },
+        { "role": "Place", "roleId": "Tempat", "text": "at the office" },
+        { "role": "Time", "roleId": "Waktu", "text": "every day" }
+      ]
+    }
+  },
+  {
+    "id": "place-jakarta",
+    "level": "junior",
+    "meaningId": "Saya bekerja di Jakarta.",
+    "pattern": "SUBJECT + VERB + PLACE",
+    "assemble": {
+      "tokens": ["I", "work", "in", "Jakarta"],
+      "distractors": ["at", "works"],
+      "sentence": "I work in Jakarta.",
+      "sentenceId": "Saya bekerja di Jakarta.",
+      "why": "Nama kota memakai in, bukan at.",
+      "pattern": "work + in + city",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" },
+        { "role": "Place", "roleId": "Tempat", "text": "in Jakarta" }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": ["I", "don't", "work", "in", "Jakarta"],
+      "distractors": ["doesn't", "at"],
+      "sentence": "I don't work in Jakarta.",
+      "sentenceId": "Saya tidak bekerja di Jakarta.",
+      "why": "in Jakarta tetap. Hanya verb yang dinegatifkan dengan don't.",
+      "pattern": "SUBJECT + don't + VERB + PLACE",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "don't" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" },
+        { "role": "Place", "roleId": "Tempat", "text": "in Jakarta" }
+      ]
+    }
+  },
+  {
+    "id": "sva-manager-works",
+    "level": "mid",
+    "meaningId": "Manajer saya bekerja di sini.",
+    "pattern": "SUBJECT + VERB + PLACE",
+    "assemble": {
+      "tokens": ["My", "manager", "works", "here"],
+      "distractors": ["work", "are"],
+      "sentence": "My manager works here.",
+      "sentenceId": "Manajer saya bekerja di sini.",
+      "why": "My manager adalah subjek tunggal, jadi works.",
+      "pattern": "SUBJECT + VERB-s + PLACE",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "My manager" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "works" },
+        { "role": "Place", "roleId": "Tempat", "text": "here" }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": ["My", "manager", "doesn't", "work", "here"],
+      "distractors": ["don't", "works"],
+      "sentence": "My manager doesn't work here.",
+      "sentenceId": "Manajer saya tidak bekerja di sini.",
+      "why": "Subjek tunggal memakai doesn't, verb kembali ke work.",
+      "pattern": "SUBJECT + doesn't + VERB + PLACE",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "My manager" },
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "doesn't" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" },
+        { "role": "Place", "roleId": "Tempat", "text": "here" }
+      ]
+    }
+  },
+  {
+    "id": "sva-system-works",
+    "level": "mid",
+    "meaningId": "Sistemnya berjalan.",
+    "pattern": "SUBJECT + VERB",
+    "assemble": {
+      "tokens": ["The", "system", "works"],
+      "distractors": ["work", "are"],
+      "sentence": "The system works.",
+      "sentenceId": "Sistemnya berjalan.",
+      "why": "The system tunggal, jadi works.",
+      "pattern": "SUBJECT + VERB-s",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "The system" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "works" }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": ["Does", "the", "system", "work"],
+      "distractors": ["Do", "works"],
+      "sentence": "Does the system work?",
+      "sentenceId": "Apakah sistemnya berjalan?",
+      "why": "Does untuk subjek tunggal. work tanpa -s.",
+      "pattern": "Does + SUBJECT + VERB",
+      "slots": [
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "Does" },
+        { "role": "Subject", "roleId": "Subjek", "text": "the system" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" }
+      ]
+    }
+  },
+  {
+    "id": "past-checked",
+    "level": "mid",
+    "meaningId": "Saya memeriksa server.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": ["I", "checked", "the", "server"],
+      "distractors": ["check", "yesterday"],
+      "sentence": "I checked the server.",
+      "sentenceId": "Saya memeriksa server.",
+      "why": "checked adalah past simple dari check.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "checked" },
+        { "role": "Object", "roleId": "Objek", "text": "the server" }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": ["I", "didn't", "check", "the", "server"],
+      "distractors": ["don't", "checked"],
+      "sentence": "I didn't check the server.",
+      "sentenceId": "Saya tidak memeriksa server.",
+      "why": "didn't membawa kala lampau. Verb kembali ke check.",
+      "pattern": "SUBJECT + didn't + VERB + OBJECT",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "didn't" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "check" },
+        { "role": "Object", "roleId": "Objek", "text": "the server" }
+      ]
+    }
+  },
+  {
+    "id": "past-studied",
+    "level": "mid",
+    "meaningId": "Saya belajar kemarin.",
+    "pattern": "SUBJECT + VERB + TIME",
+    "assemble": {
+      "tokens": ["I", "studied", "yesterday"],
+      "distractors": ["study", "every"],
+      "sentence": "I studied yesterday.",
+      "sentenceId": "Saya belajar kemarin.",
+      "why": "yesterday menandai past simple: studied.",
+      "pattern": "SUBJECT + PAST VERB + TIME",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "studied" },
+        { "role": "Time", "roleId": "Waktu", "text": "yesterday" }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": ["Did", "you", "study", "yesterday"],
+      "distractors": ["Do", "studied"],
+      "sentence": "Did you study yesterday?",
+      "sentenceId": "Apakah kamu belajar kemarin?",
+      "why": "Did untuk past. Verb dasar study, bukan studied.",
+      "pattern": "Did + SUBJECT + VERB + TIME",
+      "slots": [
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "Did" },
+        { "role": "Subject", "roleId": "Subjek", "text": "you" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "study" },
+        { "role": "Time", "roleId": "Waktu", "text": "yesterday" }
+      ]
+    }
+  },
+  {
+    "id": "future-work-here",
+    "level": "mid",
+    "meaningId": "Saya bekerja di sini.",
+    "pattern": "SUBJECT + VERB + PLACE",
+    "assemble": {
+      "tokens": ["I", "work", "here"],
+      "distractors": ["works", "at"],
+      "sentence": "I work here.",
+      "sentenceId": "Saya bekerja di sini.",
+      "why": "Kalimat dasar sebelum diubah ke future.",
+      "pattern": "SUBJECT + VERB + PLACE",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" },
+        { "role": "Place", "roleId": "Tempat", "text": "here" }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": ["I", "will", "work", "here"],
+      "distractors": ["won't", "worked"],
+      "sentence": "I will work here.",
+      "sentenceId": "Saya akan bekerja di sini.",
+      "why": "will + verb dasar. Tidak ada -s atau -ed.",
+      "pattern": "SUBJECT + will + VERB + PLACE",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "will" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" },
+        { "role": "Place", "roleId": "Tempat", "text": "here" }
+      ]
+    }
+  },
+  {
+    "id": "past-from-present",
+    "level": "mid",
+    "meaningId": "Saya bekerja di sini.",
+    "pattern": "SUBJECT + VERB + PLACE",
+    "assemble": {
+      "tokens": ["I", "work", "here"],
+      "distractors": ["worked", "at"],
+      "sentence": "I work here.",
+      "sentenceId": "Saya bekerja di sini.",
+      "why": "Bentuk sekarang dulu, lalu ubah ke lampau.",
+      "pattern": "SUBJECT + VERB + PLACE",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "work" },
+        { "role": "Place", "roleId": "Tempat", "text": "here" }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": ["I", "worked", "here"],
+      "distractors": ["did", "work"],
+      "sentence": "I worked here.",
+      "sentenceId": "Saya bekerja di sini (dulu).",
+      "why": "Past simple positif: worked, tanpa did.",
+      "pattern": "SUBJECT + PAST VERB + PLACE",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "worked" },
+        { "role": "Place", "roleId": "Tempat", "text": "here" }
+      ]
+    }
+  },
+  {
+    "id": "frame-deadline",
+    "level": "mid",
+    "meaningId": "Kita perlu memenuhi tenggat.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": ["We", "need", "to", "meet", "the", "deadline"],
+      "distractors": ["needs", "a"],
+      "sentence": "We need to meet the deadline.",
+      "sentenceId": "Kita perlu memenuhi tenggat.",
+      "why": "need to + verb dasar. the deadline adalah objek.",
+      "pattern": "SUBJECT + need to + VERB + OBJECT",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "We" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "need to meet" },
+        { "role": "Object", "roleId": "Objek", "text": "the deadline" }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": ["Do", "we", "need", "to", "meet", "the", "deadline"],
+      "distractors": ["Does", "needed"],
+      "sentence": "Do we need to meet the deadline?",
+      "sentenceId": "Apakah kita perlu memenuhi tenggat?",
+      "why": "Do + we + need. to meet the deadline tidak berubah.",
+      "pattern": "Do + SUBJECT + need to + VERB + OBJECT",
+      "slots": [
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "Do" },
+        { "role": "Subject", "roleId": "Subjek", "text": "we" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "need to meet" },
+        { "role": "Object", "roleId": "Objek", "text": "the deadline" }
+      ]
+    }
+  },
+  {
+    "id": "frame-main-issue",
+    "level": "mid",
+    "meaningId": "Masalah utamanya adalah jaringan tidak stabil.",
+    "pattern": "SUBJECT + BE + COMPLEMENT",
+    "assemble": {
+      "tokens": ["The", "main", "issue", "is", "network", "instability"],
+      "distractors": ["are", "a"],
+      "sentence": "The main issue is network instability.",
+      "sentenceId": "Masalah utamanya adalah jaringan tidak stabil.",
+      "why": "The main issue tunggal, jadi is, bukan are.",
+      "pattern": "The main issue is + NOUN",
+      "slots": [
+        { "role": "Subject", "roleId": "Subjek", "text": "The main issue" },
+        { "role": "Be", "roleId": "Be", "text": "is" },
+        { "role": "Complement", "roleId": "Pelengkap", "text": "network instability" }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": ["Is", "the", "main", "issue", "network", "instability"],
+      "distractors": ["Does", "are"],
+      "sentence": "Is the main issue network instability?",
+      "sentenceId": "Apakah masalah utamanya jaringan tidak stabil?",
+      "why": "Is pindah ke depan. Pelengkap tetap di akhir.",
+      "pattern": "BE + SUBJECT + COMPLEMENT",
+      "slots": [
+        { "role": "Be", "roleId": "Be", "text": "Is" },
+        { "role": "Subject", "roleId": "Subjek", "text": "the main issue" },
+        { "role": "Complement", "roleId": "Pelengkap", "text": "network instability" }
+      ]
+    }
+  },
+  {
+    "id": "report-completed",
+    "level": "mid",
+    "meaningId": "Kemarin saya menyelesaikan laporannya.",
+    "pattern": "TIME + SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": ["Yesterday", "I", "completed", "the", "report"],
+      "distractors": ["complete", "every"],
+      "sentence": "Yesterday, I completed the report.",
+      "sentenceId": "Kemarin saya menyelesaikan laporannya.",
+      "why": "Yesterday boleh di depan. Verb tetap past: completed.",
+      "pattern": "TIME + SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        { "role": "Time", "roleId": "Waktu", "text": "Yesterday" },
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "completed" },
+        { "role": "Object", "roleId": "Objek", "text": "the report" }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": ["Yesterday", "I", "didn't", "complete", "the", "report"],
+      "distractors": ["don't", "completed"],
+      "sentence": "Yesterday, I didn't complete the report.",
+      "sentenceId": "Kemarin saya tidak menyelesaikan laporannya.",
+      "why": "didn't + complete. Jangan gabungkan didn't dengan completed.",
+      "pattern": "TIME + SUBJECT + didn't + VERB + OBJECT",
+      "slots": [
+        { "role": "Time", "roleId": "Waktu", "text": "Yesterday" },
+        { "role": "Subject", "roleId": "Subjek", "text": "I" },
+        { "role": "Auxiliary", "roleId": "Kata bantu", "text": "didn't" },
+        { "role": "Verb", "roleId": "Kata kerja", "text": "complete" },
+        { "role": "Object", "roleId": "Objek", "text": "the report" }
+      ]
+    }
+  }
+]
