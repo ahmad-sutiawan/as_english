@@ -11,7 +11,7 @@ export type SpeakItem = {
   keywords: string[];
   grammarPatterns: string[];
   commonErrors: Array<string | { pattern: string; correctionId: string }>;
-  slots?: { role: string; roleId: string; text: string }[];
+  slots?: { role: string; roleId: string; text: string; noteId?: string }[];
   scenario: string;
   scenarioId: string;
   modelAnswers: string[];

@@ -71,25 +71,38 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Two of three reliability initiatives are on track The SLO dashboard work is blocked on security"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "are",
+          "noteId": "Kata bantu yang benar adalah \"are\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "review; I need your help unblocking by Friday or we slip the release by one sprint"
+          "text": "work",
+          "noteId": "Bentuk predikat yang benar adalah \"work\"."
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "by Friday",
+          "noteId": "Keterangan yang harus ada adalah \"by Friday\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "The SLO dashboard",
+          "noteId": "Objek yang harus disebut adalah \"The SLO dashboard\"."
         }
       ],
       "modelAnswers": [
         "Two of three reliability initiatives are on track. The SLO dashboard work is blocked on security review; I need your help unblocking by Friday or we slip the release by one sprint.",
-        "Please two of three reliability initiatives are on track. The SLO dashboard work is blocked on security review; I need your help unblocking by Friday or we slip the release by one sprint.",
-        "Two of three reliability initiatives are on track. the SLO dashboard work is blocked on security review; I need your help unblocking by Friday or we slip the release by one sprint."
+        "The SLO dashboard work is blocked on security review; I need your help unblocking by Friday or we slip the release by one sprint. Two of three reliability initiatives are on track."
       ],
       "commonErrors": [
         {
-          "pattern": "Two of three reliability initiatives are on track. SLO dashboard work is blocked on security review; I need your help unblocking by Friday or we slip the release by one sprint.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Two of three reliability initiatives are on track. The SLO dashboard X is blocked on security review; I need your help unblocking by Friday or we slip the release by one sprint.",
+          "correctionId": "Predikat yang benar adalah \"work\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -155,31 +168,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Risk: at current growth"
-        },
-        {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "DB CPU hits saturation in ~6 weeks. Impact: elevated latency"
+          "text": "work",
+          "noteId": "Bentuk predikat yang benar adalah \"work\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "possible checkout errors. Options: (1) scale vertically this month"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "(2) accelerate read-replica work. I recommend option 1 as a bridge; need budget approval by next Tuesday"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a bridge",
+          "noteId": "Objek yang harus disebut adalah \"a bridge\"."
         }
       ],
       "modelAnswers": [
         "Risk: at current growth, DB CPU hits saturation in ~6 weeks. Impact: elevated latency and possible checkout errors. Options: (1) scale vertically this month, (2) accelerate read-replica work. I recommend option 1 as a bridge; need budget approval by next Tuesday.",
-        "Please risk: at current growth, DB CPU hits saturation in ~6 weeks. Impact: elevated latency and possible checkout errors. Options: (1) scale vertically this month, (2) accelerate read-replica work. I recommend option 1 as a bridge; need budget approval by next Tuesday."
+        "Impact: elevated latency and possible checkout errors. Options: (1) scale vertically this month, (2) accelerate read-replica work. I recommend option 1 as a bridge; need budget approval by next Tuesday. Risk: at current growth, DB CPU hits saturation in ~6 weeks."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "Risk: at current growth, DB CPU hits saturation in ~6 weeks. Impact: elevated latency and possible checkout errors. Options: (1) scale vertically this month, (2) accelerate read-replica X. I recommend option 1 as a bridge; need budget approval by next Tuesday.",
+          "correctionId": "Predikat yang benar adalah \"work\", bukan bentuk lain di tempat itu."
+        }
+      ]
     },
     {
       "id": "mgr-03",
@@ -243,22 +253,36 @@
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "We will miss Thursday's date because Payments API delivery slipped to next Monday. New ETA is next Wednesday. I have a workaround spike in progress"
+          "text": "We",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"We\"."
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will",
+          "noteId": "Kata bantu yang benar adalah \"will\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "will confirm feasibility by tomorrow noon"
+          "text": "confirm",
+          "noteId": "Bentuk predikat yang benar adalah \"confirm\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a workaround spike",
+          "noteId": "Objek yang harus disebut adalah \"a workaround spike\"."
         }
       ],
       "modelAnswers": [
         "We will miss Thursday's date because Payments API delivery slipped to next Monday. New ETA is next Wednesday. I have a workaround spike in progress and will confirm feasibility by tomorrow noon.",
-        "We will miss Thursday's date because Payments API delivery slipped to next Monday. New ETA is next Wednesday. I've a workaround spike in progress and will confirm feasibility by tomorrow noon."
+        "New ETA is next Wednesday. I have a workaround spike in progress and will confirm feasibility by tomorrow noon. We will miss Thursday's date because Payments API delivery slipped to next Monday."
       ],
       "commonErrors": [
         {
-          "pattern": "We will miss Thursday's date because Payments API delivery slipped to next Monday. New ETA is next Wednesday. I a workaround spike in progress and will confirm feasibility by tomorrow noon.",
-          "correctionId": "Kata kerja masih present. Target memakai present perfect."
+          "pattern": "We will miss Thursday's date because Payments API delivery slipped to next Monday. New ETA is next Wednesday. I have a workaround spike in progress and will X feasibility by tomorrow noon.",
+          "correctionId": "Predikat yang benar adalah \"confirm\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -323,22 +347,30 @@
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "We can take it if we pause the observability upgrade or add one contractor. Without that tradeoff"
+          "text": "We",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"We\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "quality risk is high. Which priority should we protect?"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "can",
+          "noteId": "Kata bantu yang benar adalah \"can\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the observability upgrade",
+          "noteId": "Objek yang harus disebut adalah \"the observability upgrade\"."
         }
       ],
       "modelAnswers": [
         "We can take it if we pause the observability upgrade or add one contractor. Without that tradeoff, quality risk is high. Which priority should we protect?",
-        "Please we can take it if we pause the observability upgrade or add one contractor. Without that tradeoff, quality risk is high. Which priority should we protect?"
+        "Without that tradeoff, quality risk is high. Which priority should we protect? We can take it if we pause the observability upgrade or add one contractor."
       ],
       "commonErrors": [
         {
-          "pattern": "We can take it if we pause observability upgrade or add one contractor. Without that tradeoff, quality risk is high. Which priority should we protect?",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "We not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ]
     },
@@ -402,21 +434,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Requesting approval for $18k/year monitoring. Expected outcome: cut median MTTR by ~25%"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Can",
+          "noteId": "Kata bantu yang benar adalah \"Can\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "reduce noisy pages. Pilot for 30 days with success metrics attached. Can we decide this week?"
+          "text": "monitoring",
+          "noteId": "Bentuk predikat yang benar adalah \"monitoring\"."
         }
       ],
       "modelAnswers": [
         "Requesting approval for $18k/year monitoring. Expected outcome: cut median MTTR by ~25% and reduce noisy pages. Pilot for 30 days with success metrics attached. Can we decide this week?",
-        "Please requesting approval for $18k/year monitoring. Expected outcome: cut median MTTR by ~25% and reduce noisy pages. Pilot for 30 days with success metrics attached. Can we decide this week?"
+        "Expected outcome: cut median MTTR by ~25% and reduce noisy pages. Pilot for 30 days with success metrics attached. Can we decide this week? Requesting approval for $18k/year monitoring."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "Requesting approval for $18k/year X. Expected outcome: cut median MTTR by ~25% and reduce noisy pages. Pilot for 30 days with success metrics attached. Can we decide this week?",
+          "correctionId": "Predikat yang benar adalah \"monitoring\", bukan bentuk lain di tempat itu."
+        }
+      ]
     },
     {
       "id": "mgr-06",
@@ -478,26 +517,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Summary for VP: 47 minutes of checkout degradation. Root cause: bad feature flag default. Mitigated by disabling flag. Customer impact: ~9% failed checkouts. Follow-ups: flag defaults review"
-        },
-        {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "canary checks — owners assigned"
+          "text": "Mitigated",
+          "noteId": "Bentuk predikat yang benar adalah \"Mitigated\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "due Friday"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "Summary",
+          "noteId": "Objek yang harus disebut adalah \"Summary\"."
         }
       ],
       "modelAnswers": [
         "Summary for VP: 47 minutes of checkout degradation. Root cause: bad feature flag default. Mitigated by disabling flag. Customer impact: ~9% failed checkouts. Follow-ups: flag defaults review and canary checks — owners assigned, due Friday.",
-        "Please summary for VP: 47 minutes of checkout degradation. Root cause: bad feature flag default. Mitigated by disabling flag. Customer impact: ~9% failed checkouts. Follow-ups: flag defaults review and canary checks — owners assigned, due Friday."
+        "Root cause: bad feature flag default. Mitigated by disabling flag. Customer impact: ~9% failed checkouts. Follow-ups: flag defaults review and canary checks — owners assigned, due Friday. Summary for VP: 47 minutes of checkout degradation."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "Summary for VP: 47 minutes of checkout degradation. Root cause: bad feature flag default. X by disabling flag. Customer impact: ~9% failed checkouts. Follow-ups: flag defaults review and canary checks — owners assigned, due Friday.",
+          "correctionId": "Predikat yang benar adalah \"Mitigated\", bukan bentuk lain di tempat itu."
+        }
+      ]
     },
     {
       "id": "mgr-07",
@@ -562,27 +603,30 @@
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I want to discuss interrupt load. This week I spent about 60% of time on ad-hoc requests"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "which delayed the auth migration. Can we define an intake path"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Can",
+          "noteId": "Kata bantu yang benar adalah \"Can\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "protect two focus blocks daily?"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the auth migration",
+          "noteId": "Objek yang harus disebut adalah \"the auth migration\"."
         }
       ],
       "modelAnswers": [
         "I want to discuss interrupt load. This week I spent about 60% of time on ad-hoc requests, which delayed the auth migration. Can we define an intake path and protect two focus blocks daily?",
-        "Please i want to discuss interrupt load. This week I spent about 60% of time on ad-hoc requests, which delayed the auth migration. Can we define an intake path and protect two focus blocks daily?"
+        "This week I spent about 60% of time on ad-hoc requests, which delayed the auth migration. Can we define an intake path and protect two focus blocks daily? I want to discuss interrupt load."
       ],
       "commonErrors": [
         {
-          "pattern": "I want to discuss interrupt load. This week I spent about 60% of time on ad-hoc requests, which delayed auth migration. Can we define an intake path and protect two focus blocks daily?",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "I not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ]
     },
@@ -646,24 +690,26 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Delivery date is still green"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "but quality risk is rising: flaky tests up 30% this month. I propose a two-day stabilization window before the release; otherwise we accept higher rollback risk"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a two",
+          "noteId": "Objek yang harus disebut adalah \"a two\"."
         }
       ],
       "modelAnswers": [
         "Delivery date is still green, but quality risk is rising: flaky tests up 30% this month. I propose a two-day stabilization window before the release; otherwise we accept higher rollback risk.",
-        "Please delivery date is still green, but quality risk is rising: flaky tests up 30% this month. I propose a two-day stabilization window before the release; otherwise we accept higher rollback risk."
+        "I propose a two-day stabilization window before the release; otherwise we accept higher rollback risk. Delivery date is still green, but quality risk is rising: flaky tests up 30% this month."
       ],
       "commonErrors": [
         {
-          "pattern": "Delivery date is still green, but quality risk is rising: flaky tests up 30% this month. I propose a two-day stabilization window before release; otherwise we accept higher rollback risk.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Delivery not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ]
     },
@@ -729,22 +775,30 @@
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I understand the urgency. Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "please confirm we accept the elevated risk"
+          "text": "recommend",
+          "noteId": "Bentuk predikat yang benar adalah \"recommend\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the urgency",
+          "noteId": "Objek yang harus disebut adalah \"the urgency\"."
         }
       ],
       "modelAnswers": [
         "I understand the urgency. Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk.",
-        "Please i understand the urgency. Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk."
+        "Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk. I understand the urgency."
       ],
       "commonErrors": [
         {
-          "pattern": "I understand urgency. Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "I understand the urgency. Skipping canaries increases blast radius. I X a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk.",
+          "correctionId": "Predikat yang benar adalah \"recommend\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -807,24 +861,26 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Shipped rate-limit change to production at 17:40 local. Expected: fewer abuse spikes. Watch: 429 rate"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the change ticket",
+          "noteId": "Objek yang harus disebut adalah \"the change ticket\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "checkout success. Rollback command documented in the change ticket. Ping me if 429s exceed 2% for 10 minutes"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "Shipped",
+          "noteId": "Objek yang harus disebut adalah \"Shipped\"."
         }
       ],
       "modelAnswers": [
         "Shipped rate-limit change to production at 17:40 local. Expected: fewer abuse spikes. Watch: 429 rate and checkout success. Rollback command documented in the change ticket. Ping me if 429s exceed 2% for 10 minutes.",
-        "Please shipped rate-limit change to production at 17:40 local. Expected: fewer abuse spikes. Watch: 429 rate and checkout success. Rollback command documented in the change ticket. Ping me if 429s exceed 2% for 10 minutes."
+        "Expected: fewer abuse spikes. Watch: 429 rate and checkout success. Rollback command documented in the change ticket. Ping me if 429s exceed 2% for 10 minutes. Shipped rate-limit change to production at 17:40 local."
       ],
       "commonErrors": [
         {
-          "pattern": "Shipped rate-limit change to production at 17:40 local. Expected: fewer abuse spikes. Watch: 429 rate and checkout success. Rollback command documented in change ticket. Ping me if 429s exceed 2% for 10 minutes.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Shipped not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ]
     },
@@ -888,26 +944,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Gut feel is cautious. Confidence is medium: canary looks good"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "but we lack load-test coverage for peak. Recommendation: delay 48 hours for a targeted test"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "or launch with a rapid rollback owner on bridge"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a targeted test",
+          "noteId": "Objek yang harus disebut adalah \"a targeted test\"."
         }
       ],
       "modelAnswers": [
         "Gut feel is cautious. Confidence is medium: canary looks good, but we lack load-test coverage for peak. Recommendation: delay 48 hours for a targeted test, or launch with a rapid rollback owner on bridge.",
-        "Please gut feel is cautious. Confidence is medium: canary looks good, but we lack load-test coverage for peak. Recommendation: delay 48 hours for a targeted test, or launch with a rapid rollback owner on bridge."
+        "Confidence is medium: canary looks good, but we lack load-test coverage for peak. Recommendation: delay 48 hours for a targeted test, or launch with a rapid rollback owner on bridge. Gut feel is cautious."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "Gut not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
+        }
+      ]
     },
     {
       "id": "mgr-12",
@@ -970,34 +1028,32 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "With one fewer engineer"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "have",
+          "noteId": "Kata bantu yang benar adalah \"have\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "I recommend pausing the nice-to-have reporting UI"
+          "text": "recommend",
+          "noteId": "Bentuk predikat yang benar adalah \"recommend\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "protecting checkout reliability"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "the partner API. I will send a revised roadmap with customer impact notes today"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the nice",
+          "noteId": "Objek yang harus disebut adalah \"the nice\"."
         }
       ],
       "modelAnswers": [
         "With one fewer engineer, I recommend pausing the nice-to-have reporting UI and protecting checkout reliability and the partner API. I will send a revised roadmap with customer impact notes today.",
-        "With one fewer engineer, I recommend pausing the nice-to-have reporting UI and protecting checkout reliability and the partner API. I'll send a revised roadmap with customer impact notes today."
+        "I will send a revised roadmap with customer impact notes today. With one fewer engineer, I recommend pausing the nice-to-have reporting UI and protecting checkout reliability and the partner API."
       ],
       "commonErrors": [
         {
-          "pattern": "With one fewer engineer, I recommend pausing nice-to-have reporting UI and protecting checkout reliability and the partner API. I will send a revised roadmap with customer impact notes today.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "With one fewer engineer, I X pausing the nice-to-have reporting UI and protecting checkout reliability and the partner API. I will send a revised roadmap with customer impact notes today.",
+          "correctionId": "Predikat yang benar adalah \"recommend\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -1062,22 +1118,36 @@
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I need read access to the checkout Grafana folder to finish the weekly"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Could",
+          "noteId": "Kata bantu yang benar adalah \"Could\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "reliability report by Thursday Could you approve the access request ticket LINK today?"
+          "text": "need",
+          "noteId": "Bentuk predikat yang benar adalah \"need\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the checkout Grafana",
+          "noteId": "Objek yang harus disebut adalah \"the checkout Grafana\"."
         }
       ],
       "modelAnswers": [
         "I need read access to the checkout Grafana folder to finish the weekly reliability report by Thursday. Could you approve the access request ticket LINK today?",
-        "Please i need read access to the checkout Grafana folder to finish the weekly reliability report by Thursday. Could you approve the access request ticket LINK today?"
+        "Could you approve the access request ticket LINK today? I need read access to the checkout Grafana folder to finish the weekly reliability report by Thursday."
       ],
       "commonErrors": [
         {
-          "pattern": "I need read access to checkout Grafana folder to finish the weekly reliability report by Thursday. Could you approve the access request ticket LINK today?",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "I X read access to the checkout Grafana folder to finish the weekly reliability report by Thursday. Could you approve the access request ticket LINK today?",
+          "correctionId": "Predikat yang benar adalah \"need\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -1140,24 +1210,32 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Glad the outcome helped customers. For accuracy: detection work"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "were",
+          "noteId": "Kata bantu yang benar adalah \"were\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "rollback were led by our team with Platform support on dashboards. Happy to co-write a short shared summary if useful"
+          "text": "work",
+          "noteId": "Bentuk predikat yang benar adalah \"work\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the outcome helped",
+          "noteId": "Objek yang harus disebut adalah \"the outcome helped\"."
         }
       ],
       "modelAnswers": [
         "Glad the outcome helped customers. For accuracy: detection work and rollback were led by our team with Platform support on dashboards. Happy to co-write a short shared summary if useful.",
-        "Please glad the outcome helped customers. For accuracy: detection work and rollback were led by our team with Platform support on dashboards. Happy to co-write a short shared summary if useful."
+        "For accuracy: detection work and rollback were led by our team with Platform support on dashboards. Happy to co-write a short shared summary if useful. Glad the outcome helped customers."
       ],
       "commonErrors": [
         {
-          "pattern": "Glad outcome helped customers. For accuracy: detection work and rollback were led by our team with Platform support on dashboards. Happy to co-write a short shared summary if useful.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Glad the outcome helped customers. For accuracy: detection X and rollback were led by our team with Platform support on dashboards. Happy to co-write a short shared summary if useful.",
+          "correctionId": "Predikat yang benar adalah \"work\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -1220,21 +1298,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Reliability: checkout availability 99.95% vs 99.9% target; two SEV-2s"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "both mitigated under 30 minutes; top risk is DB CPU growth — decision needed on scale-up budget this month"
+          "text": "mitigated",
+          "noteId": "Bentuk predikat yang benar adalah \"mitigated\"."
         }
       ],
       "modelAnswers": [
         "Reliability: checkout availability 99.95% vs 99.9% target; two SEV-2s, both mitigated under 30 minutes; top risk is DB CPU growth — decision needed on scale-up budget this month.",
-        "Please reliability: checkout availability 99.95% vs 99.9% target; two SEV-2s, both mitigated under 30 minutes; top risk is DB CPU growth — decision needed on scale-up budget this month."
+        "Decision needed on scale-up budget this month.. Reliability: checkout availability 99.95% vs 99.9% target; two SEV-2s, both mitigated under 30 minutes; top risk is DB CPU growth"
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "Reliability: checkout availability 99.95% vs 99.9% target; two SEV-2s, both X under 30 minutes; top risk is DB CPU growth — decision needed on scale-up budget this month.",
+          "correctionId": "Predikat yang benar adalah \"mitigated\", bukan bentuk lain di tempat itu."
+        }
+      ]
     },
     {
       "id": "mgr-16",
@@ -1297,29 +1382,32 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Interrupt load rose ~40% from noisy checkout alerts after the partner cutover. Feature velocity held because we protected two makers"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "but sustainability is poor. Proposal: tune alerts this week"
+          "text": "move",
+          "noteId": "Bentuk predikat yang benar adalah \"move\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "move one reliability spike into next sprint"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the partner cutover",
+          "noteId": "Objek yang harus disebut adalah \"the partner cutover\"."
         }
       ],
       "modelAnswers": [
         "Interrupt load rose ~40% from noisy checkout alerts after the partner cutover. Feature velocity held because we protected two makers, but sustainability is poor. Proposal: tune alerts this week and move one reliability spike into next sprint.",
-        "Please interrupt load rose ~40% from noisy checkout alerts after the partner cutover. Feature velocity held because we protected two makers, but sustainability is poor. Proposal: tune alerts this week and move one reliability spike into next sprint."
+        "Feature velocity held because we protected two makers, but sustainability is poor. Proposal: tune alerts this week and move one reliability spike into next sprint. Interrupt load rose ~40% from noisy checkout alerts after the partner cutover."
       ],
       "commonErrors": [
         {
-          "pattern": "Interrupt load rose ~40% from noisy checkout alerts after partner cutover. Feature velocity held because we protected two makers, but sustainability is poor. Proposal: tune alerts this week and move one reliability spike into next sprint.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Interrupt load rose ~40% from noisy checkout alerts after the partner cutover. Feature velocity held because we protected two makers, but sustainability is poor. Proposal: tune alerts this week and X one reliability spike into next sprint.",
+          "correctionId": "Predikat yang benar adalah \"move\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -1386,24 +1474,32 @@
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I need two things: a 30-minute contract review with Platform by Wednesday"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "can",
+          "noteId": "Kata bantu yang benar adalah \"can\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "temporary cover for Tuesday on-call so I can finish auth tests. With that"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "Friday ship stays realistic"
+          "text": "need",
+          "noteId": "Bentuk predikat yang benar adalah \"need\"."
         }
       ],
       "modelAnswers": [
         "I need two things: a 30-minute contract review with Platform by Wednesday, and temporary cover for Tuesday on-call so I can finish auth tests. With that, Friday ship stays realistic.",
-        "Please i need two things: a 30-minute contract review with Platform by Wednesday, and temporary cover for Tuesday on-call so I can finish auth tests. With that, Friday ship stays realistic."
+        "With that, Friday ship stays realistic. I need two things: a 30-minute contract review with Platform by Wednesday, and temporary cover for Tuesday on-call so I can finish auth tests."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "I X two things: a 30-minute contract review with Platform by Wednesday, and temporary cover for Tuesday on-call so I can finish auth tests. With that, Friday ship stays realistic.",
+          "correctionId": "Predikat yang benar adalah \"need\", bukan bentuk lain di tempat itu."
+        }
+      ]
     },
     {
       "id": "mgr-18",
@@ -1466,29 +1562,32 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Recommend a one-week slip: risk of a customer-facing outage outweighs partner optics. We finish failure-injection for payment retries"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will",
+          "noteId": "Kata bantu yang benar adalah \"will\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "validate runbooks"
+          "text": "Recommend",
+          "noteId": "Bentuk predikat yang benar adalah \"Recommend\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "keep a soft launch path if legal needs a milestone. I will own the partner comms draft"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a one",
+          "noteId": "Objek yang harus disebut adalah \"a one\"."
         }
       ],
       "modelAnswers": [
         "Recommend a one-week slip: risk of a customer-facing outage outweighs partner optics. We finish failure-injection for payment retries, validate runbooks, and keep a soft launch path if legal needs a milestone. I will own the partner comms draft.",
-        "Recommend a one-week slip: risk of a customer-facing outage outweighs partner optics. We finish failure-injection for payment retries, validate runbooks, and keep a soft launch path if legal needs a milestone. I'll own the partner comms draft."
+        "We finish failure-injection for payment retries, validate runbooks, and keep a soft launch path if legal needs a milestone. I will own the partner comms draft. Recommend a one-week slip: risk of a customer-facing outage outweighs partner optics."
       ],
       "commonErrors": [
         {
-          "pattern": "Recommend a one-week slip: risk of a customer-facing outage outweighs partner optics. We finish failure-injection for payment retries, validate runbooks, and keep a soft launch path if legal needs a milestone. I will own partner comms draft.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "X a one-week slip: risk of a customer-facing outage outweighs partner optics. We finish failure-injection for payment retries, validate runbooks, and keep a soft launch path if legal needs a milestone. I will own the partner comms draft.",
+          "correctionId": "Predikat yang benar adalah \"Recommend\", bukan bentuk lain di tempat itu."
         }
       ]
     }

@@ -69,21 +69,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Yesterday: finished auth middleware Today: rate-limit tests Blocker: need staging"
-        },
-        {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "credentials from platform — ETA blocked until that lands"
+          "text": "finished",
+          "noteId": "Bentuk predikat yang benar adalah \"finished\"."
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "Yesterday",
+          "noteId": "Keterangan yang harus ada adalah \"Yesterday\"."
         }
       ],
       "modelAnswers": [
         "Yesterday: finished auth middleware. Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands.",
-        "Please yesterday: finished auth middleware. Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands."
+        "Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands. Yesterday: finished auth middleware."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "Yesterday: X auth middleware. Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands.",
+          "correctionId": "Predikat yang benar adalah \"finished\", bukan bentuk lain di tempat itu."
+        }
+      ]
     },
     {
       "id": "stu-02",
@@ -146,22 +153,30 @@
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I am slipping half a day because flaky payment tests blocked local verification. I am quarantining the flake"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "will still open the PR by end of day tomorrow unless the flake returns"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "am",
+          "noteId": "Kata bantu yang benar adalah \"am\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a day because",
+          "noteId": "Objek yang harus disebut adalah \"a day because\"."
         }
       ],
       "modelAnswers": [
         "I am slipping half a day because flaky payment tests blocked local verification. I am quarantining the flake and will still open the PR by end of day tomorrow unless the flake returns.",
-        "I'm slipping half a day because flaky payment tests blocked local verification. I'm quarantining the flake and will still open the PR by end of day tomorrow unless the flake returns."
+        "I am quarantining the flake and will still open the PR by end of day tomorrow unless the flake returns. I am slipping half a day because flaky payment tests blocked local verification."
       ],
       "commonErrors": [
         {
-          "pattern": "I am slipping half a day because flaky payment tests blocked local verification. I am quarantining flake and will still open the PR by end of day tomorrow unless the flake returns.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "I not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ]
     },
@@ -226,22 +241,30 @@
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I need 20 minutes with Alex after standup to pair on the Redis lock bug. Without that"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "my ETA moves from today to tomorrow"
+          "text": "need",
+          "noteId": "Bentuk predikat yang benar adalah \"need\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the Redis lock",
+          "noteId": "Objek yang harus disebut adalah \"the Redis lock\"."
         }
       ],
       "modelAnswers": [
         "I need 20 minutes with Alex after standup to pair on the Redis lock bug. Without that, my ETA moves from today to tomorrow.",
-        "Please i need 20 minutes with Alex after standup to pair on the Redis lock bug. Without that, my ETA moves from today to tomorrow."
+        "Without that, my ETA moves from today to tomorrow. I need 20 minutes with Alex after standup to pair on the Redis lock bug."
       ],
       "commonErrors": [
         {
-          "pattern": "I need 20 minutes with Alex after standup to pair on Redis lock bug. Without that, my ETA moves from today to tomorrow.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "I X 20 minutes with Alex after standup to pair on the Redis lock bug. Without that, my ETA moves from today to tomorrow.",
+          "correctionId": "Predikat yang benar adalah \"need\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -304,24 +327,26 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Let's take the API contract offline for ten minutes after standup — Mira"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "can",
+          "noteId": "Kata bantu yang benar adalah \"can\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "Jordan with me. Goal: decide request shape so both streams can continue today"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the API contract",
+          "noteId": "Objek yang harus disebut adalah \"the API contract\"."
         }
       ],
       "modelAnswers": [
         "Let's take the API contract offline for ten minutes after standup — Mira and Jordan with me. Goal: decide request shape so both streams can continue today.",
-        "Please let's take the API contract offline for ten minutes after standup — Mira and Jordan with me. Goal: decide request shape so both streams can continue today."
+        "Goal: decide request shape so both streams can continue today. Let's take the API contract offline for ten minutes after standup — Mira and Jordan with me."
       ],
       "commonErrors": [
         {
-          "pattern": "Let's take API contract offline for ten minutes after standup — Mira and Jordan with me. Goal: decide request shape so both streams can continue today.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Let's not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ]
     },
@@ -384,24 +409,32 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "No blocker now Heads-up: I will need QA support this afternoon for the checkout"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will",
+          "noteId": "Kata bantu yang benar adalah \"will\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "edge cases I will book a slot in the QA channel after standup"
+          "text": "need",
+          "noteId": "Bentuk predikat yang benar adalah \"need\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the checkout edge",
+          "noteId": "Objek yang harus disebut adalah \"the checkout edge\"."
         }
       ],
       "modelAnswers": [
         "No blocker now. Heads-up: I will need QA support this afternoon for the checkout edge cases. I will book a slot in the QA channel after standup.",
-        "No blocker now. Heads-up: I'll need QA support this afternoon for the checkout edge cases. I'll book a slot in the QA channel after standup."
+        "Heads-up: I will need QA support this afternoon for the checkout edge cases. I will book a slot in the QA channel after standup. No blocker now."
       ],
       "commonErrors": [
         {
-          "pattern": "No blocker now. Heads-up: I will need QA support this afternoon for checkout edge cases. I will book a slot in the QA channel after standup.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "No blocker now. Heads-up: I will X QA support this afternoon for the checkout edge cases. I will book a slot in the QA channel after standup.",
+          "correctionId": "Predikat yang benar adalah \"need\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -464,21 +497,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "This is useful but bigger than standup Parking it for a 15-minute design huddle"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "at 11:00 — I will post notes Back to blockers for everyone else"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "useful",
+          "noteId": "Objek yang harus disebut adalah \"useful\"."
         }
       ],
       "modelAnswers": [
         "This is useful but bigger than standup. Parking it for a 15-minute design huddle at 11:00 — I will post notes. Back to blockers for everyone else.",
-        "This is useful but bigger than standup. Parking it for a 15-minute design huddle at 11:00 — I'll post notes. Back to blockers for everyone else."
+        "Parking it for a 15-minute design huddle at 11:00 — I will post notes. Back to blockers for everyone else. This is useful but bigger than standup."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "This not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
+        }
+      ]
     },
     {
       "id": "stu-07",
@@ -541,26 +581,30 @@
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I have capacity after lunch. If anyone is at risk on the release checklist"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "I can take a verification task — drop it in the thread"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "have",
+          "noteId": "Kata bantu yang benar adalah \"have\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the release checklist",
+          "noteId": "Objek yang harus disebut adalah \"the release checklist\"."
         }
       ],
       "modelAnswers": [
         "I have capacity after lunch. If anyone is at risk on the release checklist, I can take a verification task — drop it in the thread.",
-        "I've capacity after lunch. If anyone is at risk on the release checklist, I can take a verification task — drop it in the thread."
+        "If anyone is at risk on the release checklist, I can take a verification task — drop it in the thread. I have capacity after lunch."
       ],
       "commonErrors": [
         {
-          "pattern": "I have capacity after lunch. If anyone is at risk on release checklist, I can take a verification task — drop it in the thread.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
-        },
-        {
-          "pattern": "I capacity after lunch. If anyone is at risk on the release checklist, I can take a verification task — drop it in the thread.",
-          "correctionId": "Kata kerja masih present. Target memakai present perfect."
+          "pattern": "I not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ]
     },
@@ -624,26 +668,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Can you break that into what is done"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Can",
+          "noteId": "Kata bantu yang benar adalah \"Can\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "what is left"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "where you are stuck? Even a rough percentage helps us unblock you today"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a rough percentage",
+          "noteId": "Objek yang harus disebut adalah \"a rough percentage\"."
         }
       ],
       "modelAnswers": [
         "Can you break that into what is done, what is left, and where you are stuck? Even a rough percentage helps us unblock you today.",
-        "Could you break that into what is done, what is left, and where you are stuck? Even a rough percentage helps us unblock you today."
+        "Even a rough percentage helps us unblock you today. Can you break that into what is done, what is left, and where you are stuck?"
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "Can not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
+        }
+      ]
     },
     {
       "id": "stu-09",
@@ -705,29 +751,32 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Sorry"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Could",
+          "noteId": "Kata bantu yang benar adalah \"Could\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "I dropped audio. Could someone paste the action items"
+          "text": "dropped",
+          "noteId": "Bentuk predikat yang benar adalah \"dropped\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "owners in the thread? I will confirm my items in two minutes"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the action items",
+          "noteId": "Objek yang harus disebut adalah \"the action items\"."
         }
       ],
       "modelAnswers": [
         "Sorry, I dropped audio. Could someone paste the action items and owners in the thread? I will confirm my items in two minutes.",
-        "Sorry, I dropped audio. Could someone paste the action items and owners in the thread? I'll confirm my items in two minutes."
+        "Could someone paste the action items and owners in the thread? I will confirm my items in two minutes. Sorry, I dropped audio."
       ],
       "commonErrors": [
         {
-          "pattern": "Sorry, I dropped audio. Could someone paste action items and owners in the thread? I will confirm my items in two minutes.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Sorry, I X audio. Could someone paste the action items and owners in the thread? I will confirm my items in two minutes.",
+          "correctionId": "Predikat yang benar adalah \"dropped\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -790,21 +839,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Quick risk flag: error rate on login is trending up 2x since last night I will"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "open a war-room thread after standup; not a full SEV yet Continuing with other updates now"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a war",
+          "noteId": "Objek yang harus disebut adalah \"a war\"."
         }
       ],
       "modelAnswers": [
         "Quick risk flag: error rate on login is trending up 2x since last night. I will open a war-room thread after standup; not a full SEV yet. Continuing with other updates now.",
-        "Quick risk flag: error rate on login is trending up 2x since last night. I'll open a war-room thread after standup; not a full SEV yet. Continuing with other updates now."
+        "I will open a war-room thread after standup; not a full SEV yet. Continuing with other updates now. Quick risk flag: error rate on login is trending up 2x since last night."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "Quick not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
+        }
+      ]
     },
     {
       "id": "stu-11",
@@ -867,22 +923,36 @@
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I posted an async standup in the channel with yesterday/today/blockers"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "tagged owners. Please reply in-thread before 10:00 your time so we do not wait on the live call"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "do",
+          "noteId": "Kata bantu yang benar adalah \"do\"."
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "yesterday",
+          "noteId": "Keterangan yang harus ada adalah \"yesterday\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the channel with",
+          "noteId": "Objek yang harus disebut adalah \"the channel with\"."
         }
       ],
       "modelAnswers": [
         "I posted an async standup in the channel with yesterday/today/blockers and tagged owners. Please reply in-thread before 10:00 your time so we do not wait on the live call.",
-        "Please i posted an async standup in the channel with yesterday/today/blockers and tagged owners. Please reply in-thread before 10:00 your time so we do not wait on the live call."
+        "Please reply in-thread before 10:00 your time so we do not wait on the live call. I posted an async standup in the channel with yesterday/today/blockers and tagged owners."
       ],
       "commonErrors": [
         {
-          "pattern": "I posted an async standup in channel with yesterday/today/blockers and tagged owners. Please reply in-thread before 10:00 your time so we do not wait on the live call.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "I not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ]
     },
@@ -947,31 +1017,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Summary: sprint goal at risk from API"
-        },
-        {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "flaky tests"
+          "text": "Summary",
+          "noteId": "Bentuk predikat yang benar adalah \"Summary\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "QA bandwidth. Owners: me on API decision at 11:00"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "Sam on flake quarantine"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "sprint",
+          "noteId": "Objek yang harus disebut adalah \"sprint\"."
         }
       ],
       "modelAnswers": [
         "Summary: sprint goal at risk from API, flaky tests, and QA bandwidth. Owners: me on API decision at 11:00, Sam on flake quarantine, Priya on QA slotting. We reconvene at 4pm with go/no-go for Thursday release.",
-        "Please summary: sprint goal at risk from API, flaky tests, and QA bandwidth. Owners: me on API decision at 11:00, Sam on flake quarantine, Priya on QA slotting. We reconvene at 4pm with go/no-go for Thursday release."
+        "Owners: me on API decision at 11:00, Sam on flake quarantine, Priya on QA slotting. We reconvene at 4pm with go/no-go for Thursday release. Summary: sprint goal at risk from API, flaky tests, and QA bandwidth."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "X: sprint goal at risk from API, flaky tests, and QA bandwidth. Owners: me on API decision at 11:00, Sam on flake quarantine, Priya on QA slotting. We reconvene at 4pm with go/no-go for Thursday release.",
+          "correctionId": "Predikat yang benar adalah \"Summary\", bukan bentuk lain di tempat itu."
+        }
+      ]
     },
     {
       "id": "stu-13",
@@ -1033,24 +1100,38 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Yesterday: finished API stubs. Today: implement caching once design review lands. Blocker: design review with Mira — I booked 11:30 today; if it slips I will proceed with the documented default"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will",
+          "noteId": "Kata bantu yang benar adalah \"will\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "confirm async"
+          "text": "finished",
+          "noteId": "Bentuk predikat yang benar adalah \"finished\"."
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "Yesterday",
+          "noteId": "Keterangan yang harus ada adalah \"Yesterday\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the documented default",
+          "noteId": "Objek yang harus disebut adalah \"the documented default\"."
         }
       ],
       "modelAnswers": [
         "Yesterday: finished API stubs. Today: implement caching once design review lands. Blocker: design review with Mira — I booked 11:30 today; if it slips I will proceed with the documented default and confirm async.",
-        "Yesterday: finished API stubs. Today: implement caching once design review lands. Blocker: design review with Mira — I booked 11:30 today; if it slips I'll proceed with the documented default and confirm async."
+        "Today: implement caching once design review lands. Blocker: design review with Mira — I booked 11:30 today; if it slips I will proceed with the documented default and confirm async. Yesterday: finished API stubs."
       ],
       "commonErrors": [
         {
-          "pattern": "Yesterday: finished API stubs. Today: implement caching once design review lands. Blocker: design review with Mira — I booked 11:30 today; if it slips I will proceed with documented default and confirm async.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Yesterday: X API stubs. Today: implement caching once design review lands. Blocker: design review with Mira — I booked 11:30 today; if it slips I will proceed with the documented default and confirm async.",
+          "correctionId": "Predikat yang benar adalah \"finished\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -1114,24 +1195,32 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Thanks — that blocks my QA sign-off. I will join Platform on the staging auth fix after this call"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will",
+          "noteId": "Kata bantu yang benar adalah \"will\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "I will post a workaround checklist in #qa if we need a temporary path for today's tickets"
+          "text": "need",
+          "noteId": "Bentuk predikat yang benar adalah \"need\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "my QA sign",
+          "noteId": "Objek yang harus disebut adalah \"my QA sign\"."
         }
       ],
       "modelAnswers": [
         "Thanks — that blocks my QA sign-off. I will join Platform on the staging auth fix after this call, and I will post a workaround checklist in #qa if we need a temporary path for today's tickets.",
-        "Thanks — that blocks my QA sign-off. I'll join Platform on the staging auth fix after this call, and I'll post a workaround checklist in #qa if we need a temporary path for today's tickets."
+        "I will join Platform on the staging auth fix after this call, and I will post a workaround checklist in #qa if we need a temporary path for today's tickets. Thanks — that blocks my QA sign-off."
       ],
       "commonErrors": [
         {
-          "pattern": "Thanks — that blocks my QA sign-off. I will join Platform on staging auth fix after this call, and I will post a workaround checklist in #qa if we need a temporary path for today's tickets.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Thanks — that blocks my QA sign-off. I will join Platform on the staging auth fix after this call, and I will post a workaround checklist in #qa if we X a temporary path for today's tickets.",
+          "correctionId": "Predikat yang benar adalah \"need\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -1195,24 +1284,26 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Great that migration landed early. Let's park the speculative refactor — pull the next sprint-priority ticket on observability"
-        },
-        {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "open a short RFC if the refactor still looks valuable after release hardening"
+          "text": "park",
+          "noteId": "Bentuk predikat yang benar adalah \"park\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the speculative refactor",
+          "noteId": "Objek yang harus disebut adalah \"the speculative refactor\"."
         }
       ],
       "modelAnswers": [
         "Great that migration landed early. Let's park the speculative refactor — pull the next sprint-priority ticket on observability, and open a short RFC if the refactor still looks valuable after release hardening.",
-        "Please great that migration landed early. Let's park the speculative refactor — pull the next sprint-priority ticket on observability, and open a short RFC if the refactor still looks valuable after release hardening."
+        "Let's park the speculative refactor — pull the next sprint-priority ticket on observability, and open a short RFC if the refactor still looks valuable after release hardening. Great that migration landed early."
       ],
       "commonErrors": [
         {
-          "pattern": "Great that migration landed early. Let's park speculative refactor — pull the next sprint-priority ticket on observability, and open a short RFC if the refactor still looks valuable after release hardening.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Great that migration landed early. Let's X the speculative refactor — pull the next sprint-priority ticket on observability, and open a short RFC if the refactor still looks valuable after release hardening.",
+          "correctionId": "Predikat yang benar adalah \"park\", bukan bentuk lain di tempat itu."
         }
       ]
     }

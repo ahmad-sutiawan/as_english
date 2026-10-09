@@ -36,32 +36,29 @@
       ],
       "commonErrors": [
         {
-          "pattern": "Let us park this topic and revisit it next week",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "Let's X this topic and revisit it next week.",
+          "correctionId": "Predikat yang benar adalah \"park\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "Facilitate when a discussion is going too long.",
       "scenarioId": "Fasilitasi ketika diskusi terlalu panjang.",
       "modelAnswers": [
         "Let's park this topic and revisit it next week.",
-        "Please let's park this topic and revisit it next week."
+        "Revisit it next week. and let's park this topic"
       ],
       "audio": null,
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Let's park this topic"
-        },
-        {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "and revisit it"
+          "text": "park",
+          "noteId": "Bentuk predikat yang benar adalah \"park\"."
         },
         {
           "role": "Adverbial",
           "roleId": "Keterangan",
-          "text": "next week"
+          "text": "next week",
+          "noteId": "Keterangan yang harus ada adalah \"next week\"."
         }
       ]
     },
@@ -93,27 +90,29 @@
       ],
       "commonErrors": [
         {
-          "pattern": "Can everyone mute when they not speaking",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "Can everyone X when they're not speaking?",
+          "correctionId": "Predikat yang benar adalah \"mute\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "There's background noise on the call.",
       "scenarioId": "Ada noise di background pada call.",
       "modelAnswers": [
         "Can everyone mute when they're not speaking?",
-        "Please can everyone mute when they're not speaking?"
+        "They're not speaking? when can everyone mute"
       ],
       "audio": null,
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Can everyone mute"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Can",
+          "noteId": "Kata bantu yang benar adalah \"Can\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "when they're not speaking"
+          "text": "mute",
+          "noteId": "Bentuk predikat yang benar adalah \"mute\"."
         }
       ]
     },
@@ -151,33 +150,35 @@
       ],
       "commonErrors": [
         {
-          "pattern": "The decision is ship the hotfix today and monitor close",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "The decision is to X the hotfix today and monitor closely.",
+          "correctionId": "Predikat yang benar adalah \"ship\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "Summarize the meeting decision.",
       "scenarioId": "Ringkas keputusan meeting.",
       "modelAnswers": [
         "The decision is to ship the hotfix today and monitor closely.",
-        "Please the decision is to ship the hotfix today and monitor closely.",
-        "the decision is to ship the hotfix today and monitor closely."
+        "Monitor closely. and the decision is to ship the hotfix today"
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "The decision is"
+          "text": "The decision is",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"The decision is\"."
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "to ship the hotfix today"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "and monitor closely"
+          "text": "ship",
+          "noteId": "Bentuk predikat yang benar adalah \"ship\"."
         }
       ]
     },
@@ -214,32 +215,35 @@
       ],
       "commonErrors": [
         {
-          "pattern": "I like to challenge that assumption with latest metric",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "I'd like to X that assumption with the latest metrics.",
+          "correctionId": "Predikat yang benar adalah \"challenge\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "Disagree politely with data.",
       "scenarioId": "Tidak setuju dengan sopan memakai data.",
       "modelAnswers": [
         "I'd like to challenge that assumption with the latest metrics.",
-        "Please i'd like to challenge that assumption with the latest metrics."
+        "With the latest metrics, I want to challenge that assumption."
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I'd like to challenge"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "that assumption"
+          "text": "challenge",
+          "noteId": "Bentuk predikat yang benar adalah \"challenge\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "with the latest metrics"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the latest metrics",
+          "noteId": "Objek yang harus disebut adalah \"the latest metrics\"."
         }
       ]
     },
@@ -277,32 +281,29 @@
       ],
       "commonErrors": [
         {
-          "pattern": "Could you clarify what success look like for this milestone",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "Could you X what success looks like for this milestone?",
+          "correctionId": "Predikat yang benar adalah \"clarify\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "Ask for clearer acceptance criteria.",
       "scenarioId": "Minta kriteria acceptance yang lebih jelas.",
       "modelAnswers": [
         "Could you clarify what success looks like for this milestone?",
-        "Please could you clarify what success looks like for this milestone?"
+        "What success looks like for this milestone — could you clarify that?"
       ],
       "audio": null,
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Could you clarify"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Could",
+          "noteId": "Kata bantu yang benar adalah \"Could\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "what success looks like"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "for this milestone"
+          "text": "clarify",
+          "noteId": "Bentuk predikat yang benar adalah \"clarify\"."
         }
       ]
     },
@@ -337,32 +338,29 @@
       ],
       "commonErrors": [
         {
-          "pattern": "Action item I will draft the proposal by Friday",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "Action item: I'll X the proposal by Friday.",
+          "correctionId": "Predikat yang benar adalah \"draft\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "Capture owners at the end of a meeting.",
       "scenarioId": "Catat owner di akhir meeting.",
       "modelAnswers": [
         "Action item: I'll draft the proposal by Friday.",
-        "Action item: I will draft the proposal by Friday."
+        "By Friday I will draft the proposal. That is the action item."
       ],
       "audio": null,
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Action item"
-        },
-        {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "I'll draft the proposal"
+          "text": "draft",
+          "noteId": "Bentuk predikat yang benar adalah \"draft\"."
         },
         {
           "role": "Adverbial",
           "roleId": "Keterangan",
-          "text": "by Friday"
+          "text": "by Friday",
+          "noteId": "Keterangan yang harus ada adalah \"by Friday\"."
         }
       ]
     },
@@ -399,32 +397,29 @@
       ],
       "commonErrors": [
         {
-          "pattern": "We aligning on scope before we commit to the timeline",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "We're not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ],
       "scenario": "Explain why you won't lock dates yet.",
       "scenarioId": "Jelaskan kenapa tanggal belum dikunci.",
       "modelAnswers": [
         "We're aligning on scope before we commit to the timeline.",
-        "We are aligning on scope before we commit to the timeline."
+        "We commit to the timeline. before we're aligning on scope"
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "We're aligning on scope"
+          "text": "We",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"We\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "before we commit"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "to the timeline"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the timeline",
+          "noteId": "Objek yang harus disebut adalah \"the timeline\"."
         }
       ]
     },
@@ -462,32 +457,29 @@
       ],
       "commonErrors": [
         {
-          "pattern": "Sorry I miss that could you repeat the last point",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "Sorry, not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ],
       "scenario": "You lost audio for a few seconds.",
       "scenarioId": "Audio Anda putus beberapa detik.",
       "modelAnswers": [
         "Sorry, I missed that — could you repeat the last point?",
-        "Please sorry, I missed that — could you repeat the last point?"
+        "Could you repeat the last point?. Sorry, I missed that"
       ],
       "audio": null,
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Sorry I missed that"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "could",
+          "noteId": "Kata bantu yang benar adalah \"could\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "could you repeat"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "the last point"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the last point",
+          "noteId": "Objek yang harus disebut adalah \"the last point\"."
         }
       ]
     }

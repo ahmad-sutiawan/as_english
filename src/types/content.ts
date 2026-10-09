@@ -31,6 +31,9 @@ export type DialogueTurn = {
   /** Present on your turns */
   choices?: Choice[];
   correctKey?: ChoiceKey;
+  modelAnswers?: string[];
+  slots?: { role: string; roleId: string; text: string; noteId?: string }[];
+  commonErrors?: Array<string | { pattern: string; correctionId: string }>;
 };
 
 export type ExerciseItem = {
@@ -62,7 +65,7 @@ export type ExerciseItem = {
   tags: string[];
   /** Phrase chunks of the correct English answer, for production checks. */
   chunks?: string[];
-  slots?: { role: string; roleId: string; text: string }[];
+  slots?: { role: string; roleId: string; text: string; noteId?: string }[];
   modelAnswers?: string[];
   commonErrors?: Array<string | { pattern: string; correctionId: string }>;
   /** Dialogue turns when kind === "dialogue" */

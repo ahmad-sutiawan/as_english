@@ -38,33 +38,35 @@
       ],
       "commonErrors": [
         {
-          "pattern": "I finish the migration and I verifying the connection",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "I've X the migration, and I'm verifying the connections now.",
+          "correctionId": "Predikat yang benar adalah \"finished\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "Your supervisor asks: What's the status of the server migration?",
       "scenarioId": "Supervisor: Bagaimana status migrasi server?",
       "modelAnswers": [
         "I've finished the migration, and I'm verifying the connections now.",
-        "I have finished the migration, and I'm verifying the connections now.",
-        "I've finished the migration, and I am verifying the connections now."
+        "I'm verifying the connections now. , and i've finished the migration"
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I've finished the migration"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "and I'm verifying"
+          "text": "finished",
+          "noteId": "Bentuk predikat yang benar adalah \"finished\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "the connections now"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the migration",
+          "noteId": "Objek yang harus disebut adalah \"the migration\"."
         }
       ]
     },
@@ -103,32 +105,29 @@
       ],
       "commonErrors": [
         {
-          "pattern": "We about half day behind schedule because flaky test",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "We're not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ],
       "scenario": "Standup: Are you on track for today's estimate?",
       "scenarioId": "Standup: Apakah Anda on track untuk estimasi hari ini?",
       "modelAnswers": [
         "We're about half a day behind schedule due to flaky tests.",
-        "We are about half a day behind schedule due to flaky tests."
+        "Flaky tests put us about half a day behind schedule."
       ],
       "audio": null,
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "We're about half a day behind"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a day behind",
+          "noteId": "Objek yang harus disebut adalah \"a day behind\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "schedule"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "due to flaky tests"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "about",
+          "noteId": "Objek yang harus disebut adalah \"about\"."
         }
       ]
     },
@@ -164,32 +163,35 @@
       ],
       "commonErrors": [
         {
-          "pattern": "I need more time for investigate root cause",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "I X more time to investigate the root cause.",
+          "correctionId": "Predikat yang benar adalah \"need\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "Manager: When will you have an update?",
       "scenarioId": "Manager: Kapan Anda punya update?",
       "modelAnswers": [
         "I need more time to investigate the root cause.",
-        "Please i need more time to investigate the root cause."
+        "To investigate the root cause, I need more time."
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I need more time"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "to investigate"
+          "text": "need",
+          "noteId": "Bentuk predikat yang benar adalah \"need\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "the root cause"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the root cause",
+          "noteId": "Objek yang harus disebut adalah \"the root cause\"."
         }
       ]
     },
@@ -228,32 +230,35 @@
       ],
       "commonErrors": [
         {
-          "pattern": "Customer impact limited to checkout API in EU region",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "Customer not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ],
       "scenario": "Exec asks: What's the customer impact?",
       "scenarioId": "Exec bertanya: Apa dampak ke pelanggan?",
       "modelAnswers": [
         "Customer impact is limited to the checkout API in the EU region.",
-        "Please customer impact is limited to the checkout API in the EU region."
+        "In the EU region, customer impact is limited to the checkout API."
       ],
       "audio": null,
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Customer impact is limited"
-        },
-        {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "to the checkout API"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
           "role": "Adverbial",
           "roleId": "Keterangan",
-          "text": "in the EU region"
+          "text": "in the EU region",
+          "noteId": "Keterangan yang harus ada adalah \"in the EU region\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the checkout API",
+          "noteId": "Objek yang harus disebut adalah \"the checkout API\"."
         }
       ]
     },
@@ -291,32 +296,35 @@
       ],
       "commonErrors": [
         {
-          "pattern": "I will send written update at the end of day",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "I'll not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ],
       "scenario": "Your lead asks for a status note.",
       "scenarioId": "Lead Anda minta catatan status.",
       "modelAnswers": [
         "I'll send a written update by the end of the day.",
-        "I will send a written update by the end of the day."
+        "By the end of the day, i'll send a written update."
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I'll send"
-        },
-        {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "a written update"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
           "role": "Adverbial",
           "roleId": "Keterangan",
-          "text": "by the end of the day"
+          "text": "by the end of the day",
+          "noteId": "Keterangan yang harus ada adalah \"by the end of the day\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a written update",
+          "noteId": "Objek yang harus disebut adalah \"a written update\"."
         }
       ]
     },
@@ -355,32 +363,35 @@
       ],
       "commonErrors": [
         {
-          "pattern": "Yesterday I fix the auth bug and today I writing test",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "Yesterday I X the auth bug, and today I'm writing tests.",
+          "correctionId": "Predikat yang benar adalah \"fixed\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "Standup: Give your yesterday / today update.",
       "scenarioId": "Standup: Berikan update yesterday / today Anda.",
       "modelAnswers": [
         "Yesterday I fixed the auth bug, and today I'm writing tests.",
-        "Yesterday I fixed the auth bug, and today I am writing tests."
+        "Today I'm writing tests. , and yesterday I fixed the auth bug"
       ],
       "audio": null,
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Yesterday I fixed"
-        },
-        {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "the auth bug"
+          "text": "fixed",
+          "noteId": "Bentuk predikat yang benar adalah \"fixed\"."
         },
         {
           "role": "Adverbial",
           "roleId": "Keterangan",
-          "text": "and today I'm writing tests"
+          "text": "Yesterday",
+          "noteId": "Keterangan yang harus ada adalah \"Yesterday\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the auth bug",
+          "noteId": "Objek yang harus disebut adalah \"the auth bug\"."
         }
       ]
     },
@@ -417,33 +428,29 @@
       ],
       "commonErrors": [
         {
-          "pattern": "The blocker is miss staging credential from platform team",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "The not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ],
       "scenario": "Standup: Any blockers?",
       "scenarioId": "Standup: Ada blocker?",
       "modelAnswers": [
         "The blocker is missing staging credentials from the platform team.",
-        "Please the blocker is missing staging credentials from the platform team.",
-        "the blocker is missing staging credentials from the platform team."
+        "Missing staging credentials from the platform team are the blocker."
       ],
       "audio": null,
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "The blocker is"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "missing staging credentials"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "from the platform team"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "blocker",
+          "noteId": "Objek yang harus disebut adalah \"blocker\"."
         }
       ]
     },
@@ -482,32 +489,35 @@
       ],
       "commonErrors": [
         {
-          "pattern": "I recommend we postpone the release until the flake quarantine",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "I X we postpone the release until the flake is quarantined.",
+          "correctionId": "Predikat yang benar adalah \"recommend\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "Release review: Should we ship tonight?",
       "scenarioId": "Release review: Apakah kita ship malam ini?",
       "modelAnswers": [
         "I recommend we postpone the release until the flake is quarantined.",
-        "Please i recommend we postpone the release until the flake is quarantined."
+        "Until the flake is quarantined, I recommend we postpone the release."
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I recommend we postpone"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "the release"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "until the flake is quarantined"
+          "text": "recommend",
+          "noteId": "Bentuk predikat yang benar adalah \"recommend\"."
         }
       ]
     },
@@ -543,32 +553,41 @@
       ],
       "commonErrors": [
         {
-          "pattern": "I attach the log and screenshot in the ticket",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "I've X the logs and screenshots in the ticket.",
+          "correctionId": "Predikat yang benar adalah \"attached\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "Support asks where the evidence is.",
       "scenarioId": "Support bertanya di mana buktinya.",
       "modelAnswers": [
         "I've attached the logs and screenshots in the ticket.",
-        "I have attached the logs and screenshots in the ticket."
+        "Screenshots in the ticket. and i've attached the logs"
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I've attached"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "the logs and screenshots"
+          "text": "attached",
+          "noteId": "Bentuk predikat yang benar adalah \"attached\"."
         },
         {
           "role": "Adverbial",
           "roleId": "Keterangan",
-          "text": "in the ticket"
+          "text": "in the ticket",
+          "noteId": "Keterangan yang harus ada adalah \"in the ticket\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the logs",
+          "noteId": "Objek yang harus disebut adalah \"the logs\"."
         }
       ]
     },
@@ -605,32 +624,29 @@
       ],
       "commonErrors": [
         {
-          "pattern": "Risk is medium because only internal tool affected",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "Risk not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ],
       "scenario": "Manager: What's the risk level?",
       "scenarioId": "Manager: Bagaimana level risikonya?",
       "modelAnswers": [
         "Risk is medium because only internal tools are affected.",
-        "Please risk is medium because only internal tools are affected."
+        "Only internal tools are affected. because risk is medium"
       ],
       "audio": null,
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Risk is medium"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "because only internal tools"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "are affected"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "medium",
+          "noteId": "Objek yang harus disebut adalah \"medium\"."
         }
       ]
     }

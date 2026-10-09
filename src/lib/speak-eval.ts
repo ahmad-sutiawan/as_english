@@ -1,5 +1,5 @@
 import { normalizeAnswer } from "@/lib/answer";
-import { deriveSlots, evaluateForm } from "@/lib/form-eval";
+import { evaluateForm } from "@/lib/form-eval";
 import type { SpeakEvalResult, SpeakItem } from "@/types/speak";
 
 function tokens(s: string): string[] {
@@ -15,7 +15,7 @@ export function evaluateSpeak(
   item: SpeakItem,
 ): SpeakEvalResult {
   const models = item.modelAnswers.length ? item.modelAnswers : [item.target];
-  const slots = item.slots?.length ? item.slots : deriveSlots(item.chunks);
+  const slots = item.slots ?? [];
   const result = evaluateForm({
     transcript,
     models,

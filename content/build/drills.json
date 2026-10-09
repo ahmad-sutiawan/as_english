@@ -67,9 +67,28 @@
     },
     "modelAnswers": [
       "I work.",
-      "Please i work."
+      "I work at my job."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "I X.",
+        "correctionId": "Predikat yang benar adalah \"work\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "work",
+        "noteId": "Bentuk predikat yang benar adalah \"work\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -139,9 +158,28 @@
     },
     "modelAnswers": [
       "You work.",
-      "Please you work."
+      "You work at your job."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "You X.",
+        "correctionId": "Predikat yang benar adalah \"work\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "You",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"You\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "work",
+        "noteId": "Bentuk predikat yang benar adalah \"work\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -211,9 +249,28 @@
     },
     "modelAnswers": [
       "They work.",
-      "Please they work."
+      "They work at their jobs."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "They X.",
+        "correctionId": "Predikat yang benar adalah \"work\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "They",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"They\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "work",
+        "noteId": "Bentuk predikat yang benar adalah \"work\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -283,9 +340,28 @@
     },
     "modelAnswers": [
       "He works.",
-      "Please he works."
+      "He works at his job."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "He X.",
+        "correctionId": "Predikat yang benar adalah \"works\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "He",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"He\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "works",
+        "noteId": "Bentuk predikat yang benar adalah \"works\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -367,9 +443,34 @@
     },
     "modelAnswers": [
       "She works here.",
-      "Please she works here."
+      "She works here at this office."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "She X here.",
+        "correctionId": "Predikat yang benar adalah \"works\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "She",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"She\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "works",
+        "noteId": "Bentuk predikat yang benar adalah \"works\"."
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "here",
+        "noteId": "Keterangan yang harus ada adalah \"here\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -451,9 +552,28 @@
     },
     "modelAnswers": [
       "I use SAP.",
-      "Please i use SAP."
+      "I use SAP for my daily tasks."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "I X SAP.",
+        "correctionId": "Predikat yang benar adalah \"use\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "use",
+        "noteId": "Bentuk predikat yang benar adalah \"use\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -535,9 +655,28 @@
     },
     "modelAnswers": [
       "I manage servers.",
-      "Please i manage servers."
+      "I manage servers on this team."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "I X servers.",
+        "correctionId": "Predikat yang benar adalah \"manage\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "manage",
+        "noteId": "Bentuk predikat yang benar adalah \"manage\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -619,9 +758,28 @@
     },
     "modelAnswers": [
       "I am busy.",
-      "I'm busy."
+      "I am busy with work right now."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "I not-the-target",
+        "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+      },
+      {
+        "role": "Auxiliary",
+        "roleId": "Kata bantu",
+        "text": "am",
+        "noteId": "Kata bantu yang benar adalah \"am\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -697,9 +855,28 @@
     },
     "modelAnswers": [
       "She is tired.",
-      "Please she is tired."
+      "She is tired after the long day."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "She not-the-target",
+        "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "She",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"She\"."
+      },
+      {
+        "role": "Auxiliary",
+        "roleId": "Kata bantu",
+        "text": "is",
+        "noteId": "Kata bantu yang benar adalah \"is\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -775,9 +952,28 @@
     },
     "modelAnswers": [
       "They are ready.",
-      "Please they are ready."
+      "They are ready to begin."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "They not-the-target",
+        "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "They",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"They\"."
+      },
+      {
+        "role": "Auxiliary",
+        "roleId": "Kata bantu",
+        "text": "are",
+        "noteId": "Kata bantu yang benar adalah \"are\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -863,12 +1059,38 @@
     },
     "modelAnswers": [
       "I work at the office.",
-      "Please i work at the office."
+      "I work at the office with the team."
     ],
     "commonErrors": [
       {
-        "pattern": "I work at office.",
-        "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        "pattern": "I X at the office.",
+        "correctionId": "Predikat yang benar adalah \"work\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "work",
+        "noteId": "Bentuk predikat yang benar adalah \"work\"."
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "at the office",
+        "noteId": "Keterangan yang harus ada adalah \"at the office\"."
+      },
+      {
+        "role": "Object",
+        "roleId": "Objek",
+        "text": "the office",
+        "noteId": "Objek yang harus disebut adalah \"the office\"."
       }
     ]
   },
@@ -954,9 +1176,28 @@
     },
     "modelAnswers": [
       "She lives in Bogor.",
-      "Please she lives in Bogor."
+      "She lives in Bogor with her family."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "She not-the-target",
+        "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "She",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"She\"."
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "in Bogor",
+        "noteId": "Keterangan yang harus ada adalah \"in Bogor\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -1040,9 +1281,34 @@
     },
     "modelAnswers": [
       "I work every day.",
-      "Please i work every day."
+      "I work every day of the week."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "I X every day.",
+        "correctionId": "Predikat yang benar adalah \"work\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "work",
+        "noteId": "Bentuk predikat yang benar adalah \"work\"."
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "every day",
+        "noteId": "Keterangan yang harus ada adalah \"every day\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -1142,12 +1408,38 @@
     },
     "modelAnswers": [
       "I work at the office every day.",
-      "Please i work at the office every day."
+      "I work at the office every day of the week."
     ],
     "commonErrors": [
       {
-        "pattern": "I work at office every day.",
-        "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        "pattern": "I X at the office every day.",
+        "correctionId": "Predikat yang benar adalah \"work\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "work",
+        "noteId": "Bentuk predikat yang benar adalah \"work\"."
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "at the office",
+        "noteId": "Keterangan yang harus ada adalah \"at the office\"."
+      },
+      {
+        "role": "Object",
+        "roleId": "Objek",
+        "text": "the office every",
+        "noteId": "Objek yang harus disebut adalah \"the office every\"."
       }
     ]
   },
@@ -1233,9 +1525,34 @@
     },
     "modelAnswers": [
       "I work in Jakarta.",
-      "Please i work in Jakarta."
+      "I work in Jakarta with the local team."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "I X in Jakarta.",
+        "correctionId": "Predikat yang benar adalah \"work\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "work",
+        "noteId": "Bentuk predikat yang benar adalah \"work\"."
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "in Jakarta",
+        "noteId": "Keterangan yang harus ada adalah \"in Jakarta\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -1319,9 +1636,34 @@
     },
     "modelAnswers": [
       "My manager works here.",
-      "Please my manager works here."
+      "My manager works here on this floor."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "My manager X here.",
+        "correctionId": "Predikat yang benar adalah \"works\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "My manager works",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"My manager works\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "works",
+        "noteId": "Bentuk predikat yang benar adalah \"works\"."
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "here",
+        "noteId": "Keterangan yang harus ada adalah \"here\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -1393,13 +1735,26 @@
     },
     "modelAnswers": [
       "The system works.",
-      "Please the system works.",
-      "the system works."
+      "The system works as expected."
     ],
     "commonErrors": [
       {
-        "pattern": "system works.",
-        "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        "pattern": "The system X.",
+        "correctionId": "Predikat yang benar adalah \"works\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "The system works",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"The system works\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "works",
+        "noteId": "Bentuk predikat yang benar adalah \"works\"."
       }
     ]
   },
@@ -1485,12 +1840,32 @@
     },
     "modelAnswers": [
       "I checked the server.",
-      "Please i checked the server."
+      "I checked the server before the meeting."
     ],
     "commonErrors": [
       {
-        "pattern": "I checked server.",
-        "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        "pattern": "I X the server.",
+        "correctionId": "Predikat yang benar adalah \"checked\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "checked",
+        "noteId": "Bentuk predikat yang benar adalah \"checked\"."
+      },
+      {
+        "role": "Object",
+        "roleId": "Objek",
+        "text": "the server",
+        "noteId": "Objek yang harus disebut adalah \"the server\"."
       }
     ]
   },
@@ -1574,9 +1949,34 @@
     },
     "modelAnswers": [
       "I studied yesterday.",
-      "Please i studied yesterday."
+      "I studied yesterday after work."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "I X yesterday.",
+        "correctionId": "Predikat yang benar adalah \"studied\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "studied",
+        "noteId": "Bentuk predikat yang benar adalah \"studied\"."
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "yesterday",
+        "noteId": "Keterangan yang harus ada adalah \"yesterday\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -1658,9 +2058,34 @@
     },
     "modelAnswers": [
       "I work here.",
-      "Please i work here."
+      "I work here with the platform team."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "I X here.",
+        "correctionId": "Predikat yang benar adalah \"work\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "work",
+        "noteId": "Bentuk predikat yang benar adalah \"work\"."
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "here",
+        "noteId": "Keterangan yang harus ada adalah \"here\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -1736,9 +2161,34 @@
     },
     "modelAnswers": [
       "I work here.",
-      "Please i work here."
+      "I work here with the platform team."
     ],
-    "commonErrors": []
+    "commonErrors": [
+      {
+        "pattern": "I X here.",
+        "correctionId": "Predikat yang benar adalah \"work\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "work",
+        "noteId": "Bentuk predikat yang benar adalah \"work\"."
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "here",
+        "noteId": "Keterangan yang harus ada adalah \"here\"."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -1826,12 +2276,32 @@
     },
     "modelAnswers": [
       "We need to meet the deadline.",
-      "We have to meet the deadline."
+      "We need to meet the deadline this week."
     ],
     "commonErrors": [
       {
-        "pattern": "We need to meet deadline.",
-        "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        "pattern": "We X to meet the deadline.",
+        "correctionId": "Predikat yang benar adalah \"need\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "We",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"We\"."
+      },
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "need",
+        "noteId": "Bentuk predikat yang benar adalah \"need\"."
+      },
+      {
+        "role": "Object",
+        "roleId": "Objek",
+        "text": "the deadline",
+        "noteId": "Objek yang harus disebut adalah \"the deadline\"."
       }
     ]
   },
@@ -1915,13 +2385,26 @@
     },
     "modelAnswers": [
       "The main issue is network instability.",
-      "Please the main issue is network instability.",
-      "the main issue is network instability."
+      "The main issue is network instability on the link."
     ],
     "commonErrors": [
       {
-        "pattern": "main issue is network instability.",
-        "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        "pattern": "The not-the-target",
+        "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "The main issue",
+        "noteId": "Subjek yang benar pada kalimat ini adalah \"The main issue\"."
+      },
+      {
+        "role": "Auxiliary",
+        "roleId": "Kata bantu",
+        "text": "is",
+        "noteId": "Kata bantu yang benar adalah \"is\"."
       }
     ]
   },
@@ -2019,12 +2502,32 @@
     },
     "modelAnswers": [
       "Yesterday, I completed the report.",
-      "Please yesterday, I completed the report."
+      "Yesterday, I completed the report for the team."
     ],
     "commonErrors": [
       {
-        "pattern": "Yesterday, I completed report.",
-        "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        "pattern": "Yesterday, I X the report.",
+        "correctionId": "Predikat yang benar adalah \"completed\", bukan bentuk lain di tempat itu."
+      }
+    ],
+    "slots": [
+      {
+        "role": "Verb",
+        "roleId": "Predikat",
+        "text": "completed",
+        "noteId": "Bentuk predikat yang benar adalah \"completed\"."
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "Yesterday",
+        "noteId": "Keterangan yang harus ada adalah \"Yesterday\"."
+      },
+      {
+        "role": "Object",
+        "roleId": "Objek",
+        "text": "the report",
+        "noteId": "Objek yang harus disebut adalah \"the report\"."
       }
     ]
   },

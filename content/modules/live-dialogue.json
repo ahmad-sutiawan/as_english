@@ -111,7 +111,43 @@
               "structureId": "Pertanyaan Ya/Tidak: Auxiliary + Subjek + Kata kerja (+ Objek)"
             }
           ],
-          "correctKey": "B"
+          "correctKey": "B",
+          "modelAnswers": [
+            "Checkout 5xx is about 18% and rising. I'm investigating and will share a mitigation plan in five minutes.",
+            "I'm investigating and will share a mitigation plan in five minutes. Checkout 5xx is about 18% and rising."
+          ],
+          "slots": [
+            {
+              "role": "Auxiliary",
+              "roleId": "Kata bantu",
+              "text": "is",
+              "noteId": "Kata bantu yang benar adalah \"is\"."
+            },
+            {
+              "role": "Verb",
+              "roleId": "Predikat",
+              "text": "investigating",
+              "noteId": "Bentuk predikat yang benar adalah \"investigating\"."
+            },
+            {
+              "role": "Adverbial",
+              "roleId": "Keterangan",
+              "text": "in five minutes",
+              "noteId": "Keterangan yang harus ada adalah \"in five minutes\"."
+            },
+            {
+              "role": "Object",
+              "roleId": "Objek",
+              "text": "a mitigation plan",
+              "noteId": "Objek yang harus disebut adalah \"a mitigation plan\"."
+            }
+          ],
+          "commonErrors": [
+            {
+              "pattern": "Checkout 5xx is about 18% and rising. I'm X and will share a mitigation plan in five minutes.",
+              "correctionId": "Predikat yang benar adalah \"investigating\", bukan bentuk lain di tempat itu."
+            }
+          ]
         },
         {
           "id": "t3",
@@ -162,7 +198,31 @@
               "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
             }
           ],
-          "correctKey": "B"
+          "correctKey": "B",
+          "modelAnswers": [
+            "Not a full public post yet. I'll draft customer-safe language once we start mitigating, with a 15-minute update window.",
+            "I'll draft customer-safe language once we start mitigating, with a 15-minute update window. Not a full public post yet."
+          ],
+          "slots": [
+            {
+              "role": "Verb",
+              "roleId": "Predikat",
+              "text": "draft",
+              "noteId": "Bentuk predikat yang benar adalah \"draft\"."
+            },
+            {
+              "role": "Object",
+              "roleId": "Objek",
+              "text": "a full public",
+              "noteId": "Objek yang harus disebut adalah \"a full public\"."
+            }
+          ],
+          "commonErrors": [
+            {
+              "pattern": "Not a full public post yet. I'll X customer-safe language once we start mitigating, with a 15-minute update window.",
+              "correctionId": "Predikat yang benar adalah \"draft\", bukan bentuk lain di tempat itu."
+            }
+          ]
         }
       ],
       "tts": {
@@ -271,7 +331,43 @@
               "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
             }
           ],
-          "correctKey": "B"
+          "correctKey": "B",
+          "modelAnswers": [
+            "We will miss Thursday because Payments API slipped to Monday. New ETA is next Wednesday. I have a workaround spike in progress and will confirm feasibility by tomorrow noon.",
+            "New ETA is next Wednesday. I have a workaround spike in progress and will confirm feasibility by tomorrow noon. We will miss Thursday because Payments API slipped to Monday."
+          ],
+          "slots": [
+            {
+              "role": "Subject",
+              "roleId": "Subjek",
+              "text": "We",
+              "noteId": "Subjek yang benar pada kalimat ini adalah \"We\"."
+            },
+            {
+              "role": "Auxiliary",
+              "roleId": "Kata bantu",
+              "text": "will",
+              "noteId": "Kata bantu yang benar adalah \"will\"."
+            },
+            {
+              "role": "Verb",
+              "roleId": "Predikat",
+              "text": "confirm",
+              "noteId": "Bentuk predikat yang benar adalah \"confirm\"."
+            },
+            {
+              "role": "Object",
+              "roleId": "Objek",
+              "text": "a workaround spike",
+              "noteId": "Objek yang harus disebut adalah \"a workaround spike\"."
+            }
+          ],
+          "commonErrors": [
+            {
+              "pattern": "We will miss Thursday because Payments API slipped to Monday. New ETA is next Wednesday. I have a workaround spike in progress and will X feasibility by tomorrow noon.",
+              "correctionId": "Predikat yang benar adalah \"confirm\", bukan bentuk lain di tempat itu."
+            }
+          ]
         },
         {
           "id": "t3",
@@ -322,7 +418,43 @@
               "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
             }
           ],
-          "correctKey": "B"
+          "correctKey": "B",
+          "modelAnswers": [
+            "Please help unblock Payments on the contract decision by Friday, or confirm we should pause the reporting UI to protect the checkout date.",
+            "By Friday, or confirm we should pause the reporting UI to protect the checkout date, please help unblock Payments on the contract decision."
+          ],
+          "slots": [
+            {
+              "role": "Auxiliary",
+              "roleId": "Kata bantu",
+              "text": "should",
+              "noteId": "Kata bantu yang benar adalah \"should\"."
+            },
+            {
+              "role": "Verb",
+              "roleId": "Predikat",
+              "text": "confirm",
+              "noteId": "Bentuk predikat yang benar adalah \"confirm\"."
+            },
+            {
+              "role": "Adverbial",
+              "roleId": "Keterangan",
+              "text": "by Friday",
+              "noteId": "Keterangan yang harus ada adalah \"by Friday\"."
+            },
+            {
+              "role": "Object",
+              "roleId": "Objek",
+              "text": "the contract decision",
+              "noteId": "Objek yang harus disebut adalah \"the contract decision\"."
+            }
+          ],
+          "commonErrors": [
+            {
+              "pattern": "Please help unblock Payments on the contract decision by Friday, or X we should pause the reporting UI to protect the checkout date.",
+              "correctionId": "Predikat yang benar adalah \"confirm\", bukan bentuk lain di tempat itu."
+            }
+          ]
         }
       ],
       "tts": {
@@ -431,7 +563,37 @@
               "structureId": "Subjek + Modal + Kata kerja dasar + Objek (S + Modal + V + O)"
             }
           ],
-          "correctKey": "B"
+          "correctKey": "B",
+          "modelAnswers": [
+            "I understand the urgency. Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk.",
+            "Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk. I understand the urgency."
+          ],
+          "slots": [
+            {
+              "role": "Subject",
+              "roleId": "Subjek",
+              "text": "I",
+              "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+            },
+            {
+              "role": "Verb",
+              "roleId": "Predikat",
+              "text": "recommend",
+              "noteId": "Bentuk predikat yang benar adalah \"recommend\"."
+            },
+            {
+              "role": "Object",
+              "roleId": "Objek",
+              "text": "the urgency",
+              "noteId": "Objek yang harus disebut adalah \"the urgency\"."
+            }
+          ],
+          "commonErrors": [
+            {
+              "pattern": "I understand the urgency. Skipping canaries increases blast radius. I X a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk.",
+              "correctionId": "Predikat yang benar adalah \"recommend\", bukan bentuk lain di tempat itu."
+            }
+          ]
         },
         {
           "id": "t3",
@@ -482,7 +644,31 @@
               "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
             }
           ],
-          "correctKey": "B"
+          "correctKey": "B",
+          "modelAnswers": [
+            "We'll watch checkout success and p95 latency for five minutes. If either breaches the burn threshold, we auto-rollback and I update this thread immediately.",
+            "If either breaches the burn threshold, we auto-rollback and I update this thread immediately. We'll watch checkout success and p95 latency for five minutes."
+          ],
+          "slots": [
+            {
+              "role": "Subject",
+              "roleId": "Subjek",
+              "text": "We",
+              "noteId": "Subjek yang benar pada kalimat ini adalah \"We\"."
+            },
+            {
+              "role": "Object",
+              "roleId": "Objek",
+              "text": "the burn threshold",
+              "noteId": "Objek yang harus disebut adalah \"the burn threshold\"."
+            }
+          ],
+          "commonErrors": [
+            {
+              "pattern": "We'll not-the-target",
+              "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
+            }
+          ]
         }
       ],
       "tts": {
@@ -591,7 +777,31 @@
               "structureId": "Frasa tetap / klausa eliptis (bukan S+V+O penuh)"
             }
           ],
-          "correctKey": "B"
+          "correctKey": "B",
+          "modelAnswers": [
+            "Yesterday: finished auth middleware. Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands.",
+            "Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands. Yesterday: finished auth middleware."
+          ],
+          "slots": [
+            {
+              "role": "Verb",
+              "roleId": "Predikat",
+              "text": "finished",
+              "noteId": "Bentuk predikat yang benar adalah \"finished\"."
+            },
+            {
+              "role": "Adverbial",
+              "roleId": "Keterangan",
+              "text": "Yesterday",
+              "noteId": "Keterangan yang harus ada adalah \"Yesterday\"."
+            }
+          ],
+          "commonErrors": [
+            {
+              "pattern": "Yesterday: X auth middleware. Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands.",
+              "correctionId": "Predikat yang benar adalah \"finished\", bukan bentuk lain di tempat itu."
+            }
+          ]
         },
         {
           "id": "t3",
@@ -642,7 +852,37 @@
               "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
             }
           ],
-          "correctKey": "B"
+          "correctKey": "B",
+          "modelAnswers": [
+            "I need 20 minutes with Alex after standup for staging access. Without that, my ETA moves from today to tomorrow.",
+            "Without that, my ETA moves from today to tomorrow. I need 20 minutes with Alex after standup for staging access."
+          ],
+          "slots": [
+            {
+              "role": "Subject",
+              "roleId": "Subjek",
+              "text": "I",
+              "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+            },
+            {
+              "role": "Verb",
+              "roleId": "Predikat",
+              "text": "need",
+              "noteId": "Bentuk predikat yang benar adalah \"need\"."
+            },
+            {
+              "role": "Object",
+              "roleId": "Objek",
+              "text": "my ETA moves",
+              "noteId": "Objek yang harus disebut adalah \"my ETA moves\"."
+            }
+          ],
+          "commonErrors": [
+            {
+              "pattern": "I X 20 minutes with Alex after standup for staging access. Without that, my ETA moves from today to tomorrow.",
+              "correctionId": "Predikat yang benar adalah \"need\", bukan bentuk lain di tempat itu."
+            }
+          ]
         }
       ],
       "tts": {
@@ -750,7 +990,31 @@
               "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
             }
           ],
-          "correctKey": "B"
+          "correctKey": "B",
+          "modelAnswers": [
+            "Thanks for the change. Could we add a test for the duplicate webhook case? Without it we risk double-charging on retries. Happy to sketch a fixture if useful.",
+            "Could we add a test for the duplicate webhook case? Without it we risk double-charging on retries. Happy to sketch a fixture if useful. Thanks for the change."
+          ],
+          "slots": [
+            {
+              "role": "Auxiliary",
+              "roleId": "Kata bantu",
+              "text": "Could",
+              "noteId": "Kata bantu yang benar adalah \"Could\"."
+            },
+            {
+              "role": "Object",
+              "roleId": "Objek",
+              "text": "the change",
+              "noteId": "Objek yang harus disebut adalah \"the change\"."
+            }
+          ],
+          "commonErrors": [
+            {
+              "pattern": "Thanks not-the-target",
+              "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
+            }
+          ]
         },
         {
           "id": "t3",
@@ -801,7 +1065,31 @@
               "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
             }
           ],
-          "correctKey": "B"
+          "correctKey": "B",
+          "modelAnswers": [
+            "That's the only blocker. Non-blocking nit aside, once the retry test is in and CI is green, I'm happy to approve.",
+            "Non-blocking nit aside, once the retry test is in and CI is green, I'm happy to approve. That's the only blocker."
+          ],
+          "slots": [
+            {
+              "role": "Auxiliary",
+              "roleId": "Kata bantu",
+              "text": "is",
+              "noteId": "Kata bantu yang benar adalah \"is\"."
+            },
+            {
+              "role": "Object",
+              "roleId": "Objek",
+              "text": "the only blocker",
+              "noteId": "Objek yang harus disebut adalah \"the only blocker\"."
+            }
+          ],
+          "commonErrors": [
+            {
+              "pattern": "That's not-the-target",
+              "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
+            }
+          ]
         }
       ],
       "tts": {
@@ -909,7 +1197,37 @@
               "structureId": "Subjek + Kata kerja + Objek (+ Keterangan) (S + V + O)"
             }
           ],
-          "correctKey": "B"
+          "correctKey": "B",
+          "modelAnswers": [
+            "Thank you for the offer. I am excited about the role. Based on market data and my scope in reliability ownership, I am targeting X base. Is there flexibility to move closer to that number?",
+            "I am excited about the role. Based on market data and my scope in reliability ownership, I am targeting X base. Is there flexibility to move closer to that number? Thank you for the offer."
+          ],
+          "slots": [
+            {
+              "role": "Auxiliary",
+              "roleId": "Kata bantu",
+              "text": "am",
+              "noteId": "Kata bantu yang benar adalah \"am\"."
+            },
+            {
+              "role": "Verb",
+              "roleId": "Predikat",
+              "text": "move",
+              "noteId": "Bentuk predikat yang benar adalah \"move\"."
+            },
+            {
+              "role": "Object",
+              "roleId": "Objek",
+              "text": "the offer",
+              "noteId": "Objek yang harus disebut adalah \"the offer\"."
+            }
+          ],
+          "commonErrors": [
+            {
+              "pattern": "Thank you for the offer. I am excited about the role. Based on market data and my scope in reliability ownership, I am targeting X base. Is there flexibility to X closer to that number?",
+              "correctionId": "Predikat yang benar adalah \"move\", bukan bentuk lain di tempat itu."
+            }
+          ]
         },
         {
           "id": "t3",
@@ -960,7 +1278,43 @@
               "structureId": "Subjek + Kata kerja (+ Pelengkap) — deklaratif pendek"
             }
           ],
-          "correctKey": "B"
+          "correctKey": "B",
+          "modelAnswers": [
+            "I appreciate the creative package. Could we confirm the signing bonus amount, vesting timing, and whether a six-month salary review is possible? I want the total package to reflect the scope.",
+            "Could we confirm the signing bonus amount, vesting timing, and whether a six-month salary review is possible? I want the total package to reflect the scope. I appreciate the creative package."
+          ],
+          "slots": [
+            {
+              "role": "Subject",
+              "roleId": "Subjek",
+              "text": "I",
+              "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+            },
+            {
+              "role": "Auxiliary",
+              "roleId": "Kata bantu",
+              "text": "Could",
+              "noteId": "Kata bantu yang benar adalah \"Could\"."
+            },
+            {
+              "role": "Verb",
+              "roleId": "Predikat",
+              "text": "confirm",
+              "noteId": "Bentuk predikat yang benar adalah \"confirm\"."
+            },
+            {
+              "role": "Object",
+              "roleId": "Objek",
+              "text": "the creative package",
+              "noteId": "Objek yang harus disebut adalah \"the creative package\"."
+            }
+          ],
+          "commonErrors": [
+            {
+              "pattern": "I appreciate the creative package. Could we X the signing bonus amount, vesting timing, and whether a six-month salary review is possible? I want the total package to reflect the scope.",
+              "correctionId": "Predikat yang benar adalah \"confirm\", bukan bentuk lain di tempat itu."
+            }
+          ]
         }
       ],
       "tts": {

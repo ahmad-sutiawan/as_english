@@ -7,6 +7,8 @@ import json
 import sys
 from pathlib import Path
 
+from rubric_rules import check_package
+
 try:
     import jsonschema
 except ImportError:
@@ -74,6 +76,7 @@ ITEM_SCHEMA = {
                     "role": {"type": "string"},
                     "roleId": {"type": "string"},
                     "text": {"type": "string"},
+                    "noteId": {"type": "string"},
                 },
             },
         },
@@ -129,6 +132,15 @@ def validate_root(speak: Path, errors: list[str]) -> tuple[int, int]:
                 errors.append(f"{speak.name}: duplicate item id {it['id']}")
             seen_items.add(it["id"])
             total += 1
+            if speak == ROOT / "content" / "speak":
+                errors.extend(
+                    check_package(
+                        f"{path.name}/{it['id']}",
+                        it.get("modelAnswers") or [],
+                        it.get("slots") or [],
+                        it.get("commonErrors") or [],
+                    )
+                )
 
     for path in sorted(speak.glob("*.json")):
         if path.name == "manifest.json":

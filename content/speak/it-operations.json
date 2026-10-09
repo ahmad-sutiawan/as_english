@@ -36,36 +36,35 @@
       ],
       "commonErrors": [
         {
-          "pattern": "I already check the server",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
-        },
-        {
-          "pattern": "I already checked server",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "I've already X the server, and everything looks normal.",
+          "correctionId": "Predikat yang benar adalah \"checked\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "Your supervisor asks: What's the status of the server?",
       "scenarioId": "Supervisor Anda bertanya: Bagaimana status server-nya?",
       "modelAnswers": [
         "I've already checked the server, and everything looks normal.",
-        "I have already checked the server, and everything looks normal."
+        "Everything looks normal. , and i've already checked the server"
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I've already checked"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "the server"
+          "text": "checked",
+          "noteId": "Bentuk predikat yang benar adalah \"checked\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "and everything looks normal"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the server",
+          "noteId": "Objek yang harus disebut adalah \"the server\"."
         }
       ]
     },
@@ -100,32 +99,29 @@
       ],
       "commonErrors": [
         {
-          "pattern": "I will investigate the issue and update you short",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "I'll not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ],
       "scenario": "Your manager asks: Can you look into this alert?",
       "scenarioId": "Manager Anda bertanya: Bisa Anda cek alert ini?",
       "modelAnswers": [
         "I'll investigate the issue and update you shortly.",
-        "I will investigate the issue and update you shortly."
+        "The issue is what I will investigate, and I will update you shortly."
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I'll investigate"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "the issue"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "and update you shortly"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the issue",
+          "noteId": "Objek yang harus disebut adalah \"the issue\"."
         }
       ]
     },
@@ -162,32 +158,29 @@
       ],
       "commonErrors": [
         {
-          "pattern": "We roll back the deployment because error rate spike",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "We've not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ],
       "scenario": "Incident bridge: Why did you roll back?",
       "scenarioId": "Incident bridge: Kenapa Anda rollback?",
       "modelAnswers": [
         "We've rolled back the deployment because error rates spiked.",
-        "We have rolled back the deployment because error rates spiked."
+        "Error rates spiked, so we have rolled back the deployment."
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "We've rolled back"
+          "text": "We",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"We\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "the deployment"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "because error rates spiked"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "rolled",
+          "noteId": "Objek yang harus disebut adalah \"rolled\"."
         }
       ]
     },
@@ -222,33 +215,35 @@
       ],
       "commonErrors": [
         {
-          "pattern": "The database failover complete successfully in two minute",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "The database failover X successfully within two minutes.",
+          "correctionId": "Predikat yang benar adalah \"completed\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "Ops asks: Did failover finish?",
       "scenarioId": "Ops bertanya: Apakah failover sudah selesai?",
       "modelAnswers": [
         "The database failover completed successfully within two minutes.",
-        "Please the database failover completed successfully within two minutes.",
-        "the database failover completed successfully within two minutes."
+        "Within two minutes, the database failover completed successfully."
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "The database failover"
+          "text": "The database failover",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"The database failover\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "completed successfully"
+          "text": "completed",
+          "noteId": "Bentuk predikat yang benar adalah \"completed\"."
         },
         {
           "role": "Adverbial",
           "roleId": "Keterangan",
-          "text": "within two minutes"
+          "text": "within two minutes",
+          "noteId": "Keterangan yang harus ada adalah \"within two minutes\"."
         }
       ]
     },
@@ -282,32 +277,41 @@
       ],
       "commonErrors": [
         {
-          "pattern": "I monitoring the latency metric now",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "I'm X the latency metrics right now.",
+          "correctionId": "Predikat yang benar adalah \"monitoring\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "Manager: What are you doing now?",
       "scenarioId": "Manager: Sedang apa Anda sekarang?",
       "modelAnswers": [
         "I'm monitoring the latency metrics right now.",
-        "I am monitoring the latency metrics right now."
+        "Right now, i'm monitoring the latency metrics."
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I'm monitoring"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "the latency metrics"
+          "text": "monitoring",
+          "noteId": "Bentuk predikat yang benar adalah \"monitoring\"."
         },
         {
           "role": "Adverbial",
           "roleId": "Keterangan",
-          "text": "right now"
+          "text": "right now",
+          "noteId": "Keterangan yang harus ada adalah \"right now\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the latency metrics",
+          "noteId": "Objek yang harus disebut adalah \"the latency metrics\"."
         }
       ]
     },
@@ -344,32 +348,29 @@
       ],
       "commonErrors": [
         {
-          "pattern": "If the queue keep growing we will scale the worker horizontal",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "If not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ],
       "scenario": "On-call asks: What's the next step if backlog rises?",
       "scenarioId": "On-call bertanya: Langkah berikutnya jika backlog naik?",
       "modelAnswers": [
         "If the queue keeps growing, we'll scale the workers horizontally.",
-        "Please if the queue keeps growing, we'll scale the workers horizontally."
+        "We will scale the workers horizontally if the queue keeps growing."
       ],
       "audio": null,
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "If the queue keeps growing"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the queue keeps",
+          "noteId": "Objek yang harus disebut adalah \"the queue keeps\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "we'll scale"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "the workers horizontally"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "queue",
+          "noteId": "Objek yang harus disebut adalah \"queue\"."
         }
       ]
     },
@@ -404,32 +405,29 @@
       ],
       "commonErrors": [
         {
-          "pattern": "Please restart service after clear the cache",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "Please X the service after clearing the cache.",
+          "correctionId": "Predikat yang benar adalah \"restart\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "Junior asks how to recover a stuck worker.",
       "scenarioId": "Junior bertanya cara recover worker yang stuck.",
       "modelAnswers": [
         "Please restart the service after clearing the cache.",
-        "restart the service after clearing the cache."
+        "After clearing the cache, please restart the service."
       ],
       "audio": null,
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Please restart"
-        },
-        {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "the service"
+          "text": "restart",
+          "noteId": "Bentuk predikat yang benar adalah \"restart\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "after clearing the cache"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "Please",
+          "noteId": "Objek yang harus disebut adalah \"Please\"."
         }
       ]
     },
@@ -467,33 +465,29 @@
       ],
       "commonErrors": [
         {
-          "pattern": "The alert is false positive because flaky probe",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "The not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ],
       "scenario": "Manager: Was that a real outage?",
       "scenarioId": "Manager: Apakah itu outage sungguhan?",
       "modelAnswers": [
         "The alert was a false positive caused by a flaky probe.",
-        "Please the alert was a false positive caused by a flaky probe.",
-        "the alert was a false positive caused by a flaky probe."
+        "A flaky probe caused the alert, so it was a false positive."
       ],
       "audio": null,
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "The alert was"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "was",
+          "noteId": "Kata bantu yang benar adalah \"was\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "a false positive"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "caused by a flaky probe"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "alert",
+          "noteId": "Objek yang harus disebut adalah \"alert\"."
         }
       ]
     },
@@ -531,33 +525,35 @@
       ],
       "commonErrors": [
         {
-          "pattern": "We mitigate the issue and I writing the postmortem",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "We've X the issue, and I'm writing the postmortem notes.",
+          "correctionId": "Predikat yang benar adalah \"mitigated\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "After an incident: What's the current status?",
       "scenarioId": "Setelah incident: Bagaimana status saat ini?",
       "modelAnswers": [
         "We've mitigated the issue, and I'm writing the postmortem notes.",
-        "We've mitigated the issue, and I am writing the postmortem notes.",
-        "We have mitigated the issue, and I'm writing the postmortem notes."
+        "I'm writing the postmortem notes. , and we've mitigated the issue"
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "We've mitigated the issue"
+          "text": "We",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"We\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "and I'm writing"
+          "text": "mitigated",
+          "noteId": "Bentuk predikat yang benar adalah \"mitigated\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "the postmortem notes"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the issue",
+          "noteId": "Objek yang harus disebut adalah \"the issue\"."
         }
       ]
     },
@@ -597,32 +593,35 @@
       ],
       "commonErrors": [
         {
-          "pattern": "I will page platform team if disk fill above ninety percent",
-          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+          "pattern": "I'll X the platform team if the disk fills above ninety percent.",
+          "correctionId": "Predikat yang benar adalah \"page\", bukan bentuk lain di tempat itu."
         }
       ],
       "scenario": "On-call runbook: When do you escalate?",
       "scenarioId": "Runbook on-call: Kapan Anda escalate?",
       "modelAnswers": [
         "I'll page the platform team if the disk fills above ninety percent.",
-        "I will page the platform team if the disk fills above ninety percent."
+        "If the disk fills above ninety percent, I will page the platform team."
       ],
       "audio": null,
       "slots": [
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I'll page"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "the platform team"
+          "text": "page",
+          "noteId": "Bentuk predikat yang benar adalah \"page\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "if the disk fills above ninety percent"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the platform team",
+          "noteId": "Objek yang harus disebut adalah \"the platform team\"."
         }
       ]
     }

@@ -11,7 +11,7 @@ import type {
 import { DIFFICULTY_ORDER } from "@/types/content";
 import type { BuildSlot } from "@/types/build";
 import type { PersonaId } from "@/lib/persona";
-import { deriveChunks, deriveSlots } from "@/lib/form-eval";
+import { deriveChunks } from "@/lib/form-eval";
 
 function contentBase(persona: PersonaId) {
   const root = path.join(process.cwd(), "content");
@@ -110,7 +110,7 @@ export function getItemForm(item: ExerciseItem): {
     expectedId: choice?.textId ?? "",
     models: item.modelAnswers?.length ? item.modelAnswers : [expected],
     chunks,
-    slots: item.slots?.length ? item.slots : deriveSlots(chunks),
+    slots: item.slots ?? [],
     commonErrors: item.commonErrors ?? [],
   };
 }

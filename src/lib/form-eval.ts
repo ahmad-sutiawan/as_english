@@ -58,19 +58,6 @@ export function deriveSlots(chunks: string[]): BuildSlot[] {
   });
 }
 
-function chunkOrderOk(user: string, chunks: string[]): boolean {
-  if (!chunks.length) return true;
-  let rest = normalizeAnswer(user);
-  for (const chunk of chunks) {
-    const needle = normalizeAnswer(chunk);
-    if (!needle) continue;
-    const at = rest.indexOf(needle);
-    if (at < 0) return false;
-    rest = rest.slice(at + needle.length);
-  }
-  return true;
-}
-
 function patternNotes(user: string, target: string, patterns: string[]): string[] {
   const notes: string[] = [];
   const u = normalizeAnswer(user);
@@ -93,16 +80,72 @@ function patternNotes(user: string, target: string, patterns: string[]): string[
   return notes;
 }
 
+const CONTRACTIONS: Array<[RegExp, string]> = [
+  [/\bi'm\b/g, "i am"],
+  [/\bi've\b/g, "i have"],
+  [/\bi'll\b/g, "i will"],
+  [/\bi'd\b/g, "i would"],
+  [/\bdon't\b/g, "do not"],
+  [/\bdoesn't\b/g, "does not"],
+  [/\bdidn't\b/g, "did not"],
+  [/\bcan't\b/g, "cannot"],
+  [/\bwon't\b/g, "will not"],
+  [/\bisn't\b/g, "is not"],
+  [/\baren't\b/g, "are not"],
+  [/\bwasn't\b/g, "was not"],
+  [/\bweren't\b/g, "were not"],
+  [/\bwe're\b/g, "we are"],
+  [/\bwe've\b/g, "we have"],
+  [/\bwe'll\b/g, "we will"],
+  [/\bthey're\b/g, "they are"],
+  [/\bthey've\b/g, "they have"],
+  [/\blet's\b/g, "let us"],
+  [/\bit's\b/g, "it is"],
+  [/\bthat's\b/g, "that is"],
+  [/\bwhat's\b/g, "what is"],
+  [/\bthere's\b/g, "there is"],
+  [/\bhe's\b/g, "he is"],
+  [/\bshe's\b/g, "she is"],
+  [/\byou're\b/g, "you are"],
+  [/\byou've\b/g, "you have"],
+  [/\byou'll\b/g, "you will"],
+];
+
+/** Collapse contractions and a leading Please so trivial model pairs compare equal. */
+export function canonicalTokens(sentence: string): string[] {
+  let text = normalizeAnswer(sentence).replace(/^please\s+/, "");
+  for (const [pattern, replacement] of CONTRACTIONS) {
+    text = text.replace(pattern, replacement);
+  }
+  return text
+    .replace(/[^\w\s']/g, " ")
+    .split(/\s+/)
+    .filter(Boolean);
+}
+
+export function modelsAreDistinct(models: string[]): boolean {
+  const keys = models.map((model) => canonicalTokens(model).join(" ")).filter(Boolean);
+  return keys.length >= 2 && new Set(keys).size === keys.length;
+}
+
 function slotNotes(user: string, slots: BuildSlot[]): string[] {
   const u = normalizeAnswer(user);
   const notes: string[] = [];
   for (const slot of slots) {
     const needle = normalizeAnswer(slot.text);
     if (!needle || u.includes(needle)) continue;
-    notes.push(`${slot.roleId} belum sesuai.`);
+    notes.push(slot.noteId?.trim() || `${slot.roleId} belum ada dalam jawaban.`);
     if (notes.length >= 2) break;
   }
   return notes;
+}
+
+function slotsPresent(user: string, slots: BuildSlot[]): boolean {
+  const u = normalizeAnswer(user);
+  return slots.every((slot) => {
+    const needle = normalizeAnswer(slot.text);
+    return !needle || u.includes(needle);
+  });
 }
 
 export function evaluateForm(input: FormEvalInput): FormEvalResult {
@@ -129,8 +172,11 @@ export function evaluateForm(input: FormEvalInput): FormEvalResult {
     }
   }
 
-  const ordered = chunkOrderOk(input.transcript, input.chunks);
-  const passed = exact || (nearMiss && ordered);
+  const authoredSlots = input.slots.filter((slot) => slot.text.trim());
+  const slotsOk = slotsPresent(input.transcript, authoredSlots);
+  const passed = exact
+    ? authoredSlots.length === 0 || slotsOk
+    : nearMiss && authoredSlots.length > 0 && slotsOk;
   const missing = missedTokens(input.transcript, bestModel);
 
   const corrections: string[] = [];
@@ -160,7 +206,7 @@ export function evaluateForm(input: FormEvalInput): FormEvalResult {
 
   let headline = "Bentuknya belum tepat. Lihat potongan yang meleset.";
   if (passed && exact) headline = "Tepat. Bentuk kalimatnya sudah pas.";
-  else if (passed) headline = "Hampir tepat. Arti dan urutan potongan sudah kena.";
+  else if (passed) headline = "Hampir tepat. Model dan slot peran sudah kena.";
   else if (!user) headline = "Belum ada jawaban. Ucapkan atau ketik kalimatnya.";
 
   return {

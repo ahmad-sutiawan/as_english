@@ -74,29 +74,38 @@
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "We are seeing elevated 5xx on checkout API"
+          "text": "We",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"We\"."
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "are",
+          "noteId": "Kata bantu yang benar adalah \"are\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "currently about 18%"
+          "text": "seeing",
+          "noteId": "Bentuk predikat yang benar adalah \"seeing\"."
         },
         {
           "role": "Adverbial",
           "roleId": "Keterangan",
-          "text": "rising. I am investigating root cause"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "will share a mitigation plan in five minutes"
+          "text": "in five minutes",
+          "noteId": "Keterangan yang harus ada adalah \"in five minutes\"."
         }
       ],
       "modelAnswers": [
         "We are seeing elevated 5xx on checkout API, currently about 18% and rising. I am investigating root cause and will share a mitigation plan in five minutes.",
-        "We are seeing elevated 5xx on checkout API, currently about 18% and rising. I'm investigating root cause and will share a mitigation plan in five minutes."
+        "I am investigating root cause and will share a mitigation plan in five minutes. We are seeing elevated 5xx on checkout API, currently about 18% and rising."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "We are X elevated 5xx on checkout API, currently about 18% and rising. I am investigating root cause and will share a mitigation plan in five minutes.",
+          "correctionId": "Predikat yang benar adalah \"seeing\", bukan bentuk lain di tempat itu."
+        }
+      ]
     },
     {
       "id": "inc-02",
@@ -158,24 +167,32 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Rolling back the bad config now ETA three minutes"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will",
+          "noteId": "Kata bantu yang benar adalah \"will\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "I will confirm once error rate returns to baseline"
+          "text": "confirm",
+          "noteId": "Bentuk predikat yang benar adalah \"confirm\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the bad config",
+          "noteId": "Objek yang harus disebut adalah \"the bad config\"."
         }
       ],
       "modelAnswers": [
         "Rolling back the bad config now. ETA three minutes. I will confirm once error rate returns to baseline.",
-        "Rolling back the bad config now. ETA three minutes. I'll confirm once error rate returns to baseline."
+        "ETA three minutes. I will confirm once error rate returns to baseline. Rolling back the bad config now."
       ],
       "commonErrors": [
         {
-          "pattern": "Rolling back bad config now. ETA three minutes. I will confirm once error rate returns to baseline.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Rolling back the bad config now. ETA three minutes. I will X once error rate returns to baseline.",
+          "correctionId": "Predikat yang benar adalah \"confirm\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -241,22 +258,30 @@
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "Our checkout service is currently degraded. We have identified the cause"
+          "text": "Our checkout service",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"Our checkout service\"."
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "are applying a fix. We will update again within 15 minutes"
+          "text": "identified",
+          "noteId": "Bentuk predikat yang benar adalah \"identified\"."
         }
       ],
       "modelAnswers": [
         "Our checkout service is currently degraded. We have identified the cause and are applying a fix. We will update again within 15 minutes.",
-        "Please our checkout service is currently degraded. We have identified the cause and are applying a fix. We will update again within 15 minutes."
+        "We have identified the cause and are applying a fix. We will update again within 15 minutes. Our checkout service is currently degraded."
       ],
       "commonErrors": [
         {
-          "pattern": "Our checkout service is currently degraded. We have identified cause and are applying a fix. We will update again within 15 minutes.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Our checkout service is currently degraded. We have X the cause and are applying a fix. We will update again within 15 minutes.",
+          "correctionId": "Predikat yang benar adalah \"identified\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -320,29 +345,38 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "SEV-2 checkout 5xx is mitigated via config rollback. Error rate is back to baseline. Remaining work: confirm dashboards for 30 minutes"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "draft the incident timeline. Docs"
+          "text": "mitigated",
+          "noteId": "Bentuk predikat yang benar adalah \"mitigated\"."
         },
         {
           "role": "Adverbial",
           "roleId": "Keterangan",
-          "text": "Slack thread linked in the ticket"
+          "text": "in the ticket",
+          "noteId": "Keterangan yang harus ada adalah \"in the ticket\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the incident timeline",
+          "noteId": "Objek yang harus disebut adalah \"the incident timeline\"."
         }
       ],
       "modelAnswers": [
         "SEV-2 checkout 5xx is mitigated via config rollback. Error rate is back to baseline. Remaining work: confirm dashboards for 30 minutes and draft the incident timeline. Docs and Slack thread linked in the ticket.",
-        "Please sEV-2 checkout 5xx is mitigated via config rollback. Error rate is back to baseline. Remaining work: confirm dashboards for 30 minutes and draft the incident timeline. Docs and Slack thread linked in the ticket."
+        "Error rate is back to baseline. Remaining work: confirm dashboards for 30 minutes and draft the incident timeline. Docs and Slack thread linked in the ticket. SEV-2 checkout 5xx is mitigated via config rollback."
       ],
       "commonErrors": [
         {
-          "pattern": "SEV-2 checkout 5xx is mitigated via config rollback. Error rate is back to baseline. Remaining work: confirm dashboards for 30 minutes and draft incident timeline. Docs and Slack thread linked in the ticket.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "SEV-2 checkout 5xx is X via config rollback. Error rate is back to baseline. Remaining work: confirm dashboards for 30 minutes and draft the incident timeline. Docs and Slack thread linked in the ticket.",
+          "correctionId": "Predikat yang benar adalah \"mitigated\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -405,24 +439,26 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Let's parallelize clearly: Alex owns DB connection pool checks"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will",
+          "noteId": "Kata bantu yang benar adalah \"will\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "Mira owns recent deploy diffs. Please post findings in the thread; I will synthesize next steps in three minutes"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the thread",
+          "noteId": "Objek yang harus disebut adalah \"the thread\"."
         }
       ],
       "modelAnswers": [
         "Let's parallelize clearly: Alex owns DB connection pool checks, Mira owns recent deploy diffs. Please post findings in the thread; I will synthesize next steps in three minutes.",
-        "Let's parallelize clearly: Alex owns DB connection pool checks, Mira owns recent deploy diffs. Please post findings in the thread; I'll synthesize next steps in three minutes."
+        "Please post findings in the thread; I will synthesize next steps in three minutes. Let's parallelize clearly: Alex owns DB connection pool checks, Mira owns recent deploy diffs."
       ],
       "commonErrors": [
         {
-          "pattern": "Let's parallelize clearly: Alex owns DB connection pool checks, Mira owns recent deploy diffs. Please post findings in thread; I will synthesize next steps in three minutes.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Let's not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ]
     },
@@ -486,21 +522,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Treating this as SEV-2: partial degradation affecting about 12% of checkout users due to vendor timeouts. We enabled stricter timeouts"
-        },
-        {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "a fallback path; monitoring recovery"
+          "text": "monitoring",
+          "noteId": "Bentuk predikat yang benar adalah \"monitoring\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a fallback path",
+          "noteId": "Objek yang harus disebut adalah \"a fallback path\"."
         }
       ],
       "modelAnswers": [
         "Treating this as SEV-2: partial degradation affecting about 12% of checkout users due to vendor timeouts. We enabled stricter timeouts and a fallback path; monitoring recovery.",
-        "Please treating this as SEV-2: partial degradation affecting about 12% of checkout users due to vendor timeouts. We enabled stricter timeouts and a fallback path; monitoring recovery."
+        "We enabled stricter timeouts and a fallback path; monitoring recovery. Treating this as SEV-2: partial degradation affecting about 12% of checkout users due to vendor timeouts."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "Treating this as SEV-2: partial degradation affecting about 12% of checkout users due to vendor timeouts. We enabled stricter timeouts and a fallback path; X recovery.",
+          "correctionId": "Predikat yang benar adalah \"monitoring\", bukan bentuk lain di tempat itu."
+        }
+      ]
     },
     {
       "id": "inc-07",
@@ -562,21 +605,34 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Yes — please announce a short maintenance for write operations. Planned failover starts in 10 minutes"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "should",
+          "noteId": "Kata bantu yang benar adalah \"should\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "should complete within five minutes. I will confirm when writes are healthy"
+          "text": "confirm",
+          "noteId": "Bentuk predikat yang benar adalah \"confirm\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a short maintenance",
+          "noteId": "Objek yang harus disebut adalah \"a short maintenance\"."
         }
       ],
       "modelAnswers": [
         "Yes — please announce a short maintenance for write operations. Planned failover starts in 10 minutes and should complete within five minutes. I will confirm when writes are healthy.",
-        "Yes — please announce a short maintenance for write operations. Planned failover starts in 10 minutes and should complete within five minutes. I'll confirm when writes are healthy."
+        "Planned failover starts in 10 minutes and should complete within five minutes. I will confirm when writes are healthy. Yes — please announce a short maintenance for write operations."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "Yes — please announce a short maintenance for write operations. Planned failover starts in 10 minutes and should complete within five minutes. I will X when writes are healthy.",
+          "correctionId": "Predikat yang benar adalah \"confirm\", bukan bentuk lain di tempat itu."
+        }
+      ]
     },
     {
       "id": "inc-08",
@@ -640,34 +696,32 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Before a full restart"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "can",
+          "noteId": "Kata bantu yang benar adalah \"can\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "let's check the last deploy"
+          "text": "restart",
+          "noteId": "Bentuk predikat yang benar adalah \"restart\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "error signatures for two minutes. If it still looks like a bad process state"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "we can restart a canary first"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a full restart",
+          "noteId": "Objek yang harus disebut adalah \"a full restart\"."
         }
       ],
       "modelAnswers": [
         "Before a full restart, let's check the last deploy and error signatures for two minutes. If it still looks like a bad process state, we can restart a canary first.",
-        "Please before a full restart, let's check the last deploy and error signatures for two minutes. If it still looks like a bad process state, we can restart a canary first."
+        "If it still looks like a bad process state, we can restart a canary first. Before a full restart, let's check the last deploy and error signatures for two minutes."
       ],
       "commonErrors": [
         {
-          "pattern": "Before a full restart, let's check last deploy and error signatures for two minutes. If it still looks like a bad process state, we can restart a canary first.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Before a full X, let's check the last deploy and error signatures for two minutes. If it still looks like a bad process state, we can restart a canary first.",
+          "correctionId": "Predikat yang benar adalah \"restart\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -733,34 +787,32 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Service is restored. We will share a blameless timeline"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "concrete follow-ups in the postmortem within 24 hours"
+          "text": "share",
+          "noteId": "Bentuk predikat yang benar adalah \"share\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "including detection"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "prevention gaps"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a blameless timeline",
+          "noteId": "Objek yang harus disebut adalah \"a blameless timeline\"."
         }
       ],
       "modelAnswers": [
         "Service is restored. We will share a blameless timeline and concrete follow-ups in the postmortem within 24 hours, including detection and prevention gaps.",
-        "Please service is restored. We will share a blameless timeline and concrete follow-ups in the postmortem within 24 hours, including detection and prevention gaps."
+        "We will share a blameless timeline and concrete follow-ups in the postmortem within 24 hours, including detection and prevention gaps. Service is restored."
       ],
       "commonErrors": [
         {
-          "pattern": "Service is restored. We will share a blameless timeline and concrete follow-ups in postmortem within 24 hours, including detection and prevention gaps.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Service is restored. We will X a blameless timeline and concrete follow-ups in the postmortem within 24 hours, including detection and prevention gaps.",
+          "correctionId": "Predikat yang benar adalah \"share\", bukan bentuk lain di tempat itu."
         }
       ]
     },
@@ -824,21 +876,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Impact: checkout errors elevated. Status: mitigated via config rollback at 14:12 UTC. Current: error rate normal. Next: monitor for 30 minutes"
-        },
-        {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "open postmortem doc"
+          "text": "mitigated",
+          "noteId": "Bentuk predikat yang benar adalah \"mitigated\"."
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "Impact",
+          "noteId": "Objek yang harus disebut adalah \"Impact\"."
         }
       ],
       "modelAnswers": [
         "Impact: checkout errors elevated. Status: mitigated via config rollback at 14:12 UTC. Current: error rate normal. Next: monitor for 30 minutes and open postmortem doc.",
-        "Please impact: checkout errors elevated. Status: mitigated via config rollback at 14:12 UTC. Current: error rate normal. Next: monitor for 30 minutes and open postmortem doc."
+        "Status: mitigated via config rollback at 14:12 UTC. Current: error rate normal. Next: monitor for 30 minutes and open postmortem doc. Impact: checkout errors elevated."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "Impact: checkout errors elevated. Status: X via config rollback at 14:12 UTC. Current: error rate normal. Next: monitor for 30 minutes and open postmortem doc.",
+          "correctionId": "Predikat yang benar adalah \"mitigated\", bukan bentuk lain di tempat itu."
+        }
+      ]
     },
     {
       "id": "inc-11",
@@ -900,26 +959,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Please hold public posts until we confirm stable recovery for 30 minutes. Draft customer-safe language with me: acknowledge disruption"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "are",
+          "noteId": "Kata bantu yang benar adalah \"are\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "state we are restoring service"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "avoid root-cause speculation"
+          "text": "confirm",
+          "noteId": "Bentuk predikat yang benar adalah \"confirm\"."
         }
       ],
       "modelAnswers": [
         "Please hold public posts until we confirm stable recovery for 30 minutes. Draft customer-safe language with me: acknowledge disruption, state we are restoring service, avoid root-cause speculation.",
-        "hold public posts until we confirm stable recovery for 30 minutes. Draft customer-safe language with me: acknowledge disruption, state we are restoring service, avoid root-cause speculation."
+        "Draft customer-safe language with me: acknowledge disruption, state we are restoring service, avoid root-cause speculation. Please hold public posts until we confirm stable recovery for 30 minutes."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "Please hold public posts until we X stable recovery for 30 minutes. Draft customer-safe language with me: acknowledge disruption, state we are restoring service, avoid root-cause speculation.",
+          "correctionId": "Predikat yang benar adalah \"confirm\", bukan bentuk lain di tempat itu."
+        }
+      ]
     },
     {
       "id": "inc-12",
@@ -980,21 +1041,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Hypothesis: upstream auth latency may be contributing. I am validating with dependency dashboards now"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "am",
+          "noteId": "Kata bantu yang benar adalah \"am\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "will confirm or retire this theory in three minutes"
+          "text": "confirm",
+          "noteId": "Bentuk predikat yang benar adalah \"confirm\"."
         }
       ],
       "modelAnswers": [
         "Hypothesis: upstream auth latency may be contributing. I am validating with dependency dashboards now and will confirm or retire this theory in three minutes.",
-        "Hypothesis: upstream auth latency may be contributing. I'm validating with dependency dashboards now and will confirm or retire this theory in three minutes."
+        "I am validating with dependency dashboards now and will confirm or retire this theory in three minutes. Hypothesis: upstream auth latency may be contributing."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "Hypothesis: upstream auth latency may be contributing. I am validating with dependency dashboards now and will X or retire this theory in three minutes.",
+          "correctionId": "Predikat yang benar adalah \"confirm\", bukan bentuk lain di tempat itu."
+        }
+      ]
     },
     {
       "id": "inc-13",
@@ -1055,24 +1123,26 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "This alert has no user impact. I am acknowledging"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "has",
+          "noteId": "Kata bantu yang benar adalah \"has\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "opening a ticket to tune the threshold after the shift. Continuing to watch true customer symptoms"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a ticket to",
+          "noteId": "Objek yang harus disebut adalah \"a ticket to\"."
         }
       ],
       "modelAnswers": [
         "This alert has no user impact. I am acknowledging and opening a ticket to tune the threshold after the shift. Continuing to watch true customer symptoms.",
-        "This alert has no user impact. I'm acknowledging and opening a ticket to tune the threshold after the shift. Continuing to watch true customer symptoms."
+        "I am acknowledging and opening a ticket to tune the threshold after the shift. Continuing to watch true customer symptoms. This alert has no user impact."
       ],
       "commonErrors": [
         {
-          "pattern": "This alert has no user impact. I am acknowledging and opening a ticket to tune threshold after the shift. Continuing to watch true customer symptoms.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "This not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ]
     },
@@ -1137,19 +1207,32 @@
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "I can share aggregate impact now: about 9% checkout failures globally. Per-customer lists will take longer; Mira owns that extract"
+          "text": "I",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"I\"."
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "can",
+          "noteId": "Kata bantu yang benar adalah \"can\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "will post in 20 minutes while I keep mitigating"
+          "text": "share",
+          "noteId": "Bentuk predikat yang benar adalah \"share\"."
         }
       ],
       "modelAnswers": [
         "I can share aggregate impact now: about 9% checkout failures globally. Per-customer lists will take longer; Mira owns that extract and will post in 20 minutes while I keep mitigating.",
-        "Please i can share aggregate impact now: about 9% checkout failures globally. Per-customer lists will take longer; Mira owns that extract and will post in 20 minutes while I keep mitigating."
+        "Per-customer lists will take longer; Mira owns that extract and will post in 20 minutes while I keep mitigating. I can share aggregate impact now: about 9% checkout failures globally."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "I can X aggregate impact now: about 9% checkout failures globally. Per-customer lists will take longer; Mira owns that extract and will post in 20 minutes while I keep mitigating.",
+          "correctionId": "Predikat yang benar adalah \"share\", bukan bentuk lain di tempat itu."
+        }
+      ]
     },
     {
       "id": "inc-15",
@@ -1211,26 +1294,28 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Service is stable. Let's freeze non-essential changes for 60 minutes"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "watch golden signals"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "take risky improvements through a reviewed change with canary. Stability first"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a reviewed change",
+          "noteId": "Objek yang harus disebut adalah \"a reviewed change\"."
         }
       ],
       "modelAnswers": [
         "Service is stable. Let's freeze non-essential changes for 60 minutes, watch golden signals, and take risky improvements through a reviewed change with canary. Stability first.",
-        "Please service is stable. Let's freeze non-essential changes for 60 minutes, watch golden signals, and take risky improvements through a reviewed change with canary. Stability first."
+        "Let's freeze non-essential changes for 60 minutes, watch golden signals, and take risky improvements through a reviewed change with canary. Stability first. Service is stable."
       ],
-      "commonErrors": []
+      "commonErrors": [
+        {
+          "pattern": "Service not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
+        }
+      ]
     },
     {
       "id": "inc-16",
@@ -1293,29 +1378,26 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Impact is regional: APAC checkout 5xx ~12% for 8 minutes; other regions normal. I am isolating region traffic"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "checking the last deploy"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "dependency health in APAC. Next update in 5 minutes"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the last deploy",
+          "noteId": "Objek yang harus disebut adalah \"the last deploy\"."
         }
       ],
       "modelAnswers": [
         "Impact is regional: APAC checkout 5xx ~12% for 8 minutes; other regions normal. I am isolating region traffic and checking the last deploy and dependency health in APAC. Next update in 5 minutes.",
-        "Impact is regional: APAC checkout 5xx ~12% for 8 minutes; other regions normal. I'm isolating region traffic and checking the last deploy and dependency health in APAC. Next update in 5 minutes."
+        "I am isolating region traffic and checking the last deploy and dependency health in APAC. Next update in 5 minutes. Impact is regional: APAC checkout 5xx ~12% for 8 minutes; other regions normal."
       ],
       "commonErrors": [
         {
-          "pattern": "Impact is regional: APAC checkout 5xx ~12% for 8 minutes; other regions normal. I am isolating region traffic and checking last deploy and dependency health in APAC. Next update in 5 minutes.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Impact not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ]
     },
@@ -1381,34 +1463,26 @@
       ],
       "slots": [
         {
-          "role": "Subject",
-          "roleId": "Subjek",
-          "text": "Got it — I will capture timeline events with UTC timestamps"
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will",
+          "noteId": "Kata bantu yang benar adalah \"will\"."
         },
         {
-          "role": "Verb",
-          "roleId": "Predikat",
-          "text": "owners"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "decisions in the incident doc"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "ping you if anything looks inconsistent. You keep mitigating"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the incident doc",
+          "noteId": "Objek yang harus disebut adalah \"the incident doc\"."
         }
       ],
       "modelAnswers": [
         "Got it — I will capture timeline events with UTC timestamps, owners, and decisions in the incident doc, and ping you if anything looks inconsistent. You keep mitigating.",
-        "Got it — I'll capture timeline events with UTC timestamps, owners, and decisions in the incident doc, and ping you if anything looks inconsistent. You keep mitigating."
+        "You keep mitigating. Got it — I will capture timeline events with UTC timestamps, owners, and decisions in the incident doc, and ping you if anything looks inconsistent."
       ],
       "commonErrors": [
         {
-          "pattern": "Got it — I will capture timeline events with UTC timestamps, owners, and decisions in incident doc, and ping you if anything looks inconsistent. You keep mitigating.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "Got not-the-target",
+          "correctionId": "Pilihan kata pada predikat atau subjek belum sama dengan model."
         }
       ]
     },
@@ -1476,32 +1550,36 @@
         {
           "role": "Subject",
           "roleId": "Subjek",
-          "text": "We mitigated customer impact. Leading hypothesis is a bad cache config in the last deploy"
+          "text": "We",
+          "noteId": "Subjek yang benar pada kalimat ini adalah \"We\"."
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "is",
+          "noteId": "Kata bantu yang benar adalah \"is\"."
         },
         {
           "role": "Verb",
           "roleId": "Predikat",
-          "text": "but root cause is not confirmed. For all-hands I can share impact"
+          "text": "mitigated",
+          "noteId": "Bentuk predikat yang benar adalah \"mitigated\"."
         },
         {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "mitigation"
-        },
-        {
-          "role": "Adverbial",
-          "roleId": "Keterangan",
-          "text": "open questions — not a final RCA. Full RCA after the postmortem"
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a bad cache",
+          "noteId": "Objek yang harus disebut adalah \"a bad cache\"."
         }
       ],
       "modelAnswers": [
         "We mitigated customer impact. Leading hypothesis is a bad cache config in the last deploy, but root cause is not confirmed. For all-hands I can share impact, mitigation, and open questions — not a final RCA. Full RCA after the postmortem.",
-        "Please we mitigated customer impact. Leading hypothesis is a bad cache config in the last deploy, but root cause is not confirmed. For all-hands I can share impact, mitigation, and open questions — not a final RCA. Full RCA after the postmortem."
+        "Leading hypothesis is a bad cache config in the last deploy, but root cause is not confirmed. For all-hands I can share impact, mitigation, and open questions — not a final RCA. Full RCA after the postmortem. We mitigated customer impact."
       ],
       "commonErrors": [
         {
-          "pattern": "We mitigated customer impact. Leading hypothesis is a bad cache config in last deploy, but root cause is not confirmed. For all-hands I can share impact, mitigation, and open questions — not a final RCA. Full RCA after the postmortem.",
-          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+          "pattern": "We X customer impact. Leading hypothesis is a bad cache config in the last deploy, but root cause is not confirmed. For all-hands I can share impact, mitigation, and open questions — not a final RCA. Full RCA after the postmortem.",
+          "correctionId": "Predikat yang benar adalah \"mitigated\", bukan bentuk lain di tempat itu."
         }
       ]
     }

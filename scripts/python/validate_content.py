@@ -7,6 +7,8 @@ import json
 import sys
 from pathlib import Path
 
+from rubric_rules import check_package
+
 try:
     import jsonschema
 except ImportError:
@@ -93,6 +95,7 @@ ITEM_SCHEMA = {
                     "role": {"type": "string"},
                     "roleId": {"type": "string"},
                     "text": {"type": "string"},
+                    "noteId": {"type": "string"},
                 },
             },
         },
@@ -139,6 +142,38 @@ ITEM_SCHEMA = {
                         "minItems": 4,
                         "maxItems": 4,
                         "items": CHOICE_SCHEMA,
+                    },
+                    "modelAnswers": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 3,
+                        "items": {"type": "string", "minLength": 1},
+                    },
+                    "slots": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["role", "roleId", "text", "noteId"],
+                            "additionalProperties": False,
+                            "properties": {
+                                "role": {"type": "string"},
+                                "roleId": {"type": "string"},
+                                "text": {"type": "string"},
+                                "noteId": {"type": "string"},
+                            },
+                        },
+                    },
+                    "commonErrors": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["pattern", "correctionId"],
+                            "additionalProperties": False,
+                            "properties": {
+                                "pattern": {"type": "string"},
+                                "correctionId": {"type": "string"},
+                            },
+                        },
                     },
                 },
             },
@@ -273,6 +308,35 @@ def validate_tree(manifest_path: Path, modules_dir: Path, errors: list[str]) -> 
                     f"{module_path.name}/{item['id']}: correctKey not in choices"
                 )
 
+            priority = {
+                "standup-sync",
+                "incident-oncall",
+                "manager-updates",
+                "live-dialogue",
+            }
+            if modules_dir.name == "modules" and data["id"] in priority:
+                if item.get("kind") == "dialogue":
+                    for turn in item.get("turns") or []:
+                        if turn.get("speaker") != "you":
+                            continue
+                        errors.extend(
+                            check_package(
+                                f"{data['id']}/{turn['id']}",
+                                turn.get("modelAnswers") or [],
+                                turn.get("slots") or [],
+                                turn.get("commonErrors") or [],
+                            )
+                        )
+                else:
+                    errors.extend(
+                        check_package(
+                            f"{data['id']}/{item['id']}",
+                            item.get("modelAnswers") or [],
+                            item.get("slots") or [],
+                            item.get("commonErrors") or [],
+                        )
+                    )
+
     for path in sorted(modules_dir.glob("*.json")):
         if path.stem not in module_ids:
             errors.append(f"Orphan module file not in manifest: {path.name}")
@@ -291,6 +355,21 @@ def main() -> int:
         if len(errors) == before:
             label = manifest_path.parent.name
             summaries.append(f"{label}: {count} modules ({ready} ready)")
+
+    drills_path = CONTENT / "build" / "drills.json"
+    if drills_path.exists():
+        drills = json.loads(drills_path.read_text(encoding="utf-8"))
+        for drill in drills:
+            if drill.get("theme") != "dasar":
+                continue
+            errors.extend(
+                check_package(
+                    f"dasar/{drill['id']}",
+                    drill.get("modelAnswers") or [],
+                    drill.get("slots") or [],
+                    drill.get("commonErrors") or [],
+                )
+            )
 
     if errors:
         print("Content validation FAILED:", file=sys.stderr)
