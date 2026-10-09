@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
+import { ReviewQueueList } from "@/components/review-queue-list";
 import { getReviewQueue } from "@/lib/review";
 import { getActivePersona } from "@/lib/persona";
-import { LobbyFrame, lobbyCard } from "@/components/lobby-frame";
+import { LobbyFrame } from "@/components/lobby-frame";
 
 export default async function ReviewPage() {
   const session = await auth();
@@ -59,30 +60,17 @@ export default async function ReviewPage() {
           waktunya diulang akan muncul di sini.
         </p>
       ) : (
-        <ol className="mt-6 grid gap-3">
-          {queue.map((item, idx) => (
-            <li key={`${item.moduleId}-${item.itemId}`}>
-              <Link href={item.href} className={lobbyCard}>
-                <span className="flex items-start justify-between gap-4">
-                  <span className="min-w-0">
-                    <span className="text-xs uppercase tracking-[0.16em] text-[var(--accent)]">
-                      {String(idx + 1).padStart(2, "0")} · {item.moduleTitleId}
-                    </span>
-                    <span className="mt-2 block text-base text-[var(--ink)]">{item.prompt}</span>
-                    <span className="mt-1 block text-sm text-[var(--muted)]">{item.promptId}</span>
-                    <span className="mt-3 block text-xs text-[var(--accent)]">
-                      {item.reasonId}
-                      {item.wrongCount > 0 ? ` · salah ${item.wrongCount}x` : ""}
-                    </span>
-                  </span>
-                  <span className="inline-flex h-10 shrink-0 items-center rounded-full border border-[var(--border)] px-4 text-sm text-[var(--ink)] group-hover:border-[var(--accent)] group-hover:text-[var(--accent)]">
-                    Latih
-                  </span>
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ol>
+        <ReviewQueueList
+          items={queue.map((item) => ({
+            key: `${item.moduleId}-${item.itemId}`,
+            href: item.href,
+            moduleTitleId: item.moduleTitleId,
+            prompt: item.prompt,
+            promptId: item.promptId,
+            reasonId: item.reasonId,
+            wrongCount: item.wrongCount,
+          }))}
+        />
       )}
     </LobbyFrame>
   );

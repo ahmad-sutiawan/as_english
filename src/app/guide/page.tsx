@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { GuideModuleList } from "@/components/guide-module-list";
 import { auth } from "@/lib/auth";
 import { getModules } from "@/lib/content";
 import {
@@ -210,28 +211,14 @@ export default async function GuidePage() {
           Kerjakan satu modul yang paling dekat dengan pekerjaan minggu ini.
           Satu soal selesai sudah cukup untuk menutup latihan hari itu.
         </p>
-        <ul className="mt-4 grid gap-3 md:grid-cols-2">
-          {modules.map((mod) => (
-            <li key={mod.id}>
-              <Link
-                href={`/learn/${mod.id}`}
-                className={`${lobbyCard} h-full`}
-              >
-                <span className="flex items-baseline justify-between gap-3">
-                  <span className="font-display text-2xl text-[var(--ink)]">
-                    {mod.titleId}
-                  </span>
-                  <span className="shrink-0 text-xs text-[var(--accent)]">
-                    {mod.itemCount} soal
-                  </span>
-                </span>
-                <span className="mt-1 block text-xs leading-relaxed text-[var(--muted)]">
-                  {mod.description}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <GuideModuleList
+          modules={modules.map((mod) => ({
+            id: mod.id,
+            titleId: mod.titleId,
+            description: mod.description,
+            itemCount: mod.itemCount,
+          }))}
+        />
       </section>
     </LobbyFrame>
   );

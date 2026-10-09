@@ -5,6 +5,7 @@ import { getOrCreateSpeakStats } from "@/lib/speak";
 import { getSpeakManifest } from "@/lib/speak-content";
 import { getActivePersona } from "@/lib/persona";
 import { DIFFICULTY_LABEL_ID, type Difficulty } from "@/types/content";
+import { SpeakPackList } from "@/components/speak-pack-list";
 import { LobbyFrame, StatTile, lobbyCard } from "@/components/lobby-frame";
 
 const PHASES = [
@@ -65,17 +66,7 @@ export default async function SpeakLobbyPage() {
         <h2 className="text-sm font-semibold text-[var(--ink)]">
           Pack lokal · {manifest.itemCount} kalimat
         </h2>
-        <ul className="mt-4 flex flex-wrap gap-2">
-          {manifest.packs.map((pack) => (
-            <li
-              key={pack.id}
-              className="rounded-full border border-[var(--border)] bg-[var(--surface)]/70 px-3 py-1.5 text-xs text-[var(--muted)]"
-            >
-              <span className="text-[var(--ink)]">{pack.titleId}</span>
-              <span className="ml-2 text-[var(--accent)]">{pack.itemCount}</span>
-            </li>
-          ))}
-        </ul>
+        <SpeakPackList packs={manifest.packs} />
       </section>
 
       <section className="mt-8">

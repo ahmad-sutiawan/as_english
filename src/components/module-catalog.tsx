@@ -7,6 +7,7 @@ import {
   DIFFICULTY_LABEL_ID,
   DIFFICULTY_ORDER,
 } from "@/types/content";
+import { ThemeSearch, themeMatches } from "@/components/theme-search";
 
 type ProgressMap = Record<string, { done: number }>;
 
@@ -49,9 +50,13 @@ function formatMix(mix?: DifficultyMix): string {
 export function ModuleCatalog({ modules, progressByModule }: Props) {
   const [sort, setSort] = useState<SortKey>("level-asc");
   const [filter, setFilter] = useState<"all" | Difficulty>("all");
+  const [query, setQuery] = useState("");
 
   const visible = useMemo(() => {
     let list = modules.filter((m) => m.status === "ready");
+    list = list.filter((m) =>
+      themeMatches(query, [m.titleId, m.title, m.description, m.id]),
+    );
     if (filter !== "all") {
       // "has items of this level" — not "module dominant level equals"
       list = list.filter((m) => (m.levelMix?.[filter] ?? 0) > 0);
@@ -91,7 +96,7 @@ export function ModuleCatalog({ modules, progressByModule }: Props) {
     });
 
     return withProgress;
-  }, [modules, progressByModule, sort, filter]);
+  }, [modules, progressByModule, sort, filter, query]);
 
   return (
     <section className="mt-10">
@@ -121,6 +126,13 @@ export function ModuleCatalog({ modules, progressByModule }: Props) {
         </label>
       </div>
 
+      <ThemeSearch
+        value={query}
+        onChange={setQuery}
+        shown={visible.length}
+        total={modules.filter((m) => m.status === "ready").length}
+      />
+
       <div className="mt-4 flex flex-wrap gap-2">
         {FILTERS.map((f) => {
           const active = filter === f.value;
@@ -143,7 +155,7 @@ export function ModuleCatalog({ modules, progressByModule }: Props) {
 
       {visible.length === 0 ? (
         <p className="mt-6 text-sm text-[var(--muted)]">
-          Tidak ada modul untuk filter level ini.
+          Tidak ada tema yang cocok dengan pencarian atau filter level ini.
         </p>
       ) : (
         <ul className="mt-4 grid gap-4 sm:grid-cols-2">

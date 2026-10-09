@@ -150,6 +150,56 @@ export const IT_BUILD_THEMES = [
     titleId: "Dokumentasi",
     description: "Runbook, ADR, dan catatan yang ketinggalan.",
   },
+  {
+    id: "direksi",
+    titleId: "Direksi",
+    description: "Hasil, risiko, dan keputusan untuk Direksi, tanpa jargon.",
+  },
+  {
+    id: "sprint",
+    titleId: "Sprint",
+    description: "Komitmen, sisa pekerjaan, potong scope, dan kesiapan demo.",
+  },
+  {
+    id: "tiket",
+    titleId: "Tiket",
+    description: "Terima tiket, penyebab singkat, solusi sementara, dan ETA.",
+  },
+  {
+    id: "basis-data",
+    titleId: "Basis data",
+    description: "Migrasi, backup, query lambat, dan kunci tabel.",
+  },
+  {
+    id: "monitoring",
+    titleId: "Monitoring",
+    description: "Alert, ambang, noise, dan dashboard.",
+  },
+  {
+    id: "integrasi",
+    titleId: "Integrasi",
+    description: "Kontrak API, timeout, retry, dan perubahan yang memecah klien.",
+  },
+  {
+    id: "perubahan",
+    titleId: "Perubahan",
+    description: "Jendela perubahan, dampak, persetujuan, dan pemilik rollback.",
+  },
+  {
+    id: "kapasitas",
+    titleId: "Kapasitas",
+    description: "Beban, skala, sisa kapasitas, dan biaya.",
+  },
+  {
+    id: "akses",
+    titleId: "Akses",
+    description: "Hak minimum, masa berlaku, dan persetujuan akses.",
+  },
+  {
+    id: "usulan",
+    titleId: "Usulan teknis",
+    description: "Masalah, opsi, rekomendasi, dan tradeoff.",
+  },
 ] as const;
 
 export const HOME_BUILD_THEMES = [

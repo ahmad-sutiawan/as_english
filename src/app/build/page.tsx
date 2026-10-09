@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
+import { BuildThemeList } from "@/components/build-theme-list";
 import {
   BUILD_SESSION_SIZE,
   BUILD_XP_DRILL,
@@ -11,7 +11,7 @@ import {
 } from "@/lib/build";
 import { getActivePersona } from "@/lib/persona";
 import { getLearnerState } from "@/lib/memory";
-import { LobbyFrame, StatTile, lobbyCard } from "@/components/lobby-frame";
+import { LobbyFrame, StatTile } from "@/components/lobby-frame";
 
 export default async function BuildLobbyPage() {
   const session = await auth();
@@ -40,52 +40,21 @@ export default async function BuildLobbyPage() {
 
       <section className="mt-8">
         <h2 className="text-sm font-semibold text-[var(--ink)]">Tema percakapan</h2>
-        <Link
-          href={
-            locked && featured.id !== "dasar"
-              ? "/placement"
-              : `/build/play?theme=${featured.id}`
-          }
-          className={`${lobbyCard} mt-4 bg-[var(--accent-soft)] sm:flex-row sm:items-center sm:justify-between`}
-        >
-          <span>
-            <span className="block font-display text-3xl text-[var(--ink)]">
-              {featured.titleId}
-            </span>
-            <span className="mt-2 block max-w-xl text-sm leading-relaxed text-[var(--muted)]">
-              {featured.description}
-            </span>
-          </span>
-          <span className="mt-4 inline-flex h-10 items-center rounded-full bg-[var(--accent)] px-4 text-sm font-medium text-[#06221e] sm:mt-0">
-            {counts[featured.id] ?? 0} pola
-          </span>
-        </Link>
-        <ul className="mt-3 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {themes.map((theme) => (
-            <li key={theme.id}>
-              {locked && theme.id !== "dasar" ? (
-                <div className={`${lobbyCard} h-full opacity-60`}>
-                  <span className="font-display text-2xl text-[var(--ink)]">{theme.titleId}</span>
-                  <span className="mt-2 block text-sm text-[var(--muted)]">
-                    Terkunci sampai penempatan dasar lulus.
-                  </span>
-                </div>
-              ) : (
-              <Link href={`/build/play?theme=${theme.id}`} className={`${lobbyCard} h-full`}>
-                <span className="flex items-start justify-between gap-3">
-                  <span className="font-display text-2xl text-[var(--ink)]">{theme.titleId}</span>
-                  <span className="text-sm font-medium text-[var(--accent)]">
-                    {counts[theme.id] ?? 0}
-                  </span>
-                </span>
-                <span className="mt-2 block flex-1 text-sm leading-relaxed text-[var(--muted)]">
-                  {theme.description}
-                </span>
-              </Link>
-              )}
-            </li>
-          ))}
-        </ul>
+        <BuildThemeList
+          locked={locked}
+          featured={{
+            id: featured.id,
+            titleId: featured.titleId,
+            description: featured.description,
+            count: counts[featured.id] ?? 0,
+          }}
+          themes={themes.map((theme) => ({
+            id: theme.id,
+            titleId: theme.titleId,
+            description: theme.description,
+            count: counts[theme.id] ?? 0,
+          }))}
+        />
       </section>
 
       <p className="mt-8 text-sm text-[var(--muted)]">
