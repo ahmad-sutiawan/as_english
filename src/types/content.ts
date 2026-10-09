@@ -60,6 +60,11 @@ export type ExerciseItem = {
   /** Learning guide in Indonesian: why the answer is correct */
   explanation: string;
   tags: string[];
+  /** Phrase chunks of the correct English answer, for production checks. */
+  chunks?: string[];
+  slots?: { role: string; roleId: string; text: string }[];
+  modelAnswers?: string[];
+  commonErrors?: Array<string | { pattern: string; correctionId: string }>;
   /** Dialogue turns when kind === "dialogue" */
   turns?: DialogueTurn[];
   tts?: {

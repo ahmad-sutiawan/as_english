@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
-import { prisma } from "@/lib/db";
 import { getItem } from "@/lib/content";
 import { getActivePersona } from "@/lib/persona";
+import { recordItemMemory } from "@/lib/memory";
 
 const bodySchema = z.object({
   moduleId: z.string().min(1),
@@ -41,63 +41,14 @@ export async function POST(request: Request) {
   const correct = choiceKey === item.correctKey;
   const correctChoice = item.choices.find((c) => c.key === item.correctKey);
 
-  await prisma.attempt.create({
-    data: {
+  if (!correct) {
+    await recordItemMemory({
       userId: session.user.id,
-      moduleId,
+      persona,
+      source: "module",
       itemId,
-      typedAnswer: chosen.text,
-      correct,
-    },
-  });
-
-  if (correct) {
-    const existing = await prisma.progress.findUnique({
-      where: {
-        userId_moduleId: { userId: session.user.id, moduleId },
-      },
-    });
-    const completed = new Set(existing?.completedItemIds ?? []);
-    completed.add(itemId);
-    const mastery =
-      existing?.mastery && typeof existing.mastery === "object"
-        ? { ...(existing.mastery as Record<string, boolean>) }
-        : {};
-    mastery[itemId] = true;
-
-    await prisma.progress.upsert({
-      where: {
-        userId_moduleId: { userId: session.user.id, moduleId },
-      },
-      create: {
-        userId: session.user.id,
-        moduleId,
-        completedItemIds: Array.from(completed),
-        score: completed.size,
-        mastery,
-        lastSeenAt: new Date(),
-      },
-      update: {
-        completedItemIds: Array.from(completed),
-        score: completed.size,
-        mastery,
-        lastSeenAt: new Date(),
-      },
-    });
-  } else {
-    await prisma.progress.upsert({
-      where: {
-        userId_moduleId: { userId: session.user.id, moduleId },
-      },
-      create: {
-        userId: session.user.id,
-        moduleId,
-        completedItemIds: [],
-        score: 0,
-        mastery: {},
-        lastSeenAt: new Date(),
-      },
-      update: { lastSeenAt: new Date() },
+      moduleId,
+      result: "wrong",
     });
   }
 

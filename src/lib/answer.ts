@@ -55,3 +55,16 @@ export function scoreAnswer(typed: string, expected: string): ScoreResult {
 
   return { exact: false, nearMiss, distance };
 }
+
+export function answerTokens(input: string): string[] {
+  return normalizeAnswer(input)
+    .replace(/[^\w\s']/g, " ")
+    .split(/\s+/)
+    .filter(Boolean);
+}
+
+/** Target tokens missing from the learner's answer, in target order. */
+export function missedTokens(typed: string, expected: string): string[] {
+  const got = new Set(answerTokens(typed));
+  return answerTokens(expected).filter((token) => !got.has(token));
+}

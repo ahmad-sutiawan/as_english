@@ -37,14 +37,36 @@
         "present_continuous"
       ],
       "commonErrors": [
-        "I finish the migration and I verifying the connection"
+        {
+          "pattern": "I finish the migration and I verifying the connection",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Your supervisor asks: What's the status of the server migration?",
       "scenarioId": "Supervisor: Bagaimana status migrasi server?",
       "modelAnswers": [
-        "I've finished the migration, and I'm verifying the connections now."
+        "I've finished the migration, and I'm verifying the connections now.",
+        "I have finished the migration, and I'm verifying the connections now.",
+        "I've finished the migration, and I am verifying the connections now."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I've finished the migration"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "and I'm verifying"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "the connections now"
+        }
+      ]
     },
     {
       "id": "rep_002",
@@ -80,14 +102,35 @@
         "cause_clause"
       ],
       "commonErrors": [
-        "We about half day behind schedule because flaky test"
+        {
+          "pattern": "We about half day behind schedule because flaky test",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Standup: Are you on track for today's estimate?",
       "scenarioId": "Standup: Apakah Anda on track untuk estimasi hari ini?",
       "modelAnswers": [
-        "We're about half a day behind schedule due to flaky tests."
+        "We're about half a day behind schedule due to flaky tests.",
+        "We are about half a day behind schedule due to flaky tests."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We're about half a day behind"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "schedule"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "due to flaky tests"
+        }
+      ]
     },
     {
       "id": "rep_003",
@@ -120,14 +163,35 @@
         "infinitive"
       ],
       "commonErrors": [
-        "I need more time for investigate root cause"
+        {
+          "pattern": "I need more time for investigate root cause",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Manager: When will you have an update?",
       "scenarioId": "Manager: Kapan Anda punya update?",
       "modelAnswers": [
-        "I need more time to investigate the root cause."
+        "I need more time to investigate the root cause.",
+        "Please i need more time to investigate the root cause."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I need more time"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "to investigate"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "the root cause"
+        }
+      ]
     },
     {
       "id": "rep_004",
@@ -163,14 +227,35 @@
         "passive"
       ],
       "commonErrors": [
-        "Customer impact limited to checkout API in EU region"
+        {
+          "pattern": "Customer impact limited to checkout API in EU region",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Exec asks: What's the customer impact?",
       "scenarioId": "Exec bertanya: Apa dampak ke pelanggan?",
       "modelAnswers": [
-        "Customer impact is limited to the checkout API in the EU region."
+        "Customer impact is limited to the checkout API in the EU region.",
+        "Please customer impact is limited to the checkout API in the EU region."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Customer impact is limited"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "to the checkout API"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "in the EU region"
+        }
+      ]
     },
     {
       "id": "rep_005",
@@ -205,14 +290,35 @@
         "future_will"
       ],
       "commonErrors": [
-        "I will send written update at the end of day"
+        {
+          "pattern": "I will send written update at the end of day",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Your lead asks for a status note.",
       "scenarioId": "Lead Anda minta catatan status.",
       "modelAnswers": [
-        "I'll send a written update by the end of the day."
+        "I'll send a written update by the end of the day.",
+        "I will send a written update by the end of the day."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I'll send"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "a written update"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "by the end of the day"
+        }
+      ]
     },
     {
       "id": "rep_006",
@@ -248,14 +354,35 @@
         "present_continuous"
       ],
       "commonErrors": [
-        "Yesterday I fix the auth bug and today I writing test"
+        {
+          "pattern": "Yesterday I fix the auth bug and today I writing test",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Standup: Give your yesterday / today update.",
       "scenarioId": "Standup: Berikan update yesterday / today Anda.",
       "modelAnswers": [
-        "Yesterday I fixed the auth bug, and today I'm writing tests."
+        "Yesterday I fixed the auth bug, and today I'm writing tests.",
+        "Yesterday I fixed the auth bug, and today I am writing tests."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Yesterday I fixed"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "the auth bug"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "and today I'm writing tests"
+        }
+      ]
     },
     {
       "id": "rep_007",
@@ -289,14 +416,36 @@
         "present_simple"
       ],
       "commonErrors": [
-        "The blocker is miss staging credential from platform team"
+        {
+          "pattern": "The blocker is miss staging credential from platform team",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Standup: Any blockers?",
       "scenarioId": "Standup: Ada blocker?",
       "modelAnswers": [
-        "The blocker is missing staging credentials from the platform team."
+        "The blocker is missing staging credentials from the platform team.",
+        "Please the blocker is missing staging credentials from the platform team.",
+        "the blocker is missing staging credentials from the platform team."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "The blocker is"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "missing staging credentials"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "from the platform team"
+        }
+      ]
     },
     {
       "id": "rep_008",
@@ -332,14 +481,35 @@
         "passive"
       ],
       "commonErrors": [
-        "I recommend we postpone the release until the flake quarantine"
+        {
+          "pattern": "I recommend we postpone the release until the flake quarantine",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Release review: Should we ship tonight?",
       "scenarioId": "Release review: Apakah kita ship malam ini?",
       "modelAnswers": [
-        "I recommend we postpone the release until the flake is quarantined."
+        "I recommend we postpone the release until the flake is quarantined.",
+        "Please i recommend we postpone the release until the flake is quarantined."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I recommend we postpone"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "the release"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "until the flake is quarantined"
+        }
+      ]
     },
     {
       "id": "rep_009",
@@ -372,14 +542,35 @@
         "present_perfect"
       ],
       "commonErrors": [
-        "I attach the log and screenshot in the ticket"
+        {
+          "pattern": "I attach the log and screenshot in the ticket",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Support asks where the evidence is.",
       "scenarioId": "Support bertanya di mana buktinya.",
       "modelAnswers": [
-        "I've attached the logs and screenshots in the ticket."
+        "I've attached the logs and screenshots in the ticket.",
+        "I have attached the logs and screenshots in the ticket."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I've attached"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "the logs and screenshots"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "in the ticket"
+        }
+      ]
     },
     {
       "id": "rep_010",
@@ -413,14 +604,35 @@
         "passive"
       ],
       "commonErrors": [
-        "Risk is medium because only internal tool affected"
+        {
+          "pattern": "Risk is medium because only internal tool affected",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Manager: What's the risk level?",
       "scenarioId": "Manager: Bagaimana level risikonya?",
       "modelAnswers": [
-        "Risk is medium because only internal tools are affected."
+        "Risk is medium because only internal tools are affected.",
+        "Please risk is medium because only internal tools are affected."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Risk is medium"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "because only internal tools"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "are affected"
+        }
+      ]
     }
   ]
 }

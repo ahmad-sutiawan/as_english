@@ -3,6 +3,7 @@ import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { getBuildDrill, stepFor, tokensMatch } from "@/lib/build";
 import { getActivePersona } from "@/lib/persona";
+import { recordItemMemory } from "@/lib/memory";
 
 const bodySchema = z.object({
   drillId: z.string().min(1),
@@ -34,6 +35,16 @@ export async function POST(request: Request) {
 
   const expected = stepFor(drill, step);
   const correct = tokensMatch(tokens, expected.tokens);
+
+  if (step === "transform") {
+    await recordItemMemory({
+      userId: session.user.id,
+      persona,
+      source: "build",
+      itemId: drillId,
+      result: correct ? "exact" : "wrong",
+    });
+  }
 
   return NextResponse.json({
     correct,

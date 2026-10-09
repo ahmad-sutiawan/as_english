@@ -9,7 +9,9 @@ import type {
   ModuleMeta,
 } from "@/types/content";
 import { DIFFICULTY_ORDER } from "@/types/content";
+import type { BuildSlot } from "@/types/build";
 import type { PersonaId } from "@/lib/persona";
+import { deriveChunks, deriveSlots } from "@/lib/form-eval";
 
 function contentBase(persona: PersonaId) {
   const root = path.join(process.cwd(), "content");
@@ -90,6 +92,27 @@ export function getItem(
   const mod = getModule(moduleId, persona);
   if (!mod) return null;
   return mod.items.find((item) => item.id === itemId) ?? null;
+}
+
+export function getItemForm(item: ExerciseItem): {
+  expected: string;
+  expectedId: string;
+  models: string[];
+  chunks: string[];
+  slots: BuildSlot[];
+  commonErrors: ExerciseItem["commonErrors"];
+} {
+  const expected = getCorrectAnswerText(item);
+  const choice = item.choices.find((c) => c.key === item.correctKey);
+  const chunks = item.chunks?.length ? item.chunks : deriveChunks(expected);
+  return {
+    expected,
+    expectedId: choice?.textId ?? "",
+    models: item.modelAnswers?.length ? item.modelAnswers : [expected],
+    chunks,
+    slots: item.slots?.length ? item.slots : deriveSlots(chunks),
+    commonErrors: item.commonErrors ?? [],
+  };
 }
 
 export function getCorrectAnswerText(item: ExerciseItem): string {

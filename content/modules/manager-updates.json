@@ -64,7 +64,34 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Two of three reliability initiatives are on track The SLO dashboard work is blocked on security",
+        "review; I need your help unblocking by Friday or we slip the release by one sprint"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Two of three reliability initiatives are on track The SLO dashboard work is blocked on security"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "review; I need your help unblocking by Friday or we slip the release by one sprint"
+        }
+      ],
+      "modelAnswers": [
+        "Two of three reliability initiatives are on track. The SLO dashboard work is blocked on security review; I need your help unblocking by Friday or we slip the release by one sprint.",
+        "Please two of three reliability initiatives are on track. The SLO dashboard work is blocked on security review; I need your help unblocking by Friday or we slip the release by one sprint.",
+        "Two of three reliability initiatives are on track. the SLO dashboard work is blocked on security review; I need your help unblocking by Friday or we slip the release by one sprint."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Two of three reliability initiatives are on track. SLO dashboard work is blocked on security review; I need your help unblocking by Friday or we slip the release by one sprint.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "mgr-02",
@@ -119,7 +146,40 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Risk: at current growth",
+        "DB CPU hits saturation in ~6 weeks. Impact: elevated latency",
+        "possible checkout errors. Options: (1) scale vertically this month",
+        "(2) accelerate read-replica work. I recommend option 1 as a bridge; need budget approval by next Tuesday"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Risk: at current growth"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "DB CPU hits saturation in ~6 weeks. Impact: elevated latency"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "possible checkout errors. Options: (1) scale vertically this month"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "(2) accelerate read-replica work. I recommend option 1 as a bridge; need budget approval by next Tuesday"
+        }
+      ],
+      "modelAnswers": [
+        "Risk: at current growth, DB CPU hits saturation in ~6 weeks. Impact: elevated latency and possible checkout errors. Options: (1) scale vertically this month, (2) accelerate read-replica work. I recommend option 1 as a bridge; need budget approval by next Tuesday.",
+        "Please risk: at current growth, DB CPU hits saturation in ~6 weeks. Impact: elevated latency and possible checkout errors. Options: (1) scale vertically this month, (2) accelerate read-replica work. I recommend option 1 as a bridge; need budget approval by next Tuesday."
+      ],
+      "commonErrors": []
     },
     {
       "id": "mgr-03",
@@ -174,7 +234,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "We will miss Thursday's date because Payments API delivery slipped to next Monday. New ETA is next Wednesday. I have a workaround spike in progress",
+        "will confirm feasibility by tomorrow noon"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We will miss Thursday's date because Payments API delivery slipped to next Monday. New ETA is next Wednesday. I have a workaround spike in progress"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "will confirm feasibility by tomorrow noon"
+        }
+      ],
+      "modelAnswers": [
+        "We will miss Thursday's date because Payments API delivery slipped to next Monday. New ETA is next Wednesday. I have a workaround spike in progress and will confirm feasibility by tomorrow noon.",
+        "We will miss Thursday's date because Payments API delivery slipped to next Monday. New ETA is next Wednesday. I've a workaround spike in progress and will confirm feasibility by tomorrow noon."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "We will miss Thursday's date because Payments API delivery slipped to next Monday. New ETA is next Wednesday. I a workaround spike in progress and will confirm feasibility by tomorrow noon.",
+          "correctionId": "Kata kerja masih present. Target memakai present perfect."
+        }
+      ]
     },
     {
       "id": "mgr-04",
@@ -228,7 +314,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "We can take it if we pause the observability upgrade or add one contractor. Without that tradeoff",
+        "quality risk is high. Which priority should we protect?"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We can take it if we pause the observability upgrade or add one contractor. Without that tradeoff"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "quality risk is high. Which priority should we protect?"
+        }
+      ],
+      "modelAnswers": [
+        "We can take it if we pause the observability upgrade or add one contractor. Without that tradeoff, quality risk is high. Which priority should we protect?",
+        "Please we can take it if we pause the observability upgrade or add one contractor. Without that tradeoff, quality risk is high. Which priority should we protect?"
+      ],
+      "commonErrors": [
+        {
+          "pattern": "We can take it if we pause observability upgrade or add one contractor. Without that tradeoff, quality risk is high. Which priority should we protect?",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "mgr-05",
@@ -283,7 +395,28 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Requesting approval for $18k/year monitoring. Expected outcome: cut median MTTR by ~25%",
+        "reduce noisy pages. Pilot for 30 days with success metrics attached. Can we decide this week?"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Requesting approval for $18k/year monitoring. Expected outcome: cut median MTTR by ~25%"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "reduce noisy pages. Pilot for 30 days with success metrics attached. Can we decide this week?"
+        }
+      ],
+      "modelAnswers": [
+        "Requesting approval for $18k/year monitoring. Expected outcome: cut median MTTR by ~25% and reduce noisy pages. Pilot for 30 days with success metrics attached. Can we decide this week?",
+        "Please requesting approval for $18k/year monitoring. Expected outcome: cut median MTTR by ~25% and reduce noisy pages. Pilot for 30 days with success metrics attached. Can we decide this week?"
+      ],
+      "commonErrors": []
     },
     {
       "id": "mgr-06",
@@ -337,7 +470,34 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Summary for VP: 47 minutes of checkout degradation. Root cause: bad feature flag default. Mitigated by disabling flag. Customer impact: ~9% failed checkouts. Follow-ups: flag defaults review",
+        "canary checks — owners assigned",
+        "due Friday"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Summary for VP: 47 minutes of checkout degradation. Root cause: bad feature flag default. Mitigated by disabling flag. Customer impact: ~9% failed checkouts. Follow-ups: flag defaults review"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "canary checks — owners assigned"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "due Friday"
+        }
+      ],
+      "modelAnswers": [
+        "Summary for VP: 47 minutes of checkout degradation. Root cause: bad feature flag default. Mitigated by disabling flag. Customer impact: ~9% failed checkouts. Follow-ups: flag defaults review and canary checks — owners assigned, due Friday.",
+        "Please summary for VP: 47 minutes of checkout degradation. Root cause: bad feature flag default. Mitigated by disabling flag. Customer impact: ~9% failed checkouts. Follow-ups: flag defaults review and canary checks — owners assigned, due Friday."
+      ],
+      "commonErrors": []
     },
     {
       "id": "mgr-07",
@@ -392,7 +552,39 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "I want to discuss interrupt load. This week I spent about 60% of time on ad-hoc requests",
+        "which delayed the auth migration. Can we define an intake path",
+        "protect two focus blocks daily?"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I want to discuss interrupt load. This week I spent about 60% of time on ad-hoc requests"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "which delayed the auth migration. Can we define an intake path"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "protect two focus blocks daily?"
+        }
+      ],
+      "modelAnswers": [
+        "I want to discuss interrupt load. This week I spent about 60% of time on ad-hoc requests, which delayed the auth migration. Can we define an intake path and protect two focus blocks daily?",
+        "Please i want to discuss interrupt load. This week I spent about 60% of time on ad-hoc requests, which delayed the auth migration. Can we define an intake path and protect two focus blocks daily?"
+      ],
+      "commonErrors": [
+        {
+          "pattern": "I want to discuss interrupt load. This week I spent about 60% of time on ad-hoc requests, which delayed auth migration. Can we define an intake path and protect two focus blocks daily?",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "mgr-08",
@@ -447,7 +639,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Delivery date is still green",
+        "but quality risk is rising: flaky tests up 30% this month. I propose a two-day stabilization window before the release; otherwise we accept higher rollback risk"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Delivery date is still green"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "but quality risk is rising: flaky tests up 30% this month. I propose a two-day stabilization window before the release; otherwise we accept higher rollback risk"
+        }
+      ],
+      "modelAnswers": [
+        "Delivery date is still green, but quality risk is rising: flaky tests up 30% this month. I propose a two-day stabilization window before the release; otherwise we accept higher rollback risk.",
+        "Please delivery date is still green, but quality risk is rising: flaky tests up 30% this month. I propose a two-day stabilization window before the release; otherwise we accept higher rollback risk."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Delivery date is still green, but quality risk is rising: flaky tests up 30% this month. I propose a two-day stabilization window before release; otherwise we accept higher rollback risk.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "mgr-09",
@@ -502,7 +720,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "I understand the urgency. Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster",
+        "please confirm we accept the elevated risk"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I understand the urgency. Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "please confirm we accept the elevated risk"
+        }
+      ],
+      "modelAnswers": [
+        "I understand the urgency. Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk.",
+        "Please i understand the urgency. Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "I understand urgency. Skipping canaries increases blast radius. I recommend a 5-minute canary on 5% traffic with auto-rollback. If we must go faster, please confirm we accept the elevated risk.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "mgr-10",
@@ -556,7 +800,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Shipped rate-limit change to production at 17:40 local. Expected: fewer abuse spikes. Watch: 429 rate",
+        "checkout success. Rollback command documented in the change ticket. Ping me if 429s exceed 2% for 10 minutes"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Shipped rate-limit change to production at 17:40 local. Expected: fewer abuse spikes. Watch: 429 rate"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "checkout success. Rollback command documented in the change ticket. Ping me if 429s exceed 2% for 10 minutes"
+        }
+      ],
+      "modelAnswers": [
+        "Shipped rate-limit change to production at 17:40 local. Expected: fewer abuse spikes. Watch: 429 rate and checkout success. Rollback command documented in the change ticket. Ping me if 429s exceed 2% for 10 minutes.",
+        "Please shipped rate-limit change to production at 17:40 local. Expected: fewer abuse spikes. Watch: 429 rate and checkout success. Rollback command documented in the change ticket. Ping me if 429s exceed 2% for 10 minutes."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Shipped rate-limit change to production at 17:40 local. Expected: fewer abuse spikes. Watch: 429 rate and checkout success. Rollback command documented in change ticket. Ping me if 429s exceed 2% for 10 minutes.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "mgr-11",
@@ -610,7 +880,34 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Gut feel is cautious. Confidence is medium: canary looks good",
+        "but we lack load-test coverage for peak. Recommendation: delay 48 hours for a targeted test",
+        "or launch with a rapid rollback owner on bridge"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Gut feel is cautious. Confidence is medium: canary looks good"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "but we lack load-test coverage for peak. Recommendation: delay 48 hours for a targeted test"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "or launch with a rapid rollback owner on bridge"
+        }
+      ],
+      "modelAnswers": [
+        "Gut feel is cautious. Confidence is medium: canary looks good, but we lack load-test coverage for peak. Recommendation: delay 48 hours for a targeted test, or launch with a rapid rollback owner on bridge.",
+        "Please gut feel is cautious. Confidence is medium: canary looks good, but we lack load-test coverage for peak. Recommendation: delay 48 hours for a targeted test, or launch with a rapid rollback owner on bridge."
+      ],
+      "commonErrors": []
     },
     {
       "id": "mgr-12",
@@ -664,7 +961,45 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "With one fewer engineer",
+        "I recommend pausing the nice-to-have reporting UI",
+        "protecting checkout reliability",
+        "the partner API. I will send a revised roadmap with customer impact notes today"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "With one fewer engineer"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "I recommend pausing the nice-to-have reporting UI"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "protecting checkout reliability"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "the partner API. I will send a revised roadmap with customer impact notes today"
+        }
+      ],
+      "modelAnswers": [
+        "With one fewer engineer, I recommend pausing the nice-to-have reporting UI and protecting checkout reliability and the partner API. I will send a revised roadmap with customer impact notes today.",
+        "With one fewer engineer, I recommend pausing the nice-to-have reporting UI and protecting checkout reliability and the partner API. I'll send a revised roadmap with customer impact notes today."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "With one fewer engineer, I recommend pausing nice-to-have reporting UI and protecting checkout reliability and the partner API. I will send a revised roadmap with customer impact notes today.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "mgr-13",
@@ -718,7 +1053,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "I need read access to the checkout Grafana folder to finish the weekly",
+        "reliability report by Thursday Could you approve the access request ticket LINK today?"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I need read access to the checkout Grafana folder to finish the weekly"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "reliability report by Thursday Could you approve the access request ticket LINK today?"
+        }
+      ],
+      "modelAnswers": [
+        "I need read access to the checkout Grafana folder to finish the weekly reliability report by Thursday. Could you approve the access request ticket LINK today?",
+        "Please i need read access to the checkout Grafana folder to finish the weekly reliability report by Thursday. Could you approve the access request ticket LINK today?"
+      ],
+      "commonErrors": [
+        {
+          "pattern": "I need read access to checkout Grafana folder to finish the weekly reliability report by Thursday. Could you approve the access request ticket LINK today?",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "mgr-14",
@@ -772,7 +1133,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Glad the outcome helped customers. For accuracy: detection work",
+        "rollback were led by our team with Platform support on dashboards. Happy to co-write a short shared summary if useful"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Glad the outcome helped customers. For accuracy: detection work"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "rollback were led by our team with Platform support on dashboards. Happy to co-write a short shared summary if useful"
+        }
+      ],
+      "modelAnswers": [
+        "Glad the outcome helped customers. For accuracy: detection work and rollback were led by our team with Platform support on dashboards. Happy to co-write a short shared summary if useful.",
+        "Please glad the outcome helped customers. For accuracy: detection work and rollback were led by our team with Platform support on dashboards. Happy to co-write a short shared summary if useful."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Glad outcome helped customers. For accuracy: detection work and rollback were led by our team with Platform support on dashboards. Happy to co-write a short shared summary if useful.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "mgr-15",
@@ -826,7 +1213,28 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Reliability: checkout availability 99.95% vs 99.9% target; two SEV-2s",
+        "both mitigated under 30 minutes; top risk is DB CPU growth — decision needed on scale-up budget this month"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Reliability: checkout availability 99.95% vs 99.9% target; two SEV-2s"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "both mitigated under 30 minutes; top risk is DB CPU growth — decision needed on scale-up budget this month"
+        }
+      ],
+      "modelAnswers": [
+        "Reliability: checkout availability 99.95% vs 99.9% target; two SEV-2s, both mitigated under 30 minutes; top risk is DB CPU growth — decision needed on scale-up budget this month.",
+        "Please reliability: checkout availability 99.95% vs 99.9% target; two SEV-2s, both mitigated under 30 minutes; top risk is DB CPU growth — decision needed on scale-up budget this month."
+      ],
+      "commonErrors": []
     },
     {
       "id": "mgr-16",
@@ -881,7 +1289,39 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Interrupt load rose ~40% from noisy checkout alerts after the partner cutover. Feature velocity held because we protected two makers",
+        "but sustainability is poor. Proposal: tune alerts this week",
+        "move one reliability spike into next sprint"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Interrupt load rose ~40% from noisy checkout alerts after the partner cutover. Feature velocity held because we protected two makers"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "but sustainability is poor. Proposal: tune alerts this week"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "move one reliability spike into next sprint"
+        }
+      ],
+      "modelAnswers": [
+        "Interrupt load rose ~40% from noisy checkout alerts after the partner cutover. Feature velocity held because we protected two makers, but sustainability is poor. Proposal: tune alerts this week and move one reliability spike into next sprint.",
+        "Please interrupt load rose ~40% from noisy checkout alerts after the partner cutover. Feature velocity held because we protected two makers, but sustainability is poor. Proposal: tune alerts this week and move one reliability spike into next sprint."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Interrupt load rose ~40% from noisy checkout alerts after partner cutover. Feature velocity held because we protected two makers, but sustainability is poor. Proposal: tune alerts this week and move one reliability spike into next sprint.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "mgr-17",
@@ -936,7 +1376,34 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "I need two things: a 30-minute contract review with Platform by Wednesday",
+        "temporary cover for Tuesday on-call so I can finish auth tests. With that",
+        "Friday ship stays realistic"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I need two things: a 30-minute contract review with Platform by Wednesday"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "temporary cover for Tuesday on-call so I can finish auth tests. With that"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "Friday ship stays realistic"
+        }
+      ],
+      "modelAnswers": [
+        "I need two things: a 30-minute contract review with Platform by Wednesday, and temporary cover for Tuesday on-call so I can finish auth tests. With that, Friday ship stays realistic.",
+        "Please i need two things: a 30-minute contract review with Platform by Wednesday, and temporary cover for Tuesday on-call so I can finish auth tests. With that, Friday ship stays realistic."
+      ],
+      "commonErrors": []
     },
     {
       "id": "mgr-18",
@@ -991,7 +1458,39 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Recommend a one-week slip: risk of a customer-facing outage outweighs partner optics. We finish failure-injection for payment retries",
+        "validate runbooks",
+        "keep a soft launch path if legal needs a milestone. I will own the partner comms draft"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Recommend a one-week slip: risk of a customer-facing outage outweighs partner optics. We finish failure-injection for payment retries"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "validate runbooks"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "keep a soft launch path if legal needs a milestone. I will own the partner comms draft"
+        }
+      ],
+      "modelAnswers": [
+        "Recommend a one-week slip: risk of a customer-facing outage outweighs partner optics. We finish failure-injection for payment retries, validate runbooks, and keep a soft launch path if legal needs a milestone. I will own the partner comms draft.",
+        "Recommend a one-week slip: risk of a customer-facing outage outweighs partner optics. We finish failure-injection for payment retries, validate runbooks, and keep a soft launch path if legal needs a milestone. I'll own the partner comms draft."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Recommend a one-week slip: risk of a customer-facing outage outweighs partner optics. We finish failure-injection for payment retries, validate runbooks, and keep a soft launch path if legal needs a milestone. I will own partner comms draft.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     }
   ]
 }

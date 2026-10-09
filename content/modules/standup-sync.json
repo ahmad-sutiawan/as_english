@@ -62,7 +62,28 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Yesterday: finished auth middleware Today: rate-limit tests Blocker: need staging",
+        "credentials from platform — ETA blocked until that lands"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Yesterday: finished auth middleware Today: rate-limit tests Blocker: need staging"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "credentials from platform — ETA blocked until that lands"
+        }
+      ],
+      "modelAnswers": [
+        "Yesterday: finished auth middleware. Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands.",
+        "Please yesterday: finished auth middleware. Today: rate-limit tests. Blocker: need staging credentials from platform — ETA blocked until that lands."
+      ],
+      "commonErrors": []
     },
     {
       "id": "stu-02",
@@ -116,7 +137,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "I am slipping half a day because flaky payment tests blocked local verification. I am quarantining the flake",
+        "will still open the PR by end of day tomorrow unless the flake returns"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I am slipping half a day because flaky payment tests blocked local verification. I am quarantining the flake"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "will still open the PR by end of day tomorrow unless the flake returns"
+        }
+      ],
+      "modelAnswers": [
+        "I am slipping half a day because flaky payment tests blocked local verification. I am quarantining the flake and will still open the PR by end of day tomorrow unless the flake returns.",
+        "I'm slipping half a day because flaky payment tests blocked local verification. I'm quarantining the flake and will still open the PR by end of day tomorrow unless the flake returns."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "I am slipping half a day because flaky payment tests blocked local verification. I am quarantining flake and will still open the PR by end of day tomorrow unless the flake returns.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "stu-03",
@@ -170,7 +217,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "I need 20 minutes with Alex after standup to pair on the Redis lock bug. Without that",
+        "my ETA moves from today to tomorrow"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I need 20 minutes with Alex after standup to pair on the Redis lock bug. Without that"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "my ETA moves from today to tomorrow"
+        }
+      ],
+      "modelAnswers": [
+        "I need 20 minutes with Alex after standup to pair on the Redis lock bug. Without that, my ETA moves from today to tomorrow.",
+        "Please i need 20 minutes with Alex after standup to pair on the Redis lock bug. Without that, my ETA moves from today to tomorrow."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "I need 20 minutes with Alex after standup to pair on Redis lock bug. Without that, my ETA moves from today to tomorrow.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "stu-04",
@@ -224,7 +297,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Let's take the API contract offline for ten minutes after standup — Mira",
+        "Jordan with me. Goal: decide request shape so both streams can continue today"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Let's take the API contract offline for ten minutes after standup — Mira"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "Jordan with me. Goal: decide request shape so both streams can continue today"
+        }
+      ],
+      "modelAnswers": [
+        "Let's take the API contract offline for ten minutes after standup — Mira and Jordan with me. Goal: decide request shape so both streams can continue today.",
+        "Please let's take the API contract offline for ten minutes after standup — Mira and Jordan with me. Goal: decide request shape so both streams can continue today."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Let's take API contract offline for ten minutes after standup — Mira and Jordan with me. Goal: decide request shape so both streams can continue today.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "stu-05",
@@ -278,7 +377,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "No blocker now Heads-up: I will need QA support this afternoon for the checkout",
+        "edge cases I will book a slot in the QA channel after standup"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "No blocker now Heads-up: I will need QA support this afternoon for the checkout"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "edge cases I will book a slot in the QA channel after standup"
+        }
+      ],
+      "modelAnswers": [
+        "No blocker now. Heads-up: I will need QA support this afternoon for the checkout edge cases. I will book a slot in the QA channel after standup.",
+        "No blocker now. Heads-up: I'll need QA support this afternoon for the checkout edge cases. I'll book a slot in the QA channel after standup."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "No blocker now. Heads-up: I will need QA support this afternoon for checkout edge cases. I will book a slot in the QA channel after standup.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "stu-06",
@@ -332,7 +457,28 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "This is useful but bigger than standup Parking it for a 15-minute design huddle",
+        "at 11:00 — I will post notes Back to blockers for everyone else"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "This is useful but bigger than standup Parking it for a 15-minute design huddle"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "at 11:00 — I will post notes Back to blockers for everyone else"
+        }
+      ],
+      "modelAnswers": [
+        "This is useful but bigger than standup. Parking it for a 15-minute design huddle at 11:00 — I will post notes. Back to blockers for everyone else.",
+        "This is useful but bigger than standup. Parking it for a 15-minute design huddle at 11:00 — I'll post notes. Back to blockers for everyone else."
+      ],
+      "commonErrors": []
     },
     {
       "id": "stu-07",
@@ -386,7 +532,37 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "I have capacity after lunch. If anyone is at risk on the release checklist",
+        "I can take a verification task — drop it in the thread"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I have capacity after lunch. If anyone is at risk on the release checklist"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "I can take a verification task — drop it in the thread"
+        }
+      ],
+      "modelAnswers": [
+        "I have capacity after lunch. If anyone is at risk on the release checklist, I can take a verification task — drop it in the thread.",
+        "I've capacity after lunch. If anyone is at risk on the release checklist, I can take a verification task — drop it in the thread."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "I have capacity after lunch. If anyone is at risk on release checklist, I can take a verification task — drop it in the thread.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        },
+        {
+          "pattern": "I capacity after lunch. If anyone is at risk on the release checklist, I can take a verification task — drop it in the thread.",
+          "correctionId": "Kata kerja masih present. Target memakai present perfect."
+        }
+      ]
     },
     {
       "id": "stu-08",
@@ -440,7 +616,34 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Can you break that into what is done",
+        "what is left",
+        "where you are stuck? Even a rough percentage helps us unblock you today"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Can you break that into what is done"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "what is left"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "where you are stuck? Even a rough percentage helps us unblock you today"
+        }
+      ],
+      "modelAnswers": [
+        "Can you break that into what is done, what is left, and where you are stuck? Even a rough percentage helps us unblock you today.",
+        "Could you break that into what is done, what is left, and where you are stuck? Even a rough percentage helps us unblock you today."
+      ],
+      "commonErrors": []
     },
     {
       "id": "stu-09",
@@ -494,7 +697,39 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Sorry",
+        "I dropped audio. Could someone paste the action items",
+        "owners in the thread? I will confirm my items in two minutes"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Sorry"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "I dropped audio. Could someone paste the action items"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "owners in the thread? I will confirm my items in two minutes"
+        }
+      ],
+      "modelAnswers": [
+        "Sorry, I dropped audio. Could someone paste the action items and owners in the thread? I will confirm my items in two minutes.",
+        "Sorry, I dropped audio. Could someone paste the action items and owners in the thread? I'll confirm my items in two minutes."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Sorry, I dropped audio. Could someone paste action items and owners in the thread? I will confirm my items in two minutes.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "stu-10",
@@ -548,7 +783,28 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Quick risk flag: error rate on login is trending up 2x since last night I will",
+        "open a war-room thread after standup; not a full SEV yet Continuing with other updates now"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Quick risk flag: error rate on login is trending up 2x since last night I will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "open a war-room thread after standup; not a full SEV yet Continuing with other updates now"
+        }
+      ],
+      "modelAnswers": [
+        "Quick risk flag: error rate on login is trending up 2x since last night. I will open a war-room thread after standup; not a full SEV yet. Continuing with other updates now.",
+        "Quick risk flag: error rate on login is trending up 2x since last night. I'll open a war-room thread after standup; not a full SEV yet. Continuing with other updates now."
+      ],
+      "commonErrors": []
     },
     {
       "id": "stu-11",
@@ -602,7 +858,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "I posted an async standup in the channel with yesterday/today/blockers",
+        "tagged owners. Please reply in-thread before 10:00 your time so we do not wait on the live call"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I posted an async standup in the channel with yesterday/today/blockers"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "tagged owners. Please reply in-thread before 10:00 your time so we do not wait on the live call"
+        }
+      ],
+      "modelAnswers": [
+        "I posted an async standup in the channel with yesterday/today/blockers and tagged owners. Please reply in-thread before 10:00 your time so we do not wait on the live call.",
+        "Please i posted an async standup in the channel with yesterday/today/blockers and tagged owners. Please reply in-thread before 10:00 your time so we do not wait on the live call."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "I posted an async standup in channel with yesterday/today/blockers and tagged owners. Please reply in-thread before 10:00 your time so we do not wait on the live call.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "stu-12",
@@ -656,7 +938,40 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Summary: sprint goal at risk from API",
+        "flaky tests",
+        "QA bandwidth. Owners: me on API decision at 11:00",
+        "Sam on flake quarantine"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Summary: sprint goal at risk from API"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "flaky tests"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "QA bandwidth. Owners: me on API decision at 11:00"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "Sam on flake quarantine"
+        }
+      ],
+      "modelAnswers": [
+        "Summary: sprint goal at risk from API, flaky tests, and QA bandwidth. Owners: me on API decision at 11:00, Sam on flake quarantine, Priya on QA slotting. We reconvene at 4pm with go/no-go for Thursday release.",
+        "Please summary: sprint goal at risk from API, flaky tests, and QA bandwidth. Owners: me on API decision at 11:00, Sam on flake quarantine, Priya on QA slotting. We reconvene at 4pm with go/no-go for Thursday release."
+      ],
+      "commonErrors": []
     },
     {
       "id": "stu-13",
@@ -711,7 +1026,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Yesterday: finished API stubs. Today: implement caching once design review lands. Blocker: design review with Mira — I booked 11:30 today; if it slips I will proceed with the documented default",
+        "confirm async"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Yesterday: finished API stubs. Today: implement caching once design review lands. Blocker: design review with Mira — I booked 11:30 today; if it slips I will proceed with the documented default"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "confirm async"
+        }
+      ],
+      "modelAnswers": [
+        "Yesterday: finished API stubs. Today: implement caching once design review lands. Blocker: design review with Mira — I booked 11:30 today; if it slips I will proceed with the documented default and confirm async.",
+        "Yesterday: finished API stubs. Today: implement caching once design review lands. Blocker: design review with Mira — I booked 11:30 today; if it slips I'll proceed with the documented default and confirm async."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Yesterday: finished API stubs. Today: implement caching once design review lands. Blocker: design review with Mira — I booked 11:30 today; if it slips I will proceed with documented default and confirm async.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "stu-14",
@@ -766,7 +1107,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Thanks — that blocks my QA sign-off. I will join Platform on the staging auth fix after this call",
+        "I will post a workaround checklist in #qa if we need a temporary path for today's tickets"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Thanks — that blocks my QA sign-off. I will join Platform on the staging auth fix after this call"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "I will post a workaround checklist in #qa if we need a temporary path for today's tickets"
+        }
+      ],
+      "modelAnswers": [
+        "Thanks — that blocks my QA sign-off. I will join Platform on the staging auth fix after this call, and I will post a workaround checklist in #qa if we need a temporary path for today's tickets.",
+        "Thanks — that blocks my QA sign-off. I'll join Platform on the staging auth fix after this call, and I'll post a workaround checklist in #qa if we need a temporary path for today's tickets."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Thanks — that blocks my QA sign-off. I will join Platform on staging auth fix after this call, and I will post a workaround checklist in #qa if we need a temporary path for today's tickets.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "stu-15",
@@ -821,7 +1188,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Great that migration landed early. Let's park the speculative refactor — pull the next sprint-priority ticket on observability",
+        "open a short RFC if the refactor still looks valuable after release hardening"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Great that migration landed early. Let's park the speculative refactor — pull the next sprint-priority ticket on observability"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "open a short RFC if the refactor still looks valuable after release hardening"
+        }
+      ],
+      "modelAnswers": [
+        "Great that migration landed early. Let's park the speculative refactor — pull the next sprint-priority ticket on observability, and open a short RFC if the refactor still looks valuable after release hardening.",
+        "Please great that migration landed early. Let's park the speculative refactor — pull the next sprint-priority ticket on observability, and open a short RFC if the refactor still looks valuable after release hardening."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Great that migration landed early. Let's park speculative refactor — pull the next sprint-priority ticket on observability, and open a short RFC if the refactor still looks valuable after release hardening.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     }
   ]
 }

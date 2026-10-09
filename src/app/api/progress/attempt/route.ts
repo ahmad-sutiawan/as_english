@@ -2,9 +2,10 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
-import { getCorrectAnswerText, getItem } from "@/lib/content";
+import { getItem, getItemForm } from "@/lib/content";
+import { evaluateForm } from "@/lib/form-eval";
 import { getActivePersona } from "@/lib/persona";
-import { scoreAnswer } from "@/lib/answer";
+import { recordItemMemory, scheduleSiblingItems } from "@/lib/memory";
 
 const attemptSchema = z.object({
   moduleId: z.string().min(1),
@@ -35,10 +36,18 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Item not found" }, { status: 404 });
   }
 
-  const expected = getCorrectAnswerText(item);
-  const expectedId =
-    item.choices.find((c) => c.key === item.correctKey)?.textId ?? "";
-  const result = scoreAnswer(typedAnswer, expected);
+  const form = getItemForm(item);
+  const evaluated = evaluateForm({
+    transcript: typedAnswer,
+    models: form.models,
+    chunks: form.chunks,
+    slots: form.slots,
+    commonErrors: form.commonErrors ?? [],
+  });
+  const result = {
+    exact: evaluated.exact,
+    nearMiss: evaluated.nearMiss && !evaluated.exact,
+  };
 
   await prisma.attempt.create({
     data: {
@@ -49,6 +58,23 @@ export async function POST(request: Request) {
       correct: result.exact,
     },
   });
+
+  await recordItemMemory({
+    userId: session.user.id,
+    persona,
+    source: "module",
+    itemId,
+    moduleId,
+    result: result.exact ? "exact" : result.nearMiss ? "near" : "wrong",
+  });
+  if (!result.exact) {
+    await scheduleSiblingItems({
+      userId: session.user.id,
+      persona,
+      moduleId,
+      itemId,
+    });
+  }
 
   if (result.exact) {
     const existing = await prisma.progress.findUnique({
@@ -116,9 +142,12 @@ export async function POST(request: Request) {
   return NextResponse.json({
     exact: result.exact,
     nearMiss: result.nearMiss,
-    expected,
-    expectedId,
+    expected: evaluated.bestModel || form.expected,
+    expectedId: form.expectedId,
     explanation: item.explanation,
     correctKey: item.correctKey,
+    missedTokens: evaluated.missedTokens,
+    corrections: evaluated.corrections,
+    headline: evaluated.headline,
   });
 }

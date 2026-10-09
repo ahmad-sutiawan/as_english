@@ -5,6 +5,7 @@ import { getSpeakItem } from "@/lib/speak-content";
 import { evaluateSpeak, builderIsCorrect } from "@/lib/speak-eval";
 import { saveSpeakAttempt } from "@/lib/speak";
 import { getActivePersona } from "@/lib/persona";
+import { recordItemMemory } from "@/lib/memory";
 
 const bodySchema = z.object({
   itemId: z.string().min(1),
@@ -52,10 +53,7 @@ export async function POST(request: Request) {
   }
 
   const evalResult = evaluateSpeak(transcript, item);
-  const mastered =
-    phase === "say_again" &&
-    evalResult.grammarScore >= 85 &&
-    evalResult.meaningOk;
+  const mastered = phase === "say_again" && evalResult.passed;
 
   await saveSpeakAttempt({
     userId: session.user.id,
@@ -63,10 +61,20 @@ export async function POST(request: Request) {
     itemId,
     phase,
     transcript,
-    score: evalResult.grammarScore,
+    score: evalResult.passed ? 100 : 0,
     attemptSlot,
-    mastered: mastered || (phase === "say_again" && evalResult.grammarScore >= 92),
+    mastered,
   });
+
+  if (phase === "say_again" || phase === "scenario") {
+    await recordItemMemory({
+      userId: session.user.id,
+      persona,
+      source: "speak",
+      itemId,
+      result: evalResult.exact ? "exact" : evalResult.nearMiss ? "near" : "wrong",
+    });
+  }
 
   return NextResponse.json({
     ...evalResult,

@@ -34,14 +34,35 @@
         "modal_can"
       ],
       "commonErrors": [
-        "Can we move our one on one to tomorrow afternoon"
+        {
+          "pattern": "Can we move our one on one to tomorrow afternoon",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "You need to reschedule a meeting politely.",
       "scenarioId": "Anda perlu menjadwal ulang meeting dengan sopan.",
       "modelAnswers": [
-        "Can we move our one-on-one to tomorrow afternoon?"
+        "Can we move our one-on-one to tomorrow afternoon?",
+        "Please can we move our one-on-one to tomorrow afternoon?"
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Can we move"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "our one-on-one"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "to tomorrow afternoon"
+        }
+      ]
     },
     {
       "id": "day_002",
@@ -76,14 +97,35 @@
         "future_will"
       ],
       "commonErrors": [
-        "I will get back to you after I checking with the team"
+        {
+          "pattern": "I will get back to you after I checking with the team",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "A colleague asks for an immediate answer you don't have yet.",
       "scenarioId": "Rekan minta jawaban segera yang belum Anda miliki.",
       "modelAnswers": [
-        "I'll get back to you after I check with the team."
+        "I'll get back to you after I check with the team.",
+        "I will get back to you after I check with the team."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I'll get back to you"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "after I check"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "with the team"
+        }
+      ]
     },
     {
       "id": "day_003",
@@ -115,14 +157,35 @@
         "present_simple"
       ],
       "commonErrors": [
-        "Thank for the update that help a lot"
+        {
+          "pattern": "Thank for the update that help a lot",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Someone just shared a clear status in Slack.",
       "scenarioId": "Seseorang baru saja berbagi status jelas di Slack.",
       "modelAnswers": [
-        "Thanks for the update — that helps a lot."
+        "Thanks for the update — that helps a lot.",
+        "Please thanks for the update — that helps a lot."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Thanks for the update"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "that helps"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "a lot"
+        }
+      ]
     },
     {
       "id": "day_004",
@@ -156,14 +219,35 @@
         "present_simple"
       ],
       "commonErrors": [
-        "I unavailable from two to three for dentist appointment"
+        {
+          "pattern": "I unavailable from two to three for dentist appointment",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "You need to block focus time on the calendar.",
       "scenarioId": "Anda perlu memblokir waktu di kalender.",
       "modelAnswers": [
-        "I'm unavailable from two to three for a dentist appointment."
+        "I'm unavailable from two to three for a dentist appointment.",
+        "I am unavailable from two to three for a dentist appointment."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I'm unavailable"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "from two to three"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "for a dentist appointment"
+        }
+      ]
     },
     {
       "id": "day_005",
@@ -198,14 +282,35 @@
         "modal_could"
       ],
       "commonErrors": [
-        "Could you share the latest draft when you have moment"
+        {
+          "pattern": "Could you share the latest draft when you have moment",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Ask politely for a document.",
       "scenarioId": "Minta dokumen dengan sopan.",
       "modelAnswers": [
-        "Could you share the latest draft when you have a moment?"
+        "Could you share the latest draft when you have a moment?",
+        "Please could you share the latest draft when you have a moment?"
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Could you share"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "the latest draft"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "when you have a moment"
+        }
+      ]
     },
     {
       "id": "day_006",
@@ -241,14 +346,35 @@
         "conditional_if"
       ],
       "commonErrors": [
-        "Let me know if you need help with ticket"
+        {
+          "pattern": "Let me know if you need help with ticket",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Offer help after assigning a task.",
       "scenarioId": "Tawarkan bantuan setelah assign tugas.",
       "modelAnswers": [
-        "Let me know if you need any help with the ticket."
+        "Let me know if you need any help with the ticket.",
+        "Please let me know if you need any help with the ticket."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Let me know"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "if you need any help"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "with the ticket"
+        }
+      ]
     },
     {
       "id": "day_007",
@@ -282,14 +408,35 @@
         "present_continuous"
       ],
       "commonErrors": [
-        "I looping in the security team for second look"
+        {
+          "pattern": "I looping in the security team for second look",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Explain why you CC'd another team.",
       "scenarioId": "Jelaskan kenapa Anda CC tim lain.",
       "modelAnswers": [
-        "I'm looping in the security team for a second look."
+        "I'm looping in the security team for a second look.",
+        "I am looping in the security team for a second look."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I'm looping in"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "the security team"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "for a second look"
+        }
+      ]
     },
     {
       "id": "day_008",
@@ -323,14 +470,35 @@
         "past_simple"
       ],
       "commonErrors": [
-        "Sorry for delayed reply I was in back to back meeting"
+        {
+          "pattern": "Sorry for delayed reply I was in back to back meeting",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Apologize for a late Slack reply.",
       "scenarioId": "Minta maaf karena balasan Slack terlambat.",
       "modelAnswers": [
-        "Sorry for the delayed reply — I was in back-to-back meetings."
+        "Sorry for the delayed reply — I was in back-to-back meetings.",
+        "Please sorry for the delayed reply — I was in back-to-back meetings."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Sorry for the delayed reply"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "I was in"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "back-to-back meetings"
+        }
+      ]
     }
   ]
 }

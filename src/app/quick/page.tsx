@@ -1,13 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
-import {
-  QUICK_HEARTS,
-  QUICK_SESSION_SIZE,
-  QUICK_XP_CORRECT,
-  QUICK_XP_PERFECT_BONUS,
-  getOrCreateQuickStats,
-} from "@/lib/quick";
+import { QUICK_SESSION_SIZE, getOrCreateQuickStats } from "@/lib/quick";
 import { DIFFICULTY_LABEL_ID, type Difficulty } from "@/types/content";
 import { LobbyFrame, StatTile, lobbyCard } from "@/components/lobby-frame";
 import { getActivePersona } from "@/lib/persona";
@@ -48,7 +42,7 @@ export default async function QuickLobbyPage() {
     <LobbyFrame
       kicker="Akurasi"
       title="Latihan cepat"
-      lede={`${QUICK_SESSION_SIZE} soal, ${QUICK_HEARTS} nyawa, jawaban dipilih dengan ketukan. Konten tetap workplace English, dengan alur yang berbeda dari modul ketik.`}
+      lede={`${QUICK_SESSION_SIZE} soal pemanasan. Jawaban dipilih dari arti, tanpa nyawa dan tanpa XP. Yang salah langsung diketik ulang.`}
     >
       <section className="grid gap-3 sm:grid-cols-3">
         <StatTile label="XP" value={String(stats.xp)} hint="Jalur Cepat" />
@@ -81,8 +75,7 @@ export default async function QuickLobbyPage() {
       </section>
 
       <p className="mt-8 text-sm text-[var(--muted)]">
-        +{QUICK_XP_CORRECT} XP per benar, +{QUICK_XP_PERFECT_BONUS} bonus jika selesai tanpa
-        kehilangan nyawa. Streak dihitung per hari (WIB).
+        Pemanasan tidak menambah XP. Soal yang salah diketik ulang sebelum sesi ditutup.
       </p>
     </LobbyFrame>
   );

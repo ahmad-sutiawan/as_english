@@ -32,6 +32,8 @@ model User {
   speakStats    SpeakStats[]
   speakProgress SpeakProgress[]
   buildStats    BuildStats[]
+  itemMemories  ItemMemory[]
+  learnerStates LearnerState[]
 }
 
 model QuickStats {
@@ -148,6 +150,41 @@ model SpeakStats {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, persona])
+}
+
+model LearnerState {
+  id               String   @id @default(cuid())
+  userId           String
+  persona          String
+  placementPassed  Boolean  @default(false)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, persona])
+}
+
+model ItemMemory {
+  id            String    @id @default(cuid())
+  userId        String
+  persona       String
+  source        String
+  itemId        String
+  moduleId      String    @default("")
+  correctStreak Int       @default(0)
+  lapseCount    Int       @default(0)
+  intervalDays  Int       @default(0)
+  nextReviewAt  DateTime
+  lastResult    String
+  graduated     Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, persona, source, itemId])
+  @@index([userId, persona, nextReviewAt])
 }
 
 model SpeakProgress {

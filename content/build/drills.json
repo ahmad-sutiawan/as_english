@@ -64,7 +64,12 @@
           "text": "work"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "I work.",
+      "Please i work."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -131,7 +136,12 @@
           "text": "work"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "You work.",
+      "Please you work."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -198,7 +208,12 @@
           "text": "work"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "They work.",
+      "Please they work."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -265,7 +280,12 @@
           "text": "work"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "He works.",
+      "Please he works."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -344,7 +364,12 @@
           "text": "here"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "She works here.",
+      "Please she works here."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -423,7 +448,12 @@
           "text": "SAP"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "I use SAP.",
+      "Please i use SAP."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -502,7 +532,12 @@
           "text": "servers"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "I manage servers.",
+      "Please i manage servers."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -581,7 +616,12 @@
           "text": "busy"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "I am busy.",
+      "I'm busy."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -654,7 +694,12 @@
           "text": "tired"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "She is tired.",
+      "Please she is tired."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -727,7 +772,12 @@
           "text": "ready"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "They are ready.",
+      "Please they are ready."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -810,7 +860,17 @@
           "text": "at the office"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "I work at the office.",
+      "Please i work at the office."
+    ],
+    "commonErrors": [
+      {
+        "pattern": "I work at office.",
+        "correctionId": "Artikel 'the' belum ada pada tempatnya."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -891,7 +951,12 @@
           "text": "in Bogor"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "She lives in Bogor.",
+      "Please she lives in Bogor."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -972,7 +1037,12 @@
           "text": "every day"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "I work every day.",
+      "Please i work every day."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -1069,7 +1139,17 @@
           "text": "every day"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "I work at the office every day.",
+      "Please i work at the office every day."
+    ],
+    "commonErrors": [
+      {
+        "pattern": "I work at office every day.",
+        "correctionId": "Artikel 'the' belum ada pada tempatnya."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -1150,7 +1230,12 @@
           "text": "in Jakarta"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "I work in Jakarta.",
+      "Please i work in Jakarta."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -1231,7 +1316,12 @@
           "text": "here"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "My manager works here.",
+      "Please my manager works here."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -1300,7 +1390,18 @@
           "text": "work"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "The system works.",
+      "Please the system works.",
+      "the system works."
+    ],
+    "commonErrors": [
+      {
+        "pattern": "system works.",
+        "correctionId": "Artikel 'the' belum ada pada tempatnya."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -1381,7 +1482,17 @@
           "text": "the server"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "I checked the server.",
+      "Please i checked the server."
+    ],
+    "commonErrors": [
+      {
+        "pattern": "I checked server.",
+        "correctionId": "Artikel 'the' belum ada pada tempatnya."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -1460,7 +1571,12 @@
           "text": "yesterday"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "I studied yesterday.",
+      "Please i studied yesterday."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -1539,7 +1655,12 @@
           "text": "here"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "I work here.",
+      "Please i work here."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -1612,7 +1733,12 @@
           "text": "here"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "I work here.",
+      "Please i work here."
+    ],
+    "commonErrors": []
   },
   {
     "theme": "dasar",
@@ -1697,7 +1823,17 @@
           "text": "the deadline"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "We need to meet the deadline.",
+      "We have to meet the deadline."
+    ],
+    "commonErrors": [
+      {
+        "pattern": "We need to meet deadline.",
+        "correctionId": "Artikel 'the' belum ada pada tempatnya."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -1776,7 +1912,18 @@
           "text": "network instability"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "The main issue is network instability.",
+      "Please the main issue is network instability.",
+      "the main issue is network instability."
+    ],
+    "commonErrors": [
+      {
+        "pattern": "main issue is network instability.",
+        "correctionId": "Artikel 'the' belum ada pada tempatnya."
+      }
+    ]
   },
   {
     "theme": "dasar",
@@ -1869,7 +2016,17 @@
           "text": "the report"
         }
       ]
-    }
+    },
+    "modelAnswers": [
+      "Yesterday, I completed the report.",
+      "Please yesterday, I completed the report."
+    ],
+    "commonErrors": [
+      {
+        "pattern": "Yesterday, I completed report.",
+        "correctionId": "Artikel 'the' belum ada pada tempatnya."
+      }
+    ]
   },
   {
     "id": "standup-blocked",

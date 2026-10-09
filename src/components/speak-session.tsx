@@ -24,19 +24,28 @@ function PronunciationGuide({
   item,
   onPlay,
   playLabel = "Putar audio",
+  showEnglish = true,
 }: {
   item: SpeakItem;
   onPlay: () => void;
   playLabel?: string;
+  showEnglish?: boolean;
 }) {
   return (
     <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-2)] px-4 py-4">
       <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent)]">
-        Panduan ucapan
+        {showEnglish ? "Panduan ucapan" : "Arti yang harus diucapkan"}
       </p>
-      <p className="mt-2 text-xl leading-snug text-[var(--ink)]">{item.target}</p>
+      {showEnglish ? (
+        <p className="mt-2 text-xl leading-snug text-[var(--ink)]">{item.target}</p>
+      ) : null}
       <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">{item.targetId}</p>
-      {item.chunks.length > 0 ? (
+      {!showEnglish && item.keywords.length > 0 ? (
+        <p className="mt-2 text-xs text-[var(--accent)]">
+          Kata kunci: {item.keywords.join(", ")}
+        </p>
+      ) : null}
+      {showEnglish && item.chunks.length > 0 ? (
         <ul className="mt-3 flex flex-wrap gap-2" aria-label="Potongan kalimat">
           {item.chunks.map((chunk, index) => (
             <li
@@ -182,8 +191,8 @@ export function SpeakSession({ level, caPort = "8011" }: Props) {
         return;
       }
       setFeedback(data);
-      if (slot === 1) setAttempt1(data.grammarScore);
-      if (slot === 2) setAttempt2(data.grammarScore);
+      if (slot === 1) setAttempt1(data.passed ? 1 : 0);
+      if (slot === 2) setAttempt2(data.passed ? 1 : 0);
       setTranscript("");
       setTypedFallback("");
       window.setTimeout(() => {
@@ -219,10 +228,11 @@ export function SpeakSession({ level, caPort = "8011" }: Props) {
       if (data.correct) {
         setBuilderOk(true);
         setFeedback({
-          meaningOk: true,
-          grammarScore: 100,
-          pronunciationProxy: 100,
+          passed: true,
+          nearMiss: false,
+          exact: true,
           corrections: [],
+          missedTokens: [],
           suggestion: data.target,
           headline: "Susunan benar. Sekarang ucapkan.",
           bestModel: data.target,
@@ -316,7 +326,6 @@ export function SpeakSession({ level, caPort = "8011" }: Props) {
   if (!item) return null;
 
   if (phase === "done" && summary) {
-    const delta = summary.attempt2 - summary.attempt1;
     return (
       <section
         className="space-y-4 rounded-md border p-5"
@@ -333,17 +342,10 @@ export function SpeakSession({ level, caPort = "8011" }: Props) {
         </h2>
         <ul className="space-y-1 text-sm text-[var(--ink)]">
           <li>
-            Attempt 1 grammar: <strong>{summary.attempt1}%</strong>
+            Ucapan pertama: <strong>{summary.attempt1 ? "lulus" : "belum"}</strong>
           </li>
           <li>
-            Attempt 2 grammar: <strong>{summary.attempt2}%</strong>
-            {delta !== 0 ? (
-              <span className="text-[var(--accent)]">
-                {" "}
-                ({delta > 0 ? "+" : ""}
-                {delta}%)
-              </span>
-            ) : null}
+            Ucapan kedua: <strong>{summary.attempt2 ? "lulus" : "belum"}</strong>
           </li>
           <li>
             XP: <strong>+{summary.xpGained}</strong> (total {summary.xp})
@@ -411,8 +413,7 @@ export function SpeakSession({ level, caPort = "8011" }: Props) {
         <section className="space-y-4 rounded-md border border-[var(--border)] bg-[var(--surface)] p-5">
           <h2 className="text-lg font-medium text-[var(--ink)]">Listen</h2>
           <p className="text-sm text-[var(--muted)]">
-            Dengarkan kalimat kerja. Teks English di bawah adalah panduan
-            pengucapan: baca bersamaan dengan audio, lalu ucapkan pelan.
+            Dengarkan kalimat kerja. Teks English hanya tampil di langkah ini.
           </p>
           <PronunciationGuide item={item} onPlay={playAudio} />
           <button
@@ -432,13 +433,13 @@ export function SpeakSession({ level, caPort = "8011" }: Props) {
             What did they say?
           </h2>
           <p className="text-sm text-[var(--muted)]">
-            Ucapkan kembali kalimat itu. Panduan English tetap terlihat supaya
-            pengucapan bisa dicek.
+            Ucapkan kembali kalimat itu. Yang terlihat hanya artinya.
           </p>
           <PronunciationGuide
             item={item}
             onPlay={playAudio}
             playLabel="Dengar lagi"
+            showEnglish={false}
           />
           <SpeakMicButton
             disabled={busy}
@@ -522,12 +523,13 @@ export function SpeakSession({ level, caPort = "8011" }: Props) {
         <section className="space-y-4 rounded-md border border-[var(--border)] bg-[var(--surface)] p-5">
           <h2 className="text-lg font-medium text-[var(--ink)]">Speak it</h2>
           <p className="text-sm text-[var(--muted)]">
-            Ucapkan kalimat yang sama. Putar audio sambil mengikuti teks.
+            Ucapkan kalimat yang sama tanpa membaca teks.
           </p>
           <PronunciationGuide
             item={item}
             onPlay={() => playTargetAudio(item.target, item.audio)}
             playLabel="Putar model"
+            showEnglish={false}
           />
           <SpeakMicButton
             disabled={busy}
@@ -561,14 +563,10 @@ export function SpeakSession({ level, caPort = "8011" }: Props) {
           <p className="text-sm font-medium text-[var(--ink)]">{item.scenario}</p>
           <p className="text-xs text-[var(--muted)]">{item.scenarioId}</p>
           <p className="text-sm text-[var(--muted)]">
-            Jawab situasi ini. Kalimat model di bawah boleh diucapkan sebagai
-            panduan, atau diubah selama artinya tetap tepat.
+            Sampaikan maksud yang sama dengan kata-kata Anda. Beberapa kalimat
+            model diterima selama bentuknya cocok.
           </p>
-          <PronunciationGuide
-            item={item}
-            onPlay={() => playTargetAudio(item.target, item.audio)}
-            playLabel="Dengar model"
-          />
+          <p className="text-sm text-[var(--ink)]">{item.targetId}</p>
           <SpeakMicButton
             disabled={busy}
             onTranscript={(t) => setTranscript(t)}
@@ -599,13 +597,13 @@ export function SpeakSession({ level, caPort = "8011" }: Props) {
             🔁 Say it again
           </h2>
           <p className="text-sm text-[var(--muted)]">
-            Ulangi versi yang lebih natural. Ikuti teks English saat audio
-            diputar.
+            Ulangi sekali lagi tanpa melihat teks.
           </p>
           <PronunciationGuide
             item={item}
             onPlay={() => playTargetAudio(item.target, item.audio)}
             playLabel="Dengar lagi"
+            showEnglish={false}
           />
           <SpeakMicButton
             disabled={busy}
@@ -644,9 +642,8 @@ export function SpeakSession({ level, caPort = "8011" }: Props) {
                 });
                 const data = await res.json();
                 setFeedback(data);
-                setAttempt2(data.grammarScore);
-                const mastered =
-                  data.grammarScore >= 85 && data.meaningOk;
+                setAttempt2(data.passed ? 1 : 0);
+                const mastered = Boolean(data.passed);
                 window.setTimeout(() => {
                   void finish(mastered);
                   setBusy(false);
@@ -673,9 +670,11 @@ export function SpeakSession({ level, caPort = "8011" }: Props) {
           }}
         >
           <p className="font-semibold">{feedback.headline}</p>
-          <p className="mt-1 text-[var(--muted)]">
-            Grammar ~{feedback.grammarScore}%
-          </p>
+          {feedback.missedTokens.length > 0 ? (
+            <p className="mt-1 text-[var(--muted)]">
+              Belum kena: {feedback.missedTokens.join(", ")}
+            </p>
+          ) : null}
           {feedback.corrections.length > 0 ? (
             <ul className="mt-2 list-disc space-y-1 pl-4 text-[var(--ink)]">
               {feedback.corrections.map((c) => (

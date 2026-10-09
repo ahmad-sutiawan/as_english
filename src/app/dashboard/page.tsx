@@ -9,6 +9,7 @@ import { getOrCreateBuildStats } from "@/lib/build";
 import { ModuleCatalog } from "@/components/module-catalog";
 import { PersonaPicker } from "@/components/persona-picker";
 import { PERSONA_LABEL, getActivePersona } from "@/lib/persona";
+import { countDue, getLearnerState } from "@/lib/memory";
 import { redirect } from "next/navigation";
 
 function jakartaHour(date = new Date()) {
@@ -41,6 +42,8 @@ export default async function DashboardPage() {
   if (!persona) return <PersonaPicker />;
 
   const modules = getModules(persona);
+  const learner = await getLearnerState(session.user.id, persona);
+  const dueItems = await countDue(session.user.id, persona);
   const [progressRows, stats, quickStats, speakStats, buildStats] = await Promise.all([
     prisma.progress.findMany({
       where: { userId: session.user.id },
@@ -65,34 +68,22 @@ export default async function DashboardPage() {
   const activeStreak = Math.max(buildStats.streak, speakStats.streak, quickStats.streak);
   const name = firstName(session.user.name, session.user.email);
 
-  const next =
-    stats.dueCount > 0
-      ? {
-          href: "/review",
-          title: "Review pintar",
-          detail: `${stats.dueCount} soal sudah jatuh tempo. Ulangi sebelum menambah materi baru.`,
-          action: "Buka antrian",
-        }
-      : buildStats.xp === 0
-        ? {
-            href: "/build",
-            title: "Susun kalimat",
-            detail: "Mulai dari urutan kata. Itu jalur paling pendek dari tahu kosakata ke bisa menyusun.",
-            action: "Mulai susun",
-          }
-        : speakStats.xp < buildStats.xp
-          ? {
-              href: "/speak",
-              title: "Produksi bicara",
-              detail: "Susunan sudah jalan. Berikutnya ambil kalimat yang sama dan ucapkan.",
-              action: "Mulai bicara",
-            }
-          : {
-              href: "/quick",
-              title: "Latihan cepat",
-              detail: "Jaga akurasi dengan 8 soal tap. Nyawa habis berarti pola itu belum otomatis.",
-              action: "Mulai cepat",
-            };
+  const next = !learner.placementPassed
+    ? {
+        href: "/placement",
+        title: "Penempatan",
+        detail: "Dua belas kalimat dasar menentukan tema yang terbuka.",
+        action: "Mulai penempatan",
+      }
+    : {
+        href: "/practice",
+        title: "Sesi latihan",
+        detail:
+          dueItems > 0
+            ? `${dueItems} kalimat jatuh tempo. Sesi mengulang itu sebelum menambah soal.`
+            : "Pemanasan, satu transformasi, satu ucapan, satu soal baru, lalu transfer.",
+        action: "Mulai sesi",
+      };
 
   const tracks = [
     {
@@ -117,7 +108,7 @@ export default async function DashboardPage() {
       href: "/quick",
       kicker: "Akurasi",
       title: "Cepat",
-      detail: "Delapan soal, tiga nyawa. Latihan mengenali kalimat kerja yang benar.",
+      detail: "Empat soal pemanasan, tanpa nyawa. Salah langsung diketik ulang.",
       xp: quickStats.xp,
       streak: quickStats.streak,
       action: "Cepat",

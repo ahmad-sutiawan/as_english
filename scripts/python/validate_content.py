@@ -76,6 +76,38 @@ ITEM_SCHEMA = {
         "correctKey": CHOICE_KEY,
         "explanation": {"type": "string", "minLength": 1},
         "tags": {"type": "array", "items": {"type": "string"}},
+        "chunks": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "modelAnswers": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {"type": "string", "minLength": 1},
+        },
+        "slots": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["role", "roleId", "text"],
+                "additionalProperties": False,
+                "properties": {
+                    "role": {"type": "string"},
+                    "roleId": {"type": "string"},
+                    "text": {"type": "string"},
+                },
+            },
+        },
+        "commonErrors": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["pattern", "correctionId"],
+                "additionalProperties": False,
+                "properties": {
+                    "pattern": {"type": "string"},
+                    "correctionId": {"type": "string"},
+                },
+            },
+        },
         "kind": {"type": "string", "enum": ["mcq", "dialogue"]},
         "turns": {
             "type": "array",

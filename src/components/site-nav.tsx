@@ -9,6 +9,7 @@ import type { PersonaId } from "@/lib/persona";
 
 const LINKS = [
   { href: "/dashboard", label: "Dashboard" },
+  { href: "/practice", label: "Latihan" },
   { href: "/build", label: "Susun" },
   { href: "/quick", label: "Cepat" },
   { href: "/speak", label: "Bicara" },

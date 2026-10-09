@@ -32,23 +32,34 @@ type Summary = {
   bestStreak: number;
 };
 
-type Props = {
-  level: LevelFilter;
+type Miss = {
+  card: QuickCard;
+  meaningId: string;
+  structureId: string;
 };
 
-export function QuickSession({ level }: Props) {
+type Props = {
+  level: LevelFilter;
+  onDone?: () => void;
+};
+
+export function QuickSession({ level, onDone }: Props) {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [items, setItems] = useState<QuickCard[]>([]);
   const [index, setIndex] = useState(0);
-  const [hearts, setHearts] = useState(3);
   const [correctCount, setCorrectCount] = useState(0);
   const [wrongCount, setWrongCount] = useState(0);
   const [feedback, setFeedback] = useState<Feedback | null>(null);
   const [busy, setBusy] = useState(false);
   const [summary, setSummary] = useState<Summary | null>(null);
   const [selected, setSelected] = useState<ChoiceKey | null>(null);
+  const [wrongCards, setWrongCards] = useState<Miss[]>([]);
+  const [phase, setPhase] = useState<"pick" | "produce">("pick");
+  const [produceIndex, setProduceIndex] = useState(0);
+  const [typed, setTyped] = useState("");
+  const [produceNote, setProduceNote] = useState<string | null>(null);
 
   const loadSession = useCallback(async () => {
     setLoading(true);
@@ -59,6 +70,11 @@ export function QuickSession({ level }: Props) {
     setIndex(0);
     setCorrectCount(0);
     setWrongCount(0);
+    setWrongCards([]);
+    setPhase("pick");
+    setProduceIndex(0);
+    setTyped("");
+    setProduceNote(null);
     try {
       const res = await fetch("/api/quick/session", {
         method: "POST",
@@ -72,7 +88,6 @@ export function QuickSession({ level }: Props) {
         return;
       }
       setItems(data.items);
-      setHearts(data.hearts ?? 3);
     } catch {
       setError("Koneksi gagal.");
     } finally {
@@ -88,9 +103,9 @@ export function QuickSession({ level }: Props) {
     cleared: boolean;
     correct: number;
     wrong: number;
-    heartsLeft: number;
   }) {
-    const perfect = opts.cleared && opts.heartsLeft === 3;
+    const perfect = false;
+    const heartsLeft = 0;
     try {
       const res = await fetch("/api/quick/complete", {
         method: "POST",
@@ -98,17 +113,21 @@ export function QuickSession({ level }: Props) {
         body: JSON.stringify({
           correctCount: opts.correct,
           wrongCount: opts.wrong,
-          heartsLeft: opts.heartsLeft,
+          heartsLeft,
           perfect,
         }),
       });
       const data = await res.json();
+      if (onDone) {
+        onDone();
+        return;
+      }
       if (!res.ok) {
         setSummary({
           cleared: opts.cleared,
           correctCount: opts.correct,
           wrongCount: opts.wrong,
-          heartsLeft: opts.heartsLeft,
+          heartsLeft,
           xpGained: 0,
           xpTotal: 0,
           streak: 0,
@@ -120,7 +139,7 @@ export function QuickSession({ level }: Props) {
         cleared: opts.cleared,
         correctCount: opts.correct,
         wrongCount: opts.wrong,
-        heartsLeft: opts.heartsLeft,
+          heartsLeft,
         xpGained: data.xpGained,
         xpTotal: data.xpTotal,
         streak: data.streak,
@@ -131,7 +150,7 @@ export function QuickSession({ level }: Props) {
         cleared: opts.cleared,
         correctCount: opts.correct,
         wrongCount: opts.wrong,
-        heartsLeft: opts.heartsLeft,
+          heartsLeft,
         xpGained: 0,
         xpTotal: 0,
         streak: 0,
@@ -176,7 +195,16 @@ export function QuickSession({ level }: Props) {
 
       let nextCorrect = correctCount;
       let nextWrong = wrongCount;
-      let nextHearts = hearts;
+      const nextWrongCards = data.correct
+        ? wrongCards
+        : [
+            ...wrongCards,
+            {
+              card,
+              meaningId: data.expectedId as string,
+              structureId: data.expectedStructureId as string,
+            },
+          ];
 
       if (data.correct) {
         nextCorrect += 1;
@@ -184,29 +212,26 @@ export function QuickSession({ level }: Props) {
         speak(data.expected);
       } else {
         nextWrong += 1;
-        nextHearts = Math.max(0, hearts - 1);
         setWrongCount(nextWrong);
-        setHearts(nextHearts);
+        setWrongCards(nextWrongCards);
       }
 
       window.setTimeout(() => {
         const isLast = index >= items.length - 1;
-        if (!data.correct && nextHearts <= 0) {
-          void finishSession({
-            cleared: false,
-            correct: nextCorrect,
-            wrong: nextWrong,
-            heartsLeft: 0,
-          });
-          setBusy(false);
-          return;
-        }
         if (isLast) {
+          if (nextWrongCards.length > 0) {
+            setProduceIndex(0);
+            setPhase("produce");
+            setFeedback(null);
+            setSelected(null);
+            setTyped("");
+            setBusy(false);
+            return;
+          }
           void finishSession({
             cleared: true,
             correct: nextCorrect,
             wrong: nextWrong,
-            heartsLeft: nextHearts,
           });
           setBusy(false);
           return;
@@ -222,9 +247,63 @@ export function QuickSession({ level }: Props) {
     }
   }
 
+  async function submitProduce(e: React.FormEvent) {
+    e.preventDefault();
+    const miss = wrongCards[produceIndex];
+    const card = miss?.card;
+    if (!card || busy) return;
+    setBusy(true);
+    setProduceNote(null);
+    try {
+      const res = await fetch("/api/progress/attempt", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          moduleId: card.moduleId,
+          itemId: card.itemId,
+          typedAnswer: typed,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error ?? "Gagal memeriksa.");
+        setBusy(false);
+        return;
+      }
+      const missed = (data.missedTokens as string[] | undefined)?.join(", ");
+      setProduceNote(
+        data.exact
+          ? "Tepat."
+          : `Belum tepat. ${missed ? `Belum kena: ${missed}` : data.headline ?? ""}`,
+      );
+      if (!data.exact) {
+        setBusy(false);
+        return;
+      }
+      const next = produceIndex + 1;
+      window.setTimeout(() => {
+        if (next >= wrongCards.length) {
+          void finishSession({
+            cleared: true,
+            correct: correctCount,
+            wrong: wrongCount,
+          });
+        } else {
+          setProduceIndex(next);
+          setTyped("");
+          setProduceNote(null);
+        }
+        setBusy(false);
+      }, 700);
+    } catch {
+      setError("Koneksi gagal.");
+      setBusy(false);
+    }
+  }
+
   if (loading) {
     return (
-      <p className="text-sm text-[var(--muted)]">Menyiapkan 8 soal cepat…</p>
+      <p className="text-sm text-[var(--muted)]">Menyiapkan 4 soal pemanasan…</p>
     );
   }
 
@@ -258,7 +337,7 @@ export function QuickSession({ level }: Props) {
             color: summary.cleared ? "var(--success-ink)" : "var(--warn)",
           }}
         >
-          {summary.cleared ? "Sesi selesai!" : "Nyawa habis"}
+          Sesi pemanasan selesai
         </h2>
         <ul className="grid gap-2 text-sm sm:grid-cols-2">
           <li className="text-[var(--ink)]">
@@ -268,16 +347,7 @@ export function QuickSession({ level }: Props) {
             Salah: <strong>{summary.wrongCount}</strong>
           </li>
           <li className="text-[var(--ink)]">
-            XP didapat: <strong>+{summary.xpGained}</strong>
-          </li>
-          <li className="text-[var(--ink)]">
-            Total XP: <strong>{summary.xpTotal}</strong>
-          </li>
-          <li className="text-[var(--ink)]">
-            Streak: <strong>{summary.streak} hari</strong>
-          </li>
-          <li className="text-[var(--ink)]">
-            Best streak: <strong>{summary.bestStreak}</strong>
+            Pemanasan tidak menambah XP.
           </li>
         </ul>
         <div className="flex flex-wrap gap-2 pt-2">
@@ -306,6 +376,39 @@ export function QuickSession({ level }: Props) {
     );
   }
 
+  if (phase === "produce") {
+    const miss = wrongCards[produceIndex];
+    if (!miss) return null;
+    const card = miss.card;
+    return (
+      <article className="space-y-4">
+        <p className="text-xs text-[var(--muted)]">
+          Keluarkan {produceIndex + 1}/{wrongCards.length} · {card.moduleTitleId}
+        </p>
+        <p className="text-sm text-[var(--ink)]">{miss.meaningId}</p>
+        <p className="text-xs text-[var(--muted)]">{miss.structureId}</p>
+        <form onSubmit={(e) => void submitProduce(e)} className="space-y-3">
+          <textarea
+            value={typed}
+            onChange={(e) => setTyped(e.target.value)}
+            rows={3}
+            required
+            placeholder="Ketik kalimat English…"
+            className="w-full rounded-md border border-[var(--border)] bg-[var(--surface)] px-3 py-2 text-sm"
+          />
+          {produceNote ? <p className="text-sm text-[var(--ink)]">{produceNote}</p> : null}
+          <button
+            type="submit"
+            disabled={busy || !typed.trim()}
+            className="rounded-md bg-[var(--accent)] px-4 py-2 text-sm font-medium text-[#06221e] disabled:opacity-50"
+          >
+            Periksa
+          </button>
+        </form>
+      </article>
+    );
+  }
+
   const card = items[index];
   if (!card) return null;
   const progress = ((index + (feedback ? 1 : 0)) / items.length) * 100;
@@ -324,20 +427,6 @@ export function QuickSession({ level }: Props) {
             Soal {index + 1}/{items.length} ·{" "}
             {DIFFICULTY_LABEL_ID[card.difficulty]} · {card.moduleTitleId}
           </p>
-        </div>
-        <div
-          className="shrink-0 text-lg tracking-widest"
-          aria-label={`${hearts} nyawa`}
-          title="Nyawa"
-        >
-          {Array.from({ length: 3 }, (_, i) => (
-            <span
-              key={i}
-              className={i < hearts ? "text-[var(--danger)]" : "text-[var(--border)]"}
-            >
-              ♥
-            </span>
-          ))}
         </div>
       </div>
 
@@ -393,11 +482,9 @@ export function QuickSession({ level }: Props) {
                   <span className="mr-2 font-semibold text-[var(--accent)]">
                     {choice.key}.
                   </span>
-                  {choice.text}
-                </p>
-                <p className="mt-1 text-xs text-[var(--muted)]">
                   {choice.textId}
                 </p>
+                <p className="mt-1 text-xs text-[var(--muted)]">{choice.structureId}</p>
               </button>
             </li>
           );
@@ -422,7 +509,7 @@ export function QuickSession({ level }: Props) {
           </p>
           {!feedback.correct ? (
             <p className="mt-1 text-[var(--ink)]">
-              Jawaban: {feedback.expected}
+              Soal ini masuk lapis keluarkan di sesi yang sama.
             </p>
           ) : null}
           <p className="mt-2 text-xs text-[var(--muted)]">

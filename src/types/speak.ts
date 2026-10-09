@@ -10,7 +10,8 @@ export type SpeakItem = {
   scrambled: string[];
   keywords: string[];
   grammarPatterns: string[];
-  commonErrors: string[];
+  commonErrors: Array<string | { pattern: string; correctionId: string }>;
+  slots?: { role: string; roleId: string; text: string }[];
   scenario: string;
   scenarioId: string;
   modelAnswers: string[];
@@ -44,11 +45,12 @@ export type SpeakPhase =
   | "done";
 
 export type SpeakEvalResult = {
-  meaningOk: boolean;
-  grammarScore: number;
-  pronunciationProxy: number;
+  passed: boolean;
+  nearMiss: boolean;
+  exact: boolean;
   corrections: string[];
   suggestion: string;
   headline: string;
   bestModel: string;
+  missedTokens: string[];
 };

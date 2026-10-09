@@ -47,7 +47,36 @@ ITEM_SCHEMA = {
         "scrambled": {"type": "array", "minItems": 3, "items": {"type": "string", "minLength": 1}},
         "keywords": {"type": "array", "minItems": 1, "items": {"type": "string"}},
         "grammarPatterns": {"type": "array", "items": {"type": "string"}},
-        "commonErrors": {"type": "array", "items": {"type": "string"}},
+        "commonErrors": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {"type": "string"},
+                    {
+                        "type": "object",
+                        "required": ["pattern", "correctionId"],
+                        "additionalProperties": False,
+                        "properties": {
+                            "pattern": {"type": "string"},
+                            "correctionId": {"type": "string"},
+                        },
+                    },
+                ]
+            },
+        },
+        "slots": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["role", "roleId", "text"],
+                "additionalProperties": False,
+                "properties": {
+                    "role": {"type": "string"},
+                    "roleId": {"type": "string"},
+                    "text": {"type": "string"},
+                },
+            },
+        },
         "scenario": {"type": "string", "minLength": 1},
         "scenarioId": {"type": "string", "minLength": 1},
         "modelAnswers": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},

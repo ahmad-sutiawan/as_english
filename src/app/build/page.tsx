@@ -10,6 +10,7 @@ import {
   getOrCreateBuildStats,
 } from "@/lib/build";
 import { getActivePersona } from "@/lib/persona";
+import { getLearnerState } from "@/lib/memory";
 import { LobbyFrame, StatTile, lobbyCard } from "@/components/lobby-frame";
 
 export default async function BuildLobbyPage() {
@@ -20,6 +21,8 @@ export default async function BuildLobbyPage() {
   if (!persona) redirect("/dashboard");
 
   const stats = await getOrCreateBuildStats(session.user.id, persona);
+  const learner = await getLearnerState(session.user.id, persona);
+  const locked = !learner.placementPassed;
   const counts = countDrillsByTheme(persona);
   const [featured, ...themes] = getBuildThemes(persona);
 
@@ -38,7 +41,11 @@ export default async function BuildLobbyPage() {
       <section className="mt-8">
         <h2 className="text-sm font-semibold text-[var(--ink)]">Tema percakapan</h2>
         <Link
-          href={`/build/play?theme=${featured.id}`}
+          href={
+            locked && featured.id !== "dasar"
+              ? "/placement"
+              : `/build/play?theme=${featured.id}`
+          }
           className={`${lobbyCard} mt-4 bg-[var(--accent-soft)] sm:flex-row sm:items-center sm:justify-between`}
         >
           <span>
@@ -56,6 +63,14 @@ export default async function BuildLobbyPage() {
         <ul className="mt-3 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           {themes.map((theme) => (
             <li key={theme.id}>
+              {locked && theme.id !== "dasar" ? (
+                <div className={`${lobbyCard} h-full opacity-60`}>
+                  <span className="font-display text-2xl text-[var(--ink)]">{theme.titleId}</span>
+                  <span className="mt-2 block text-sm text-[var(--muted)]">
+                    Terkunci sampai penempatan dasar lulus.
+                  </span>
+                </div>
+              ) : (
               <Link href={`/build/play?theme=${theme.id}`} className={`${lobbyCard} h-full`}>
                 <span className="flex items-start justify-between gap-3">
                   <span className="font-display text-2xl text-[var(--ink)]">{theme.titleId}</span>
@@ -67,6 +82,7 @@ export default async function BuildLobbyPage() {
                   {theme.description}
                 </span>
               </Link>
+              )}
             </li>
           ))}
         </ul>

@@ -113,7 +113,7 @@ export function DialoguePanel({
         </p>
         <ol className="mt-2 list-decimal space-y-1 pl-4">
           <li>Baca skenario &amp; putar giliran lawan bicara.</li>
-          <li>Di giliranmu: baca opsi EN + arti, ketik jawaban English.</li>
+          <li>Di giliranmu: pilih dari arti, lalu ketik English tanpa melihat opsi.</li>
           <li>Setelah benar, lanjut giliran berikutnya sampai selesai.</li>
           <li>Pakai speak-back untuk melatih lidah setelah tiap jawaban benar.</li>
         </ol>
@@ -206,9 +206,9 @@ export function DialoguePanel({
                     <span className="mr-2 font-semibold text-[var(--accent)]">
                       {choice.key}.
                     </span>
-                    {choice.text}
+                    {choice.textId}
                   </p>
-                  <SpeakButton text={choice.text} label="Putar EN" />
+                  <SpeakButton text={choice.text} label="Dengar" />
                 </div>
                 <p className="mt-2 rounded-md border border-[var(--border)] bg-[var(--surface-2)] px-3 py-2 text-sm text-[var(--muted)]">
                   <span className="mr-1.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--accent)]">

@@ -63,7 +63,40 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "We are seeing elevated 5xx on checkout API",
+        "currently about 18%",
+        "rising. I am investigating root cause",
+        "will share a mitigation plan in five minutes"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We are seeing elevated 5xx on checkout API"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "currently about 18%"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "rising. I am investigating root cause"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "will share a mitigation plan in five minutes"
+        }
+      ],
+      "modelAnswers": [
+        "We are seeing elevated 5xx on checkout API, currently about 18% and rising. I am investigating root cause and will share a mitigation plan in five minutes.",
+        "We are seeing elevated 5xx on checkout API, currently about 18% and rising. I'm investigating root cause and will share a mitigation plan in five minutes."
+      ],
+      "commonErrors": []
     },
     {
       "id": "inc-02",
@@ -118,7 +151,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Rolling back the bad config now ETA three minutes",
+        "I will confirm once error rate returns to baseline"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Rolling back the bad config now ETA three minutes"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "I will confirm once error rate returns to baseline"
+        }
+      ],
+      "modelAnswers": [
+        "Rolling back the bad config now. ETA three minutes. I will confirm once error rate returns to baseline.",
+        "Rolling back the bad config now. ETA three minutes. I'll confirm once error rate returns to baseline."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Rolling back bad config now. ETA three minutes. I will confirm once error rate returns to baseline.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "inc-03",
@@ -173,7 +232,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Our checkout service is currently degraded. We have identified the cause",
+        "are applying a fix. We will update again within 15 minutes"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Our checkout service is currently degraded. We have identified the cause"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "are applying a fix. We will update again within 15 minutes"
+        }
+      ],
+      "modelAnswers": [
+        "Our checkout service is currently degraded. We have identified the cause and are applying a fix. We will update again within 15 minutes.",
+        "Please our checkout service is currently degraded. We have identified the cause and are applying a fix. We will update again within 15 minutes."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Our checkout service is currently degraded. We have identified cause and are applying a fix. We will update again within 15 minutes.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "inc-04",
@@ -227,7 +312,39 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "SEV-2 checkout 5xx is mitigated via config rollback. Error rate is back to baseline. Remaining work: confirm dashboards for 30 minutes",
+        "draft the incident timeline. Docs",
+        "Slack thread linked in the ticket"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "SEV-2 checkout 5xx is mitigated via config rollback. Error rate is back to baseline. Remaining work: confirm dashboards for 30 minutes"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "draft the incident timeline. Docs"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "Slack thread linked in the ticket"
+        }
+      ],
+      "modelAnswers": [
+        "SEV-2 checkout 5xx is mitigated via config rollback. Error rate is back to baseline. Remaining work: confirm dashboards for 30 minutes and draft the incident timeline. Docs and Slack thread linked in the ticket.",
+        "Please sEV-2 checkout 5xx is mitigated via config rollback. Error rate is back to baseline. Remaining work: confirm dashboards for 30 minutes and draft the incident timeline. Docs and Slack thread linked in the ticket."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "SEV-2 checkout 5xx is mitigated via config rollback. Error rate is back to baseline. Remaining work: confirm dashboards for 30 minutes and draft incident timeline. Docs and Slack thread linked in the ticket.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "inc-05",
@@ -281,7 +398,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Let's parallelize clearly: Alex owns DB connection pool checks",
+        "Mira owns recent deploy diffs. Please post findings in the thread; I will synthesize next steps in three minutes"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Let's parallelize clearly: Alex owns DB connection pool checks"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "Mira owns recent deploy diffs. Please post findings in the thread; I will synthesize next steps in three minutes"
+        }
+      ],
+      "modelAnswers": [
+        "Let's parallelize clearly: Alex owns DB connection pool checks, Mira owns recent deploy diffs. Please post findings in the thread; I will synthesize next steps in three minutes.",
+        "Let's parallelize clearly: Alex owns DB connection pool checks, Mira owns recent deploy diffs. Please post findings in the thread; I'll synthesize next steps in three minutes."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Let's parallelize clearly: Alex owns DB connection pool checks, Mira owns recent deploy diffs. Please post findings in thread; I will synthesize next steps in three minutes.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "inc-06",
@@ -336,7 +479,28 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Treating this as SEV-2: partial degradation affecting about 12% of checkout users due to vendor timeouts. We enabled stricter timeouts",
+        "a fallback path; monitoring recovery"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Treating this as SEV-2: partial degradation affecting about 12% of checkout users due to vendor timeouts. We enabled stricter timeouts"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "a fallback path; monitoring recovery"
+        }
+      ],
+      "modelAnswers": [
+        "Treating this as SEV-2: partial degradation affecting about 12% of checkout users due to vendor timeouts. We enabled stricter timeouts and a fallback path; monitoring recovery.",
+        "Please treating this as SEV-2: partial degradation affecting about 12% of checkout users due to vendor timeouts. We enabled stricter timeouts and a fallback path; monitoring recovery."
+      ],
+      "commonErrors": []
     },
     {
       "id": "inc-07",
@@ -391,7 +555,28 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Yes — please announce a short maintenance for write operations. Planned failover starts in 10 minutes",
+        "should complete within five minutes. I will confirm when writes are healthy"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Yes — please announce a short maintenance for write operations. Planned failover starts in 10 minutes"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "should complete within five minutes. I will confirm when writes are healthy"
+        }
+      ],
+      "modelAnswers": [
+        "Yes — please announce a short maintenance for write operations. Planned failover starts in 10 minutes and should complete within five minutes. I will confirm when writes are healthy.",
+        "Yes — please announce a short maintenance for write operations. Planned failover starts in 10 minutes and should complete within five minutes. I'll confirm when writes are healthy."
+      ],
+      "commonErrors": []
     },
     {
       "id": "inc-08",
@@ -446,7 +631,45 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Before a full restart",
+        "let's check the last deploy",
+        "error signatures for two minutes. If it still looks like a bad process state",
+        "we can restart a canary first"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Before a full restart"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "let's check the last deploy"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "error signatures for two minutes. If it still looks like a bad process state"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "we can restart a canary first"
+        }
+      ],
+      "modelAnswers": [
+        "Before a full restart, let's check the last deploy and error signatures for two minutes. If it still looks like a bad process state, we can restart a canary first.",
+        "Please before a full restart, let's check the last deploy and error signatures for two minutes. If it still looks like a bad process state, we can restart a canary first."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Before a full restart, let's check last deploy and error signatures for two minutes. If it still looks like a bad process state, we can restart a canary first.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "inc-09",
@@ -501,7 +724,45 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Service is restored. We will share a blameless timeline",
+        "concrete follow-ups in the postmortem within 24 hours",
+        "including detection",
+        "prevention gaps"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Service is restored. We will share a blameless timeline"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "concrete follow-ups in the postmortem within 24 hours"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "including detection"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "prevention gaps"
+        }
+      ],
+      "modelAnswers": [
+        "Service is restored. We will share a blameless timeline and concrete follow-ups in the postmortem within 24 hours, including detection and prevention gaps.",
+        "Please service is restored. We will share a blameless timeline and concrete follow-ups in the postmortem within 24 hours, including detection and prevention gaps."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Service is restored. We will share a blameless timeline and concrete follow-ups in postmortem within 24 hours, including detection and prevention gaps.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "inc-10",
@@ -556,7 +817,28 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Impact: checkout errors elevated. Status: mitigated via config rollback at 14:12 UTC. Current: error rate normal. Next: monitor for 30 minutes",
+        "open postmortem doc"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Impact: checkout errors elevated. Status: mitigated via config rollback at 14:12 UTC. Current: error rate normal. Next: monitor for 30 minutes"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "open postmortem doc"
+        }
+      ],
+      "modelAnswers": [
+        "Impact: checkout errors elevated. Status: mitigated via config rollback at 14:12 UTC. Current: error rate normal. Next: monitor for 30 minutes and open postmortem doc.",
+        "Please impact: checkout errors elevated. Status: mitigated via config rollback at 14:12 UTC. Current: error rate normal. Next: monitor for 30 minutes and open postmortem doc."
+      ],
+      "commonErrors": []
     },
     {
       "id": "inc-11",
@@ -610,7 +892,34 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Please hold public posts until we confirm stable recovery for 30 minutes. Draft customer-safe language with me: acknowledge disruption",
+        "state we are restoring service",
+        "avoid root-cause speculation"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Please hold public posts until we confirm stable recovery for 30 minutes. Draft customer-safe language with me: acknowledge disruption"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "state we are restoring service"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "avoid root-cause speculation"
+        }
+      ],
+      "modelAnswers": [
+        "Please hold public posts until we confirm stable recovery for 30 minutes. Draft customer-safe language with me: acknowledge disruption, state we are restoring service, avoid root-cause speculation.",
+        "hold public posts until we confirm stable recovery for 30 minutes. Draft customer-safe language with me: acknowledge disruption, state we are restoring service, avoid root-cause speculation."
+      ],
+      "commonErrors": []
     },
     {
       "id": "inc-12",
@@ -664,7 +973,28 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Hypothesis: upstream auth latency may be contributing. I am validating with dependency dashboards now",
+        "will confirm or retire this theory in three minutes"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Hypothesis: upstream auth latency may be contributing. I am validating with dependency dashboards now"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "will confirm or retire this theory in three minutes"
+        }
+      ],
+      "modelAnswers": [
+        "Hypothesis: upstream auth latency may be contributing. I am validating with dependency dashboards now and will confirm or retire this theory in three minutes.",
+        "Hypothesis: upstream auth latency may be contributing. I'm validating with dependency dashboards now and will confirm or retire this theory in three minutes."
+      ],
+      "commonErrors": []
     },
     {
       "id": "inc-13",
@@ -718,7 +1048,33 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "This alert has no user impact. I am acknowledging",
+        "opening a ticket to tune the threshold after the shift. Continuing to watch true customer symptoms"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "This alert has no user impact. I am acknowledging"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "opening a ticket to tune the threshold after the shift. Continuing to watch true customer symptoms"
+        }
+      ],
+      "modelAnswers": [
+        "This alert has no user impact. I am acknowledging and opening a ticket to tune the threshold after the shift. Continuing to watch true customer symptoms.",
+        "This alert has no user impact. I'm acknowledging and opening a ticket to tune the threshold after the shift. Continuing to watch true customer symptoms."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "This alert has no user impact. I am acknowledging and opening a ticket to tune threshold after the shift. Continuing to watch true customer symptoms.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "inc-14",
@@ -772,7 +1128,28 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "I can share aggregate impact now: about 9% checkout failures globally. Per-customer lists will take longer; Mira owns that extract",
+        "will post in 20 minutes while I keep mitigating"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I can share aggregate impact now: about 9% checkout failures globally. Per-customer lists will take longer; Mira owns that extract"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "will post in 20 minutes while I keep mitigating"
+        }
+      ],
+      "modelAnswers": [
+        "I can share aggregate impact now: about 9% checkout failures globally. Per-customer lists will take longer; Mira owns that extract and will post in 20 minutes while I keep mitigating.",
+        "Please i can share aggregate impact now: about 9% checkout failures globally. Per-customer lists will take longer; Mira owns that extract and will post in 20 minutes while I keep mitigating."
+      ],
+      "commonErrors": []
     },
     {
       "id": "inc-15",
@@ -826,7 +1203,34 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Service is stable. Let's freeze non-essential changes for 60 minutes",
+        "watch golden signals",
+        "take risky improvements through a reviewed change with canary. Stability first"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Service is stable. Let's freeze non-essential changes for 60 minutes"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "watch golden signals"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "take risky improvements through a reviewed change with canary. Stability first"
+        }
+      ],
+      "modelAnswers": [
+        "Service is stable. Let's freeze non-essential changes for 60 minutes, watch golden signals, and take risky improvements through a reviewed change with canary. Stability first.",
+        "Please service is stable. Let's freeze non-essential changes for 60 minutes, watch golden signals, and take risky improvements through a reviewed change with canary. Stability first."
+      ],
+      "commonErrors": []
     },
     {
       "id": "inc-16",
@@ -881,7 +1285,39 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Impact is regional: APAC checkout 5xx ~12% for 8 minutes; other regions normal. I am isolating region traffic",
+        "checking the last deploy",
+        "dependency health in APAC. Next update in 5 minutes"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Impact is regional: APAC checkout 5xx ~12% for 8 minutes; other regions normal. I am isolating region traffic"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "checking the last deploy"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "dependency health in APAC. Next update in 5 minutes"
+        }
+      ],
+      "modelAnswers": [
+        "Impact is regional: APAC checkout 5xx ~12% for 8 minutes; other regions normal. I am isolating region traffic and checking the last deploy and dependency health in APAC. Next update in 5 minutes.",
+        "Impact is regional: APAC checkout 5xx ~12% for 8 minutes; other regions normal. I'm isolating region traffic and checking the last deploy and dependency health in APAC. Next update in 5 minutes."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Impact is regional: APAC checkout 5xx ~12% for 8 minutes; other regions normal. I am isolating region traffic and checking last deploy and dependency health in APAC. Next update in 5 minutes.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "inc-17",
@@ -936,7 +1372,45 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "Got it — I will capture timeline events with UTC timestamps",
+        "owners",
+        "decisions in the incident doc",
+        "ping you if anything looks inconsistent. You keep mitigating"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Got it — I will capture timeline events with UTC timestamps"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "owners"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "decisions in the incident doc"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "ping you if anything looks inconsistent. You keep mitigating"
+        }
+      ],
+      "modelAnswers": [
+        "Got it — I will capture timeline events with UTC timestamps, owners, and decisions in the incident doc, and ping you if anything looks inconsistent. You keep mitigating.",
+        "Got it — I'll capture timeline events with UTC timestamps, owners, and decisions in the incident doc, and ping you if anything looks inconsistent. You keep mitigating."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "Got it — I will capture timeline events with UTC timestamps, owners, and decisions in incident doc, and ping you if anything looks inconsistent. You keep mitigating.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     },
     {
       "id": "inc-18",
@@ -991,7 +1465,45 @@
         "scenario": true,
         "prompt": true,
         "answer": true
-      }
+      },
+      "chunks": [
+        "We mitigated customer impact. Leading hypothesis is a bad cache config in the last deploy",
+        "but root cause is not confirmed. For all-hands I can share impact",
+        "mitigation",
+        "open questions — not a final RCA. Full RCA after the postmortem"
+      ],
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We mitigated customer impact. Leading hypothesis is a bad cache config in the last deploy"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "but root cause is not confirmed. For all-hands I can share impact"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "mitigation"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "open questions — not a final RCA. Full RCA after the postmortem"
+        }
+      ],
+      "modelAnswers": [
+        "We mitigated customer impact. Leading hypothesis is a bad cache config in the last deploy, but root cause is not confirmed. For all-hands I can share impact, mitigation, and open questions — not a final RCA. Full RCA after the postmortem.",
+        "Please we mitigated customer impact. Leading hypothesis is a bad cache config in the last deploy, but root cause is not confirmed. For all-hands I can share impact, mitigation, and open questions — not a final RCA. Full RCA after the postmortem."
+      ],
+      "commonErrors": [
+        {
+          "pattern": "We mitigated customer impact. Leading hypothesis is a bad cache config in last deploy, but root cause is not confirmed. For all-hands I can share impact, mitigation, and open questions — not a final RCA. Full RCA after the postmortem.",
+          "correctionId": "Artikel 'the' belum ada pada tempatnya."
+        }
+      ]
     }
   ]
 }

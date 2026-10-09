@@ -7,8 +7,8 @@ import type { QuickCard } from "@/types/quick";
 
 export type { QuickCard } from "@/types/quick";
 
-export const QUICK_SESSION_SIZE = 8;
-export const QUICK_HEARTS = 3;
+export const QUICK_SESSION_SIZE = 4;
+export const QUICK_HEARTS = 0;
 export const QUICK_XP_CORRECT = 10;
 export const QUICK_XP_PERFECT_BONUS = 20;
 
@@ -59,14 +59,6 @@ export function jakartaDateKey(d = new Date()): string {
     month: "2-digit",
     day: "2-digit",
   }).format(d);
-}
-
-function yesterdayJakartaKey(todayKey: string): string {
-  const [y, m, day] = todayKey.split("-").map(Number);
-  // noon UTC avoids DST edge; Jakarta has no DST
-  const dt = new Date(Date.UTC(y, m - 1, day, 5, 0, 0));
-  dt.setUTCDate(dt.getUTCDate() - 1);
-  return jakartaDateKey(dt);
 }
 
 export async function getOrCreateQuickStats(userId: string, persona: PersonaId) {
@@ -154,42 +146,13 @@ export type CompleteQuickResult = {
 export async function completeQuickSession(
   userId: string,
   persona: PersonaId,
-  opts: { correctCount: number; perfect: boolean },
+  _opts: { correctCount: number; perfect: boolean },
 ): Promise<CompleteQuickResult> {
-  const xpGained =
-    opts.correctCount * QUICK_XP_CORRECT +
-    (opts.perfect ? QUICK_XP_PERFECT_BONUS : 0);
-
-  const today = jakartaDateKey();
   const stats = await getOrCreateQuickStats(userId, persona);
-  const lastKey = stats.lastPlayDate
-    ? jakartaDateKey(stats.lastPlayDate)
-    : null;
-
-  let streak = stats.streak;
-  if (lastKey === today) {
-    // already played today — keep streak, still add XP
-  } else if (lastKey === yesterdayJakartaKey(today)) {
-    streak = stats.streak + 1;
-  } else {
-    streak = 1;
-  }
-
-  const bestStreak = Math.max(stats.bestStreak, streak);
-  const updated = await prisma.quickStats.update({
-    where: { userId_persona: { userId, persona } },
-    data: {
-      xp: stats.xp + xpGained,
-      streak,
-      bestStreak,
-      lastPlayDate: new Date(),
-    },
-  });
-
   return {
-    xpGained,
-    xpTotal: updated.xp,
-    streak: updated.streak,
-    bestStreak: updated.bestStreak,
+    xpGained: 0,
+    xpTotal: stats.xp,
+    streak: stats.streak,
+    bestStreak: stats.bestStreak,
   };
 }

@@ -1,5 +1,8 @@
 import { prisma } from "@/lib/db";
 import { getModule, getModules } from "@/lib/content";
+import { getBuildDrill } from "@/lib/build";
+import { getSpeakItem } from "@/lib/speak-content";
+import { listDue } from "@/lib/memory";
 import type { PersonaId } from "@/lib/persona";
 
 export type ReviewItem = {
@@ -97,6 +100,7 @@ export async function getReviewQueue(
   persona: PersonaId,
 ): Promise<ReviewItem[]> {
   const now = new Date();
+  const dueMemory = await listDue(userId, persona, limit);
   const stats = await loadItemStats(userId);
   const progressRows = await prisma.progress.findMany({ where: { userId } });
   const completedByModule = new Map(
@@ -104,6 +108,71 @@ export async function getReviewQueue(
   );
 
   const queue: ReviewItem[] = [];
+
+  for (const row of dueMemory) {
+    if (row.source === "module" && row.moduleId) {
+      const mod = getModule(row.moduleId, persona);
+      const item = mod?.items.find((entry) => entry.id === row.itemId);
+      if (!mod || !item) continue;
+      queue.push({
+        moduleId: mod.id,
+        moduleTitle: mod.title,
+        moduleTitleId: mod.titleId,
+        itemId: item.id,
+        prompt: item.prompt,
+        promptId: item.promptId,
+        reason: row.lastResult === "sibling" ? "belum_dikuasai" : row.lastResult === "exact" ? "ulang_jadwal" : "salah_baru",
+        reasonId:
+          row.lastResult === "sibling"
+            ? "Pola yang sama masih lemah"
+            : row.lastResult === "near" || row.lastResult === "wrong"
+              ? "Baru saja salah — ulangi sekarang"
+              : `Jadwal ulang · ${row.intervalDays || 1} hari`,
+        priority: 2000 - queue.length,
+        wrongCount: row.lapseCount,
+        correctStreak: row.correctStreak,
+        href: `/learn/${mod.id}/${item.id}?from=review`,
+      });
+      continue;
+    }
+    if (row.source === "build") {
+      const drill = getBuildDrill(row.itemId, persona);
+      if (!drill) continue;
+      queue.push({
+        moduleId: "build",
+        moduleTitle: "Build",
+        moduleTitleId: "Susun",
+        itemId: drill.id,
+        prompt: drill.assemble.sentence,
+        promptId: drill.meaningId,
+        reason: "ulang_jadwal",
+        reasonId: "Transformasi jatuh tempo",
+        priority: 1800,
+        wrongCount: row.lapseCount,
+        correctStreak: row.correctStreak,
+        href: `/build/play?theme=${drill.theme}`,
+      });
+      continue;
+    }
+    if (row.source === "speak") {
+      const speak = getSpeakItem(row.itemId, persona);
+      if (!speak) continue;
+      queue.push({
+        moduleId: "speak",
+        moduleTitle: speak.category,
+        moduleTitleId: "Bicara",
+        itemId: speak.id,
+        prompt: speak.scenario,
+        promptId: speak.targetId,
+        reason: "ulang_jadwal",
+        reasonId: "Ucapan jatuh tempo",
+        priority: 1700,
+        wrongCount: row.lapseCount,
+        correctStreak: row.correctStreak,
+        href: "/speak/play",
+      });
+    }
+  }
 
   for (const modMeta of getModules(persona)) {
     if (modMeta.status !== "ready") continue;
@@ -150,6 +219,9 @@ export async function getReviewQueue(
       }
 
       if (!reason) continue;
+      if (queue.some((entry) => entry.moduleId === mod.id && entry.itemId === item.id)) {
+        continue;
+      }
 
       const reasonId =
         reason === "salah_baru"

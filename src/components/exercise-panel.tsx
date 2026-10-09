@@ -17,6 +17,8 @@ type Props = {
   nextHref?: string | null;
 };
 
+type Layer = "recognize" | "produce" | "match";
+
 type Feedback = {
   exact: boolean;
   nearMiss: boolean;
@@ -24,6 +26,9 @@ type Feedback = {
   expectedId?: string;
   explanation: string;
   correctKey: string;
+  missedTokens?: string[];
+  corrections?: string[];
+  headline?: string;
 };
 
 const DIFFICULTY_ID: Record<string, string> = {
@@ -40,10 +45,12 @@ export function ExercisePanel({
   nextHref,
 }: Props) {
   const router = useRouter();
+  const [layer, setLayer] = useState<Layer>("recognize");
   const [typed, setTyped] = useState("");
   const [feedback, setFeedback] = useState<Feedback | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [recognizeNote, setRecognizeNote] = useState<string | null>(null);
 
   const correctChoice = useMemo(
     () => item.choices.find((c) => c.key === item.correctKey),
@@ -73,6 +80,7 @@ export function ExercisePanel({
       }
 
       setFeedback(data);
+      setLayer("match");
       if (data.exact && data.expected) {
         speak(data.expected);
       }
@@ -87,6 +95,16 @@ export function ExercisePanel({
     setFeedback(null);
     setTyped("");
     setError(null);
+    setLayer("produce");
+  }
+
+  function recognize(key: string) {
+    if (key === item.correctKey) {
+      setRecognizeNote(null);
+      setLayer("produce");
+      return;
+    }
+    setRecognizeNote("Bukan pilihan ini. Bandingkan arti dan rumus strukturnya.");
   }
 
   return (
@@ -99,17 +117,9 @@ export function ExercisePanel({
             Pahami artinya lewat terjemahan, lalu baca rumus struktur kalimat di
             bawahnya.
           </li>
-          <li>
-            Dengarkan tiap opsi A–D (tombol Putar EN), baca arti + struktur, lalu
-            pilih yang benar di kepala.
-          </li>
-          <li>
-            Ketik ulang jawaban Inggris yang benar secara utuh — ini melatih
-            menulis &amp; grammar.
-          </li>
-          <li>
-            Baca penjelasan belajar dalam Bahasa Indonesia setelah benar.
-          </li>
+          <li>Pilih opsi dari arti dan rumus. Teks English jawaban disembunyikan.</li>
+          <li>Setelah pilihan benar, ketik kalimat English dari arti itu.</li>
+          <li>Baru setelah jawaban masuk, bandingkan dengan kalimat model.</li>
         </ol>
       </div>
 
@@ -162,84 +172,81 @@ export function ExercisePanel({
 
       <section className="space-y-3">
         <h2 className="text-sm font-semibold text-[var(--ink)]">
-          Pilihan jawaban{" "}
+          {layer === "recognize" ? "Kenali" : layer === "produce" ? "Keluarkan" : "Cocokkan"}{" "}
           <span className="font-normal text-[var(--muted)]">
-            — putar EN, baca arti, lalu ketik yang benar
+            {layer === "recognize"
+              ? "— pilih dari arti, tanpa membaca kalimat English"
+              : layer === "produce"
+                ? "— ketik English dari arti yang benar"
+                : "— bandingkan dengan kalimat model"}
           </span>
         </h2>
-        <ul className="space-y-4">
-          {item.choices.map((choice) => (
-            <li
-              key={choice.key}
-              className="rounded-md border border-[var(--border)] bg-[var(--surface)] p-3"
-            >
-              <div className="flex items-start justify-between gap-3">
-                <p className="min-w-0 flex-1 text-sm leading-relaxed text-[var(--ink)]">
-                  <span className="mr-2 font-semibold text-[var(--accent)]">
-                    {choice.key}.
-                  </span>
-                  {choice.text}
-                </p>
-                <SpeakButton text={choice.text} label="Putar EN" />
-              </div>
-              <p className="mt-2 rounded-md border border-[var(--border)] bg-[var(--surface-2)] px-3 py-2 text-sm leading-relaxed text-[var(--muted)]">
-                <span className="mr-1.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--accent)]">
-                  Arti
-                </span>
-                {choice.textId}
-              </p>
-              <StructureNote
-                structure={choice.structure}
-                structureId={choice.structureId}
-              />
-            </li>
-          ))}
-        </ul>
-        <p className="text-xs text-[var(--muted)]">
-          Opsi tidak bisa diklik sebagai jawaban. Ketik kalimat Inggris yang
-          benar di bawah.
-        </p>
+        {layer === "recognize" ? (
+          <ul className="space-y-4">
+            {item.choices.map((choice) => (
+              <li
+                key={choice.key}
+                className="rounded-md border border-[var(--border)] bg-[var(--surface)] p-3"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <button
+                    type="button"
+                    onClick={() => recognize(choice.key)}
+                    className="min-w-0 flex-1 text-left text-sm leading-relaxed text-[var(--ink)]"
+                  >
+                    <span className="mr-2 font-semibold text-[var(--accent)]">
+                      {choice.key}.
+                    </span>
+                    {choice.textId}
+                  </button>
+                  <SpeakButton text={choice.text} label="Dengar" />
+                </div>
+                <StructureNote
+                  structure={choice.structure}
+                  structureId={choice.structureId}
+                />
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div className="rounded-md border border-[var(--border)] bg-[var(--surface)] p-3">
+            <p className="text-sm leading-relaxed text-[var(--ink)]">
+              {correctChoice?.textId}
+            </p>
+            <StructureNote
+              structure={correctChoice?.structure ?? ""}
+              structureId={correctChoice?.structureId ?? ""}
+            />
+          </div>
+        )}
+        {recognizeNote ? (
+          <p className="text-sm" style={{ color: "var(--warn)" }}>
+            {recognizeNote}
+          </p>
+        ) : null}
       </section>
 
-      {!feedback?.exact ? (
+      {layer === "produce" ? (
         <form onSubmit={onSubmit} className="space-y-3">
           <label className="block text-sm font-semibold text-[var(--ink)]">
-            Ketik ulang jawaban Inggris secara tepat
+            Ketik kalimat English dari arti di atas
             <textarea
               value={typed}
               onChange={(e) => setTyped(e.target.value)}
               rows={4}
               required
               className="mt-2 w-full rounded-md border border-[var(--border)] bg-[var(--surface)] px-3 py-2 text-sm leading-relaxed text-[var(--ink)] outline-none ring-[var(--accent)] placeholder:text-[var(--muted)] focus:ring-2"
-              placeholder="Salin/ketik ulang opsi English yang benar secara penuh…"
+              placeholder="Tulis kalimat English lengkap…"
             />
           </label>
           <SpeakBackPanel
             mode="dictate"
             onUseTranscript={(text) => setTyped(text)}
           />
-          <p className="text-xs text-[var(--muted)]">
-            Tips: putar opsi A–D di atas, pilih yang benar di kepala, ucapkan,
-            lalu periksa dengan ketik (atau pakai hasil mic).
-          </p>
           {error && (
             <p className="text-sm" style={{ color: "var(--danger)" }}>
               {error}
             </p>
-          )}
-          {feedback && !feedback.exact && (
-            <div
-              className="rounded-md border px-3 py-2 text-sm"
-              style={{
-                borderColor: "var(--warn-border)",
-                background: "var(--warn-bg)",
-                color: "var(--warn)",
-              }}
-            >
-              {feedback.nearMiss
-                ? "Hampir benar — ada typo kecil. Ketik ulang dengan lebih teliti agar mastery."
-                : "Belum tepat. Bandingkan lagi opsi EN + arti, lalu ketik ulang jawaban yang benar."}
-            </div>
           )}
           <button
             type="submit"
@@ -249,7 +256,7 @@ export function ExercisePanel({
             {submitting ? "Memeriksa…" : "Periksa jawaban"}
           </button>
         </form>
-      ) : (
+      ) : layer === "match" && feedback ? (
         <section
           className="space-y-4 rounded-md border p-4"
           style={{
@@ -262,7 +269,7 @@ export function ExercisePanel({
               className="text-sm font-semibold"
               style={{ color: "var(--success-ink)" }}
             >
-              Benar — jawaban English
+              {feedback.exact ? "Cocok — jawaban English" : feedback.headline ?? "Belum tepat"}
             </h2>
             {(item.tts?.answer ?? true) && correctChoice && (
               <SpeakButton text={correctChoice.text} label="Putar EN" />
@@ -292,6 +299,18 @@ export function ExercisePanel({
             >
               {feedback.explanation}
             </p>
+            {feedback.corrections && feedback.corrections.length > 0 ? (
+              <ul className="list-disc space-y-1 pl-4 text-sm text-[var(--ink)]">
+                {feedback.corrections.map((note) => (
+                  <li key={note}>{note}</li>
+                ))}
+              </ul>
+            ) : null}
+            {feedback.missedTokens && feedback.missedTokens.length > 0 ? (
+              <p className="text-sm text-[var(--ink)]">
+                Kata yang belum kena: {feedback.missedTokens.join(", ")}
+              </p>
+            ) : null}
           </div>
           <SpeakBackPanel
             mode="compare"
@@ -312,7 +331,7 @@ export function ExercisePanel({
             >
               Latih lagi
             </button>
-            {nextItemId ? (
+            {feedback.exact && nextItemId ? (
               <button
                 type="button"
                 onClick={() =>
@@ -324,7 +343,7 @@ export function ExercisePanel({
               >
                 Soal berikutnya
               </button>
-            ) : (
+            ) : feedback.exact ? (
               <button
                 type="button"
                 onClick={() => router.push(`/learn/${item.moduleId}`)}
@@ -332,10 +351,10 @@ export function ExercisePanel({
               >
                 Kembali ke modul
               </button>
-            )}
+            ) : null}
           </div>
         </section>
-      )}
+      ) : null}
     </article>
   );
 }

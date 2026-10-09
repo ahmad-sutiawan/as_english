@@ -35,15 +35,39 @@
         "present_perfect"
       ],
       "commonErrors": [
-        "I already check the server",
-        "I already checked server"
+        {
+          "pattern": "I already check the server",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        },
+        {
+          "pattern": "I already checked server",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Your supervisor asks: What's the status of the server?",
       "scenarioId": "Supervisor Anda bertanya: Bagaimana status server-nya?",
       "modelAnswers": [
-        "I've already checked the server, and everything looks normal."
+        "I've already checked the server, and everything looks normal.",
+        "I have already checked the server, and everything looks normal."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I've already checked"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "the server"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "and everything looks normal"
+        }
+      ]
     },
     {
       "id": "it_ops_002",
@@ -75,14 +99,35 @@
         "future_will"
       ],
       "commonErrors": [
-        "I will investigate the issue and update you short"
+        {
+          "pattern": "I will investigate the issue and update you short",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Your manager asks: Can you look into this alert?",
       "scenarioId": "Manager Anda bertanya: Bisa Anda cek alert ini?",
       "modelAnswers": [
-        "I'll investigate the issue and update you shortly."
+        "I'll investigate the issue and update you shortly.",
+        "I will investigate the issue and update you shortly."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I'll investigate"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "the issue"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "and update you shortly"
+        }
+      ]
     },
     {
       "id": "it_ops_003",
@@ -116,14 +161,35 @@
         "cause_clause"
       ],
       "commonErrors": [
-        "We roll back the deployment because error rate spike"
+        {
+          "pattern": "We roll back the deployment because error rate spike",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Incident bridge: Why did you roll back?",
       "scenarioId": "Incident bridge: Kenapa Anda rollback?",
       "modelAnswers": [
-        "We've rolled back the deployment because error rates spiked."
+        "We've rolled back the deployment because error rates spiked.",
+        "We have rolled back the deployment because error rates spiked."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We've rolled back"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "the deployment"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "because error rates spiked"
+        }
+      ]
     },
     {
       "id": "it_ops_004",
@@ -155,14 +221,36 @@
         "past_simple"
       ],
       "commonErrors": [
-        "The database failover complete successfully in two minute"
+        {
+          "pattern": "The database failover complete successfully in two minute",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Ops asks: Did failover finish?",
       "scenarioId": "Ops bertanya: Apakah failover sudah selesai?",
       "modelAnswers": [
-        "The database failover completed successfully within two minutes."
+        "The database failover completed successfully within two minutes.",
+        "Please the database failover completed successfully within two minutes.",
+        "the database failover completed successfully within two minutes."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "The database failover"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "completed successfully"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "within two minutes"
+        }
+      ]
     },
     {
       "id": "it_ops_005",
@@ -193,14 +281,35 @@
         "present_continuous"
       ],
       "commonErrors": [
-        "I monitoring the latency metric now"
+        {
+          "pattern": "I monitoring the latency metric now",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Manager: What are you doing now?",
       "scenarioId": "Manager: Sedang apa Anda sekarang?",
       "modelAnswers": [
-        "I'm monitoring the latency metrics right now."
+        "I'm monitoring the latency metrics right now.",
+        "I am monitoring the latency metrics right now."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I'm monitoring"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "the latency metrics"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "right now"
+        }
+      ]
     },
     {
       "id": "it_ops_006",
@@ -234,14 +343,35 @@
         "conditional_if"
       ],
       "commonErrors": [
-        "If the queue keep growing we will scale the worker horizontal"
+        {
+          "pattern": "If the queue keep growing we will scale the worker horizontal",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "On-call asks: What's the next step if backlog rises?",
       "scenarioId": "On-call bertanya: Langkah berikutnya jika backlog naik?",
       "modelAnswers": [
-        "If the queue keeps growing, we'll scale the workers horizontally."
+        "If the queue keeps growing, we'll scale the workers horizontally.",
+        "Please if the queue keeps growing, we'll scale the workers horizontally."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "If the queue keeps growing"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "we'll scale"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "the workers horizontally"
+        }
+      ]
     },
     {
       "id": "it_ops_007",
@@ -273,14 +403,35 @@
         "imperative"
       ],
       "commonErrors": [
-        "Please restart service after clear the cache"
+        {
+          "pattern": "Please restart service after clear the cache",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Junior asks how to recover a stuck worker.",
       "scenarioId": "Junior bertanya cara recover worker yang stuck.",
       "modelAnswers": [
-        "Please restart the service after clearing the cache."
+        "Please restart the service after clearing the cache.",
+        "restart the service after clearing the cache."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Please restart"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "the service"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "after clearing the cache"
+        }
+      ]
     },
     {
       "id": "it_ops_008",
@@ -315,14 +466,36 @@
         "passive"
       ],
       "commonErrors": [
-        "The alert is false positive because flaky probe"
+        {
+          "pattern": "The alert is false positive because flaky probe",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Manager: Was that a real outage?",
       "scenarioId": "Manager: Apakah itu outage sungguhan?",
       "modelAnswers": [
-        "The alert was a false positive caused by a flaky probe."
+        "The alert was a false positive caused by a flaky probe.",
+        "Please the alert was a false positive caused by a flaky probe.",
+        "the alert was a false positive caused by a flaky probe."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "The alert was"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "a false positive"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "caused by a flaky probe"
+        }
+      ]
     },
     {
       "id": "it_ops_009",
@@ -357,14 +530,36 @@
         "present_continuous"
       ],
       "commonErrors": [
-        "We mitigate the issue and I writing the postmortem"
+        {
+          "pattern": "We mitigate the issue and I writing the postmortem",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "After an incident: What's the current status?",
       "scenarioId": "Setelah incident: Bagaimana status saat ini?",
       "modelAnswers": [
-        "We've mitigated the issue, and I'm writing the postmortem notes."
+        "We've mitigated the issue, and I'm writing the postmortem notes.",
+        "We've mitigated the issue, and I am writing the postmortem notes.",
+        "We have mitigated the issue, and I'm writing the postmortem notes."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We've mitigated the issue"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "and I'm writing"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "the postmortem notes"
+        }
+      ]
     },
     {
       "id": "it_ops_010",
@@ -401,14 +596,35 @@
         "conditional_if"
       ],
       "commonErrors": [
-        "I will page platform team if disk fill above ninety percent"
+        {
+          "pattern": "I will page platform team if disk fill above ninety percent",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "On-call runbook: When do you escalate?",
       "scenarioId": "Runbook on-call: Kapan Anda escalate?",
       "modelAnswers": [
-        "I'll page the platform team if the disk fills above ninety percent."
+        "I'll page the platform team if the disk fills above ninety percent.",
+        "I will page the platform team if the disk fills above ninety percent."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I'll page"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "the platform team"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "if the disk fills above ninety percent"
+        }
+      ]
     }
   ]
 }

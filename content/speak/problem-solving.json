@@ -37,14 +37,36 @@
         "past_simple"
       ],
       "commonErrors": [
-        "The root cause is missing index on orders table"
+        {
+          "pattern": "The root cause is missing index on orders table",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Explain the root cause briefly.",
       "scenarioId": "Jelaskan root cause secara singkat.",
       "modelAnswers": [
-        "The root cause was a missing index on the orders table."
+        "The root cause was a missing index on the orders table.",
+        "Please the root cause was a missing index on the orders table.",
+        "the root cause was a missing index on the orders table."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "The root cause was"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "a missing index"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "on the orders table"
+        }
+      ]
     },
     {
       "id": "prob_002",
@@ -79,14 +101,35 @@
         "modal_should"
       ],
       "commonErrors": [
-        "We should add circuit breaker to protect payment service"
+        {
+          "pattern": "We should add circuit breaker to protect payment service",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Propose a preventive fix.",
       "scenarioId": "Usulkan perbaikan preventif.",
       "modelAnswers": [
-        "We should add a circuit breaker to protect the payment service."
+        "We should add a circuit breaker to protect the payment service.",
+        "Please we should add a circuit breaker to protect the payment service."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We should add"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "a circuit breaker"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "to protect the payment service"
+        }
+      ]
     },
     {
       "id": "prob_003",
@@ -120,14 +163,35 @@
         "past_simple"
       ],
       "commonErrors": [
-        "I reproduce the bug on staging with same payload"
+        {
+          "pattern": "I reproduce the bug on staging with same payload",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Confirm the bug is real.",
       "scenarioId": "Konfirmasi bug itu nyata.",
       "modelAnswers": [
-        "I reproduced the bug on staging with the same payload."
+        "I reproduced the bug on staging with the same payload.",
+        "Please i reproduced the bug on staging with the same payload."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I reproduced the bug"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "on staging"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "with the same payload"
+        }
+      ]
     },
     {
       "id": "prob_004",
@@ -161,14 +225,35 @@
         "present_continuous"
       ],
       "commonErrors": [
-        "As workaround we routing traffic to the healthy region"
+        {
+          "pattern": "As workaround we routing traffic to the healthy region",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Describe the temporary mitigation.",
       "scenarioId": "Jelaskan mitigasi sementara.",
       "modelAnswers": [
-        "As a workaround, we're routing traffic to the healthy region."
+        "As a workaround, we're routing traffic to the healthy region.",
+        "As a workaround, we are routing traffic to the healthy region."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "As a workaround"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "we're routing traffic"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "to the healthy region"
+        }
+      ]
     },
     {
       "id": "prob_005",
@@ -203,14 +288,36 @@
         "infinitive"
       ],
       "commonErrors": [
-        "The long term fix is redesign the retry logic with jitter"
+        {
+          "pattern": "The long term fix is redesign the retry logic with jitter",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Separate short-term vs long-term fix.",
       "scenarioId": "Pisahkan perbaikan jangka pendek vs panjang.",
       "modelAnswers": [
-        "The long-term fix is to redesign the retry logic with jitter."
+        "The long-term fix is to redesign the retry logic with jitter.",
+        "Please the long-term fix is to redesign the retry logic with jitter.",
+        "the long-term fix is to redesign the retry logic with jitter."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "The long-term fix is"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "to redesign the retry logic"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "with jitter"
+        }
+      ]
     },
     {
       "id": "prob_006",
@@ -244,14 +351,35 @@
         "present_perfect_negative"
       ],
       "commonErrors": [
-        "I don't found any error in the application log yet"
+        {
+          "pattern": "I don't found any error in the application log yet",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Report negative findings honestly.",
       "scenarioId": "Laporkan temuan negatif dengan jujur.",
       "modelAnswers": [
-        "I haven't found any errors in the application logs yet."
+        "I haven't found any errors in the application logs yet.",
+        "Please i haven't found any errors in the application logs yet."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I haven't found"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "any errors"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "in the application logs yet"
+        }
+      ]
     },
     {
       "id": "prob_007",
@@ -284,14 +412,35 @@
         "past_simple"
       ],
       "commonErrors": [
-        "Latency drop after we increase the connection pool size"
+        {
+          "pattern": "Latency drop after we increase the connection pool size",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Explain what improved the metrics.",
       "scenarioId": "Jelaskan apa yang memperbaiki metrik.",
       "modelAnswers": [
-        "Latency dropped after we increased the connection pool size."
+        "Latency dropped after we increased the connection pool size.",
+        "Please latency dropped after we increased the connection pool size."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Latency dropped"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "after we increased"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "the connection pool size"
+        }
+      ]
     },
     {
       "id": "prob_008",
@@ -325,14 +474,35 @@
         "suggestive_imperative"
       ],
       "commonErrors": [
-        "Before we change production let us validate the fix on canary"
+        {
+          "pattern": "Before we change production let us validate the fix on canary",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Push back on a risky hot-fix.",
       "scenarioId": "Tolak hot-fix berisiko dengan sopan.",
       "modelAnswers": [
-        "Before we change production, let's validate the fix on canary."
+        "Before we change production, let's validate the fix on canary.",
+        "Please before we change production, let's validate the fix on canary."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Before we change production"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "let's validate the fix"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "on canary"
+        }
+      ]
     },
     {
       "id": "prob_009",
@@ -368,14 +538,36 @@
         "past_simple"
       ],
       "commonErrors": [
-        "The server already fixed and I check the database"
+        {
+          "pattern": "The server already fixed and I check the database",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Your supervisor asks: What's the status of the server?",
       "scenarioId": "Supervisor: Bagaimana status server?",
       "modelAnswers": [
-        "The server has already been fixed, and I checked the database."
+        "The server has already been fixed, and I checked the database.",
+        "Please the server has already been fixed, and I checked the database.",
+        "the server has already been fixed, and I checked the database."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "The server has already been fixed"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "and I checked"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "the database"
+        }
+      ]
     },
     {
       "id": "prob_010",
@@ -411,14 +603,35 @@
         "purpose_so"
       ],
       "commonErrors": [
-        "I will document the step so next on call can follow them"
+        {
+          "pattern": "I will document the step so next on call can follow them",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Close the loop after fixing an issue.",
       "scenarioId": "Tutup loop setelah memperbaiki masalah.",
       "modelAnswers": [
-        "I'll document the steps so the next on-call can follow them."
+        "I'll document the steps so the next on-call can follow them.",
+        "I will document the steps so the next on-call can follow them."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I'll document the steps"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "so the next on-call"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "can follow them"
+        }
+      ]
     }
   ]
 }

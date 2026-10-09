@@ -35,14 +35,35 @@
         "suggestive_imperative"
       ],
       "commonErrors": [
-        "Let us park this topic and revisit it next week"
+        {
+          "pattern": "Let us park this topic and revisit it next week",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Facilitate when a discussion is going too long.",
       "scenarioId": "Fasilitasi ketika diskusi terlalu panjang.",
       "modelAnswers": [
-        "Let's park this topic and revisit it next week."
+        "Let's park this topic and revisit it next week.",
+        "Please let's park this topic and revisit it next week."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Let's park this topic"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "and revisit it"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "next week"
+        }
+      ]
     },
     {
       "id": "mtg_002",
@@ -71,14 +92,30 @@
         "modal_can"
       ],
       "commonErrors": [
-        "Can everyone mute when they not speaking"
+        {
+          "pattern": "Can everyone mute when they not speaking",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "There's background noise on the call.",
       "scenarioId": "Ada noise di background pada call.",
       "modelAnswers": [
-        "Can everyone mute when they're not speaking?"
+        "Can everyone mute when they're not speaking?",
+        "Please can everyone mute when they're not speaking?"
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Can everyone mute"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "when they're not speaking"
+        }
+      ]
     },
     {
       "id": "mtg_003",
@@ -113,14 +150,36 @@
         "infinitive"
       ],
       "commonErrors": [
-        "The decision is ship the hotfix today and monitor close"
+        {
+          "pattern": "The decision is ship the hotfix today and monitor close",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Summarize the meeting decision.",
       "scenarioId": "Ringkas keputusan meeting.",
       "modelAnswers": [
-        "The decision is to ship the hotfix today and monitor closely."
+        "The decision is to ship the hotfix today and monitor closely.",
+        "Please the decision is to ship the hotfix today and monitor closely.",
+        "the decision is to ship the hotfix today and monitor closely."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "The decision is"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "to ship the hotfix today"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "and monitor closely"
+        }
+      ]
     },
     {
       "id": "mtg_004",
@@ -154,14 +213,35 @@
         "modal_would"
       ],
       "commonErrors": [
-        "I like to challenge that assumption with latest metric"
+        {
+          "pattern": "I like to challenge that assumption with latest metric",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Disagree politely with data.",
       "scenarioId": "Tidak setuju dengan sopan memakai data.",
       "modelAnswers": [
-        "I'd like to challenge that assumption with the latest metrics."
+        "I'd like to challenge that assumption with the latest metrics.",
+        "Please i'd like to challenge that assumption with the latest metrics."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I'd like to challenge"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "that assumption"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "with the latest metrics"
+        }
+      ]
     },
     {
       "id": "mtg_005",
@@ -196,14 +276,35 @@
         "wh_clause"
       ],
       "commonErrors": [
-        "Could you clarify what success look like for this milestone"
+        {
+          "pattern": "Could you clarify what success look like for this milestone",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Ask for clearer acceptance criteria.",
       "scenarioId": "Minta kriteria acceptance yang lebih jelas.",
       "modelAnswers": [
-        "Could you clarify what success looks like for this milestone?"
+        "Could you clarify what success looks like for this milestone?",
+        "Please could you clarify what success looks like for this milestone?"
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Could you clarify"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "what success looks like"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "for this milestone"
+        }
+      ]
     },
     {
       "id": "mtg_006",
@@ -235,14 +336,35 @@
         "future_will"
       ],
       "commonErrors": [
-        "Action item I will draft the proposal by Friday"
+        {
+          "pattern": "Action item I will draft the proposal by Friday",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Capture owners at the end of a meeting.",
       "scenarioId": "Catat owner di akhir meeting.",
       "modelAnswers": [
-        "Action item: I'll draft the proposal by Friday."
+        "Action item: I'll draft the proposal by Friday.",
+        "Action item: I will draft the proposal by Friday."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Action item"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "I'll draft the proposal"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "by Friday"
+        }
+      ]
     },
     {
       "id": "mtg_007",
@@ -276,14 +398,35 @@
         "present_continuous"
       ],
       "commonErrors": [
-        "We aligning on scope before we commit to the timeline"
+        {
+          "pattern": "We aligning on scope before we commit to the timeline",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "Explain why you won't lock dates yet.",
       "scenarioId": "Jelaskan kenapa tanggal belum dikunci.",
       "modelAnswers": [
-        "We're aligning on scope before we commit to the timeline."
+        "We're aligning on scope before we commit to the timeline.",
+        "We are aligning on scope before we commit to the timeline."
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We're aligning on scope"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "before we commit"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "to the timeline"
+        }
+      ]
     },
     {
       "id": "mtg_008",
@@ -318,14 +461,35 @@
         "modal_could"
       ],
       "commonErrors": [
-        "Sorry I miss that could you repeat the last point"
+        {
+          "pattern": "Sorry I miss that could you repeat the last point",
+          "correctionId": "Bentuk itu belum tepat. Ikuti potongan kalimat target."
+        }
       ],
       "scenario": "You lost audio for a few seconds.",
       "scenarioId": "Audio Anda putus beberapa detik.",
       "modelAnswers": [
-        "Sorry, I missed that — could you repeat the last point?"
+        "Sorry, I missed that — could you repeat the last point?",
+        "Please sorry, I missed that — could you repeat the last point?"
       ],
-      "audio": null
+      "audio": null,
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "Sorry I missed that"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Predikat",
+          "text": "could you repeat"
+        },
+        {
+          "role": "Adverbial",
+          "roleId": "Keterangan",
+          "text": "the last point"
+        }
+      ]
     }
   ]
 }

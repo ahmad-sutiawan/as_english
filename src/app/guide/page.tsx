@@ -7,12 +7,7 @@ import {
   BUILD_XP_DRILL,
   BUILD_XP_PERFECT_BONUS,
 } from "@/lib/build";
-import {
-  QUICK_HEARTS,
-  QUICK_SESSION_SIZE,
-  QUICK_XP_CORRECT,
-  QUICK_XP_PERFECT_BONUS,
-} from "@/lib/quick";
+import { QUICK_SESSION_SIZE } from "@/lib/quick";
 import { SPEAK_XP_COMPLETE, SPEAK_XP_MASTERED } from "@/lib/speak";
 import { LobbyFrame, lobbyCard } from "@/components/lobby-frame";
 import { PERSONA_LABEL, getActivePersona } from "@/lib/persona";
@@ -28,14 +23,14 @@ const surfaces = [
   {
     href: "/build",
     title: "Susun",
-    when: "Pakai ini saat XP Susun masih 0, atau saat ingin mengunci urutan kata sebuah situasi kerja.",
+    when: "Pakai ini untuk mengunci urutan kata. Tema selain Dasar terbuka setelah penempatan lulus.",
     do: `Pilih satu tema. Susun chip menjadi kalimat, lalu ubah kalimat itu menjadi negatif, pertanyaan, past, atau future. Sesi mengambil sampai ${BUILD_SESSION_SIZE} kalimat. +${BUILD_XP_DRILL} XP per kalimat selesai, +${BUILD_XP_PERFECT_BONUS} jika seluruh sesi benar pada percobaan pertama.`,
     next: "Mulai dari tema Dasar. Setelah urutan kata terasa stabil, pilih satu tema percakapan yang sama dengan pekerjaan hari itu. Pindah ke Bicara untuk kalimat yang baru saja disusun.",
   },
   {
     href: "/speak",
     title: "Bicara",
-    when: "Pakai ini setelah Susun, terutama jika XP Bicara lebih kecil daripada XP Susun.",
+    when: "Pakai ini untuk mengucapkan kalimat tanpa melihat teks English.",
     do: `Satu item berjalan enam tahap: Listen, Retrieve, Construct, Speak it, Work scenario, lalu Say again. Jawaban diucapkan, tidak diketik. +${SPEAK_XP_COMPLETE} XP saat selesai, +${SPEAK_XP_MASTERED} jika item itu dikuasai.`,
     next: "Ulangi item yang masih tersendat sebelum menambah level. Setelah suara mengikuti susunan kata, jaga pengenalan lewat Cepat.",
   },
@@ -43,15 +38,15 @@ const surfaces = [
     href: "/quick",
     title: "Cepat",
     when: "Pakai ini untuk menjaga akurasi setelah konstruksi dan ucapan sudah jalan.",
-    do: `${QUICK_SESSION_SIZE} soal, ${QUICK_HEARTS} nyawa, jawaban dipilih dengan ketukan. +${QUICK_XP_CORRECT} XP per soal benar, +${QUICK_XP_PERFECT_BONUS} jika sesi selesai dengan nyawa utuh.`,
-    next: "Nyawa habis berarti pola itu belum otomatis. Kembali ke Susun untuk pola yang sama, lalu ulangi Cepat.",
+    do: `${QUICK_SESSION_SIZE} soal pemanasan dari arti, tanpa nyawa dan tanpa XP. Jawaban yang salah langsung masuk lapis keluarkan pada sesi yang sama.`,
+    next: "Pemanasan selesai berarti pengenalan hari itu sudah dicek. Lanjut ke produksi di sesi latihan.",
   },
   {
     href: "/review",
     title: "Review",
     when: "Pakai ini di awal sesi setiap kali ada soal jatuh tempo.",
-    do: "Antrian berisi soal modul yang baru salah, belum dikuasai, atau sudah waktunya diulang. Jarak pengulangan mengikuti streak benar: 1 hari, 3 hari, 7 hari, lalu 14 hari.",
-    next: "Kosongkan antrian sebelum menambah materi. Review hanya mengingat percobaan di modul. Sesi Susun, Bicara, dan Cepat punya XP sendiri dan tidak mengisi antrian ini.",
+    do: "Antrian berisi kalimat dari modul, Susun, dan Bicara. Jaraknya 1, 3, 7, 16, lalu 35 hari. Benar pada jarak 35 hari mengeluarkan item dari antrian harian.",
+    next: "Dashboard membuka sesi latihan, yang mengerjakan antrian ini sebelum soal baru.",
   },
   {
     href: "/dashboard",
@@ -108,33 +103,28 @@ export default async function GuidePage() {
           Loop harian yang paling efektif
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
-          Satu sesi kerja cukup untuk satu putaran. Urutannya mengikuti prioritas
-          di dashboard.
+          Satu sesi kerja cukup untuk satu putaran di halaman Latihan. XP tidak menentukan langkah berikutnya.
         </p>
         <ol className="mt-4 space-y-3 text-sm leading-relaxed text-[var(--muted)]">
           <li className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 px-5 py-4">
-            <span className="font-medium text-[var(--ink)]">1. Review jika ada yang jatuh tempo. </span>
-            Selesaikan antrian itu sebelum menambah materi. Ingatan yang sudah
-            jatuh tempo lebih berharga daripada tema baru.
+            <span className="font-medium text-[var(--ink)]">1. Penempatan sekali. </span>
+            Dua belas kalimat Dasar. Sepuluh benar membuka tema percakapan.
           </li>
           <li className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 px-5 py-4">
-            <span className="font-medium text-[var(--ink)]">2. Susun jika XP Susun masih 0. </span>
-            Mulai di tema Dasar, lalu satu tema percakapan. Ini jalur paling
-            pendek dari mengenal kosakata ke bisa menyusun kalimat.
+            <span className="font-medium text-[var(--ink)]">2. Pemanasan empat soal. </span>
+            Pilih dari arti. Yang salah langsung diketik tanpa melihat English.
           </li>
           <li className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 px-5 py-4">
-            <span className="font-medium text-[var(--ink)]">3. Bicara jika XP Bicara tertinggal dari Susun. </span>
-            Ucapkan kalimat yang baru saja disusun. Susunan di kepala belum
-            menjadi bahasa yang keluar.
+            <span className="font-medium text-[var(--ink)]">3. Item jatuh tempo. </span>
+            Modul, Susun, dan Bicara berbagi satu jadwal: 1, 3, 7, 16, 35 hari.
           </li>
           <li className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 px-5 py-4">
-            <span className="font-medium text-[var(--ink)]">4. Cepat jika konstruksi dan ucapan sudah seimbang. </span>
-            Delapan soal tap menjaga pengenalan kalimat kerja yang benar.
+            <span className="font-medium text-[var(--ink)]">4. Satu transformasi dan satu ucapan. </span>
+            Teks English hanya terdengar, lalu diucapkan dari arti.
           </li>
           <li className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 px-5 py-4">
-            <span className="font-medium text-[var(--ink)]">5. Tutup dengan satu soal modul baru. </span>
-            Soal itu mengisi jadwal Review. Review hanya mengingat percobaan
-            modul, bukan sesi Susun, Bicara, atau Cepat.
+            <span className="font-medium text-[var(--ink)]">5. Satu soal baru, lalu transfer. </span>
+            Transfer menerima salah satu dari dua atau tiga kalimat model.
           </li>
         </ol>
       </section>
@@ -180,12 +170,10 @@ export default async function GuidePage() {
           Urutan seminggu
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
-          Tiap hari kerja, kerjakan satu sesi dari langkah yang dashboard
-          sarankan, plus satu tema Susun yang sama dengan pekerjaan hari itu:
-          standup, insiden, rilis, pelanggan, atau serah terima. Tahan di tema
-          Dasar sampai urutan kata terasa otomatis, baru buka banyak tema
-          percakapan. Cepat dipakai untuk menjaga pengenalan setelah Susun dan
-          Bicara pada hari yang sama.
+          Tiap hari kerja, kerjakan satu putaran di Latihan. Dashboard membuka
+          penempatan sekali, lalu sesi yang mengulang kalimat jatuh tempo
+          sebelum menambah soal. Tema selain Dasar terbuka setelah sepuluh dari
+          dua belas kalimat penempatan benar.
         </p>
       </section>
 

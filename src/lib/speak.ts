@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/db";
 import { getAllSpeakItems, getSpeakItem } from "@/lib/speak-content";
 import { jakartaDateKey } from "@/lib/quick";
+import { listDue } from "@/lib/memory";
 import type { SpeakItem, SpeakLevel } from "@/types/speak";
 import type { PersonaId } from "@/lib/persona";
 
@@ -41,19 +42,17 @@ export async function pickSpeakSessionItem(
   );
   if (!all.length) return null;
 
-  const now = new Date();
   const progress = await prisma.speakProgress.findMany({
     where: { userId },
   });
   const byId = new Map(progress.map((p) => [p.itemId, p]));
+  const dueIds = new Set(
+    (await listDue(userId, persona, 40))
+      .filter((row) => row.source === "speak")
+      .map((row) => row.itemId),
+  );
 
-  const due = all.filter((i) => {
-    const p = byId.get(i.id);
-    if (!p) return false;
-    if (p.mastered && p.nextReviewAt && p.nextReviewAt <= now) return true;
-    if (!p.mastered && p.nextReviewAt && p.nextReviewAt <= now) return true;
-    return false;
-  });
+  const due = all.filter((i) => dueIds.has(i.id));
 
   const neverTried = all.filter((i) => !byId.has(i.id));
   const weak = all.filter((i) => {
@@ -93,16 +92,6 @@ export async function saveSpeakAttempt(opts: {
       ? opts.score
       : (existing?.attempt2Score ?? 0);
 
-  let nextReviewAt: Date | null = null;
-  const now = new Date();
-  if (opts.mastered) {
-    nextReviewAt = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
-  } else if (opts.score < 70) {
-    nextReviewAt = new Date(now.getTime() + 1 * 24 * 60 * 60 * 1000);
-  } else {
-    nextReviewAt = new Date(now.getTime() + 3 * 24 * 60 * 60 * 1000);
-  }
-
   return prisma.speakProgress.upsert({
     where: {
       userId_itemId: { userId: opts.userId, itemId: opts.itemId },
@@ -113,14 +102,12 @@ export async function saveSpeakAttempt(opts: {
       attempt1Score,
       attempt2Score,
       mastered: opts.mastered,
-      nextReviewAt,
       lastTranscript: opts.transcript,
     },
     update: {
       attempt1Score,
       attempt2Score,
       mastered: opts.mastered,
-      nextReviewAt,
       lastTranscript: opts.transcript,
     },
   });
