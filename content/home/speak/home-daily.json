@@ -1,0 +1,311 @@
+{
+  "id": "home-daily",
+  "title": "Daily Home Talk",
+  "titleId": "Obrolan Harian di Rumah",
+  "itemCount": 8,
+  "items": [
+    {
+      "id": "home-daily-001",
+      "category": "home-daily",
+      "level": "mid",
+      "target": "Breakfast is eggs and fruit today.",
+      "targetId": "Sarapan hari ini telur dan buah.",
+      "chunks": [
+        "Breakfast is",
+        "eggs and fruit",
+        "today"
+      ],
+      "scrambled": [
+        "Breakfast",
+        "is",
+        "eggs",
+        "and",
+        "fruit",
+        "today"
+      ],
+      "keywords": [
+        "breakfast",
+        "eggs",
+        "fruit"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Breakfast is eggs and fruit today."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-daily-002",
+      "category": "home-daily",
+      "level": "senior",
+      "target": "Please put your shoes on the rack.",
+      "targetId": "Tolong letakkan sepatumu di rak.",
+      "chunks": [
+        "Please put",
+        "your shoes",
+        "on the rack"
+      ],
+      "scrambled": [
+        "Please",
+        "put",
+        "your",
+        "shoes",
+        "on",
+        "the",
+        "rack"
+      ],
+      "keywords": [
+        "please",
+        "your",
+        "shoes"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Please put your shoes on the rack."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-daily-003",
+      "category": "home-daily",
+      "level": "junior",
+      "target": "Dinner will be ready at seven.",
+      "targetId": "Makan malam akan siap pukul tujuh.",
+      "chunks": [
+        "Dinner will be ready",
+        "at seven"
+      ],
+      "scrambled": [
+        "Dinner",
+        "will",
+        "be",
+        "ready",
+        "at",
+        "seven"
+      ],
+      "keywords": [
+        "dinner",
+        "will",
+        "ready"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Dinner will be ready at seven."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-daily-004",
+      "category": "home-daily",
+      "level": "mid",
+      "target": "The baby is finally asleep.",
+      "targetId": "Bayinya akhirnya tidur.",
+      "chunks": [
+        "The baby",
+        "is finally",
+        "asleep"
+      ],
+      "scrambled": [
+        "The",
+        "baby",
+        "is",
+        "finally",
+        "asleep"
+      ],
+      "keywords": [
+        "baby",
+        "finally",
+        "asleep"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "The baby is finally asleep."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-daily-005",
+      "category": "home-daily",
+      "level": "senior",
+      "target": "Can we eat outside tonight?",
+      "targetId": "Bisakah kita makan di luar malam ini?",
+      "chunks": [
+        "Can we eat",
+        "outside",
+        "tonight"
+      ],
+      "scrambled": [
+        "Can",
+        "we",
+        "eat",
+        "outside",
+        "tonight"
+      ],
+      "keywords": [
+        "outside",
+        "tonight"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Can we eat outside tonight?"
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-daily-006",
+      "category": "home-daily",
+      "level": "junior",
+      "target": "I washed the uniforms this morning.",
+      "targetId": "Saya mencuci seragam pagi ini.",
+      "chunks": [
+        "I washed",
+        "the uniforms",
+        "this morning"
+      ],
+      "scrambled": [
+        "I",
+        "washed",
+        "the",
+        "uniforms",
+        "this",
+        "morning"
+      ],
+      "keywords": [
+        "washed",
+        "uniforms",
+        "this"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "I washed the uniforms this morning."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-daily-007",
+      "category": "home-daily",
+      "level": "mid",
+      "target": "Your book is on the front table.",
+      "targetId": "Bukumu ada di meja depan.",
+      "chunks": [
+        "Your book is",
+        "on the front",
+        "table"
+      ],
+      "scrambled": [
+        "Your",
+        "book",
+        "is",
+        "on",
+        "the",
+        "front",
+        "table"
+      ],
+      "keywords": [
+        "your",
+        "book",
+        "front"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Your book is on the front table."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-daily-008",
+      "category": "home-daily",
+      "level": "senior",
+      "target": "Let's clean the kitchen after we eat.",
+      "targetId": "Mari bersihkan dapur setelah kita makan.",
+      "chunks": [
+        "Let's clean",
+        "the kitchen",
+        "after we eat"
+      ],
+      "scrambled": [
+        "Let's",
+        "clean",
+        "the",
+        "kitchen",
+        "after",
+        "we",
+        "eat"
+      ],
+      "keywords": [
+        "let's",
+        "clean",
+        "kitchen"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Let's clean the kitchen after we eat."
+      ],
+      "audio": null
+    }
+  ]
+}

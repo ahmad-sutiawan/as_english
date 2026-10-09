@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { completeSpeakSession } from "@/lib/speak";
+import { getActivePersona } from "@/lib/persona";
 
 const bodySchema = z.object({
   mastered: z.boolean().optional().default(false),
@@ -18,7 +19,12 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
   }
 
-  const result = await completeSpeakSession(session.user.id, {
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) {
+    return NextResponse.json({ error: "Pilih persona dulu." }, { status: 409 });
+  }
+
+  const result = await completeSpeakSession(session.user.id, persona, {
     mastered: parsed.data.mastered,
   });
 

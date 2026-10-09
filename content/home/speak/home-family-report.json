@@ -1,0 +1,393 @@
+{
+  "id": "home-family-report",
+  "title": "Family Report",
+  "titleId": "Kabar ke Keluarga",
+  "itemCount": 10,
+  "items": [
+    {
+      "id": "home-family-report-001",
+      "category": "home-family-report",
+      "level": "mid",
+      "target": "The children are home and dinner has started.",
+      "targetId": "Anak-anak sudah di rumah dan makan malam sudah mulai.",
+      "chunks": [
+        "The children are home",
+        "and dinner",
+        "has started"
+      ],
+      "scrambled": [
+        "The",
+        "children",
+        "are",
+        "home",
+        "and",
+        "dinner",
+        "has",
+        "started"
+      ],
+      "keywords": [
+        "children",
+        "home",
+        "dinner"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "The children are home and dinner has started."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-family-report-002",
+      "category": "home-family-report",
+      "level": "senior",
+      "target": "Dad took his medicine at four.",
+      "targetId": "Ayah minum obat pukul empat.",
+      "chunks": [
+        "Dad took",
+        "his medicine",
+        "at four"
+      ],
+      "scrambled": [
+        "Dad",
+        "took",
+        "his",
+        "medicine",
+        "at",
+        "four"
+      ],
+      "keywords": [
+        "took",
+        "medicine",
+        "four"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Dad took his medicine at four."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-family-report-003",
+      "category": "home-family-report",
+      "level": "junior",
+      "target": "I will be home by six.",
+      "targetId": "Saya akan di rumah pukul enam.",
+      "chunks": [
+        "I will be home",
+        "by six"
+      ],
+      "scrambled": [
+        "I",
+        "will",
+        "be",
+        "home",
+        "by",
+        "six"
+      ],
+      "keywords": [
+        "will",
+        "home"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "I will be home by six."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-family-report-004",
+      "category": "home-family-report",
+      "level": "mid",
+      "target": "Homework is done, and one page was hard.",
+      "targetId": "PR selesai, dan satu halaman sulit.",
+      "chunks": [
+        "Homework is done",
+        "and one page",
+        "was hard"
+      ],
+      "scrambled": [
+        "Homework",
+        "is",
+        "done,",
+        "and",
+        "one",
+        "page",
+        "was",
+        "hard"
+      ],
+      "keywords": [
+        "homework",
+        "done,",
+        "page"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Homework is done, and one page was hard."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-family-report-005",
+      "category": "home-family-report",
+      "level": "senior",
+      "target": "The plumber can come tomorrow morning.",
+      "targetId": "Tukang ledeng bisa datang besok pagi.",
+      "chunks": [
+        "The plumber can come",
+        "tomorrow",
+        "morning"
+      ],
+      "scrambled": [
+        "The",
+        "plumber",
+        "can",
+        "come",
+        "tomorrow",
+        "morning"
+      ],
+      "keywords": [
+        "plumber",
+        "come",
+        "tomorrow"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "The plumber can come tomorrow morning."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-family-report-006",
+      "category": "home-family-report",
+      "level": "junior",
+      "target": "Rent is due tomorrow morning.",
+      "targetId": "Sewa jatuh tempo besok pagi.",
+      "chunks": [
+        "Rent is due",
+        "tomorrow",
+        "morning"
+      ],
+      "scrambled": [
+        "Rent",
+        "is",
+        "due",
+        "tomorrow",
+        "morning"
+      ],
+      "keywords": [
+        "rent",
+        "tomorrow",
+        "morning"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Rent is due tomorrow morning."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-family-report-007",
+      "category": "home-family-report",
+      "level": "mid",
+      "target": "Grandma slept, and her fever is down.",
+      "targetId": "Nenek tidur, dan demamnya turun.",
+      "chunks": [
+        "Grandma slept",
+        "and her fever",
+        "is down"
+      ],
+      "scrambled": [
+        "Grandma",
+        "slept,",
+        "and",
+        "her",
+        "fever",
+        "is",
+        "down"
+      ],
+      "keywords": [
+        "grandma",
+        "slept,",
+        "fever"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Grandma slept, and her fever is down."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-family-report-008",
+      "category": "home-family-report",
+      "level": "senior",
+      "target": "The school bus is cancelled tomorrow.",
+      "targetId": "Bus sekolah dibatalkan besok.",
+      "chunks": [
+        "The school bus",
+        "is cancelled",
+        "tomorrow"
+      ],
+      "scrambled": [
+        "The",
+        "school",
+        "bus",
+        "is",
+        "cancelled",
+        "tomorrow"
+      ],
+      "keywords": [
+        "school",
+        "cancelled",
+        "tomorrow"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "The school bus is cancelled tomorrow."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-family-report-009",
+      "category": "home-family-report",
+      "level": "junior",
+      "target": "I spent extra on fruit and medicine.",
+      "targetId": "Saya belanja ekstra untuk buah dan obat.",
+      "chunks": [
+        "I spent extra",
+        "on fruit",
+        "and medicine"
+      ],
+      "scrambled": [
+        "I",
+        "spent",
+        "extra",
+        "on",
+        "fruit",
+        "and",
+        "medicine"
+      ],
+      "keywords": [
+        "spent",
+        "extra",
+        "fruit"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "I spent extra on fruit and medicine."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-family-report-010",
+      "category": "home-family-report",
+      "level": "mid",
+      "target": "We should both go to the teacher meeting.",
+      "targetId": "Kita sebaiknya pergi berdua ke pertemuan guru.",
+      "chunks": [
+        "We should both go",
+        "to the teacher",
+        "meeting"
+      ],
+      "scrambled": [
+        "We",
+        "should",
+        "both",
+        "go",
+        "to",
+        "the",
+        "teacher",
+        "meeting"
+      ],
+      "keywords": [
+        "should",
+        "both",
+        "teacher"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "We should both go to the teacher meeting."
+      ],
+      "audio": null
+    }
+  ]
+}

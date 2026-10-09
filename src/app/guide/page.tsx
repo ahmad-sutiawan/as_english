@@ -15,6 +15,7 @@ import {
 } from "@/lib/quick";
 import { SPEAK_XP_COMPLETE, SPEAK_XP_MASTERED } from "@/lib/speak";
 import { LobbyFrame, lobbyCard } from "@/components/lobby-frame";
+import { PERSONA_LABEL, getActivePersona } from "@/lib/persona";
 
 const surfaces = [
   {
@@ -65,7 +66,14 @@ export default async function GuidePage() {
   const session = await auth();
   if (!session?.user?.id) redirect("/login");
 
-  const modules = getModules();
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) redirect("/dashboard");
+
+  const modules = getModules(persona);
+  const audience =
+    persona === "home"
+      ? "Latihan ini untuk percakapan di rumah: keluarga, tetangga, sekolah, dan urusan sehari-hari."
+      : "Latihan ini untuk IT Manager, SRE, dan Fullstack.";
 
   return (
     <LobbyFrame
@@ -77,7 +85,7 @@ export default async function GuidePage() {
       <section className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 p-5">
         <h2 className="text-lg font-semibold text-[var(--ink)]">Untuk siapa</h2>
         <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
-          Latihan ini untuk IT Manager, SRE, dan Fullstack. Penjelasan, nama
+          {audience} Penjelasan, nama
           menu, dan umpan balik memakai Bahasa Indonesia. Kalimat yang disusun,
           diketik, atau diucapkan tetap English, dengan terjemahan tetap supaya
           arti dan urutan kata terlihat bersamaan.
@@ -207,7 +215,9 @@ export default async function GuidePage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-display text-3xl text-[var(--ink)]">Modul yang ada</h2>
+        <h2 className="font-display text-3xl text-[var(--ink)]">
+          Modul {PERSONA_LABEL[persona]}
+        </h2>
         <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
           Kerjakan satu modul yang paling dekat dengan pekerjaan minggu ini.
           Satu soal selesai sudah cukup untuk menutup latihan hari itu.

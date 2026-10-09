@@ -2,6 +2,7 @@ import { prisma } from "@/lib/db";
 import { getModule, getModules } from "@/lib/content";
 import { getReviewQueue } from "@/lib/review";
 import type { Difficulty, ExerciseItem } from "@/types/content";
+import type { PersonaId } from "@/lib/persona";
 import type { QuickCard } from "@/types/quick";
 
 export type { QuickCard } from "@/types/quick";
@@ -22,9 +23,9 @@ function shuffle<T>(arr: T[]): T[] {
   return out;
 }
 
-function toCard(moduleId: string, item: ExerciseItem): QuickCard | null {
+function toCard(moduleId: string, item: ExerciseItem, persona: PersonaId): QuickCard | null {
   if (item.kind === "dialogue") return null;
-  const mod = getModule(moduleId);
+  const mod = getModule(moduleId, persona);
   if (!mod) return null;
   return {
     moduleId,
@@ -68,19 +69,20 @@ function yesterdayJakartaKey(todayKey: string): string {
   return jakartaDateKey(dt);
 }
 
-export async function getOrCreateQuickStats(userId: string) {
+export async function getOrCreateQuickStats(userId: string, persona: PersonaId) {
   return prisma.quickStats.upsert({
-    where: { userId },
-    create: { userId },
+    where: { userId_persona: { userId, persona } },
+    create: { userId, persona },
     update: {},
   });
 }
 
 export async function buildQuickSession(
   userId: string,
+  persona: PersonaId,
   level: QuickLevelFilter = "all",
 ): Promise<QuickCard[]> {
-  const review = await getReviewQueue(userId, 40);
+  const review = await getReviewQueue(userId, 40, persona);
   const progressRows = await prisma.progress.findMany({
     where: { userId },
     select: { moduleId: true, completedItemIds: true },
@@ -95,10 +97,10 @@ export async function buildQuickSession(
   const tryAdd = (moduleId: string, itemId: string) => {
     const key = `${moduleId}::${itemId}`;
     if (picked.has(key) || cards.length >= QUICK_SESSION_SIZE) return;
-    const item = getModule(moduleId)?.items.find((i) => i.id === itemId);
+    const item = getModule(moduleId, persona)?.items.find((i) => i.id === itemId);
     if (!item) return;
     if (level !== "all" && item.difficulty !== level) return;
-    const card = toCard(moduleId, item);
+    const card = toCard(moduleId, item, persona);
     if (!card) return;
     picked.add(key);
     cards.push(card);
@@ -112,9 +114,9 @@ export async function buildQuickSession(
   const notMastered: { moduleId: string; itemId: string }[] = [];
   const pool: { moduleId: string; itemId: string }[] = [];
 
-  for (const meta of getModules()) {
+  for (const meta of getModules(persona)) {
     if (meta.status !== "ready") continue;
-    const mod = getModule(meta.id);
+    const mod = getModule(meta.id, persona);
     if (!mod) continue;
     const done = completed.get(mod.id) ?? new Set<string>();
     for (const item of mod.items) {
@@ -151,6 +153,7 @@ export type CompleteQuickResult = {
 
 export async function completeQuickSession(
   userId: string,
+  persona: PersonaId,
   opts: { correctCount: number; perfect: boolean },
 ): Promise<CompleteQuickResult> {
   const xpGained =
@@ -158,7 +161,7 @@ export async function completeQuickSession(
     (opts.perfect ? QUICK_XP_PERFECT_BONUS : 0);
 
   const today = jakartaDateKey();
-  const stats = await getOrCreateQuickStats(userId);
+  const stats = await getOrCreateQuickStats(userId, persona);
   const lastKey = stats.lastPlayDate
     ? jakartaDateKey(stats.lastPlayDate)
     : null;
@@ -174,7 +177,7 @@ export async function completeQuickSession(
 
   const bestStreak = Math.max(stats.bestStreak, streak);
   const updated = await prisma.quickStats.update({
-    where: { userId },
+    where: { userId_persona: { userId, persona } },
     data: {
       xp: stats.xp + xpGained,
       streak,

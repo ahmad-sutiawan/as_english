@@ -1,0 +1,7994 @@
+[
+  {
+    "theme": "dasar",
+    "id": "home-dasar-001",
+    "level": "junior",
+    "meaningId": "Saya mencuci piring.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "wash",
+        "the",
+        "plates"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I wash the plates.",
+      "sentenceId": "Saya mencuci piring.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the plates"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "wash",
+        "the",
+        "plates"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't wash the plates.",
+      "sentenceId": "Saya tidak mencuci piring.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the plates"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "dasar",
+    "id": "home-dasar-002",
+    "level": "mid",
+    "meaningId": "Dia memasak nasi.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "cooks",
+        "rice"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She cooks rice.",
+      "sentenceId": "Dia memasak nasi.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cooks"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "rice"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "cook",
+        "rice"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she cook rice?",
+      "sentenceId": "Apakah dia memasak nasi?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cook"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "rice"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "dasar",
+    "id": "home-dasar-003",
+    "level": "junior",
+    "meaningId": "Kami membersihkan dapur.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "clean",
+        "the",
+        "kitchen"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We clean the kitchen.",
+      "sentenceId": "Kami membersihkan dapur.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "clean"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the kitchen"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "cleaned",
+        "the",
+        "kitchen"
+      ],
+      "distractors": [
+        "clean",
+        "was"
+      ],
+      "sentence": "We cleaned the kitchen.",
+      "sentenceId": "Kami membersihkan dapur (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cleaned"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the kitchen"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "dasar",
+    "id": "home-dasar-004",
+    "level": "mid",
+    "meaningId": "Mereka berjalan anjing.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "walk",
+        "the",
+        "dog"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They walk the dog.",
+      "sentenceId": "Mereka berjalan anjing.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "walk"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the dog"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "They",
+        "will",
+        "walk",
+        "the",
+        "dog"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "They will walk the dog.",
+      "sentenceId": "Mereka akan berjalan anjing.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "walk"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the dog"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "dasar",
+    "id": "home-dasar-005",
+    "level": "junior",
+    "meaningId": "Kamu membuka jendela.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "open",
+        "the",
+        "window"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You open the window.",
+      "sentenceId": "Kamu membuka jendela.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the window"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "You",
+        "don't",
+        "open",
+        "the",
+        "window"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "You don't open the window.",
+      "sentenceId": "Kamu tidak membuka jendela.",
+      "why": "You memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the window"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "dasar",
+    "id": "home-dasar-006",
+    "level": "mid",
+    "meaningId": "Saya menutup pagar.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "close",
+        "the",
+        "gate"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I close the gate.",
+      "sentenceId": "Saya menutup pagar.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "close"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the gate"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Do",
+        "I",
+        "close",
+        "the",
+        "gate"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Do I close the gate?",
+      "sentenceId": "Apakah saya menutup pagar?",
+      "why": "Pertanyaan present simple dimulai dengan Do.",
+      "pattern": "Do + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Do"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "close"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the gate"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "dasar",
+    "id": "home-dasar-007",
+    "level": "junior",
+    "meaningId": "Dia menyiram tanaman.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "waters",
+        "the",
+        "plants"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She waters the plants.",
+      "sentenceId": "Dia menyiram tanaman.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "waters"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the plants"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "She",
+        "watered",
+        "the",
+        "plants"
+      ],
+      "distractors": [
+        "water",
+        "was"
+      ],
+      "sentence": "She watered the plants.",
+      "sentenceId": "Dia menyiram tanaman (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "watered"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the plants"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "dasar",
+    "id": "home-dasar-008",
+    "level": "mid",
+    "meaningId": "Kami membeli buah.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "buy",
+        "fruit"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We buy fruit.",
+      "sentenceId": "Kami membeli buah.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "buy"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "fruit"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "We",
+        "will",
+        "buy",
+        "fruit"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "We will buy fruit.",
+      "sentenceId": "Kami akan membeli buah.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "buy"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "fruit"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "dasar",
+    "id": "home-dasar-009",
+    "level": "junior",
+    "meaningId": "Saya mengemas tas.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "pack",
+        "the",
+        "bags"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I pack the bags.",
+      "sentenceId": "Saya mengemas tas.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pack"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the bags"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "pack",
+        "the",
+        "bags"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't pack the bags.",
+      "sentenceId": "Saya tidak mengemas tas.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pack"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the bags"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "dasar",
+    "id": "home-dasar-010",
+    "level": "mid",
+    "meaningId": "Mereka memeriksa kunci.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "check",
+        "the",
+        "locks"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They check the locks.",
+      "sentenceId": "Mereka memeriksa kunci.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the locks"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Do",
+        "they",
+        "check",
+        "the",
+        "locks"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Do they check the locks?",
+      "sentenceId": "Apakah mereka memeriksa kunci?",
+      "why": "Pertanyaan present simple dimulai dengan Do.",
+      "pattern": "Do + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Do"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "they"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the locks"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "pagi",
+    "id": "home-pagi-011",
+    "level": "junior",
+    "meaningId": "Saya mengemas tas sekolah.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "pack",
+        "the",
+        "school",
+        "bag"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I pack the school bag.",
+      "sentenceId": "Saya mengemas tas sekolah.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pack"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the school bag"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "pack",
+        "the",
+        "school",
+        "bag"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't pack the school bag.",
+      "sentenceId": "Saya tidak mengemas tas sekolah.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pack"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the school bag"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "pagi",
+    "id": "home-pagi-012",
+    "level": "mid",
+    "meaningId": "Dia memasak sarapan.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "cooks",
+        "breakfast"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She cooks breakfast.",
+      "sentenceId": "Dia memasak sarapan.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cooks"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "breakfast"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "cook",
+        "breakfast"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she cook breakfast?",
+      "sentenceId": "Apakah dia memasak sarapan?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cook"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "breakfast"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "pagi",
+    "id": "home-pagi-013",
+    "level": "junior",
+    "meaningId": "Kami berjalan ke sekolah.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "walk",
+        "to",
+        "school"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We walk to school.",
+      "sentenceId": "Kami berjalan ke sekolah.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "walk"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "to school"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "walked",
+        "to",
+        "school"
+      ],
+      "distractors": [
+        "walk",
+        "was"
+      ],
+      "sentence": "We walked to school.",
+      "sentenceId": "Kami berjalan ke sekolah (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "walked"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "to school"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "pagi",
+    "id": "home-pagi-014",
+    "level": "mid",
+    "meaningId": "Kamu memeriksa PR.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "check",
+        "the",
+        "homework"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You check the homework.",
+      "sentenceId": "Kamu memeriksa PR.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the homework"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "check",
+        "the",
+        "homework"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will check the homework.",
+      "sentenceId": "Kamu akan memeriksa PR.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the homework"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "pagi",
+    "id": "home-pagi-015",
+    "level": "junior",
+    "meaningId": "Mereka mencuci wajah mereka.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "wash",
+        "their",
+        "faces"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They wash their faces.",
+      "sentenceId": "Mereka mencuci wajah mereka.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "their faces"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "wash",
+        "their",
+        "faces"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't wash their faces.",
+      "sentenceId": "Mereka tidak mencuci wajah mereka.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "their faces"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "darurat",
+    "id": "home-darurat-016",
+    "level": "junior",
+    "meaningId": "Saya menelepon klinik.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "call",
+        "the",
+        "clinic"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I call the clinic.",
+      "sentenceId": "Saya menelepon klinik.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the clinic"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "call",
+        "the",
+        "clinic"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't call the clinic.",
+      "sentenceId": "Saya tidak menelepon klinik.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the clinic"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "darurat",
+    "id": "home-darurat-017",
+    "level": "mid",
+    "meaningId": "Dia menutup gas.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "closes",
+        "the",
+        "gas"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She closes the gas.",
+      "sentenceId": "Dia menutup gas.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "closes"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the gas"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "close",
+        "the",
+        "gas"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she close the gas?",
+      "sentenceId": "Apakah dia menutup gas?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "close"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the gas"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "darurat",
+    "id": "home-darurat-018",
+    "level": "junior",
+    "meaningId": "Kami membawa ember.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "carry",
+        "the",
+        "bucket"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We carry the bucket.",
+      "sentenceId": "Kami membawa ember.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "carry"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the bucket"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "carried",
+        "the",
+        "bucket"
+      ],
+      "distractors": [
+        "carry",
+        "was"
+      ],
+      "sentence": "We carried the bucket.",
+      "sentenceId": "Kami membawa ember (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "carried"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the bucket"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "darurat",
+    "id": "home-darurat-019",
+    "level": "mid",
+    "meaningId": "Kamu mengunci pintu.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "lock",
+        "the",
+        "door"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You lock the door.",
+      "sentenceId": "Kamu mengunci pintu.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "lock"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the door"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "lock",
+        "the",
+        "door"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will lock the door.",
+      "sentenceId": "Kamu akan mengunci pintu.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "lock"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the door"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "darurat",
+    "id": "home-darurat-020",
+    "level": "junior",
+    "meaningId": "Mereka memeriksa breaker.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "check",
+        "the",
+        "breaker"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They check the breaker.",
+      "sentenceId": "Mereka memeriksa breaker.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the breaker"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "check",
+        "the",
+        "breaker"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't check the breaker.",
+      "sentenceId": "Mereka tidak memeriksa breaker.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the breaker"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "kabar",
+    "id": "home-kabar-021",
+    "level": "junior",
+    "meaningId": "Saya menelepon ibu saya.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "call",
+        "my",
+        "mother"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I call my mother.",
+      "sentenceId": "Saya menelepon ibu saya.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "my mother"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "call",
+        "my",
+        "mother"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't call my mother.",
+      "sentenceId": "Saya tidak menelepon ibu saya.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "my mother"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "kabar",
+    "id": "home-kabar-022",
+    "level": "mid",
+    "meaningId": "Dia memeriksa suhu.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "checks",
+        "the",
+        "temperature"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She checks the temperature.",
+      "sentenceId": "Dia memeriksa suhu.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "checks"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the temperature"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "check",
+        "the",
+        "temperature"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she check the temperature?",
+      "sentenceId": "Apakah dia memeriksa suhu?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the temperature"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "kabar",
+    "id": "home-kabar-023",
+    "level": "junior",
+    "meaningId": "Kami memasak makan malam.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "cook",
+        "dinner"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We cook dinner.",
+      "sentenceId": "Kami memasak makan malam.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cook"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "dinner"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "cooked",
+        "dinner"
+      ],
+      "distractors": [
+        "cook",
+        "was"
+      ],
+      "sentence": "We cooked dinner.",
+      "sentenceId": "Kami memasak makan malam (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cooked"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "dinner"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "kabar",
+    "id": "home-kabar-024",
+    "level": "mid",
+    "meaningId": "Kamu membeli susu.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "buy",
+        "the",
+        "milk"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You buy the milk.",
+      "sentenceId": "Kamu membeli susu.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "buy"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the milk"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "buy",
+        "the",
+        "milk"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will buy the milk.",
+      "sentenceId": "Kamu akan membeli susu.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "buy"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the milk"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "kabar",
+    "id": "home-kabar-025",
+    "level": "junior",
+    "meaningId": "Mereka menyiram kebun.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "water",
+        "the",
+        "garden"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They water the garden.",
+      "sentenceId": "Mereka menyiram kebun.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "water"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the garden"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "water",
+        "the",
+        "garden"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't water the garden.",
+      "sentenceId": "Mereka tidak menyiram kebun.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "water"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the garden"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "pesan",
+    "id": "home-pesan-026",
+    "level": "junior",
+    "meaningId": "Saya menelepon pemilik rumah.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "call",
+        "the",
+        "landlord"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I call the landlord.",
+      "sentenceId": "Saya menelepon pemilik rumah.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the landlord"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "call",
+        "the",
+        "landlord"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't call the landlord.",
+      "sentenceId": "Saya tidak menelepon pemilik rumah.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the landlord"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "pesan",
+    "id": "home-pesan-027",
+    "level": "mid",
+    "meaningId": "Dia membeli obat.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "buys",
+        "the",
+        "medicine"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She buys the medicine.",
+      "sentenceId": "Dia membeli obat.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "buys"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the medicine"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "buy",
+        "the",
+        "medicine"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she buy the medicine?",
+      "sentenceId": "Apakah dia membeli obat?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "buy"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the medicine"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "pesan",
+    "id": "home-pesan-028",
+    "level": "junior",
+    "meaningId": "Kami mengunci pagar.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "lock",
+        "the",
+        "gate"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We lock the gate.",
+      "sentenceId": "Kami mengunci pagar.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "lock"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the gate"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "locked",
+        "the",
+        "gate"
+      ],
+      "distractors": [
+        "lock",
+        "was"
+      ],
+      "sentence": "We locked the gate.",
+      "sentenceId": "Kami mengunci pagar (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "locked"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the gate"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "pesan",
+    "id": "home-pesan-029",
+    "level": "mid",
+    "meaningId": "Kamu membuka paket.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "open",
+        "the",
+        "package"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You open the package.",
+      "sentenceId": "Kamu membuka paket.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the package"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "open",
+        "the",
+        "package"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will open the package.",
+      "sentenceId": "Kamu akan membuka paket.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the package"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "pesan",
+    "id": "home-pesan-030",
+    "level": "junior",
+    "meaningId": "Mereka mencuci seragam.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "wash",
+        "the",
+        "uniforms"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They wash the uniforms.",
+      "sentenceId": "Mereka mencuci seragam.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the uniforms"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "wash",
+        "the",
+        "uniforms"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't wash the uniforms.",
+      "sentenceId": "Mereka tidak mencuci seragam.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the uniforms"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "rencana",
+    "id": "home-rencana-031",
+    "level": "junior",
+    "meaningId": "Kami mengemas tas.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "pack",
+        "the",
+        "bags"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We pack the bags.",
+      "sentenceId": "Kami mengemas tas.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pack"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the bags"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "We",
+        "don't",
+        "pack",
+        "the",
+        "bags"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "We don't pack the bags.",
+      "sentenceId": "Kami tidak mengemas tas.",
+      "why": "We memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pack"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the bags"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "rencana",
+    "id": "home-rencana-032",
+    "level": "mid",
+    "meaningId": "Saya menelepon sopir.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "call",
+        "the",
+        "driver"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I call the driver.",
+      "sentenceId": "Saya menelepon sopir.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the driver"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Do",
+        "I",
+        "call",
+        "the",
+        "driver"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Do I call the driver?",
+      "sentenceId": "Apakah saya menelepon sopir?",
+      "why": "Pertanyaan present simple dimulai dengan Do.",
+      "pattern": "Do + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Do"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the driver"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "rencana",
+    "id": "home-rencana-033",
+    "level": "junior",
+    "meaningId": "Dia memasak untuk perjalanan.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "cooks",
+        "for",
+        "the",
+        "trip"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She cooks for the trip.",
+      "sentenceId": "Dia memasak untuk perjalanan.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cooks"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "for the trip"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "She",
+        "cooked",
+        "for",
+        "the",
+        "trip"
+      ],
+      "distractors": [
+        "cook",
+        "was"
+      ],
+      "sentence": "She cooked for the trip.",
+      "sentenceId": "Dia memasak untuk perjalanan (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cooked"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "for the trip"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "rencana",
+    "id": "home-rencana-034",
+    "level": "mid",
+    "meaningId": "Kamu memeriksa tiket.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "check",
+        "the",
+        "tickets"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You check the tickets.",
+      "sentenceId": "Kamu memeriksa tiket.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the tickets"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "check",
+        "the",
+        "tickets"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will check the tickets.",
+      "sentenceId": "Kamu akan memeriksa tiket.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the tickets"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "rencana",
+    "id": "home-rencana-035",
+    "level": "junior",
+    "meaningId": "Mereka membersihkan kamar tamu.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "clean",
+        "the",
+        "guest",
+        "room"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They clean the guest room.",
+      "sentenceId": "Mereka membersihkan kamar tamu.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "clean"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the guest room"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "clean",
+        "the",
+        "guest",
+        "room"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't clean the guest room.",
+      "sentenceId": "Mereka tidak membersihkan kamar tamu.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "clean"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the guest room"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "umpan-balik",
+    "id": "home-umpan-balik-036",
+    "level": "junior",
+    "meaningId": "Saya memeriksa PR.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "check",
+        "the",
+        "homework"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I check the homework.",
+      "sentenceId": "Saya memeriksa PR.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the homework"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "check",
+        "the",
+        "homework"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't check the homework.",
+      "sentenceId": "Saya tidak memeriksa PR.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the homework"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "umpan-balik",
+    "id": "home-umpan-balik-037",
+    "level": "mid",
+    "meaningId": "Dia mencuci piring.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "washes",
+        "the",
+        "plates"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She washes the plates.",
+      "sentenceId": "Dia mencuci piring.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "washes"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the plates"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "wash",
+        "the",
+        "plates"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she wash the plates?",
+      "sentenceId": "Apakah dia mencuci piring?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the plates"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "umpan-balik",
+    "id": "home-umpan-balik-038",
+    "level": "junior",
+    "meaningId": "Kamu menutup lemari.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "close",
+        "the",
+        "cupboard"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You close the cupboard.",
+      "sentenceId": "Kamu menutup lemari.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "close"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the cupboard"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "You",
+        "closed",
+        "the",
+        "cupboard"
+      ],
+      "distractors": [
+        "close",
+        "was"
+      ],
+      "sentence": "You closed the cupboard.",
+      "sentenceId": "Kamu menutup lemari (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "closed"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the cupboard"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "umpan-balik",
+    "id": "home-umpan-balik-039",
+    "level": "mid",
+    "meaningId": "Kami membersihkan meja.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "clean",
+        "the",
+        "table"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We clean the table.",
+      "sentenceId": "Kami membersihkan meja.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "clean"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the table"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "We",
+        "will",
+        "clean",
+        "the",
+        "table"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "We will clean the table.",
+      "sentenceId": "Kami akan membersihkan meja.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "clean"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the table"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "umpan-balik",
+    "id": "home-umpan-balik-040",
+    "level": "junior",
+    "meaningId": "Mereka mengemas mainan.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "pack",
+        "the",
+        "toys"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They pack the toys.",
+      "sentenceId": "Mereka mengemas mainan.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pack"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the toys"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "pack",
+        "the",
+        "toys"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't pack the toys.",
+      "sentenceId": "Mereka tidak mengemas mainan.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pack"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the toys"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "tetangga",
+    "id": "home-tetangga-041",
+    "level": "junior",
+    "meaningId": "Saya menelepon tetangga.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "call",
+        "the",
+        "neighbor"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I call the neighbor.",
+      "sentenceId": "Saya menelepon tetangga.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the neighbor"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "call",
+        "the",
+        "neighbor"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't call the neighbor.",
+      "sentenceId": "Saya tidak menelepon tetangga.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the neighbor"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "tetangga",
+    "id": "home-tetangga-042",
+    "level": "mid",
+    "meaningId": "Dia menutup pagar samping.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "closes",
+        "the",
+        "side",
+        "gate"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She closes the side gate.",
+      "sentenceId": "Dia menutup pagar samping.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "closes"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the side gate"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "close",
+        "the",
+        "side",
+        "gate"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she close the side gate?",
+      "sentenceId": "Apakah dia menutup pagar samping?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "close"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the side gate"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "tetangga",
+    "id": "home-tetangga-043",
+    "level": "junior",
+    "meaningId": "Kami membawa kursi.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "carry",
+        "the",
+        "chairs"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We carry the chairs.",
+      "sentenceId": "Kami membawa kursi.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "carry"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the chairs"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "carried",
+        "the",
+        "chairs"
+      ],
+      "distractors": [
+        "carry",
+        "was"
+      ],
+      "sentence": "We carried the chairs.",
+      "sentenceId": "Kami membawa kursi (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "carried"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the chairs"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "tetangga",
+    "id": "home-tetangga-044",
+    "level": "mid",
+    "meaningId": "Kamu memeriksa pagar.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "check",
+        "the",
+        "fence"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You check the fence.",
+      "sentenceId": "Kamu memeriksa pagar.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the fence"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "check",
+        "the",
+        "fence"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will check the fence.",
+      "sentenceId": "Kamu akan memeriksa pagar.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the fence"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "tetangga",
+    "id": "home-tetangga-045",
+    "level": "junior",
+    "meaningId": "Mereka menyiram tanaman kami.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "water",
+        "our",
+        "plants"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They water our plants.",
+      "sentenceId": "Mereka menyiram tanaman kami.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "water"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "our plants"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "water",
+        "our",
+        "plants"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't water our plants.",
+      "sentenceId": "Mereka tidak menyiram tanaman kami.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "water"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "our plants"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "obrolan",
+    "id": "home-obrolan-046",
+    "level": "junior",
+    "meaningId": "Saya menelepon ayah saya.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "call",
+        "my",
+        "father"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I call my father.",
+      "sentenceId": "Saya menelepon ayah saya.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "my father"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "call",
+        "my",
+        "father"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't call my father.",
+      "sentenceId": "Saya tidak menelepon ayah saya.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "my father"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "obrolan",
+    "id": "home-obrolan-047",
+    "level": "mid",
+    "meaningId": "Dia memasak sup.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "cooks",
+        "soup"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She cooks soup.",
+      "sentenceId": "Dia memasak sup.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cooks"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "soup"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "cook",
+        "soup"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she cook soup?",
+      "sentenceId": "Apakah dia memasak sup?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cook"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "soup"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "obrolan",
+    "id": "home-obrolan-048",
+    "level": "junior",
+    "meaningId": "Kami berjalan setelah makan malam.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "walk",
+        "after",
+        "dinner"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We walk after dinner.",
+      "sentenceId": "Kami berjalan setelah makan malam.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "walk"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "after dinner"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "walked",
+        "after",
+        "dinner"
+      ],
+      "distractors": [
+        "walk",
+        "was"
+      ],
+      "sentence": "We walked after dinner.",
+      "sentenceId": "Kami berjalan setelah makan malam (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "walked"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "after dinner"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "obrolan",
+    "id": "home-obrolan-049",
+    "level": "mid",
+    "meaningId": "Kamu membuka album foto.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "open",
+        "the",
+        "photo",
+        "album"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You open the photo album.",
+      "sentenceId": "Kamu membuka album foto.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the photo album"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "open",
+        "the",
+        "photo",
+        "album"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will open the photo album.",
+      "sentenceId": "Kamu akan membuka album foto.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the photo album"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "obrolan",
+    "id": "home-obrolan-050",
+    "level": "junior",
+    "meaningId": "Mereka mencuci buah.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "wash",
+        "the",
+        "fruit"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They wash the fruit.",
+      "sentenceId": "Mereka mencuci buah.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the fruit"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "wash",
+        "the",
+        "fruit"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't wash the fruit.",
+      "sentenceId": "Mereka tidak mencuci buah.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the fruit"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "belanja",
+    "id": "home-belanja-051",
+    "level": "junior",
+    "meaningId": "Saya membeli sayur.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "buy",
+        "vegetables"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I buy vegetables.",
+      "sentenceId": "Saya membeli sayur.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "buy"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "vegetables"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "buy",
+        "vegetables"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't buy vegetables.",
+      "sentenceId": "Saya tidak membeli sayur.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "buy"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "vegetables"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "belanja",
+    "id": "home-belanja-052",
+    "level": "mid",
+    "meaningId": "Dia membawa tas.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "carries",
+        "the",
+        "bags"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She carries the bags.",
+      "sentenceId": "Dia membawa tas.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "carries"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the bags"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "carry",
+        "the",
+        "bags"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she carry the bags?",
+      "sentenceId": "Apakah dia membawa tas?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "carry"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the bags"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "belanja",
+    "id": "home-belanja-053",
+    "level": "junior",
+    "meaningId": "Kami memeriksa harga.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "check",
+        "the",
+        "prices"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We check the prices.",
+      "sentenceId": "Kami memeriksa harga.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the prices"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "checked",
+        "the",
+        "prices"
+      ],
+      "distractors": [
+        "check",
+        "was"
+      ],
+      "sentence": "We checked the prices.",
+      "sentenceId": "Kami memeriksa harga (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "checked"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the prices"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "belanja",
+    "id": "home-belanja-054",
+    "level": "mid",
+    "meaningId": "Kamu mengemas belanjaan.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "pack",
+        "the",
+        "groceries"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You pack the groceries.",
+      "sentenceId": "Kamu mengemas belanjaan.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pack"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the groceries"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "pack",
+        "the",
+        "groceries"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will pack the groceries.",
+      "sentenceId": "Kamu akan mengemas belanjaan.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pack"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the groceries"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "belanja",
+    "id": "home-belanja-055",
+    "level": "junior",
+    "meaningId": "Mereka membeli beras.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "buy",
+        "rice"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They buy rice.",
+      "sentenceId": "Mereka membeli beras.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "buy"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "rice"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "buy",
+        "rice"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't buy rice.",
+      "sentenceId": "Mereka tidak membeli beras.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "buy"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "rice"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "perbaikan",
+    "id": "home-perbaikan-056",
+    "level": "junior",
+    "meaningId": "Saya memperbaiki keran.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "fix",
+        "the",
+        "tap"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I fix the tap.",
+      "sentenceId": "Saya memperbaiki keran.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "fix"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the tap"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "fix",
+        "the",
+        "tap"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't fix the tap.",
+      "sentenceId": "Saya tidak memperbaiki keran.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "fix"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the tap"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "perbaikan",
+    "id": "home-perbaikan-057",
+    "level": "mid",
+    "meaningId": "Dia memeriksa kipas.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "checks",
+        "the",
+        "fan"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She checks the fan.",
+      "sentenceId": "Dia memeriksa kipas.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "checks"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the fan"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "check",
+        "the",
+        "fan"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she check the fan?",
+      "sentenceId": "Apakah dia memeriksa kipas?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the fan"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "perbaikan",
+    "id": "home-perbaikan-058",
+    "level": "junior",
+    "meaningId": "Kami menutup jendela.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "close",
+        "the",
+        "window"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We close the window.",
+      "sentenceId": "Kami menutup jendela.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "close"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the window"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "closed",
+        "the",
+        "window"
+      ],
+      "distractors": [
+        "close",
+        "was"
+      ],
+      "sentence": "We closed the window.",
+      "sentenceId": "Kami menutup jendela (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "closed"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the window"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "perbaikan",
+    "id": "home-perbaikan-059",
+    "level": "mid",
+    "meaningId": "Kamu menelepon tukang ledeng.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "call",
+        "the",
+        "plumber"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You call the plumber.",
+      "sentenceId": "Kamu menelepon tukang ledeng.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the plumber"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "call",
+        "the",
+        "plumber"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will call the plumber.",
+      "sentenceId": "Kamu akan menelepon tukang ledeng.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the plumber"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "perbaikan",
+    "id": "home-perbaikan-060",
+    "level": "junior",
+    "meaningId": "Mereka membawa tangga.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "carry",
+        "the",
+        "ladder"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They carry the ladder.",
+      "sentenceId": "Mereka membawa tangga.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "carry"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the ladder"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "carry",
+        "the",
+        "ladder"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't carry the ladder.",
+      "sentenceId": "Mereka tidak membawa tangga.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "carry"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the ladder"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "anggaran",
+    "id": "home-anggaran-061",
+    "level": "junior",
+    "meaningId": "Saya membayar sewa.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "pay",
+        "the",
+        "rent"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I pay the rent.",
+      "sentenceId": "Saya membayar sewa.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pay"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the rent"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "pay",
+        "the",
+        "rent"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't pay the rent.",
+      "sentenceId": "Saya tidak membayar sewa.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pay"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the rent"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "anggaran",
+    "id": "home-anggaran-062",
+    "level": "mid",
+    "meaningId": "Dia memeriksa tagihan.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "checks",
+        "the",
+        "bill"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She checks the bill.",
+      "sentenceId": "Dia memeriksa tagihan.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "checks"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the bill"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "check",
+        "the",
+        "bill"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she check the bill?",
+      "sentenceId": "Apakah dia memeriksa tagihan?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the bill"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "anggaran",
+    "id": "home-anggaran-063",
+    "level": "junior",
+    "meaningId": "Kami membeli lebih sedikit daging.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "buy",
+        "less",
+        "meat"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We buy less meat.",
+      "sentenceId": "Kami membeli lebih sedikit daging.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "buy"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "less meat"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "bought",
+        "less",
+        "meat"
+      ],
+      "distractors": [
+        "buy",
+        "was"
+      ],
+      "sentence": "We bought less meat.",
+      "sentenceId": "Kami membeli lebih sedikit daging (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "bought"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "less meat"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "anggaran",
+    "id": "home-anggaran-064",
+    "level": "mid",
+    "meaningId": "Kamu membuka buku tabungan.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "open",
+        "the",
+        "savings",
+        "book"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You open the savings book.",
+      "sentenceId": "Kamu membuka buku tabungan.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the savings book"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "open",
+        "the",
+        "savings",
+        "book"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will open the savings book.",
+      "sentenceId": "Kamu akan membuka buku tabungan.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the savings book"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "anggaran",
+    "id": "home-anggaran-065",
+    "level": "junior",
+    "meaningId": "Mereka membayar biaya sekolah.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "pay",
+        "the",
+        "school",
+        "fee"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They pay the school fee.",
+      "sentenceId": "Mereka membayar biaya sekolah.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pay"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the school fee"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "pay",
+        "the",
+        "school",
+        "fee"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't pay the school fee.",
+      "sentenceId": "Mereka tidak membayar biaya sekolah.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pay"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the school fee"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "cerita",
+    "id": "home-cerita-066",
+    "level": "junior",
+    "meaningId": "Saya memasak nasi.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "cook",
+        "the",
+        "rice"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I cook the rice.",
+      "sentenceId": "Saya memasak nasi.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cook"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the rice"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "cook",
+        "the",
+        "rice"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't cook the rice.",
+      "sentenceId": "Saya tidak memasak nasi.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cook"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the rice"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "cerita",
+    "id": "home-cerita-067",
+    "level": "mid",
+    "meaningId": "Dia mencuci gorden.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "washes",
+        "the",
+        "curtains"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She washes the curtains.",
+      "sentenceId": "Dia mencuci gorden.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "washes"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the curtains"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "wash",
+        "the",
+        "curtains"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she wash the curtains?",
+      "sentenceId": "Apakah dia mencuci gorden?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the curtains"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "cerita",
+    "id": "home-cerita-068",
+    "level": "junior",
+    "meaningId": "Kami berjalan ke taman.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "walk",
+        "to",
+        "the",
+        "park"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We walk to the park.",
+      "sentenceId": "Kami berjalan ke taman.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "walk"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "to the park"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "walked",
+        "to",
+        "the",
+        "park"
+      ],
+      "distractors": [
+        "walk",
+        "was"
+      ],
+      "sentence": "We walked to the park.",
+      "sentenceId": "Kami berjalan ke taman (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "walked"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "to the park"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "cerita",
+    "id": "home-cerita-069",
+    "level": "mid",
+    "meaningId": "Kamu menelepon bibi kamu.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "call",
+        "your",
+        "aunt"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You call your aunt.",
+      "sentenceId": "Kamu menelepon bibi kamu.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "your aunt"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "call",
+        "your",
+        "aunt"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will call your aunt.",
+      "sentenceId": "Kamu akan menelepon bibi kamu.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "your aunt"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "cerita",
+    "id": "home-cerita-070",
+    "level": "junior",
+    "meaningId": "Mereka membersihkan halaman.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "clean",
+        "the",
+        "yard"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They clean the yard.",
+      "sentenceId": "Mereka membersihkan halaman.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "clean"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the yard"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "clean",
+        "the",
+        "yard"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't clean the yard.",
+      "sentenceId": "Mereka tidak membersihkan halaman.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "clean"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the yard"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "cara-kerja",
+    "id": "home-cara-kerja-071",
+    "level": "junior",
+    "meaningId": "Saya membuka penutup.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "open",
+        "the",
+        "lid"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I open the lid.",
+      "sentenceId": "Saya membuka penutup.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the lid"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "open",
+        "the",
+        "lid"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't open the lid.",
+      "sentenceId": "Saya tidak membuka penutup.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the lid"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "cara-kerja",
+    "id": "home-cara-kerja-072",
+    "level": "mid",
+    "meaningId": "Dia memeriksa filter.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "checks",
+        "the",
+        "filter"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She checks the filter.",
+      "sentenceId": "Dia memeriksa filter.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "checks"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the filter"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "check",
+        "the",
+        "filter"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she check the filter?",
+      "sentenceId": "Apakah dia memeriksa filter?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the filter"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "cara-kerja",
+    "id": "home-cara-kerja-073",
+    "level": "junior",
+    "meaningId": "Kami menutup katup.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "close",
+        "the",
+        "valve"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We close the valve.",
+      "sentenceId": "Kami menutup katup.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "close"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the valve"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "closed",
+        "the",
+        "valve"
+      ],
+      "distractors": [
+        "close",
+        "was"
+      ],
+      "sentence": "We closed the valve.",
+      "sentenceId": "Kami menutup katup (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "closed"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the valve"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "cara-kerja",
+    "id": "home-cara-kerja-074",
+    "level": "mid",
+    "meaningId": "Kamu mencuci filter.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "wash",
+        "the",
+        "filter"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You wash the filter.",
+      "sentenceId": "Kamu mencuci filter.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the filter"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "wash",
+        "the",
+        "filter"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will wash the filter.",
+      "sentenceId": "Kamu akan mencuci filter.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the filter"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "cara-kerja",
+    "id": "home-cara-kerja-075",
+    "level": "junior",
+    "meaningId": "Mereka mengunci panel.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "lock",
+        "the",
+        "panel"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They lock the panel.",
+      "sentenceId": "Mereka mengunci panel.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "lock"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the panel"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "lock",
+        "the",
+        "panel"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't lock the panel.",
+      "sentenceId": "Mereka tidak mengunci panel.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "lock"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the panel"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "masak",
+    "id": "home-masak-076",
+    "level": "junior",
+    "meaningId": "Saya memasak sup.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "cook",
+        "the",
+        "soup"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I cook the soup.",
+      "sentenceId": "Saya memasak sup.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cook"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the soup"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "cook",
+        "the",
+        "soup"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't cook the soup.",
+      "sentenceId": "Saya tidak memasak sup.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cook"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the soup"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "masak",
+    "id": "home-masak-077",
+    "level": "mid",
+    "meaningId": "Dia mencuci sayur.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "washes",
+        "the",
+        "vegetables"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She washes the vegetables.",
+      "sentenceId": "Dia mencuci sayur.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "washes"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the vegetables"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "wash",
+        "the",
+        "vegetables"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she wash the vegetables?",
+      "sentenceId": "Apakah dia mencuci sayur?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the vegetables"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "masak",
+    "id": "home-masak-078",
+    "level": "junior",
+    "meaningId": "Kami membeli ayam.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "buy",
+        "chicken"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We buy chicken.",
+      "sentenceId": "Kami membeli ayam.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "buy"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "chicken"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "bought",
+        "chicken"
+      ],
+      "distractors": [
+        "buy",
+        "was"
+      ],
+      "sentence": "We bought chicken.",
+      "sentenceId": "Kami membeli ayam (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "bought"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "chicken"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "masak",
+    "id": "home-masak-079",
+    "level": "mid",
+    "meaningId": "Kamu membuka rice cooker.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "open",
+        "the",
+        "rice",
+        "cooker"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You open the rice cooker.",
+      "sentenceId": "Kamu membuka rice cooker.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the rice cooker"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "open",
+        "the",
+        "rice",
+        "cooker"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will open the rice cooker.",
+      "sentenceId": "Kamu akan membuka rice cooker.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the rice cooker"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "masak",
+    "id": "home-masak-080",
+    "level": "junior",
+    "meaningId": "Mereka membersihkan wajan.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "clean",
+        "the",
+        "pans"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They clean the pans.",
+      "sentenceId": "Mereka membersihkan wajan.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "clean"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the pans"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "clean",
+        "the",
+        "pans"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't clean the pans.",
+      "sentenceId": "Mereka tidak membersihkan wajan.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "clean"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the pans"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "sekolah",
+    "id": "home-sekolah-081",
+    "level": "junior",
+    "meaningId": "Saya mengemas bekal.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "pack",
+        "the",
+        "lunch"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I pack the lunch.",
+      "sentenceId": "Saya mengemas bekal.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pack"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the lunch"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "pack",
+        "the",
+        "lunch"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't pack the lunch.",
+      "sentenceId": "Saya tidak mengemas bekal.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "pack"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the lunch"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "sekolah",
+    "id": "home-sekolah-082",
+    "level": "mid",
+    "meaningId": "Dia memeriksa seragam.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "checks",
+        "the",
+        "uniform"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She checks the uniform.",
+      "sentenceId": "Dia memeriksa seragam.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "checks"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the uniform"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "check",
+        "the",
+        "uniform"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she check the uniform?",
+      "sentenceId": "Apakah dia memeriksa seragam?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the uniform"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "sekolah",
+    "id": "home-sekolah-083",
+    "level": "junior",
+    "meaningId": "Kami berjalan ke gerbang.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "walk",
+        "to",
+        "the",
+        "gate"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We walk to the gate.",
+      "sentenceId": "Kami berjalan ke gerbang.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "walk"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "to the gate"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "walked",
+        "to",
+        "the",
+        "gate"
+      ],
+      "distractors": [
+        "walk",
+        "was"
+      ],
+      "sentence": "We walked to the gate.",
+      "sentenceId": "Kami berjalan ke gerbang (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "walked"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "to the gate"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "sekolah",
+    "id": "home-sekolah-084",
+    "level": "mid",
+    "meaningId": "Kamu menelepon guru.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "call",
+        "the",
+        "teacher"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You call the teacher.",
+      "sentenceId": "Kamu menelepon guru.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the teacher"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "call",
+        "the",
+        "teacher"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will call the teacher.",
+      "sentenceId": "Kamu akan menelepon guru.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the teacher"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "sekolah",
+    "id": "home-sekolah-085",
+    "level": "junior",
+    "meaningId": "Mereka membawa proyek.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "carry",
+        "the",
+        "projects"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They carry the projects.",
+      "sentenceId": "Mereka membawa proyek.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "carry"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the projects"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "carry",
+        "the",
+        "projects"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't carry the projects.",
+      "sentenceId": "Mereka tidak membawa proyek.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "carry"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the projects"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "kesehatan",
+    "id": "home-kesehatan-086",
+    "level": "junior",
+    "meaningId": "Saya memeriksa demam.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "check",
+        "the",
+        "fever"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I check the fever.",
+      "sentenceId": "Saya memeriksa demam.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the fever"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "check",
+        "the",
+        "fever"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't check the fever.",
+      "sentenceId": "Saya tidak memeriksa demam.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "check"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the fever"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "kesehatan",
+    "id": "home-kesehatan-087",
+    "level": "mid",
+    "meaningId": "Dia menelepon klinik.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "calls",
+        "the",
+        "clinic"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She calls the clinic.",
+      "sentenceId": "Dia menelepon klinik.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "calls"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the clinic"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "call",
+        "the",
+        "clinic"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she call the clinic?",
+      "sentenceId": "Apakah dia menelepon klinik?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the clinic"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "kesehatan",
+    "id": "home-kesehatan-088",
+    "level": "junior",
+    "meaningId": "Kami membeli obat.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "buy",
+        "the",
+        "medicine"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We buy the medicine.",
+      "sentenceId": "Kami membeli obat.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "buy"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the medicine"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "bought",
+        "the",
+        "medicine"
+      ],
+      "distractors": [
+        "buy",
+        "was"
+      ],
+      "sentence": "We bought the medicine.",
+      "sentenceId": "Kami membeli obat (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "bought"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the medicine"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "kesehatan",
+    "id": "home-kesehatan-089",
+    "level": "mid",
+    "meaningId": "Kamu mencuci tanganmu.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "wash",
+        "your",
+        "hands"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You wash your hands.",
+      "sentenceId": "Kamu mencuci tanganmu.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "your hands"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "wash",
+        "your",
+        "hands"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will wash your hands.",
+      "sentenceId": "Kamu akan mencuci tanganmu.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "your hands"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "kesehatan",
+    "id": "home-kesehatan-090",
+    "level": "junior",
+    "meaningId": "Mereka membuka jendela.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "open",
+        "the",
+        "window"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They open the window.",
+      "sentenceId": "Mereka membuka jendela.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the window"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "open",
+        "the",
+        "window"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't open the window.",
+      "sentenceId": "Mereka tidak membuka jendela.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the window"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "tamu",
+    "id": "home-tamu-091",
+    "level": "junior",
+    "meaningId": "Saya memasak nasi tambahan.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "cook",
+        "extra",
+        "rice"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I cook extra rice.",
+      "sentenceId": "Saya memasak nasi tambahan.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cook"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "extra rice"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "cook",
+        "extra",
+        "rice"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't cook extra rice.",
+      "sentenceId": "Saya tidak memasak nasi tambahan.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cook"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "extra rice"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "tamu",
+    "id": "home-tamu-092",
+    "level": "mid",
+    "meaningId": "Dia membersihkan kamar tamu.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "cleans",
+        "the",
+        "guest",
+        "room"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She cleans the guest room.",
+      "sentenceId": "Dia membersihkan kamar tamu.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cleans"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the guest room"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "clean",
+        "the",
+        "guest",
+        "room"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she clean the guest room?",
+      "sentenceId": "Apakah dia membersihkan kamar tamu?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "clean"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the guest room"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "tamu",
+    "id": "home-tamu-093",
+    "level": "junior",
+    "meaningId": "Kami membuka pintu depan.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "open",
+        "the",
+        "front",
+        "door"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We open the front door.",
+      "sentenceId": "Kami membuka pintu depan.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "open"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the front door"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "opened",
+        "the",
+        "front",
+        "door"
+      ],
+      "distractors": [
+        "open",
+        "was"
+      ],
+      "sentence": "We opened the front door.",
+      "sentenceId": "Kami membuka pintu depan (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "opened"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the front door"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "tamu",
+    "id": "home-tamu-094",
+    "level": "mid",
+    "meaningId": "Kamu membawa kursi.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "carry",
+        "the",
+        "chairs"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You carry the chairs.",
+      "sentenceId": "Kamu membawa kursi.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "carry"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the chairs"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "carry",
+        "the",
+        "chairs"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will carry the chairs.",
+      "sentenceId": "Kamu akan membawa kursi.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "carry"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the chairs"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "tamu",
+    "id": "home-tamu-095",
+    "level": "junior",
+    "meaningId": "Mereka mencuci gelas.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "wash",
+        "the",
+        "glasses"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They wash the glasses.",
+      "sentenceId": "Mereka mencuci gelas.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the glasses"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "wash",
+        "the",
+        "glasses"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't wash the glasses.",
+      "sentenceId": "Mereka tidak mencuci gelas.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "wash"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the glasses"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "akhir-pekan",
+    "id": "home-akhir-pekan-096",
+    "level": "junior",
+    "meaningId": "Saya berjalan di taman.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "I",
+        "walk",
+        "in",
+        "the",
+        "park"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "I walk in the park.",
+      "sentenceId": "Saya berjalan di taman.",
+      "why": "I diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "walk"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "in the park"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "I",
+        "don't",
+        "walk",
+        "in",
+        "the",
+        "park"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "I don't walk in the park.",
+      "sentenceId": "Saya tidak berjalan di taman.",
+      "why": "I memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "I"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "walk"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "in the park"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "akhir-pekan",
+    "id": "home-akhir-pekan-097",
+    "level": "mid",
+    "meaningId": "Dia memasak makan siang besar.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "She",
+        "cooks",
+        "a",
+        "big",
+        "lunch"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "She cooks a big lunch.",
+      "sentenceId": "Dia memasak makan siang besar.",
+      "why": "She diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "She"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cooks"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a big lunch"
+        }
+      ]
+    },
+    "transform": {
+      "command": "QUESTION",
+      "commandId": "Ubah menjadi pertanyaan",
+      "tokens": [
+        "Does",
+        "she",
+        "cook",
+        "a",
+        "big",
+        "lunch"
+      ],
+      "distractors": [
+        "Is",
+        "Are"
+      ],
+      "sentence": "Does she cook a big lunch?",
+      "sentenceId": "Apakah dia memasak makan siang besar?",
+      "why": "Pertanyaan present simple dimulai dengan Does.",
+      "pattern": "Does + SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "Does"
+        },
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "she"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cook"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "a big lunch"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "akhir-pekan",
+    "id": "home-akhir-pekan-098",
+    "level": "junior",
+    "meaningId": "Kami membersihkan kamar tidur.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "We",
+        "clean",
+        "the",
+        "bedrooms"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "We clean the bedrooms.",
+      "sentenceId": "Kami membersihkan kamar tidur.",
+      "why": "We diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "clean"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the bedrooms"
+        }
+      ]
+    },
+    "transform": {
+      "command": "PAST",
+      "commandId": "Ubah menjadi past",
+      "tokens": [
+        "We",
+        "cleaned",
+        "the",
+        "bedrooms"
+      ],
+      "distractors": [
+        "clean",
+        "was"
+      ],
+      "sentence": "We cleaned the bedrooms.",
+      "sentenceId": "Kami membersihkan kamar tidur (lampau).",
+      "why": "Bentuk lampau memakai kata kerja past, tanpa do.",
+      "pattern": "SUBJECT + PAST VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "We"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "cleaned"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the bedrooms"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "akhir-pekan",
+    "id": "home-akhir-pekan-099",
+    "level": "mid",
+    "meaningId": "Kamu menelepon keluarga.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "You",
+        "call",
+        "the",
+        "family"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "You call the family.",
+      "sentenceId": "Kamu menelepon keluarga.",
+      "why": "You diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the family"
+        }
+      ]
+    },
+    "transform": {
+      "command": "FUTURE",
+      "commandId": "Ubah menjadi future",
+      "tokens": [
+        "You",
+        "will",
+        "call",
+        "the",
+        "family"
+      ],
+      "distractors": [
+        "going",
+        "shall"
+      ],
+      "sentence": "You will call the family.",
+      "sentenceId": "Kamu akan menelepon keluarga.",
+      "why": "Future sederhana memakai will + kata kerja dasar.",
+      "pattern": "SUBJECT + will + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "You"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "will"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "call"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the family"
+        }
+      ]
+    }
+  },
+  {
+    "theme": "akhir-pekan",
+    "id": "home-akhir-pekan-100",
+    "level": "junior",
+    "meaningId": "Mereka menyiram kebun.",
+    "pattern": "SUBJECT + VERB + OBJECT",
+    "assemble": {
+      "tokens": [
+        "They",
+        "water",
+        "the",
+        "garden"
+      ],
+      "distractors": [
+        "is",
+        "are"
+      ],
+      "sentence": "They water the garden.",
+      "sentenceId": "Mereka menyiram kebun.",
+      "why": "They diikuti bentuk kata kerja yang sesuai, lalu objek.",
+      "pattern": "SUBJECT + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "water"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the garden"
+        }
+      ]
+    },
+    "transform": {
+      "command": "NEGATIVE",
+      "commandId": "Ubah menjadi negatif",
+      "tokens": [
+        "They",
+        "don't",
+        "water",
+        "the",
+        "garden"
+      ],
+      "distractors": [
+        "not",
+        "doesn't"
+      ],
+      "sentence": "They don't water the garden.",
+      "sentenceId": "Mereka tidak menyiram kebun.",
+      "why": "They memakai don't + kata kerja dasar.",
+      "pattern": "SUBJECT + don't + VERB + OBJECT",
+      "slots": [
+        {
+          "role": "Subject",
+          "roleId": "Subjek",
+          "text": "They"
+        },
+        {
+          "role": "Auxiliary",
+          "roleId": "Kata bantu",
+          "text": "don't"
+        },
+        {
+          "role": "Verb",
+          "roleId": "Kata kerja",
+          "text": "water"
+        },
+        {
+          "role": "Object",
+          "roleId": "Objek",
+          "text": "the garden"
+        }
+      ]
+    }
+  }
+]

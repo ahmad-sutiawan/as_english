@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SignOutConfirm } from "@/components/sign-out-confirm";
+import { PersonaSwitch } from "@/components/persona-switch";
+import type { PersonaId } from "@/lib/persona";
 
 const LINKS = [
   { href: "/dashboard", label: "Dashboard" },
@@ -16,6 +18,7 @@ const LINKS = [
 
 type Props = {
   accountLabel: string;
+  persona: PersonaId | null;
   signOutAction: () => Promise<void>;
 };
 
@@ -23,7 +26,7 @@ function isCurrent(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export function SiteNav({ accountLabel, signOutAction }: Props) {
+export function SiteNav({ accountLabel, persona, signOutAction }: Props) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -57,6 +60,11 @@ export function SiteNav({ accountLabel, signOutAction }: Props) {
       </nav>
 
       <div className="ml-auto flex items-center gap-2 lg:ml-3">
+        {persona ? (
+          <div className="hidden lg:block">
+            <PersonaSwitch persona={persona} />
+          </div>
+        ) : null}
         <p className="hidden max-w-40 truncate text-sm text-[var(--muted)] lg:block" title={accountLabel}>
           {accountLabel}
         </p>
@@ -101,6 +109,11 @@ export function SiteNav({ accountLabel, signOutAction }: Props) {
               })}
             </ul>
           </nav>
+          {persona ? (
+            <div className="mb-3 lg:hidden">
+              <PersonaSwitch persona={persona} />
+            </div>
+          ) : null}
           <div className="mt-3 border-t border-[var(--border)] pt-3">
             <p className="truncate text-sm text-[var(--muted)]" title={accountLabel}>
               {accountLabel}

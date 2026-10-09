@@ -2,6 +2,7 @@ import { prisma } from "@/lib/db";
 import { getAllSpeakItems, getSpeakItem } from "@/lib/speak-content";
 import { jakartaDateKey } from "@/lib/quick";
 import type { SpeakItem, SpeakLevel } from "@/types/speak";
+import type { PersonaId } from "@/lib/persona";
 
 export const SPEAK_XP_COMPLETE = 25;
 export const SPEAK_XP_MASTERED = 15;
@@ -13,10 +14,10 @@ function yesterdayJakartaKey(todayKey: string): string {
   return jakartaDateKey(dt);
 }
 
-export async function getOrCreateSpeakStats(userId: string) {
+export async function getOrCreateSpeakStats(userId: string, persona: PersonaId) {
   return prisma.speakStats.upsert({
-    where: { userId },
-    create: { userId },
+    where: { userId_persona: { userId, persona } },
+    create: { userId, persona },
     update: {},
   });
 }
@@ -32,9 +33,10 @@ function shuffle<T>(arr: T[]): T[] {
 
 export async function pickSpeakSessionItem(
   userId: string,
+  persona: PersonaId,
   level: SpeakLevel | "all" = "all",
 ): Promise<SpeakItem | null> {
-  const all = getAllSpeakItems().filter(
+  const all = getAllSpeakItems(persona).filter(
     (i) => level === "all" || i.level === level,
   );
   if (!all.length) return null;
@@ -65,6 +67,7 @@ export async function pickSpeakSessionItem(
 
 export async function saveSpeakAttempt(opts: {
   userId: string;
+  persona: PersonaId;
   itemId: string;
   phase: string;
   transcript: string;
@@ -72,7 +75,7 @@ export async function saveSpeakAttempt(opts: {
   attemptSlot: 1 | 2;
   mastered: boolean;
 }) {
-  const item = getSpeakItem(opts.itemId);
+  const item = getSpeakItem(opts.itemId, opts.persona);
   if (!item) return null;
 
   const existing = await prisma.speakProgress.findUnique({
@@ -125,10 +128,11 @@ export async function saveSpeakAttempt(opts: {
 
 export async function completeSpeakSession(
   userId: string,
+  persona: PersonaId,
   opts: { mastered: boolean },
 ) {
   const today = jakartaDateKey();
-  const stats = await getOrCreateSpeakStats(userId);
+  const stats = await getOrCreateSpeakStats(userId, persona);
   const lastKey = stats.lastPlayDate
     ? jakartaDateKey(stats.lastPlayDate)
     : null;
@@ -146,7 +150,7 @@ export async function completeSpeakSession(
   const bestStreak = Math.max(stats.bestStreak, streak);
 
   const updated = await prisma.speakStats.update({
-    where: { userId },
+    where: { userId_persona: { userId, persona } },
     data: {
       xp: stats.xp + xpGain,
       streak,

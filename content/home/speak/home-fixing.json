@@ -1,0 +1,398 @@
+{
+  "id": "home-fixing",
+  "title": "Fixing Things",
+  "titleId": "Memperbaiki Sesuatu",
+  "itemCount": 10,
+  "items": [
+    {
+      "id": "home-fixing-001",
+      "category": "home-fixing",
+      "level": "mid",
+      "target": "The tap is dripping in the bathroom.",
+      "targetId": "Keran menetes di kamar mandi.",
+      "chunks": [
+        "The tap",
+        "is dripping",
+        "in the bathroom"
+      ],
+      "scrambled": [
+        "The",
+        "tap",
+        "is",
+        "dripping",
+        "in",
+        "the",
+        "bathroom"
+      ],
+      "keywords": [
+        "dripping",
+        "bathroom"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "The tap is dripping in the bathroom."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-fixing-002",
+      "category": "home-fixing",
+      "level": "senior",
+      "target": "I turned off the main water valve.",
+      "targetId": "Saya mematikan katup air utama.",
+      "chunks": [
+        "I turned off",
+        "the main",
+        "water valve"
+      ],
+      "scrambled": [
+        "I",
+        "turned",
+        "off",
+        "the",
+        "main",
+        "water",
+        "valve"
+      ],
+      "keywords": [
+        "turned",
+        "main",
+        "water"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "I turned off the main water valve."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-fixing-003",
+      "category": "home-fixing",
+      "level": "junior",
+      "target": "The light bulb is cool enough to change.",
+      "targetId": "Bohlam sudah cukup dingin untuk diganti.",
+      "chunks": [
+        "The light bulb",
+        "is cool enough",
+        "to change"
+      ],
+      "scrambled": [
+        "The",
+        "light",
+        "bulb",
+        "is",
+        "cool",
+        "enough",
+        "to",
+        "change"
+      ],
+      "keywords": [
+        "light",
+        "bulb",
+        "cool"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "The light bulb is cool enough to change."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-fixing-004",
+      "category": "home-fixing",
+      "level": "mid",
+      "target": "Can you hold the ladder for me?",
+      "targetId": "Bisakah kamu memegangkan tangga untuk saya?",
+      "chunks": [
+        "Can you hold",
+        "the ladder",
+        "for me"
+      ],
+      "scrambled": [
+        "Can",
+        "you",
+        "hold",
+        "the",
+        "ladder",
+        "for",
+        "me"
+      ],
+      "keywords": [
+        "hold",
+        "ladder"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Can you hold the ladder for me?"
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-fixing-005",
+      "category": "home-fixing",
+      "level": "senior",
+      "target": "The washer stops before the spin cycle.",
+      "targetId": "Mesin cuci berhenti sebelum putaran kering.",
+      "chunks": [
+        "The washer stops",
+        "before",
+        "the spin cycle"
+      ],
+      "scrambled": [
+        "The",
+        "washer",
+        "stops",
+        "before",
+        "the",
+        "spin",
+        "cycle"
+      ],
+      "keywords": [
+        "washer",
+        "stops",
+        "before"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "The washer stops before the spin cycle."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-fixing-006",
+      "category": "home-fixing",
+      "level": "junior",
+      "target": "I will call the electrician this afternoon.",
+      "targetId": "Saya akan menelepon tukang listrik sore ini.",
+      "chunks": [
+        "I will call",
+        "the electrician",
+        "this afternoon"
+      ],
+      "scrambled": [
+        "I",
+        "will",
+        "call",
+        "the",
+        "electrician",
+        "this",
+        "afternoon"
+      ],
+      "keywords": [
+        "will",
+        "call",
+        "electrician"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "I will call the electrician this afternoon."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-fixing-007",
+      "category": "home-fixing",
+      "level": "mid",
+      "target": "This screw is loose on the fan.",
+      "targetId": "Sekrup ini longgar di kipas.",
+      "chunks": [
+        "This screw",
+        "is loose",
+        "on the fan"
+      ],
+      "scrambled": [
+        "This",
+        "screw",
+        "is",
+        "loose",
+        "on",
+        "the",
+        "fan"
+      ],
+      "keywords": [
+        "this",
+        "screw",
+        "loose"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "This screw is loose on the fan."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-fixing-008",
+      "category": "home-fixing",
+      "level": "senior",
+      "target": "The window does not close all the way.",
+      "targetId": "Jendela tidak tertutup sepenuhnya.",
+      "chunks": [
+        "The window",
+        "does not close",
+        "all the way"
+      ],
+      "scrambled": [
+        "The",
+        "window",
+        "does",
+        "not",
+        "close",
+        "all",
+        "the",
+        "way"
+      ],
+      "keywords": [
+        "window",
+        "does",
+        "close"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "The window does not close all the way."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-fixing-009",
+      "category": "home-fixing",
+      "level": "junior",
+      "target": "Please do not use the broken socket.",
+      "targetId": "Tolong jangan memakai stopkontak yang rusak.",
+      "chunks": [
+        "Please do not use",
+        "the broken",
+        "socket"
+      ],
+      "scrambled": [
+        "Please",
+        "do",
+        "not",
+        "use",
+        "the",
+        "broken",
+        "socket"
+      ],
+      "keywords": [
+        "please",
+        "broken",
+        "socket"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Please do not use the broken socket."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-fixing-010",
+      "category": "home-fixing",
+      "level": "mid",
+      "target": "I covered the leak with a bucket.",
+      "targetId": "Saya menutup tetesan dengan ember.",
+      "chunks": [
+        "I covered",
+        "the leak",
+        "with a bucket"
+      ],
+      "scrambled": [
+        "I",
+        "covered",
+        "the",
+        "leak",
+        "with",
+        "a",
+        "bucket"
+      ],
+      "keywords": [
+        "covered",
+        "leak",
+        "with"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "I covered the leak with a bucket."
+      ],
+      "audio": null
+    }
+  ]
+}

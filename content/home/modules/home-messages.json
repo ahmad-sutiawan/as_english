@@ -1,0 +1,748 @@
+{
+  "id": "home-messages",
+  "title": "Home Messages",
+  "titleId": "Pesan Rumah",
+  "description": "Pesan singkat ke keluarga, tetangga, sekolah, atau pemilik rumah.",
+  "persona": [
+    "Rumah"
+  ],
+  "status": "ready",
+  "itemCount": 15,
+  "items": [
+    {
+      "id": "home-messages-01",
+      "moduleId": "home-messages",
+      "difficulty": "mid",
+      "scenario": "You need your partner to buy eggs.",
+      "scenarioId": "Kamu perlu pasangan membeli telur.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Buy eggs.",
+          "textId": "Beli telur.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Please buy ten eggs on the way home. We need them for breakfast.",
+          "textId": "Tolong beli sepuluh telur saat pulang. Kita membutuhkannya untuk sarapan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Please buy ten eggs on the way home. We need them for breakfast.\" (Tolong beli sepuluh telur saat pulang. Kita membutuhkannya untuk sarapan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-messages-02",
+      "moduleId": "home-messages",
+      "difficulty": "senior",
+      "scenario": "You are telling a neighbor about a package.",
+      "scenarioId": "Kamu memberi tahu tetangga soal paket.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Your package is here.",
+          "textId": "Paketmu di sini.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "A package for you arrived at our door. You can collect it after five.",
+          "textId": "Paket untukmu tiba di pintu kami. Kamu bisa mengambilnya setelah pukul lima.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"A package for you arrived at our door. You can collect it after five.\" (Paket untukmu tiba di pintu kami. Kamu bisa mengambilnya setelah pukul lima.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-messages-03",
+      "moduleId": "home-messages",
+      "difficulty": "junior",
+      "scenario": "You are writing to the landlord about a leak.",
+      "scenarioId": "Kamu menulis ke pemilik rumah soal kebocoran.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "There is a leak.",
+          "textId": "Ada kebocoran.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The kitchen ceiling has been leaking since last night. Could you send someone this week?",
+          "textId": "Langit-langit dapur bocor sejak semalam. Bisakah Anda mengirim seseorang minggu ini?",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The kitchen ceiling has been leaking since last night. Could you send someone this week?\" (Langit-langit dapur bocor sejak semalam. Bisakah Anda mengirim seseorang minggu ini?). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-messages-04",
+      "moduleId": "home-messages",
+      "difficulty": "mid",
+      "scenario": "You are messaging the teacher.",
+      "scenarioId": "Kamu mengirim pesan ke guru.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Raka is absent.",
+          "textId": "Raka tidak masuk.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Raka will be absent tomorrow because he has a fever. I will send the homework photo tonight.",
+          "textId": "Raka tidak masuk besok karena demam. Saya akan mengirim foto PR malam ini.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Raka will be absent tomorrow because he has a fever. I will send the homework photo tonight.\" (Raka tidak masuk besok karena demam. Saya akan mengirim foto PR malam ini.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-messages-05",
+      "moduleId": "home-messages",
+      "difficulty": "senior",
+      "scenario": "You are asking a sibling to check on your parents.",
+      "scenarioId": "Kamu meminta saudara mengecek orang tua.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Please visit them.",
+          "textId": "Tolong jenguk mereka.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Can you look in on Mom and Dad this evening? I cannot leave work before eight.",
+          "textId": "Bisakah kamu menengok Ibu dan Ayah sore ini? Saya tidak bisa pulang sebelum pukul delapan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Can you look in on Mom and Dad this evening? I cannot leave work before eight.\" (Bisakah kamu menengok Ibu dan Ayah sore ini? Saya tidak bisa pulang sebelum pukul delapan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-messages-06",
+      "moduleId": "home-messages",
+      "difficulty": "junior",
+      "scenario": "You are replying to a cousin about lunch.",
+      "scenarioId": "Kamu membalas sepupu soal makan siang.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Lunch is on.",
+          "textId": "Makan siangnya jadi.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Sunday lunch at our place still works. Please arrive around twelve, and we have enough chairs.",
+          "textId": "Makan siang Minggu di tempat kami tetap jalan. Silakan datang sekitar pukul dua belas, dan kursi kami cukup.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Sunday lunch at our place still works. Please arrive around twelve, and we have enough chairs.\" (Makan siang Minggu di tempat kami tetap jalan. Silakan datang sekitar pukul dua belas, dan kursi kami cukup.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-messages-07",
+      "moduleId": "home-messages",
+      "difficulty": "mid",
+      "scenario": "You are texting about a spare key.",
+      "scenarioId": "Kamu mengirim pesan soal kunci cadangan.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The key is with the neighbor.",
+          "textId": "Kuncinya di tetangga.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I left the spare key with Mrs. Dewi in house four. Please knock and say my name.",
+          "textId": "Saya menitipkan kunci cadangan ke Bu Dewi di rumah empat. Tolong ketuk dan sebut nama saya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I left the spare key with Mrs. Dewi in house four. Please knock and say my name.\" (Saya menitipkan kunci cadangan ke Bu Dewi di rumah empat. Tolong ketuk dan sebut nama saya.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-messages-08",
+      "moduleId": "home-messages",
+      "difficulty": "senior",
+      "scenario": "You are warning the family about a wet floor.",
+      "scenarioId": "Kamu memperingatkan keluarga soal lantai basah.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The floor is wet.",
+          "textId": "Lantainya basah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The hallway floor is wet. Please walk slowly until I finish mopping.",
+          "textId": "Lantai lorong basah. Tolong berjalan pelan sampai saya selesai mengepel.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The hallway floor is wet. Please walk slowly until I finish mopping.\" (Lantai lorong basah. Tolong berjalan pelan sampai saya selesai mengepel.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-messages-09",
+      "moduleId": "home-messages",
+      "difficulty": "junior",
+      "scenario": "You are asking the builder for a time.",
+      "scenarioId": "Kamu meminta waktu ke tukang.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Can you come?",
+          "textId": "Bisakah Anda datang?",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Can you come on Thursday morning to look at the roof? We will be home after eight.",
+          "textId": "Bisakah Anda datang Kamis pagi untuk melihat atap? Kami di rumah setelah pukul delapan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Can you come on Thursday morning to look at the roof? We will be home after eight.\" (Bisakah Anda datang Kamis pagi untuk melihat atap? Kami di rumah setelah pukul delapan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-messages-10",
+      "moduleId": "home-messages",
+      "difficulty": "mid",
+      "scenario": "You are cancelling a playdate.",
+      "scenarioId": "Kamu membatalkan janji main.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We cannot come.",
+          "textId": "Kami tidak bisa datang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We need to cancel today's playdate because Dina is coughing. Can we try Saturday instead?",
+          "textId": "Kami perlu membatalkan janji main hari ini karena Dina batuk. Bisakah kita coba Sabtu saja?",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We need to cancel today's playdate because Dina is coughing. Can we try Saturday instead?\" (Kami perlu membatalkan janji main hari ini karena Dina batuk. Bisakah kita coba Sabtu saja?). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-messages-11",
+      "moduleId": "home-messages",
+      "difficulty": "senior",
+      "scenario": "You are thanking a neighbor.",
+      "scenarioId": "Kamu berterima kasih ke tetangga.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Thank you.",
+          "textId": "Terima kasih.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Thank you for watching the dog this afternoon. I left some fruit by your door.",
+          "textId": "Terima kasih sudah menjaga anjing sore ini. Saya meninggalkan buah di pintumu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Thank you for watching the dog this afternoon. I left some fruit by your door.\" (Terima kasih sudah menjaga anjing sore ini. Saya meninggalkan buah di pintumu.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-messages-12",
+      "moduleId": "home-messages",
+      "difficulty": "junior",
+      "scenario": "You are telling your child where you are.",
+      "scenarioId": "Kamu memberi tahu anakmu di mana kamu berada.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I am out.",
+          "textId": "Saya sedang keluar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I am at the pharmacy. Stay inside with Grandma, and I will be back in twenty minutes.",
+          "textId": "Saya di apotek. Tetap di dalam bersama Nenek, dan saya kembali dalam dua puluh menit.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I am at the pharmacy. Stay inside with Grandma, and I will be back in twenty minutes.\" (Saya di apotek. Tetap di dalam bersama Nenek, dan saya kembali dalam dua puluh menit.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-messages-13",
+      "moduleId": "home-messages",
+      "difficulty": "mid",
+      "scenario": "You are asking for a quieter evening.",
+      "scenarioId": "Kamu meminta malam yang lebih tenang.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Please be quiet.",
+          "textId": "Tolong tenang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Please keep the music low after nine. The baby is finally asleep.",
+          "textId": "Tolong pelankan musik setelah pukul sembilan. Bayinya baru saja tertidur.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Please keep the music low after nine. The baby is finally asleep.\" (Tolong pelankan musik setelah pukul sembilan. Bayinya baru saja tertidur.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-messages-14",
+      "moduleId": "home-messages",
+      "difficulty": "senior",
+      "scenario": "You are confirming a vegetable order.",
+      "scenarioId": "Kamu mengonfirmasi pesanan sayur.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Deliver the vegetables.",
+          "textId": "Antar sayurnya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Please deliver the usual vegetables tomorrow morning, and add a kilo of tomatoes.",
+          "textId": "Tolong antar sayur seperti biasa besok pagi, dan tambahkan satu kilo tomat.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Please deliver the usual vegetables tomorrow morning, and add a kilo of tomatoes.\" (Tolong antar sayur seperti biasa besok pagi, dan tambahkan satu kilo tomat.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-messages-15",
+      "moduleId": "home-messages",
+      "difficulty": "junior",
+      "scenario": "You are writing a short apology.",
+      "scenarioId": "Kamu menulis permintaan maaf singkat.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What message do you send?",
+      "promptId": "Pesan apa yang kamu kirim?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Sorry about the car.",
+          "textId": "Maaf soal mobilnya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Sorry we blocked your gate with the car. I have moved it, and it will not happen again.",
+          "textId": "Maaf kami menutup pagar Anda dengan mobil. Saya sudah memindahkannya, dan ini tidak akan terulang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Sorry we blocked your gate with the car. I have moved it, and it will not happen again.\" (Maaf kami menutup pagar Anda dengan mobil. Saya sudah memindahkannya, dan ini tidak akan terulang.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pesan",
+        "rumah"
+      ]
+    }
+  ]
+}

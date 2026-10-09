@@ -1,0 +1,601 @@
+{
+  "id": "home-household-decisions",
+  "title": "Household Decisions",
+  "titleId": "Keputusan Rumah Tangga",
+  "description": "Bahasa untuk anggaran, jadwal, dan keputusan bersama di rumah.",
+  "persona": [
+    "Rumah"
+  ],
+  "status": "ready",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "home-household-decisions-01",
+      "moduleId": "home-household-decisions",
+      "difficulty": "mid",
+      "scenario": "You and your partner are choosing a weekend plan.",
+      "scenarioId": "Kamu dan pasangan memilih rencana akhir pekan.",
+      "scenarioStructure": "Subject + will + Verb + Object",
+      "scenarioStructureId": "Subjek + will + Kata kerja + Objek",
+      "prompt": "What do you say to decide together?",
+      "promptId": "Apa yang kamu katakan untuk memutuskan bersama?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Let's decide later.",
+          "textId": "Nanti saja diputuskan.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Let's stay home on Saturday and visit your parents on Sunday.",
+          "textId": "Mari di rumah hari Sabtu dan mengunjungi orang tuamu hari Minggu.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Let's stay home on Saturday and visit your parents on Sunday.\" (Mari di rumah hari Sabtu dan mengunjungi orang tuamu hari Minggu.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "anggaran",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-household-decisions-02",
+      "moduleId": "home-household-decisions",
+      "difficulty": "senior",
+      "scenario": "The electricity bill is higher than usual.",
+      "scenarioId": "Tagihan listrik lebih tinggi dari biasanya.",
+      "scenarioStructure": "Subject + will + Verb + Object",
+      "scenarioStructureId": "Subjek + will + Kata kerja + Objek",
+      "prompt": "What do you say to decide together?",
+      "promptId": "Apa yang kamu katakan untuk memutuskan bersama?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The bill is high.",
+          "textId": "Tagihannya tinggi.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We should use the air conditioner less and check the bill together tonight.",
+          "textId": "Kita sebaiknya mengurangi AC dan memeriksa tagihan bersama malam ini.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We should use the air conditioner less and check the bill together tonight.\" (Kita sebaiknya mengurangi AC dan memeriksa tagihan bersama malam ini.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "anggaran",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-household-decisions-03",
+      "moduleId": "home-household-decisions",
+      "difficulty": "junior",
+      "scenario": "You want a new fridge, but money is tight.",
+      "scenarioId": "Kamu ingin kulkas baru, tapi uang sedang ketat.",
+      "scenarioStructure": "Subject + will + Verb + Object",
+      "scenarioStructureId": "Subjek + will + Kata kerja + Objek",
+      "prompt": "What do you say to decide together?",
+      "promptId": "Apa yang kamu katakan untuk memutuskan bersama?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We need a fridge.",
+          "textId": "Kita butuh kulkas.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We can save for two months and buy the smaller fridge.",
+          "textId": "Kita bisa menabung dua bulan dan membeli kulkas yang lebih kecil.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We can save for two months and buy the smaller fridge.\" (Kita bisa menabung dua bulan dan membeli kulkas yang lebih kecil.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "anggaran",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-household-decisions-04",
+      "moduleId": "home-household-decisions",
+      "difficulty": "mid",
+      "scenario": "Both of you want the car on Friday.",
+      "scenarioId": "Kalian berdua butuh mobil hari Jumat.",
+      "scenarioStructure": "Subject + will + Verb + Object",
+      "scenarioStructureId": "Subjek + will + Kata kerja + Objek",
+      "prompt": "What do you say to decide together?",
+      "promptId": "Apa yang kamu katakan untuk memutuskan bersama?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We both need the car.",
+          "textId": "Kita berdua butuh mobil.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I can take the bus, and you can keep the car for the school run.",
+          "textId": "Saya bisa naik bus, dan kamu pakai mobil untuk antar sekolah.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I can take the bus, and you can keep the car for the school run.\" (Saya bisa naik bus, dan kamu pakai mobil untuk antar sekolah.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "anggaran",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-household-decisions-05",
+      "moduleId": "home-household-decisions",
+      "difficulty": "senior",
+      "scenario": "A relative asks to stay for a week.",
+      "scenarioId": "Kerabat minta menginap seminggu.",
+      "scenarioStructure": "Subject + will + Verb + Object",
+      "scenarioStructureId": "Subjek + will + Kata kerja + Objek",
+      "prompt": "What do you say to decide together?",
+      "promptId": "Apa yang kamu katakan untuk memutuskan bersama?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "They can stay.",
+          "textId": "Mereka bisa menginap.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "They can stay three nights, and we will tell them the spare room is small.",
+          "textId": "Mereka bisa menginap tiga malam, dan kita beri tahu kamar tamunya kecil.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"They can stay three nights, and we will tell them the spare room is small.\" (Mereka bisa menginap tiga malam, dan kita beri tahu kamar tamunya kecil.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "anggaran",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-household-decisions-06",
+      "moduleId": "home-household-decisions",
+      "difficulty": "junior",
+      "scenario": "You are choosing a school activity fee.",
+      "scenarioId": "Kamu memilih biaya kegiatan sekolah.",
+      "scenarioStructure": "Subject + will + Verb + Object",
+      "scenarioStructureId": "Subjek + will + Kata kerja + Objek",
+      "prompt": "What do you say to decide together?",
+      "promptId": "Apa yang kamu katakan untuk memutuskan bersama?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "School costs money.",
+          "textId": "Sekolah butuh biaya.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We will pay for the museum trip and skip the optional camp this term.",
+          "textId": "Kita akan membayar kunjungan museum dan melewati kemah opsional semester ini.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We will pay for the museum trip and skip the optional camp this term.\" (Kita akan membayar kunjungan museum dan melewati kemah opsional semester ini.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "anggaran",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-household-decisions-07",
+      "moduleId": "home-household-decisions",
+      "difficulty": "mid",
+      "scenario": "Dinner time keeps changing.",
+      "scenarioId": "Waktu makan malam terus berubah.",
+      "scenarioStructure": "Subject + will + Verb + Object",
+      "scenarioStructureId": "Subjek + will + Kata kerja + Objek",
+      "prompt": "What do you say to decide together?",
+      "promptId": "Apa yang kamu katakan untuk memutuskan bersama?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Dinner is late.",
+          "textId": "Makan malam terlambat.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Let's eat at seven on weekdays so the children have a steady routine.",
+          "textId": "Mari makan pukul tujuh di hari kerja supaya anak-anak punya rutinitas tetap.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Let's eat at seven on weekdays so the children have a steady routine.\" (Mari makan pukul tujuh di hari kerja supaya anak-anak punya rutinitas tetap.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "anggaran",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-household-decisions-08",
+      "moduleId": "home-household-decisions",
+      "difficulty": "senior",
+      "scenario": "You found a cheaper market further away.",
+      "scenarioId": "Kamu menemukan pasar yang lebih murah tapi lebih jauh.",
+      "scenarioStructure": "Subject + will + Verb + Object",
+      "scenarioStructureId": "Subjek + will + Kata kerja + Objek",
+      "prompt": "What do you say to decide together?",
+      "promptId": "Apa yang kamu katakan untuk memutuskan bersama?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The market is cheaper.",
+          "textId": "Pasar itu lebih murah.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We can shop there on Sunday morning and keep the corner store for weekdays.",
+          "textId": "Kita bisa belanja di sana Minggu pagi dan tetap ke warung untuk hari kerja.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We can shop there on Sunday morning and keep the corner store for weekdays.\" (Kita bisa belanja di sana Minggu pagi dan tetap ke warung untuk hari kerja.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "anggaran",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-household-decisions-09",
+      "moduleId": "home-household-decisions",
+      "difficulty": "junior",
+      "scenario": "The roof needs repair before the rainy season.",
+      "scenarioId": "Atap perlu diperbaiki sebelum musim hujan.",
+      "scenarioStructure": "Subject + will + Verb + Object",
+      "scenarioStructureId": "Subjek + will + Kata kerja + Objek",
+      "prompt": "What do you say to decide together?",
+      "promptId": "Apa yang kamu katakan untuk memutuskan bersama?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The roof needs work.",
+          "textId": "Atap perlu dikerjakan.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We should call the builder this week and set a budget before the work starts.",
+          "textId": "Kita sebaiknya menghubungi tukang minggu ini dan menetapkan anggaran sebelum pekerjaan mulai.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We should call the builder this week and set a budget before the work starts.\" (Kita sebaiknya menghubungi tukang minggu ini dan menetapkan anggaran sebelum pekerjaan mulai.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "anggaran",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-household-decisions-10",
+      "moduleId": "home-household-decisions",
+      "difficulty": "mid",
+      "scenario": "You disagree about a new phone.",
+      "scenarioId": "Kalian tidak setuju soal ponsel baru.",
+      "scenarioStructure": "Subject + will + Verb + Object",
+      "scenarioStructureId": "Subjek + will + Kata kerja + Objek",
+      "prompt": "What do you say to decide together?",
+      "promptId": "Apa yang kamu katakan untuk memutuskan bersama?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I want a new phone.",
+          "textId": "Saya ingin ponsel baru.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I will keep this phone until it stops working, and we will review the price then.",
+          "textId": "Saya akan memakai ponsel ini sampai berhenti bekerja, lalu kita tinjau harganya.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I will keep this phone until it stops working, and we will review the price then.\" (Saya akan memakai ponsel ini sampai berhenti bekerja, lalu kita tinjau harganya.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "anggaran",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-household-decisions-11",
+      "moduleId": "home-household-decisions",
+      "difficulty": "senior",
+      "scenario": "Chore lists are uneven.",
+      "scenarioId": "Daftar tugas rumah tidak seimbang.",
+      "scenarioStructure": "Subject + will + Verb + Object",
+      "scenarioStructureId": "Subjek + will + Kata kerja + Objek",
+      "prompt": "What do you say to decide together?",
+      "promptId": "Apa yang kamu katakan untuk memutuskan bersama?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The chores are uneven.",
+          "textId": "Tugasnya tidak seimbang.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I will cook on weeknights, and you will handle laundry on Saturday.",
+          "textId": "Saya memasak di malam hari kerja, dan kamu mengurus cucian hari Sabtu.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I will cook on weeknights, and you will handle laundry on Saturday.\" (Saya memasak di malam hari kerja, dan kamu mengurus cucian hari Sabtu.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "anggaran",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-household-decisions-12",
+      "moduleId": "home-household-decisions",
+      "difficulty": "junior",
+      "scenario": "You are planning a small birthday at home.",
+      "scenarioId": "Kamu merencanakan ulang tahun kecil di rumah.",
+      "scenarioStructure": "Subject + will + Verb + Object",
+      "scenarioStructureId": "Subjek + will + Kata kerja + Objek",
+      "prompt": "What do you say to decide together?",
+      "promptId": "Apa yang kamu katakan untuk memutuskan bersama?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We should have a party.",
+          "textId": "Kita sebaiknya mengadakan pesta.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We will invite six people, cook at home, and skip the restaurant.",
+          "textId": "Kita mengundang enam orang, memasak di rumah, dan melewati restoran.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We will invite six people, cook at home, and skip the restaurant.\" (Kita mengundang enam orang, memasak di rumah, dan melewati restoran.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "anggaran",
+        "rumah"
+      ]
+    }
+  ]
+}

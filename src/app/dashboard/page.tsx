@@ -7,6 +7,8 @@ import { getOrCreateQuickStats } from "@/lib/quick";
 import { getOrCreateSpeakStats } from "@/lib/speak";
 import { getOrCreateBuildStats } from "@/lib/build";
 import { ModuleCatalog } from "@/components/module-catalog";
+import { PersonaPicker } from "@/components/persona-picker";
+import { PERSONA_LABEL, getActivePersona } from "@/lib/persona";
 import { redirect } from "next/navigation";
 
 function jakartaHour(date = new Date()) {
@@ -35,19 +37,24 @@ export default async function DashboardPage() {
   const session = await auth();
   if (!session?.user?.id) redirect("/login");
 
-  const modules = getModules();
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) return <PersonaPicker />;
+
+  const modules = getModules(persona);
   const [progressRows, stats, quickStats, speakStats, buildStats] = await Promise.all([
     prisma.progress.findMany({
       where: { userId: session.user.id },
     }),
-    getLearningStats(session.user.id),
-    getOrCreateQuickStats(session.user.id),
-    getOrCreateSpeakStats(session.user.id),
-    getOrCreateBuildStats(session.user.id),
+    getLearningStats(session.user.id, persona),
+    getOrCreateQuickStats(session.user.id, persona),
+    getOrCreateSpeakStats(session.user.id, persona),
+    getOrCreateBuildStats(session.user.id, persona),
   ]);
 
+  const moduleIds = new Set(modules.map((module) => module.id));
   const progressByModule: Record<string, { done: number }> = {};
   for (const p of progressRows) {
+    if (!moduleIds.has(p.moduleId)) continue;
     progressByModule[p.moduleId] = { done: p.completedItemIds.length };
   }
 
@@ -144,7 +151,7 @@ export default async function DashboardPage() {
         <section className="dash-rise grid items-end gap-8 lg:grid-cols-[1.4fr_0.8fr]">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-[var(--accent)]">
-              Papan latihan
+              Papan latihan · {PERSONA_LABEL[persona]}
             </p>
             <h1 className="mt-3 font-display text-4xl tracking-tight text-[var(--ink)] sm:text-5xl">
               {greeting(jakartaHour())}, {name}

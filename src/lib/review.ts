@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/db";
 import { getModule, getModules } from "@/lib/content";
+import type { PersonaId } from "@/lib/persona";
 
 export type ReviewItem = {
   moduleId: string;
@@ -93,6 +94,7 @@ async function loadItemStats(userId: string): Promise<Map<string, ItemStats>> {
 export async function getReviewQueue(
   userId: string,
   limit = 20,
+  persona: PersonaId,
 ): Promise<ReviewItem[]> {
   const now = new Date();
   const stats = await loadItemStats(userId);
@@ -103,9 +105,9 @@ export async function getReviewQueue(
 
   const queue: ReviewItem[] = [];
 
-  for (const modMeta of getModules()) {
+  for (const modMeta of getModules(persona)) {
     if (modMeta.status !== "ready") continue;
-    const mod = getModule(modMeta.id);
+    const mod = getModule(modMeta.id, persona);
     if (!mod) continue;
     const completed = completedByModule.get(mod.id) ?? new Set<string>();
 
@@ -179,6 +181,7 @@ export async function getReviewQueue(
 
 export async function getWeakTags(
   userId: string,
+  persona: PersonaId,
   limit = 8,
 ): Promise<WeakTag[]> {
   const attempts = await prisma.attempt.findMany({
@@ -189,7 +192,7 @@ export async function getWeakTags(
   const tagStats = new Map<string, { wrong: number; total: number }>();
 
   for (const a of attempts) {
-    const item = getModule(a.moduleId)?.items.find((i) => i.id === a.itemId);
+    const item = getModule(a.moduleId, persona)?.items.find((i) => i.id === a.itemId);
     if (!item) continue;
     for (const tag of item.tags) {
       const cur = tagStats.get(tag) ?? { wrong: 0, total: 0 };
@@ -211,15 +214,18 @@ export async function getWeakTags(
     .slice(0, limit);
 }
 
-export async function getLearningStats(userId: string) {
+export async function getLearningStats(userId: string, persona: PersonaId) {
+  const moduleIds = new Set(getModules(persona).map((mod) => mod.id));
   const [attempts, progressRows, reviewQueue, weakTags] = await Promise.all([
     prisma.attempt.findMany({
-      where: { userId },
+      where: { userId, moduleId: { in: [...moduleIds] } },
       select: { correct: true },
     }),
-    prisma.progress.findMany({ where: { userId } }),
-    getReviewQueue(userId, 50),
-    getWeakTags(userId),
+    prisma.progress.findMany({
+      where: { userId, moduleId: { in: [...moduleIds] } },
+    }),
+    getReviewQueue(userId, 50, persona),
+    getWeakTags(userId, persona),
   ]);
 
   const totalAttempts = attempts.length;

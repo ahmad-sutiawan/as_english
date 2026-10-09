@@ -1,0 +1,895 @@
+{
+  "id": "home-family-stories",
+  "title": "Family Stories",
+  "titleId": "Cerita Keluarga",
+  "description": "Menceritakan kejadian di rumah dengan urutan yang jelas: apa yang terjadi, mengapa, dan apa yang kamu lakukan.",
+  "persona": [
+    "Rumah"
+  ],
+  "status": "ready",
+  "itemCount": 18,
+  "items": [
+    {
+      "id": "home-family-stories-01",
+      "moduleId": "home-family-stories",
+      "difficulty": "mid",
+      "scenario": "Your sister asks why dinner was late.",
+      "scenarioId": "Adikmu bertanya mengapa makan malam terlambat.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Dinner was late.",
+          "textId": "Makan malam terlambat.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Dinner was late because I had to pick up Dad from the clinic.",
+          "textId": "Makan malam terlambat karena saya harus menjemput Ayah dari klinik.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Dinner was late because I had to pick up Dad from the clinic.\" (Makan malam terlambat karena saya harus menjemput Ayah dari klinik.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-02",
+      "moduleId": "home-family-stories",
+      "difficulty": "senior",
+      "scenario": "Your child wants to know why the lights went out.",
+      "scenarioId": "Anakmu ingin tahu mengapa lampu mati.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The lights went out.",
+          "textId": "Lampu mati.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The lights went out because the storm knocked a branch onto the line.",
+          "textId": "Lampu mati karena badai menjatuhkan dahan ke kabel.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The lights went out because the storm knocked a branch onto the line.\" (Lampu mati karena badai menjatuhkan dahan ke kabel.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-03",
+      "moduleId": "home-family-stories",
+      "difficulty": "junior",
+      "scenario": "Your partner asks about the broken glass.",
+      "scenarioId": "Pasanganmu bertanya soal pecahan gelas.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The glass broke.",
+          "textId": "Gelas pecah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The glass broke because the cat jumped onto the table.",
+          "textId": "Gelas pecah karena kucing melompat ke meja.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The glass broke because the cat jumped onto the table.\" (Gelas pecah karena kucing melompat ke meja.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-04",
+      "moduleId": "home-family-stories",
+      "difficulty": "mid",
+      "scenario": "A neighbor asks about the noise last night.",
+      "scenarioId": "Tetangga bertanya soal suara semalam.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It was noisy.",
+          "textId": "Berisik.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The noise was the washing machine, and I turned it off at ten.",
+          "textId": "Suaranya mesin cuci, dan saya mematikannya pukul sepuluh.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The noise was the washing machine, and I turned it off at ten.\" (Suaranya mesin cuci, dan saya mematikannya pukul sepuluh.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-05",
+      "moduleId": "home-family-stories",
+      "difficulty": "senior",
+      "scenario": "Your mother asks why you came home early.",
+      "scenarioId": "Ibu bertanya mengapa kamu pulang lebih awal.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I came home early.",
+          "textId": "Saya pulang lebih awal.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I came home early because my son had a fever.",
+          "textId": "Saya pulang lebih awal karena anak saya demam.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I came home early because my son had a fever.\" (Saya pulang lebih awal karena anak saya demam.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-06",
+      "moduleId": "home-family-stories",
+      "difficulty": "junior",
+      "scenario": "Your father asks how the garden looks better.",
+      "scenarioId": "Ayah bertanya mengapa kebun terlihat lebih baik.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The garden looks better.",
+          "textId": "Kebun terlihat lebih baik.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I watered the plants and cut the dry leaves this morning.",
+          "textId": "Saya menyiram tanaman dan memotong daun kering pagi ini.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I watered the plants and cut the dry leaves this morning.\" (Saya menyiram tanaman dan memotong daun kering pagi ini.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-07",
+      "moduleId": "home-family-stories",
+      "difficulty": "mid",
+      "scenario": "Your aunt asks about the family lunch.",
+      "scenarioId": "Bibi bertanya soal makan siang keluarga.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We had lunch.",
+          "textId": "Kami makan siang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We ate together, and my brother brought the fruit.",
+          "textId": "Kami makan bersama, dan kakak saya membawa buah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We ate together, and my brother brought the fruit.\" (Kami makan bersama, dan kakak saya membawa buah.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-08",
+      "moduleId": "home-family-stories",
+      "difficulty": "senior",
+      "scenario": "Your child asks why the cake is small.",
+      "scenarioId": "Anakmu bertanya mengapa kuenya kecil.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The cake is small.",
+          "textId": "Kuenya kecil.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The cake is small because I only had two eggs left.",
+          "textId": "Kuenya kecil karena telur saya tinggal dua.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The cake is small because I only had two eggs left.\" (Kuenya kecil karena telur saya tinggal dua.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-09",
+      "moduleId": "home-family-stories",
+      "difficulty": "junior",
+      "scenario": "Your partner asks about the wet floor.",
+      "scenarioId": "Pasanganmu bertanya soal lantai basah.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The floor is wet.",
+          "textId": "Lantai basah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The floor is wet because the window was open in the rain.",
+          "textId": "Lantai basah karena jendela terbuka saat hujan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The floor is wet because the window was open in the rain.\" (Lantai basah karena jendela terbuka saat hujan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-10",
+      "moduleId": "home-family-stories",
+      "difficulty": "mid",
+      "scenario": "Your cousin asks why you missed the gathering.",
+      "scenarioId": "Sepupumu bertanya mengapa kamu absen kumpul keluarga.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I missed it.",
+          "textId": "Saya tidak datang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I missed it because I was taking Grandma to the doctor.",
+          "textId": "Saya tidak datang karena mengantar Nenek ke dokter.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I missed it because I was taking Grandma to the doctor.\" (Saya tidak datang karena mengantar Nenek ke dokter.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-11",
+      "moduleId": "home-family-stories",
+      "difficulty": "senior",
+      "scenario": "Your son asks why his shirt is still dirty.",
+      "scenarioId": "Anakmu bertanya mengapa bajunya masih kotor.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The shirt is dirty.",
+          "textId": "Bajunya kotor.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The shirt is still dirty because the soap ran out mid-wash.",
+          "textId": "Bajunya masih kotor karena sabun habis di tengah cuci.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The shirt is still dirty because the soap ran out mid-wash.\" (Bajunya masih kotor karena sabun habis di tengah cuci.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-12",
+      "moduleId": "home-family-stories",
+      "difficulty": "junior",
+      "scenario": "Your partner asks how the leak started.",
+      "scenarioId": "Pasanganmu bertanya bagaimana bocor itu mulai.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "There was a leak.",
+          "textId": "Ada kebocoran.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The leak started when the hose split behind the washing machine.",
+          "textId": "Bocor mulai saat selang di belakang mesin cuci pecah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The leak started when the hose split behind the washing machine.\" (Bocor mulai saat selang di belakang mesin cuci pecah.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-13",
+      "moduleId": "home-family-stories",
+      "difficulty": "mid",
+      "scenario": "Your neighbor asks about the new plants.",
+      "scenarioId": "Tetangga bertanya soal tanaman baru.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "There are new plants.",
+          "textId": "Ada tanaman baru.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I planted chili and tomato because the children wanted a garden.",
+          "textId": "Saya menanam cabai dan tomat karena anak-anak ingin kebun.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I planted chili and tomato because the children wanted a garden.\" (Saya menanam cabai dan tomat karena anak-anak ingin kebun.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-14",
+      "moduleId": "home-family-stories",
+      "difficulty": "senior",
+      "scenario": "Your mother asks why the fridge is full.",
+      "scenarioId": "Ibu bertanya mengapa kulkas penuh.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The fridge is full.",
+          "textId": "Kulkas penuh.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The fridge is full because the market had a good price on vegetables.",
+          "textId": "Kulkas penuh karena harga sayur di pasar sedang baik.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The fridge is full because the market had a good price on vegetables.\" (Kulkas penuh karena harga sayur di pasar sedang baik.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-15",
+      "moduleId": "home-family-stories",
+      "difficulty": "junior",
+      "scenario": "Your child asks about the scratched table.",
+      "scenarioId": "Anakmu bertanya soal meja yang tergores.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The table is scratched.",
+          "textId": "Meja tergores.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The table is scratched because we moved it without a cloth underneath.",
+          "textId": "Meja tergores karena kami memindahkannya tanpa kain di bawah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The table is scratched because we moved it without a cloth underneath.\" (Meja tergores karena kami memindahkannya tanpa kain di bawah.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-16",
+      "moduleId": "home-family-stories",
+      "difficulty": "mid",
+      "scenario": "Your partner asks why you look tired.",
+      "scenarioId": "Pasanganmu bertanya mengapa kamu terlihat lelah.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I look tired.",
+          "textId": "Saya terlihat lelah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I look tired because the baby woke up three times.",
+          "textId": "Saya terlihat lelah karena bayi terbangun tiga kali.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I look tired because the baby woke up three times.\" (Saya terlihat lelah karena bayi terbangun tiga kali.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-17",
+      "moduleId": "home-family-stories",
+      "difficulty": "senior",
+      "scenario": "Your brother asks how you fixed the fan.",
+      "scenarioId": "Kakakmu bertanya bagaimana kamu memperbaiki kipas.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I fixed the fan.",
+          "textId": "Saya memperbaiki kipas.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I cleaned the dust and tightened the loose screw.",
+          "textId": "Saya membersihkan debu dan mengencangkan sekrup yang longgar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I cleaned the dust and tightened the loose screw.\" (Saya membersihkan debu dan mengencangkan sekrup yang longgar.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-family-stories-18",
+      "moduleId": "home-family-stories",
+      "difficulty": "junior",
+      "scenario": "Your child asks why school starts early tomorrow.",
+      "scenarioId": "Anakmu bertanya mengapa sekolah mulai lebih pagi besok.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you tell the story?",
+      "promptId": "Bagaimana kamu menceritakannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "School starts early.",
+          "textId": "Sekolah mulai lebih pagi.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "School starts early because the class is visiting the museum.",
+          "textId": "Sekolah mulai lebih pagi karena kelas berkunjung ke museum.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"School starts early because the class is visiting the museum.\" (Sekolah mulai lebih pagi karena kelas berkunjung ke museum.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cerita",
+        "rumah"
+      ]
+    }
+  ]
+}

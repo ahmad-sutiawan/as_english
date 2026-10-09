@@ -6,6 +6,7 @@ import { getModule } from "@/lib/content";
 import { ModuleItemList } from "@/components/module-item-list";
 import type { Difficulty } from "@/types/content";
 import { DIFFICULTY_LABEL_ID } from "@/types/content";
+import { getActivePersona } from "@/lib/persona";
 
 type Props = {
   params: Promise<{ moduleId: string }>;
@@ -24,7 +25,10 @@ export default async function ModulePage({ params, searchParams }: Props) {
   const { moduleId } = await params;
   const { level: levelRaw } = await searchParams;
   const initialLevel = parseLevel(levelRaw);
-  const mod = getModule(moduleId);
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) redirect("/dashboard");
+
+  const mod = getModule(moduleId, persona);
   if (!mod) notFound();
 
   const progress = await prisma.progress.findUnique({

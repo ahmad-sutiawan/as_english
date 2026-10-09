@@ -3,6 +3,7 @@ import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { getCorrectAnswerText, getItem } from "@/lib/content";
+import { getActivePersona } from "@/lib/persona";
 import { scoreAnswer } from "@/lib/answer";
 
 const attemptSchema = z.object({
@@ -24,7 +25,12 @@ export async function POST(request: Request) {
   }
 
   const { moduleId, itemId, typedAnswer } = parsed.data;
-  const item = getItem(moduleId, itemId);
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) {
+    return NextResponse.json({ error: "Pilih persona dulu." }, { status: 409 });
+  }
+
+  const item = getItem(moduleId, itemId, persona);
   if (!item) {
     return NextResponse.json({ error: "Item not found" }, { status: 404 });
   }

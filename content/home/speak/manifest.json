@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "itemCount": 46,
+  "packs": [
+    {
+      "id": "home-errands",
+      "title": "Home Errands",
+      "titleId": "Urusan Rumah",
+      "itemCount": 10
+    },
+    {
+      "id": "home-family-report",
+      "title": "Family Report",
+      "titleId": "Kabar ke Keluarga",
+      "itemCount": 10
+    },
+    {
+      "id": "home-daily",
+      "title": "Daily Home Talk",
+      "titleId": "Obrolan Harian di Rumah",
+      "itemCount": 8
+    },
+    {
+      "id": "home-planning",
+      "title": "Planning Together",
+      "titleId": "Rencana Bersama",
+      "itemCount": 8
+    },
+    {
+      "id": "home-fixing",
+      "title": "Fixing Things",
+      "titleId": "Memperbaiki Sesuatu",
+      "itemCount": 10
+    }
+  ]
+}

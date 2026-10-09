@@ -14,8 +14,10 @@ except ImportError:
     sys.exit(1)
 
 ROOT = Path(__file__).resolve().parents[2]
-SPEAK = ROOT / "content" / "speak"
-MANIFEST = SPEAK / "manifest.json"
+SPEAK_ROOTS = [
+    ROOT / "content" / "speak",
+    ROOT / "content" / "home" / "speak",
+]
 
 ITEM_SCHEMA = {
     "type": "object",
@@ -67,21 +69,21 @@ PACK_SCHEMA = {
 }
 
 
-def main() -> int:
-    errors: list[str] = []
-    if not MANIFEST.exists():
-        print(f"Missing {MANIFEST}", file=sys.stderr)
-        return 1
+def validate_root(speak: Path, errors: list[str]) -> tuple[int, int]:
+    manifest_path = speak / "manifest.json"
+    if not manifest_path.exists():
+        errors.append(f"Missing {manifest_path}")
+        return 0, 0
 
-    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     pack_ids = {p["id"] for p in manifest.get("packs", [])}
     seen_items: set[str] = set()
     total = 0
 
     for pack_meta in manifest.get("packs", []):
-        path = SPEAK / f"{pack_meta['id']}.json"
+        path = speak / f"{pack_meta['id']}.json"
         if not path.exists():
-            errors.append(f"Missing pack {path.name}")
+            errors.append(f"Missing pack {path}")
             continue
         data = json.loads(path.read_text(encoding="utf-8"))
         try:
@@ -95,19 +97,31 @@ def main() -> int:
             )
         for it in data["items"]:
             if it["id"] in seen_items:
-                errors.append(f"duplicate item id {it['id']}")
+                errors.append(f"{speak.name}: duplicate item id {it['id']}")
             seen_items.add(it["id"])
             total += 1
 
-    for path in sorted(SPEAK.glob("*.json")):
+    for path in sorted(speak.glob("*.json")):
         if path.name == "manifest.json":
             continue
         if path.stem not in pack_ids:
-            errors.append(f"Orphan pack not in manifest: {path.name}")
+            errors.append(f"Orphan pack not in manifest: {path}")
 
     expected = manifest.get("itemCount")
-    if expected is not None and expected != total and not errors:
-        errors.append(f"manifest itemCount {expected} != actual {total}")
+    if expected is not None and expected != total:
+        errors.append(f"{speak}: manifest itemCount {expected} != actual {total}")
+
+    return len(pack_ids), total
+
+
+def main() -> int:
+    errors: list[str] = []
+    summaries: list[str] = []
+    for speak in SPEAK_ROOTS:
+        before = len(errors)
+        packs, total = validate_root(speak, errors)
+        if len(errors) == before:
+            summaries.append(f"{speak.parent.name}/{speak.name}: {packs} packs, {total} items")
 
     if errors:
         print("Speak content validation FAILED:", file=sys.stderr)
@@ -115,7 +129,7 @@ def main() -> int:
             print(f"  - {e}", file=sys.stderr)
         return 1
 
-    print(f"OK — speak packs {len(pack_ids)}, items {total}, offline schema valid.")
+    print("OK — " + "; ".join(summaries) + ", offline schema valid.")
     return 0
 
 

@@ -1,0 +1,601 @@
+{
+  "id": "home-conversations",
+  "title": "Home Conversations",
+  "titleId": "Obrolan di Rumah",
+  "description": "Percakapan dengan pasangan, anak, atau orang tua tentang hari, perasaan, dan kebutuhan.",
+  "persona": [
+    "Rumah"
+  ],
+  "status": "ready",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "home-conversations-01",
+      "moduleId": "home-conversations",
+      "difficulty": "mid",
+      "scenario": "Your partner looks tired after work.",
+      "scenarioId": "Pasanganmu terlihat lelah sepulang kerja.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say next?",
+      "promptId": "Apa yang kamu katakan selanjutnya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You look tired.",
+          "textId": "Kamu terlihat lelah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Sit down. I will finish dinner, and you can tell me about the day after we eat.",
+          "textId": "Duduklah. Saya akan menyelesaikan makan malam, dan kamu bisa cerita tentang hari ini setelah kita makan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Sit down. I will finish dinner, and you can tell me about the day after we eat.\" (Duduklah. Saya akan menyelesaikan makan malam, dan kamu bisa cerita tentang hari ini setelah kita makan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "obrolan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-conversations-02",
+      "moduleId": "home-conversations",
+      "difficulty": "senior",
+      "scenario": "Your child is nervous about a test.",
+      "scenarioId": "Anakmu gugup menghadapi ulangan.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say next?",
+      "promptId": "Apa yang kamu katakan selanjutnya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Do not worry.",
+          "textId": "Jangan khawatir.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We can review ten words after dinner. You do not have to get every one right.",
+          "textId": "Kita bisa mengulang sepuluh kata setelah makan malam. Kamu tidak harus benar semuanya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We can review ten words after dinner. You do not have to get every one right.\" (Kita bisa mengulang sepuluh kata setelah makan malam. Kamu tidak harus benar semuanya.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "obrolan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-conversations-03",
+      "moduleId": "home-conversations",
+      "difficulty": "junior",
+      "scenario": "Your mother says she feels lonely.",
+      "scenarioId": "Ibu mengatakan dia merasa kesepian.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say next?",
+      "promptId": "Apa yang kamu katakan selanjutnya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I am busy.",
+          "textId": "Saya sibuk.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I can visit on Wednesday afternoon, and we can call every evening this week.",
+          "textId": "Saya bisa berkunjung Rabu sore, dan kita bisa menelepon setiap malam minggu ini.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I can visit on Wednesday afternoon, and we can call every evening this week.\" (Saya bisa berkunjung Rabu sore, dan kita bisa menelepon setiap malam minggu ini.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "obrolan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-conversations-04",
+      "moduleId": "home-conversations",
+      "difficulty": "mid",
+      "scenario": "Your partner wants a quiet evening.",
+      "scenarioId": "Pasanganmu ingin malam yang tenang.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say next?",
+      "promptId": "Apa yang kamu katakan selanjutnya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Okay.",
+          "textId": "Baik.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Then we will skip the film. I will put the children to bed, and we can sit outside.",
+          "textId": "Kalau begitu kita lewatkan filmnya. Saya akan menidurkan anak-anak, dan kita bisa duduk di luar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Then we will skip the film. I will put the children to bed, and we can sit outside.\" (Kalau begitu kita lewatkan filmnya. Saya akan menidurkan anak-anak, dan kita bisa duduk di luar.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "obrolan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-conversations-05",
+      "moduleId": "home-conversations",
+      "difficulty": "senior",
+      "scenario": "Your child asks why you said no.",
+      "scenarioId": "Anakmu bertanya mengapa kamu bilang tidak.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say next?",
+      "promptId": "Apa yang kamu katakan selanjutnya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Because I said so.",
+          "textId": "Karena saya sudah bilang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I said no because it is a school night. You can go to the playground on Saturday.",
+          "textId": "Saya bilang tidak karena ini malam sekolah. Kamu bisa ke taman bermain hari Sabtu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I said no because it is a school night. You can go to the playground on Saturday.\" (Saya bilang tidak karena ini malam sekolah. Kamu bisa ke taman bermain hari Sabtu.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "obrolan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-conversations-06",
+      "moduleId": "home-conversations",
+      "difficulty": "junior",
+      "scenario": "Your father does not want help.",
+      "scenarioId": "Ayah tidak ingin dibantu.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say next?",
+      "promptId": "Apa yang kamu katakan selanjutnya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Let me do it.",
+          "textId": "Biar saya yang mengerjakan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I hear you. I will stay in the kitchen, and you can call me if the box is heavy.",
+          "textId": "Saya mendengar. Saya akan tinggal di dapur, dan kamu bisa memanggil saya jika kotaknya berat.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I hear you. I will stay in the kitchen, and you can call me if the box is heavy.\" (Saya mendengar. Saya akan tinggal di dapur, dan kamu bisa memanggil saya jika kotaknya berat.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "obrolan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-conversations-07",
+      "moduleId": "home-conversations",
+      "difficulty": "mid",
+      "scenario": "Your partner forgot an errand.",
+      "scenarioId": "Pasanganmu lupa suatu urusan.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say next?",
+      "promptId": "Apa yang kamu katakan selanjutnya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You forgot.",
+          "textId": "Kamu lupa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The pharmacy is still open. I can go, and you can stay with the children.",
+          "textId": "Apotek masih buka. Saya bisa pergi, dan kamu bisa tinggal dengan anak-anak.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The pharmacy is still open. I can go, and you can stay with the children.\" (Apotek masih buka. Saya bisa pergi, dan kamu bisa tinggal dengan anak-anak.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "obrolan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-conversations-08",
+      "moduleId": "home-conversations",
+      "difficulty": "senior",
+      "scenario": "Your child wants to talk about a friend.",
+      "scenarioId": "Anakmu ingin bicara soal teman.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say next?",
+      "promptId": "Apa yang kamu katakan selanjutnya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "What did they do?",
+          "textId": "Apa yang mereka lakukan?",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I am listening. Tell me what happened, and we will not decide anything yet.",
+          "textId": "Saya mendengarkan. Ceritakan apa yang terjadi, dan kita belum memutuskan apa pun.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I am listening. Tell me what happened, and we will not decide anything yet.\" (Saya mendengarkan. Ceritakan apa yang terjadi, dan kita belum memutuskan apa pun.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "obrolan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-conversations-09",
+      "moduleId": "home-conversations",
+      "difficulty": "junior",
+      "scenario": "Your mother offers too much food.",
+      "scenarioId": "Ibu menawarkan terlalu banyak makanan.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say next?",
+      "promptId": "Apa yang kamu katakan selanjutnya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "That is too much.",
+          "textId": "Itu terlalu banyak.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Thank you. We will take a small box home, and you should keep the rest for tomorrow.",
+          "textId": "Terima kasih. Kami akan membawa kotak kecil pulang, dan sisanya sebaiknya Ibu simpan untuk besok.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Thank you. We will take a small box home, and you should keep the rest for tomorrow.\" (Terima kasih. Kami akan membawa kotak kecil pulang, dan sisanya sebaiknya Ibu simpan untuk besok.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "obrolan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-conversations-10",
+      "moduleId": "home-conversations",
+      "difficulty": "mid",
+      "scenario": "Your partner asks how you feel.",
+      "scenarioId": "Pasanganmu bertanya bagaimana perasaanmu.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say next?",
+      "promptId": "Apa yang kamu katakan selanjutnya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I am fine.",
+          "textId": "Saya baik-baik saja.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I am tired, but I am glad we ate together. I would like to sleep early.",
+          "textId": "Saya lelah, tapi saya senang kita makan bersama. Saya ingin tidur lebih awal.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I am tired, but I am glad we ate together. I would like to sleep early.\" (Saya lelah, tapi saya senang kita makan bersama. Saya ingin tidur lebih awal.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "obrolan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-conversations-11",
+      "moduleId": "home-conversations",
+      "difficulty": "senior",
+      "scenario": "Your teenager wants a later bedtime.",
+      "scenarioId": "Anak remajamu ingin tidur lebih larut.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say next?",
+      "promptId": "Apa yang kamu katakan selanjutnya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "No.",
+          "textId": "Tidak.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "On Friday you can stay up until eleven. School nights stay at ten.",
+          "textId": "Hari Jumat kamu boleh tidur pukul sebelas. Malam sekolah tetap pukul sepuluh.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"On Friday you can stay up until eleven. School nights stay at ten.\" (Hari Jumat kamu boleh tidur pukul sebelas. Malam sekolah tetap pukul sepuluh.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "obrolan",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-conversations-12",
+      "moduleId": "home-conversations",
+      "difficulty": "junior",
+      "scenario": "Your child apologizes.",
+      "scenarioId": "Anakmu meminta maaf.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say next?",
+      "promptId": "Apa yang kamu katakan selanjutnya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It is okay.",
+          "textId": "Tidak apa-apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Thank you for saying that. Please put the toys back, and then we are finished with this.",
+          "textId": "Terima kasih sudah mengatakannya. Tolong kembalikan mainannya, lalu kita selesai dengan ini.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Thank you for saying that. Please put the toys back, and then we are finished with this.\" (Terima kasih sudah mengatakannya. Tolong kembalikan mainannya, lalu kita selesai dengan ini.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "obrolan",
+        "rumah"
+      ]
+    }
+  ]
+}

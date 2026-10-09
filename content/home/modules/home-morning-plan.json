@@ -1,0 +1,748 @@
+{
+  "id": "home-morning-plan",
+  "title": "Morning Plan",
+  "titleId": "Rencana Pagi",
+  "description": "Rencana pagi keluarga: sarapan, sekolah, dan siapa melakukan apa.",
+  "persona": [
+    "Rumah"
+  ],
+  "status": "ready",
+  "itemCount": 15,
+  "items": [
+    {
+      "id": "home-morning-plan-01",
+      "moduleId": "home-morning-plan",
+      "difficulty": "mid",
+      "scenario": "It is 6 a.m. and everyone is still in bed.",
+      "scenarioId": "Pukul enam pagi dan semua orang masih di tempat tidur.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We should get up.",
+          "textId": "Kita sebaiknya bangun.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I will wake the children at six fifteen and start breakfast.",
+          "textId": "Saya akan membangunkan anak-anak pukul enam lewat lima belas dan mulai sarapan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I will wake the children at six fifteen and start breakfast.\" (Saya akan membangunkan anak-anak pukul enam lewat lima belas dan mulai sarapan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-morning-plan-02",
+      "moduleId": "home-morning-plan",
+      "difficulty": "senior",
+      "scenario": "Your partner asks who is driving.",
+      "scenarioId": "Pasanganmu bertanya siapa yang mengantar.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Someone should drive.",
+          "textId": "Seseorang harus mengantar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I will drive the children to school, and you can leave for work after that.",
+          "textId": "Saya akan mengantar anak-anak ke sekolah, dan kamu bisa berangkat kerja setelah itu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I will drive the children to school, and you can leave for work after that.\" (Saya akan mengantar anak-anak ke sekolah, dan kamu bisa berangkat kerja setelah itu.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-morning-plan-03",
+      "moduleId": "home-morning-plan",
+      "difficulty": "junior",
+      "scenario": "The school bag is not packed.",
+      "scenarioId": "Tas sekolah belum beres.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The bag is not ready.",
+          "textId": "Tasnya belum siap.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I will pack the bag after breakfast and check the homework folder.",
+          "textId": "Saya akan membereskan tas setelah sarapan dan memeriksa map PR.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I will pack the bag after breakfast and check the homework folder.\" (Saya akan membereskan tas setelah sarapan dan memeriksa map PR.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-morning-plan-04",
+      "moduleId": "home-morning-plan",
+      "difficulty": "mid",
+      "scenario": "There is no bread.",
+      "scenarioId": "Roti habis.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "There is no bread.",
+          "textId": "Roti habis.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We can have eggs and fruit, and I will buy bread on the way home.",
+          "textId": "Kita bisa makan telur dan buah, dan saya akan membeli roti saat pulang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We can have eggs and fruit, and I will buy bread on the way home.\" (Kita bisa makan telur dan buah, dan saya akan membeli roti saat pulang.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-morning-plan-05",
+      "moduleId": "home-morning-plan",
+      "difficulty": "senior",
+      "scenario": "Your child cannot find their shoes.",
+      "scenarioId": "Anakmu tidak menemukan sepatunya.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Find your shoes.",
+          "textId": "Cari sepatumu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The shoes are by the door, and I will help you put them on.",
+          "textId": "Sepatunya di dekat pintu, dan saya akan membantumu memakainya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The shoes are by the door, and I will help you put them on.\" (Sepatunya di dekat pintu, dan saya akan membantumu memakainya.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-morning-plan-06",
+      "moduleId": "home-morning-plan",
+      "difficulty": "junior",
+      "scenario": "Rain is starting.",
+      "scenarioId": "Hujan mulai turun.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It is raining.",
+          "textId": "Hujan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Take the blue raincoat, and I will bring the umbrella to the car.",
+          "textId": "Pakai jas hujan biru, dan saya akan membawa payung ke mobil.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Take the blue raincoat, and I will bring the umbrella to the car.\" (Pakai jas hujan biru, dan saya akan membawa payung ke mobil.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-morning-plan-07",
+      "moduleId": "home-morning-plan",
+      "difficulty": "mid",
+      "scenario": "Your partner has an early meeting.",
+      "scenarioId": "Pasanganmu punya rapat pagi.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You have a meeting.",
+          "textId": "Kamu punya rapat.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I will handle breakfast and the school run so you can leave at seven.",
+          "textId": "Saya akan mengurus sarapan dan antar sekolah supaya kamu bisa berangkat pukul tujuh.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I will handle breakfast and the school run so you can leave at seven.\" (Saya akan mengurus sarapan dan antar sekolah supaya kamu bisa berangkat pukul tujuh.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-morning-plan-08",
+      "moduleId": "home-morning-plan",
+      "difficulty": "senior",
+      "scenario": "The baby is still asleep.",
+      "scenarioId": "Bayinya masih tidur.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The baby is asleep.",
+          "textId": "Bayinya tidur.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Let the baby sleep, and I will feed the older child first.",
+          "textId": "Biarkan bayi tidur, dan saya akan memberi makan anak yang lebih besar dulu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Let the baby sleep, and I will feed the older child first.\" (Biarkan bayi tidur, dan saya akan memberi makan anak yang lebih besar dulu.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-morning-plan-09",
+      "moduleId": "home-morning-plan",
+      "difficulty": "junior",
+      "scenario": "Homework was left on the table.",
+      "scenarioId": "PR tertinggal di meja.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The homework is on the table.",
+          "textId": "PR ada di meja.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Put the worksheet in the folder now, and I will check the pencil case.",
+          "textId": "Masukkan lembar kerja ke map sekarang, dan saya akan memeriksa kotak pensil.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Put the worksheet in the folder now, and I will check the pencil case.\" (Masukkan lembar kerja ke map sekarang, dan saya akan memeriksa kotak pensil.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-morning-plan-10",
+      "moduleId": "home-morning-plan",
+      "difficulty": "mid",
+      "scenario": "You are running late.",
+      "scenarioId": "Kalian terlambat.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We are late.",
+          "textId": "Kita terlambat.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Skip the long breakfast, take the bananas, and we will leave in five minutes.",
+          "textId": "Lewati sarapan yang lama, ambil pisangnya, dan kita berangkat dalam lima menit.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Skip the long breakfast, take the bananas, and we will leave in five minutes.\" (Lewati sarapan yang lama, ambil pisangnya, dan kita berangkat dalam lima menit.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-morning-plan-11",
+      "moduleId": "home-morning-plan",
+      "difficulty": "senior",
+      "scenario": "Your child wants to watch a video.",
+      "scenarioId": "Anakmu ingin menonton video.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Not now.",
+          "textId": "Jangan sekarang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "No video before school. You can watch one after homework tonight.",
+          "textId": "Tidak ada video sebelum sekolah. Kamu boleh menonton satu setelah PR malam ini.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"No video before school. You can watch one after homework tonight.\" (Tidak ada video sebelum sekolah. Kamu boleh menonton satu setelah PR malam ini.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-morning-plan-12",
+      "moduleId": "home-morning-plan",
+      "difficulty": "junior",
+      "scenario": "The uniform is still damp.",
+      "scenarioId": "Seragamnya masih lembap.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The shirt is wet.",
+          "textId": "Kemejanya basah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Wear the spare shirt, and I will dry this one for tomorrow.",
+          "textId": "Pakai kemeja cadangan, dan saya akan mengeringkan yang ini untuk besok.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Wear the spare shirt, and I will dry this one for tomorrow.\" (Pakai kemeja cadangan, dan saya akan mengeringkan yang ini untuk besok.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-morning-plan-13",
+      "moduleId": "home-morning-plan",
+      "difficulty": "mid",
+      "scenario": "Medicine needs to be taken with food.",
+      "scenarioId": "Obat perlu diminum dengan makanan.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Take the medicine.",
+          "textId": "Minum obatnya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Eat the toast first, then take the tablet with water.",
+          "textId": "Makan rotinya dulu, lalu minum tablet dengan air.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Eat the toast first, then take the tablet with water.\" (Makan rotinya dulu, lalu minum tablet dengan air.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-morning-plan-14",
+      "moduleId": "home-morning-plan",
+      "difficulty": "senior",
+      "scenario": "Two children need different drop-off times.",
+      "scenarioId": "Dua anak punya waktu antar yang berbeda.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "They leave at different times.",
+          "textId": "Mereka berangkat di waktu berbeda.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We will drop off the older one at seven thirty and the younger one at eight.",
+          "textId": "Kita antar yang lebih besar pukul tujuh tiga puluh dan yang lebih kecil pukul delapan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We will drop off the older one at seven thirty and the younger one at eight.\" (Kita antar yang lebih besar pukul tujuh tiga puluh dan yang lebih kecil pukul delapan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-morning-plan-15",
+      "moduleId": "home-morning-plan",
+      "difficulty": "junior",
+      "scenario": "Your mother is visiting this morning.",
+      "scenarioId": "Ibu berkunjung pagi ini.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What is the morning plan?",
+      "promptId": "Apa rencana paginya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Mother is coming.",
+          "textId": "Ibu akan datang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I will leave the key under the mat and call her when we reach school.",
+          "textId": "Saya akan meninggalkan kunci di bawah keset dan meneleponnya saat kami sampai di sekolah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I will leave the key under the mat and call her when we reach school.\" (Saya akan meninggalkan kunci di bawah keset dan meneleponnya saat kami sampai di sekolah.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "pagi",
+        "rumah"
+      ]
+    }
+  ]
+}

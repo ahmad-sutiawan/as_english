@@ -15,8 +15,10 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parents[2]
 CONTENT = ROOT / "content"
-MANIFEST_PATH = CONTENT / "manifest.json"
-MODULES_DIR = CONTENT / "modules"
+TREES = [
+    (CONTENT / "manifest.json", CONTENT / "modules"),
+    (CONTENT / "home" / "manifest.json", CONTENT / "home" / "modules"),
+]
 
 CHOICE_KEY = {"type": "string", "enum": ["A", "B", "C", "D"]}
 
@@ -181,14 +183,12 @@ MANIFEST_SCHEMA = {
 }
 
 
-def main() -> int:
-    errors: list[str] = []
+def validate_tree(manifest_path: Path, modules_dir: Path, errors: list[str]) -> tuple[int, int]:
+    if not manifest_path.exists():
+        errors.append(f"Missing manifest: {manifest_path}")
+        return 0, 0
 
-    if not MANIFEST_PATH.exists():
-        print(f"Missing manifest: {MANIFEST_PATH}", file=sys.stderr)
-        return 1
-
-    manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     try:
         jsonschema.validate(manifest, MANIFEST_SCHEMA)
     except jsonschema.ValidationError as exc:
@@ -197,7 +197,7 @@ def main() -> int:
     module_ids = {m["id"] for m in manifest.get("modules", [])}
 
     for module_meta in manifest.get("modules", []):
-        module_path = MODULES_DIR / f"{module_meta['id']}.json"
+        module_path = modules_dir / f"{module_meta['id']}.json"
         if not module_path.exists():
             errors.append(f"Missing module file for {module_meta['id']}")
             continue
@@ -241,9 +241,24 @@ def main() -> int:
                     f"{module_path.name}/{item['id']}: correctKey not in choices"
                 )
 
-    for path in sorted(MODULES_DIR.glob("*.json")):
+    for path in sorted(modules_dir.glob("*.json")):
         if path.stem not in module_ids:
             errors.append(f"Orphan module file not in manifest: {path.name}")
+
+    ready = sum(1 for m in manifest["modules"] if m["status"] == "ready")
+    return len(manifest["modules"]), ready
+
+
+def main() -> int:
+    errors: list[str] = []
+    summaries: list[str] = []
+
+    for manifest_path, modules_dir in TREES:
+        before = len(errors)
+        count, ready = validate_tree(manifest_path, modules_dir, errors)
+        if len(errors) == before:
+            label = manifest_path.parent.name
+            summaries.append(f"{label}: {count} modules ({ready} ready)")
 
     if errors:
         print("Content validation FAILED:", file=sys.stderr)
@@ -251,10 +266,7 @@ def main() -> int:
             print(f"  - {err}", file=sys.stderr)
         return 1
 
-    ready = sum(1 for m in manifest["modules"] if m["status"] == "ready")
-    print(
-        f"OK — {len(manifest['modules'])} modules ({ready} ready), bilingual schema valid."
-    )
+    print("OK — " + "; ".join(summaries) + ", bilingual schema valid.")
     return 0
 
 

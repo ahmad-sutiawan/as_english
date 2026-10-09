@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { auth, signOut } from "@/lib/auth";
 import { SiteNav } from "@/components/site-nav";
+import { getActivePersona } from "@/lib/persona";
 
 async function signOutAction() {
   "use server";
@@ -10,6 +11,7 @@ async function signOutAction() {
 export async function SiteHeader() {
   const session = await auth();
   const accountLabel = session?.user?.name || session?.user?.email || "";
+  const persona = session?.user?.id ? await getActivePersona(session.user.id) : null;
 
   return (
     <header className="sticky top-0 z-30 border-b border-[var(--border)] bg-[var(--background)]/80 backdrop-blur-md">
@@ -30,7 +32,11 @@ export async function SiteHeader() {
         </Link>
 
         {session?.user ? (
-          <SiteNav accountLabel={accountLabel} signOutAction={signOutAction} />
+          <SiteNav
+            accountLabel={accountLabel}
+            persona={persona}
+            signOutAction={signOutAction}
+          />
         ) : (
           <nav className="ml-auto flex items-center gap-2" aria-label="Akun">
             <Link

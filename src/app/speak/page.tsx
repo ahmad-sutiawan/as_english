@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { getOrCreateSpeakStats } from "@/lib/speak";
 import { getSpeakManifest } from "@/lib/speak-content";
+import { getActivePersona } from "@/lib/persona";
 import { DIFFICULTY_LABEL_ID, type Difficulty } from "@/types/content";
 import { LobbyFrame, StatTile, lobbyCard } from "@/components/lobby-frame";
 
@@ -26,9 +27,12 @@ export default async function SpeakLobbyPage() {
   const session = await auth();
   if (!session?.user?.id) redirect("/login");
 
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) redirect("/dashboard");
+
   const [stats, manifest] = await Promise.all([
-    getOrCreateSpeakStats(session.user.id),
-    Promise.resolve(getSpeakManifest()),
+    getOrCreateSpeakStats(session.user.id, persona),
+    Promise.resolve(getSpeakManifest(persona)),
   ]);
 
   return (

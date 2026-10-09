@@ -5,6 +5,7 @@ import { getItem, getModule, getNextItemIdFiltered } from "@/lib/content";
 import { ExercisePanel } from "@/components/exercise-panel";
 import { DialoguePanel } from "@/components/dialogue-panel";
 import type { Difficulty } from "@/types/content";
+import { getActivePersona } from "@/lib/persona";
 
 type Props = {
   params: Promise<{ moduleId: string; itemId: string }>;
@@ -23,11 +24,14 @@ export default async function ExercisePage({ params, searchParams }: Props) {
   const { moduleId, itemId } = await params;
   const { from, level: levelRaw } = await searchParams;
   const level = parseLevel(levelRaw);
-  const mod = getModule(moduleId);
-  const item = getItem(moduleId, itemId);
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) redirect("/dashboard");
+
+  const mod = getModule(moduleId, persona);
+  const item = getItem(moduleId, itemId, persona);
   if (!mod || !item) notFound();
 
-  const nextItemId = getNextItemIdFiltered(moduleId, itemId, level);
+  const nextItemId = getNextItemIdFiltered(moduleId, itemId, persona, level);
   const qs = [
     from === "review" ? "from=review" : "",
     level !== "all" ? `level=${level}` : "",

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { BUILD_SESSION_SIZE, completeBuildSession } from "@/lib/build";
+import { getActivePersona } from "@/lib/persona";
 
 const bodySchema = z.object({
   drillsDone: z.number().int().min(0).max(BUILD_SESSION_SIZE),
@@ -20,8 +21,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
   }
 
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) {
+    return NextResponse.json({ error: "Pilih persona dulu." }, { status: 409 });
+  }
+
   const { drillsDone, wrongChecks, perfect } = parsed.data;
-  const result = await completeBuildSession(session.user.id, {
+  const result = await completeBuildSession(session.user.id, persona, {
     drillsDone,
     perfect: perfect && wrongChecks === 0 && drillsDone > 0,
   });

@@ -1,0 +1,601 @@
+{
+  "id": "home-how-things-work",
+  "title": "How Things Work",
+  "titleId": "Cara Kerja di Rumah",
+  "description": "Menjelaskan langkah memakai alat rumah, resep singkat, dan cara sesuatu bekerja.",
+  "persona": [
+    "Rumah"
+  ],
+  "status": "ready",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "home-how-things-work-01",
+      "moduleId": "home-how-things-work",
+      "difficulty": "mid",
+      "scenario": "Your child asks how the rice cooker works.",
+      "scenarioId": "Anakmu bertanya bagaimana rice cooker bekerja.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain it?",
+      "promptId": "Bagaimana kamu menjelaskannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It cooks rice.",
+          "textId": "Itu memasak nasi.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "You add rice and water, close the lid, and press cook.",
+          "textId": "Kamu masukkan beras dan air, tutup penutupnya, lalu tekan cook.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"You add rice and water, close the lid, and press cook.\" (Kamu masukkan beras dan air, tutup penutupnya, lalu tekan cook.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cara-kerja",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-how-things-work-02",
+      "moduleId": "home-how-things-work",
+      "difficulty": "senior",
+      "scenario": "Your partner asks how to use the new washer.",
+      "scenarioId": "Pasanganmu bertanya cara memakai mesin cuci baru.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain it?",
+      "promptId": "Bagaimana kamu menjelaskannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Press start.",
+          "textId": "Tekan mulai.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Put the clothes in, add detergent, choose the cycle, and press start.",
+          "textId": "Masukkan baju, tambahkan detergen, pilih siklus, lalu tekan mulai.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Put the clothes in, add detergent, choose the cycle, and press start.\" (Masukkan baju, tambahkan detergen, pilih siklus, lalu tekan mulai.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cara-kerja",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-how-things-work-03",
+      "moduleId": "home-how-things-work",
+      "difficulty": "junior",
+      "scenario": "Your father asks how the water filter works.",
+      "scenarioId": "Ayah bertanya bagaimana filter air bekerja.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain it?",
+      "promptId": "Bagaimana kamu menjelaskannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It cleans water.",
+          "textId": "Itu membersihkan air.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Water passes through the filter, and clean water comes out the tap.",
+          "textId": "Air melewati filter, dan air bersih keluar dari keran.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Water passes through the filter, and clean water comes out the tap.\" (Air melewati filter, dan air bersih keluar dari keran.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cara-kerja",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-how-things-work-04",
+      "moduleId": "home-how-things-work",
+      "difficulty": "mid",
+      "scenario": "Your child asks how to boil an egg.",
+      "scenarioId": "Anakmu bertanya cara merebus telur.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain it?",
+      "promptId": "Bagaimana kamu menjelaskannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Boil the egg.",
+          "textId": "Rebus telurnya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Put the egg in cold water, boil it for eight minutes, then cool it.",
+          "textId": "Masukkan telur ke air dingin, rebus delapan menit, lalu dinginkan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Put the egg in cold water, boil it for eight minutes, then cool it.\" (Masukkan telur ke air dingin, rebus delapan menit, lalu dinginkan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cara-kerja",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-how-things-work-05",
+      "moduleId": "home-how-things-work",
+      "difficulty": "senior",
+      "scenario": "Your partner asks how the thermostat works.",
+      "scenarioId": "Pasanganmu bertanya cara kerja termostat.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain it?",
+      "promptId": "Bagaimana kamu menjelaskannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It controls the room.",
+          "textId": "Itu mengatur ruangan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "You set the temperature, and the unit turns on when the room is warmer.",
+          "textId": "Kamu atur suhunya, dan unit menyala saat ruangan lebih hangat.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"You set the temperature, and the unit turns on when the room is warmer.\" (Kamu atur suhunya, dan unit menyala saat ruangan lebih hangat.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cara-kerja",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-how-things-work-06",
+      "moduleId": "home-how-things-work",
+      "difficulty": "junior",
+      "scenario": "Your mother asks how to lock the front gate.",
+      "scenarioId": "Ibu bertanya cara mengunci pagar depan.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain it?",
+      "promptId": "Bagaimana kamu menjelaskannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Use the key.",
+          "textId": "Pakai kuncinya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Close the gate, turn the key to the left, and check that it does not move.",
+          "textId": "Tutup pagar, putar kunci ke kiri, dan pastikan pagar tidak bergerak.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Close the gate, turn the key to the left, and check that it does not move.\" (Tutup pagar, putar kunci ke kiri, dan pastikan pagar tidak bergerak.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cara-kerja",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-how-things-work-07",
+      "moduleId": "home-how-things-work",
+      "difficulty": "mid",
+      "scenario": "Your child asks how the blender works.",
+      "scenarioId": "Anakmu bertanya cara kerja blender.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain it?",
+      "promptId": "Bagaimana kamu menjelaskannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Press the button.",
+          "textId": "Tekan tombolnya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Add the fruit, close the lid, and press the button for ten seconds.",
+          "textId": "Masukkan buah, tutup penutupnya, dan tekan tombol selama sepuluh detik.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Add the fruit, close the lid, and press the button for ten seconds.\" (Masukkan buah, tutup penutupnya, dan tekan tombol selama sepuluh detik.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cara-kerja",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-how-things-work-08",
+      "moduleId": "home-how-things-work",
+      "difficulty": "senior",
+      "scenario": "Your partner asks how the Wi-Fi extender works.",
+      "scenarioId": "Pasanganmu bertanya cara kerja penguat Wi-Fi.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain it?",
+      "promptId": "Bagaimana kamu menjelaskannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It makes Wi-Fi stronger.",
+          "textId": "Itu membuat Wi-Fi lebih kuat.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Plug it in near the router, wait for the light, then place it closer to the bedrooms.",
+          "textId": "Colokkan di dekat router, tunggu lampunya, lalu letakkan lebih dekat ke kamar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Plug it in near the router, wait for the light, then place it closer to the bedrooms.\" (Colokkan di dekat router, tunggu lampunya, lalu letakkan lebih dekat ke kamar.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cara-kerja",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-how-things-work-09",
+      "moduleId": "home-how-things-work",
+      "difficulty": "junior",
+      "scenario": "Your son asks how to change a light bulb.",
+      "scenarioId": "Anakmu bertanya cara mengganti bohlam.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain it?",
+      "promptId": "Bagaimana kamu menjelaskannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Change the bulb.",
+          "textId": "Ganti bohlamnya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Turn off the switch, let the bulb cool, twist it out, and twist the new one in.",
+          "textId": "Matikan sakelar, biarkan bohlam dingin, putar keluar, lalu putar yang baru masuk.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Turn off the switch, let the bulb cool, twist it out, and twist the new one in.\" (Matikan sakelar, biarkan bohlam dingin, putar keluar, lalu putar yang baru masuk.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cara-kerja",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-how-things-work-10",
+      "moduleId": "home-how-things-work",
+      "difficulty": "mid",
+      "scenario": "Your partner asks how the slow cooker works.",
+      "scenarioId": "Pasanganmu bertanya cara kerja slow cooker.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain it?",
+      "promptId": "Bagaimana kamu menjelaskannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It cooks slowly.",
+          "textId": "Itu memasak pelan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Add the food, set it to low, and leave it for six hours.",
+          "textId": "Masukkan makanan, atur ke low, dan biarkan enam jam.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Add the food, set it to low, and leave it for six hours.\" (Masukkan makanan, atur ke low, dan biarkan enam jam.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cara-kerja",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-how-things-work-11",
+      "moduleId": "home-how-things-work",
+      "difficulty": "senior",
+      "scenario": "Your child asks how the doorbell camera works.",
+      "scenarioId": "Anakmu bertanya cara kerja kamera bel.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain it?",
+      "promptId": "Bagaimana kamu menjelaskannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It shows people.",
+          "textId": "Itu menampilkan orang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "When someone presses the bell, the phone shows their face.",
+          "textId": "Saat seseorang menekan bel, ponsel menampilkan wajah mereka.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"When someone presses the bell, the phone shows their face.\" (Saat seseorang menekan bel, ponsel menampilkan wajah mereka.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cara-kerja",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-how-things-work-12",
+      "moduleId": "home-how-things-work",
+      "difficulty": "junior",
+      "scenario": "Your father asks how to reset the modem.",
+      "scenarioId": "Ayah bertanya cara mereset modem.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain it?",
+      "promptId": "Bagaimana kamu menjelaskannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Restart it.",
+          "textId": "Nyalakan ulang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Unplug it, wait thirty seconds, plug it back in, and wait for the green light.",
+          "textId": "Cabut, tunggu tiga puluh detik, colokkan lagi, dan tunggu lampu hijau.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Unplug it, wait thirty seconds, plug it back in, and wait for the green light.\" (Cabut, tunggu tiga puluh detik, colokkan lagi, dan tunggu lampu hijau.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "cara-kerja",
+        "rumah"
+      ]
+    }
+  ]
+}

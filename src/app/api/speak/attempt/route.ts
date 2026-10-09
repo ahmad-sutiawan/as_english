@@ -4,6 +4,7 @@ import { auth } from "@/lib/auth";
 import { getSpeakItem } from "@/lib/speak-content";
 import { evaluateSpeak, builderIsCorrect } from "@/lib/speak-eval";
 import { saveSpeakAttempt } from "@/lib/speak";
+import { getActivePersona } from "@/lib/persona";
 
 const bodySchema = z.object({
   itemId: z.string().min(1),
@@ -30,8 +31,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
   }
 
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) {
+    return NextResponse.json({ error: "Pilih persona dulu." }, { status: 409 });
+  }
+
   const { itemId, phase, transcript, arranged, attemptSlot } = parsed.data;
-  const item = getSpeakItem(itemId);
+  const item = getSpeakItem(itemId, persona);
   if (!item) {
     return NextResponse.json({ error: "Item not found" }, { status: 404 });
   }
@@ -53,6 +59,7 @@ export async function POST(request: Request) {
 
   await saveSpeakAttempt({
     userId: session.user.id,
+    persona,
     itemId,
     phase,
     transcript,

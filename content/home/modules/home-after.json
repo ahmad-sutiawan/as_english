@@ -1,0 +1,601 @@
+{
+  "id": "home-after",
+  "title": "After a Mishap",
+  "titleId": "Setelah Kejadian",
+  "description": "Rekap tenang setelah kejadian di rumah: apa yang terjadi, akibatnya, dan langkah berikutnya.",
+  "persona": [
+    "Rumah"
+  ],
+  "status": "ready",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "home-after-01",
+      "moduleId": "home-after",
+      "difficulty": "mid",
+      "scenario": "The soup boiled over.",
+      "scenarioId": "Sup meluap.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you recap what happened?",
+      "promptId": "Bagaimana kamu merangkum yang terjadi?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The soup spilled.",
+          "textId": "Sup tumpah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The soup boiled over because the heat stayed on high. I cleaned the stove, and next time I will lower it.",
+          "textId": "Sup meluap karena apinya tetap besar. Saya membersihkan kompor, dan lain kali saya akan mengecilkannya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The soup boiled over because the heat stayed on high. I cleaned the stove, and next time I will lower it.\" (Sup meluap karena apinya tetap besar. Saya membersihkan kompor, dan lain kali saya akan mengecilkannya.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rekap",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-after-02",
+      "moduleId": "home-after",
+      "difficulty": "senior",
+      "scenario": "A glass broke during dinner.",
+      "scenarioId": "Gelas pecah saat makan malam.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you recap what happened?",
+      "promptId": "Bagaimana kamu merangkum yang terjadi?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "A glass broke.",
+          "textId": "Gelas pecah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The glass broke when it slipped. Nobody was cut, and I swept the floor twice.",
+          "textId": "Gelas pecah saat terpeleset. Tidak ada yang terluka, dan saya menyapu lantai dua kali.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The glass broke when it slipped. Nobody was cut, and I swept the floor twice.\" (Gelas pecah saat terpeleset. Tidak ada yang terluka, dan saya menyapu lantai dua kali.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rekap",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-after-03",
+      "moduleId": "home-after",
+      "difficulty": "junior",
+      "scenario": "The laundry shrank.",
+      "scenarioId": "Cucian menyusut.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you recap what happened?",
+      "promptId": "Bagaimana kamu merangkum yang terjadi?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The sweater shrank.",
+          "textId": "Sweater menyusut.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The sweater shrank because the water was too hot. We will wash wool by hand from now on.",
+          "textId": "Sweater menyusut karena airnya terlalu panas. Mulai sekarang wol kita cuci dengan tangan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The sweater shrank because the water was too hot. We will wash wool by hand from now on.\" (Sweater menyusut karena airnya terlalu panas. Mulai sekarang wol kita cuci dengan tangan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rekap",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-after-04",
+      "moduleId": "home-after",
+      "difficulty": "mid",
+      "scenario": "You missed the school pickup.",
+      "scenarioId": "Kamu telat menjemput sekolah.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you recap what happened?",
+      "promptId": "Bagaimana kamu merangkum yang terjadi?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I was late.",
+          "textId": "Saya terlambat.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I arrived ten minutes late because the market queue ran long. I called the teacher, and the child was safe.",
+          "textId": "Saya datang terlambat sepuluh menit karena antrean pasar panjang. Saya menelepon guru, dan anaknya aman.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I arrived ten minutes late because the market queue ran long. I called the teacher, and the child was safe.\" (Saya datang terlambat sepuluh menit karena antrean pasar panjang. Saya menelepon guru, dan anaknya aman.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rekap",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-after-05",
+      "moduleId": "home-after",
+      "difficulty": "senior",
+      "scenario": "Plants died in the heat.",
+      "scenarioId": "Tanaman mati karena panas.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you recap what happened?",
+      "promptId": "Bagaimana kamu merangkum yang terjadi?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The plants died.",
+          "textId": "Tanamannya mati.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The pots dried out while we were away. I will ask the neighbor to water them next time.",
+          "textId": "Pot mengering saat kami pergi. Lain kali saya akan meminta tetangga menyiramnya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The pots dried out while we were away. I will ask the neighbor to water them next time.\" (Pot mengering saat kami pergi. Lain kali saya akan meminta tetangga menyiramnya.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rekap",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-after-06",
+      "moduleId": "home-after",
+      "difficulty": "junior",
+      "scenario": "The cake burned.",
+      "scenarioId": "Kue gosong.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you recap what happened?",
+      "promptId": "Bagaimana kamu merangkum yang terjadi?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The cake burned.",
+          "textId": "Kue gosong.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The cake burned because the timer was off. The outside is dark, and I will bake another one tomorrow.",
+          "textId": "Kue gosong karena pewaktunya mati. Bagian luarnya gelap, dan saya akan memanggang yang lain besok.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The cake burned because the timer was off. The outside is dark, and I will bake another one tomorrow.\" (Kue gosong karena pewaktunya mati. Bagian luarnya gelap, dan saya akan memanggang yang lain besok.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rekap",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-after-07",
+      "moduleId": "home-after",
+      "difficulty": "mid",
+      "scenario": "Paint dripped on the floor.",
+      "scenarioId": "Cat menetes ke lantai.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you recap what happened?",
+      "promptId": "Bagaimana kamu merangkum yang terjadi?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Paint spilled.",
+          "textId": "Cat tumpah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Paint dripped because the sheet did not cover the edge. I wiped it while it was wet.",
+          "textId": "Cat menetes karena kain tidak menutupi tepinya. Saya mengelapnya selagi basah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Paint dripped because the sheet did not cover the edge. I wiped it while it was wet.\" (Cat menetes karena kain tidak menutupi tepinya. Saya mengelapnya selagi basah.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rekap",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-after-08",
+      "moduleId": "home-after",
+      "difficulty": "senior",
+      "scenario": "A bill was paid twice.",
+      "scenarioId": "Tagihan terbayar dua kali.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you recap what happened?",
+      "promptId": "Bagaimana kamu merangkum yang terjadi?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I paid twice.",
+          "textId": "Saya bayar dua kali.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I paid the water bill twice by mistake. I called the office, and the extra payment becomes next month's credit.",
+          "textId": "Saya membayar tagihan air dua kali karena keliru. Saya menelepon kantornya, dan kelebihannya menjadi kredit bulan depan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I paid the water bill twice by mistake. I called the office, and the extra payment becomes next month's credit.\" (Saya membayar tagihan air dua kali karena keliru. Saya menelepon kantornya, dan kelebihannya menjadi kredit bulan depan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rekap",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-after-09",
+      "moduleId": "home-after",
+      "difficulty": "junior",
+      "scenario": "The dog chewed a shoe.",
+      "scenarioId": "Anjing mengunyah sepatu.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you recap what happened?",
+      "promptId": "Bagaimana kamu merangkum yang terjadi?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The dog chewed a shoe.",
+          "textId": "Anjing mengunyah sepatu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The dog chewed a shoe because his toy was in the cupboard. I moved the shoes up and gave him the toy.",
+          "textId": "Anjing mengunyah sepatu karena mainannya ada di lemari. Saya menaikkan sepatu dan memberinya mainan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The dog chewed a shoe because his toy was in the cupboard. I moved the shoes up and gave him the toy.\" (Anjing mengunyah sepatu karena mainannya ada di lemari. Saya menaikkan sepatu dan memberinya mainan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rekap",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-after-10",
+      "moduleId": "home-after",
+      "difficulty": "mid",
+      "scenario": "You forgot to lock the gate.",
+      "scenarioId": "Kamu lupa mengunci pagar.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you recap what happened?",
+      "promptId": "Bagaimana kamu merangkum yang terjadi?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The gate was open.",
+          "textId": "Pagar terbuka.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The gate stayed open for an hour. Nothing is missing, and I locked it as soon as I noticed.",
+          "textId": "Pagar terbuka selama satu jam. Tidak ada yang hilang, dan saya menguncinya begitu menyadarinya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The gate stayed open for an hour. Nothing is missing, and I locked it as soon as I noticed.\" (Pagar terbuka selama satu jam. Tidak ada yang hilang, dan saya menguncinya begitu menyadarinya.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rekap",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-after-11",
+      "moduleId": "home-after",
+      "difficulty": "senior",
+      "scenario": "Milk spoiled.",
+      "scenarioId": "Susu basi.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you recap what happened?",
+      "promptId": "Bagaimana kamu merangkum yang terjadi?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The milk spoiled.",
+          "textId": "Susu basi.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The milk spoiled because it sat out during breakfast. I threw it away and bought a new carton.",
+          "textId": "Susu basi karena dibiarkan di luar saat sarapan. Saya membuangnya dan membeli karton baru.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The milk spoiled because it sat out during breakfast. I threw it away and bought a new carton.\" (Susu basi karena dibiarkan di luar saat sarapan. Saya membuangnya dan membeli karton baru.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rekap",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-after-12",
+      "moduleId": "home-after",
+      "difficulty": "junior",
+      "scenario": "A guest left unhappy.",
+      "scenarioId": "Tamu pulang kurang nyaman.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you recap what happened?",
+      "promptId": "Bagaimana kamu merangkum yang terjadi?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "He left early.",
+          "textId": "Dia pulang lebih awal.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We started dinner late, so my uncle left before dessert. I will call him tomorrow and explain.",
+          "textId": "Kami mulai makan malam terlambat, jadi paman pulang sebelum hidangan penutup. Saya akan meneleponnya besok dan menjelaskan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We started dinner late, so my uncle left before dessert. I will call him tomorrow and explain.\" (Kami mulai makan malam terlambat, jadi paman pulang sebelum hidangan penutup. Saya akan meneleponnya besok dan menjelaskan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rekap",
+        "rumah"
+      ]
+    }
+  ]
+}

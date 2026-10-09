@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { buildQuickSession, QUICK_HEARTS, QUICK_SESSION_SIZE } from "@/lib/quick";
+import { getActivePersona } from "@/lib/persona";
 
 const bodySchema = z.object({
   level: z.enum(["all", "junior", "mid", "senior"]).optional().default("all"),
@@ -25,7 +26,12 @@ export async function POST(request: Request) {
     // empty body ok
   }
 
-  const items = await buildQuickSession(session.user.id, level);
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) {
+    return NextResponse.json({ error: "Pilih persona dulu." }, { status: 409 });
+  }
+
+  const items = await buildQuickSession(session.user.id, persona, level);
   if (items.length === 0) {
     return NextResponse.json(
       { error: "Tidak ada soal untuk level ini." },

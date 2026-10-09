@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { completeQuickSession, QUICK_SESSION_SIZE } from "@/lib/quick";
+import { getActivePersona } from "@/lib/persona";
 
 const bodySchema = z.object({
   correctCount: z.number().int().min(0).max(QUICK_SESSION_SIZE),
@@ -21,8 +22,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
   }
 
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) {
+    return NextResponse.json({ error: "Pilih persona dulu." }, { status: 409 });
+  }
+
   const { correctCount, heartsLeft, perfect } = parsed.data;
-  const result = await completeQuickSession(session.user.id, {
+  const result = await completeQuickSession(session.user.id, persona, {
     correctCount,
     perfect: perfect && heartsLeft === 3,
   });

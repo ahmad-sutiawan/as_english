@@ -1,0 +1,601 @@
+{
+  "id": "home-plans",
+  "title": "Family Plans",
+  "titleId": "Rencana Keluarga",
+  "description": "Menjelaskan rencana liburan, renovasi, atau akhir pekan kepada keluarga.",
+  "persona": [
+    "Rumah"
+  ],
+  "status": "ready",
+  "itemCount": 12,
+  "items": [
+    {
+      "id": "home-plans-01",
+      "moduleId": "home-plans",
+      "difficulty": "mid",
+      "scenario": "The family is choosing a short trip.",
+      "scenarioId": "Keluarga memilih perjalanan singkat.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain the plan?",
+      "promptId": "Bagaimana kamu menjelaskan rencananya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We are going away.",
+          "textId": "Kita pergi.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We leave Saturday at six, stay one night, and come home Sunday after lunch.",
+          "textId": "Kita berangkat Sabtu pukul enam, menginap satu malam, dan pulang Minggu setelah makan siang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We leave Saturday at six, stay one night, and come home Sunday after lunch.\" (Kita berangkat Sabtu pukul enam, menginap satu malam, dan pulang Minggu setelah makan siang.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rencana",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-plans-02",
+      "moduleId": "home-plans",
+      "difficulty": "senior",
+      "scenario": "You are explaining a kitchen renovation.",
+      "scenarioId": "Kamu menjelaskan renovasi dapur.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain the plan?",
+      "promptId": "Bagaimana kamu menjelaskan rencananya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The kitchen will be noisy.",
+          "textId": "Dapur akan berisik.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The workers start Monday. We will cook in the back room for five days.",
+          "textId": "Pekerjanya mulai Senin. Kita akan memasak di ruang belakang selama lima hari.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The workers start Monday. We will cook in the back room for five days.\" (Pekerjanya mulai Senin. Kita akan memasak di ruang belakang selama lima hari.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rencana",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-plans-03",
+      "moduleId": "home-plans",
+      "difficulty": "junior",
+      "scenario": "Your child asks about the beach plan.",
+      "scenarioId": "Anakmu bertanya soal rencana pantai.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain the plan?",
+      "promptId": "Bagaimana kamu menjelaskan rencananya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We will go to the beach.",
+          "textId": "Kita akan ke pantai.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We swim in the morning, eat at the warung, and leave before the rain.",
+          "textId": "Kita berenang pagi, makan di warung, dan pulang sebelum hujan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We swim in the morning, eat at the warung, and leave before the rain.\" (Kita berenang pagi, makan di warung, dan pulang sebelum hujan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rencana",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-plans-04",
+      "moduleId": "home-plans",
+      "difficulty": "mid",
+      "scenario": "You are planning Grandma's visit.",
+      "scenarioId": "Kamu merencanakan kunjungan Nenek.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain the plan?",
+      "promptId": "Bagaimana kamu menjelaskan rencananya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Grandma is visiting.",
+          "textId": "Nenek berkunjung.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Grandma arrives Friday evening, sleeps in the front room, and leaves Sunday noon.",
+          "textId": "Nenek tiba Jumat malam, tidur di ruang depan, dan pergi Minggu siang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Grandma arrives Friday evening, sleeps in the front room, and leaves Sunday noon.\" (Nenek tiba Jumat malam, tidur di ruang depan, dan pergi Minggu siang.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rencana",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-plans-05",
+      "moduleId": "home-plans",
+      "difficulty": "senior",
+      "scenario": "You are describing a painting day.",
+      "scenarioId": "Kamu menjelaskan hari mengecat.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain the plan?",
+      "promptId": "Bagaimana kamu menjelaskan rencananya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We will paint.",
+          "textId": "Kita akan mengecat.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We move the furniture on Saturday, paint on Sunday, and air the room on Monday.",
+          "textId": "Kita pindahkan furnitur hari Sabtu, mengecat hari Minggu, dan mengangin-anginkan ruangan hari Senin.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We move the furniture on Saturday, paint on Sunday, and air the room on Monday.\" (Kita pindahkan furnitur hari Sabtu, mengecat hari Minggu, dan mengangin-anginkan ruangan hari Senin.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rencana",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-plans-06",
+      "moduleId": "home-plans",
+      "difficulty": "junior",
+      "scenario": "Your partner asks about the wedding trip.",
+      "scenarioId": "Pasanganmu bertanya soal perjalanan kondangan.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain the plan?",
+      "promptId": "Bagaimana kamu menjelaskan rencananya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We are going to the wedding.",
+          "textId": "Kita pergi ke kondangan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We drive two hours, stay for the reception, and sleep at your uncle's house.",
+          "textId": "Kita berkendara dua jam, tinggal untuk resepsi, dan tidur di rumah pamanmu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We drive two hours, stay for the reception, and sleep at your uncle's house.\" (Kita berkendara dua jam, tinggal untuk resepsi, dan tidur di rumah pamanmu.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rencana",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-plans-07",
+      "moduleId": "home-plans",
+      "difficulty": "mid",
+      "scenario": "You are planning a home birthday.",
+      "scenarioId": "Kamu merencanakan ulang tahun di rumah.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain the plan?",
+      "promptId": "Bagaimana kamu menjelaskan rencananya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "There will be a party.",
+          "textId": "Akan ada pesta.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Cake at four, games until five, and parents pick the children up at six.",
+          "textId": "Kue pukul empat, permainan sampai pukul lima, dan orang tua menjemput anak-anak pukul enam.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Cake at four, games until five, and parents pick the children up at six.\" (Kue pukul empat, permainan sampai pukul lima, dan orang tua menjemput anak-anak pukul enam.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rencana",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-plans-08",
+      "moduleId": "home-plans",
+      "difficulty": "senior",
+      "scenario": "You are explaining a market morning.",
+      "scenarioId": "Kamu menjelaskan pagi ke pasar.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain the plan?",
+      "promptId": "Bagaimana kamu menjelaskan rencananya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I am going to the market.",
+          "textId": "Saya ke pasar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I leave at seven, buy the week’s vegetables, and I am back before nine.",
+          "textId": "Saya berangkat pukul tujuh, membeli sayur seminggu, dan kembali sebelum pukul sembilan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I leave at seven, buy the week’s vegetables, and I am back before nine.\" (Saya berangkat pukul tujuh, membeli sayur seminggu, dan kembali sebelum pukul sembilan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rencana",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-plans-09",
+      "moduleId": "home-plans",
+      "difficulty": "junior",
+      "scenario": "The family might visit two houses.",
+      "scenarioId": "Keluarga mungkin mengunjungi dua rumah.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain the plan?",
+      "promptId": "Bagaimana kamu menjelaskan rencananya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We will visit people.",
+          "textId": "Kita akan mengunjungi orang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We see your parents in the morning and my sister in the afternoon, then we drive home.",
+          "textId": "Kita menemui orang tuamu pagi dan kakak saya sore, lalu pulang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We see your parents in the morning and my sister in the afternoon, then we drive home.\" (Kita menemui orang tuamu pagi dan kakak saya sore, lalu pulang.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rencana",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-plans-10",
+      "moduleId": "home-plans",
+      "difficulty": "mid",
+      "scenario": "You are planning to deep-clean.",
+      "scenarioId": "Kamu merencanakan bersih-bersih besar.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain the plan?",
+      "promptId": "Bagaimana kamu menjelaskan rencananya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We will clean.",
+          "textId": "Kita akan bersih-bersih.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Bedrooms on Saturday morning, kitchen after lunch, and we stop at four.",
+          "textId": "Kamar tidur Sabtu pagi, dapur setelah makan siang, dan kita berhenti pukul empat.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Bedrooms on Saturday morning, kitchen after lunch, and we stop at four.\" (Kamar tidur Sabtu pagi, dapur setelah makan siang, dan kita berhenti pukul empat.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rencana",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-plans-11",
+      "moduleId": "home-plans",
+      "difficulty": "senior",
+      "scenario": "Your child asks about the new bookshelf.",
+      "scenarioId": "Anakmu bertanya soal rak buku baru.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain the plan?",
+      "promptId": "Bagaimana kamu menjelaskan rencananya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We will build a shelf.",
+          "textId": "Kita akan merakit rak.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "We build it on Sunday morning, and your books can move onto it the same day.",
+          "textId": "Kita merakitnya Minggu pagi, dan bukumu bisa dipindah ke situ di hari yang sama.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"We build it on Sunday morning, and your books can move onto it the same day.\" (Kita merakitnya Minggu pagi, dan bukumu bisa dipindah ke situ di hari yang sama.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rencana",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-plans-12",
+      "moduleId": "home-plans",
+      "difficulty": "junior",
+      "scenario": "You are setting a rainy-day backup.",
+      "scenarioId": "Kamu menyiapkan rencana cadangan saat hujan.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you explain the plan?",
+      "promptId": "Bagaimana kamu menjelaskan rencananya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We might stay home.",
+          "textId": "Kita mungkin di rumah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "If it rains, we skip the park and watch the film at home after lunch.",
+          "textId": "Jika hujan, kita melewati taman dan menonton film di rumah setelah makan siang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"If it rains, we skip the park and watch the film at home after lunch.\" (Jika hujan, kita melewati taman dan menonton film di rumah setelah makan siang.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "rencana",
+        "rumah"
+      ]
+    }
+  ]
+}

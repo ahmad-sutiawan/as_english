@@ -10,12 +10,13 @@ import {
 } from "@/lib/quick";
 import { DIFFICULTY_LABEL_ID, type Difficulty } from "@/types/content";
 import { LobbyFrame, StatTile, lobbyCard } from "@/components/lobby-frame";
+import { getActivePersona } from "@/lib/persona";
 
 const LEVELS: { value: "all" | Difficulty; label: string; detail: string }[] = [
   {
     value: "all",
     label: "Semua level",
-    detail: "Campuran dari seluruh bank soal kerja.",
+    detail: "Campuran dari seluruh bank soal persona ini.",
   },
   {
     value: "junior",
@@ -38,7 +39,10 @@ export default async function QuickLobbyPage() {
   const session = await auth();
   if (!session?.user?.id) redirect("/login");
 
-  const stats = await getOrCreateQuickStats(session.user.id);
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) redirect("/dashboard");
+
+  const stats = await getOrCreateQuickStats(session.user.id, persona);
 
   return (
     <LobbyFrame

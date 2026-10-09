@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { getBuildDrill, stepFor, tokensMatch } from "@/lib/build";
+import { getActivePersona } from "@/lib/persona";
 
 const bodySchema = z.object({
   drillId: z.string().min(1),
@@ -20,8 +21,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
   }
 
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) {
+    return NextResponse.json({ error: "Pilih persona dulu." }, { status: 409 });
+  }
+
   const { drillId, step, tokens } = parsed.data;
-  const drill = getBuildDrill(drillId);
+  const drill = getBuildDrill(drillId, persona);
   if (!drill) {
     return NextResponse.json({ error: "Drill not found" }, { status: 404 });
   }

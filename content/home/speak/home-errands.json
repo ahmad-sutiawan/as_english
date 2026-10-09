@@ -1,0 +1,400 @@
+{
+  "id": "home-errands",
+  "title": "Home Errands",
+  "titleId": "Urusan Rumah",
+  "itemCount": 10,
+  "items": [
+    {
+      "id": "home-errands-001",
+      "category": "home-errands",
+      "level": "mid",
+      "target": "Please buy milk and eggs on the way home.",
+      "targetId": "Tolong beli susu dan telur saat pulang.",
+      "chunks": [
+        "Please buy milk",
+        "and eggs",
+        "on the way home"
+      ],
+      "scrambled": [
+        "Please",
+        "buy",
+        "milk",
+        "and",
+        "eggs",
+        "on",
+        "the",
+        "way",
+        "home"
+      ],
+      "keywords": [
+        "please",
+        "milk",
+        "eggs"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Please buy milk and eggs on the way home."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-errands-002",
+      "category": "home-errands",
+      "level": "senior",
+      "target": "The pharmacy closes at eight tonight.",
+      "targetId": "Apotek tutup pukul delapan malam ini.",
+      "chunks": [
+        "The pharmacy closes",
+        "at eight",
+        "tonight"
+      ],
+      "scrambled": [
+        "The",
+        "pharmacy",
+        "closes",
+        "at",
+        "eight",
+        "tonight"
+      ],
+      "keywords": [
+        "pharmacy",
+        "closes",
+        "eight"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "The pharmacy closes at eight tonight."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-errands-003",
+      "category": "home-errands",
+      "level": "junior",
+      "target": "I will collect the package after lunch.",
+      "targetId": "Saya akan mengambil paket setelah makan siang.",
+      "chunks": [
+        "I will collect",
+        "the package",
+        "after lunch"
+      ],
+      "scrambled": [
+        "I",
+        "will",
+        "collect",
+        "the",
+        "package",
+        "after",
+        "lunch"
+      ],
+      "keywords": [
+        "will",
+        "collect",
+        "package"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "I will collect the package after lunch."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-errands-004",
+      "category": "home-errands",
+      "level": "mid",
+      "target": "Can you drop this letter at the post office?",
+      "targetId": "Bisakah kamu mengantar surat ini ke kantor pos?",
+      "chunks": [
+        "Can you drop",
+        "this letter",
+        "at the post office"
+      ],
+      "scrambled": [
+        "Can",
+        "you",
+        "drop",
+        "this",
+        "letter",
+        "at",
+        "the",
+        "post",
+        "office"
+      ],
+      "keywords": [
+        "drop",
+        "this",
+        "letter"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Can you drop this letter at the post office?"
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-errands-005",
+      "category": "home-errands",
+      "level": "senior",
+      "target": "We need rice, soap, and fruit.",
+      "targetId": "Kita butuh beras, sabun, dan buah.",
+      "chunks": [
+        "We need rice",
+        "soap",
+        "and fruit"
+      ],
+      "scrambled": [
+        "We",
+        "need",
+        "rice,",
+        "soap,",
+        "and",
+        "fruit"
+      ],
+      "keywords": [
+        "need",
+        "rice,",
+        "soap,"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "We need rice, soap, and fruit."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-errands-006",
+      "category": "home-errands",
+      "level": "junior",
+      "target": "The market is cheaper on Sunday morning.",
+      "targetId": "Pasar lebih murah Minggu pagi.",
+      "chunks": [
+        "The market is cheaper",
+        "on Sunday",
+        "morning"
+      ],
+      "scrambled": [
+        "The",
+        "market",
+        "is",
+        "cheaper",
+        "on",
+        "Sunday",
+        "morning"
+      ],
+      "keywords": [
+        "market",
+        "cheaper",
+        "sunday"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "The market is cheaper on Sunday morning."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-errands-007",
+      "category": "home-errands",
+      "level": "mid",
+      "target": "I left the grocery list on the fridge.",
+      "targetId": "Saya meninggalkan daftar belanja di kulkas.",
+      "chunks": [
+        "I left",
+        "the grocery list",
+        "on the fridge"
+      ],
+      "scrambled": [
+        "I",
+        "left",
+        "the",
+        "grocery",
+        "list",
+        "on",
+        "the",
+        "fridge"
+      ],
+      "keywords": [
+        "left",
+        "grocery",
+        "list"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "I left the grocery list on the fridge."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-errands-008",
+      "category": "home-errands",
+      "level": "senior",
+      "target": "Please refill the drinking water today.",
+      "targetId": "Tolong isi ulang air minum hari ini.",
+      "chunks": [
+        "Please refill",
+        "the drinking water",
+        "today"
+      ],
+      "scrambled": [
+        "Please",
+        "refill",
+        "the",
+        "drinking",
+        "water",
+        "today"
+      ],
+      "keywords": [
+        "please",
+        "refill",
+        "drinking"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Please refill the drinking water today."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-errands-009",
+      "category": "home-errands",
+      "level": "junior",
+      "target": "The tailor will be ready on Friday.",
+      "targetId": "Penjahit akan selesai hari Jumat.",
+      "chunks": [
+        "The tailor",
+        "will be ready",
+        "on Friday"
+      ],
+      "scrambled": [
+        "The",
+        "tailor",
+        "will",
+        "be",
+        "ready",
+        "on",
+        "Friday"
+      ],
+      "keywords": [
+        "tailor",
+        "will",
+        "ready"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "The tailor will be ready on Friday."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-errands-010",
+      "category": "home-errands",
+      "level": "mid",
+      "target": "I am paying the electricity bill online.",
+      "targetId": "Saya membayar tagihan listrik secara online.",
+      "chunks": [
+        "I am paying",
+        "the electricity bill",
+        "online"
+      ],
+      "scrambled": [
+        "I",
+        "am",
+        "paying",
+        "the",
+        "electricity",
+        "bill",
+        "online"
+      ],
+      "keywords": [
+        "paying",
+        "electricity",
+        "bill"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "I am paying the electricity bill online."
+      ],
+      "audio": null
+    }
+  ]
+}

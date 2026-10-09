@@ -1,0 +1,748 @@
+{
+  "id": "home-feedback",
+  "title": "Home Feedback",
+  "titleId": "Umpan Balik di Rumah",
+  "description": "Masukan sopan soal tugas rumah, PR, dan pekerjaan rumah tangga.",
+  "persona": [
+    "Rumah"
+  ],
+  "status": "ready",
+  "itemCount": 15,
+  "items": [
+    {
+      "id": "home-feedback-01",
+      "moduleId": "home-feedback",
+      "difficulty": "mid",
+      "scenario": "Your child rushed the homework.",
+      "scenarioId": "Anakmu mengerjakan PR terburu-buru.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "This is messy.",
+          "textId": "Ini berantakan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The answers are there, but three sentences are hard to read. Please rewrite those lines.",
+          "textId": "Jawabannya ada, tapi tiga kalimat sulit dibaca. Tolong tulis ulang baris itu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The answers are there, but three sentences are hard to read. Please rewrite those lines.\" (Jawabannya ada, tapi tiga kalimat sulit dibaca. Tolong tulis ulang baris itu.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-feedback-02",
+      "moduleId": "home-feedback",
+      "difficulty": "senior",
+      "scenario": "Your partner left dishes in the sink.",
+      "scenarioId": "Pasanganmu meninggalkan piring di wastafel.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You forgot the dishes.",
+          "textId": "Kamu lupa piringnya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The dishes are still in the sink. Can you wash them before we cook?",
+          "textId": "Piring masih di wastafel. Bisakah kamu mencucinya sebelum kita memasak?",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The dishes are still in the sink. Can you wash them before we cook?\" (Piring masih di wastafel. Bisakah kamu mencucinya sebelum kita memasak?). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-feedback-03",
+      "moduleId": "home-feedback",
+      "difficulty": "junior",
+      "scenario": "Your child did not make the bed.",
+      "scenarioId": "Anakmu tidak merapikan tempat tidur.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Your room is messy.",
+          "textId": "Kamarmu berantakan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The bed is still unmade. Please do it before you go outside.",
+          "textId": "Tempat tidur masih belum rapi. Tolong rapikan sebelum kamu ke luar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The bed is still unmade. Please do it before you go outside.\" (Tempat tidur masih belum rapi. Tolong rapikan sebelum kamu ke luar.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-feedback-04",
+      "moduleId": "home-feedback",
+      "difficulty": "mid",
+      "scenario": "A sibling's cooking was too salty.",
+      "scenarioId": "Masakan saudara terlalu asin.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "This is too salty.",
+          "textId": "Ini terlalu asin.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The soup tastes good, and it is a little salty for Dad. Next time we can add the salt at the end.",
+          "textId": "Supnya enak, dan sedikit asin untuk Ayah. Lain kali garamnya bisa ditambah di akhir.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The soup tastes good, and it is a little salty for Dad. Next time we can add the salt at the end.\" (Supnya enak, dan sedikit asin untuk Ayah. Lain kali garamnya bisa ditambah di akhir.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-feedback-05",
+      "moduleId": "home-feedback",
+      "difficulty": "senior",
+      "scenario": "Your child forgot to water the plants.",
+      "scenarioId": "Anakmu lupa menyiram tanaman.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You forgot the plants.",
+          "textId": "Kamu lupa tanamannya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The soil is dry. Please water the pots by the fence before sunset.",
+          "textId": "Tanahnya kering. Tolong siram pot di pagar sebelum matahari terbenam.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The soil is dry. Please water the pots by the fence before sunset.\" (Tanahnya kering. Tolong siram pot di pagar sebelum matahari terbenam.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-feedback-06",
+      "moduleId": "home-feedback",
+      "difficulty": "junior",
+      "scenario": "Shoes are in the hallway again.",
+      "scenarioId": "Sepatu lagi-lagi di lorong.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Move your shoes.",
+          "textId": "Pindahkan sepatumu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Please put the shoes on the rack. The hallway needs to stay clear.",
+          "textId": "Tolong letakkan sepatu di rak. Lorong perlu tetap kosong.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Please put the shoes on the rack. The hallway needs to stay clear.\" (Tolong letakkan sepatu di rak. Lorong perlu tetap kosong.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-feedback-07",
+      "moduleId": "home-feedback",
+      "difficulty": "mid",
+      "scenario": "Your teenager was rude at dinner.",
+      "scenarioId": "Anak remajamu kasar saat makan malam.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "That was rude.",
+          "textId": "Itu kasar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I heard the tone at dinner. We can talk about it after the plates are cleared.",
+          "textId": "Saya mendengar nadanya saat makan malam. Kita bisa membicarakannya setelah piring dibereskan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I heard the tone at dinner. We can talk about it after the plates are cleared.\" (Saya mendengar nadanya saat makan malam. Kita bisa membicarakannya setelah piring dibereskan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-feedback-08",
+      "moduleId": "home-feedback",
+      "difficulty": "senior",
+      "scenario": "The bathroom was left wet.",
+      "scenarioId": "Kamar mandi ditinggalkan basah.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You left a mess.",
+          "textId": "Kamu meninggalkan berantakan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The floor is wet after your shower. Please wipe it so nobody slips.",
+          "textId": "Lantai basah setelah kamu mandi. Tolong lap supaya tidak ada yang terpeleset.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The floor is wet after your shower. Please wipe it so nobody slips.\" (Lantai basah setelah kamu mandi. Tolong lap supaya tidak ada yang terpeleset.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-feedback-09",
+      "moduleId": "home-feedback",
+      "difficulty": "junior",
+      "scenario": "Homework is correct but unfinished.",
+      "scenarioId": "PR benar tapi belum selesai.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You are not finished.",
+          "textId": "Kamu belum selesai.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The first page is right. Please finish the second page before the show.",
+          "textId": "Halaman pertama benar. Tolong selesaikan halaman kedua sebelum acaranya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The first page is right. Please finish the second page before the show.\" (Halaman pertama benar. Tolong selesaikan halaman kedua sebelum acaranya.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-feedback-10",
+      "moduleId": "home-feedback",
+      "difficulty": "mid",
+      "scenario": "Your partner bought the wrong rice.",
+      "scenarioId": "Pasanganmu membeli beras yang salah.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "This is the wrong rice.",
+          "textId": "Ini beras yang salah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "This is the sweet rice. We need the usual bag next time, and we can still use this for porridge.",
+          "textId": "Ini beras ketan. Kita butuh kemasan yang biasa lain kali, dan yang ini masih bisa untuk bubur.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"This is the sweet rice. We need the usual bag next time, and we can still use this for porridge.\" (Ini beras ketan. Kita butuh kemasan yang biasa lain kali, dan yang ini masih bisa untuk bubur.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-feedback-11",
+      "moduleId": "home-feedback",
+      "difficulty": "senior",
+      "scenario": "Your child left food on the table.",
+      "scenarioId": "Anakmu meninggalkan makanan di meja.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Clean your mess.",
+          "textId": "Bersihkan berantakanmu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Please take your plate to the sink and wipe the spot where the sauce dripped.",
+          "textId": "Tolong bawa piringmu ke wastafel dan lap noda saus yang menetes.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Please take your plate to the sink and wipe the spot where the sauce dripped.\" (Tolong bawa piringmu ke wastafel dan lap noda saus yang menetes.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-feedback-12",
+      "moduleId": "home-feedback",
+      "difficulty": "junior",
+      "scenario": "A drawing was done on the wall.",
+      "scenarioId": "Ada gambar di dinding.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Do not draw there.",
+          "textId": "Jangan gambar di situ.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The drawing is creative, and walls are not for markers. Let's move it to paper.",
+          "textId": "Gambarnya kreatif, dan dinding bukan untuk spidol. Mari pindahkan ke kertas.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The drawing is creative, and walls are not for markers. Let's move it to paper.\" (Gambarnya kreatif, dan dinding bukan untuk spidol. Mari pindahkan ke kertas.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-feedback-13",
+      "moduleId": "home-feedback",
+      "difficulty": "mid",
+      "scenario": "Laundry was mixed by color.",
+      "scenarioId": "Cucian tercampur warnanya.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You mixed the laundry.",
+          "textId": "Kamu mencampur cucian.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The white shirts went in with the dark clothes. Next time we separate them first.",
+          "textId": "Kemeja putih masuk bersama baju gelap. Lain kali kita pisahkan dulu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The white shirts went in with the dark clothes. Next time we separate them first.\" (Kemeja putih masuk bersama baju gelap. Lain kali kita pisahkan dulu.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-feedback-14",
+      "moduleId": "home-feedback",
+      "difficulty": "senior",
+      "scenario": "Your child skipped reading time.",
+      "scenarioId": "Anakmu melewati waktu membaca.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You skipped reading.",
+          "textId": "Kamu melewati waktu membaca.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "You played first. Please read for ten minutes, and then you can go back outside.",
+          "textId": "Kamu bermain dulu. Tolong baca sepuluh menit, lalu kamu boleh kembali ke luar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"You played first. Please read for ten minutes, and then you can go back outside.\" (Kamu bermain dulu. Tolong baca sepuluh menit, lalu kamu boleh kembali ke luar.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-feedback-15",
+      "moduleId": "home-feedback",
+      "difficulty": "junior",
+      "scenario": "Trash day was missed.",
+      "scenarioId": "Hari sampah terlewat.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "How do you give the feedback?",
+      "promptId": "Bagaimana kamu memberi masukannya?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You forgot the trash.",
+          "textId": "Kamu lupa sampah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The bin is still inside. Please take it to the gate before the truck comes at seven.",
+          "textId": "Tempat sampah masih di dalam. Tolong bawa ke pagar sebelum truk datang pukul tujuh.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The bin is still inside. Please take it to the gate before the truck comes at seven.\" (Tempat sampah masih di dalam. Tolong bawa ke pagar sebelum truk datang pukul tujuh.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "umpan-balik",
+        "rumah"
+      ]
+    }
+  ]
+}

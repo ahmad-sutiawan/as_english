@@ -1,0 +1,148 @@
+{
+  "version": "1.0.0",
+  "modules": [
+    {
+      "id": "home-family-stories",
+      "title": "Family Stories",
+      "titleId": "Cerita Keluarga",
+      "description": "Menceritakan kejadian di rumah dengan urutan yang jelas: apa yang terjadi, mengapa, dan apa yang kamu lakukan.",
+      "persona": [
+        "Rumah"
+      ],
+      "status": "ready",
+      "itemCount": 18
+    },
+    {
+      "id": "home-how-things-work",
+      "title": "How Things Work",
+      "titleId": "Cara Kerja di Rumah",
+      "description": "Menjelaskan langkah memakai alat rumah, resep singkat, dan cara sesuatu bekerja.",
+      "persona": [
+        "Rumah"
+      ],
+      "status": "ready",
+      "itemCount": 12
+    },
+    {
+      "id": "home-household-decisions",
+      "title": "Household Decisions",
+      "titleId": "Keputusan Rumah Tangga",
+      "description": "Bahasa untuk anggaran, jadwal, dan keputusan bersama di rumah.",
+      "persona": [
+        "Rumah"
+      ],
+      "status": "ready",
+      "itemCount": 12
+    },
+    {
+      "id": "home-morning-plan",
+      "title": "Morning Plan",
+      "titleId": "Rencana Pagi",
+      "description": "Rencana pagi keluarga: sarapan, sekolah, dan siapa melakukan apa.",
+      "persona": [
+        "Rumah"
+      ],
+      "status": "ready",
+      "itemCount": 15
+    },
+    {
+      "id": "home-emergency",
+      "title": "Home Emergency",
+      "titleId": "Darurat Rumah",
+      "description": "Kabar tenang saat bocor, listrik mati, atau seseorang sakit.",
+      "persona": [
+        "Rumah"
+      ],
+      "status": "ready",
+      "itemCount": 18
+    },
+    {
+      "id": "home-family-update",
+      "title": "Family Update",
+      "titleId": "Kabar ke Keluarga",
+      "description": "Status singkat, risiko, dan permintaan keputusan ke pasangan atau orang tua.",
+      "persona": [
+        "Rumah"
+      ],
+      "status": "ready",
+      "itemCount": 18
+    },
+    {
+      "id": "home-messages",
+      "title": "Home Messages",
+      "titleId": "Pesan Rumah",
+      "description": "Pesan singkat ke keluarga, tetangga, sekolah, atau pemilik rumah.",
+      "persona": [
+        "Rumah"
+      ],
+      "status": "ready",
+      "itemCount": 15
+    },
+    {
+      "id": "home-plans",
+      "title": "Family Plans",
+      "titleId": "Rencana Keluarga",
+      "description": "Menjelaskan rencana liburan, renovasi, atau akhir pekan kepada keluarga.",
+      "persona": [
+        "Rumah"
+      ],
+      "status": "ready",
+      "itemCount": 12
+    },
+    {
+      "id": "home-feedback",
+      "title": "Home Feedback",
+      "titleId": "Umpan Balik di Rumah",
+      "description": "Masukan sopan soal tugas rumah, PR, dan pekerjaan rumah tangga.",
+      "persona": [
+        "Rumah"
+      ],
+      "status": "ready",
+      "itemCount": 15
+    },
+    {
+      "id": "home-after",
+      "title": "After a Mishap",
+      "titleId": "Setelah Kejadian",
+      "description": "Rekap tenang setelah kejadian di rumah: apa yang terjadi, akibatnya, dan langkah berikutnya.",
+      "persona": [
+        "Rumah"
+      ],
+      "status": "ready",
+      "itemCount": 12
+    },
+    {
+      "id": "home-neighbors",
+      "title": "Neighbors and Trades",
+      "titleId": "Tetangga dan Tukang",
+      "description": "Bahasa sopan dengan tetangga, sekolah, dan tukang.",
+      "persona": [
+        "Rumah"
+      ],
+      "status": "ready",
+      "itemCount": 12
+    },
+    {
+      "id": "home-conversations",
+      "title": "Home Conversations",
+      "titleId": "Obrolan di Rumah",
+      "description": "Percakapan dengan pasangan, anak, atau orang tua tentang hari, perasaan, dan kebutuhan.",
+      "persona": [
+        "Rumah"
+      ],
+      "status": "ready",
+      "itemCount": 12
+    },
+    {
+      "id": "home-live-dialogue",
+      "title": "Home Dialogue",
+      "titleId": "Percakapan Berantai di Rumah",
+      "description": "Latihan percakapan rumah dua giliran: dengarkan lawan bicara, lalu pilih dan ketik respons English-mu.",
+      "persona": [
+        "Rumah"
+      ],
+      "status": "ready",
+      "itemCount": 6
+    }
+  ]
+}

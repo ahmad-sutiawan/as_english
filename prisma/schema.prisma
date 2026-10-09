@@ -19,23 +19,25 @@ model User {
   emailVerified DateTime?
   passwordHash String?
   image        String?
-  role         Role       @default(learner)
-  createdAt    DateTime   @default(now())
-  updatedAt    DateTime   @updatedAt
+  role          Role       @default(learner)
+  activePersona String?
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
 
   accounts      Account[]
   sessions      Session[]
   progress      Progress[]
   attempts      Attempt[]
-  quickStats    QuickStats?
-  speakStats    SpeakStats?
+  quickStats    QuickStats[]
+  speakStats    SpeakStats[]
   speakProgress SpeakProgress[]
-  buildStats    BuildStats?
+  buildStats    BuildStats[]
 }
 
 model QuickStats {
   id           String    @id @default(cuid())
-  userId       String    @unique
+  userId       String
+  persona      String    @default("it")
   xp           Int       @default(0)
   streak       Int       @default(0)
   bestStreak   Int       @default(0)
@@ -44,6 +46,8 @@ model QuickStats {
   updatedAt    DateTime  @updatedAt
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, persona])
 }
 
 model Account {
@@ -115,7 +119,8 @@ model Attempt {
 
 model BuildStats {
   id           String    @id @default(cuid())
-  userId       String    @unique
+  userId       String
+  persona      String    @default("it")
   xp           Int       @default(0)
   streak       Int       @default(0)
   bestStreak   Int       @default(0)
@@ -124,11 +129,14 @@ model BuildStats {
   updatedAt    DateTime  @updatedAt
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, persona])
 }
 
 model SpeakStats {
   id           String    @id @default(cuid())
-  userId       String    @unique
+  userId       String
+  persona      String    @default("it")
   xp           Int       @default(0)
   streak       Int       @default(0)
   bestStreak   Int       @default(0)
@@ -138,6 +146,8 @@ model SpeakStats {
   updatedAt    DateTime  @updatedAt
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, persona])
 }
 
 model SpeakProgress {

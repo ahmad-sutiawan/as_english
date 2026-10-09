@@ -1,0 +1,312 @@
+{
+  "id": "home-planning",
+  "title": "Planning Together",
+  "titleId": "Rencana Bersama",
+  "itemCount": 8,
+  "items": [
+    {
+      "id": "home-planning-001",
+      "category": "home-planning",
+      "level": "mid",
+      "target": "We leave on Saturday at six.",
+      "targetId": "Kita berangkat Sabtu pukul enam.",
+      "chunks": [
+        "We leave",
+        "on Saturday",
+        "at six"
+      ],
+      "scrambled": [
+        "We",
+        "leave",
+        "on",
+        "Saturday",
+        "at",
+        "six"
+      ],
+      "keywords": [
+        "leave",
+        "saturday"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "We leave on Saturday at six."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-planning-002",
+      "category": "home-planning",
+      "level": "senior",
+      "target": "If it rains, we will stay home.",
+      "targetId": "Jika hujan, kita akan di rumah.",
+      "chunks": [
+        "If it rains",
+        "we will",
+        "stay home"
+      ],
+      "scrambled": [
+        "If",
+        "it",
+        "rains,",
+        "we",
+        "will",
+        "stay",
+        "home"
+      ],
+      "keywords": [
+        "rains,",
+        "will",
+        "stay"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "If it rains, we will stay home."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-planning-003",
+      "category": "home-planning",
+      "level": "junior",
+      "target": "The workers start on Monday morning.",
+      "targetId": "Pekerjanya mulai Senin pagi.",
+      "chunks": [
+        "The workers start",
+        "on Monday",
+        "morning"
+      ],
+      "scrambled": [
+        "The",
+        "workers",
+        "start",
+        "on",
+        "Monday",
+        "morning"
+      ],
+      "keywords": [
+        "workers",
+        "start",
+        "monday"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "The workers start on Monday morning."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-planning-004",
+      "category": "home-planning",
+      "level": "mid",
+      "target": "Grandma arrives on Friday evening.",
+      "targetId": "Nenek tiba Jumat malam.",
+      "chunks": [
+        "Grandma arrives",
+        "on Friday",
+        "evening"
+      ],
+      "scrambled": [
+        "Grandma",
+        "arrives",
+        "on",
+        "Friday",
+        "evening"
+      ],
+      "keywords": [
+        "grandma",
+        "arrives",
+        "friday"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Grandma arrives on Friday evening."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-planning-005",
+      "category": "home-planning",
+      "level": "senior",
+      "target": "We can visit your parents first.",
+      "targetId": "Kita bisa mengunjungi orang tuamu dulu.",
+      "chunks": [
+        "We can visit",
+        "your parents",
+        "first"
+      ],
+      "scrambled": [
+        "We",
+        "can",
+        "visit",
+        "your",
+        "parents",
+        "first"
+      ],
+      "keywords": [
+        "visit",
+        "your",
+        "parents"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "We can visit your parents first."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-planning-006",
+      "category": "home-planning",
+      "level": "junior",
+      "target": "Let's keep Sunday afternoon free.",
+      "targetId": "Mari kosongkan Minggu sore.",
+      "chunks": [
+        "Let's keep",
+        "Sunday afternoon",
+        "free"
+      ],
+      "scrambled": [
+        "Let's",
+        "keep",
+        "Sunday",
+        "afternoon",
+        "free"
+      ],
+      "keywords": [
+        "let's",
+        "keep",
+        "sunday"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "Let's keep Sunday afternoon free."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-planning-007",
+      "category": "home-planning",
+      "level": "mid",
+      "target": "The birthday cake is at four.",
+      "targetId": "Kue ulang tahun pukul empat.",
+      "chunks": [
+        "The birthday cake",
+        "is at",
+        "four"
+      ],
+      "scrambled": [
+        "The",
+        "birthday",
+        "cake",
+        "is",
+        "at",
+        "four"
+      ],
+      "keywords": [
+        "birthday",
+        "cake",
+        "four"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "The birthday cake is at four."
+      ],
+      "audio": null
+    },
+    {
+      "id": "home-planning-008",
+      "category": "home-planning",
+      "level": "senior",
+      "target": "We should set a budget before we book.",
+      "targetId": "Kita sebaiknya menetapkan anggaran sebelum memesan.",
+      "chunks": [
+        "We should set",
+        "a budget",
+        "before we book"
+      ],
+      "scrambled": [
+        "We",
+        "should",
+        "set",
+        "a",
+        "budget",
+        "before",
+        "we",
+        "book"
+      ],
+      "keywords": [
+        "should",
+        "budget",
+        "before"
+      ],
+      "grammarPatterns": [
+        "home_sentence"
+      ],
+      "commonErrors": [
+        "missing time or object",
+        "wrong word order"
+      ],
+      "scenario": "You are speaking at home, with family or about a household task.",
+      "scenarioId": "Kamu berbicara di rumah, dengan keluarga atau tentang urusan rumah.",
+      "modelAnswers": [
+        "We should set a budget before we book."
+      ],
+      "audio": null
+    }
+  ]
+}

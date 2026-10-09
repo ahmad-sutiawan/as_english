@@ -2,13 +2,17 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { getReviewQueue } from "@/lib/review";
+import { getActivePersona } from "@/lib/persona";
 import { LobbyFrame, lobbyCard } from "@/components/lobby-frame";
 
 export default async function ReviewPage() {
   const session = await auth();
   if (!session?.user?.id) redirect("/login");
 
-  const queue = await getReviewQueue(session.user.id, 30);
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) redirect("/dashboard");
+
+  const queue = await getReviewQueue(session.user.id, 30, persona);
   const first = queue[0];
   const dueRatio = Math.min(100, queue.length * 4);
 

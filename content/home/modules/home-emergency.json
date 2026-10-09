@@ -1,0 +1,895 @@
+{
+  "id": "home-emergency",
+  "title": "Home Emergency",
+  "titleId": "Darurat Rumah",
+  "description": "Kabar tenang saat bocor, listrik mati, atau seseorang sakit.",
+  "persona": [
+    "Rumah"
+  ],
+  "status": "ready",
+  "itemCount": 18,
+  "items": [
+    {
+      "id": "home-emergency-01",
+      "moduleId": "home-emergency",
+      "difficulty": "mid",
+      "scenario": "Water is coming through the kitchen ceiling.",
+      "scenarioId": "Air masuk dari langit-langit dapur.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "There is water.",
+          "textId": "Ada air.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The kitchen ceiling is leaking. I turned off the upstairs tap and put a bucket down.",
+          "textId": "Langit-langit dapur bocor. Saya mematikan keran lantai atas dan meletakkan ember.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The kitchen ceiling is leaking. I turned off the upstairs tap and put a bucket down.\" (Langit-langit dapur bocor. Saya mematikan keran lantai atas dan meletakkan ember.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-02",
+      "moduleId": "home-emergency",
+      "difficulty": "senior",
+      "scenario": "The power is out in the whole house.",
+      "scenarioId": "Listrik mati di seluruh rumah.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The power is out.",
+          "textId": "Listrik mati.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The power is out. I checked the breaker, and I will call the neighbor to see if their lights are on.",
+          "textId": "Listrik mati. Saya memeriksa breaker, dan saya akan menelepon tetangga untuk melihat apakah lampu mereka menyala.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The power is out. I checked the breaker, and I will call the neighbor to see if their lights are on.\" (Listrik mati. Saya memeriksa breaker, dan saya akan menelepon tetangga untuk melihat apakah lampu mereka menyala.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-03",
+      "moduleId": "home-emergency",
+      "difficulty": "junior",
+      "scenario": "Your child has a high fever.",
+      "scenarioId": "Anakmu demam tinggi.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "He is sick.",
+          "textId": "Dia sakit.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "His temperature is thirty-nine. I gave him water, and we should leave for the clinic now.",
+          "textId": "Suhunya tiga puluh sembilan. Saya memberinya air, dan kita sebaiknya berangkat ke klinik sekarang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"His temperature is thirty-nine. I gave him water, and we should leave for the clinic now.\" (Suhunya tiga puluh sembilan. Saya memberinya air, dan kita sebaiknya berangkat ke klinik sekarang.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-04",
+      "moduleId": "home-emergency",
+      "difficulty": "mid",
+      "scenario": "You smell gas near the stove.",
+      "scenarioId": "Kamu mencium gas di dekat kompor.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "I smell something.",
+          "textId": "Saya mencium sesuatu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I smell gas. I opened the window, and nobody should touch the switches.",
+          "textId": "Saya mencium gas. Saya membuka jendela, dan jangan ada yang menyentuh sakelar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I smell gas. I opened the window, and nobody should touch the switches.\" (Saya mencium gas. Saya membuka jendela, dan jangan ada yang menyentuh sakelar.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-05",
+      "moduleId": "home-emergency",
+      "difficulty": "senior",
+      "scenario": "A pipe burst under the sink.",
+      "scenarioId": "Pipa pecah di bawah wastafel.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The pipe broke.",
+          "textId": "Pipanya pecah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The pipe under the sink burst. I shut the main valve, and the floor is still wet.",
+          "textId": "Pipa di bawah wastafel pecah. Saya menutup katup utama, dan lantainya masih basah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The pipe under the sink burst. I shut the main valve, and the floor is still wet.\" (Pipa di bawah wastafel pecah. Saya menutup katup utama, dan lantainya masih basah.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-06",
+      "moduleId": "home-emergency",
+      "difficulty": "junior",
+      "scenario": "Your parent fell in the bathroom.",
+      "scenarioId": "Orang tuamu jatuh di kamar mandi.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Dad fell.",
+          "textId": "Ayah jatuh.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Dad fell in the bathroom. He is awake and talking, and I am staying with him.",
+          "textId": "Ayah jatuh di kamar mandi. Dia sadar dan bisa bicara, dan saya tetap di sampingnya.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Dad fell in the bathroom. He is awake and talking, and I am staying with him.\" (Ayah jatuh di kamar mandi. Dia sadar dan bisa bicara, dan saya tetap di sampingnya.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-07",
+      "moduleId": "home-emergency",
+      "difficulty": "mid",
+      "scenario": "Smoke is coming from the toaster.",
+      "scenarioId": "Asap keluar dari pemanggang roti.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "There is smoke.",
+          "textId": "Ada asap.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The toaster is smoking. I unplugged it and moved it away from the curtain.",
+          "textId": "Pemanggang roti berasap. Saya mencabutnya dan menjauhkannya dari gorden.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The toaster is smoking. I unplugged it and moved it away from the curtain.\" (Pemanggang roti berasap. Saya mencabutnya dan menjauhkannya dari gorden.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-08",
+      "moduleId": "home-emergency",
+      "difficulty": "senior",
+      "scenario": "The baby swallowed a small button.",
+      "scenarioId": "Bayi menelan kancing kecil.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The baby swallowed something.",
+          "textId": "Bayi menelan sesuatu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The baby swallowed a button. She is breathing, and we are going to the hospital now.",
+          "textId": "Bayi menelan kancing. Dia masih bernapas, dan kita berangkat ke rumah sakit sekarang.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The baby swallowed a button. She is breathing, and we are going to the hospital now.\" (Bayi menelan kancing. Dia masih bernapas, dan kita berangkat ke rumah sakit sekarang.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-09",
+      "moduleId": "home-emergency",
+      "difficulty": "junior",
+      "scenario": "A window broke in the storm.",
+      "scenarioId": "Jendela pecah karena badai.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The window broke.",
+          "textId": "Jendelanya pecah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The bedroom window broke. I moved the children out of that room and covered the frame with a sheet.",
+          "textId": "Jendela kamar pecah. Saya memindahkan anak-anak dari kamar itu dan menutup bingkainya dengan kain.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The bedroom window broke. I moved the children out of that room and covered the frame with a sheet.\" (Jendela kamar pecah. Saya memindahkan anak-anak dari kamar itu dan menutup bingkainya dengan kain.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-10",
+      "moduleId": "home-emergency",
+      "difficulty": "mid",
+      "scenario": "You cannot find your younger child in the yard.",
+      "scenarioId": "Kamu tidak menemukan anak kecil di halaman.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Ari is missing.",
+          "textId": "Ari tidak kelihatan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "I cannot see Ari in the yard. I am checking the gate, and please call his name from the street.",
+          "textId": "Saya tidak melihat Ari di halaman. Saya memeriksa pagar, dan tolong panggil namanya dari jalan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"I cannot see Ari in the yard. I am checking the gate, and please call his name from the street.\" (Saya tidak melihat Ari di halaman. Saya memeriksa pagar, dan tolong panggil namanya dari jalan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-11",
+      "moduleId": "home-emergency",
+      "difficulty": "senior",
+      "scenario": "The fridge stopped and the food is warm.",
+      "scenarioId": "Kulkas berhenti dan makanannya hangat.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The fridge stopped.",
+          "textId": "Kulkas berhenti.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The fridge stopped two hours ago. I moved the milk to the cooler, and the meat should be cooked tonight.",
+          "textId": "Kulkas berhenti dua jam lalu. Saya memindahkan susu ke kotak pendingin, dan dagingnya sebaiknya dimasak malam ini.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The fridge stopped two hours ago. I moved the milk to the cooler, and the meat should be cooked tonight.\" (Kulkas berhenti dua jam lalu. Saya memindahkan susu ke kotak pendingin, dan dagingnya sebaiknya dimasak malam ini.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-12",
+      "moduleId": "home-emergency",
+      "difficulty": "junior",
+      "scenario": "A stranger is trying the front gate.",
+      "scenarioId": "Orang asing mencoba pagar depan.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Someone is outside.",
+          "textId": "Ada seseorang di luar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Someone is trying the front gate. I locked the door, and I am calling you from the bedroom.",
+          "textId": "Seseorang mencoba pagar depan. Saya mengunci pintu, dan saya meneleponmu dari kamar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Someone is trying the front gate. I locked the door, and I am calling you from the bedroom.\" (Seseorang mencoba pagar depan. Saya mengunci pintu, dan saya meneleponmu dari kamar.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-13",
+      "moduleId": "home-emergency",
+      "difficulty": "mid",
+      "scenario": "Your partner cut their hand while cooking.",
+      "scenarioId": "Pasanganmu tergores saat memasak.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You are bleeding.",
+          "textId": "Kamu berdarah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Your hand is bleeding. Press this cloth on it, and I will drive you to the clinic if it does not stop.",
+          "textId": "Tanganmu berdarah. Tekan kain ini, dan saya akan mengantarmu ke klinik jika tidak berhenti.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Your hand is bleeding. Press this cloth on it, and I will drive you to the clinic if it does not stop.\" (Tanganmu berdarah. Tekan kain ini, dan saya akan mengantarmu ke klinik jika tidak berhenti.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-14",
+      "moduleId": "home-emergency",
+      "difficulty": "senior",
+      "scenario": "The street is flooding toward the house.",
+      "scenarioId": "Jalan banjir menuju rumah.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The street is flooding.",
+          "textId": "Jalan banjir.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Water is at the front step. I moved the bags upstairs and unplugged the ground-floor sockets.",
+          "textId": "Air sudah di anak tangga depan. Saya memindahkan tas ke atas dan mencabut stopkontak lantai bawah.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Water is at the front step. I moved the bags upstairs and unplugged the ground-floor sockets.\" (Air sudah di anak tangga depan. Saya memindahkan tas ke atas dan mencabut stopkontak lantai bawah.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-15",
+      "moduleId": "home-emergency",
+      "difficulty": "junior",
+      "scenario": "The dog got out.",
+      "scenarioId": "Anjingnya keluar.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The dog is out.",
+          "textId": "Anjingnya keluar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The dog is outside the gate. I have his leash, and I am walking toward the park.",
+          "textId": "Anjing ada di luar pagar. Saya membawa talinya, dan saya berjalan ke arah taman.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The dog is outside the gate. I have his leash, and I am walking toward the park.\" (Anjing ada di luar pagar. Saya membawa talinya, dan saya berjalan ke arah taman.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-16",
+      "moduleId": "home-emergency",
+      "difficulty": "mid",
+      "scenario": "Medicine was taken twice by mistake.",
+      "scenarioId": "Obat terminum dua kali karena keliru.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "She took too much.",
+          "textId": "Dia minum terlalu banyak.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "Grandma took the tablet twice. She is awake, and I am calling the clinic to ask what to do.",
+          "textId": "Nenek minum tablet dua kali. Dia sadar, dan saya menelepon klinik untuk menanyakan apa yang harus dilakukan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"Grandma took the tablet twice. She is awake, and I am calling the clinic to ask what to do.\" (Nenek minum tablet dua kali. Dia sadar, dan saya menelepon klinik untuk menanyakan apa yang harus dilakukan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-17",
+      "moduleId": "home-emergency",
+      "difficulty": "senior",
+      "scenario": "A candle fell onto the rug.",
+      "scenarioId": "Lilin jatuh ke karpet.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "There was a candle.",
+          "textId": "Ada lilin.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The candle fell. I put it out with a wet towel, and the rug is damaged but not burning.",
+          "textId": "Lilin jatuh. Saya memadamkannya dengan handuk basah, dan karpetnya rusak tapi tidak terbakar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The candle fell. I put it out with a wet towel, and the rug is damaged but not burning.\" (Lilin jatuh. Saya memadamkannya dengan handuk basah, dan karpetnya rusak tapi tidak terbakar.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    },
+    {
+      "id": "home-emergency-18",
+      "moduleId": "home-emergency",
+      "difficulty": "junior",
+      "scenario": "You locked the keys inside.",
+      "scenarioId": "Kamu mengunci kunci di dalam rumah.",
+      "scenarioStructure": "Subject + Verb + Object",
+      "scenarioStructureId": "Subjek + Kata kerja + Objek",
+      "prompt": "What do you say right now?",
+      "promptId": "Apa yang kamu katakan sekarang?",
+      "promptStructure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+      "promptStructureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)",
+      "choices": [
+        {
+          "key": "A",
+          "text": "We are locked out.",
+          "textId": "Kita terkunci di luar.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "B",
+          "text": "The keys are inside. The children are with me outside, and I will call the neighbor who has the spare key.",
+          "textId": "Kuncinya di dalam. Anak-anak bersama saya di luar, dan saya akan menelepon tetangga yang menyimpan kunci cadangan.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "C",
+          "text": "I'm not sure what to say.",
+          "textId": "Saya tidak yakin harus berkata apa.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Someone else can deal with it later.",
+          "textId": "Orang lain bisa mengurusnya nanti.",
+          "structure": "Subject + will + Verb + Object",
+          "structureId": "Subjek + will + Kata kerja + Objek"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Jawaban yang utuh untuk situasi ini: \"The keys are inside. The children are with me outside, and I will call the neighbor who has the spare key.\" (Kuncinya di dalam. Anak-anak bersama saya di luar, dan saya akan menelepon tetangga yang menyimpan kunci cadangan.). Pilihan lain terlalu pendek, menghindar, atau tidak menjawab permintaan.",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
+    }
+  ]
+}

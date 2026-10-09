@@ -1,26 +1,25 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
-import { BUILD_THEMES, isBuildTheme, type BuildThemeId } from "@/lib/build";
+import { getBuildThemes, isBuildTheme } from "@/lib/build";
+import { getActivePersona } from "@/lib/persona";
 import { BuildSession } from "@/components/build-session";
 
 type Props = {
   searchParams: Promise<{ theme?: string }>;
 };
 
-function parseTheme(raw?: string): BuildThemeId {
-  if (raw && isBuildTheme(raw)) return raw;
-  return "all";
-}
-
 export default async function BuildPlayPage({ searchParams }: Props) {
   const session = await auth();
   if (!session?.user?.id) redirect("/login");
 
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) redirect("/dashboard");
+
   const { theme: themeRaw } = await searchParams;
-  if (themeRaw && !isBuildTheme(themeRaw)) redirect("/build");
-  const theme = parseTheme(themeRaw);
-  const meta = BUILD_THEMES.find((item) => item.id === theme);
+  const theme = themeRaw && isBuildTheme(themeRaw, persona) ? themeRaw : "all";
+  if (themeRaw && !isBuildTheme(themeRaw, persona)) redirect("/build");
+  const meta = getBuildThemes(persona).find((item) => item.id === theme);
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">

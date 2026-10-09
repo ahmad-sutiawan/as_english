@@ -3,21 +3,25 @@ import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import {
   BUILD_SESSION_SIZE,
-  BUILD_THEMES,
   BUILD_XP_DRILL,
   BUILD_XP_PERFECT_BONUS,
   countDrillsByTheme,
+  getBuildThemes,
   getOrCreateBuildStats,
 } from "@/lib/build";
+import { getActivePersona } from "@/lib/persona";
 import { LobbyFrame, StatTile, lobbyCard } from "@/components/lobby-frame";
 
 export default async function BuildLobbyPage() {
   const session = await auth();
   if (!session?.user?.id) redirect("/login");
 
-  const stats = await getOrCreateBuildStats(session.user.id);
-  const counts = countDrillsByTheme();
-  const [featured, ...themes] = BUILD_THEMES;
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) redirect("/dashboard");
+
+  const stats = await getOrCreateBuildStats(session.user.id, persona);
+  const counts = countDrillsByTheme(persona);
+  const [featured, ...themes] = getBuildThemes(persona);
 
   return (
     <LobbyFrame

@@ -1,0 +1,637 @@
+{
+  "id": "home-live-dialogue",
+  "title": "Home Dialogue",
+  "titleId": "Percakapan Berantai di Rumah",
+  "description": "Latihan percakapan rumah dua giliran: dengarkan lawan bicara, lalu pilih dan ketik respons English-mu.",
+  "persona": [
+    "Rumah"
+  ],
+  "status": "ready",
+  "itemCount": 6,
+  "items": [
+    {
+      "id": "home-live-dialogue-01",
+      "moduleId": "home-live-dialogue",
+      "difficulty": "mid",
+      "kind": "dialogue",
+      "scenario": "The kitchen ceiling is dripping while you talk to your partner on the phone.",
+      "scenarioId": "Langit-langit dapur menetes saat kamu berbicara dengan pasangan di telepon.",
+      "scenarioStructure": "Multi-clause: Subject + Verb + Object + connector + clause",
+      "scenarioStructureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
+      "prompt": "Complete your turns in this home conversation.",
+      "promptId": "Lengkapi giliranmu dalam percakapan rumah ini.",
+      "promptStructure": "Task prompt: Imperative / instruction + Object",
+      "promptStructureId": "Prompt tugas: Imperatif / instruksi + Objek",
+      "choices": [
+        {
+          "key": "A",
+          "text": "There is water.",
+          "textId": "Ada air.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+        },
+        {
+          "key": "B",
+          "text": "The ceiling is dripping over the stove. I put a bucket there and turned off the upstairs tap.",
+          "textId": "Langit-langit menetes di atas kompor. Saya meletakkan ember dan mematikan keran lantai atas.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+        },
+        {
+          "key": "C",
+          "text": "I don't know.",
+          "textId": "Saya tidak tahu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Can you just decide?",
+          "textId": "Kamu saja yang putuskan?",
+          "structure": "Yes/No question: Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Ya/Tidak: Auxiliary + Subjek + Kata kerja (+ Objek)"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tiap giliranmu menjawab pertanyaan lawan bicara dengan fakta, langkah, dan waktu. Hindari jawaban samar.",
+      "tags": [
+        "darurat",
+        "rumah",
+        "dialogue"
+      ],
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "them",
+          "roleLabel": "Partner",
+          "roleLabelId": "Pasangan",
+          "text": "I can hear water. What is happening?",
+          "textId": "Saya mendengar air. Apa yang terjadi?",
+          "structure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)"
+        },
+        {
+          "id": "t2",
+          "speaker": "you",
+          "roleLabel": "You",
+          "roleLabelId": "Kamu",
+          "text": "The ceiling is dripping over the stove. I put a bucket there and turned off the upstairs tap.",
+          "textId": "Langit-langit menetes di atas kompor. Saya meletakkan ember dan mematikan keran lantai atas.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "There is water.",
+              "textId": "Ada air.",
+              "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+              "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+            },
+            {
+              "key": "B",
+              "text": "The ceiling is dripping over the stove. I put a bucket there and turned off the upstairs tap.",
+              "textId": "Langit-langit menetes di atas kompor. Saya meletakkan ember dan mematikan keran lantai atas.",
+              "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+              "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+            },
+            {
+              "key": "C",
+              "text": "I don't know.",
+              "textId": "Saya tidak tahu.",
+              "structure": "Subject + Verb + Object",
+              "structureId": "Subjek + Kata kerja + Objek"
+            },
+            {
+              "key": "D",
+              "text": "Can you just decide?",
+              "textId": "Kamu saja yang putuskan?",
+              "structure": "Yes/No question: Auxiliary + Subject + Verb (+ Object)",
+              "structureId": "Pertanyaan Ya/Tidak: Auxiliary + Subjek + Kata kerja (+ Objek)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home-live-dialogue-02",
+      "moduleId": "home-live-dialogue",
+      "difficulty": "mid",
+      "kind": "dialogue",
+      "scenario": "Your mother asks for the evening plan.",
+      "scenarioId": "Ibu menanyakan rencana malam.",
+      "scenarioStructure": "Multi-clause: Subject + Verb + Object + connector + clause",
+      "scenarioStructureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
+      "prompt": "Complete your turns in this home conversation.",
+      "promptId": "Lengkapi giliranmu dalam percakapan rumah ini.",
+      "promptStructure": "Task prompt: Imperative / instruction + Object",
+      "promptStructureId": "Prompt tugas: Imperatif / instruksi + Objek",
+      "choices": [
+        {
+          "key": "A",
+          "text": "The usual.",
+          "textId": "Seperti biasa.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+        },
+        {
+          "key": "B",
+          "text": "We will eat at seven, they will read for fifteen minutes, and then they will sleep.",
+          "textId": "Kami makan pukul tujuh, mereka membaca lima belas menit, lalu tidur.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+        },
+        {
+          "key": "C",
+          "text": "I don't know.",
+          "textId": "Saya tidak tahu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Can you just decide?",
+          "textId": "Kamu saja yang putuskan?",
+          "structure": "Yes/No question: Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Ya/Tidak: Auxiliary + Subjek + Kata kerja (+ Objek)"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tiap giliranmu menjawab pertanyaan lawan bicara dengan fakta, langkah, dan waktu. Hindari jawaban samar.",
+      "tags": [
+        "pagi",
+        "rumah",
+        "dialogue"
+      ],
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "them",
+          "roleLabel": "Mother",
+          "roleLabelId": "Ibu",
+          "text": "What are you doing with the children tonight?",
+          "textId": "Apa yang kamu lakukan dengan anak-anak malam ini?",
+          "structure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)"
+        },
+        {
+          "id": "t2",
+          "speaker": "you",
+          "roleLabel": "You",
+          "roleLabelId": "Kamu",
+          "text": "We will eat at seven, they will read for fifteen minutes, and then they will sleep.",
+          "textId": "Kami makan pukul tujuh, mereka membaca lima belas menit, lalu tidur.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "The usual.",
+              "textId": "Seperti biasa.",
+              "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+              "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+            },
+            {
+              "key": "B",
+              "text": "We will eat at seven, they will read for fifteen minutes, and then they will sleep.",
+              "textId": "Kami makan pukul tujuh, mereka membaca lima belas menit, lalu tidur.",
+              "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+              "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+            },
+            {
+              "key": "C",
+              "text": "I don't know.",
+              "textId": "Saya tidak tahu.",
+              "structure": "Subject + Verb + Object",
+              "structureId": "Subjek + Kata kerja + Objek"
+            },
+            {
+              "key": "D",
+              "text": "Can you just decide?",
+              "textId": "Kamu saja yang putuskan?",
+              "structure": "Yes/No question: Auxiliary + Subject + Verb (+ Object)",
+              "structureId": "Pertanyaan Ya/Tidak: Auxiliary + Subjek + Kata kerja (+ Objek)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home-live-dialogue-03",
+      "moduleId": "home-live-dialogue",
+      "difficulty": "mid",
+      "kind": "dialogue",
+      "scenario": "A neighbor asks you to move a conversation about noise outside.",
+      "scenarioId": "Tetangga mengajakmu bicara soal suara di luar.",
+      "scenarioStructure": "Multi-clause: Subject + Verb + Object + connector + clause",
+      "scenarioStructureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
+      "prompt": "Complete your turns in this home conversation.",
+      "promptId": "Lengkapi giliranmu dalam percakapan rumah ini.",
+      "promptStructure": "Task prompt: Imperative / instruction + Object",
+      "promptStructureId": "Prompt tugas: Imperatif / instruksi + Objek",
+      "choices": [
+        {
+          "key": "A",
+          "text": "It was not that loud.",
+          "textId": "Tidak sekeras itu.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+        },
+        {
+          "key": "B",
+          "text": "I am sorry. We will keep the music inside and turn it off by nine.",
+          "textId": "Saya minta maaf. Kami akan menahan musik di dalam dan mematikannya pukul sembilan.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+        },
+        {
+          "key": "C",
+          "text": "I don't know.",
+          "textId": "Saya tidak tahu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Can you just decide?",
+          "textId": "Kamu saja yang putuskan?",
+          "structure": "Yes/No question: Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Ya/Tidak: Auxiliary + Subjek + Kata kerja (+ Objek)"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tiap giliranmu menjawab pertanyaan lawan bicara dengan fakta, langkah, dan waktu. Hindari jawaban samar.",
+      "tags": [
+        "tetangga",
+        "rumah",
+        "dialogue"
+      ],
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "them",
+          "roleLabel": "Neighbor",
+          "roleLabelId": "Tetangga",
+          "text": "The music last night woke my father. Can we talk about it?",
+          "textId": "Musik semalam membangunkan ayah saya. Bisakah kita membicarakannya?",
+          "structure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)"
+        },
+        {
+          "id": "t2",
+          "speaker": "you",
+          "roleLabel": "You",
+          "roleLabelId": "Kamu",
+          "text": "I am sorry. We will keep the music inside and turn it off by nine.",
+          "textId": "Saya minta maaf. Kami akan menahan musik di dalam dan mematikannya pukul sembilan.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "It was not that loud.",
+              "textId": "Tidak sekeras itu.",
+              "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+              "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+            },
+            {
+              "key": "B",
+              "text": "I am sorry. We will keep the music inside and turn it off by nine.",
+              "textId": "Saya minta maaf. Kami akan menahan musik di dalam dan mematikannya pukul sembilan.",
+              "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+              "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+            },
+            {
+              "key": "C",
+              "text": "I don't know.",
+              "textId": "Saya tidak tahu.",
+              "structure": "Subject + Verb + Object",
+              "structureId": "Subjek + Kata kerja + Objek"
+            },
+            {
+              "key": "D",
+              "text": "Can you just decide?",
+              "textId": "Kamu saja yang putuskan?",
+              "structure": "Yes/No question: Auxiliary + Subject + Verb (+ Object)",
+              "structureId": "Pertanyaan Ya/Tidak: Auxiliary + Subjek + Kata kerja (+ Objek)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home-live-dialogue-04",
+      "moduleId": "home-live-dialogue",
+      "difficulty": "mid",
+      "kind": "dialogue",
+      "scenario": "Your child asks why Saturday's trip changed.",
+      "scenarioId": "Anakmu bertanya mengapa perjalanan Sabtu berubah.",
+      "scenarioStructure": "Multi-clause: Subject + Verb + Object + connector + clause",
+      "scenarioStructureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
+      "prompt": "Complete your turns in this home conversation.",
+      "promptId": "Lengkapi giliranmu dalam percakapan rumah ini.",
+      "promptStructure": "Task prompt: Imperative / instruction + Object",
+      "promptStructureId": "Prompt tugas: Imperatif / instruksi + Objek",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Maybe.",
+          "textId": "Mungkin.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+        },
+        {
+          "key": "B",
+          "text": "Not this Saturday. It will rain, so we will visit Grandma and go to the beach next week.",
+          "textId": "Tidak Sabtu ini. Akan hujan, jadi kita mengunjungi Nenek dan ke pantai minggu depan.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+        },
+        {
+          "key": "C",
+          "text": "I don't know.",
+          "textId": "Saya tidak tahu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Can you just decide?",
+          "textId": "Kamu saja yang putuskan?",
+          "structure": "Yes/No question: Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Ya/Tidak: Auxiliary + Subjek + Kata kerja (+ Objek)"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tiap giliranmu menjawab pertanyaan lawan bicara dengan fakta, langkah, dan waktu. Hindari jawaban samar.",
+      "tags": [
+        "rencana",
+        "rumah",
+        "dialogue"
+      ],
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "them",
+          "roleLabel": "Child",
+          "roleLabelId": "Anak",
+          "text": "Are we still going to the beach?",
+          "textId": "Apakah kita tetap ke pantai?",
+          "structure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)"
+        },
+        {
+          "id": "t2",
+          "speaker": "you",
+          "roleLabel": "You",
+          "roleLabelId": "Kamu",
+          "text": "Not this Saturday. It will rain, so we will visit Grandma and go to the beach next week.",
+          "textId": "Tidak Sabtu ini. Akan hujan, jadi kita mengunjungi Nenek dan ke pantai minggu depan.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "Maybe.",
+              "textId": "Mungkin.",
+              "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+              "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+            },
+            {
+              "key": "B",
+              "text": "Not this Saturday. It will rain, so we will visit Grandma and go to the beach next week.",
+              "textId": "Tidak Sabtu ini. Akan hujan, jadi kita mengunjungi Nenek dan ke pantai minggu depan.",
+              "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+              "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+            },
+            {
+              "key": "C",
+              "text": "I don't know.",
+              "textId": "Saya tidak tahu.",
+              "structure": "Subject + Verb + Object",
+              "structureId": "Subjek + Kata kerja + Objek"
+            },
+            {
+              "key": "D",
+              "text": "Can you just decide?",
+              "textId": "Kamu saja yang putuskan?",
+              "structure": "Yes/No question: Auxiliary + Subject + Verb (+ Object)",
+              "structureId": "Pertanyaan Ya/Tidak: Auxiliary + Subjek + Kata kerja (+ Objek)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home-live-dialogue-05",
+      "moduleId": "home-live-dialogue",
+      "difficulty": "mid",
+      "kind": "dialogue",
+      "scenario": "The plumber is at the door and your partner needs a decision.",
+      "scenarioId": "Tukang ledeng di pintu dan pasanganmu butuh keputusan.",
+      "scenarioStructure": "Multi-clause: Subject + Verb + Object + connector + clause",
+      "scenarioStructureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
+      "prompt": "Complete your turns in this home conversation.",
+      "promptId": "Lengkapi giliranmu dalam percakapan rumah ini.",
+      "promptStructure": "Task prompt: Imperative / instruction + Object",
+      "promptStructureId": "Prompt tugas: Imperatif / instruksi + Objek",
+      "choices": [
+        {
+          "key": "A",
+          "text": "You decide.",
+          "textId": "Kamu yang putuskan.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+        },
+        {
+          "key": "B",
+          "text": "Ask him to start today. The leak is spreading, and we will pay the higher price.",
+          "textId": "Minta dia mulai hari ini. Bocornya melebar, dan kita akan membayar harga yang lebih tinggi.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+        },
+        {
+          "key": "C",
+          "text": "I don't know.",
+          "textId": "Saya tidak tahu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Can you just decide?",
+          "textId": "Kamu saja yang putuskan?",
+          "structure": "Yes/No question: Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Ya/Tidak: Auxiliary + Subjek + Kata kerja (+ Objek)"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tiap giliranmu menjawab pertanyaan lawan bicara dengan fakta, langkah, dan waktu. Hindari jawaban samar.",
+      "tags": [
+        "anggaran",
+        "rumah",
+        "dialogue"
+      ],
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "them",
+          "roleLabel": "Partner",
+          "roleLabelId": "Pasangan",
+          "text": "He can fix it today for a higher price. What should I tell him?",
+          "textId": "Dia bisa memperbaiki hari ini dengan harga lebih tinggi. Apa yang harus saya katakan?",
+          "structure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)"
+        },
+        {
+          "id": "t2",
+          "speaker": "you",
+          "roleLabel": "You",
+          "roleLabelId": "Kamu",
+          "text": "Ask him to start today. The leak is spreading, and we will pay the higher price.",
+          "textId": "Minta dia mulai hari ini. Bocornya melebar, dan kita akan membayar harga yang lebih tinggi.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "You decide.",
+              "textId": "Kamu yang putuskan.",
+              "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+              "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+            },
+            {
+              "key": "B",
+              "text": "Ask him to start today. The leak is spreading, and we will pay the higher price.",
+              "textId": "Minta dia mulai hari ini. Bocornya melebar, dan kita akan membayar harga yang lebih tinggi.",
+              "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+              "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+            },
+            {
+              "key": "C",
+              "text": "I don't know.",
+              "textId": "Saya tidak tahu.",
+              "structure": "Subject + Verb + Object",
+              "structureId": "Subjek + Kata kerja + Objek"
+            },
+            {
+              "key": "D",
+              "text": "Can you just decide?",
+              "textId": "Kamu saja yang putuskan?",
+              "structure": "Yes/No question: Auxiliary + Subject + Verb (+ Object)",
+              "structureId": "Pertanyaan Ya/Tidak: Auxiliary + Subjek + Kata kerja (+ Objek)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home-live-dialogue-06",
+      "moduleId": "home-live-dialogue",
+      "difficulty": "mid",
+      "kind": "dialogue",
+      "scenario": "Your father wants to know how the fever night went.",
+      "scenarioId": "Ayah ingin tahu bagaimana malam demam itu.",
+      "scenarioStructure": "Multi-clause: Subject + Verb + Object + connector + clause",
+      "scenarioStructureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
+      "prompt": "Complete your turns in this home conversation.",
+      "promptId": "Lengkapi giliranmu dalam percakapan rumah ini.",
+      "promptStructure": "Task prompt: Imperative / instruction + Object",
+      "promptStructureId": "Prompt tugas: Imperatif / instruksi + Objek",
+      "choices": [
+        {
+          "key": "A",
+          "text": "She is better.",
+          "textId": "Dia lebih baik.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+        },
+        {
+          "key": "B",
+          "text": "She slept after midnight, the fever came down, and I will take her temperature again at eight.",
+          "textId": "Dia tidur setelah tengah malam, demamnya turun, dan saya akan mengukur suhunya lagi pukul delapan.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+        },
+        {
+          "key": "C",
+          "text": "I don't know.",
+          "textId": "Saya tidak tahu.",
+          "structure": "Subject + Verb + Object",
+          "structureId": "Subjek + Kata kerja + Objek"
+        },
+        {
+          "key": "D",
+          "text": "Can you just decide?",
+          "textId": "Kamu saja yang putuskan?",
+          "structure": "Yes/No question: Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Ya/Tidak: Auxiliary + Subjek + Kata kerja (+ Objek)"
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tiap giliranmu menjawab pertanyaan lawan bicara dengan fakta, langkah, dan waktu. Hindari jawaban samar.",
+      "tags": [
+        "kesehatan",
+        "rumah",
+        "dialogue"
+      ],
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "them",
+          "roleLabel": "Father",
+          "roleLabelId": "Ayah",
+          "text": "How was your mother through the night?",
+          "textId": "Bagaimana ibumu semalaman?",
+          "structure": "Wh-question: Wh-word + Auxiliary + Subject + Verb (+ Object)",
+          "structureId": "Pertanyaan Wh: Wh-word + Auxiliary + Subjek + Kata kerja (+ Objek)"
+        },
+        {
+          "id": "t2",
+          "speaker": "you",
+          "roleLabel": "You",
+          "roleLabelId": "Kamu",
+          "text": "She slept after midnight, the fever came down, and I will take her temperature again at eight.",
+          "textId": "Dia tidur setelah tengah malam, demamnya turun, dan saya akan mengukur suhunya lagi pukul delapan.",
+          "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+          "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa",
+          "correctKey": "B",
+          "choices": [
+            {
+              "key": "A",
+              "text": "She is better.",
+              "textId": "Dia lebih baik.",
+              "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+              "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+            },
+            {
+              "key": "B",
+              "text": "She slept after midnight, the fever came down, and I will take her temperature again at eight.",
+              "textId": "Dia tidur setelah tengah malam, demamnya turun, dan saya akan mengukur suhunya lagi pukul delapan.",
+              "structure": "Multi-clause: Subject + Verb + Object + connector + clause",
+              "structureId": "Multi-klausa: Subjek + Kata kerja + Objek + konektor + klausa"
+            },
+            {
+              "key": "C",
+              "text": "I don't know.",
+              "textId": "Saya tidak tahu.",
+              "structure": "Subject + Verb + Object",
+              "structureId": "Subjek + Kata kerja + Objek"
+            },
+            {
+              "key": "D",
+              "text": "Can you just decide?",
+              "textId": "Kamu saja yang putuskan?",
+              "structure": "Yes/No question: Auxiliary + Subject + Verb (+ Object)",
+              "structureId": "Pertanyaan Ya/Tidak: Auxiliary + Subjek + Kata kerja (+ Objek)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

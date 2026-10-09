@@ -9,16 +9,20 @@ import type {
   ModuleMeta,
 } from "@/types/content";
 import { DIFFICULTY_ORDER } from "@/types/content";
+import type { PersonaId } from "@/lib/persona";
 
-const contentRoot = path.join(process.cwd(), "content");
+function contentBase(persona: PersonaId) {
+  const root = path.join(process.cwd(), "content");
+  return persona === "home" ? path.join(root, "home") : root;
+}
 
 function readJson<T>(filePath: string): T {
   const raw = readFileSync(filePath, "utf-8");
   return JSON.parse(raw) as T;
 }
 
-export function getManifest(): ContentManifest {
-  return readJson<ContentManifest>(path.join(contentRoot, "manifest.json"));
+export function getManifest(persona: PersonaId): ContentManifest {
+  return readJson<ContentManifest>(path.join(contentBase(persona), "manifest.json"));
 }
 
 export function countDifficultyMix(items: ExerciseItem[]): DifficultyMix {
@@ -55,18 +59,18 @@ function withLevelFields(meta: ModuleMeta, items: ExerciseItem[]): ModuleMeta {
   };
 }
 
-export function getModules(): ModuleMeta[] {
-  return getManifest().modules.map((meta) => {
-    const full = getModule(meta.id);
+export function getModules(persona: PersonaId): ModuleMeta[] {
+  return getManifest(persona).modules.map((meta) => {
+    const full = getModule(meta.id, persona);
     if (!full) return { ...meta, level: meta.level ?? "mid", levelMix: meta.levelMix };
     return withLevelFields(meta, full.items);
   });
 }
 
-export function getModule(moduleId: string): ModuleContent | null {
+export function getModule(moduleId: string, persona: PersonaId): ModuleContent | null {
   try {
     const data = readJson<ModuleContent>(
-      path.join(contentRoot, "modules", `${moduleId}.json`),
+      path.join(contentBase(persona), "modules", `${moduleId}.json`),
     );
     const levelFields = withLevelFields(data, data.items);
     return {
@@ -81,8 +85,9 @@ export function getModule(moduleId: string): ModuleContent | null {
 export function getItem(
   moduleId: string,
   itemId: string,
+  persona: PersonaId,
 ): ExerciseItem | null {
-  const mod = getModule(moduleId);
+  const mod = getModule(moduleId, persona);
   if (!mod) return null;
   return mod.items.find((item) => item.id === itemId) ?? null;
 }
@@ -100,8 +105,9 @@ export function getCorrectAnswerText(item: ExerciseItem): string {
 export function getNextItemId(
   moduleId: string,
   currentItemId: string,
+  persona: PersonaId,
 ): string | null {
-  const mod = getModule(moduleId);
+  const mod = getModule(moduleId, persona);
   if (!mod || !mod.items.length) return null;
   const idx = mod.items.findIndex((i) => i.id === currentItemId);
   if (idx < 0 || idx >= mod.items.length - 1) return null;
@@ -112,9 +118,10 @@ export function getNextItemId(
 export function getNextItemIdFiltered(
   moduleId: string,
   currentItemId: string,
+  persona: PersonaId,
   difficulty?: Difficulty | "all",
 ): string | null {
-  const mod = getModule(moduleId);
+  const mod = getModule(moduleId, persona);
   if (!mod || !mod.items.length) return null;
   const pool =
     !difficulty || difficulty === "all"

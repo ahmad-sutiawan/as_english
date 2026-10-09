@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { pickSpeakSessionItem } from "@/lib/speak";
+import { getActivePersona } from "@/lib/persona";
 
 const bodySchema = z.object({
   level: z.enum(["all", "junior", "mid", "senior"]).optional().default("all"),
@@ -22,7 +23,12 @@ export async function POST(request: Request) {
     // empty ok
   }
 
-  const item = await pickSpeakSessionItem(session.user.id, level);
+  const persona = await getActivePersona(session.user.id);
+  if (!persona) {
+    return NextResponse.json({ error: "Pilih persona dulu." }, { status: 409 });
+  }
+
+  const item = await pickSpeakSessionItem(session.user.id, persona, level);
   if (!item) {
     return NextResponse.json({ error: "Tidak ada item speak." }, { status: 404 });
   }
