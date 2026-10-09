@@ -47,8 +47,8 @@ export function SiteNav({ accountLabel, persona, signOutAction }: Props) {
                   aria-current={current ? "page" : undefined}
                   className={`inline-flex h-10 items-center rounded-full px-3.5 text-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] ${
                     current
-                      ? "bg-[var(--accent-soft)] font-medium text-[var(--ink)]"
-                      : "text-[var(--muted)] hover:bg-[var(--surface)] hover:text-[var(--ink)]"
+                      ? "bg-[var(--accent-soft)] font-medium text-[var(--accent)]"
+                      : "text-[var(--muted)] hover:bg-[var(--surface-2)] hover:text-[var(--ink)]"
                   }`}
                 >
                   {link.label}
@@ -65,7 +65,10 @@ export function SiteNav({ accountLabel, persona, signOutAction }: Props) {
             <PersonaSwitch persona={persona} />
           </div>
         ) : null}
-        <p className="hidden max-w-40 truncate text-sm text-[var(--muted)] lg:block" title={accountLabel}>
+        <p
+          className="hidden max-w-40 truncate text-sm text-[var(--ink)] lg:block"
+          title={accountLabel}
+        >
           {accountLabel}
         </p>
         <div className="hidden lg:block">
@@ -73,7 +76,7 @@ export function SiteNav({ accountLabel, persona, signOutAction }: Props) {
         </div>
         <button
           type="button"
-          className="inline-flex h-10 items-center rounded-full border border-[var(--border)] bg-[var(--surface)] px-3.5 text-sm text-[var(--ink)] lg:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+          className="inline-flex h-10 items-center rounded-full border border-[var(--border)] bg-[var(--surface-2)] px-3.5 text-sm text-[var(--ink)] lg:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((value) => !value)}
@@ -85,7 +88,7 @@ export function SiteNav({ accountLabel, persona, signOutAction }: Props) {
       {open ? (
         <div
           id="mobile-nav"
-          className="absolute inset-x-0 top-16 border-b border-[var(--border)] bg-[var(--background)]/95 px-4 py-3 backdrop-blur lg:hidden"
+          className="absolute inset-x-0 top-16 z-40 max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-[var(--border)] bg-[var(--background)] px-4 py-3 shadow-2xl lg:hidden"
         >
           <nav aria-label="Utama">
             <ul className="grid gap-1">
@@ -110,8 +113,12 @@ export function SiteNav({ accountLabel, persona, signOutAction }: Props) {
             </ul>
           </nav>
           {persona ? (
-            <div className="mb-3 lg:hidden">
-              <PersonaSwitch persona={persona} />
+            <div className="mt-3 border-t border-[var(--border)] pt-3">
+              <PersonaSwitch
+                persona={persona}
+                layout="menu"
+                onChanged={() => setOpen(false)}
+              />
             </div>
           ) : null}
           <div className="mt-3 border-t border-[var(--border)] pt-3">
@@ -119,7 +126,7 @@ export function SiteNav({ accountLabel, persona, signOutAction }: Props) {
               {accountLabel}
             </p>
             <div className="mt-3">
-              <SignOutConfirm action={signOutAction} tone="danger" fullWidth />
+              <SignOutConfirm action={signOutAction} fullWidth />
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ export async function SiteHeader() {
   const persona = session?.user?.id ? await getActivePersona(session.user.id) : null;
 
   return (
-    <header className="sticky top-0 z-30 border-b border-[var(--border)] bg-[var(--background)]/80 backdrop-blur-md">
+    <header className="sticky top-0 z-30 border-b border-[var(--border)] bg-[var(--surface)]">
       <div className="relative mx-auto flex h-16 max-w-6xl items-center gap-3 px-4">
         <Link
           href={session?.user ? "/dashboard" : "/"}
