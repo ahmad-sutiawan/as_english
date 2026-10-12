@@ -1,0 +1,990 @@
+{
+  "steps": [
+    {
+      "titleId": "Maksud",
+      "bodyId": "Memberitahu, menanya, meniadakan, meminta, atau melaporkan ucapan orang lain."
+    },
+    {
+      "titleId": "Waktu",
+      "bodyId": "Kebiasaan sekarang, sedang berlangsung, sudah selesai, lampau, atau akan datang."
+    },
+    {
+      "titleId": "Slot",
+      "bodyId": "Subjek, kata bantu, kata kerja, objek, keterangan. Intinya Subjek + kata kerja + objek."
+    },
+    {
+      "titleId": "Hukum",
+      "bodyId": "Buka rumus yang cocok, salin polanya, lalu kembali ke Susun."
+    }
+  ],
+  "decisions": [
+    {
+      "id": "statement",
+      "titleId": "Pernyataan",
+      "formula": "Subject + Verb + Object",
+      "lawId": "svo"
+    },
+    {
+      "id": "negative",
+      "titleId": "Negatif",
+      "formula": "Subject + don't/doesn't/isn't + Verb",
+      "lawId": "neg-do"
+    },
+    {
+      "id": "yes-no",
+      "titleId": "Pertanyaan ya/tidak",
+      "formula": "Do/Does/Is + Subject + Verb?",
+      "lawId": "q-yes-no"
+    },
+    {
+      "id": "wh",
+      "titleId": "Pertanyaan kata tanya",
+      "formula": "Wh- + do/does/is + Subject + Verb?",
+      "lawId": "q-wh"
+    }
+  ],
+  "charts": [
+    {
+      "id": "aux-groups",
+      "titleId": "Kata bantu menurut kelompok subjek",
+      "noteId": "Pakai tabel ini sebelum menulis am, is, are, do, does, have, atau has. He, she, dan it yang paling sering tertukar.",
+      "tables": [
+        {
+          "titleId": "Present dan past",
+          "headers": ["am/is/are", "do/does", "has/have", "was/were", "did", "had"],
+          "rows": [
+            { "subject": "I", "cells": ["am", "do", "have", "was", "did", "had"] },
+            { "subject": "He / She / It", "cells": ["is", "does", "has", "was", "did", "had"] },
+            { "subject": "You / They / We", "cells": ["are", "do", "have", "were", "did", "had"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "to-be",
+      "titleId": "To be",
+      "noteId": "Pakai tabel ini untuk keadaan: siapa, di mana, atau bagaimana sesuatu sekarang, dulu, sudah, atau nanti. He, she, dan it memakai is, was, dan has been.",
+      "tables": [
+        {
+          "titleId": "Empat waktu",
+          "headers": ["Present", "Past", "Perfect", "Future"],
+          "rows": [
+            { "subject": "I", "cells": ["am", "was", "have been", "will be"] },
+            { "subject": "You", "cells": ["are", "were", "have been", "will be"] },
+            { "subject": "He", "cells": ["is", "was", "has been", "will be"] },
+            { "subject": "She", "cells": ["is", "was", "has been", "will be"] },
+            { "subject": "It", "cells": ["is", "was", "has been", "will be"] },
+            { "subject": "We", "cells": ["are", "were", "have been", "will be"] },
+            { "subject": "They", "cells": ["are", "were", "have been", "will be"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "be-do-have",
+      "titleId": "Be, do, have: present dan past",
+      "noteId": "Pakai tabel ini saat mengubah waktu. Do dan have menjadi did dan had untuk semua subjek. Hanya be yang masih berubah menurut subjek di masa lalu.",
+      "tables": [
+        {
+          "titleId": "Be",
+          "headers": ["Present", "Past"],
+          "rows": [
+            { "subject": "I", "cells": ["am", "was"] },
+            { "subject": "You", "cells": ["are", "were"] },
+            { "subject": "He", "cells": ["is", "was"] },
+            { "subject": "She", "cells": ["is", "was"] },
+            { "subject": "It", "cells": ["is", "was"] },
+            { "subject": "We", "cells": ["are", "were"] },
+            { "subject": "They", "cells": ["are", "were"] }
+          ]
+        },
+        {
+          "titleId": "Do",
+          "headers": ["Present", "Past"],
+          "rows": [
+            { "subject": "I", "cells": ["do", "did"] },
+            { "subject": "You", "cells": ["do", "did"] },
+            { "subject": "He", "cells": ["does", "did"] },
+            { "subject": "She", "cells": ["does", "did"] },
+            { "subject": "It", "cells": ["does", "did"] },
+            { "subject": "We", "cells": ["do", "did"] },
+            { "subject": "They", "cells": ["do", "did"] }
+          ]
+        },
+        {
+          "titleId": "Have",
+          "headers": ["Present", "Past"],
+          "rows": [
+            { "subject": "I", "cells": ["have", "had"] },
+            { "subject": "You", "cells": ["have", "had"] },
+            { "subject": "He", "cells": ["has", "had"] },
+            { "subject": "She", "cells": ["has", "had"] },
+            { "subject": "It", "cells": ["has", "had"] },
+            { "subject": "We", "cells": ["have", "had"] },
+            { "subject": "They", "cells": ["have", "had"] }
+          ]
+        }
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "id": "keputusan",
+      "titleId": "Keputusan menyusun",
+      "laws": [
+        {
+          "id": "decide-statement",
+          "titleId": "Pernyataan",
+          "whenId": "Anda memberi kabar, status, atau fakta. Tidak ada kata tanya.",
+          "formula": "Subject + Verb (+ Object) (+ Adverbial)",
+          "examples": [
+            { "en": "The deploy finished at noon.", "id": "Deploy selesai pada siang hari." },
+            { "en": "We need a decision today.", "id": "Kami butuh keputusan hari ini." }
+          ],
+          "mistake": {
+            "wrong": "Finished the deploy at noon.",
+            "right": "The deploy finished at noon.",
+            "whyId": "Kalimat English butuh subjek. Jangan mulai dari kata kerja jika yang dibicarakan adalah bendanya."
+          }
+        },
+        {
+          "id": "decide-negative",
+          "titleId": "Negatif",
+          "whenId": "Anda meniadakan fakta: tidak, belum, atau tidak bisa.",
+          "formula": "Subject + auxiliary + not + Verb",
+          "examples": [
+            { "en": "The budget doesn't cover the fix.", "id": "Anggaran tidak menutup biaya perbaikannya." },
+            { "en": "I am not blocked on the deploy.", "id": "Saya tidak terhambat di proses deploy." }
+          ],
+          "mistake": {
+            "wrong": "The budget not cover the fix.",
+            "right": "The budget doesn't cover the fix.",
+            "whyId": "Not tidak bisa menempel langsung pada kata kerja biasa. Sisipkan doesn't atau don't."
+          }
+        },
+        {
+          "id": "decide-yes-no",
+          "titleId": "Pertanyaan ya atau tidak",
+          "whenId": "Jawaban yang Anda harapkan hanya yes atau no.",
+          "formula": "Auxiliary + Subject + Verb?",
+          "examples": [
+            { "en": "Does the backup include the ledger?", "id": "Apakah backup mencakup buku besar?" },
+            { "en": "Is the demo ready?", "id": "Apakah demo sudah siap?" }
+          ],
+          "mistake": {
+            "wrong": "The backup includes the ledger?",
+            "right": "Does the backup include the ledger?",
+            "whyId": "Nada tanya saja tidak cukup. Kata bantu pindah ke depan subjek."
+          }
+        },
+        {
+          "id": "decide-wh",
+          "titleId": "Pertanyaan kata tanya",
+          "whenId": "Anda butuh informasi: siapa, apa, kapan, di mana, mengapa, atau bagaimana.",
+          "formula": "Wh- + auxiliary + Subject + Verb?",
+          "examples": [
+            { "en": "When does the window start?", "id": "Kapan jendelanya mulai?" },
+            { "en": "Who owns the rollback?", "id": "Siapa pemilik rollback?" }
+          ],
+          "mistake": {
+            "wrong": "When the window starts?",
+            "right": "When does the window start?",
+            "whyId": "Setelah kata tanya, kata bantu tetap berdiri di depan subjek. Start tidak memakai -s."
+          }
+        }
+      ]
+    },
+    {
+      "id": "urutan",
+      "titleId": "Urutan kata",
+      "laws": [
+        {
+          "id": "svo",
+          "titleId": "Subjek, kata kerja, objek",
+          "whenId": "Hampir semua kalimat kerja. Keterangan waktu atau tempat biasanya di akhir.",
+          "formula": "Subject + Verb + Object + Adverbial",
+          "examples": [
+            { "en": "We ship the change to canary tonight.", "id": "Kami merilis perubahan ke canary malam ini." },
+            { "en": "The query scans the table every night.", "id": "Query itu memindai tabel setiap malam." }
+          ],
+          "mistake": {
+            "wrong": "We the change ship tonight.",
+            "right": "We ship the change tonight.",
+            "whyId": "Objek duduk setelah kata kerja, bukan di antara subjek dan kata kerja."
+          }
+        },
+        {
+          "id": "slots",
+          "titleId": "Lima slot peran",
+          "whenId": "Anda menyusun chip dan salah satu bagian terasa hilang.",
+          "formula": "Subject + Auxiliary + Verb + Object + Adverbial",
+          "examples": [
+            { "en": "We will restore the service tonight.", "id": "Kami akan memulihkan layanan malam ini." },
+            { "en": "The alert doesn't fire at night.", "id": "Alert tidak berbunyi pada malam hari." }
+          ],
+          "mistake": {
+            "wrong": "Will we restore the service tonight.",
+            "right": "We will restore the service tonight.",
+            "whyId": "Pada pernyataan, will tetap di belakang subjek. Will pindah ke depan hanya untuk pertanyaan."
+          }
+        }
+      ]
+    },
+    {
+      "id": "bantu",
+      "titleId": "Be, do, dan have",
+      "laws": [
+        {
+          "id": "aux-be",
+          "titleId": "Be",
+          "whenId": "Keadaan, identitas, atau kegiatan yang sedang berlangsung.",
+          "formula": "I am / you are / he is + complement",
+          "examples": [
+            { "en": "The risk is reputational.", "id": "Risikonya menyangkut reputasi." },
+            { "en": "We are testing the fix.", "id": "Kami sedang menguji perbaikannya." }
+          ],
+          "mistake": {
+            "wrong": "The risk are reputational.",
+            "right": "The risk is reputational.",
+            "whyId": "Subjek tunggal memakai is. Are untuk you, we, dan they."
+          }
+        },
+        {
+          "id": "aux-do",
+          "titleId": "Do",
+          "whenId": "Negatif dan pertanyaan pada kata kerja biasa, bukan pada be.",
+          "formula": "do / does / did + base verb",
+          "examples": [
+            { "en": "Does the estimate include testing?", "id": "Apakah estimasi mencakup pengujian?" },
+            { "en": "We didn't carry the story forward.", "id": "Kami tidak membawa cerita itu ke sprint berikutnya." }
+          ],
+          "mistake": {
+            "wrong": "Does the estimate includes testing?",
+            "right": "Does the estimate include testing?",
+            "whyId": "Setelah does, kata kerja kembali ke bentuk dasar. -s sudah dibawa oleh does."
+          }
+        },
+        {
+          "id": "aux-have",
+          "titleId": "Have",
+          "whenId": "Menghubungkan masa lalu dengan sekarang, atau kepemilikan.",
+          "formula": "have / has + past participle",
+          "examples": [
+            { "en": "We have closed the ticket.", "id": "Kami sudah menutup tiket itu." },
+            { "en": "The story has an owner.", "id": "Cerita itu punya pemilik." }
+          ],
+          "mistake": {
+            "wrong": "We have close the ticket.",
+            "right": "We have closed the ticket.",
+            "whyId": "Setelah have/has untuk perfect, kata kerja memakai bentuk ketiga: closed, not close."
+          }
+        }
+      ]
+    },
+    {
+      "id": "present",
+      "titleId": "Present",
+      "laws": [
+        {
+          "id": "present-simple",
+          "titleId": "Present simple",
+          "whenId": "Kebiasaan, fakta, jadwal, atau keadaan yang tetap.",
+          "formula": "Subject + Verb / Verb-s",
+          "examples": [
+            { "en": "I work at the office every day.", "id": "Saya bekerja di kantor setiap hari." },
+            { "en": "The service meets the SLO.", "id": "Layanan memenuhi SLO." }
+          ],
+          "mistake": {
+            "wrong": "The service meet the SLO.",
+            "right": "The service meets the SLO.",
+            "whyId": "He, she, it, dan benda tunggal menambah -s pada kata kerja present simple."
+          }
+        },
+        {
+          "id": "present-continuous",
+          "titleId": "Present continuous",
+          "whenId": "Kegiatan yang sedang terjadi sekarang, atau rencana yang sudah pasti dekat.",
+          "formula": "am / is / are + Verb-ing",
+          "examples": [
+            { "en": "We are routing traffic to the healthy region.", "id": "Kami sedang mengalihkan trafik ke region yang sehat." },
+            { "en": "I am writing the decision record.", "id": "Saya sedang menulis catatan keputusan." }
+          ],
+          "mistake": {
+            "wrong": "We routing traffic now.",
+            "right": "We are routing traffic now.",
+            "whyId": "Bentuk -ing butuh be. Tanpa are, kalimat itu belum lengkap."
+          }
+        }
+      ]
+    },
+    {
+      "id": "past",
+      "titleId": "Past",
+      "laws": [
+        {
+          "id": "past-simple",
+          "titleId": "Past simple",
+          "whenId": "Kejadian yang selesai pada waktu lampau yang disebut atau tersirat.",
+          "formula": "Subject + Verb-ed / irregular past",
+          "examples": [
+            { "en": "I checked the server before the meeting.", "id": "Saya memeriksa server sebelum rapat." },
+            { "en": "A new field broke old clients.", "id": "Field baru memecah klien lama." }
+          ],
+          "mistake": {
+            "wrong": "I check the server yesterday.",
+            "right": "I checked the server yesterday.",
+            "whyId": "Yesterday memaksa past. Check menjadi checked."
+          }
+        },
+        {
+          "id": "past-continuous",
+          "titleId": "Past continuous",
+          "whenId": "Kegiatan yang sedang berlangsung ketika sesuatu yang lain terjadi.",
+          "formula": "was / were + Verb-ing",
+          "examples": [
+            { "en": "We were testing the fix when the alert fired.", "id": "Kami sedang menguji perbaikan ketika alert berbunyi." },
+            { "en": "The queue was growing during the demo.", "id": "Antrean sedang membesar selama demo." }
+          ],
+          "mistake": {
+            "wrong": "We was testing the fix.",
+            "right": "We were testing the fix.",
+            "whyId": "We memakai were. Was untuk I, he, she, it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "perfect",
+      "titleId": "Perfect",
+      "laws": [
+        {
+          "id": "present-perfect",
+          "titleId": "Present perfect",
+          "whenId": "Hasilnya masih terasa sekarang, atau waktunya tidak disebut.",
+          "formula": "have / has + past participle",
+          "examples": [
+            { "en": "We have rolled back the deployment.", "id": "Kami sudah mengembalikan deployment." },
+            { "en": "Legal has reviewed the report.", "id": "Legal sudah meninjau laporan itu." }
+          ],
+          "mistake": {
+            "wrong": "We have rolled back the deployment yesterday.",
+            "right": "We rolled back the deployment yesterday.",
+            "whyId": "Yesterday adalah waktu selesai. Pakai past simple, bukan present perfect."
+          }
+        },
+        {
+          "id": "past-perfect",
+          "titleId": "Past perfect",
+          "whenId": "Satu kejadian lampau terjadi lebih dulu daripada kejadian lampau yang lain.",
+          "formula": "had + past participle",
+          "examples": [
+            { "en": "The backup had failed before we noticed the gap.", "id": "Backup sudah gagal sebelum kami melihat celahnya." },
+            { "en": "We had revoked the token before the partner called.", "id": "Kami sudah mencabut token sebelum mitra menelepon." }
+          ],
+          "mistake": {
+            "wrong": "The backup has failed before we noticed the gap.",
+            "right": "The backup had failed before we noticed the gap.",
+            "whyId": "Kedua kejadian ada di masa lalu. Yang lebih dulu memakai had, bukan has."
+          }
+        }
+      ]
+    },
+    {
+      "id": "future",
+      "titleId": "Future",
+      "laws": [
+        {
+          "id": "future-will",
+          "titleId": "Will",
+          "whenId": "Keputusan saat bicara, prediksi, atau janji.",
+          "formula": "will + base verb",
+          "examples": [
+            { "en": "I will send an update soon.", "id": "Saya akan mengirim kabar sebentar lagi." },
+            { "en": "We will roll back on errors.", "id": "Kami akan mengembalikan jika ada error." }
+          ],
+          "mistake": {
+            "wrong": "I will sends an update soon.",
+            "right": "I will send an update soon.",
+            "whyId": "Setelah will, kata kerja tidak menambah -s."
+          }
+        },
+        {
+          "id": "future-going-to",
+          "titleId": "Be going to",
+          "whenId": "Rencana yang sudah ada, atau bukti yang sudah terlihat.",
+          "formula": "am / is / are + going to + base verb",
+          "examples": [
+            { "en": "We are going to cut scope.", "id": "Kami akan memotong cakupan." },
+            { "en": "The disk is going to fill tonight.", "id": "Disk akan penuh malam ini." }
+          ],
+          "mistake": {
+            "wrong": "We going to cut scope.",
+            "right": "We are going to cut scope.",
+            "whyId": "Going to butuh be. We memakai are."
+          }
+        },
+        {
+          "id": "future-schedule",
+          "titleId": "Jadwal dengan present",
+          "whenId": "Waktu yang sudah ditetapkan: rapat, jendela rilis, keberangkatan.",
+          "formula": "Subject + present verb + time",
+          "examples": [
+            { "en": "The window starts at midnight.", "id": "Jendela dimulai tengah malam." },
+            { "en": "The review begins on Friday.", "id": "Peninjauan dimulai hari Jumat." }
+          ],
+          "mistake": {
+            "wrong": "The window will starts at midnight.",
+            "right": "The window starts at midnight.",
+            "whyId": "Jadwal tetap memakai present simple. Will tidak ditambah -s, dan di sini will tidak diperlukan."
+          }
+        }
+      ]
+    },
+    {
+      "id": "modal",
+      "titleId": "Modal",
+      "laws": [
+        {
+          "id": "modals",
+          "titleId": "Can, could, should, must, might, would",
+          "whenId": "Kemampuan, izin, saran, keharusan, kemungkinan, atau permintaan yang lebih halus.",
+          "formula": "modal + base verb",
+          "examples": [
+            { "en": "We should add a circuit breaker.", "id": "Kita sebaiknya menambah circuit breaker." },
+            { "en": "The partner might send the token twice.", "id": "Mitra mungkin mengirim token dua kali." }
+          ],
+          "mistake": {
+            "wrong": "We should to add a circuit breaker.",
+            "right": "We should add a circuit breaker.",
+            "whyId": "Modal tidak diikuti to. To hanya muncul pada going to, have to, dan beberapa infinitive."
+          }
+        }
+      ]
+    },
+    {
+      "id": "negatif",
+      "titleId": "Negatif",
+      "laws": [
+        {
+          "id": "neg-be",
+          "titleId": "Negatif dengan be",
+          "whenId": "Menolak keadaan atau identitas.",
+          "formula": "am / is / are + not",
+          "examples": [
+            { "en": "The demo is not ready.", "id": "Demo belum siap." },
+            { "en": "Customers aren't blocked.", "id": "Pelanggan tidak terhambat." }
+          ],
+          "mistake": {
+            "wrong": "The demo doesn't be ready.",
+            "right": "The demo isn't ready.",
+            "whyId": "Be tidak memakai don't atau doesn't. Not duduk setelah is, am, atau are."
+          }
+        },
+        {
+          "id": "neg-do",
+          "titleId": "Negatif dengan do",
+          "whenId": "Menolak kata kerja biasa pada present atau past.",
+          "formula": "don't / doesn't / didn't + base verb",
+          "examples": [
+            { "en": "The logs don't show the error.", "id": "Log tidak menunjukkan error itu." },
+            { "en": "I didn't recommend a pause.", "id": "Saya tidak menyarankan jeda." }
+          ],
+          "mistake": {
+            "wrong": "The logs don't shows the error.",
+            "right": "The logs don't show the error.",
+            "whyId": "Setelah don't, kata kerja kembali ke bentuk dasar."
+          }
+        },
+        {
+          "id": "neg-modal",
+          "titleId": "Negatif dengan modal",
+          "whenId": "Tidak bisa, tidak boleh, tidak harus, atau mungkin tidak.",
+          "formula": "modal + not + base verb",
+          "examples": [
+            { "en": "Customers can't pay.", "id": "Pelanggan tidak bisa membayar." },
+            { "en": "You must not share passwords.", "id": "Anda tidak boleh berbagi kata sandi." }
+          ],
+          "mistake": {
+            "wrong": "You don't must share passwords.",
+            "right": "You must not share passwords.",
+            "whyId": "Not menempel pada modal. Jangan menambah don't di depan must."
+          }
+        }
+      ]
+    },
+    {
+      "id": "pertanyaan",
+      "titleId": "Pertanyaan",
+      "laws": [
+        {
+          "id": "q-yes-no",
+          "titleId": "Yes/no",
+          "whenId": "Anda hanya butuh ya atau tidak.",
+          "formula": "Do/Does/Did/Be/Modal + Subject + Verb?",
+          "examples": [
+            { "en": "Can we restore the backup?", "id": "Bisakah kita memulihkan backup?" },
+            { "en": "Did the manager approve the change?", "id": "Apakah manajer menyetujui perubahan itu?" }
+          ],
+          "mistake": {
+            "wrong": "Did the manager approved the change?",
+            "right": "Did the manager approve the change?",
+            "whyId": "Did sudah menandai past. Kata kerja kembali ke bentuk dasar."
+          }
+        },
+        {
+          "id": "q-wh",
+          "titleId": "Kata tanya",
+          "whenId": "Informasi yang hilang: what, when, where, why, how, which.",
+          "formula": "Wh- + auxiliary + Subject + base verb?",
+          "examples": [
+            { "en": "Why did the date slip?", "id": "Mengapa tanggalnya bergeser?" },
+            { "en": "Where does the report read from?", "id": "Dari mana laporan itu membaca?" }
+          ],
+          "mistake": {
+            "wrong": "Why the date slipped?",
+            "right": "Why did the date slip?",
+            "whyId": "Kata tanya tidak menggantikan kata bantu. Did tetap diperlukan."
+          }
+        },
+        {
+          "id": "q-subject",
+          "titleId": "Subjek lawan objek",
+          "whenId": "Who atau what yang menanyakan pelaku tidak memakai do. Yang menanyakan objek memakai do.",
+          "formula": "Who + Verb-s?  /  Who + do/does + Subject + Verb?",
+          "examples": [
+            { "en": "Who owns the ticket?", "id": "Siapa pemilik tiketnya?" },
+            { "en": "Who did you notify?", "id": "Siapa yang Anda beri tahu?" }
+          ],
+          "mistake": {
+            "wrong": "Who does own the ticket?",
+            "right": "Who owns the ticket?",
+            "whyId": "Jika who adalah subjek, tidak ada do. Does hanya muncul jika who adalah objek."
+          }
+        },
+        {
+          "id": "q-indirect",
+          "titleId": "Pertanyaan tidak langsung",
+          "whenId": "Anda bertanya dengan sopan di dalam kalimat, biasanya ke manajer atau Direksi.",
+          "formula": "Could you tell me + wh- + subject + verb",
+          "examples": [
+            { "en": "Could you clarify what success looks like?", "id": "Bisakah Anda menjelaskan seperti apa keberhasilan itu?" },
+            { "en": "Do you know when the window starts?", "id": "Tahukah Anda kapan jendelanya mulai?" }
+          ],
+          "mistake": {
+            "wrong": "Could you tell me when does the window start?",
+            "right": "Could you tell me when the window starts?",
+            "whyId": "Di dalam pertanyaan tidak langsung, urutan kembali menjadi subjek + kata kerja. Does tidak pindah ke depan."
+          }
+        }
+      ]
+    },
+    {
+      "id": "jawaban",
+      "titleId": "Jawaban dan ungkapan",
+      "laws": [
+        {
+          "id": "short-answer",
+          "titleId": "Jawaban singkat",
+          "whenId": "Menjawab yes/no tanpa mengulang seluruh kalimat.",
+          "formula": "Yes, subject + auxiliary. / No, subject + auxiliary + not.",
+          "examples": [
+            { "en": "Yes, it does.", "id": "Ya, begitu." },
+            { "en": "No, we haven't.", "id": "Tidak, kami belum." }
+          ],
+          "mistake": {
+            "wrong": "Yes, it includes.",
+            "right": "Yes, it does.",
+            "whyId": "Jawaban singkat mengulang kata bantu, bukan kata kerja utamanya."
+          }
+        },
+        {
+          "id": "agree",
+          "titleId": "Setuju dan tidak setuju",
+          "whenId": "Menanggapi pendapat di rapat tanpa membuka kalimat baru yang panjang.",
+          "formula": "So + auxiliary + subject. / Neither + auxiliary + subject.",
+          "examples": [
+            { "en": "So do I.", "id": "Saya juga." },
+            { "en": "I see your point, but the risk is higher.", "id": "Saya paham maksudnya, tetapi risikonya lebih tinggi." }
+          ],
+          "mistake": {
+            "wrong": "I am agree.",
+            "right": "I agree.",
+            "whyId": "Agree adalah kata kerja. Tidak perlu am."
+          }
+        }
+      ]
+    },
+    {
+      "id": "artikel",
+      "titleId": "Artikel dan jumlah",
+      "laws": [
+        {
+          "id": "articles",
+          "titleId": "A, an, dan the",
+          "whenId": "A/an untuk benda yang baru disebut dan tunggal. The untuk benda yang sudah diketahui.",
+          "formula": "a/an + singular new noun; the + known noun",
+          "examples": [
+            { "en": "We need a decision today.", "id": "Kami butuh sebuah keputusan hari ini." },
+            { "en": "The decision is due on Friday.", "id": "Keputusan itu jatuh tempo hari Jumat." }
+          ],
+          "mistake": {
+            "wrong": "We need decision today.",
+            "right": "We need a decision today.",
+            "whyId": "Benda tunggal yang bisa dihitung butuh a atau the. Decision di sini baru disebut, jadi a."
+          }
+        },
+        {
+          "id": "count",
+          "titleId": "Jumlah",
+          "whenId": "Membedakan satu, banyak, dan benda yang tidak dihitung.",
+          "formula": "many/few + plural; much/little + uncountable",
+          "examples": [
+            { "en": "We have few failing tests.", "id": "Tes yang gagal tinggal sedikit." },
+            { "en": "There is little headroom.", "id": "Sisa kapasitas tinggal sedikit." }
+          ],
+          "mistake": {
+            "wrong": "We have much failing tests.",
+            "right": "We have many failing tests.",
+            "whyId": "Tests bisa dihitung dan jamak, jadi many. Much untuk benda yang tidak dihitung, seperti headroom atau time."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ganti",
+      "titleId": "Kata ganti",
+      "laws": [
+        {
+          "id": "pronouns",
+          "titleId": "Subjek dan objek",
+          "whenId": "Mengganti nama yang sudah disebut agar kalimat tidak mengulang.",
+          "formula": "I/you/he/she/we/they + verb; verb + me/you/him/her/us/them",
+          "examples": [
+            { "en": "The owner approved it.", "id": "Pemilik menyetujuinya." },
+            { "en": "Please send the note to me.", "id": "Tolong kirim catatan itu kepada saya." }
+          ],
+          "mistake": {
+            "wrong": "Please send the note to I.",
+            "right": "Please send the note to me.",
+            "whyId": "Setelah to, kata ganti memakai bentuk objek: me, bukan I."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sifat",
+      "titleId": "Kata sifat dan keterangan",
+      "laws": [
+        {
+          "id": "adj-adv",
+          "titleId": "Sifat lawan keterangan",
+          "whenId": "Kata sifat menerangkan benda. Keterangan menerangkan kata kerja.",
+          "formula": "adjective + noun; verb + adverb",
+          "examples": [
+            { "en": "This is a careful review.", "id": "Ini peninjauan yang cermat." },
+            { "en": "Please review the change carefully.", "id": "Tolong tinjau perubahan itu dengan cermat." }
+          ],
+          "mistake": {
+            "wrong": "Please review the change careful.",
+            "right": "Please review the change carefully.",
+            "whyId": "Yang diterangkan adalah cara meninjau, jadi carefully, bukan careful."
+          }
+        }
+      ]
+    },
+    {
+      "id": "preposisi",
+      "titleId": "Preposisi",
+      "laws": [
+        {
+          "id": "prep-time",
+          "titleId": "Waktu",
+          "whenId": "Menempatkan jam, hari, atau bulan.",
+          "formula": "at + clock; on + day; in + month/year",
+          "examples": [
+            { "en": "The window starts at midnight.", "id": "Jendela dimulai tengah malam." },
+            { "en": "The access expires on Friday.", "id": "Akses berakhir hari Jumat." }
+          ],
+          "mistake": {
+            "wrong": "The access expires in Friday.",
+            "right": "The access expires on Friday.",
+            "whyId": "Hari memakai on. In untuk bulan, tahun, atau bagian hari yang panjang seperti in the morning."
+          }
+        },
+        {
+          "id": "prep-place",
+          "titleId": "Tempat",
+          "whenId": "Menempatkan orang atau layanan.",
+          "formula": "at + point; in + area; on + surface/system",
+          "examples": [
+            { "en": "I work at the office.", "id": "Saya bekerja di kantor." },
+            { "en": "The bug is on staging.", "id": "Bug itu ada di staging." }
+          ],
+          "mistake": {
+            "wrong": "The bug is in staging.",
+            "right": "The bug is on staging.",
+            "whyId": "Nama lingkungan seperti staging, canary, atau production memakai on."
+          }
+        }
+      ]
+    },
+    {
+      "id": "penghubung",
+      "titleId": "Penghubung",
+      "laws": [
+        {
+          "id": "conjunctions",
+          "titleId": "And, but, because, when, if",
+          "whenId": "Menggabungkan dua ide: tambahan, kontras, alasan, waktu, atau syarat.",
+          "formula": "clause + and/but/because/when/if + clause",
+          "examples": [
+            { "en": "Error rates spiked, so we rolled back.", "id": "Tingkat error melonjak, jadi kami mengembalikan rilis." },
+            { "en": "Call me when the backup finishes.", "id": "Telepon saya ketika backup selesai." }
+          ],
+          "mistake": {
+            "wrong": "Because the backup failed. We paged the team.",
+            "right": "We paged the team because the backup failed.",
+            "whyId": "Because butuh dua klausa dalam satu kalimat. Klausa alasan tidak berdiri sendiri."
+          }
+        }
+      ]
+    },
+    {
+      "id": "conditional",
+      "titleId": "Conditional",
+      "laws": [
+        {
+          "id": "cond-zero-first",
+          "titleId": "Nol dan pertama",
+          "whenId": "Nol untuk fakta yang selalu benar. Pertama untuk syarat yang masih mungkin.",
+          "formula": "If + present, present. / If + present, will + verb",
+          "examples": [
+            { "en": "If the disk fills, the node stops.", "id": "Jika disk penuh, node berhenti." },
+            { "en": "If the queue keeps growing, we will scale the workers.", "id": "Jika antrean terus membesar, kami akan memperbesar jumlah worker." }
+          ],
+          "mistake": {
+            "wrong": "If the queue will keep growing, we scale the workers.",
+            "right": "If the queue keeps growing, we will scale the workers.",
+            "whyId": "Will duduk di akibat, bukan di dalam if."
+          }
+        },
+        {
+          "id": "cond-second-third",
+          "titleId": "Kedua dan ketiga",
+          "whenId": "Kedua untuk andaian sekarang. Ketiga untuk andaian masa lalu yang tidak terjadi.",
+          "formula": "If + past, would + verb. / If + had + participle, would have + participle",
+          "examples": [
+            { "en": "If we had more headroom, we would skip the throttle.", "id": "Jika sisa kapasitas lebih besar, kami tidak akan membatasi klien." },
+            { "en": "If we had tested on canary, we would have caught the break.", "id": "Jika kami menguji di canary, kami sudah menemukan kerusakannya." }
+          ],
+          "mistake": {
+            "wrong": "If we would have tested on canary, we caught the break.",
+            "right": "If we had tested on canary, we would have caught the break.",
+            "whyId": "Would tidak masuk ke dalam if. Had menandai syarat yang sudah lewat."
+          }
+        },
+        {
+          "id": "unless",
+          "titleId": "Unless",
+          "whenId": "Syarat negatif: jika tidak.",
+          "formula": "Unless + present, will + verb",
+          "examples": [
+            { "en": "Unless the owner approves, we will wait.", "id": "Jika pemilik tidak menyetujui, kami akan menunggu." },
+            { "en": "Don't ship unless the tests pass.", "id": "Jangan rilis jika tes tidak lulus." }
+          ],
+          "mistake": {
+            "wrong": "Unless the owner doesn't approve, we will wait.",
+            "right": "Unless the owner approves, we will wait.",
+            "whyId": "Unless sudah berarti jika tidak. Jangan menambah not lagi."
+          }
+        }
+      ]
+    },
+    {
+      "id": "pasif",
+      "titleId": "Pasif",
+      "laws": [
+        {
+          "id": "passive",
+          "titleId": "Kalimat pasif",
+          "whenId": "Yang penting adalah bendanya, bukan pelakunya. Sering untuk status insiden dan akses.",
+          "formula": "Object + be + past participle",
+          "examples": [
+            { "en": "The ticket was closed.", "id": "Tiket itu ditutup." },
+            { "en": "Access is granted for one day.", "id": "Akses diberikan untuk satu hari." }
+          ],
+          "mistake": {
+            "wrong": "The ticket was close.",
+            "right": "The ticket was closed.",
+            "whyId": "Pasif butuh bentuk ketiga. Close menjadi closed."
+          }
+        }
+      ]
+    },
+    {
+      "id": "reported",
+      "titleId": "Reported speech",
+      "laws": [
+        {
+          "id": "reported-speech",
+          "titleId": "Melaporkan ucapan",
+          "whenId": "Anda menyampaikan apa yang dikatakan orang lain, biasanya satu waktu ke belakang.",
+          "formula": "said (that) + subject + past verb",
+          "examples": [
+            { "en": "She said the deploy was blocked.", "id": "Dia berkata deploy terhambat." },
+            { "en": "He asked whether the demo was ready.", "id": "Dia bertanya apakah demo sudah siap." }
+          ],
+          "mistake": {
+            "wrong": "She said the deploy is blocked yesterday.",
+            "right": "She said the deploy was blocked.",
+            "whyId": "Saat melaporkan ucapan lampau, is biasanya mundur menjadi was. Yesterday tidak menempel pada is."
+          }
+        }
+      ]
+    },
+    {
+      "id": "perbandingan",
+      "titleId": "Perbandingan",
+      "laws": [
+        {
+          "id": "comparison",
+          "titleId": "Lebih, paling, dan sama",
+          "whenId": "Membandingkan dua opsi atau menyatakan tingkat tertinggi.",
+          "formula": "adjective-er than; more + long adjective; as + adjective + as",
+          "examples": [
+            { "en": "Option A costs more than option B.", "id": "Opsi A lebih mahal daripada opsi B." },
+            { "en": "This path is as safe as the old one.", "id": "Jalur ini sama amannya dengan yang lama." }
+          ],
+          "mistake": {
+            "wrong": "Option A is more cheaper.",
+            "right": "Option A is cheaper.",
+            "whyId": "Kata sifat pendek memakai -er, bukan more. More untuk kata yang panjang, seperti expensive."
+          }
+        }
+      ]
+    },
+    {
+      "id": "relative",
+      "titleId": "Relative clause",
+      "laws": [
+        {
+          "id": "relative-clause",
+          "titleId": "Who, which, dan that",
+          "whenId": "Menambahkan keterangan pada orang atau benda tanpa memulai kalimat baru.",
+          "formula": "noun + who/which/that + clause",
+          "examples": [
+            { "en": "The engineer who owns the ticket is out.", "id": "Insinyur yang memiliki tiket itu sedang tidak masuk." },
+            { "en": "The change that broke checkout is rolled back.", "id": "Perubahan yang merusak checkout sudah dikembalikan." }
+          ],
+          "mistake": {
+            "wrong": "The engineer which owns the ticket is out.",
+            "right": "The engineer who owns the ticket is out.",
+            "whyId": "Orang memakai who. Which untuk benda."
+          }
+        }
+      ]
+    },
+    {
+      "id": "gerund",
+      "titleId": "Gerund dan infinitive",
+      "laws": [
+        {
+          "id": "gerund-infinitive",
+          "titleId": "Verb-ing atau to + verb",
+          "whenId": "Setelah kata kerja tertentu, bentuk lanjutannya sudah tetap.",
+          "formula": "suggest/avoid + Verb-ing; need/want/decide + to + verb",
+          "examples": [
+            { "en": "I suggest pausing the launch.", "id": "Saya menyarankan menjeda peluncuran." },
+            { "en": "We decided to postpone the release.", "id": "Kami memutuskan menunda rilis." }
+          ],
+          "mistake": {
+            "wrong": "I suggest to pause the launch.",
+            "right": "I suggest pausing the launch.",
+            "whyId": "Suggest diikuti verb-ing, bukan to."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fungsi",
+      "titleId": "Ungkapan fungsi",
+      "laws": [
+        {
+          "id": "fn-request",
+          "titleId": "Meminta",
+          "whenId": "Anda butuh tindakan orang lain dan nadanya harus sopan.",
+          "formula": "Could you + base verb?",
+          "examples": [
+            { "en": "Could you approve the access today?", "id": "Bisakah Anda menyetujui aksesnya hari ini?" },
+            { "en": "Would you mind reviewing the diff?", "id": "Bersediakah Anda meninjau diff-nya?" }
+          ],
+          "mistake": {
+            "wrong": "Approve the access today.",
+            "right": "Could you approve the access today?",
+            "whyId": "Perintah telanjang terdengar kasar. Could you membuatnya permintaan."
+          }
+        },
+        {
+          "id": "fn-refuse",
+          "titleId": "Menolak",
+          "whenId": "Anda tidak bisa memenuhi permintaan, dan alasannya singkat.",
+          "formula": "I'm afraid + subject + can't + verb, because...",
+          "examples": [
+            { "en": "I'm afraid we can't ship today because the tests are red.", "id": "Maaf, kami tidak bisa merilis hari ini karena tes masih gagal." },
+            { "en": "I can't grant production access without a ticket.", "id": "Saya tidak bisa memberi akses produksi tanpa tiket." }
+          ],
+          "mistake": {
+            "wrong": "No, impossible.",
+            "right": "I'm afraid we can't ship today.",
+            "whyId": "Penolakan kerja menyebut batasannya dalam kalimat utuh, bukan satu kata."
+          }
+        },
+        {
+          "id": "fn-apology",
+          "titleId": "Minta maaf",
+          "whenId": "Ada dampak ke orang lain dan Anda menyebut perbaikan berikutnya.",
+          "formula": "I'm sorry for + noun/verb-ing. We will + verb.",
+          "examples": [
+            { "en": "I'm sorry for the delay. We will send the note today.", "id": "Maaf atas penundaannya. Kami akan mengirim catatan hari ini." },
+            { "en": "Sorry about the failed deploy. The service is stable now.", "id": "Maaf soal deploy yang gagal. Layanannya sudah stabil." }
+          ],
+          "mistake": {
+            "wrong": "I am sorry for delay the release.",
+            "right": "I am sorry for delaying the release.",
+            "whyId": "Setelah for, pakai noun atau verb-ing. Delay sebagai kata kerja menjadi delaying."
+          }
+        },
+        {
+          "id": "fn-status",
+          "titleId": "Kabar status",
+          "whenId": "Update singkat: apa yang terjadi, dampaknya, dan langkah berikutnya.",
+          "formula": "Status + impact + next step",
+          "examples": [
+            { "en": "Checkout is degraded. We are rolling back now.", "id": "Checkout menurun. Kami sedang mengembalikan rilis sekarang." },
+            { "en": "The migration finished. No customers were blocked.", "id": "Migrasinya selesai. Tidak ada pelanggan yang terhambat." }
+          ],
+          "mistake": {
+            "wrong": "There is some issue happening maybe.",
+            "right": "Checkout is degraded. We are rolling back now.",
+            "whyId": "Status kerja menyebut layanan, keadaannya, dan tindakan. Maybe tidak menggantikan fakta."
+          }
+        },
+        {
+          "id": "fn-board",
+          "titleId": "Kalimat untuk Direksi",
+          "whenId": "Audiensnya Direksi. Satu kalimat, tanpa jargon, dengan hasil atau keputusan.",
+          "formula": "Result or risk + what you need",
+          "examples": [
+            { "en": "The outage cost revenue. We need a decision today.", "id": "Insiden itu mengurangi pendapatan. Kami butuh keputusan hari ini." },
+            { "en": "Customers can still pay. I recommend a pause on the launch.", "id": "Pelanggan masih bisa membayar. Saya menyarankan jeda peluncuran." }
+          ],
+          "mistake": {
+            "wrong": "The canary latency p99 regressed after the sidecar rollout.",
+            "right": "Customers are slower to pay. We recommend a pause.",
+            "whyId": "Direksi butuh akibat bisnis dan permintaan keputusan, bukan nama komponen."
+          }
+        }
+      ]
+    }
+  ]
+}

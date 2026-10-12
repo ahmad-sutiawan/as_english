@@ -11,6 +11,7 @@ const LINKS = [
   { href: "/dashboard", label: "Dashboard" },
   { href: "/practice", label: "Latihan" },
   { href: "/build", label: "Susun" },
+  { href: "/grammar", label: "Grammar" },
   { href: "/quick", label: "Cepat" },
   { href: "/speak", label: "Bicara" },
   { href: "/review", label: "Review" },

@@ -7,6 +7,7 @@ const protectedPrefixes = [
   "/review",
   "/build",
   "/guide",
+  "/grammar",
   "/practice",
   "/placement",
 ];
@@ -35,6 +36,8 @@ export const config = {
     "/build/:path*",
     "/guide",
     "/guide/:path*",
+    "/grammar",
+    "/grammar/:path*",
     "/practice",
     "/placement",
   ],
