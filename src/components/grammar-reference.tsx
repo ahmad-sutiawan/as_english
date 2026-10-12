@@ -1,11 +1,23 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { themeMatches } from "@/components/theme-search";
-import type { GrammarBook } from "@/types/grammar";
+import type { GrammarBook, GrammarChartExample } from "@/types/grammar";
+
+type OpenRow = {
+  subject: string;
+  context: string;
+  examples: GrammarChartExample[];
+};
 
 export function GrammarReference({ book }: { book: GrammarBook }) {
   const [query, setQuery] = useState("");
+  const [openRow, setOpenRow] = useState<OpenRow | null>(null);
+  const [mounted, setMounted] = useState(false);
+  const titleId = useId();
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const triggerRef = useRef<HTMLElement | null>(null);
   const total = book.chapters.reduce((sum, chapter) => sum + chapter.laws.length, 0);
 
   const visible = useMemo(
@@ -30,6 +42,25 @@ export function GrammarReference({ book }: { book: GrammarBook }) {
 
   const shown = visible.reduce((sum, chapter) => sum + chapter.laws.length, 0);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!openRow) return;
+    closeRef.current?.focus();
+    function onKey(event: KeyboardEvent) {
+      if (event.key === "Escape") setOpenRow(null);
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [openRow]);
+
+  useEffect(() => {
+    if (openRow) return;
+    triggerRef.current?.focus();
+  }, [openRow]);
+
   const visibleCharts = useMemo(
     () =>
       book.charts.filter((chart) =>
@@ -40,7 +71,11 @@ export function GrammarReference({ book }: { book: GrammarBook }) {
           ...chart.tables.flatMap((table) => [
             table.titleId,
             ...table.headers,
-            ...table.rows.flatMap((row) => [row.subject, ...row.cells]),
+            ...table.rows.flatMap((row) => [
+              row.subject,
+              ...row.cells,
+              ...row.examples.flatMap((example) => [example.form, example.en, example.id]),
+            ]),
           ]),
         ]),
       ),
@@ -152,9 +187,26 @@ export function GrammarReference({ book }: { book: GrammarBook }) {
                         </thead>
                         <tbody>
                           {table.rows.map((row) => (
-                            <tr key={row.subject}>
+                            <tr
+                              key={row.subject}
+                              className="cursor-pointer hover:bg-[var(--surface-2)]"
+                              onClick={(event) => {
+                                triggerRef.current = event.currentTarget.querySelector("button");
+                                setOpenRow({
+                                  subject: row.subject,
+                                  context: chart.tables.length > 1 ? table.titleId : chart.titleId,
+                                  examples: row.examples,
+                                });
+                              }}
+                            >
                               <th className="border-b border-[var(--border)] px-2 py-2 text-left font-medium text-[var(--ink)]">
-                                {row.subject}
+                                <button
+                                  type="button"
+                                  className="w-full cursor-pointer text-left font-medium text-[var(--ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+                                  aria-haspopup="dialog"
+                                >
+                                  {row.subject}
+                                </button>
                               </th>
                               {row.cells.map((cell, index) => (
                                 <td
@@ -215,6 +267,51 @@ export function GrammarReference({ book }: { book: GrammarBook }) {
           </section>
         ))}
       </div>
+      {mounted && openRow
+        ? createPortal(
+            <div
+              className="fixed inset-0 z-50 bg-black/55 px-4"
+              onClick={() => setOpenRow(null)}
+            >
+              <div className="grid h-full place-items-center">
+                <div
+                  role="dialog"
+                  aria-modal="true"
+                  aria-labelledby={titleId}
+                  className="max-h-[min(32rem,calc(100vh-2rem))] w-full max-w-lg overflow-y-auto rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-5 shadow-2xl"
+                  onClick={(event) => event.stopPropagation()}
+                >
+                  <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent)]">
+                    {openRow.context}
+                  </p>
+                  <h2 id={titleId} className="mt-2 font-display text-3xl text-[var(--ink)]">
+                    {openRow.subject}
+                  </h2>
+                  <ul className="mt-4 space-y-3">
+                    {openRow.examples.map((example) => (
+                      <li key={example.form} className="rounded-2xl border border-[var(--border)] px-4 py-3">
+                        <p className="font-mono text-xs text-[var(--accent)]">{example.form}</p>
+                        <p className="mt-1 text-sm text-[var(--ink)]">{example.en}</p>
+                        <p className="mt-1 text-xs text-[var(--muted)]">{example.id}</p>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-5 flex justify-end">
+                    <button
+                      ref={closeRef}
+                      type="button"
+                      className="inline-flex h-11 items-center rounded-full bg-[var(--accent)] px-4 text-sm font-medium text-[#06221e] hover:bg-[var(--accent-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+                      onClick={() => setOpenRow(null)}
+                    >
+                      Tutup
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
     </div>
   );
 }

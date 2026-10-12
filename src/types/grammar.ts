@@ -36,10 +36,22 @@ export type GrammarStep = {
   bodyId: string;
 };
 
+export type GrammarChartExample = {
+  form: string;
+  en: string;
+  id: string;
+};
+
+export type GrammarChartRow = {
+  subject: string;
+  cells: string[];
+  examples: GrammarChartExample[];
+};
+
 export type GrammarChartTable = {
   titleId: string;
   headers: string[];
-  rows: { subject: string; cells: string[] }[];
+  rows: GrammarChartRow[];
 };
 
 export type GrammarChart = {

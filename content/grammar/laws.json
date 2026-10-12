@@ -53,9 +53,42 @@
           "titleId": "Present dan past",
           "headers": ["am/is/are", "do/does", "has/have", "was/were", "did", "had"],
           "rows": [
-            { "subject": "I", "cells": ["am", "do", "have", "was", "did", "had"] },
-            { "subject": "He / She / It", "cells": ["is", "does", "has", "was", "did", "had"] },
-            { "subject": "You / They / We", "cells": ["are", "do", "have", "were", "did", "had"] }
+            {
+              "subject": "I",
+              "cells": ["am", "do", "have", "was", "did", "had"],
+              "examples": [
+                { "form": "am", "en": "I am blocked on the deploy.", "id": "Saya terhambat di proses deploy." },
+                { "form": "do", "en": "I do the review every morning.", "id": "Saya melakukan peninjauan setiap pagi." },
+                { "form": "have", "en": "I have the rollback plan.", "id": "Saya punya rencana rollback." },
+                { "form": "was", "en": "I was in the bridge.", "id": "Saya ada di bridge." },
+                { "form": "did", "en": "I did the backup last night.", "id": "Saya melakukan backup tadi malam." },
+                { "form": "had", "en": "I had the token before it expired.", "id": "Saya punya token itu sebelum kedaluwarsa." }
+              ]
+            },
+            {
+              "subject": "He / She / It",
+              "cells": ["is", "does", "has", "was", "did", "had"],
+              "examples": [
+                { "form": "is", "en": "He is the owner of the ticket.", "id": "Dia pemilik tiket itu." },
+                { "form": "does", "en": "She does the deploy on Friday.", "id": "Dia melakukan deploy hari Jumat." },
+                { "form": "has", "en": "It has a failing test.", "id": "Ia punya tes yang gagal." },
+                { "form": "was", "en": "He was on call yesterday.", "id": "Dia bertugas on-call kemarin." },
+                { "form": "did", "en": "She did the migration last night.", "id": "Dia menjalankan migrasi tadi malam." },
+                { "form": "had", "en": "It had a lock on the table.", "id": "Ia punya kunci pada tabel itu." }
+              ]
+            },
+            {
+              "subject": "You / They / We",
+              "cells": ["are", "do", "have", "were", "did", "had"],
+              "examples": [
+                { "form": "are", "en": "You are ready for the demo.", "id": "Kamu siap untuk demo." },
+                { "form": "do", "en": "They do the review together.", "id": "Mereka melakukan peninjauan bersama." },
+                { "form": "have", "en": "We have a decision today.", "id": "Kami punya keputusan hari ini." },
+                { "form": "were", "en": "You were in the meeting.", "id": "Kamu ada di rapat." },
+                { "form": "did", "en": "They did the rollback.", "id": "Mereka melakukan rollback." },
+                { "form": "had", "en": "We had the report before noon.", "id": "Kami punya laporan itu sebelum siang." }
+              ]
+            }
           ]
         }
       ]
@@ -69,13 +102,76 @@
           "titleId": "Empat waktu",
           "headers": ["Present", "Past", "Perfect", "Future"],
           "rows": [
-            { "subject": "I", "cells": ["am", "was", "have been", "will be"] },
-            { "subject": "You", "cells": ["are", "were", "have been", "will be"] },
-            { "subject": "He", "cells": ["is", "was", "has been", "will be"] },
-            { "subject": "She", "cells": ["is", "was", "has been", "will be"] },
-            { "subject": "It", "cells": ["is", "was", "has been", "will be"] },
-            { "subject": "We", "cells": ["are", "were", "have been", "will be"] },
-            { "subject": "They", "cells": ["are", "were", "have been", "will be"] }
+            {
+              "subject": "I",
+              "cells": ["am", "was", "have been", "will be"],
+              "examples": [
+                { "form": "am", "en": "I am blocked on the deploy.", "id": "Saya terhambat di proses deploy." },
+                { "form": "was", "en": "I was in the bridge.", "id": "Saya ada di bridge." },
+                { "form": "have been", "en": "I have been on call since noon.", "id": "Saya sudah on-call sejak siang." },
+                { "form": "will be", "en": "I will be in the review.", "id": "Saya akan ada di peninjauan." }
+              ]
+            },
+            {
+              "subject": "You",
+              "cells": ["are", "were", "have been", "will be"],
+              "examples": [
+                { "form": "are", "en": "You are on the bridge.", "id": "Kamu ada di bridge." },
+                { "form": "were", "en": "You were blocked yesterday.", "id": "Kamu terhambat kemarin." },
+                { "form": "have been", "en": "You have been on call since Monday.", "id": "Kamu sudah on-call sejak Senin." },
+                { "form": "will be", "en": "You will be in the demo.", "id": "Kamu akan ada di demo." }
+              ]
+            },
+            {
+              "subject": "He",
+              "cells": ["is", "was", "has been", "will be"],
+              "examples": [
+                { "form": "is", "en": "He is the incident lead.", "id": "Dia pemimpin insiden." },
+                { "form": "was", "en": "He was out of the office.", "id": "Dia tidak ada di kantor." },
+                { "form": "has been", "en": "He has been on the ticket all day.", "id": "Dia sudah mengerjakan tiket itu seharian." },
+                { "form": "will be", "en": "He will be in the review.", "id": "Dia akan ada di peninjauan." }
+              ]
+            },
+            {
+              "subject": "She",
+              "cells": ["is", "was", "has been", "will be"],
+              "examples": [
+                { "form": "is", "en": "She is the owner.", "id": "Dia pemiliknya." },
+                { "form": "was", "en": "She was in the war room.", "id": "Dia ada di war room." },
+                { "form": "has been", "en": "She has been available since noon.", "id": "Dia sudah tersedia sejak siang." },
+                { "form": "will be", "en": "She will be in the handover.", "id": "Dia akan ada di serah terima." }
+              ]
+            },
+            {
+              "subject": "It",
+              "cells": ["is", "was", "has been", "will be"],
+              "examples": [
+                { "form": "is", "en": "It is ready for canary.", "id": "Itu siap untuk canary." },
+                { "form": "was", "en": "It was down for ten minutes.", "id": "Itu mati selama sepuluh menit." },
+                { "form": "has been", "en": "It has been stable since the rollback.", "id": "Itu sudah stabil sejak rollback." },
+                { "form": "will be", "en": "It will be live tonight.", "id": "Itu akan hidup malam ini." }
+              ]
+            },
+            {
+              "subject": "We",
+              "cells": ["are", "were", "have been", "will be"],
+              "examples": [
+                { "form": "are", "en": "We are blocked on access.", "id": "Kami terhambat di akses." },
+                { "form": "were", "en": "We were in the postmortem.", "id": "Kami ada di postmortem." },
+                { "form": "have been", "en": "We have been on this incident since dawn.", "id": "Kami sudah menangani insiden ini sejak subuh." },
+                { "form": "will be", "en": "We will be in the board update.", "id": "Kami akan ada di update Direksi." }
+              ]
+            },
+            {
+              "subject": "They",
+              "cells": ["are", "were", "have been", "will be"],
+              "examples": [
+                { "form": "are", "en": "They are ready to ship.", "id": "Mereka siap merilis." },
+                { "form": "were", "en": "They were out during the window.", "id": "Mereka tidak ada selama jendela rilis." },
+                { "form": "have been", "en": "They have been on call this week.", "id": "Mereka sudah on-call minggu ini." },
+                { "form": "will be", "en": "They will be in the retro.", "id": "Mereka akan ada di retro." }
+              ]
+            }
           ]
         }
       ]
@@ -89,39 +185,186 @@
           "titleId": "Be",
           "headers": ["Present", "Past"],
           "rows": [
-            { "subject": "I", "cells": ["am", "was"] },
-            { "subject": "You", "cells": ["are", "were"] },
-            { "subject": "He", "cells": ["is", "was"] },
-            { "subject": "She", "cells": ["is", "was"] },
-            { "subject": "It", "cells": ["is", "was"] },
-            { "subject": "We", "cells": ["are", "were"] },
-            { "subject": "They", "cells": ["are", "were"] }
+            {
+              "subject": "I",
+              "cells": ["am", "was"],
+              "examples": [
+                { "form": "am", "en": "I am on the bridge.", "id": "Saya ada di bridge." },
+                { "form": "was", "en": "I was on the bridge.", "id": "Saya ada di bridge." }
+              ]
+            },
+            {
+              "subject": "You",
+              "cells": ["are", "were"],
+              "examples": [
+                { "form": "are", "en": "You are in the review.", "id": "Kamu ada di peninjauan." },
+                { "form": "were", "en": "You were in the review.", "id": "Kamu ada di peninjauan." }
+              ]
+            },
+            {
+              "subject": "He",
+              "cells": ["is", "was"],
+              "examples": [
+                { "form": "is", "en": "He is the owner.", "id": "Dia pemiliknya." },
+                { "form": "was", "en": "He was the owner.", "id": "Dia pemiliknya." }
+              ]
+            },
+            {
+              "subject": "She",
+              "cells": ["is", "was"],
+              "examples": [
+                { "form": "is", "en": "She is available.", "id": "Dia tersedia." },
+                { "form": "was", "en": "She was available.", "id": "Dia tersedia." }
+              ]
+            },
+            {
+              "subject": "It",
+              "cells": ["is", "was"],
+              "examples": [
+                { "form": "is", "en": "It is stable.", "id": "Itu stabil." },
+                { "form": "was", "en": "It was stable.", "id": "Itu stabil." }
+              ]
+            },
+            {
+              "subject": "We",
+              "cells": ["are", "were"],
+              "examples": [
+                { "form": "are", "en": "We are ready.", "id": "Kami siap." },
+                { "form": "were", "en": "We were ready.", "id": "Kami siap." }
+              ]
+            },
+            {
+              "subject": "They",
+              "cells": ["are", "were"],
+              "examples": [
+                { "form": "are", "en": "They are online.", "id": "Mereka sedang online." },
+                { "form": "were", "en": "They were online.", "id": "Mereka sedang online." }
+              ]
+            }
           ]
         },
         {
           "titleId": "Do",
           "headers": ["Present", "Past"],
           "rows": [
-            { "subject": "I", "cells": ["do", "did"] },
-            { "subject": "You", "cells": ["do", "did"] },
-            { "subject": "He", "cells": ["does", "did"] },
-            { "subject": "She", "cells": ["does", "did"] },
-            { "subject": "It", "cells": ["does", "did"] },
-            { "subject": "We", "cells": ["do", "did"] },
-            { "subject": "They", "cells": ["do", "did"] }
+            {
+              "subject": "I",
+              "cells": ["do", "did"],
+              "examples": [
+                { "form": "do", "en": "I do the backup every night.", "id": "Saya melakukan backup setiap malam." },
+                { "form": "did", "en": "I did the backup last night.", "id": "Saya melakukan backup tadi malam." }
+              ]
+            },
+            {
+              "subject": "You",
+              "cells": ["do", "did"],
+              "examples": [
+                { "form": "do", "en": "You do the review before lunch.", "id": "Kamu melakukan peninjauan sebelum makan siang." },
+                { "form": "did", "en": "You did the review yesterday.", "id": "Kamu melakukan peninjauan kemarin." }
+              ]
+            },
+            {
+              "subject": "He",
+              "cells": ["does", "did"],
+              "examples": [
+                { "form": "does", "en": "He does the deploy on Friday.", "id": "Dia melakukan deploy hari Jumat." },
+                { "form": "did", "en": "He did the deploy last Friday.", "id": "Dia melakukan deploy Jumat lalu." }
+              ]
+            },
+            {
+              "subject": "She",
+              "cells": ["does", "did"],
+              "examples": [
+                { "form": "does", "en": "She does the migration.", "id": "Dia menjalankan migrasi." },
+                { "form": "did", "en": "She did the migration last night.", "id": "Dia menjalankan migrasi tadi malam." }
+              ]
+            },
+            {
+              "subject": "It",
+              "cells": ["does", "did"],
+              "examples": [
+                { "form": "does", "en": "It does the check every minute.", "id": "Ia melakukan pemeriksaan setiap menit." },
+                { "form": "did", "en": "It did the check during the window.", "id": "Ia melakukan pemeriksaan selama jendela rilis." }
+              ]
+            },
+            {
+              "subject": "We",
+              "cells": ["do", "did"],
+              "examples": [
+                { "form": "do", "en": "We do the handover at five.", "id": "Kami melakukan serah terima pukul lima." },
+                { "form": "did", "en": "We did the handover yesterday.", "id": "Kami melakukan serah terima kemarin." }
+              ]
+            },
+            {
+              "subject": "They",
+              "cells": ["do", "did"],
+              "examples": [
+                { "form": "do", "en": "They do the rollback together.", "id": "Mereka melakukan rollback bersama." },
+                { "form": "did", "en": "They did the rollback at midnight.", "id": "Mereka melakukan rollback tengah malam." }
+              ]
+            }
           ]
         },
         {
           "titleId": "Have",
           "headers": ["Present", "Past"],
           "rows": [
-            { "subject": "I", "cells": ["have", "had"] },
-            { "subject": "You", "cells": ["have", "had"] },
-            { "subject": "He", "cells": ["has", "had"] },
-            { "subject": "She", "cells": ["has", "had"] },
-            { "subject": "It", "cells": ["has", "had"] },
-            { "subject": "We", "cells": ["have", "had"] },
-            { "subject": "They", "cells": ["have", "had"] }
+            {
+              "subject": "I",
+              "cells": ["have", "had"],
+              "examples": [
+                { "form": "have", "en": "I have the runbook.", "id": "Saya punya runbook." },
+                { "form": "had", "en": "I had the runbook before the call.", "id": "Saya punya runbook sebelum panggilan." }
+              ]
+            },
+            {
+              "subject": "You",
+              "cells": ["have", "had"],
+              "examples": [
+                { "form": "have", "en": "You have access until Friday.", "id": "Kamu punya akses sampai Jumat." },
+                { "form": "had", "en": "You had access yesterday.", "id": "Kamu punya akses kemarin." }
+              ]
+            },
+            {
+              "subject": "He",
+              "cells": ["has", "had"],
+              "examples": [
+                { "form": "has", "en": "He has the token.", "id": "Dia punya token." },
+                { "form": "had", "en": "He had the token before it expired.", "id": "Dia punya token sebelum kedaluwarsa." }
+              ]
+            },
+            {
+              "subject": "She",
+              "cells": ["has", "had"],
+              "examples": [
+                { "form": "has", "en": "She has the report.", "id": "Dia punya laporan." },
+                { "form": "had", "en": "She had the report before noon.", "id": "Dia punya laporan sebelum siang." }
+              ]
+            },
+            {
+              "subject": "It",
+              "cells": ["has", "had"],
+              "examples": [
+                { "form": "has", "en": "It has a gap in the graph.", "id": "Ia punya celah di grafik." },
+                { "form": "had", "en": "It had a gap during the outage.", "id": "Ia punya celah selama insiden." }
+              ]
+            },
+            {
+              "subject": "We",
+              "cells": ["have", "had"],
+              "examples": [
+                { "form": "have", "en": "We have a workaround.", "id": "Kami punya solusi sementara." },
+                { "form": "had", "en": "We had a workaround last night.", "id": "Kami punya solusi sementara tadi malam." }
+              ]
+            },
+            {
+              "subject": "They",
+              "cells": ["have", "had"],
+              "examples": [
+                { "form": "have", "en": "They have the logs.", "id": "Mereka punya log." },
+                { "form": "had", "en": "They had the logs before the restart.", "id": "Mereka punya log sebelum restart." }
+              ]
+            }
           ]
         }
       ]
