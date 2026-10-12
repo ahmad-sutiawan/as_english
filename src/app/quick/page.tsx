@@ -10,22 +10,22 @@ const LEVELS: { value: "all" | Difficulty; label: string; detail: string }[] = [
   {
     value: "all",
     label: "Semua level",
-    detail: "Campuran dari seluruh bank soal persona ini.",
+    detail: "Empat kalimat campuran. Arti dulu, English kemudian.",
   },
   {
     value: "junior",
     label: DIFFICULTY_LABEL_ID.junior,
-    detail: "Kalimat pendek untuk mengunci pola dasar.",
+    detail: "Empat kalimat pendek. Pola dasar dikeluarkan dari arti.",
   },
   {
     value: "mid",
     label: DIFFICULTY_LABEL_ID.mid,
-    detail: "Update, risiko, dan permintaan yang lebih panjang.",
+    detail: "Empat kalimat yang lebih panjang: update, risiko, permintaan.",
   },
   {
     value: "senior",
     label: DIFFICULTY_LABEL_ID.senior,
-    detail: "Tradeoff dan bahasa keputusan yang lebih padat.",
+    detail: "Empat kalimat keputusan. Lebih padat, tetap dari arti.",
   },
 ];
 
@@ -42,7 +42,7 @@ export default async function QuickLobbyPage() {
     <LobbyFrame
       kicker="Akurasi"
       title="Latihan cepat"
-      lede={`${QUICK_SESSION_SIZE} soal pemanasan. Jawaban dipilih dari arti, tanpa nyawa dan tanpa XP. Yang salah langsung diketik ulang.`}
+      lede={`${QUICK_SESSION_SIZE} kalimat. Hanya artinya yang terlihat. Anda mengeluarkan English. Salah sekali dapat satu petunjuk. Salah dua kali, kalimat dibuka lalu diketik.`}
     >
       <section className="grid gap-3 sm:grid-cols-3">
         <StatTile label="XP" value={String(stats.xp)} hint="Jalur Cepat" />
@@ -75,7 +75,7 @@ export default async function QuickLobbyPage() {
       </section>
 
       <p className="mt-8 text-sm text-[var(--muted)]">
-        Pemanasan tidak menambah XP. Soal yang salah diketik ulang sebelum sesi ditutup.
+        Empat kalimat, satu arti, satu produksi. Tidak menambah XP. Kalimat yang lulus masuk jadwal ulang.
       </p>
     </LobbyFrame>
   );

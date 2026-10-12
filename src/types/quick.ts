@@ -14,6 +14,7 @@ export type QuickCard = {
   promptId: string;
   promptStructure: string;
   promptStructureId: string;
+  targetId: string;
   choices: {
     key: ChoiceKey;
     text: string;

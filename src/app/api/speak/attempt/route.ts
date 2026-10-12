@@ -19,6 +19,7 @@ const bodySchema = z.object({
   transcript: z.string().optional().default(""),
   arranged: z.array(z.string()).optional(),
   attemptSlot: z.union([z.literal(1), z.literal(2)]).optional().default(1),
+  recall: z.boolean().optional().default(false),
 });
 
 export async function POST(request: Request) {
@@ -37,7 +38,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Pilih persona dulu." }, { status: 409 });
   }
 
-  const { itemId, phase, transcript, arranged, attemptSlot } = parsed.data;
+  const { itemId, phase, transcript, arranged, attemptSlot, recall } = parsed.data;
   const item = getSpeakItem(itemId, persona);
   if (!item) {
     return NextResponse.json({ error: "Item not found" }, { status: 404 });
@@ -53,6 +54,13 @@ export async function POST(request: Request) {
   }
 
   const evalResult = evaluateSpeak(transcript, item);
+  if (recall) {
+    return NextResponse.json({
+      ...evalResult,
+      revealTarget: false,
+      targetId: item.targetId,
+    });
+  }
   const mastered = phase === "say_again" && evalResult.passed;
 
   await saveSpeakAttempt({

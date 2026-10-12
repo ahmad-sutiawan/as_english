@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import {
-  getSpeechRecognitionCtor,
   isSpeechRecognitionSupported,
+  listenOnce,
   type SpeechRecognitionLike,
 } from "@/lib/speech";
 
@@ -34,41 +34,19 @@ export function SpeakMicButton({ onTranscript, disabled }: Props) {
       return;
     }
 
-    const Ctor = getSpeechRecognitionCtor();
-    if (!Ctor) {
-      setError("Speech recognition tidak tersedia di browser ini.");
-      return;
-    }
-
-    const rec = new Ctor();
+    const rec = listenOnce(
+      (text) => onTranscript(text),
+      (message) => setError(message),
+      () => setListening(false),
+    );
     recognitionRef.current = rec;
-    rec.lang = "en-US";
-    rec.continuous = false;
-    rec.interimResults = false;
-    rec.maxAlternatives = 1;
-    rec.onresult = (event) => {
-      const text = event.results[0]?.[0]?.transcript?.trim() ?? "";
-      if (text) onTranscript(text);
-      setListening(false);
-    };
-    rec.onerror = (event) => {
-      setError(event.error || "Mic error");
-      setListening(false);
-    };
-    rec.onend = () => setListening(false);
-    try {
-      rec.start();
-      setListening(true);
-    } catch {
-      setError("Tidak bisa memulai mic.");
-      setListening(false);
-    }
+    if (rec) setListening(true);
   }
 
   if (!supported) {
     return (
       <p className="text-xs text-[var(--muted)]">
-        Mic/STT tidak didukung — ketik jawaban English di kolom di bawah.
+        Mic tidak didukung di browser ini. Pakai Chrome, lewat HTTPS.
       </p>
     );
   }

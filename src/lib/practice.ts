@@ -2,6 +2,7 @@ import { prisma } from "@/lib/db";
 import { getItem, getModule, getModules } from "@/lib/content";
 import { getBuildDrill, getBuildDrills } from "@/lib/build";
 import { getSpeakItem, getAllSpeakItems } from "@/lib/speak-content";
+import { grammarPrompt } from "@/lib/grammar";
 import { listDue } from "@/lib/memory";
 import type { PersonaId } from "@/lib/persona";
 import type { BuildDrill } from "@/types/build";
@@ -9,7 +10,7 @@ import type { ExerciseItem } from "@/types/content";
 import type { SpeakItem } from "@/types/speak";
 
 export type DueTask = {
-  source: "module" | "build" | "speak";
+  source: "module" | "build" | "speak" | "grammar";
   itemId: string;
   moduleId: string;
   meaningId: string;
@@ -27,7 +28,7 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 function toDueTask(
-  source: "module" | "build" | "speak",
+  source: "module" | "build" | "speak" | "grammar",
   itemId: string,
   persona: PersonaId,
   moduleId = "",
@@ -57,6 +58,18 @@ function toDueTask(
       promptId: drill.transform.commandId ?? "Ubah kalimat",
     };
   }
+  if (source === "grammar") {
+    const prompt = grammarPrompt(itemId);
+    if (!prompt) return null;
+    return {
+      source,
+      itemId,
+      moduleId: "",
+      meaningId: prompt.meaningId,
+      structureId: prompt.label,
+      promptId: "Ucapkan dari arti, tanpa melihat English",
+    };
+  }
   const speak = getSpeakItem(itemId, persona);
   if (!speak) return null;
   return {
@@ -74,7 +87,10 @@ export async function buildPracticePlan(userId: string, persona: PersonaId) {
   const due: DueTask[] = [];
   for (const row of dueRows) {
     if (due.length >= 2) break;
-    const source = row.source === "build" || row.source === "speak" ? row.source : "module";
+    const source =
+      row.source === "build" || row.source === "speak" || row.source === "grammar"
+        ? row.source
+        : "module";
     const task = toDueTask(source, row.itemId, persona, row.moduleId);
     if (task) due.push(task);
   }

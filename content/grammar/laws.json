@@ -368,6 +368,226 @@
           ]
         }
       ]
+    },
+    {
+      "id": "irregular",
+      "titleId": "Kata kerja tidak beraturan",
+      "noteId": "Bentuk lampau dan bentuk ketiga tidak memakai -ed. Pakai bentuk ketiga setelah have, has, had, dan setelah be pada kalimat pasif.",
+      "tables": [
+        {
+          "titleId": "Dasar, lampau, dan ketiga",
+          "headers": ["Dasar", "Lampau", "Ketiga"],
+          "rows": [
+            {
+              "subject": "go",
+              "cells": ["go", "went", "gone"],
+              "examples": [
+                { "form": "go", "en": "We go to the war room.", "id": "Kami pergi ke war room." },
+                { "form": "went", "en": "We went to the war room.", "id": "Kami pergi ke war room." },
+                { "form": "gone", "en": "We have gone to the war room.", "id": "Kami sudah pergi ke war room." }
+              ]
+            },
+            {
+              "subject": "send",
+              "cells": ["send", "sent", "sent"],
+              "examples": [
+                { "form": "send", "en": "I send the note after the call.", "id": "Saya mengirim catatan setelah panggilan." },
+                { "form": "sent", "en": "I sent the note after the call.", "id": "Saya mengirim catatan setelah panggilan." },
+                { "form": "sent", "en": "I have sent the note.", "id": "Saya sudah mengirim catatan itu." }
+              ]
+            },
+            {
+              "subject": "write",
+              "cells": ["write", "wrote", "written"],
+              "examples": [
+                { "form": "write", "en": "She writes the postmortem.", "id": "Dia menulis postmortem." },
+                { "form": "wrote", "en": "She wrote the postmortem.", "id": "Dia menulis postmortem." },
+                { "form": "written", "en": "The postmortem is written.", "id": "Postmortem itu sudah ditulis." }
+              ]
+            },
+            {
+              "subject": "take",
+              "cells": ["take", "took", "taken"],
+              "examples": [
+                { "form": "take", "en": "We take the rollback path.", "id": "Kami mengambil jalur rollback." },
+                { "form": "took", "en": "We took the rollback path.", "id": "Kami mengambil jalur rollback." },
+                { "form": "taken", "en": "The rollback path has been taken.", "id": "Jalur rollback sudah diambil." }
+              ]
+            },
+            {
+              "subject": "make",
+              "cells": ["make", "made", "made"],
+              "examples": [
+                { "form": "make", "en": "They make the decision today.", "id": "Mereka membuat keputusan hari ini." },
+                { "form": "made", "en": "They made the decision today.", "id": "Mereka membuat keputusan hari ini." },
+                { "form": "made", "en": "The decision has been made.", "id": "Keputusan itu sudah dibuat." }
+              ]
+            },
+            {
+              "subject": "see",
+              "cells": ["see", "saw", "seen"],
+              "examples": [
+                { "form": "see", "en": "I see the gap in the graph.", "id": "Saya melihat celah di grafik." },
+                { "form": "saw", "en": "I saw the gap in the graph.", "id": "Saya melihat celah di grafik." },
+                { "form": "seen", "en": "I have seen this gap before.", "id": "Saya sudah pernah melihat celah ini." }
+              ]
+            },
+            {
+              "subject": "come",
+              "cells": ["come", "came", "come"],
+              "examples": [
+                { "form": "come", "en": "The alert comes from billing.", "id": "Alert itu datang dari billing." },
+                { "form": "came", "en": "The alert came from billing.", "id": "Alert itu datang dari billing." },
+                { "form": "come", "en": "The alert has come from billing.", "id": "Alert itu sudah datang dari billing." }
+              ]
+            },
+            {
+              "subject": "get",
+              "cells": ["get", "got", "gotten"],
+              "examples": [
+                { "form": "get", "en": "We get the token from the vault.", "id": "Kami mendapat token dari vault." },
+                { "form": "got", "en": "We got the token from the vault.", "id": "Kami mendapat token dari vault." },
+                { "form": "gotten", "en": "We have gotten the token.", "id": "Kami sudah mendapat token." }
+              ]
+            },
+            {
+              "subject": "begin",
+              "cells": ["begin", "began", "begun"],
+              "examples": [
+                { "form": "begin", "en": "The window begins at nine.", "id": "Jendelanya mulai pukul sembilan." },
+                { "form": "began", "en": "The window began at nine.", "id": "Jendelanya mulai pukul sembilan." },
+                { "form": "begun", "en": "The window has begun.", "id": "Jendelanya sudah mulai." }
+              ]
+            },
+            {
+              "subject": "break",
+              "cells": ["break", "broke", "broken"],
+              "examples": [
+                { "form": "break", "en": "The change breaks checkout.", "id": "Perubahan itu merusak checkout." },
+                { "form": "broke", "en": "The change broke checkout.", "id": "Perubahan itu merusak checkout." },
+                { "form": "broken", "en": "Checkout is broken.", "id": "Checkout rusak." }
+              ]
+            },
+            {
+              "subject": "choose",
+              "cells": ["choose", "chose", "chosen"],
+              "examples": [
+                { "form": "choose", "en": "We choose the safer path.", "id": "Kami memilih jalur yang lebih aman." },
+                { "form": "chose", "en": "We chose the safer path.", "id": "Kami memilih jalur yang lebih aman." },
+                { "form": "chosen", "en": "The safer path has been chosen.", "id": "Jalur yang lebih aman sudah dipilih." }
+              ]
+            },
+            {
+              "subject": "find",
+              "cells": ["find", "found", "found"],
+              "examples": [
+                { "form": "find", "en": "I find the owner in the roster.", "id": "Saya menemukan pemiliknya di daftar." },
+                { "form": "found", "en": "I found the owner in the roster.", "id": "Saya menemukan pemiliknya di daftar." },
+                { "form": "found", "en": "The owner has been found.", "id": "Pemiliknya sudah ditemukan." }
+              ]
+            },
+            {
+              "subject": "hold",
+              "cells": ["hold", "held", "held"],
+              "examples": [
+                { "form": "hold", "en": "We hold the release.", "id": "Kami menahan rilis." },
+                { "form": "held", "en": "We held the release.", "id": "Kami menahan rilis." },
+                { "form": "held", "en": "The release has been held.", "id": "Rilis itu sudah ditahan." }
+              ]
+            },
+            {
+              "subject": "know",
+              "cells": ["know", "knew", "known"],
+              "examples": [
+                { "form": "know", "en": "I know the owner.", "id": "Saya mengenal pemiliknya." },
+                { "form": "knew", "en": "I knew the owner.", "id": "Saya mengenal pemiliknya." },
+                { "form": "known", "en": "The risk is known.", "id": "Risikonya sudah diketahui." }
+              ]
+            },
+            {
+              "subject": "leave",
+              "cells": ["leave", "left", "left"],
+              "examples": [
+                { "form": "leave", "en": "She leaves the bridge at five.", "id": "Dia meninggalkan bridge pukul lima." },
+                { "form": "left", "en": "She left the bridge at five.", "id": "Dia meninggalkan bridge pukul lima." },
+                { "form": "left", "en": "She has left the bridge.", "id": "Dia sudah meninggalkan bridge." }
+              ]
+            },
+            {
+              "subject": "meet",
+              "cells": ["meet", "met", "met"],
+              "examples": [
+                { "form": "meet", "en": "We meet the board at noon.", "id": "Kami bertemu Direksi siang ini." },
+                { "form": "met", "en": "We met the board at noon.", "id": "Kami bertemu Direksi siang ini." },
+                { "form": "met", "en": "We have met the board.", "id": "Kami sudah bertemu Direksi." }
+              ]
+            },
+            {
+              "subject": "pay",
+              "cells": ["pay", "paid", "paid"],
+              "examples": [
+                { "form": "pay", "en": "Customers pay by card.", "id": "Pelanggan membayar dengan kartu." },
+                { "form": "paid", "en": "Customers paid by card.", "id": "Pelanggan membayar dengan kartu." },
+                { "form": "paid", "en": "The invoice has been paid.", "id": "Tagihan itu sudah dibayar." }
+              ]
+            },
+            {
+              "subject": "put",
+              "cells": ["put", "put", "put"],
+              "examples": [
+                { "form": "put", "en": "I put the note in the ticket.", "id": "Saya menaruh catatan di tiket." },
+                { "form": "put", "en": "I put the note in the ticket yesterday.", "id": "Saya menaruh catatan di tiket kemarin." },
+                { "form": "put", "en": "The note has been put in the ticket.", "id": "Catatan itu sudah ditaruh di tiket." }
+              ]
+            },
+            {
+              "subject": "run",
+              "cells": ["run", "ran", "run"],
+              "examples": [
+                { "form": "run", "en": "We run the backup every night.", "id": "Kami menjalankan backup setiap malam." },
+                { "form": "ran", "en": "We ran the backup last night.", "id": "Kami menjalankan backup tadi malam." },
+                { "form": "run", "en": "The backup has run.", "id": "Backup itu sudah berjalan." }
+              ]
+            },
+            {
+              "subject": "say",
+              "cells": ["say", "said", "said"],
+              "examples": [
+                { "form": "say", "en": "I say the risk is high.", "id": "Saya mengatakan risikonya tinggi." },
+                { "form": "said", "en": "I said the risk was high.", "id": "Saya mengatakan risikonya tinggi." },
+                { "form": "said", "en": "It has been said in the meeting.", "id": "Hal itu sudah dikatakan di rapat." }
+              ]
+            },
+            {
+              "subject": "speak",
+              "cells": ["speak", "spoke", "spoken"],
+              "examples": [
+                { "form": "speak", "en": "She speaks to the owner.", "id": "Dia berbicara kepada pemiliknya." },
+                { "form": "spoke", "en": "She spoke to the owner.", "id": "Dia berbicara kepada pemiliknya." },
+                { "form": "spoken", "en": "She has spoken to the owner.", "id": "Dia sudah berbicara kepada pemiliknya." }
+              ]
+            },
+            {
+              "subject": "tell",
+              "cells": ["tell", "told", "told"],
+              "examples": [
+                { "form": "tell", "en": "I tell the team the status.", "id": "Saya memberi tahu tim statusnya." },
+                { "form": "told", "en": "I told the team the status.", "id": "Saya memberi tahu tim statusnya." },
+                { "form": "told", "en": "The team has been told.", "id": "Tim sudah diberi tahu." }
+              ]
+            },
+            {
+              "subject": "think",
+              "cells": ["think", "thought", "thought"],
+              "examples": [
+                { "form": "think", "en": "I think the pause is safer.", "id": "Saya pikir jeda itu lebih aman." },
+                { "form": "thought", "en": "I thought the pause was safer.", "id": "Saya pikir jeda itu lebih aman." },
+                { "form": "thought", "en": "I have thought about the pause.", "id": "Saya sudah memikirkan jeda itu." }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "chapters": [
@@ -629,6 +849,21 @@
             "right": "The backup had failed before we noticed the gap.",
             "whyId": "Kedua kejadian ada di masa lalu. Yang lebih dulu memakai had, bukan has."
           }
+        },
+        {
+          "id": "present-perfect-continuous",
+          "titleId": "Present perfect continuous",
+          "whenId": "Keadaan masih berjalan sejak suatu saat, dan Anda menyebut durasinya.",
+          "formula": "have / has been + verb-ing",
+          "examples": [
+            { "en": "I have been waiting for the token since noon.", "id": "Saya sudah menunggu token sejak siang." },
+            { "en": "The service has been failing since the deploy.", "id": "Layanan itu sudah gagal sejak deploy." }
+          ],
+          "mistake": {
+            "wrong": "I am waiting for the token since noon.",
+            "right": "I have been waiting for the token since noon.",
+            "whyId": "Since menandai awal yang masih berlanjut. Pakai have been + verb-ing, bukan am + verb-ing."
+          }
         }
       ]
     },
@@ -700,6 +935,81 @@
             "wrong": "We should to add a circuit breaker.",
             "right": "We should add a circuit breaker.",
             "whyId": "Modal tidak diikuti to. To hanya muncul pada going to, have to, dan beberapa infinitive."
+          }
+        },
+        {
+          "id": "modal-can",
+          "titleId": "Can untuk kemampuan",
+          "whenId": "Anda menyatakan apa yang bisa dilakukan sekarang.",
+          "formula": "can + base verb",
+          "examples": [
+            { "en": "I can restore the service from the backup.", "id": "Saya bisa memulihkan layanan dari backup." },
+            { "en": "The script can retry the payment.", "id": "Skrip itu bisa mencoba pembayaran lagi." }
+          ],
+          "mistake": {
+            "wrong": "I can to restore the service.",
+            "right": "I can restore the service.",
+            "whyId": "Can langsung diikuti kata kerja dasar. To tidak disisipkan."
+          }
+        },
+        {
+          "id": "modal-should",
+          "titleId": "Should untuk saran",
+          "whenId": "Anda menyarankan tindakan, bukan memerintah.",
+          "formula": "should + base verb",
+          "examples": [
+            { "en": "We should pause the launch.", "id": "Kita sebaiknya menjeda peluncuran." },
+            { "en": "You should page the owner first.", "id": "Kamu sebaiknya menghubungi pemiliknya dulu." }
+          ],
+          "mistake": {
+            "wrong": "We should pausing the launch.",
+            "right": "We should pause the launch.",
+            "whyId": "Should diikuti kata kerja dasar, bukan verb-ing."
+          }
+        },
+        {
+          "id": "modal-must",
+          "titleId": "Must dan have to",
+          "whenId": "Tindakan itu wajib. Must dari pembicara. Have to dari aturan atau keadaan.",
+          "formula": "must + base verb; have / has to + base verb",
+          "examples": [
+            { "en": "We must close the incident before the board call.", "id": "Kami harus menutup insiden sebelum panggilan Direksi." },
+            { "en": "Legal has to review the contract.", "id": "Legal harus meninjau kontrak itu." }
+          ],
+          "mistake": {
+            "wrong": "Legal must to review the contract.",
+            "right": "Legal has to review the contract.",
+            "whyId": "Must tidak memakai to. Kewajiban dari aturan memakai has to."
+          }
+        },
+        {
+          "id": "modal-must-not",
+          "titleId": "Must not lawan don't have to",
+          "whenId": "Must not melarang. Don't have to berarti tidak wajib.",
+          "formula": "must not + base verb; don't / doesn't have to + base verb",
+          "examples": [
+            { "en": "You must not share the token.", "id": "Kamu tidak boleh membagikan token itu." },
+            { "en": "You don't have to join the retro.", "id": "Kamu tidak wajib ikut retro." }
+          ],
+          "mistake": {
+            "wrong": "You don't have to share the token.",
+            "right": "You must not share the token.",
+            "whyId": "Don't have to hanya berarti tidak wajib. Larangan memakai must not."
+          }
+        },
+        {
+          "id": "modal-might",
+          "titleId": "Might untuk kemungkinan",
+          "whenId": "Hasilnya belum pasti, dan Anda tidak ingin terdengar seperti janji.",
+          "formula": "might + base verb",
+          "examples": [
+            { "en": "The partner might send the token twice.", "id": "Mitra mungkin mengirim token dua kali." },
+            { "en": "The fix might slip to Monday.", "id": "Perbaikannya mungkin geser ke Senin." }
+          ],
+          "mistake": {
+            "wrong": "The fix might to slip to Monday.",
+            "right": "The fix might slip to Monday.",
+            "whyId": "Might langsung diikuti kata kerja dasar."
           }
         }
       ]
@@ -818,6 +1128,21 @@
             "right": "Could you tell me when the window starts?",
             "whyId": "Di dalam pertanyaan tidak langsung, urutan kembali menjadi subjek + kata kerja. Does tidak pindah ke depan."
           }
+        },
+        {
+          "id": "q-tag",
+          "titleId": "Question tag",
+          "whenId": "Anda memastikan fakta di rapat, bukan membuka pertanyaan baru.",
+          "formula": "positive statement + negative tag; negative statement + positive tag",
+          "examples": [
+            { "en": "The deploy is tonight, isn't it?", "id": "Deploy-nya malam ini, bukan?" },
+            { "en": "You haven't approved the access, have you?", "id": "Kamu belum menyetujui aksesnya, kan?" }
+          ],
+          "mistake": {
+            "wrong": "The deploy is tonight, is it?",
+            "right": "The deploy is tonight, isn't it?",
+            "whyId": "Pernyataan positif memakai tag negatif. Is menjadi isn't."
+          }
         }
       ]
     },
@@ -889,6 +1214,42 @@
             "wrong": "We have much failing tests.",
             "right": "We have many failing tests.",
             "whyId": "Tests bisa dihitung dan jamak, jadi many. Much untuk benda yang tidak dihitung, seperti headroom atau time."
+          }
+        },
+        {
+          "id": "some-any",
+          "titleId": "Some dan any",
+          "whenId": "Some untuk pernyataan dan tawaran. Any untuk kalimat negatif dan pertanyaan ya/tidak.",
+          "formula": "some in statements; any in negatives and yes/no questions",
+          "examples": [
+            { "en": "We have some failing tests.", "id": "Kami punya beberapa tes yang gagal." },
+            { "en": "Do we have any headroom?", "id": "Apakah kita masih punya sisa kapasitas?" }
+          ],
+          "mistake": {
+            "wrong": "We don't have some failing tests.",
+            "right": "We don't have any failing tests.",
+            "whyId": "Kalimat negatif memakai any, bukan some."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ada",
+      "titleId": "There is dan there are",
+      "laws": [
+        {
+          "id": "there-is",
+          "titleId": "Menyatakan ada",
+          "whenId": "Anda memperkenalkan sesuatu yang ada, bukan menamai subjek yang sudah dikenal.",
+          "formula": "There is + singular; There are + plural",
+          "examples": [
+            { "en": "There is a blocker on the deploy.", "id": "Ada penghambat pada deploy." },
+            { "en": "There are two failing checks.", "id": "Ada dua pemeriksaan yang gagal." }
+          ],
+          "mistake": {
+            "wrong": "There are a blocker on the deploy.",
+            "right": "There is a blocker on the deploy.",
+            "whyId": "Blocker tunggal memakai there is. There are untuk yang jamak."
           }
         }
       ]
@@ -1061,6 +1422,21 @@
             "right": "The ticket was closed.",
             "whyId": "Pasif butuh bentuk ketiga. Close menjadi closed."
           }
+        },
+        {
+          "id": "passive-modal",
+          "titleId": "Pasif dengan modal",
+          "whenId": "Status itu wajib, boleh, atau sebaiknya, dan pelakunya tidak penting.",
+          "formula": "must / can / should + be + past participle",
+          "examples": [
+            { "en": "The ticket must be closed today.", "id": "Tiket itu harus ditutup hari ini." },
+            { "en": "The diff can be reviewed tomorrow.", "id": "Diff itu bisa ditinjau besok." }
+          ],
+          "mistake": {
+            "wrong": "The ticket must closed today.",
+            "right": "The ticket must be closed today.",
+            "whyId": "Modal pasif butuh be sebelum bentuk ketiga. Must closed belum lengkap."
+          }
         }
       ]
     },
@@ -1081,6 +1457,21 @@
             "wrong": "She said the deploy is blocked yesterday.",
             "right": "She said the deploy was blocked.",
             "whyId": "Saat melaporkan ucapan lampau, is biasanya mundur menjadi was. Yesterday tidak menempel pada is."
+          }
+        },
+        {
+          "id": "reported-request",
+          "titleId": "Menyampaikan permintaan",
+          "whenId": "Anda melaporkan apa yang diminta orang lain, bukan hanya apa yang dikatakan.",
+          "formula": "asked + person + to + base verb",
+          "examples": [
+            { "en": "She asked us to hold the release.", "id": "Dia meminta kami menahan rilis." },
+            { "en": "He asked me to send the note today.", "id": "Dia meminta saya mengirim catatan itu hari ini." }
+          ],
+          "mistake": {
+            "wrong": "She asked us hold the release.",
+            "right": "She asked us to hold the release.",
+            "whyId": "Permintaan yang dilaporkan memakai to sebelum kata kerja."
           }
         }
       ]

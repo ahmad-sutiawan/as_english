@@ -2,7 +2,7 @@ import { prisma } from "@/lib/db";
 import { getItem, getModule, getModules } from "@/lib/content";
 import type { PersonaId } from "@/lib/persona";
 
-export type MemorySource = "module" | "build" | "speak";
+export type MemorySource = "module" | "build" | "speak" | "grammar";
 export type MemoryResult = "exact" | "near" | "wrong";
 
 const INTERVALS = [1, 3, 7, 16, 35] as const;
@@ -201,5 +201,37 @@ export async function listDue(userId: string, persona: PersonaId, limit = 20) {
     },
     orderBy: [{ lapseCount: "desc" }, { nextReviewAt: "asc" }],
     take: limit,
+  });
+}
+
+export async function queueGrammarItem(args: {
+  userId: string;
+  persona: PersonaId;
+  itemId: string;
+}) {
+  const existing = await prisma.itemMemory.findUnique({
+    where: {
+      userId_persona_source_itemId: {
+        userId: args.userId,
+        persona: args.persona,
+        source: "grammar",
+        itemId: args.itemId,
+      },
+    },
+  });
+  if (!existing) {
+    await recordItemMemory({
+      userId: args.userId,
+      persona: args.persona,
+      source: "grammar",
+      itemId: args.itemId,
+      result: "wrong",
+    });
+    return;
+  }
+  if (existing.graduated || existing.nextReviewAt <= new Date()) return;
+  await prisma.itemMemory.update({
+    where: { id: existing.id },
+    data: { nextReviewAt: new Date() },
   });
 }

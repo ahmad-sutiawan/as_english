@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { scoreAnswer } from "@/lib/answer";
 import {
-  getSpeechRecognitionCtor,
   isSpeechRecognitionSupported,
+  listenOnce,
   type SpeechRecognitionLike,
 } from "@/lib/speech";
 import { speak, stopSpeaking } from "@/lib/tts";
@@ -50,40 +50,18 @@ export function SpeakBackPanel({
       result.distance <= Math.max(4, Math.ceil(expected.length * 0.18)));
 
   function startListening() {
-    const Ctor = getSpeechRecognitionCtor();
-    if (!Ctor) {
-      setError("Browser tidak mendukung speech recognition. Pakai Chrome.");
-      return;
-    }
-
     setError(null);
     stopSpeaking();
-    const recognition = new Ctor();
-    recognition.lang = "en-US";
-    recognition.continuous = false;
-    recognition.interimResults = false;
-    recognition.maxAlternatives = 1;
-
-    recognition.onresult = (event) => {
-      const text = event.results[0]?.[0]?.transcript?.trim() ?? "";
-      setTranscript(text);
-      if (mode === "dictate" && onUseTranscript && text) {
-        onUseTranscript(text);
-      }
-    };
-    recognition.onerror = (event) => {
-      if (event.error === "not-allowed") {
-        setError("Izin mikrofon ditolak. Izinkan mic di browser.");
-      } else if (event.error !== "aborted") {
-        setError(`Gagal mendengar: ${event.error}`);
-      }
-      setListening(false);
-    };
-    recognition.onend = () => setListening(false);
-
+    const recognition = listenOnce(
+      (text) => {
+        setTranscript(text);
+        if (mode === "dictate" && onUseTranscript) onUseTranscript(text);
+      },
+      (message) => setError(message),
+      () => setListening(false),
+    );
     recognitionRef.current = recognition;
-    setListening(true);
-    recognition.start();
+    if (recognition) setListening(true);
   }
 
   function stopListening() {

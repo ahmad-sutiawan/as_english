@@ -1,14 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { QuickSession } from "@/components/quick-session";
 import { SpeakButton } from "@/components/speak-button";
+import { SpeakMicButton } from "@/components/speak-mic-button";
 import type { ExerciseItem } from "@/types/content";
 import type { SpeakItem } from "@/types/speak";
 
 type DueTask = {
-  source: "module" | "build" | "speak";
+  source: "module" | "build" | "speak" | "grammar";
   itemId: string;
   moduleId: string;
   meaningId: string;
@@ -38,7 +39,10 @@ type Plan = {
   } | null;
 };
 
-type Step = "warmup" | "due" | "build" | "speak" | "module" | "transfer" | "done";
+type Step = "warmup" | "due" | "build" | "speak" | "fluency" | "module" | "transfer" | "done";
+
+const FLUENCY_SECONDS = 20;
+const FLUENCY_ROUNDS = 2;
 
 function shuffle(arr: string[]) {
   const out = [...arr];
@@ -61,6 +65,24 @@ export function PracticeSession() {
   const [arranged, setArranged] = useState<string[]>([]);
   const [heard, setHeard] = useState(false);
   const [moduleLayer, setModuleLayer] = useState<"recognize" | "produce">("recognize");
+  const [fluencyRound, setFluencyRound] = useState(0);
+  const [secondsLeft, setSecondsLeft] = useState(FLUENCY_SECONDS);
+
+  useEffect(() => {
+    if (step !== "fluency") return;
+    setSecondsLeft(FLUENCY_SECONDS);
+    const timer = window.setInterval(() => {
+      setSecondsLeft((value) => {
+        if (value <= 1) {
+          setTyped("");
+          setNote("Waktu habis. Ucapkan lagi dari arti saja.");
+          return FLUENCY_SECONDS;
+        }
+        return value - 1;
+      });
+    }, 1000);
+    return () => window.clearInterval(timer);
+  }, [step, fluencyRound]);
 
   async function loadPlan() {
     setError(null);
@@ -91,6 +113,12 @@ export function PracticeSession() {
             itemId: task.itemId,
             typedAnswer: typed,
           }),
+        });
+      } else if (task.source === "grammar") {
+        res = await fetch("/api/grammar/attempt", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ itemId: task.itemId, typed }),
         });
       } else if (task.source === "speak") {
         res = await fetch("/api/speak/attempt", {
@@ -185,6 +213,37 @@ export function PracticeSession() {
     setTyped("");
     setNote(null);
     setHeard(false);
+    setFluencyRound(0);
+    setStep("fluency");
+  }
+
+  async function submitFluency() {
+    if (!plan?.speak) return;
+    setBusy(true);
+    const res = await fetch("/api/speak/attempt", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        itemId: plan.speak.id,
+        phase: "say_again",
+        transcript: typed,
+        attemptSlot: 2,
+        recall: true,
+      }),
+    });
+    const data = await res.json();
+    setBusy(false);
+    if (!data.passed) {
+      setNote(data.headline ?? "Belum tepat. Ucapkan lagi dari arti.");
+      setSecondsLeft(FLUENCY_SECONDS);
+      return;
+    }
+    setTyped("");
+    setNote(null);
+    if (fluencyRound + 1 < FLUENCY_ROUNDS) {
+      setFluencyRound((value) => value + 1);
+      return;
+    }
     setModuleLayer("recognize");
     setStep(plan.module ? "module" : "transfer");
   }
@@ -282,13 +341,16 @@ export function PracticeSession() {
         <p className="text-sm text-[var(--muted)]">{task.promptId}</p>
         <p className="text-base text-[var(--ink)]">{task.meaningId}</p>
         <p className="text-xs text-[var(--muted)]">{task.structureId}</p>
+        {task.source === "speak" || task.source === "grammar" ? (
+          <SpeakMicButton onTranscript={setTyped} disabled={busy} />
+        ) : null}
         <textarea
           value={typed}
           onChange={(event) => setTyped(event.target.value)}
           rows={3}
           required
           className="w-full rounded-md border border-[var(--border)] px-3 py-2 text-sm"
-          placeholder="Ketik English tanpa melihat kalimat model"
+          placeholder="Ucapkan, atau ketik English tanpa melihat kalimat model"
         />
         {note ? <p className="text-sm">{note}</p> : null}
         <button
@@ -380,6 +442,7 @@ export function PracticeSession() {
               void submitSpeak();
             }}
           >
+            <SpeakMicButton onTranscript={setTyped} disabled={busy} />
             <textarea
               value={typed}
               onChange={(event) => setTyped(event.target.value)}
@@ -399,6 +462,42 @@ export function PracticeSession() {
           </form>
         )}
       </section>
+    );
+  }
+
+  if (step === "fluency" && plan.speak) {
+    return (
+      <form
+        className="space-y-3"
+        onSubmit={(event) => {
+          event.preventDefault();
+          void submitFluency();
+        }}
+      >
+        <p className="text-xs uppercase tracking-[0.16em] text-[var(--accent)]">
+          Ulang cepat {fluencyRound + 1}/{FLUENCY_ROUNDS}
+        </p>
+        <p className="text-sm text-[var(--muted)]">Dari arti saja. Jangan lihat English.</p>
+        <p className="text-base text-[var(--ink)]">{plan.speak.targetId}</p>
+        <p className="font-mono text-sm text-[var(--accent)]">{secondsLeft} detik</p>
+        <SpeakMicButton onTranscript={setTyped} disabled={busy} />
+        <textarea
+          value={typed}
+          onChange={(event) => setTyped(event.target.value)}
+          rows={3}
+          required
+          className="w-full rounded-md border border-[var(--border)] px-3 py-2 text-sm"
+          placeholder="Ucapkan dari arti"
+        />
+        {note ? <p className="text-sm">{note}</p> : null}
+        <button
+          type="submit"
+          disabled={busy}
+          className="rounded-md bg-[var(--accent)] px-4 py-2 text-sm font-medium text-[#06221e]"
+        >
+          Periksa
+        </button>
+      </form>
     );
   }
 

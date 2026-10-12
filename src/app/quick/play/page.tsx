@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
-import { QuickSession } from "@/components/quick-session";
+import { QuickSprint } from "@/components/quick-sprint";
 import type { Difficulty } from "@/types/content";
 
 type Props = {
@@ -29,13 +29,13 @@ export default async function QuickPlayPage({ searchParams }: Props) {
         ← Lobby Latihan Cepat
       </Link>
       <h1 className="mt-4 font-display text-2xl tracking-tight text-[var(--ink)]">
-        Sesi cepat
+        Empat kalimat
       </h1>
       <p className="mt-1 text-sm text-[var(--muted)]">
-        Tap jawaban yang benar. Jangan sampai nyawa habis.
+        Lihat arti. Ucapkan atau ketik English. Jangan pilih dari daftar.
       </p>
       <div className="mt-8">
-        <QuickSession level={level} />
+        <QuickSprint level={level} />
       </div>
     </div>
   );

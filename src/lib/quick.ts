@@ -41,6 +41,9 @@ function toCard(moduleId: string, item: ExerciseItem, persona: PersonaId): Quick
     promptId: item.promptId,
     promptStructure: item.promptStructure,
     promptStructureId: item.promptStructureId,
+    targetId:
+      item.choices.find((choice) => choice.key === item.correctKey)?.textId ??
+      item.promptId,
     choices: item.choices.map((c) => ({
       key: c.key,
       text: c.text,

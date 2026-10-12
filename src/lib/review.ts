@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/db";
 import { getModule, getModules } from "@/lib/content";
 import { getBuildDrill } from "@/lib/build";
+import { grammarPrompt } from "@/lib/grammar";
 import { getSpeakItem } from "@/lib/speak-content";
 import { listDue } from "@/lib/memory";
 import type { PersonaId } from "@/lib/persona";
@@ -151,6 +152,25 @@ export async function getReviewQueue(
         wrongCount: row.lapseCount,
         correctStreak: row.correctStreak,
         href: `/build/play?theme=${drill.theme}`,
+      });
+      continue;
+    }
+    if (row.source === "grammar") {
+      const prompt = grammarPrompt(row.itemId);
+      if (!prompt) continue;
+      queue.push({
+        moduleId: "grammar",
+        moduleTitle: "Grammar",
+        moduleTitleId: "Grammar",
+        itemId: row.itemId,
+        prompt: prompt.label,
+        promptId: prompt.meaningId,
+        reason: "ulang_jadwal",
+        reasonId: "Kalimat grammar jatuh tempo",
+        priority: 1750,
+        wrongCount: row.lapseCount,
+        correctStreak: row.correctStreak,
+        href: "/practice",
       });
       continue;
     }

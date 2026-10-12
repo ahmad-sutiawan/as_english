@@ -13,6 +13,7 @@ type OpenRow = {
 
 export function GrammarReference({ book }: { book: GrammarBook }) {
   const [query, setQuery] = useState("");
+  const [queued, setQueued] = useState<string | null>(null);
   const [openRow, setOpenRow] = useState<OpenRow | null>(null);
   const [mounted, setMounted] = useState(false);
   const titleId = useId();
@@ -41,6 +42,19 @@ export function GrammarReference({ book }: { book: GrammarBook }) {
   );
 
   const shown = visible.reduce((sum, chapter) => sum + chapter.laws.length, 0);
+
+  function queueSentence(body: Record<string, string | number>) {
+    void fetch("/api/grammar/queue", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    })
+      .then(async (res) => {
+        const data = await res.json();
+        if (res.ok) setQueued(data.label ?? "Kalimat masuk latihan.");
+      })
+      .catch(() => undefined);
+  }
 
   useEffect(() => {
     setMounted(true);
@@ -95,6 +109,9 @@ export function GrammarReference({ book }: { book: GrammarBook }) {
             className="mt-1 block w-full rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2.5 text-sm text-[var(--ink)] outline-none ring-[var(--accent)] placeholder:text-[var(--muted)] focus:ring-2"
           />
         </label>
+        {queued ? (
+          <p className="mt-2 text-xs text-[var(--accent)]">{queued} masuk antrian latihan.</p>
+        ) : null}
         {query.trim() ? (
           <p className="mt-2 text-xs text-[var(--muted)]">
             {shown} dari {total} hukum
@@ -164,7 +181,7 @@ export function GrammarReference({ book }: { book: GrammarBook }) {
               >
                 <h3 className="text-lg font-semibold text-[var(--ink)]">{chart.titleId}</h3>
                 <div className={`mt-4 grid gap-4 ${chart.tables.length > 1 ? "lg:grid-cols-3" : ""}`}>
-                  {chart.tables.map((table) => (
+                  {chart.tables.map((table, tableIndex) => (
                     <div key={table.titleId} className="overflow-x-auto">
                       {chart.tables.length > 1 ? (
                         <p className="mb-2 text-sm font-medium text-[var(--accent)]">{table.titleId}</p>
@@ -186,7 +203,7 @@ export function GrammarReference({ book }: { book: GrammarBook }) {
                           </tr>
                         </thead>
                         <tbody>
-                          {table.rows.map((row) => (
+                          {table.rows.map((row, rowIndex) => (
                             <tr
                               key={row.subject}
                               className="cursor-pointer hover:bg-[var(--surface-2)]"
@@ -196,6 +213,12 @@ export function GrammarReference({ book }: { book: GrammarBook }) {
                                   subject: row.subject,
                                   context: chart.tables.length > 1 ? table.titleId : chart.titleId,
                                   examples: row.examples,
+                                });
+                                queueSentence({
+                                  kind: "chart",
+                                  chartId: chart.id,
+                                  tableIndex,
+                                  rowIndex,
                                 });
                               }}
                             >
@@ -243,7 +266,16 @@ export function GrammarReference({ book }: { book: GrammarBook }) {
                   id={law.id}
                   className="scroll-mt-24 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 p-5"
                 >
-                  <h3 className="text-lg font-semibold text-[var(--ink)]">{law.titleId}</h3>
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <h3 className="text-lg font-semibold text-[var(--ink)]">{law.titleId}</h3>
+                    <button
+                      type="button"
+                      onClick={() => queueSentence({ kind: "law", lawId: law.id })}
+                      className="rounded-full border border-[var(--border)] px-3 py-1 text-xs text-[var(--ink)] hover:border-[var(--accent)]"
+                    >
+                      Masukkan ke latihan
+                    </button>
+                  </div>
                   <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">{law.whenId}</p>
                   <p className="mt-3 rounded-2xl bg-[var(--surface-2)] px-3 py-2 font-mono text-sm text-[var(--accent)]">
                     {law.formula}
@@ -289,7 +321,7 @@ export function GrammarReference({ book }: { book: GrammarBook }) {
                   </h2>
                   <ul className="mt-4 space-y-3">
                     {openRow.examples.map((example) => (
-                      <li key={example.form} className="rounded-2xl border border-[var(--border)] px-4 py-3">
+                      <li key={`${example.form}-${example.en}`} className="rounded-2xl border border-[var(--border)] px-4 py-3">
                         <p className="font-mono text-xs text-[var(--accent)]">{example.form}</p>
                         <p className="mt-1 text-sm text-[var(--ink)]">{example.en}</p>
                         <p className="mt-1 text-xs text-[var(--muted)]">{example.id}</p>
