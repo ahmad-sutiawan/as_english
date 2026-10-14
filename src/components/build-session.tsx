@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import type { BuildDrill, BuildSlot, BuildStep } from "@/types/build";
 import { SpeakButton } from "@/components/speak-button";
+import type { SlotReason } from "@/lib/build-explain";
 import { speak } from "@/lib/tts";
 
 type Chip = { id: string; text: string };
@@ -15,6 +16,7 @@ type Feedback = {
   why: string;
   pattern: string;
   slots: BuildSlot[];
+  reasons: SlotReason[];
 };
 
 type Summary = {
@@ -178,6 +180,7 @@ export function BuildSession({ theme = "all" }: Props) {
 
   async function onCheck() {
     if (!drill || !step || busy || placed.length === 0) return;
+    const tokens = placed.map((chip) => chip.text);
     setBusy(true);
     setError(null);
     try {
@@ -187,7 +190,7 @@ export function BuildSession({ theme = "all" }: Props) {
         body: JSON.stringify({
           drillId: drill.id,
           step: phase,
-          tokens: placed.map((c) => c.text),
+          tokens,
         }),
       });
       const data = await res.json();
@@ -202,6 +205,7 @@ export function BuildSession({ theme = "all" }: Props) {
         why: data.why,
         pattern: data.pattern,
         slots: data.slots,
+        reasons: data.reasons ?? [],
       };
       setFeedback(fb);
       if (!data.correct) {
@@ -353,20 +357,21 @@ export function BuildSession({ theme = "all" }: Props) {
           <p className="mt-2 text-xs uppercase tracking-wide text-[var(--accent)]">
             {feedback.pattern}
           </p>
-          {!feedback.correct ? (
-            <ul className="mt-3 space-y-1">
-              {feedback.slots.map((slot) => (
-                <li key={`${slot.role}-${slot.text}`}>
-                  <span className="text-[var(--muted)]">{slot.roleId}: </span>
-                  {slot.text}
-                </li>
-              ))}
-            </ul>
-          ) : (
+          <ul className="mt-3 space-y-2">
+            {feedback.reasons.map((reason) => (
+              <li key={`${reason.roleId}-${reason.text}`}>
+                <span className="font-medium text-[var(--ink)]">
+                  {reason.roleId}: {reason.text}.
+                </span>{" "}
+                <span className="text-[var(--muted)]">{reason.becauseId}</span>
+              </li>
+            ))}
+          </ul>
+          {feedback.correct ? (
             <div className="mt-3">
               <SpeakButton text={feedback.sentence} />
             </div>
-          )}
+          ) : null}
         </div>
       ) : null}
 

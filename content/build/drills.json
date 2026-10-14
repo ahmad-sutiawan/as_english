@@ -35868,5 +35868,634 @@
         }
       ]
     }
+  },
+{
+  "theme": "tobe",
+  "id": "tb-i-am",
+  "level": "junior",
+  "meaningId": "Saya terhambat di deploy.",
+  "pattern": "SUBJECT + BE + ADJECTIVE",
+  "assemble": {
+    "tokens": [
+      "I",
+      "am",
+      "blocked",
+      "on",
+      "the",
+      "deploy"
+    ],
+    "distractors": [
+      "is",
+      "are"
+    ],
+    "sentence": "I am blocked on the deploy.",
+    "sentenceId": "Saya terhambat di deploy.",
+    "why": "I sekarang memakai am, bukan is atau are.",
+    "pattern": "SUBJECT + am + ADJECTIVE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "am"
+      },
+      {
+        "role": "Adjective",
+        "roleId": "Keadaan",
+        "text": "blocked"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "on the deploy"
+      }
+    ]
+  },
+  "transform": {
+    "command": "NEGATIVE",
+    "commandId": "Ubah menjadi negatif",
+    "tokens": [
+      "I",
+      "am",
+      "not",
+      "blocked",
+      "on",
+      "the",
+      "deploy"
+    ],
+    "distractors": [
+      "is",
+      "are"
+    ],
+    "sentence": "I am not blocked on the deploy.",
+    "sentenceId": "Saya tidak terhambat di deploy.",
+    "why": "Negatif I tetap memakai am, lalu not.",
+    "pattern": "SUBJECT + am + not",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "am"
+      },
+      {
+        "role": "Negative",
+        "roleId": "Negatif",
+        "text": "not"
+      },
+      {
+        "role": "Adjective",
+        "roleId": "Keadaan",
+        "text": "blocked"
+      }
+    ]
   }
+},
+{
+  "theme": "tobe",
+  "id": "tb-ticket-is",
+  "level": "junior",
+  "meaningId": "Tiket itu siap.",
+  "pattern": "SUBJECT + BE + ADJECTIVE",
+  "assemble": {
+    "tokens": [
+      "The",
+      "ticket",
+      "is",
+      "ready"
+    ],
+    "distractors": [
+      "am",
+      "are"
+    ],
+    "sentence": "The ticket is ready.",
+    "sentenceId": "Tiket itu siap.",
+    "why": "Benda tunggal sekarang memakai is.",
+    "pattern": "SUBJECT + is + ADJECTIVE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "The ticket"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "is"
+      },
+      {
+        "role": "Adjective",
+        "roleId": "Keadaan",
+        "text": "ready"
+      }
+    ]
+  },
+  "transform": {
+    "command": "QUESTION",
+    "commandId": "Ubah menjadi pertanyaan",
+    "tokens": [
+      "Is",
+      "the",
+      "ticket",
+      "ready"
+    ],
+    "distractors": [
+      "Am",
+      "Are"
+    ],
+    "sentence": "Is the ticket ready?",
+    "sentenceId": "Apakah tiket itu siap?",
+    "why": "Pertanyaan memindahkan is ke depan subjek.",
+    "pattern": "BE + SUBJECT + ADJECTIVE",
+    "slots": [
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "Is"
+      },
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "the ticket"
+      },
+      {
+        "role": "Adjective",
+        "roleId": "Keadaan",
+        "text": "ready"
+      }
+    ]
+  }
+},
+{
+  "theme": "tobe",
+  "id": "tb-we-are",
+  "level": "junior",
+  "meaningId": "Kami ada di bridge.",
+  "pattern": "SUBJECT + BE + PLACE",
+  "assemble": {
+    "tokens": [
+      "We",
+      "are",
+      "on",
+      "the",
+      "bridge"
+    ],
+    "distractors": [
+      "am",
+      "is"
+    ],
+    "sentence": "We are on the bridge.",
+    "sentenceId": "Kami ada di bridge.",
+    "why": "We sekarang memakai are.",
+    "pattern": "SUBJECT + are + PLACE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "We"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "are"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "on the bridge"
+      }
+    ]
+  },
+  "transform": {
+    "command": "PAST",
+    "commandId": "Ubah menjadi lampau",
+    "tokens": [
+      "We",
+      "were",
+      "on",
+      "the",
+      "bridge"
+    ],
+    "distractors": [
+      "was",
+      "is"
+    ],
+    "sentence": "We were on the bridge.",
+    "sentenceId": "Kami ada di bridge.",
+    "why": "We lampau memakai were, bukan was.",
+    "pattern": "SUBJECT + were + PLACE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "We"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "were"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "on the bridge"
+      }
+    ]
+  }
+},
+{
+  "theme": "tobe",
+  "id": "tb-she-is",
+  "level": "junior",
+  "meaningId": "Dia pemiliknya.",
+  "pattern": "SUBJECT + BE + COMPLEMENT",
+  "assemble": {
+    "tokens": [
+      "She",
+      "is",
+      "the",
+      "owner"
+    ],
+    "distractors": [
+      "am",
+      "are"
+    ],
+    "sentence": "She is the owner.",
+    "sentenceId": "Dia pemiliknya.",
+    "why": "She sekarang memakai is.",
+    "pattern": "SUBJECT + is + COMPLEMENT",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "She"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "is"
+      },
+      {
+        "role": "Complement",
+        "roleId": "Pelengkap",
+        "text": "the owner"
+      }
+    ]
+  },
+  "transform": {
+    "command": "NEGATIVE",
+    "commandId": "Ubah menjadi negatif",
+    "tokens": [
+      "She",
+      "isn't",
+      "the",
+      "owner"
+    ],
+    "distractors": [
+      "aren't",
+      "wasn't"
+    ],
+    "sentence": "She isn't the owner.",
+    "sentenceId": "Dia bukan pemiliknya.",
+    "why": "She negatif memakai isn't, yaitu is + not.",
+    "pattern": "SUBJECT + isn't + COMPLEMENT",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "She"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "isn't"
+      },
+      {
+        "role": "Complement",
+        "roleId": "Pelengkap",
+        "text": "the owner"
+      }
+    ]
+  }
+},
+{
+  "theme": "tobe",
+  "id": "tb-they-are",
+  "level": "junior",
+  "meaningId": "Mereka ada di peninjauan.",
+  "pattern": "SUBJECT + BE + PLACE",
+  "assemble": {
+    "tokens": [
+      "They",
+      "are",
+      "in",
+      "the",
+      "review"
+    ],
+    "distractors": [
+      "is",
+      "was"
+    ],
+    "sentence": "They are in the review.",
+    "sentenceId": "Mereka ada di peninjauan.",
+    "why": "They sekarang memakai are.",
+    "pattern": "SUBJECT + are + PLACE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "They"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "are"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "in the review"
+      }
+    ]
+  },
+  "transform": {
+    "command": "QUESTION",
+    "commandId": "Ubah menjadi pertanyaan",
+    "tokens": [
+      "Are",
+      "they",
+      "in",
+      "the",
+      "review"
+    ],
+    "distractors": [
+      "Is",
+      "Was"
+    ],
+    "sentence": "Are they in the review?",
+    "sentenceId": "Apakah mereka ada di peninjauan?",
+    "why": "Pertanyaan they memakai Are di depan.",
+    "pattern": "BE + SUBJECT + PLACE",
+    "slots": [
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "Are"
+      },
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "they"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "in the review"
+      }
+    ]
+  }
+},
+{
+  "theme": "tobe",
+  "id": "tb-i-was",
+  "level": "junior",
+  "meaningId": "Saya ada di war room.",
+  "pattern": "SUBJECT + BE + PLACE",
+  "assemble": {
+    "tokens": [
+      "I",
+      "was",
+      "in",
+      "the",
+      "war",
+      "room"
+    ],
+    "distractors": [
+      "were",
+      "am"
+    ],
+    "sentence": "I was in the war room.",
+    "sentenceId": "Saya ada di war room.",
+    "why": "I lampau memakai was, bukan were.",
+    "pattern": "SUBJECT + was + PLACE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "was"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "in the war room"
+      }
+    ]
+  },
+  "transform": {
+    "command": "NEGATIVE",
+    "commandId": "Ubah menjadi negatif",
+    "tokens": [
+      "I",
+      "was",
+      "not",
+      "in",
+      "the",
+      "war",
+      "room"
+    ],
+    "distractors": [
+      "were",
+      "is"
+    ],
+    "sentence": "I was not in the war room.",
+    "sentenceId": "Saya tidak ada di war room.",
+    "why": "Negatif lampau untuk I tetap was, lalu not.",
+    "pattern": "SUBJECT + was + not",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "was"
+      },
+      {
+        "role": "Negative",
+        "roleId": "Negatif",
+        "text": "not"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "in the war room"
+      }
+    ]
+  }
+},
+{
+  "theme": "tobe",
+  "id": "tb-service-was",
+  "level": "junior",
+  "meaningId": "Layanan itu mati.",
+  "pattern": "SUBJECT + BE + ADJECTIVE",
+  "assemble": {
+    "tokens": [
+      "The",
+      "service",
+      "was",
+      "down"
+    ],
+    "distractors": [
+      "were",
+      "is"
+    ],
+    "sentence": "The service was down.",
+    "sentenceId": "Layanan itu mati.",
+    "why": "Benda tunggal lampau memakai was.",
+    "pattern": "SUBJECT + was + ADJECTIVE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "The service"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "was"
+      },
+      {
+        "role": "Adjective",
+        "roleId": "Keadaan",
+        "text": "down"
+      }
+    ]
+  },
+  "transform": {
+    "command": "NEGATIVE",
+    "commandId": "Ubah menjadi negatif",
+    "tokens": [
+      "The",
+      "service",
+      "wasn't",
+      "down"
+    ],
+    "distractors": [
+      "weren't",
+      "isn't"
+    ],
+    "sentence": "The service wasn't down.",
+    "sentenceId": "Layanan itu tidak mati.",
+    "why": "Benda tunggal lampau negatif memakai wasn't.",
+    "pattern": "SUBJECT + wasn't + ADJECTIVE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "The service"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "wasn't"
+      },
+      {
+        "role": "Adjective",
+        "roleId": "Keadaan",
+        "text": "down"
+      }
+    ]
+  }
+},
+{
+  "theme": "tobe",
+  "id": "tb-you-were",
+  "level": "junior",
+  "meaningId": "Kamu sedang on-call.",
+  "pattern": "SUBJECT + BE + ADJECTIVE",
+  "assemble": {
+    "tokens": [
+      "You",
+      "were",
+      "on",
+      "call"
+    ],
+    "distractors": [
+      "was",
+      "are"
+    ],
+    "sentence": "You were on call.",
+    "sentenceId": "Kamu sedang on-call.",
+    "why": "You lampau memakai were, bukan was.",
+    "pattern": "SUBJECT + were + ADJECTIVE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "You"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "were"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "on call"
+      }
+    ]
+  },
+  "transform": {
+    "command": "NEGATIVE",
+    "commandId": "Ubah menjadi negatif",
+    "tokens": [
+      "You",
+      "weren't",
+      "on",
+      "call"
+    ],
+    "distractors": [
+      "wasn't",
+      "aren't"
+    ],
+    "sentence": "You weren't on call.",
+    "sentenceId": "Kamu tidak sedang on-call.",
+    "why": "You lampau negatif memakai weren't.",
+    "pattern": "SUBJECT + weren't + ADJECTIVE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "You"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "weren't"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "on call"
+      }
+    ]
+  }
+}
 ]

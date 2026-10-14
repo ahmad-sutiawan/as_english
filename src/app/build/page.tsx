@@ -30,7 +30,7 @@ export default async function BuildLobbyPage() {
     <LobbyFrame
       kicker="Konstruksi"
       title="Susun kalimat"
-      lede="Pilih tema percakapan. Setiap kalimat disusun dari chip, lalu diubah menjadi negatif, pertanyaan, past, atau future."
+      lede="Susun chip dari awal, lalu ubah kalimat yang sama. Setelah dicek, tiap bagian menjelaskan kenapa susunannya benar."
     >
       <section className="grid gap-3 sm:grid-cols-3">
         <StatTile label="XP" value={String(stats.xp)} hint="Jalur Susun" />

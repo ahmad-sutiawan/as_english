@@ -16,6 +16,11 @@ export const IT_BUILD_THEMES = [
     description: "Acak dari seluruh bank kalimat, dasar sampai percakapan kerja.",
   },
   {
+    id: "tobe",
+    titleId: "To be",
+    description: "Am, is, are, was, dan were. Susun seluruh chip dari awal.",
+  },
+  {
     id: "dasar",
     titleId: "Dasar",
     description: "Urutan kata, be, tempat, waktu, lalu negatif atau pertanyaan.",
@@ -207,6 +212,11 @@ export const HOME_BUILD_THEMES = [
     id: "all",
     titleId: "Semua tema",
     description: "Acak dari seluruh bank kalimat rumah, dasar sampai percakapan keluarga.",
+  },
+  {
+    id: "tobe",
+    titleId: "To be",
+    description: "Am, is, are, was, dan were untuk kegiatan rumah. Susun seluruh chip dari awal.",
   },
   {
     id: "dasar",

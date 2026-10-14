@@ -7990,5 +7990,626 @@
         }
       ]
     }
+  },
+{
+  "theme": "tobe",
+  "id": "home-tb-i-am",
+  "level": "junior",
+  "meaningId": "Saya ada di dapur.",
+  "pattern": "SUBJECT + BE + PLACE",
+  "assemble": {
+    "tokens": [
+      "I",
+      "am",
+      "in",
+      "the",
+      "kitchen"
+    ],
+    "distractors": [
+      "is",
+      "are"
+    ],
+    "sentence": "I am in the kitchen.",
+    "sentenceId": "Saya ada di dapur.",
+    "why": "I sekarang memakai am.",
+    "pattern": "SUBJECT + am + PLACE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "am"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "in the kitchen"
+      }
+    ]
+  },
+  "transform": {
+    "command": "NEGATIVE",
+    "commandId": "Ubah menjadi negatif",
+    "tokens": [
+      "I",
+      "am",
+      "not",
+      "in",
+      "the",
+      "kitchen"
+    ],
+    "distractors": [
+      "is",
+      "are"
+    ],
+    "sentence": "I am not in the kitchen.",
+    "sentenceId": "Saya tidak ada di dapur.",
+    "why": "Negatif I tetap memakai am, lalu not.",
+    "pattern": "SUBJECT + am + not",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "am"
+      },
+      {
+        "role": "Negative",
+        "roleId": "Negatif",
+        "text": "not"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "in the kitchen"
+      }
+    ]
   }
+},
+{
+  "theme": "tobe",
+  "id": "home-tb-soup-is",
+  "level": "junior",
+  "meaningId": "Sup itu panas.",
+  "pattern": "SUBJECT + BE + ADJECTIVE",
+  "assemble": {
+    "tokens": [
+      "The",
+      "soup",
+      "is",
+      "hot"
+    ],
+    "distractors": [
+      "am",
+      "are"
+    ],
+    "sentence": "The soup is hot.",
+    "sentenceId": "Sup itu panas.",
+    "why": "Benda tunggal sekarang memakai is.",
+    "pattern": "SUBJECT + is + ADJECTIVE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "The soup"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "is"
+      },
+      {
+        "role": "Adjective",
+        "roleId": "Keadaan",
+        "text": "hot"
+      }
+    ]
+  },
+  "transform": {
+    "command": "QUESTION",
+    "commandId": "Ubah menjadi pertanyaan",
+    "tokens": [
+      "Is",
+      "the",
+      "soup",
+      "hot"
+    ],
+    "distractors": [
+      "Am",
+      "Are"
+    ],
+    "sentence": "Is the soup hot?",
+    "sentenceId": "Apakah sup itu panas?",
+    "why": "Pertanyaan memindahkan is ke depan subjek.",
+    "pattern": "BE + SUBJECT",
+    "slots": [
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "Is"
+      },
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "the soup"
+      },
+      {
+        "role": "Adjective",
+        "roleId": "Keadaan",
+        "text": "hot"
+      }
+    ]
+  }
+},
+{
+  "theme": "tobe",
+  "id": "home-tb-we-are",
+  "level": "junior",
+  "meaningId": "Kami siap berangkat sekolah.",
+  "pattern": "SUBJECT + BE + ADJECTIVE",
+  "assemble": {
+    "tokens": [
+      "We",
+      "are",
+      "ready",
+      "for",
+      "school"
+    ],
+    "distractors": [
+      "am",
+      "is"
+    ],
+    "sentence": "We are ready for school.",
+    "sentenceId": "Kami siap berangkat sekolah.",
+    "why": "We sekarang memakai are.",
+    "pattern": "SUBJECT + are + ADJECTIVE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "We"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "are"
+      },
+      {
+        "role": "Adjective",
+        "roleId": "Keadaan",
+        "text": "ready"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "for school"
+      }
+    ]
+  },
+  "transform": {
+    "command": "PAST",
+    "commandId": "Ubah menjadi lampau",
+    "tokens": [
+      "We",
+      "were",
+      "ready",
+      "for",
+      "school"
+    ],
+    "distractors": [
+      "was",
+      "is"
+    ],
+    "sentence": "We were ready for school.",
+    "sentenceId": "Kami siap berangkat sekolah.",
+    "why": "We lampau memakai were.",
+    "pattern": "SUBJECT + were + ADJECTIVE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "We"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "were"
+      },
+      {
+        "role": "Adjective",
+        "roleId": "Keadaan",
+        "text": "ready"
+      }
+    ]
+  }
+},
+{
+  "theme": "tobe",
+  "id": "home-tb-she-is",
+  "level": "junior",
+  "meaningId": "Dia ada di rumah.",
+  "pattern": "SUBJECT + BE + PLACE",
+  "assemble": {
+    "tokens": [
+      "She",
+      "is",
+      "at",
+      "home"
+    ],
+    "distractors": [
+      "am",
+      "are"
+    ],
+    "sentence": "She is at home.",
+    "sentenceId": "Dia ada di rumah.",
+    "why": "She sekarang memakai is.",
+    "pattern": "SUBJECT + is + PLACE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "She"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "is"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "at home"
+      }
+    ]
+  },
+  "transform": {
+    "command": "NEGATIVE",
+    "commandId": "Ubah menjadi negatif",
+    "tokens": [
+      "She",
+      "isn't",
+      "at",
+      "home"
+    ],
+    "distractors": [
+      "aren't",
+      "wasn't"
+    ],
+    "sentence": "She isn't at home.",
+    "sentenceId": "Dia tidak ada di rumah.",
+    "why": "She negatif memakai isn't.",
+    "pattern": "SUBJECT + isn't + PLACE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "She"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "isn't"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "at home"
+      }
+    ]
+  }
+},
+{
+  "theme": "tobe",
+  "id": "home-tb-they-are",
+  "level": "junior",
+  "meaningId": "Mereka ada di ruang tamu.",
+  "pattern": "SUBJECT + BE + PLACE",
+  "assemble": {
+    "tokens": [
+      "They",
+      "are",
+      "in",
+      "the",
+      "living",
+      "room"
+    ],
+    "distractors": [
+      "is",
+      "was"
+    ],
+    "sentence": "They are in the living room.",
+    "sentenceId": "Mereka ada di ruang tamu.",
+    "why": "They sekarang memakai are.",
+    "pattern": "SUBJECT + are + PLACE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "They"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "are"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "in the living room"
+      }
+    ]
+  },
+  "transform": {
+    "command": "QUESTION",
+    "commandId": "Ubah menjadi pertanyaan",
+    "tokens": [
+      "Are",
+      "they",
+      "in",
+      "the",
+      "living",
+      "room"
+    ],
+    "distractors": [
+      "Is",
+      "Was"
+    ],
+    "sentence": "Are they in the living room?",
+    "sentenceId": "Apakah mereka ada di ruang tamu?",
+    "why": "Pertanyaan they memakai Are di depan.",
+    "pattern": "BE + SUBJECT",
+    "slots": [
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "Are"
+      },
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "they"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "in the living room"
+      }
+    ]
+  }
+},
+{
+  "theme": "tobe",
+  "id": "home-tb-i-was",
+  "level": "junior",
+  "meaningId": "Saya terlambat.",
+  "pattern": "SUBJECT + BE + ADJECTIVE",
+  "assemble": {
+    "tokens": [
+      "I",
+      "was",
+      "late"
+    ],
+    "distractors": [
+      "were",
+      "am"
+    ],
+    "sentence": "I was late.",
+    "sentenceId": "Saya terlambat.",
+    "why": "I lampau memakai was.",
+    "pattern": "SUBJECT + was + ADJECTIVE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "was"
+      },
+      {
+        "role": "Adjective",
+        "roleId": "Keadaan",
+        "text": "late"
+      }
+    ]
+  },
+  "transform": {
+    "command": "NEGATIVE",
+    "commandId": "Ubah menjadi negatif",
+    "tokens": [
+      "I",
+      "was",
+      "not",
+      "late"
+    ],
+    "distractors": [
+      "were",
+      "is"
+    ],
+    "sentence": "I was not late.",
+    "sentenceId": "Saya tidak terlambat.",
+    "why": "Negatif lampau untuk I tetap was, lalu not.",
+    "pattern": "SUBJECT + was + not",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "I"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "was"
+      },
+      {
+        "role": "Negative",
+        "roleId": "Negatif",
+        "text": "not"
+      },
+      {
+        "role": "Adjective",
+        "roleId": "Keadaan",
+        "text": "late"
+      }
+    ]
+  }
+},
+{
+  "theme": "tobe",
+  "id": "home-tb-light-was",
+  "level": "junior",
+  "meaningId": "Lampu itu mati.",
+  "pattern": "SUBJECT + BE + ADJECTIVE",
+  "assemble": {
+    "tokens": [
+      "The",
+      "light",
+      "was",
+      "off"
+    ],
+    "distractors": [
+      "were",
+      "is"
+    ],
+    "sentence": "The light was off.",
+    "sentenceId": "Lampu itu mati.",
+    "why": "Benda tunggal lampau memakai was.",
+    "pattern": "SUBJECT + was + ADJECTIVE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "The light"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "was"
+      },
+      {
+        "role": "Adjective",
+        "roleId": "Keadaan",
+        "text": "off"
+      }
+    ]
+  },
+  "transform": {
+    "command": "NEGATIVE",
+    "commandId": "Ubah menjadi negatif",
+    "tokens": [
+      "The",
+      "light",
+      "wasn't",
+      "off"
+    ],
+    "distractors": [
+      "weren't",
+      "isn't"
+    ],
+    "sentence": "The light wasn't off.",
+    "sentenceId": "Lampu itu tidak mati.",
+    "why": "Benda tunggal lampau negatif memakai wasn't.",
+    "pattern": "SUBJECT + wasn't + ADJECTIVE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "The light"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "wasn't"
+      },
+      {
+        "role": "Adjective",
+        "roleId": "Keadaan",
+        "text": "off"
+      }
+    ]
+  }
+},
+{
+  "theme": "tobe",
+  "id": "home-tb-you-were",
+  "level": "junior",
+  "meaningId": "Kamu ada di lantai atas.",
+  "pattern": "SUBJECT + BE + PLACE",
+  "assemble": {
+    "tokens": [
+      "You",
+      "were",
+      "upstairs"
+    ],
+    "distractors": [
+      "was",
+      "are"
+    ],
+    "sentence": "You were upstairs.",
+    "sentenceId": "Kamu ada di lantai atas.",
+    "why": "You lampau memakai were.",
+    "pattern": "SUBJECT + were + PLACE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "You"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "were"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "upstairs"
+      }
+    ]
+  },
+  "transform": {
+    "command": "NEGATIVE",
+    "commandId": "Ubah menjadi negatif",
+    "tokens": [
+      "You",
+      "weren't",
+      "upstairs"
+    ],
+    "distractors": [
+      "wasn't",
+      "aren't"
+    ],
+    "sentence": "You weren't upstairs.",
+    "sentenceId": "Kamu tidak ada di lantai atas.",
+    "why": "You lampau negatif memakai weren't.",
+    "pattern": "SUBJECT + weren't + PLACE",
+    "slots": [
+      {
+        "role": "Subject",
+        "roleId": "Subjek",
+        "text": "You"
+      },
+      {
+        "role": "Be",
+        "roleId": "To be",
+        "text": "weren't"
+      },
+      {
+        "role": "Adverbial",
+        "roleId": "Keterangan",
+        "text": "upstairs"
+      }
+    ]
+  }
+}
 ]

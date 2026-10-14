@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { auth } from "@/lib/auth";
+import { explainStep } from "@/lib/build-explain";
 import { getBuildDrill, stepFor, tokensMatch } from "@/lib/build";
 import { getActivePersona } from "@/lib/persona";
 import { recordItemMemory } from "@/lib/memory";
@@ -53,5 +54,6 @@ export async function POST(request: Request) {
     why: expected.why,
     pattern: expected.pattern,
     slots: expected.slots,
+    reasons: explainStep(expected),
   });
 }
