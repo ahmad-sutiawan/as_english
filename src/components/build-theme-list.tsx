@@ -69,7 +69,13 @@ export function BuildThemeList({
           <li key={theme.id}>
             {locked && theme.id !== "dasar" ? (
               <div className={`${lobbyCard} h-full opacity-60`}>
-                <span className="font-display text-2xl text-[var(--ink)]">{theme.titleId}</span>
+                <span className="flex items-start justify-between gap-3">
+                  <span className="font-display text-2xl text-[var(--ink)]">{theme.titleId}</span>
+                  <span className="text-sm font-medium text-[var(--accent)]">{theme.count}</span>
+                </span>
+                <span className="mt-2 block flex-1 text-sm leading-relaxed text-[var(--muted)]">
+                  {theme.description}
+                </span>
                 <span className="mt-2 block text-sm text-[var(--muted)]">
                   Terkunci sampai penempatan dasar lulus.
                 </span>
