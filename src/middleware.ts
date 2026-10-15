@@ -10,6 +10,7 @@ const protectedPrefixes = [
   "/grammar",
   "/practice",
   "/placement",
+  "/mastery",
 ];
 
 export default auth((req) => {
@@ -40,5 +41,7 @@ export const config = {
     "/grammar/:path*",
     "/practice",
     "/placement",
+    "/mastery",
+    "/mastery/:path*",
   ],
 };

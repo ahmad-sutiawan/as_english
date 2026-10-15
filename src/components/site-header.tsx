@@ -15,7 +15,7 @@ export async function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-30 border-b border-[var(--border)] bg-[var(--surface)]">
-      <div className="relative mx-auto flex h-16 max-w-6xl items-center gap-3 px-4">
+      <div className="relative mx-auto flex h-16 w-full max-w-7xl items-center gap-3 px-4">
         <Link
           href={session?.user ? "/dashboard" : "/"}
           className="inline-flex items-center gap-2 rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"

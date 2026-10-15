@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test": "node --import tsx --test src/lib/mastery/*.test.ts",
     "db:up": "docker compose up -d db",
     "db:down": "docker compose down",
     "deploy": "bash scripts/deploy.sh",

@@ -4,7 +4,7 @@ const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
 };
 
-const CLIENT_MARK = "persona-v1";
+const CLIENT_MARK = "grammar-mastery-v1";
 
 function createPrismaClient() {
   const client = new PrismaClient({
@@ -20,11 +20,13 @@ function isClientCurrent(client: PrismaClient): boolean {
     __asMark?: string;
     quickStats?: { upsert?: unknown };
     speakStats?: { upsert?: unknown };
+    grammarLessonProgress?: { upsert?: unknown };
   };
   return (
     c.__asMark === CLIENT_MARK &&
     typeof c.quickStats?.upsert === "function" &&
-    typeof c.speakStats?.upsert === "function"
+    typeof c.speakStats?.upsert === "function" &&
+    typeof c.grammarLessonProgress?.upsert === "function"
   );
 }
 

@@ -12,10 +12,9 @@ const LINKS = [
   { href: "/practice", label: "Latihan" },
   { href: "/build", label: "Susun" },
   { href: "/grammar", label: "Grammar" },
+  { href: "/mastery", label: "Grammar Mastery" },
   { href: "/quick", label: "Cepat" },
   { href: "/speak", label: "Bicara" },
-  { href: "/review", label: "Review" },
-  { href: "/guide", label: "Panduan" },
 ] as const;
 
 type Props = {
@@ -38,8 +37,8 @@ export function SiteNav({ accountLabel, persona, signOutAction }: Props) {
 
   return (
     <>
-      <nav className="ml-auto hidden lg:block" aria-label="Utama">
-        <ul className="flex items-center gap-1">
+      <nav className="ml-auto hidden min-w-0 xl:block" aria-label="Utama">
+        <ul className="flex items-center gap-0.5">
           {LINKS.map((link) => {
             const current = isCurrent(pathname, link.href);
             return (
@@ -47,7 +46,7 @@ export function SiteNav({ accountLabel, persona, signOutAction }: Props) {
                 <Link
                   href={link.href}
                   aria-current={current ? "page" : undefined}
-                  className={`inline-flex h-10 items-center rounded-full px-3.5 text-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] ${
+                  className={`inline-flex h-10 items-center whitespace-nowrap rounded-full px-2.5 text-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] ${
                     current
                       ? "bg-[var(--accent-soft)] font-medium text-[var(--accent)]"
                       : "text-[var(--muted)] hover:bg-[var(--surface-2)] hover:text-[var(--ink)]"
@@ -61,24 +60,24 @@ export function SiteNav({ accountLabel, persona, signOutAction }: Props) {
         </ul>
       </nav>
 
-      <div className="ml-auto flex items-center gap-2 lg:ml-3">
+      <div className="ml-auto flex shrink-0 items-center gap-2 xl:ml-3">
         {persona ? (
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <PersonaSwitch persona={persona} />
           </div>
         ) : null}
         <p
-          className="hidden max-w-40 truncate text-sm text-[var(--ink)] lg:block"
+          className="hidden max-w-36 truncate text-sm text-[var(--ink)] 2xl:block"
           title={accountLabel}
         >
           {accountLabel}
         </p>
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
           <SignOutConfirm action={signOutAction} />
         </div>
         <button
           type="button"
-          className="inline-flex h-10 items-center rounded-full border border-[var(--border)] bg-[var(--surface-2)] px-3.5 text-sm text-[var(--ink)] lg:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+          className="inline-flex h-10 items-center rounded-full border border-[var(--border)] bg-[var(--surface-2)] px-3.5 text-sm text-[var(--ink)] xl:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((value) => !value)}
@@ -90,7 +89,7 @@ export function SiteNav({ accountLabel, persona, signOutAction }: Props) {
       {open ? (
         <div
           id="mobile-nav"
-          className="absolute inset-x-0 top-16 z-40 max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-[var(--border)] bg-[var(--background)] px-4 py-3 shadow-2xl lg:hidden"
+          className="absolute inset-x-0 top-16 z-40 max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-[var(--border)] bg-[var(--background)] px-4 py-3 shadow-2xl xl:hidden"
         >
           <nav aria-label="Utama">
             <ul className="grid gap-1">

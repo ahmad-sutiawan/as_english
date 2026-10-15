@@ -34,6 +34,9 @@ model User {
   buildStats    BuildStats[]
   itemMemories  ItemMemory[]
   learnerStates LearnerState[]
+  grammarLessonProgress GrammarLessonProgress[]
+  grammarExerciseAttempts GrammarExerciseAttempt[]
+  grammarAssessmentAttempts GrammarAssessmentAttempt[]
 }
 
 model QuickStats {
@@ -185,6 +188,62 @@ model ItemMemory {
 
   @@unique([userId, persona, source, itemId])
   @@index([userId, persona, nextReviewAt])
+}
+
+model GrammarLessonProgress {
+  id             String    @id @default(cuid())
+  userId         String
+  lessonId       String
+  status         String    @default("in_progress")
+  bestScore      Int       @default(0)
+  latestScore    Int       @default(0)
+  attemptsCount  Int       @default(0)
+  reviewStep     Int       @default(0)
+  startedAt      DateTime  @default(now())
+  completedAt    DateTime?
+  masteredAt     DateTime?
+  nextReviewAt   DateTime?
+  lastActivityAt DateTime  @default(now())
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, lessonId])
+  @@index([userId, nextReviewAt])
+}
+
+model GrammarExerciseAttempt {
+  id              String   @id @default(cuid())
+  userId          String
+  lessonId        String
+  exerciseId      String
+  kind            String
+  submittedAnswer String   @db.Text
+  isCorrect       Boolean
+  score           Int
+  feedback        String   @db.Text
+  attemptedAt     DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, lessonId])
+  @@index([userId, exerciseId])
+}
+
+model GrammarAssessmentAttempt {
+  id            String    @id @default(cuid())
+  userId        String
+  assessmentId  String
+  score         Int
+  resultDetails Json
+  status        String
+  startedAt     DateTime  @default(now())
+  submittedAt   DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, assessmentId])
 }
 
 model SpeakProgress {
