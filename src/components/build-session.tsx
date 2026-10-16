@@ -68,6 +68,7 @@ export function BuildSession({ theme = "all" }: Props) {
 
   const loadSession = useCallback(async () => {
     setLoading(true);
+    setBusy(false);
     setError(null);
     setSummary(null);
     setFeedback(null);
@@ -152,6 +153,8 @@ export function BuildSession({ theme = "all" }: Props) {
         streak: 0,
         bestStreak: 0,
       });
+    } finally {
+      setBusy(false);
     }
   }
 

@@ -22,7 +22,7 @@ export default async function BuildLobbyPage() {
 
   const stats = await getOrCreateBuildStats(session.user.id, persona);
   const learner = await getLearnerState(session.user.id, persona);
-  const locked = !learner.placementPassed;
+  const locked = persona !== "home" && !learner.placementPassed;
   const counts = countDrillsByTheme(persona);
   const [featured, ...themes] = getBuildThemes(persona);
 
