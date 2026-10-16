@@ -19,6 +19,11 @@ const CHOICES: {
     title: "Rumah",
     detail: "Keluarga, dapur, tetangga, sekolah, dan urusan sehari-hari di rumah.",
   },
+  {
+    id: "parent",
+    title: "Parent",
+    detail: "Susun kalimat orang tua kepada anak usia 3–6 tahun. Menu lain tetap mengikuti Rumah.",
+  },
 ];
 
 export function PersonaPicker() {
@@ -50,8 +55,8 @@ export function PersonaPicker() {
           Pilih persona
         </h1>
         <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--muted)]">
-          Seluruh modul, Susun, Bicara, Cepat, dan Review mengikuti dunia ini. Kamu bisa ganti
-          nanti dari menu.
+          Kerja IT dan Rumah mengubah seluruh latihan. Parent mengubah menu Susun; Latihan,
+          Bicara, Cepat, dan Review tetap mengikuti Rumah. Kamu bisa ganti nanti dari menu.
         </p>
         <div className="mt-8 grid gap-3 sm:grid-cols-2">
           {CHOICES.map((choice) => (

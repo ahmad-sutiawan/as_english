@@ -15,7 +15,7 @@ import { deriveChunks } from "@/lib/form-eval";
 
 function contentBase(persona: PersonaId) {
   const root = path.join(process.cwd(), "content");
-  return persona === "home" ? path.join(root, "home") : root;
+  return persona === "it" ? root : path.join(root, "home");
 }
 
 function readJson<T>(filePath: string): T {

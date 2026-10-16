@@ -67,9 +67,9 @@ export default async function GuidePage() {
 
   const modules = getModules(persona);
   const audience =
-    persona === "home"
-      ? "Latihan ini untuk percakapan di rumah: keluarga, tetangga, sekolah, dan urusan sehari-hari."
-      : "Latihan ini untuk IT Manager, SRE, dan Fullstack.";
+    persona === "it"
+      ? "Latihan ini untuk IT Manager, SRE, dan Fullstack."
+      : "Latihan ini untuk percakapan di rumah: keluarga, tetangga, sekolah, dan urusan sehari-hari.";
 
   return (
     <LobbyFrame

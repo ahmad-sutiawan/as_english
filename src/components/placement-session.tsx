@@ -14,7 +14,13 @@ type Stored = {
   passed: boolean;
 };
 
-export function PlacementSession() {
+export function PlacementSession({
+  passedDetail,
+  failedDetail,
+}: {
+  passedDetail: string;
+  failedDetail: string;
+}) {
   const router = useRouter();
   const [drills, setDrills] = useState<Drill[]>([]);
   const [index, setIndex] = useState(0);
@@ -22,6 +28,7 @@ export function PlacementSession() {
   const [note, setNote] = useState<string | null>(null);
   const [answers, setAnswers] = useState<Stored[]>([]);
   const [done, setDone] = useState<string | null>(null);
+  const [ready, setReady] = useState(false);
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
@@ -29,6 +36,7 @@ export function PlacementSession() {
       const res = await fetch("/api/placement");
       const data = await res.json();
       setDrills((data.drills ?? []) as Drill[]);
+      setReady(true);
     })();
   }, []);
 
@@ -45,8 +53,8 @@ export function PlacementSession() {
     const result = await res.json();
     setDone(
       result.passed
-        ? `Lulus ${result.correct} dari ${drills.length}. Tema percakapan terbuka.`
-        : `${result.correct} dari ${drills.length} lulus. Ulangi penempatan; tema percakapan tetap tertutup.`,
+        ? `Lulus ${result.correct} dari ${drills.length}. ${passedDetail}`
+        : `${result.correct} dari ${drills.length} lulus. ${failedDetail}`,
     );
     if (result.passed) router.push("/practice");
   }
@@ -98,14 +106,17 @@ export function PlacementSession() {
   }
 
   if (done) return <p className="text-sm text-[var(--ink)]">{done}</p>;
+  if (!ready) {
+    return <p className="text-sm text-[var(--muted)]">Menyiapkan kalimat dasar…</p>;
+  }
   if (!drill) {
-    return <p className="text-sm text-[var(--muted)]">Menyiapkan 12 kalimat dasar…</p>;
+    return <p className="text-sm text-[var(--muted)]">Penempatan belum tersedia untuk dunia ini.</p>;
   }
 
   return (
     <form onSubmit={(event) => void check(event)} className="space-y-4">
       <p className="text-xs text-[var(--muted)]">
-        {index + 1}/12 · ketik English dari arti
+        {index + 1}/{drills.length} · ketik English dari arti
       </p>
       <p className="text-lg text-[var(--ink)]">{drill.meaningId}</p>
       <textarea

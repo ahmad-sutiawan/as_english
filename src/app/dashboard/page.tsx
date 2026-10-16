@@ -151,6 +151,11 @@ export default async function DashboardPage() {
               {totalXp} XP terkumpul dari Susun, Bicara, dan Cepat. Streak aktif{" "}
               {activeStreak} hari. Cakupan modul {coverage}%.
             </p>
+            {persona === "parent" ? (
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-[var(--muted)]">
+                Latihan, Bicara, dan Cepat masih memakai dunia Rumah. Susun memakai percakapan Parent.
+              </p>
+            ) : null}
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 href={next.href}

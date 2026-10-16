@@ -1,15 +1,16 @@
 import { prisma } from "@/lib/db";
 
-export const PERSONA_IDS = ["it", "home"] as const;
+export const PERSONA_IDS = ["it", "home", "parent"] as const;
 export type PersonaId = (typeof PERSONA_IDS)[number];
 
 export const PERSONA_LABEL: Record<PersonaId, string> = {
   it: "Kerja IT",
   home: "Rumah",
+  parent: "Parent",
 };
 
 export function isPersonaId(value: string | null | undefined): value is PersonaId {
-  return value === "it" || value === "home";
+  return !!value && (PERSONA_IDS as readonly string[]).includes(value);
 }
 
 export async function getActivePersona(userId: string): Promise<PersonaId | null> {

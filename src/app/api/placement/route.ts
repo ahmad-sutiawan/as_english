@@ -3,9 +3,8 @@ import { z } from "zod";
 import { auth } from "@/lib/auth";
 import { getActivePersona } from "@/lib/persona";
 import { markPlacementPassed } from "@/lib/memory";
-import { getBuildDrills } from "@/lib/build";
+import { getPlacementDrills } from "@/lib/build";
 import { evaluateForm } from "@/lib/form-eval";
-import type { PersonaId } from "@/lib/persona";
 import type { BuildDrill } from "@/types/build";
 
 const checkSchema = z.object({
@@ -18,12 +17,6 @@ const finishSchema = z.object({
     .array(z.object({ id: z.string().min(1), typed: z.string() }))
     .max(12),
 });
-
-function placementDrills(persona: PersonaId): BuildDrill[] {
-  return getBuildDrills(persona)
-    .filter((drill) => drill.theme === "dasar")
-    .slice(0, 12);
-}
 
 function scoreDrill(drill: BuildDrill, typed: string) {
   const models = drill.modelAnswers?.length
@@ -47,7 +40,7 @@ export async function GET() {
   if (!persona) {
     return NextResponse.json({ error: "Pilih persona dulu." }, { status: 409 });
   }
-  const drills = placementDrills(persona).map((drill) => ({
+  const drills = getPlacementDrills(persona).map((drill) => ({
     id: drill.id,
     meaningId: drill.meaningId,
   }));
@@ -65,7 +58,7 @@ export async function POST(request: Request) {
   }
 
   const body = await request.json();
-  const drills = placementDrills(persona);
+  const drills = getPlacementDrills(persona);
   const byId = new Map(drills.map((drill) => [drill.id, drill]));
 
   const check = checkSchema.safeParse(body);

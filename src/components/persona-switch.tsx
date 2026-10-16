@@ -33,7 +33,7 @@ export function PersonaSwitch({ persona, layout = "bar", onChanged }: Props) {
     return (
       <div>
         <p className="px-3 text-xs uppercase tracking-[0.16em] text-[var(--muted)]">Dunia latihan</p>
-        <div className="mt-2 grid grid-cols-2 gap-2" role="group" aria-label="Dunia latihan">
+        <div className="mt-2 grid gap-2" role="group" aria-label="Dunia latihan">
           {(Object.keys(PERSONA_LABEL) as PersonaId[]).map((id) => {
             const active = id === persona;
             return (

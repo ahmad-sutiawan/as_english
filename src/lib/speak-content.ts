@@ -5,7 +5,7 @@ import type { PersonaId } from "@/lib/persona";
 
 function speakRoot(persona: PersonaId) {
   const base = path.join(process.cwd(), "content");
-  return persona === "home" ? path.join(base, "home", "speak") : path.join(base, "speak");
+  return persona === "it" ? path.join(base, "speak") : path.join(base, "home", "speak");
 }
 
 function readJson<T>(filePath: string): T {

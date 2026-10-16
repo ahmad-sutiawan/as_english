@@ -27,6 +27,7 @@ const MODALS = new Set([
   "must",
   "might",
   "would",
+  "may",
   "'ll",
 ]);
 

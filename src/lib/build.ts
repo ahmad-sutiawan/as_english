@@ -315,6 +315,69 @@ export const HOME_BUILD_THEMES = [
   },
 ] as const;
 
+export const PARENT_BUILD_THEMES = [
+  {
+    id: "all",
+    titleId: "Semua tema",
+    description: "Acak dari seluruh percakapan orang tua dengan anak usia 3–6 tahun.",
+  },
+  {
+    id: "bangun",
+    titleId: "Bangun pagi",
+    description: "Gigi, pakaian, dan bersiap sebelum keluar kamar.",
+  },
+  {
+    id: "makan",
+    titleId: "Makan",
+    description: "Tangan, sendok, dan duduk bersama di meja.",
+  },
+  {
+    id: "main",
+    titleId: "Main dan berbagi",
+    description: "Giliran, mainan, dan bermain bersama teman.",
+  },
+  {
+    id: "perasaan",
+    titleId: "Perasaan",
+    description: "Tenang, marah, sedih, dan kata-kata untuk perasaan besar.",
+  },
+  {
+    id: "aturan",
+    titleId: "Aturan lembut",
+    description: "Jalan, suara, dan batas yang menjaga anak tetap aman.",
+  },
+  {
+    id: "tidur",
+    titleId: "Tidur",
+    description: "Piama, cerita, dan lampu yang dimatikan pelan-pelan.",
+  },
+  {
+    id: "berangkat",
+    titleId: "Berangkat",
+    description: "Tas, antar ke sekolah, dan jemput sore hari.",
+  },
+  {
+    id: "jalan",
+    titleId: "Jalan-jalan",
+    description: "Pasar, taman, dan tetap dekat saat berjalan.",
+  },
+  {
+    id: "sakit",
+    titleId: "Sakit",
+    description: "Demam, istirahat, air, dan menemani sampai reda.",
+  },
+  {
+    id: "pujian",
+    titleId: "Pujian",
+    description: "Usaha, giliran, dan kata baik yang diperhatikan.",
+  },
+  {
+    id: "tolong",
+    titleId: "Minta tolong",
+    description: "Bantuan kecil di rumah yang anak bisa ikut kerjakan.",
+  },
+] as const;
+
 export type BuildTheme = {
   id: string;
   titleId: string;
@@ -322,14 +385,16 @@ export type BuildTheme = {
 };
 
 export function getBuildThemes(persona: PersonaId): readonly BuildTheme[] {
-  return persona === "home" ? HOME_BUILD_THEMES : IT_BUILD_THEMES;
+  if (persona === "home") return HOME_BUILD_THEMES;
+  if (persona === "parent") return PARENT_BUILD_THEMES;
+  return IT_BUILD_THEMES;
 }
 
 function drillsPath(persona: PersonaId) {
   const base = path.join(process.cwd(), "content");
-  return persona === "home"
-    ? path.join(base, "home", "build", "drills.json")
-    : path.join(base, "build", "drills.json");
+  if (persona === "home") return path.join(base, "home", "build", "drills.json");
+  if (persona === "parent") return path.join(base, "parent", "build", "drills.json");
+  return path.join(base, "build", "drills.json");
 }
 
 function readDrills(persona: PersonaId): BuildDrill[] {
@@ -339,6 +404,14 @@ function readDrills(persona: PersonaId): BuildDrill[] {
 
 export function getBuildDrills(persona: PersonaId): BuildDrill[] {
   return readDrills(persona);
+}
+
+/** Parent practice uses the Rumah bank, so its placement gate uses those Dasar drills. */
+export function getPlacementDrills(persona: PersonaId): BuildDrill[] {
+  const source = persona === "parent" ? "home" : persona;
+  return getBuildDrills(source)
+    .filter((drill) => drill.theme === "dasar")
+    .slice(0, 12);
 }
 
 export function getBuildDrill(id: string, persona: PersonaId): BuildDrill | null {
