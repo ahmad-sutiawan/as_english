@@ -29,7 +29,13 @@ export default async function ExamPage({ params }: Props) {
   });
 
   return (
-    <LobbyFrame kicker="Evaluasi" title={exam.title} lede={exam.description}>
+    <LobbyFrame
+      kicker="Evaluasi"
+      title={exam.title}
+      lede={exam.description}
+      backHref="/grammar?tab=mastery"
+      backLabel="← Grammar"
+    >
       <p className="text-sm text-[var(--muted)]">
         Bobot: konsep 20%, bentuk kalimat 25%, komunikasi 35%, menulis dan sunting 20%. Kelulusan {exam.passingScore}%.
       </p>
@@ -49,8 +55,8 @@ export default async function ExamPage({ params }: Props) {
       ) : (
         <div className="mt-6 rounded-3xl border border-[var(--border)] p-5">
           <p className="text-sm text-[var(--ink)]">{gate.reason}</p>
-          <Link href="/mastery" className="mt-3 inline-block text-sm underline">
-            Kembali ke dashboard
+          <Link href="/grammar?tab=mastery" className="mt-3 inline-block text-sm underline">
+            Kembali ke Grammar
           </Link>
         </div>
       )}

@@ -189,7 +189,7 @@ export async function getReviewQueue(
         priority: 1700,
         wrongCount: row.lapseCount,
         correctStreak: row.correctStreak,
-        href: "/speak/play",
+        href: "/practice",
       });
     }
   }

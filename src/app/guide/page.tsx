@@ -8,9 +8,7 @@ import {
   BUILD_XP_DRILL,
   BUILD_XP_PERFECT_BONUS,
 } from "@/lib/build";
-import { QUICK_SESSION_SIZE } from "@/lib/quick";
-import { SPEAK_XP_COMPLETE, SPEAK_XP_MASTERED } from "@/lib/speak";
-import { LobbyFrame, lobbyCard } from "@/components/lobby-frame";
+import { LobbyFrame } from "@/components/lobby-frame";
 import { PERSONA_LABEL, getActivePersona } from "@/lib/persona";
 
 const surfaces = [
@@ -18,35 +16,28 @@ const surfaces = [
     href: "/dashboard",
     title: "Dashboard",
     when: "Buka ini setiap kali mulai latihan. Papan sudah memilih langkah berikutnya.",
-    do: "Lihat sapaan, cakupan modul, XP gabungan, dan streak aktif. Tombol utama membawa ke Review, Susun, Bicara, atau Cepat sesuai kondisi akun.",
-    next: "Ikuti tombol itu sebelum memilih tema sendiri. Angka di kartu jalur hanya memberitahu mana yang tertinggal.",
+    do: "Lihat sapaan, cakupan modul, XP Susun, dan streak aktif. Tombol utama membawa ke penempatan atau sesi Latihan sesuai kondisi akun.",
+    next: "Ikuti tombol itu sebelum memilih tema sendiri. Kartu jalur di bawahnya menampilkan Susun, Grammar, dan Review.",
   },
   {
     href: "/build",
     title: "Susun",
     when: "Pakai ini untuk mengunci urutan kata. Tema selain Dasar terbuka setelah penempatan lulus.",
     do: `Pilih satu tema. Susun chip menjadi kalimat, lalu ubah kalimat itu menjadi negatif, pertanyaan, past, atau future. Sesi mengambil sampai ${BUILD_SESSION_SIZE} kalimat. +${BUILD_XP_DRILL} XP per kalimat selesai, +${BUILD_XP_PERFECT_BONUS} jika seluruh sesi benar pada percobaan pertama.`,
-    next: "Mulai dari tema Dasar. Setelah urutan kata terasa stabil, pilih satu tema percakapan yang sama dengan pekerjaan hari itu. Pindah ke Bicara untuk kalimat yang baru saja disusun.",
+    next: "Mulai dari tema Dasar. Setelah urutan kata terasa stabil, pilih satu tema percakapan yang sama dengan kebutuhan hari itu.",
   },
   {
-    href: "/speak",
-    title: "Bicara",
-    when: "Pakai ini untuk mengucapkan kalimat tanpa melihat teks English.",
-    do: `Satu item berjalan enam tahap: Listen, Retrieve, Construct, Speak it, Work scenario, lalu Say again. Jawaban diucapkan, tidak diketik. +${SPEAK_XP_COMPLETE} XP saat selesai, +${SPEAK_XP_MASTERED} jika item itu dikuasai.`,
-    next: "Ulangi item yang masih tersendat sebelum menambah level. Setelah suara mengikuti susunan kata, jaga pengenalan lewat Cepat.",
-  },
-  {
-    href: "/quick",
-    title: "Cepat",
-    when: "Pakai ini untuk menjaga akurasi setelah konstruksi dan ucapan sudah jalan.",
-    do: `${QUICK_SESSION_SIZE} soal pemanasan dari arti, tanpa nyawa dan tanpa XP. Jawaban yang salah langsung masuk lapis keluarkan pada sesi yang sama.`,
-    next: "Pemanasan selesai berarti pengenalan hari itu sudah dicek. Lanjut ke produksi di sesi latihan.",
+    href: "/grammar",
+    title: "Grammar",
+    when: "Pakai ini untuk belajar struktur secara terurut lewat Kurikulum Mastery atau mencari rumus cepat lewat Referensi Hukum.",
+    do: "Tab Kurikulum Mastery berisi fase belajar, modul, lesson bertahap, review, dan ujian. Tab Referensi Hukum berisi 4 langkah saat buntu, tabel rumus interaktif, dan hukum grammar lengkap.",
+    next: "Lanjutkan lesson berikutnya di Kurikulum Mastery, atau masukkan contoh kalimat dari Referensi Hukum ke antrian latihan.",
   },
   {
     href: "/review",
     title: "Review",
     when: "Pakai ini di awal sesi setiap kali ada soal jatuh tempo.",
-    do: "Antrian berisi kalimat dari modul, Susun, dan Bicara. Jaraknya 1, 3, 7, 16, lalu 35 hari. Benar pada jarak 35 hari mengeluarkan item dari antrian harian.",
+    do: "Antrian berisi kalimat dari modul, Susun, dan Grammar. Jaraknya 1, 3, 7, 16, lalu 35 hari. Benar pada jarak 35 hari mengeluarkan item dari antrian harian.",
     next: "Dashboard membuka sesi latihan, yang mengerjakan antrian ini sebelum soal baru.",
   },
   {
@@ -117,7 +108,7 @@ export default async function GuidePage() {
           </li>
           <li className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 px-5 py-4">
             <span className="font-medium text-[var(--ink)]">3. Item jatuh tempo. </span>
-            Modul, Susun, dan Bicara berbagi satu jadwal: 1, 3, 7, 16, 35 hari.
+            Modul, Susun, dan Grammar berbagi satu jadwal: 1, 3, 7, 16, 35 hari.
           </li>
           <li className="rounded-3xl border border-[var(--border)] bg-[var(--surface)]/60 px-5 py-4">
             <span className="font-medium text-[var(--ink)]">4. Satu transformasi dan satu ucapan. </span>
@@ -131,7 +122,7 @@ export default async function GuidePage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-display text-3xl text-[var(--ink)]">Enam permukaan</h2>
+        <h2 className="font-display text-3xl text-[var(--ink)]">Lima permukaan</h2>
         <ul className="mt-4 grid gap-3 lg:grid-cols-2">
           {surfaces.map((surface) => (
             <li
@@ -184,17 +175,15 @@ export default async function GuidePage() {
         </h2>
         <ul className="mt-3 space-y-2 text-sm leading-relaxed text-[var(--muted)]">
           <li>
-            XP Susun, Bicara, dan Cepat dihitung terpisah. Dashboard menjumlahkan
-            ketiganya sebagai XP terkumpul.
+            XP dan streak harian dihitung dari latihan Susun.
           </li>
           <li>
-            Streak tiap jalur naik sekali pada hari itu, menurut kalender
-            Jakarta, dan kembali ke 1 jika sehari terlewat. Streak aktif di
-            papan adalah nilai tertinggi dari ketiga jalur.
+            Streak naik sekali pada hari itu, menurut kalender Jakarta, dan
+            kembali ke 1 jika sehari terlewat.
           </li>
           <li>
             Cakupan modul adalah soal modul yang sudah selesai dibanding seluruh
-            soal. Angka itu terpisah dari XP latihan cepat.
+            soal. Progres Kurikulum Mastery dicatat terpisah di halaman Grammar.
           </li>
           <li>
             Akurasi dan jumlah dikuasai berasal dari percobaan modul. Itulah

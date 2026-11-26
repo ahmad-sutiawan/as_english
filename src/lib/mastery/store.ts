@@ -247,7 +247,7 @@ export async function submitExam(userId: string, examId: string, answers: Record
 export async function loadDashboard(userId: string) {
   const published = getPublishedLessons();
   const rows = await prisma.grammarLessonProgress.findMany({
-    where: { userId },
+    where: { userId, NOT: { lessonId: { startsWith: "gov:" } } },
     orderBy: { lastActivityAt: "desc" },
   });
   const snaps: ProgressSnap[] = rows.map((row) => ({
@@ -275,7 +275,7 @@ export async function loadDashboard(userId: string) {
   const latest = rows[0];
   const phase = next ? getPhases().find((item) => item.id === getModule(next.moduleId)?.phaseId) : getPhases()[0];
   const assessments = await prisma.grammarAssessmentAttempt.findMany({
-    where: { userId },
+    where: { userId, NOT: { assessmentId: { startsWith: "gov:" } } },
     orderBy: { startedAt: "desc" },
     take: 5,
   });

@@ -3,9 +3,9 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { getModules } from "@/lib/content";
 import { getLearningStats } from "@/lib/review";
-import { getOrCreateQuickStats } from "@/lib/quick";
-import { getOrCreateSpeakStats } from "@/lib/speak";
 import { getOrCreateBuildStats } from "@/lib/build";
+import { loadDashboard as loadMasteryDashboard } from "@/lib/mastery/store";
+import { loadGovDashboard } from "@/lib/governance/store";
 import { ModuleCatalog } from "@/components/module-catalog";
 import { PersonaPicker } from "@/components/persona-picker";
 import { PERSONA_LABEL, getActivePersona } from "@/lib/persona";
@@ -44,14 +44,14 @@ export default async function DashboardPage() {
   const modules = getModules(persona);
   const learner = await getLearnerState(session.user.id, persona);
   const dueItems = await countDue(session.user.id, persona);
-  const [progressRows, stats, quickStats, speakStats, buildStats] = await Promise.all([
+  const [progressRows, stats, buildStats, mastery, governance] = await Promise.all([
     prisma.progress.findMany({
       where: { userId: session.user.id },
     }),
     getLearningStats(session.user.id, persona),
-    getOrCreateQuickStats(session.user.id, persona),
-    getOrCreateSpeakStats(session.user.id, persona),
     getOrCreateBuildStats(session.user.id, persona),
+    loadMasteryDashboard(session.user.id),
+    persona === "it" ? loadGovDashboard(session.user.id) : Promise.resolve(null),
   ]);
 
   const moduleIds = new Set(modules.map((module) => module.id));
@@ -64,8 +64,8 @@ export default async function DashboardPage() {
   const totalItems = modules.reduce((sum, module) => sum + module.itemCount, 0);
   const doneItems = Object.values(progressByModule).reduce((sum, row) => sum + row.done, 0);
   const coverage = totalItems > 0 ? Math.round((doneItems / totalItems) * 100) : 0;
-  const totalXp = buildStats.xp + speakStats.xp + quickStats.xp;
-  const activeStreak = Math.max(buildStats.streak, speakStats.streak, quickStats.streak);
+  const totalXp = buildStats.xp;
+  const activeStreak = buildStats.streak;
   const name = firstName(session.user.name, session.user.email);
 
   const next = !learner.placementPassed
@@ -96,22 +96,15 @@ export default async function DashboardPage() {
       action: "Susun",
     },
     {
-      href: "/speak",
-      kicker: "Produksi",
-      title: "Bicara",
-      detail: "Dengar, ingat, susun, lalu ucapkan. Tanpa mengetik jawaban.",
-      xp: speakStats.xp,
-      streak: speakStats.streak,
-      action: "Bicara",
-    },
-    {
-      href: "/quick",
-      kicker: "Akurasi",
-      title: "Cepat",
-      detail: "Empat soal pemanasan, tanpa nyawa. Salah langsung diketik ulang.",
-      xp: quickStats.xp,
-      streak: quickStats.streak,
-      action: "Cepat",
+      href: "/grammar",
+      kicker: "Kurikulum & Referensi",
+      title: "Grammar",
+      detail: "Kurikulum Grammar Mastery bertahap, lengkap dengan referensi hukum dan tabel rumus.",
+      xp: mastery.completed,
+      streak: mastery.due.length,
+      action: "Grammar",
+      xpLabel: `dari ${mastery.publishedCount} lesson`,
+      streakLabel: "jatuh tempo",
     },
     {
       href: "/review",
@@ -127,6 +120,22 @@ export default async function DashboardPage() {
       xpLabel: "dikuasai",
       streakLabel: "jatuh tempo",
     },
+    ...(governance
+      ? [
+          {
+            href: "/governance",
+            kicker: "Khusus Kerja IT · SMB",
+            title: "IT Governance",
+            detail:
+              "Kursus COBIT 2019, ISO 27001:2022, NIST CSF 2.0, ITIL 4, DRP/UU PDP, dan KPI/KRI.",
+            xp: governance.completed,
+            streak: governance.mastered,
+            action: "IT Governance",
+            xpLabel: `dari ${governance.totalModules} modul`,
+            streakLabel: "dikuasai",
+          },
+        ]
+      : []),
   ];
 
   const meters = [
@@ -148,12 +157,12 @@ export default async function DashboardPage() {
               {greeting(jakartaHour())}, {name}
             </h1>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--muted)]">
-              {totalXp} XP terkumpul dari Susun, Bicara, dan Cepat. Streak aktif{" "}
+              {totalXp} XP terkumpul dari Susun. Streak aktif{" "}
               {activeStreak} hari. Cakupan modul {coverage}%.
             </p>
             {persona === "parent" ? (
               <p className="mt-3 max-w-xl text-sm leading-relaxed text-[var(--muted)]">
-                Latihan, Bicara, dan Cepat masih memakai dunia Rumah. Susun memakai percakapan Parent.
+                Latihan dan Review masih memakai dunia Rumah. Susun memakai percakapan Parent.
               </p>
             ) : null}
             <div className="mt-6 flex flex-wrap gap-3">
@@ -221,7 +230,11 @@ export default async function DashboardPage() {
           ))}
         </section>
 
-        <section className="dash-rise dash-rise-3 mt-8 grid gap-3 md:grid-cols-2">
+        <section
+          className={`dash-rise dash-rise-3 mt-8 grid gap-3 ${
+            tracks.length === 4 ? "md:grid-cols-2" : "md:grid-cols-3"
+          }`}
+        >
           {tracks.map((track) => (
             <article
               key={track.href}

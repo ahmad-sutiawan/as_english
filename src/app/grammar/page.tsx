@@ -1,26 +1,58 @@
-import { redirect } from "next/navigation";
+import { GrammarHub, type GrammarTab } from "@/components/grammar-hub";
 import { GrammarReference } from "@/components/grammar-reference";
 import { LobbyFrame } from "@/components/lobby-frame";
-import { auth } from "@/lib/auth";
+import { MasteryOverview } from "@/components/mastery/mastery-overview";
 import { getGrammarBook } from "@/lib/grammar";
-import { getActivePersona } from "@/lib/persona";
+import { getModules, getPhases, getPublishedLessons } from "@/lib/mastery/catalog";
+import { finalExam, foundationExam } from "@/lib/mastery/content/exams";
+import { requireLearnerId } from "@/lib/mastery/guard";
+import { examUnlocked, loadDashboard } from "@/lib/mastery/store";
 
-export default async function GrammarPage() {
-  const session = await auth();
-  if (!session?.user?.id) redirect("/login");
+export const dynamic = "force-dynamic";
 
-  const persona = await getActivePersona(session.user.id);
-  if (!persona) redirect("/dashboard");
+type Props = {
+  searchParams: Promise<{ tab?: string }>;
+};
+
+export default async function GrammarPage({ searchParams }: Props) {
+  const userId = await requireLearnerId();
+  const { tab } = await searchParams;
+  const initialTab: GrammarTab = tab === "referensi" ? "referensi" : "mastery";
+
+  const data = await loadDashboard(userId);
+  const phases = getPhases();
+  const modules = getModules();
+  const published = getPublishedLessons();
+  const rowSnap = data.rows.map((row) => ({ lessonId: row.lessonId, status: row.status }));
+  const foundation = examUnlocked(foundationExam, rowSnap);
+  const finalGate = examUnlocked(finalExam, rowSnap);
 
   const book = getGrammarBook();
+  const totalLaws = book.chapters.reduce((sum, chapter) => sum + chapter.laws.length, 0);
 
   return (
     <LobbyFrame
-      kicker="Referensi"
-      title="Hukum grammar"
-      lede="Kalau susunan kalimat macet, tentukan maksud dan waktu, lalu salin rumusnya. Halaman ini tidak dinilai dan tidak mengubah progres."
+      kicker="Kurikulum & Referensi"
+      title="Grammar"
+      lede="Pelajari grammar bertahap lewat Kurikulum Mastery, atau buka Referensi Hukum dan tabel rumus kapan pun susunan kalimat macet."
     >
-      <GrammarReference book={book} />
+      <GrammarHub
+        key={initialTab}
+        initialTab={initialTab}
+        masteryBadge={`${data.percent}% · ${data.completed}/${data.publishedCount} lesson`}
+        referenceBadge={`${totalLaws} hukum · ${book.charts.length} tabel`}
+        masteryContent={
+          <MasteryOverview
+            data={data}
+            phases={phases}
+            modules={modules}
+            published={published}
+            foundation={foundation}
+            finalGate={finalGate}
+          />
+        }
+        referenceContent={<GrammarReference book={book} />}
+      />
     </LobbyFrame>
   );
 }

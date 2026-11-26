@@ -35,6 +35,8 @@ export default async function ModuleDetailPage({ params }: Props) {
       kicker={phase?.title ?? "Modul"}
       title={current.title}
       lede={current.description}
+      backHref="/grammar?tab=mastery"
+      backLabel="← Grammar"
     >
       <p className="text-sm text-[var(--muted)]">
         Perkiraan {current.estimatedMinutes} menit · {done}/{published.length || 0} lesson terbit selesai

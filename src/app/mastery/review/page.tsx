@@ -14,6 +14,8 @@ export default async function ReviewPage() {
       kicker="Review"
       title="Materi yang jatuh tempo"
       lede="Jarak ulang dimulai dari 1, 3, 7, 14, lalu 30 hari. Nilai mastery di bawah 80% menarik jadwal kembali ke 1 hari."
+      backHref="/grammar?tab=mastery"
+      backLabel="← Grammar"
     >
       {data.due.length === 0 ? (
         <p className="text-sm text-[var(--muted)]">

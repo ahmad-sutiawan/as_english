@@ -16,6 +16,8 @@ export default async function RoadmapPage() {
       kicker="Roadmap"
       title="Enam fase, 29 modul"
       lede="Materi berjalan dari kalimat dasar menuju tulisan profesional. Lesson yang belum terbit tidak bisa dibuka."
+      backHref="/grammar?tab=mastery"
+      backLabel="← Grammar"
     >
       <div className="grid gap-6">
         {phases.map((phase) => (

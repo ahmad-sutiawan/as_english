@@ -38,8 +38,8 @@ export default async function LessonPage({ params }: Props) {
       <div className="mx-auto max-w-3xl px-4 py-8 sm:py-12">
         <StartLesson lessonId={lesson.id} />
         <nav className="text-sm text-[var(--muted)]" aria-label="Jejak">
-          <Link href="/mastery" className="underline">
-            Grammar Mastery
+          <Link href="/grammar?tab=mastery" className="underline">
+            Grammar
           </Link>
           <span> / </span>
           <Link href={`/mastery/module/${grammarModule?.slug ?? ""}`} className="underline">

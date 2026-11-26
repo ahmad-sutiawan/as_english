@@ -7,14 +7,15 @@ import { SignOutConfirm } from "@/components/sign-out-confirm";
 import { PersonaSwitch } from "@/components/persona-switch";
 import type { PersonaId } from "@/lib/persona";
 
-const LINKS = [
-  { href: "/dashboard", label: "Dashboard" },
-  { href: "/practice", label: "Latihan" },
-  { href: "/build", label: "Susun" },
-  { href: "/grammar", label: "Grammar" },
-  { href: "/mastery", label: "Grammar Mastery" },
-  { href: "/quick", label: "Cepat" },
-  { href: "/speak", label: "Bicara" },
+const BASE_LINKS = [
+  { href: "/dashboard", label: "Dashboard", prefixes: ["/dashboard"] },
+  { href: "/practice", label: "Latihan", prefixes: ["/practice"] },
+  { href: "/build", label: "Susun", prefixes: ["/build"] },
+  { href: "/grammar", label: "Grammar", prefixes: ["/grammar", "/mastery"] },
+] as const;
+
+const IT_ONLY_LINKS = [
+  { href: "/governance", label: "IT Governance", prefixes: ["/governance"] },
 ] as const;
 
 type Props = {
@@ -23,13 +24,14 @@ type Props = {
   signOutAction: () => Promise<void>;
 };
 
-function isCurrent(pathname: string, href: string) {
-  return pathname === href || pathname.startsWith(`${href}/`);
+function isCurrent(pathname: string, prefixes: readonly string[]) {
+  return prefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`));
 }
 
 export function SiteNav({ accountLabel, persona, signOutAction }: Props) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const links = persona === "it" ? [...BASE_LINKS, ...IT_ONLY_LINKS] : [...BASE_LINKS];
 
   useEffect(() => {
     setOpen(false);
@@ -39,8 +41,8 @@ export function SiteNav({ accountLabel, persona, signOutAction }: Props) {
     <>
       <nav className="ml-auto hidden min-w-0 xl:block" aria-label="Utama">
         <ul className="flex items-center gap-0.5">
-          {LINKS.map((link) => {
-            const current = isCurrent(pathname, link.href);
+          {links.map((link) => {
+            const current = isCurrent(pathname, link.prefixes);
             return (
               <li key={link.href}>
                 <Link
@@ -93,8 +95,8 @@ export function SiteNav({ accountLabel, persona, signOutAction }: Props) {
         >
           <nav aria-label="Utama">
             <ul className="grid gap-1">
-              {LINKS.map((link) => {
-                const current = isCurrent(pathname, link.href);
+              {links.map((link) => {
+                const current = isCurrent(pathname, link.prefixes);
                 return (
                   <li key={link.href}>
                     <Link

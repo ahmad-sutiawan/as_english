@@ -8,21 +8,25 @@ export function LobbyFrame({
   kicker,
   title,
   lede,
+  backHref = "/dashboard",
+  backLabel = "← Dashboard",
   children,
 }: {
   kicker: string;
   title: string;
   lede: string;
+  backHref?: string;
+  backLabel?: string;
   children: ReactNode;
 }) {
   return (
     <div className="dash-shell min-h-[calc(100vh-4rem)]">
       <div className="mx-auto max-w-6xl px-4 py-8 sm:py-12">
         <Link
-          href="/dashboard"
+          href={backHref}
           className={`inline-flex h-10 items-center rounded-full border border-[var(--border)] bg-[var(--surface)]/70 px-4 text-sm text-[var(--muted)] hover:text-[var(--ink)] ${ring}`}
         >
-          ← Dashboard
+          {backLabel}
         </Link>
         <header className="dash-rise mt-8 max-w-2xl">
           <p className="text-xs uppercase tracking-[0.22em] text-[var(--accent)]">{kicker}</p>

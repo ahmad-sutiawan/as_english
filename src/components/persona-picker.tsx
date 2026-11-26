@@ -55,8 +55,8 @@ export function PersonaPicker() {
           Pilih persona
         </h1>
         <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--muted)]">
-          Kerja IT dan Rumah mengubah seluruh latihan. Parent mengubah menu Susun; Latihan,
-          Bicara, Cepat, dan Review tetap mengikuti Rumah. Kamu bisa ganti nanti dari menu.
+          Kerja IT dan Rumah mengubah seluruh latihan. Parent mengubah menu Susun; Latihan
+          dan Review tetap mengikuti Rumah. Kamu bisa ganti nanti dari menu.
         </p>
         <div className="mt-8 grid gap-3 sm:grid-cols-2">
           {CHOICES.map((choice) => (
