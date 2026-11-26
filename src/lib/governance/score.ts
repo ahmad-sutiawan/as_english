@@ -24,6 +24,7 @@ export function toPublicGovExercise(ex: GovExercise): PublicGovExercise {
     prompt: ex.prompt,
     context: ex.context,
     options: ex.options,
+    rubricLabels: ex.rubric?.map((item) => item.label),
     points: ex.points,
     topic: ex.topic,
   };
@@ -58,6 +59,34 @@ export function scoreGovExercise(ex: GovExercise, rawAnswer: string): GovExercis
         ? `Tepat. ${ex.explanation}`
         : `Belum tepat. Jawaban benar: ${label}. ${ex.explanation}`,
       correctAnswer: label,
+    };
+  }
+
+  if (ex.type === "writing") {
+    const normSubmitted = normalize(submitted);
+    const rubric = ex.rubric ?? [];
+    const hitLabels: string[] = [];
+    const missingLabels: string[] = [];
+    for (const item of rubric) {
+      const hit = item.keywords.some((kw) => normSubmitted.includes(normalize(kw)));
+      if (hit) hitLabels.push(item.label);
+      else missingLabels.push(item.label);
+    }
+    const minRequired = Math.max(1, Math.ceil(rubric.length * 0.65));
+    const matched = rubric.length > 0 ? hitLabels.length >= minRequired : normSubmitted.length >= 25;
+    const model = ex.modelAnswer ?? primaryCorrect;
+    const detail =
+      missingLabels.length > 0
+        ? `Poin yang belum terlihat: ${missingLabels.join(", ")}. `
+        : "Seluruh elemen rubrik terpenuhi. ";
+    return {
+      exerciseId: ex.id,
+      correct: matched,
+      score: matched ? ex.points : 0,
+      feedback: `${matched ? "Tepat." : "Perlu diperkuat."} ${detail}${ex.explanation}${
+        model ? ` Contoh jawaban model: "${model}"` : ""
+      }`,
+      correctAnswer: model,
     };
   }
 

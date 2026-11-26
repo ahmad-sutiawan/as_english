@@ -634,13 +634,28 @@ export const modulesPart1: GovModule[] = [
     executiveEnglish: [
       {
         situation: "Melaporkan risiko tersisa (residual risk) ke Direksi",
-        en: "Enforcing MFA reduces the likelihood of account takeover from high to low, bringing the residual risk within our risk appetite.",
-        id: "Mewajibkan MFA menurunkan kemungkinan pengambilalihan akun dari tinggi menjadi rendah, sehingga risiko tersisa berada dalam batas toleransi kita.",
+        en: "Enforcing MFA reduces the likelihood of account takeover from high to low, bringing residual risk squarely within our board-approved risk appetite.",
+        id: "Mewajibkan MFA menurunkan kemungkinan pengambilalihan akun dari tinggi menjadi rendah, membawa risiko tersisa tepat di dalam risk appetite yang disetujui Direksi.",
       },
       {
-        situation: "Menjelaskan 4 opsi perlakuan risiko",
-        en: "For this risk, we recommend mitigating the exposure with MFA and transferring catastrophic financial loss through cyber insurance.",
-        id: "Untuk risiko ini, kami merekomendasikan mitigasi paparan dengan MFA dan mentransfer kerugian finansial besar melalui asuransi siber.",
+        situation: "Menjelaskan 4 opsi perlakuan risiko ke CFO",
+        en: "For catastrophic cyber exposure, we recommend mitigating likelihood with foundational controls and transferring tail financial loss through cyber insurance.",
+        id: "Untuk paparan siber katastrofik, kami merekomendasikan mitigasi probabilitas dengan kontrol fundamental dan mentransfer kerugian finansial ekstrem lewat asuransi siber.",
+      },
+      {
+        situation: "Mempresentasikan postur keamanan memakai NIST CSF 2.0",
+        en: "Under NIST CSF 2.0, elevating 'Govern' ensures cybersecurity investment is driven by enterprise risk priorities rather than reactive tool purchases.",
+        id: "Dalam NIST CSF 2.0, menempatkan 'Govern' di puncak memastikan investasi keamanan siber digerakkan oleh prioritas risiko bisnis, bukan pembelian alat secara reaktif.",
+      },
+      {
+        situation: "Menjelaskan nilai bisnis sertifikasi ISO 27001:2022 ke CEO",
+        en: "Aligning with ISO 27001:2022 shortens enterprise sales cycles by answering client security questionnaires with an independently audited control baseline.",
+        id: "Penyelarasan dengan ISO 27001:2022 memperpendek siklus penjualan enterprise karena menjawab kuesioner keamanan klien lewat baseline kontrol yang teraudit independen.",
+      },
+      {
+        situation: "Menegaskan akuntabilitas offboarding lintas HR & IT",
+        en: "Tightening our Joiner-Mover-Leaver SLA to under 24 hours eliminates one of the highest-frequency audit findings and insider-threat vectors.",
+        id: "Memperketat SLA Joiner-Mover-Leaver di bawah 24 jam menghilangkan salah satu temuan audit paling sering dan vektor ancaman internal.",
       },
     ],
     practice: [

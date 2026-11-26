@@ -189,6 +189,31 @@ export function GovQuizRunner({
                 );
               })}
             </div>
+          ) : current.type === "writing" ? (
+            <div className="mt-3 space-y-2">
+              {current.rubricLabels && current.rubricLabels.length > 0 ? (
+                <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-2)]/60 px-4 py-3 text-xs text-[var(--muted)]">
+                  <p className="font-medium text-[var(--ink)]">
+                    Elemen wajib dalam jawaban (bahasa Indonesia atau Inggris):
+                  </p>
+                  <ul className="mt-1.5 list-disc space-y-1 pl-4">
+                    {current.rubricLabels.map((label) => (
+                      <li key={label}>{label}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+              <textarea
+                rows={4}
+                value={answers[current.id] ?? ""}
+                onChange={(event) =>
+                  setAnswers((prev) => ({ ...prev, [current.id]: event.target.value }))
+                }
+                disabled={Boolean(results) || pending}
+                placeholder="Tulis memo / respons eksekutif Anda secara ringkas dan terstruktur..."
+                className={`w-full rounded-2xl border border-[var(--border)] bg-[var(--background)] px-4 py-3 text-sm text-[var(--ink)] ${ring}`}
+              />
+            </div>
           ) : (
             <input
               type="text"

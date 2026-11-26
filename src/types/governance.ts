@@ -1,6 +1,11 @@
 import type { LessonStatus } from "@/types/mastery";
 
-export type GovExerciseType = "mcq" | "scenario" | "short_answer";
+export type GovExerciseType = "mcq" | "scenario" | "short_answer" | "writing";
+
+export type GovRubricItem = {
+  label: string;
+  keywords: string[];
+};
 
 export type GovExercise = {
   id: string;
@@ -9,6 +14,8 @@ export type GovExercise = {
   context?: string;
   options?: { key: string; text: string }[];
   acceptable: string[];
+  rubric?: GovRubricItem[];
+  modelAnswer?: string;
   explanation: string;
   points: number;
   topic: string;
@@ -20,6 +27,7 @@ export type PublicGovExercise = {
   prompt: string;
   context?: string;
   options?: { key: string; text: string }[];
+  rubricLabels?: string[];
   points: number;
   topic: string;
 };

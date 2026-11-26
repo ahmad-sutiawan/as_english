@@ -348,14 +348,29 @@ export const modulesPart2: GovModule[] = [
     ],
     executiveEnglish: [
       {
-        situation: "Menyepakati RTO & RPO dengan CEO/Owner",
-        en: "To meet a 4-hour RTO and 1-hour RPO for our core billing system, we need immutable offsite backups and quarterly restore drills.",
-        id: "Untuk memenuhi RTO 4 jam dan RPO 1 jam pada sistem penagihan inti kita, kami memerlukan backup offsite immutable dan latihan restore kuartalan.",
+        situation: "Menyepakati RTO & RPO berbasis dampak finansial dengan CEO/CFO",
+        en: "To cap potential downtime loss at four hours (RTO) and one hour of data (RPO) for core billing, we require immutable offsite backups and verified quarterly restore drills.",
+        id: "Untuk membatasi potensi kerugian downtime di empat jam (RTO) dan satu jam data (RPO) pada sistem penagihan inti, kami memerlukan backup offsite immutable dan latihan restore kuartalan terverifikasi.",
       },
       {
-        situation: "Menjelaskan kesiapan UU PDP / breach notification",
-        en: "Under Indonesia's PDP Law, we must be able to assess and notify affected parties within 72 hours of discovering a personal data breach.",
-        id: "Berdasarkan UU PDP Indonesia, kita harus mampu menilai dan memberi tahu pihak terdampak dalam waktu 72 jam sejak kebocoran data pribadi diketahui.",
+        situation: "Menjelaskan kesiapan UU PDP / breach notification 72 jam ke Board",
+        en: "Under Indonesia's PDP Law, executive leadership must be equipped to assess impact and notify regulators and affected customers within 72 hours of confirming a personal data breach.",
+        id: "Berdasarkan UU PDP Indonesia, pimpinan eksekutif harus siap menilai dampak serta memberi tahu regulator dan pelanggan terdampak dalam 72 jam sejak kebocoran data pribadi terkonfirmasi.",
+      },
+      {
+        situation: "Menjelaskan risiko konsentrasi vendor SaaS ke Komite Risiko",
+        en: "Every Tier-1 SaaS vendor handling sensitive customer records must maintain ISO 27001 or SOC 2 Type II assurance, an executed DPA, and a tested data-exit clause.",
+        id: "Setiap vendor SaaS Tier-1 yang menangani data pelanggan sensitif wajib memiliki jaminan ISO 27001 atau SOC 2 Type II, DPA yang ditandatangani, dan klausul ekspor data teruji.",
+      },
+      {
+        situation: "Menjawab pertanyaan CFO tentang ROI Backup Immutable 3-2-1-1-0",
+        en: "Immutable backups act as our last line of financial resilience against ransomware, eliminating the business pressure to ever consider ransom payments.",
+        id: "Backup immutable berperan sebagai garis pertahanan finansial terakhir melawan ransomware, menghilangkan tekanan bisnis untuk pernah mempertimbangkan pembayaran tebusan.",
+      },
+      {
+        situation: "Menjelaskan Shared Responsibility Model ke manajemen bisnis",
+        en: "Moving to cloud SaaS transfers physical data-center operations to the vendor, but governance over user access, data classification, and legal compliance remains squarely ours.",
+        id: "Pindah ke cloud SaaS mengalihkan operasional fisik data center ke vendor, namun tata kelola akses pengguna, klasifikasi data, dan kepatuhan hukum tetap sepenuhnya tanggung jawab kita.",
       },
     ],
     practice: [
@@ -595,13 +610,28 @@ export const modulesPart2: GovModule[] = [
     executiveEnglish: [
       {
         situation: "Membuka laporan kuartalan IT Governance ke Board",
-        en: "This quarter we achieved 99.8% uptime and a 97% change success rate, while our top KRI—overdue critical patches—dropped to zero.",
-        id: "Kuartal ini kami mencapai uptime 99,8% dan tingkat keberhasilan perubahan 97%, sementara KRI utama kami—patch kritis yang tertunda—turun menjadi nol.",
+        en: "This quarter we delivered 99.8% core uptime and a 97% change success rate, while driving our top KRI—overdue critical patches—down to zero.",
+        id: "Kuartal ini kami mencatatkan uptime inti 99,8% dan tingkat keberhasilan perubahan 97%, sekaligus menurunkan KRI utama kami—patch kritis tertunda—menjadi nol.",
       },
       {
         situation: "Meminta persetujuan anggaran keamanan ke CFO/CEO",
-        en: "Investing in immutable backups reduces our potential ransomware downtime exposure from five days to under four hours.",
-        id: "Berinvestasi pada backup immutable menurunkan potensi paparan downtime akibat ransomware dari lima hari menjadi di bawah empat jam.",
+        en: "Investing in immutable backups cuts our worst-case ransomware downtime exposure from five days to under four hours, protecting millions in quarterly revenue.",
+        id: "Berinvestasi pada backup immutable memangkas paparan downtime ransomware terburuk dari lima hari menjadi di bawah empat jam, melindungi pendapatan kuartalan bernilai besar.",
+      },
+      {
+        situation: "Menjelaskan Evidence by Design ke Komite Audit",
+        en: "By embedding audit trails directly into our ticketing and CI/CD pipelines, we prove continuous operating effectiveness without disrupting engineering delivery.",
+        id: "Dengan menanamkan jejak audit langsung ke sistem tiket dan pipeline CI/CD, kami membuktikan efektivitas operasional berkelanjutan tanpa mengganggu pengiriman engineering.",
+      },
+      {
+        situation: "Mempresentasikan Roadmap 90 Hari ke CEO",
+        en: "Our 90-day governance roadmap sequences high-ROI risk reduction in month one, change and incident discipline in month two, and board-level KPI/KRI reporting by month three.",
+        id: "Roadmap tata kelola 90 hari kami mengurutkan penurunan risiko High-ROI di bulan pertama, disiplin change dan insiden di bulan kedua, serta pelaporan KPI/KRI level Board di bulan ketiga.",
+      },
+      {
+        situation: "Minta keputusan strategis (Call to Action) di akhir QBR",
+        en: "To close our top two red KRIs this quarter, I am requesting executive sign-off on two items: mandatory SSO/MFA enforcement and quarterly DRP restore windows.",
+        id: "Untuk menutup dua KRI merah teratas kuartal ini, saya memohon persetujuan eksekutif pada dua hal: kewajiban SSO/MFA dan jendela uji restore DRP kuartalan.",
       },
     ],
     practice: [

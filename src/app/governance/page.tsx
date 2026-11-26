@@ -15,9 +15,9 @@ export default async function GovernancePage() {
 
   return (
     <LobbyFrame
-      kicker="Kursus Kerja IT · Skala Kecil–Menengah (SMB)"
+      kicker="Kursus Kerja IT · SMB hingga Level Unicorn"
       title="IT Governance"
-      lede="Kurikulum ringkas namun mendalam dimulai dari COBIT 2019, ISO 27001:2022, NIST CSF 2.0, ITIL 4, DRP/UU PDP, hingga KPI/KRI & Audit — fokus pada 20% best practice yang paling sering dipakai di industri kecil–menengah."
+      lede="Kurikulum profesional lengkap dari fondasi SMB hingga skala Unicorn: COBIT 2019, ITIL 4, 5 Domain IT Governance, ISO 27001:2022/NIST CSF 2.0, DRP/UU PDP, Compliance-as-Code, AI Governance (ISO 42001), SOC 2 Type II, TPRM, Zero Trust & simulasi eksekutif."
     >
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <StatTile
@@ -38,7 +38,7 @@ export default async function GovernancePage() {
         <StatTile
           label="Estimasi belajar"
           value={`${totalMinutes} mnt`}
-          hint="6 modul inti + 1 ujian akhir"
+          hint={`${modules.length} modul inti + 1 ujian akhir`}
         />
       </div>
 
@@ -63,7 +63,9 @@ export default async function GovernancePage() {
       </section>
 
       <section className="mt-8">
-        <h2 className="font-display text-3xl text-[var(--ink)]">Kurikulum 6 Modul Inti SMB</h2>
+        <h2 className="font-display text-3xl text-[var(--ink)]">
+          Kurikulum {modules.length} Modul (SMB → Unicorn Track)
+        </h2>
         <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
           Setiap modul dilengkapi konsep inti, tabel referensi framework, studi kasus SMB, checklist aksi, jebakan umum, kalimat eksekutif bahasa Inggris, latihan soal, dan mastery check.
         </p>
