@@ -10,10 +10,16 @@ export async function requireItGovernanceLearner(): Promise<string> {
   return session.user.id;
 }
 
-export async function getItGovernanceApiUser(): Promise<string | null> {
+export async function getItGovernanceApiAuth(): Promise<
+  { ok: true; userId: string } | { ok: false; status: 401 | 403; error: string }
+> {
   const session = await auth();
-  if (!session?.user?.id) return null;
+  if (!session?.user?.id) {
+    return { ok: false, status: 401, error: "Silakan login terlebih dahulu." };
+  }
   const persona = await getActivePersona(session.user.id);
-  if (persona !== "it") return null;
-  return session.user.id;
+  if (persona !== "it") {
+    return { ok: false, status: 403, error: "Akses hanya untuk persona Kerja IT." };
+  }
+  return { ok: true, userId: session.user.id };
 }

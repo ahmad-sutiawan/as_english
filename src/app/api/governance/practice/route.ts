@@ -1,21 +1,32 @@
 import { NextResponse } from "next/server";
-import { getItGovernanceApiUser } from "@/lib/governance/guard";
+import { z } from "zod";
+import { getItGovernanceApiAuth } from "@/lib/governance/guard";
 import { submitGovPractice } from "@/lib/governance/store";
 
+const practiceSchema = z.object({
+  moduleId: z.string().min(1).max(80),
+  answers: z
+    .record(z.string().max(64), z.string().max(4000))
+    .refine((obj) => Object.keys(obj).length <= 60, "Terlalu banyak jawaban."),
+});
+
 export async function POST(request: Request) {
-  const userId = await getItGovernanceApiUser();
-  if (!userId) return NextResponse.json({ error: "Akses hanya untuk persona Kerja IT." }, { status: 403 });
+  const authResult = await getItGovernanceApiAuth();
+  if (!authResult.ok) {
+    return NextResponse.json({ error: authResult.error }, { status: authResult.status });
+  }
 
-  const body = (await request.json().catch(() => null)) as {
-    moduleId?: string;
-    answers?: Record<string, string>;
-  } | null;
-
-  if (!body?.moduleId || typeof body.moduleId !== "string" || !body.answers) {
+  const raw = await request.json().catch(() => null);
+  const parsed = practiceSchema.safeParse(raw);
+  if (!parsed.success) {
     return NextResponse.json({ error: "Data latihan tidak valid." }, { status: 400 });
   }
 
-  const result = await submitGovPractice(userId, body.moduleId, body.answers);
+  const result = await submitGovPractice(
+    authResult.userId,
+    parsed.data.moduleId,
+    parsed.data.answers,
+  );
   if (!result.ok) return NextResponse.json({ error: result.error }, { status: 400 });
   return NextResponse.json(result);
 }

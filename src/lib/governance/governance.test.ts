@@ -94,12 +94,16 @@ test("Unicorn Track modules contain 50 unique questions including rubric-graded 
   assert.equal(weakWriting.correct, false);
 });
 
-test("IT Governance final exam covers core modules and scores cleanly", () => {
+test("IT Governance final exam has 50 unique questions covering all 11 modules", () => {
   const exam = getGovExam();
   assert.equal(exam.id, "gov:final");
-  assert.equal(exam.questions.length, 12);
+  assert.equal(exam.questions.length, 50);
+
+  const ids = new Set(exam.questions.map((q) => q.id));
+  assert.equal(ids.size, 50, "Every final exam question ID must be unique");
+
   const coveredModules = new Set(exam.questions.map((q) => q.moduleId));
-  assert.equal(coveredModules.size, 6);
+  assert.equal(coveredModules.size, 11);
 
   const perfectAnswers = Object.fromEntries(
     exam.questions.map((q) => [q.id, q.acceptable[0] ?? ""]),

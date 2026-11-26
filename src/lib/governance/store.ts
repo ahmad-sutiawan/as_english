@@ -14,14 +14,12 @@ import type { GovModule, GovProgressStatus } from "@/types/governance";
 export async function markGovModuleStarted(userId: string, moduleId: string) {
   const mod = getGovModuleById(moduleId);
   if (!mod) return { ok: false as const, error: "Modul tidak ditemukan." };
-  const existing = await prisma.grammarLessonProgress.findUnique({
+  const record = await prisma.grammarLessonProgress.upsert({
     where: { userId_lessonId: { userId, lessonId: mod.id } },
+    create: { userId, lessonId: mod.id, status: "in_progress" },
+    update: {},
   });
-  if (existing) return { ok: true as const, status: existing.status as GovProgressStatus };
-  const created = await prisma.grammarLessonProgress.create({
-    data: { userId, lessonId: mod.id, status: "in_progress" },
-  });
-  return { ok: true as const, status: created.status as GovProgressStatus };
+  return { ok: true as const, status: record.status as GovProgressStatus };
 }
 
 export async function submitGovPractice(
