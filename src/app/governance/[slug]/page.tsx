@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { GovModuleAudioPlayer } from "@/components/governance/module-audio-player";
 import { GovQuizRunner } from "@/components/governance/quiz-runner";
 import { StartGovModule } from "@/components/governance/start-module";
 import { SpeakButton } from "@/components/speak-button";
@@ -47,6 +48,8 @@ export default async function GovernanceModulePage({ params }: Props) {
           </h1>
           <p className="mt-3 text-base leading-relaxed text-[var(--muted)]">{mod.subtitle}</p>
         </header>
+
+        <GovModuleAudioPlayer mod={mod} />
 
         <section className="mt-8 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/70 p-5">
           <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
